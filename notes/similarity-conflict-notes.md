@@ -1,17 +1,13 @@
 # Similarity / Conflict Notes
 
-## 查重在需求进入流程中的角色
+当前为占位文档。
 
-1. 查重发生在 Candidate Requirement 进入 Human-Approved Spec 之前。
-2. 查重对象包括：
-   - Raw Record
-   - Candidate Requirement
-   - Human-Approved Spec Entry
-   - Decision Record
-   - Open Question
-   - TODO Item
-3. 查重结果应形成 Similarity / Conflict Report。
-4. 报告应提出 `relation_type` 与 `proposed_action`，并包含 `duplicate`、`similar`、`conflicts_with`、`refines`、`supersedes`、`merged_into` 等关系表达。
-5. Similarity / Conflict Report 不直接修改 Human-Approved Spec。
-6. 用户确认后才可能更新实施版。
-7. 当前不实现自动语义查重，仅进行流程与模板设计。
+未来当新想法或新需求进入流程时，在写入 Human-Approved Spec 之前，必须先完成：
+
+1. 与既有想法/需求的查重；
+2. 相似性分析（重叠点、可复用点、潜在合并点）；
+3. 冲突分析（目标冲突、约束冲突、阶段冲突、术语冲突）；
+4. 给出候选处理建议（合并、替换、拒绝、延期、保留候选）；
+5. 等待用户确认后再更新实施版。
+
+说明：本阶段不实现自动查重，仅保留流程要求与后续扩展接口。
