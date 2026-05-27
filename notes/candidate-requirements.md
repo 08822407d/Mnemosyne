@@ -1,6 +1,6 @@
 # Candidate Requirements
 
-> 说明：以下为从交接材料抽取的候选需求，不等同于最终实施版。
+> 说明：以下为从本次交接抽取的候选需求，不等同于最终实施版。
 
 ## CAND-0001
 - 内容：Mnemosyne 应被定义为“记忆系统元 Agent”，服务多个项目/研究/团队场景，而非单一项目内部记忆库。
@@ -76,33 +76,3 @@
 - 内容：后续需要 delta report 比较新旧研究轮次，避免静默覆盖。
 - 状态：pending
 - 来源：RAW-0013
-
-## CAND-0016
-- 内容：research-report-index 必须反映 originals 中实际文件，而非占位状态。
-- 状态：accepted_for_evidence_layer
-- 来源：RAW-0014
-
-## CAND-0017
-- 内容：current-evidence-map 应作为当前设计证据派生视图，并标注 active/needs_review。
-- 状态：accepted_for_evidence_layer
-- 来源：RAW-0014
-
-## CAND-0018
-- 内容：current-capability-boundaries 应作为当前能力边界派生视图，并标注时效性。
-- 状态：accepted_for_evidence_layer
-- 来源：RAW-0014
-
-## CAND-0019
-- 内容：后续需要为每份报告生成 summary，必要时将 PDF 转换为 Markdown / TXT。
-- 状态：pending
-- 来源：RAW-0014
-
-## CAND-0020
-- 内容：后续需要 Evidence Item 模板与 delta report 模板，支持跨轮次证据比较。
-- 状态：pending
-- 来源：RAW-0014
-
-## CAND-0021
-- 内容：新增机制设计前应检查 current-evidence-map 与 current-capability-boundaries。
-- 状态：pending
-- 来源：RAW-0014

@@ -2,28 +2,24 @@
 
 ## 当前阶段
 
-当前阶段为：研究报告证据已入库，正在做 v0.1 接手能力同步。
+当前处于“研究证据已入库并完成初步对齐”阶段。
 
-## 当前真实状态
+## 当前状态
 
-- 7 份研究报告已经放入 `raw/research-reports/cycles/2026Q2-initial/originals/`。
-- 当前 research cycle 是 `RC-2026Q2-initial`。
-- `research-report-index`、`current-evidence-map`、`current-capability-boundaries` 是后续能力边界判断的重要派生视图。
+- 7 份研究报告已上传到 `raw/research-reports/cycles/2026Q2-initial/originals/`。
+- 当前 research cycle: `RC-2026Q2-initial`。
 - 研究报告是高权重证据层，不是执行源。
 - 当前执行源仍是 `current/human-approved-spec.md`。
 
-## 新会话/新任务建议读取
+## 设计判断前的必读
 
-新 ChatGPT 对话或新 Codex 任务如果要继续设计新机制，应读取：
+新 ChatGPT 对话或 Codex 任务在进行能力边界判断、新机制设计、平台适配或目标项目交付设计前，应优先读取：
 
-1. `current/human-approved-spec.md`
-2. `current/active-context.md`
-3. `handoff/handoff-current.md`
-4. `raw/research-reports/current/research-report-index.md`
-5. `raw/research-reports/current/current-evidence-map.md`
-6. `raw/research-reports/current/current-capability-boundaries.md`
+1. `raw/research-reports/current/research-report-index.md`
+2. `raw/research-reports/current/current-evidence-map.md`
+3. `raw/research-reports/current/current-capability-boundaries.md`
 
-## 下一步建议
+## 当前建议
 
-- 完成 v0.1 接手能力修复。
-- 再建立 startup-instructions。
+- 使用 `current-evidence-map` 与 `current-capability-boundaries` 作为后续设计判断入口。
+- 下一步建议执行 v0.1 接手能力修复与当前状态同步。
