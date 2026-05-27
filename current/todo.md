@@ -1,36 +1,11 @@
 # TODO
 
-## v0.2
-
-- [ ] 上传并登记 7 份初始研究报告（RC-2026Q2-initial/originals）
-- [ ] 建立 research-report-index 的首版条目
-- [ ] 建立 current-evidence-map 的首版映射
-- [ ] 建立首版 delta report 模板与比较规则
-- [ ] 建立研究证据状态变更（confirmed/superseded/deprecated）操作规范
-- [ ] 正式版 ChatGPT 对话启动包
-- [ ] AGENTS.md 适配设计
-- [ ] CLAUDE.md 适配设计
-- [ ] Idea Capture Buffer 设计
-- [ ] 隐私分级策略
-- [ ] Memory System Design Spec 模板
-- [ ] Delivery Manifest 模板
-- [ ] Drift Review 模板
-
-## v0.3
-
-- [ ] GitHub Actions 文档检查
-- [ ] 自动查重方案
-- [ ] similarity index 方案
-- [ ] Model-Specific Digest 模板
-
-## future
-
-
-- [ ] 如有完整对话导出，补充 full transcript archive
-- [ ] 设计 raw 摘录与完整 transcript 的区分规则
-- [ ] 设计 raw 记录索引
-- [ ] 设计研究报告证据索引
-- [ ] 设计 raw 摘录与 candidate requirements 的追溯关系
-- [ ] 设计模型迁移时如何使用近原文摘录
-- [ ] 面向第一个目标项目的真实交付试验
-- [ ] 目标项目与 Mnemosyne 的同步 / 漂移处理流程
+- [ ] 设计并落地 Idea Capture Buffer / 临时点子速记池。
+- [ ] 设计 AGENTS.md（后续阶段再启动）。
+- [ ] 设计 CLAUDE.md（后续阶段再启动）。
+- [ ] 设计新需求自动查重方案（当前仅保留人工/半自动思路）。
+- [ ] 设计 model migration review 流程。
+- [ ] 评估并引入 GitHub Actions（仅在流程稳定后）。
+- [ ] 建立隐私分级策略与最小执行规则。
+- [ ] 设计交付包 delivery manifest 结构。
+- [ ] 为具体目标项目产出 memory system design spec 模板。
