@@ -1,41 +1,32 @@
 # Handoff Current
 
-## 当前仓库
+## 当前目标
 
-- 当前仓库：Mnemosyne（记忆系统元 Agent 设计仓库）。
-- 当前阶段：v0.1 收束与一致性检查。
+完成 Mnemosyne 仓库第一版最小初始化，建立可持续演化的记忆系统文档骨架。
 
-## 已完成阶段（摘要）
+## 已确认原则
 
-- 最小初始化与分层边界
-- 核心对象模型
-- 对象模板与 ID/状态规则
-- 需求进入流程
-- handoff / active-context / 阶段性回顾机制
-- 模型迁移与约束生命周期
-- 面向目标项目的交付包结构
+- Mnemosyne 是“记忆系统元 Agent”。
+- 模型负责计算，文件负责记忆。
+- Human-Approved Spec 是执行源；raw/candidate/summary 仅为证据或辅助。
+- 新想法不得自动覆盖实施版，需用户确认。
 
-## 当前执行边界
+## 当前仓库阶段
 
-- 执行源：`current/human-approved-spec.md`
-- `active-context` 不是执行源
-- `handoff-current` 不是执行源
-- candidate 不是执行源
-- raw 按需回查
+- 阶段：初始化完成（最小结构）。
+- 工作方式：半自动整理 + 人工确认关键更新。
 
-## 当前模式
+## 延期事项
 
-- 当前仍是半自动流程。
-- 当前不做 AGENTS.md、CLAUDE.md、GitHub Actions、自动查重。
+- AGENTS.md / CLAUDE.md 设计
+- 自动查重与自动索引
+- GitHub Actions 与自动检查
+- 隐私分级执行细则
+- 交付包规范化
 
 ## 下一步建议
 
-用户先 review v0.1，再选择 v0.2 方向。
-
-
-## 近原文证据补充
-
-- 已新增 `raw/concept-origin-extract-001.md`。
-- 文件保存早期核心构想、用户理由与关键讨论摘录。
-- 未来 AI 会话在需要理解早期动机时可按需回查。
-- 该文件不是执行源；执行源仍是 `current/human-approved-spec.md`。
+1. 细化“候选需求 -> 用户决策 -> 实施版更新”的标准模板。
+2. 明确 raw 归档命名与切分规则。
+3. 制定隐私分级草案与审阅流程。
+4. 在有真实目标项目后，产出首版 memory system design spec 示例。
