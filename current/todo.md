@@ -1,11 +1,12 @@
 # TODO
 
-- [ ] 设计并落地 Idea Capture Buffer / 临时点子速记池。
-- [ ] 设计 AGENTS.md（后续阶段再启动）。
-- [ ] 设计 CLAUDE.md（后续阶段再启动）。
-- [ ] 设计新需求自动查重方案（当前仅保留人工/半自动思路）。
-- [ ] 设计 model migration review 流程。
-- [ ] 评估并引入 GitHub Actions（仅在流程稳定后）。
-- [ ] 建立隐私分级策略与最小执行规则。
-- [ ] 设计交付包 delivery manifest 结构。
-- [ ] 为具体目标项目产出 memory system design spec 模板。
+- [ ] 为每份研究报告建立 summary。
+- [ ] 人工复核 PDF 中的图表和图片。
+- [ ] 必要时将 PDF 转换为 Markdown / TXT。
+- [ ] 设计 Evidence Item 模板。
+- [ ] 设计 delta report 模板。
+- [ ] 将 `current-evidence-map` 与 `current/human-approved-spec.md` 做一致性检查。
+- [ ] 在 startup-instructions 中加入研究报告读取规则。
+- [ ] 执行 v0.1 接手能力最终修复。
+- [ ] 创建 startup-instructions。
+- [ ] 做一次新 ChatGPT / 新 Codex 接手演练。

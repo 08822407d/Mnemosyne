@@ -1,32 +1,35 @@
 # Handoff Current
 
-## 当前目标
+## 仓库与阶段
 
-完成 Mnemosyne 仓库第一版最小初始化，建立可持续演化的记忆系统文档骨架。
+- 当前仓库：Mnemosyne。
+- 当前研究报告已入库：`raw/research-reports/cycles/2026Q2-initial/originals/`。
+- 当前轮次：`RC-2026Q2-initial`。
 
-## 已确认原则
+## 执行源与证据层
 
-- Mnemosyne 是“记忆系统元 Agent”。
-- 模型负责计算，文件负责记忆。
-- Human-Approved Spec 是执行源；raw/candidate/summary 仅为证据或辅助。
-- 新想法不得自动覆盖实施版，需用户确认。
+- 当前执行源：`current/human-approved-spec.md`。
+- 研究报告不是执行源。
+- `current-evidence-map` 与 `current-capability-boundaries` 是能力边界判断依据。
 
-## 当前仓库阶段
+## 推荐读取顺序
 
-- 阶段：初始化完成（最小结构）。
-- 工作方式：半自动整理 + 人工确认关键更新。
+1. `current/human-approved-spec.md`
+2. `current/active-context.md`
+3. `handoff/handoff-current.md`
+4. `raw/research-reports/current/research-report-index.md`
+5. `raw/research-reports/current/current-evidence-map.md`
+6. `raw/research-reports/current/current-capability-boundaries.md`
 
-## 延期事项
+## 当前不要做
 
-- AGENTS.md / CLAUDE.md 设计
-- 自动查重与自动索引
-- GitHub Actions 与自动检查
-- 隐私分级执行细则
-- 交付包规范化
+- 不要做 AGENTS.md。
+- 不要做 CLAUDE.md。
+- 不要做 GitHub Actions。
+- 不要做自动查重。
+- 不要做自动索引。
+- 不要做自动写回。
 
 ## 下一步建议
 
-1. 细化“候选需求 -> 用户决策 -> 实施版更新”的标准模板。
-2. 明确 raw 归档命名与切分规则。
-3. 制定隐私分级草案与审阅流程。
-4. 在有真实目标项目后，产出首版 memory system design spec 示例。
+- 执行 v0.1 接手能力修复与 startup-instructions。
