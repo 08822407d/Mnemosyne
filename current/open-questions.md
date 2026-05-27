@@ -1,9 +1,20 @@
 # Open Questions
 
-1. 最终目录结构是否需要在下一阶段调整，还是维持当前最小结构继续迭代？
-2. 原文归档策略如何细化（命名、切分粒度、敏感信息标记、归档频率）？
-3. 新需求查重机制如何实现（人工流程、半自动流程、后续自动索引）？
-4. 模型升级迁移流程如何设计，避免上下文漂移与语义损失？
-5. 隐私和敏感信息如何分级，以及分级后如何约束写入与共享？
-6. 什么时候开始设计 AGENTS.md / CLAUDE.md，触发条件是什么？
-7. 什么时候引入 GitHub Actions 或自动检查，最小可行范围是什么？
+## 未解决问题（open）
+
+1. 是否需要为每份研究报告建立单独 summary？
+2. 哪些 PDF 图表需要人工复核？是否需要优先级列表？
+3. 是否需要把 PDF 转换为 Markdown / TXT？
+4. 是否需要把研究结论拆成 Evidence Item？
+5. research evidence 与 `current/human-approved-spec.md` 冲突时，是否需要固定模板？
+6. startup-instructions 应放在 `current/` 还是 `handoff/`？
+7. startup-instructions 是否应强制读取 `current-capability-boundaries`？
+8. 第一个目标项目记忆系统模板优先服务哪类场景？
+9. 是否先设计 AGENTS.md / CLAUDE.md，还是先设计目标项目模板？
+10. 是否需要隐私分级后再导入更多 raw？
+11. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
+12. v0.1 是否已经足以支持新对话接手？
+
+## 已明确但需跟踪（answered / monitor）
+
+- 执行源冲突处理原则：已明确“以 `current/human-approved-spec.md` 为准，并登记 open question”；后续问题是是否补标准模板。
