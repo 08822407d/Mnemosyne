@@ -1,32 +1,14 @@
 # Handoff Current
 
-## 当前目标
+- 7 份研究报告已入库：`raw/research-reports/cycles/2026Q2-initial/originals/`。
+- 当前轮次：`RC-2026Q2-initial`。
+- 研究报告是高权重证据层，不是执行源；执行源仍是 `current/human-approved-spec.md`。
 
-完成 Mnemosyne 仓库第一版最小初始化，建立可持续演化的记忆系统文档骨架。
+进行能力边界判断前请先读：
 
-## 已确认原则
+1. `raw/research-reports/current/research-report-index.md`
+2. `raw/research-reports/current/current-evidence-map.md`
+3. `raw/research-reports/current/current-capability-boundaries.md`
 
-- Mnemosyne 是“记忆系统元 Agent”。
-- 模型负责计算，文件负责记忆。
-- Human-Approved Spec 是执行源；raw/candidate/summary 仅为证据或辅助。
-- 新想法不得自动覆盖实施版，需用户确认。
-
-## 当前仓库阶段
-
-- 阶段：初始化完成（最小结构）。
-- 工作方式：半自动整理 + 人工确认关键更新。
-
-## 延期事项
-
-- AGENTS.md / CLAUDE.md 设计
-- 自动查重与自动索引
-- GitHub Actions 与自动检查
-- 隐私分级执行细则
-- 交付包规范化
-
-## 下一步建议
-
-1. 细化“候选需求 -> 用户决策 -> 实施版更新”的标准模板。
-2. 明确 raw 归档命名与切分规则。
-3. 制定隐私分级草案与审阅流程。
-4. 在有真实目标项目后，产出首版 memory system design spec 示例。
+- PDF 中图表/图片可能需要人工复核。
+- 下一步建议：执行 v0.1 接手能力修复与状态同步。

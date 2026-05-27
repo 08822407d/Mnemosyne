@@ -1,15 +1,23 @@
 # Current Research Report Index / 当前研究报告索引（派生视图）
 
 > 说明：本文件是 current 派生视图，不是原件存储位置。  
-> 原件应保存在 `raw/research-reports/cycles/<cycle-id>/originals/`。
+> 当前激活轮次来源：`RC-2026Q2-initial`。  
+> 原件保存在 `raw/research-reports/cycles/2026Q2-initial/originals/`。
 
 ## 当前激活轮次
 
 - cycle_id: RC-2026Q2-initial
-- status: awaiting_original_reports
+- status: active
+- total_reports: 7
 
-## 报告索引（待填充）
+## 报告索引
 
-| report_id | title | source_cycle | original_path | evidence_status | notes |
-|---|---|---|---|---|---|
-| TODO | TODO | RC-2026Q2-initial | TODO | TODO | 等待用户上传 7 份报告 |
+| report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
+|---|---|---|---|---|---|---|
+| RPT-2026Q2-0001 | raw/research-reports/cycles/2026Q2-initial/originals/AI agent 长期记忆系统 pro深度研究.txt | pro | Pro 版综合深度研究报告 | 作为跨平台能力边界、机制选型与 v0.1 承诺范围的综合高权重证据 | yes | TXT 通常可被 Codex 直接读取；仍建议对关键结论做人工抽样复核 |
+| RPT-2026Q2-0002 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 1：非开发长期对话记忆是否已有真实实践.pdf | light | 非开发长期对话记忆实践 | 约束“普通对话场景长期记忆”的现实可行边界与可交付承诺 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
+| RPT-2026Q2-0003 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 2：ChatGPT,Claude 纯对话场景的外部记忆能力边界.pdf | light | ChatGPT / Claude 纯对话外部记忆能力边界 | 约束“无额外工具时的自动化假设”与对话窗口能力声明 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
+| RPT-2026Q2-0004 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 3：Codex,Claude Code,Cursor 等本地开发 Agent 的文件式记忆能力.pdf | light | 本地开发 Agent 文件式记忆能力 | 支撑“仓库文件写入、Git diff、可追溯记忆”相关机制设计 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
+| RPT-2026Q2-0005 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf | light | 云端 Coding Agent + GitHub 工作流审计写回 | 支撑“PR/review/审计式写回”路径与权限边界判断 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
+| RPT-2026Q2-0006 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 5：外部持久记忆的理论与工程依据.pdf | light | 外部持久记忆理论与工程依据 | 支撑“外部文件/Git 作为长期真相源”的理论与工程正当性 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
+| RPT-2026Q2-0007 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 6：开发场景的持久记忆经验能否迁移到普通长期对话和学习场景.pdf | light | 开发场景经验向普通长期对话/学习迁移 | 约束“跨场景迁移”策略、可复用程度与必要改造项 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |

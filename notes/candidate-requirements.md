@@ -1,6 +1,6 @@
 # Candidate Requirements
 
-> 说明：以下为从本次交接抽取的初始候选需求，不等同于最终实施版。
+> 说明：以下为从本次交接抽取的候选需求，不等同于最终实施版。
 
 ## CAND-0001
 - 内容：Mnemosyne 应被定义为“记忆系统元 Agent”，服务多个项目/研究/团队场景，而非单一项目内部记忆库。
@@ -26,3 +26,53 @@
 - 内容：引入自动化能力（自动写回、自动查重索引、多 Agent 自动协调等）。
 - 状态：pending
 - 备注：明确属于后续阶段，不在本次初始化范围。
+
+## CAND-0006
+- 内容：7 份研究报告应作为 Mnemosyne 的高权重证据层。
+- 状态：accepted_for_evidence_layer
+- 来源：RAW-0013
+
+## CAND-0007
+- 内容：研究报告应按 research cycle 管理，并保留历史轮次。
+- 状态：accepted_for_evidence_layer
+- 来源：RAW-0013
+
+## CAND-0008
+- 内容：即使不重命名原件，也应通过 report_id 建立稳定引用。
+- 状态：accepted_for_evidence_layer
+- 来源：RAW-0013
+
+## CAND-0009
+- 内容：研究报告不是执行源；执行源仍为 human-approved-spec。
+- 状态：accepted_for_evidence_layer
+- 来源：RAW-0013
+
+## CAND-0010
+- 内容：新设计机制应先检查 current-evidence-map 与 current-capability-boundaries。
+- 状态：pending
+- 来源：RAW-0013
+
+## CAND-0011
+- 内容：PDF 图表与图片证据需要人工复核后再用于高影响决策。
+- 状态：accepted_for_evidence_layer
+- 来源：RAW-0013
+
+## CAND-0012
+- 内容：研究报告具有时效性，需要 refresh policy 与轮次治理。
+- 状态：accepted_for_evidence_layer
+- 来源：RAW-0013
+
+## CAND-0013
+- 内容：后续需要设计 Evidence Item 模板，支撑细粒度证据复用。
+- 状态：pending
+- 来源：RAW-0013
+
+## CAND-0014
+- 内容：后续需要为每份报告生成 summary。
+- 状态：pending
+- 来源：RAW-0013
+
+## CAND-0015
+- 内容：后续需要 delta report 比较新旧研究轮次，避免静默覆盖。
+- 状态：pending
+- 来源：RAW-0013
