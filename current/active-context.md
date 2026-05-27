@@ -2,11 +2,11 @@
 
 ## 当前阶段
 
-v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instructions 和接手演练。
+startup-instructions 已创建，等待用户 review 和接手演练。
 
 ## 当前目标
 
-让新 ChatGPT 对话或新 Codex 任务可以正确接手 Mnemosyne，并继续：
+让新 ChatGPT 对话或新 Codex 任务可以按固定读取顺序接手 Mnemosyne，并继续：
 
 - 为其他项目设计外部持久记忆系统；
 - 根据用户新构想和使用反馈完善 Mnemosyne 自身；
@@ -25,6 +25,7 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instru
 - `notes/decision-log.md`
 - `current/active-context.md`
 - `handoff/handoff-current.md`
+- `handoff/startup-instructions.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -44,11 +45,11 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instru
 - 7 份研究报告作为 `RC-2026Q2-initial` 证据层入库；
 - `current-evidence-map` 与 `current-capability-boundaries` 建立；
 - `human-approved-spec` 已同步为 v0.1 当前执行源；
-- `handoff-current` 已更新为新会话接手卡。
+- `handoff-current` 已更新为新会话接手卡；
+- `handoff/startup-instructions.md` 已创建。
 
 ## 当前未完成内容
 
-- `startup-instructions`；
 - 新 ChatGPT / 新 Codex 接手演练；
 - 为每份研究报告生成 summary；
 - PDF 图表人工复核；
@@ -63,6 +64,7 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instru
 ## 当前最重要文件
 
 - `current/human-approved-spec.md`
+- `handoff/startup-instructions.md`
 - `current/active-context.md`
 - `handoff/handoff-current.md`
 - `current/open-questions.md`
@@ -71,11 +73,9 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instru
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
-- `raw/concept-origin-extract-001.md`
 
 ## 下一步建议
 
-1. 用户 review 本次同步结果；
-2. 创建 `startup-instructions`；
-3. 做一次新 ChatGPT / 新 Codex 接手演练；
-4. 再选择 v0.2 方向。
+1. 用户 review startup-instructions；
+2. 做一次新 ChatGPT / 新 Codex 接手演练；
+3. 再选择 v0.2 方向。
