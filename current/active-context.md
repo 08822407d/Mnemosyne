@@ -2,57 +2,24 @@
 
 ## 当前阶段
 
-v0.1 接手能力最终修复与当前状态同步。
+当前处于“研究证据已入库并完成初步对齐”阶段。
 
-## 当前目标
+## 当前状态
 
-让新 ChatGPT 对话或 Codex 任务可以正确接手 Mnemosyne。
+- 7 份研究报告已上传到 `raw/research-reports/cycles/2026Q2-initial/originals/`。
+- 当前 research cycle: `RC-2026Q2-initial`。
+- 研究报告是高权重证据层，不是执行源。
+- 当前执行源仍是 `current/human-approved-spec.md`。
 
-## 已完成内容
+## 设计判断前的必读
 
-- 最小仓库结构。
-- 当前操作约定。
-- 核心业务需求。
-- 核心对象模型。
-- 对象模板与 ID / 状态规则。
-- 需求进入流程。
-- handoff / active-context / 阶段性回顾机制。
-- 模型迁移与约束生命周期。
-- 交付包结构。
-- v0.1 范围说明。
-- 近原文核心构想摘录入库。
-- 7 份研究报告作为 `RC-2026Q2-initial` 证据层入库。
-- `current-evidence-map` 与 `current-capability-boundaries` 建立。
+新 ChatGPT 对话或 Codex 任务在进行能力边界判断、新机制设计、平台适配或目标项目交付设计前，应优先读取：
 
-## 当前未完成内容
+1. `raw/research-reports/current/research-report-index.md`
+2. `raw/research-reports/current/current-evidence-map.md`
+3. `raw/research-reports/current/current-capability-boundaries.md`
 
-- 为每份研究报告生成 summary。
-- PDF 图表人工复核。
-- startup-instructions。
-- 目标项目设计模板。
-- AGENTS.md。
-- CLAUDE.md。
-- GitHub Actions。
-- 自动查重和索引。
-- 隐私分级。
-- Idea Capture Buffer。
+## 当前建议
 
-## 当前最重要文件
-
-1. `current/human-approved-spec.md`
-2. `current/active-context.md`
-3. `handoff/handoff-current.md`
-4. `current/open-questions.md`
-5. `current/todo.md`
-6. `notes/v0.1-scope-and-consistency-check.md`
-7. `raw/concept-origin-extract-001.md`
-8. `raw/research-reports/current/research-report-index.md`
-9. `raw/research-reports/current/current-evidence-map.md`
-10. `raw/research-reports/current/current-capability-boundaries.md`
-
-## 下一步建议
-
-1. 用户 review 本次同步结果。
-2. 创建 startup-instructions。
-3. 做一次新 ChatGPT / 新 Codex 接手演练。
-4. 再选择 v0.2 方向。
+- 使用 `current-evidence-map` 与 `current-capability-boundaries` 作为后续设计判断入口。
+- 下一步建议执行 v0.1 接手能力修复与当前状态同步。
