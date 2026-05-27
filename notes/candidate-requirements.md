@@ -76,3 +76,94 @@
 - 内容：后续需要 delta report 比较新旧研究轮次，避免静默覆盖。
 - 状态：pending
 - 来源：RAW-0013
+
+## CAND-0016
+
+- 内容：Mnemosyne 需要支持新 ChatGPT 对话或新 Codex 任务直接接手当前工作。
+- 状态：reflected
+- 来源：RAW-0019
+- 反映位置：current/active-context.md；handoff/handoff-current.md
+
+## CAND-0017
+
+- 内容：active-context 必须反映真实当前阶段，不能停留在过期的“待修复”状态。
+- 状态：reflected
+- 来源：RAW-0019
+- 反映位置：current/active-context.md
+
+## CAND-0018
+
+- 内容：handoff-current 必须作为新会话接手卡，包含执行源、研究证据层状态、推荐读取顺序、不要做的事项和下一步建议。
+- 状态：reflected
+- 来源：RAW-0019
+- 反映位置：handoff/handoff-current.md
+
+## CAND-0019
+
+- 内容：current/todo.md 应按 v0.1-final、v0.2、future 分组，避免把已经完成的接手层修复继续列为未完成任务。
+- 状态：reflected
+- 来源：RAW-0019
+- 反映位置：current/todo.md
+
+## CAND-0020
+
+- 内容：startup-instructions 应作为下一项 v0.1-final 收尾工作，用于让新 ChatGPT 对话或新 Codex 任务按固定读取顺序接手 Mnemosyne。
+- 状态：todo
+- 来源：RAW-0019
+- 反映位置：current/todo.md；handoff/handoff-current.md
+
+## CAND-0021
+
+- 内容：需要进行一次新 ChatGPT / 新 Codex 接手演练，以验证 startup-instructions、handoff-current、active-context 和 human-approved-spec 是否足以支持接手。
+- 状态：todo
+- 来源：RAW-0019
+- 反映位置：current/todo.md；handoff/handoff-current.md
+
+## CAND-0022
+
+- 内容：新机制设计前应读取 current-evidence-map 与 current-capability-boundaries，以尊重 7 份研究报告给出的能力边界。
+- 状态：reflected
+- 来源：RAW-0019
+- 反映位置：handoff/handoff-current.md；raw/research-reports/current/current-evidence-map.md；raw/research-reports/current/current-capability-boundaries.md
+
+## CAND-0023
+
+- 内容：Mnemosyne 应提供固定 `startup-instructions`，用于新 ChatGPT 对话、新 Codex Cloud 任务或未来其他 Agent 以统一顺序接手。
+- 状态：reflected
+- 来源：RAW-0020
+- 反映位置：handoff/startup-instructions.md
+
+## CAND-0024
+
+- 内容：startup-instructions 必须明确“执行源与非执行源”边界，并在冲突时回退到 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0020
+- 反映位置：handoff/startup-instructions.md；current/human-approved-spec.md
+
+## CAND-0025
+
+- 内容：在能力边界判断、平台适配和新机制设计前，必须读取 research evidence 的 current 视图。
+- 状态：reflected
+- 来源：RAW-0020
+- 反映位置：handoff/startup-instructions.md；raw/research-reports/current/research-report-index.md；raw/research-reports/current/current-evidence-map.md；raw/research-reports/current/current-capability-boundaries.md
+
+## CAND-0026
+
+- 内容：startup-instructions 完成后，应尽快执行一次新 ChatGPT / 新 Codex 接手演练来验证接手层有效性。
+- 状态：todo
+- 来源：RAW-0020
+- 反映位置：current/todo.md；current/open-questions.md；handoff/handoff-current.md
+
+## CAND-0027
+
+- 内容：startup-instructions 应包含可复制的新 ChatGPT 对话启动提示，保证新对话按固定顺序读取并先输出接手状态。
+- 状态：reflected
+- 来源：RAW-0020
+- 反映位置：handoff/startup-instructions.md
+
+## CAND-0028
+
+- 内容：startup-instructions 应包含可复制的新 Codex Cloud 任务启动提示，明确读取列表、接手规则和当前不要做事项。
+- 状态：reflected
+- 来源：RAW-0020
+- 反映位置：handoff/startup-instructions.md
