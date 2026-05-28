@@ -67,6 +67,7 @@ startup-instructions 已创建，等待用户 review 和接手演练。
 - `handoff/startup-instructions.md`
 - `current/active-context.md`
 - `handoff/handoff-current.md`
+- `notes/startup-rehearsal-report.md`
 - `current/open-questions.md`
 - `current/todo.md`
 - `notes/v0.1-scope-and-consistency-check.md`
