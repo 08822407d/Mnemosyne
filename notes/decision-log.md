@@ -238,3 +238,32 @@
 - 理由：当前阶段只做半自动流程设计，不进入自动化实现。
 - 状态：accepted
 - 来源：RAW-0025
+
+
+## DEC-0037
+
+- 决策：将 v0.2 第一方向设为 self-improvement workflow，并确认该工作流已建立。
+- 理由：优先保证 Mnemosyne 自身演化输入有稳定回流路径，并同步当前状态层。
+- 状态：accepted
+- 来源：RAW-0024；RAW-0025；MNEMOSYNE-025C
+
+## DEC-0038
+
+- 决策：self-improvement workflow 当前保持半自动，不引入自动查重、自动写回、AGENTS.md、CLAUDE.md、GitHub Actions。
+- 理由：当前阶段目标是先固化可维护流程和记录一致性，自动化延后。
+- 状态：accepted
+- 来源：RAW-0024；RAW-0025；MNEMOSYNE-025C
+
+## DEC-0039
+
+- 决策：Codex Task Result Record 是审计材料，不是执行源；后续重要 Codex 任务应记录 task result。
+- 理由：避免任务总结与仓库状态不一致时误判，以可审计记录补强追溯。
+- 状态：accepted
+- 来源：RAW-0025；MNEMOSYNE-025C
+
+## DEC-0040
+
+- 决策：将 MNEMOSYNE-026（self-improvement workflow 模板设计）设为下一步。
+- 理由：workflow 主体已建立，下一阶段应进入模板化以提升复用与一致性。
+- 状态：accepted
+- 来源：MNEMOSYNE-025C

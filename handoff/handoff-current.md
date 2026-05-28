@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 正在设计。
+v0.2 第一方向 self-improvement workflow 已建立，下一步是模板设计。
 
 ## 当前执行源
 
@@ -70,5 +70,5 @@ v0.2 第一方向 self-improvement workflow 正在设计。
 ## 下一步建议
 
 1. 用户 review `notes/self-improvement-workflow.md`；
-2. 根据 review 结果决定是否细化模板；
-3. 再选择 v0.2 下一项。
+2. 进入 MNEMOSYNE-026：self-improvement workflow 模板设计；
+3. 暂不创建 AGENTS.md / CLAUDE.md / GitHub Actions。
