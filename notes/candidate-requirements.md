@@ -78,155 +78,50 @@
 - 来源：RAW-0013
 
 ## CAND-0016
+
 - 内容：Mnemosyne 需要支持新 ChatGPT 对话或新 Codex 任务直接接手当前工作。
 - 状态：reflected
 - 来源：RAW-0019
 - 反映位置：current/active-context.md；handoff/handoff-current.md
 
 ## CAND-0017
+
 - 内容：active-context 必须反映真实当前阶段，不能停留在过期的“待修复”状态。
 - 状态：reflected
 - 来源：RAW-0019
 - 反映位置：current/active-context.md
 
 ## CAND-0018
+
 - 内容：handoff-current 必须作为新会话接手卡，包含执行源、研究证据层状态、推荐读取顺序、不要做的事项和下一步建议。
 - 状态：reflected
 - 来源：RAW-0019
 - 反映位置：handoff/handoff-current.md
 
 ## CAND-0019
+
 - 内容：current/todo.md 应按 v0.1-final、v0.2、future 分组，避免把已经完成的接手层修复继续列为未完成任务。
 - 状态：reflected
 - 来源：RAW-0019
 - 反映位置：current/todo.md
 
 ## CAND-0020
+
 - 内容：startup-instructions 应作为下一项 v0.1-final 收尾工作，用于让新 ChatGPT 对话或新 Codex 任务按固定读取顺序接手 Mnemosyne。
 - 状态：todo
 - 来源：RAW-0019
 - 反映位置：current/todo.md；handoff/handoff-current.md
 
 ## CAND-0021
+
 - 内容：需要进行一次新 ChatGPT / 新 Codex 接手演练，以验证 startup-instructions、handoff-current、active-context 和 human-approved-spec 是否足以支持接手。
 - 状态：todo
 - 来源：RAW-0019
 - 反映位置：current/todo.md；handoff/handoff-current.md
 
 ## CAND-0022
+
 - 内容：新机制设计前应读取 current-evidence-map 与 current-capability-boundaries，以尊重 7 份研究报告给出的能力边界。
 - 状态：reflected
 - 来源：RAW-0019
 - 反映位置：handoff/handoff-current.md；raw/research-reports/current/current-evidence-map.md；raw/research-reports/current/current-capability-boundaries.md
-
-## CAND-0023
-
-- 内容：Mnemosyne 需要 startup-instructions 指导新 ChatGPT 对话、新 Codex Cloud 任务或未来其他 Agent 接手仓库。
-- 状态：reflected
-- 来源：RAW-0020B
-- 反映位置：handoff/startup-instructions.md
-
-## CAND-0024
-
-- 内容：startup-instructions 必须明确自身不是执行源，当前执行源仍为 current/human-approved-spec.md。
-- 状态：reflected
-- 来源：RAW-0020B
-- 反映位置：handoff/startup-instructions.md
-
-## CAND-0025
-
-- 内容：startup-instructions 应包含新 ChatGPT 对话启动提示，要求新对话按固定读取顺序接手。
-- 状态：reflected
-- 来源：RAW-0020B
-- 反映位置：handoff/startup-instructions.md
-
-## CAND-0026
-
-- 内容：startup-instructions 应包含新 Codex Cloud 任务启动提示，要求新任务只根据仓库文件接手，不依赖旧任务上下文。
-- 状态：reflected
-- 来源：RAW-0020B
-- 反映位置：handoff/startup-instructions.md
-
-## CAND-0027
-
-- 内容：startup-instructions 应规定在能力边界判断、新机制设计、平台适配和目标项目设计前读取研究证据 current 视图。
-- 状态：reflected
-- 来源：RAW-0020B
-- 反映位置：handoff/startup-instructions.md；raw/research-reports/current/current-evidence-map.md；raw/research-reports/current/current-capability-boundaries.md
-
-## CAND-0028
-
-- 内容：startup-instructions 创建后仍需要进行新 ChatGPT / 新 Codex 接手演练，以验证仓库是否能脱离当前对话上下文继续工作。
-- 状态：todo
-- 来源：RAW-0020B
-- 反映位置：current/todo.md；notes/v0.1-scope-and-consistency-check.md
-
-## CAND-0029
-
-- 内容：Mnemosyne 需要进行 startup rehearsal / 接手演练，以验证新会话可仅依赖仓库文件接手。
-- 状态：reflected
-- 来源：RAW-0021
-- 反映位置：notes/startup-rehearsal-report.md
-
-## CAND-0030
-
-- 内容：接手演练报告应识别执行源和非执行源，并在冲突时回退到 `current/human-approved-spec.md`。
-- 状态：reflected
-- 来源：RAW-0021
-- 反映位置：notes/startup-rehearsal-report.md
-
-## CAND-0031
-
-- 内容：接手演练应检查 startup-instructions、active-context、handoff 和 todo 是否一致。
-- 状态：reflected
-- 来源：RAW-0021
-- 反映位置：notes/startup-rehearsal-report.md
-
-## CAND-0032
-
-- 内容：接手演练后应由用户 review，再决定是否进入 v0.2。
-- 状态：todo
-- 来源：RAW-0021
-- 反映位置：current/todo.md；handoff/handoff-current.md
-
-## CAND-0033
-
-- 内容：如果接手演练发现阻断问题，应先修复再进入 v0.2。
-- 状态：reflected
-- 来源：RAW-0021
-- 反映位置：notes/startup-rehearsal-report.md；notes/v0.1-scope-and-consistency-check.md
-
-## CAND-0034
-
-- 内容：Mnemosyne 需要通过接手演练验证新 ChatGPT / 新 Codex 能否仅依赖仓库文件接手。
-- 状态：reflected
-- 来源：RAW-0022；notes/startup-rehearsal-report.md
-- 反映位置：notes/startup-rehearsal-report.md
-
-## CAND-0035
-
-- 内容：startup-rehearsal-report 应记录接手演练读取的文件、执行源识别、非执行源识别、已完成内容、未完成内容、冲突检查和结论。
-- 状态：reflected
-- 来源：RAW-0022；notes/startup-rehearsal-report.md
-- 反映位置：notes/startup-rehearsal-report.md
-
-## CAND-0036
-
-- 内容：接手演练通过后，active-context、handoff-current 和 todo 应同步更新。
-- 状态：reflected
-- 来源：RAW-0022
-- 反映位置：current/active-context.md；handoff/handoff-current.md；current/todo.md
-
-## CAND-0037
-
-- 内容：接手演练报告不是执行源。
-- 状态：reflected
-- 来源：RAW-0022；notes/startup-rehearsal-report.md
-- 反映位置：notes/startup-rehearsal-report.md
-
-## CAND-0038
-
-- 内容：v0.1 接手能力通过演练后，下一步应进入用户 review 与 v0.2 方向选择。
-- 状态：todo
-- 来源：RAW-0022
-- 反映位置：current/active-context.md；handoff/handoff-current.md；current/todo.md
