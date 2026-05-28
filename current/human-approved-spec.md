@@ -48,6 +48,14 @@
 - 进入实施版前需要查重、对比和用户确认。
 - 用户确认后才可更新 Human-Approved Spec。
 
+
+## 6.1 self-improvement workflow 高层原则
+
+- Mnemosyne 应使用 self-improvement workflow 处理用户新构想、使用反馈、Codex/ChatGPT 任务结果和研究更新。
+- 以上输入不得直接修改执行源。
+- 只有用户确认后才可更新 `current/human-approved-spec.md`。
+- self-improvement workflow 当前是半自动流程，不包含自动查重、自动写回或自动更新 spec。
+
 ## 7. handoff / active-context 原则
 
 - active-context 是当前工作集，不是执行源。

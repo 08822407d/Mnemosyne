@@ -195,3 +195,68 @@
 - 状态：accepted
 - 来源：notes/v0.1-final-review.md；notes/v0.1-independent-verification-report.md
 
+
+
+## DEC-0031
+
+- 决策：v0.2 第一方向定为 self-improvement workflow。
+- 理由：优先建立 Mnemosyne 自身持续演化机制，避免输入回流无序化。
+- 状态：accepted
+- 来源：RAW-0025
+
+## DEC-0032
+
+- 决策：创建 `notes/self-improvement-workflow.md` 作为 v0.2 第一方向的流程说明。
+- 理由：需要明确输入回流、人工确认点和更新边界。
+- 状态：accepted
+- 来源：RAW-0025
+
+## DEC-0033
+
+- 决策：Codex Task Result Record 定位为审计材料，不是执行源。
+- 理由：执行判断应以 Git diff、仓库文件和用户 review 为准。
+- 状态：accepted
+- 来源：RAW-0025
+
+## DEC-0034
+
+- 决策：self-improvement workflow 当前保持半自动。
+- 理由：先固化可审查流程，再考虑自动化。
+- 状态：accepted
+- 来源：RAW-0025
+
+## DEC-0035
+
+- 决策：用户确认仍是更新 `current/human-approved-spec.md` 的必要条件。
+- 理由：防止建议性内容直接越权覆盖执行源。
+- 状态：accepted
+- 来源：RAW-0025
+
+## DEC-0036
+
+- 决策：自动查重、自动写回、自动索引继续延期。
+- 理由：当前阶段只做半自动流程设计，不进入自动化实现。
+- 状态：accepted
+- 来源：RAW-0025
+
+
+## DEC-0037
+
+- 决策：执行 MNEMOSYNE-025A，对 self-improvement workflow 做一致性清理与记录补账。
+- 理由：MNEMOSYNE-025 已完成流程设计，但存在 Markdown 单行化、task result 路径错误和 candidate 记录问题。
+- 状态：accepted
+- 来源：RAW-0026
+
+## DEC-0038
+
+- 决策：Codex Task Result Record 默认路径使用 `notes/codex-task-results/<TASK_ID>-result.md`。
+- 理由：避免出现缺少 task_id 的路径，保证任务结果记录可追踪。
+- 状态：accepted
+- 来源：RAW-0026
+
+## DEC-0039
+
+- 决策：self-improvement 模板设计暂不在 MNEMOSYNE-025A 中完成。
+- 理由：本任务只做清理和补账；模板设计应作为后续独立任务。
+- 状态：accepted
+- 来源：RAW-0026
