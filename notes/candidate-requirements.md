@@ -198,9 +198,9 @@
 ## CAND-0033
 
 - 内容：self-improvement workflow 应优先设计“用户新构想 / 使用反馈 / Codex 或 ChatGPT 结果 → raw → candidate → similarity/conflict → 用户确认 → spec/todo/open question”的半自动流程。
-- 状态：pending
+- 状态：reflected
 - 来源：RAW-0024
-- 反映位置：current/todo.md
+- 反映位置：notes/self-improvement-workflow.md
 
 ## CAND-0036
 
@@ -213,32 +213,37 @@
 ## CAND-0037
 
 - 内容：Mnemosyne 需要 self-improvement workflow 支持自身持续演化。
-- 状态：pending
+- 状态：reflected
 - 来源：RAW-0025
+- 反映位置：notes/self-improvement-workflow.md
 
 ## CAND-0038
 
 - 内容：用户新构想和使用反馈必须先进入 raw / candidate，不得直接更新执行源。
-- 状态：pending
+- 状态：reflected
 - 来源：RAW-0025
+- 反映位置：notes/self-improvement-workflow.md
 
 ## CAND-0039
 
 - 内容：Codex Task Result Record 应作为审计材料，不是执行源。
-- 状态：pending
+- 状态：reflected
 - 来源：RAW-0025
+- 反映位置：notes/self-improvement-workflow.md
 
 ## CAND-0040
 
 - 内容：新机制设计前应按需回查 research evidence。
-- 状态：pending
+- 状态：reflected
 - 来源：RAW-0025
+- 反映位置：notes/self-improvement-workflow.md
 
 ## CAND-0041
 
 - 内容：self-improvement workflow 当前是半自动流程，不实现自动查重或自动写回。
-- 状态：pending
+- 状态：reflected
 - 来源：RAW-0025
+- 反映位置：notes/self-improvement-workflow.md
 
 ## CAND-0042
 
