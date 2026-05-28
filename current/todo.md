@@ -15,7 +15,7 @@
 
 - [x] `MNEMOSYNE-025：self-improvement workflow 设计`；
 - [ ] 用户 review `notes/self-improvement-workflow.md`；
-- [ ] 根据 review 结果决定是否设计 self-improvement workflow 模板；
+- [ ] MNEMOSYNE-026：self-improvement workflow 模板设计；
 - [ ] 设计 Codex Task Result Record 固定模板；
 - [ ] 设计 Similarity / Conflict Report 最小格式；
 - [ ] 设计 User Decision Record 模板；

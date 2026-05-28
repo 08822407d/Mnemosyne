@@ -10,7 +10,7 @@
 
 - `current/human-approved-spec.md`
 
-如果本文件与 `current/human-approved-spec.md` 冲突，应以 `current/human-approved-spec.md` 为准，并登记 open question。
+如果本文件与 `current/human-approved-spec.md` 冲突，应以 `human-approved-spec` 为准，并登记 open question。
 
 ## 2. 输入来源
 
@@ -29,36 +29,35 @@ Mnemosyne 的自我改进输入至少包括：
 说明：
 
 - 不同输入来源都不能直接修改执行源；
-- 输入必须进入自我改进流程；
+- 必须进入自我改进流程；
 - 临时点子速记当前仍属于 Idea Capture Buffer 的未来方向。
 
 ## 3. 总体流程
 
-自我改进的半自动流程为：
+推荐流程：
 
-Input  
-→ Raw / Task Result Record  
-→ Candidate Requirement  
-→ Similarity / Conflict Check  
-→ User Decision  
-→ Human-Approved Spec / TODO / Open Question / Decision Log  
-→ Active Context / Handoff Refresh
-
-当前流程是半自动流程，不实现自动查重、自动写回或自动合并。
+Input
+→ Raw / Task Result Record
+→ Candidate Requirement
+→ Similarity / Conflict Check
+→ User Decision
+→ Apply to Spec / TODO / Open Question / Decision Log
+→ Refresh Active Context / Handoff
 
 ## 4. Step 1：Capture / 保存输入
 
 用户原文、新构想、反馈、任务结果或研究更新应先保存为 raw 或 task result record。
 
-记录时尽量保留：
+应尽量保留：
 
 - 来源；
 - 时间；
 - 上下文；
-- 相关 PR / commit；
-- 相关文件路径；
-- 已知限制；
-- 需要人工复核的内容。
+- 相关 PR；
+- commit；
+- 文件路径；
+- 用户原始表述；
+- Codex / ChatGPT 的重要限制或不确定项。
 
 本步骤不得直接更新 `current/human-approved-spec.md`。
 
@@ -66,20 +65,25 @@ Input
 
 从 raw 或 task result 中抽取 Candidate Requirement。
 
-候选需求应记录：
+要求：
 
-- candidate ID；
-- 说明；
-- source_refs；
-- 状态；
-- 是否已反映到某个文件；
-- 是否需要用户确认。
+- 记录 source_refs；
+- 标记状态；
+- 说明是否已反映到 spec / todo / open question / handoff；
+- Candidate Requirement 不是执行源。
 
-Candidate Requirement 不是执行源。
+候选状态可以包括：
+
+- pending；
+- reflected；
+- rejected；
+- deferred；
+- merged；
+- superseded。
 
 ## 6. Step 3：Compare / 查重和冲突检查
 
-在新候选需求进入实施版前，应与以下内容比较：
+将新候选与已有内容比较：
 
 - `current/human-approved-spec.md`
 - `notes/candidate-requirements.md`
@@ -87,22 +91,22 @@ Candidate Requirement 不是执行源。
 - `current/open-questions.md`
 - `current/todo.md`
 - research evidence current 视图
+- relevant raw records
 
-比较关系至少包括：
+比较关系可以包括：
 
 - duplicate；
 - similar；
 - conflicts_with；
 - refines；
 - supersedes；
-- merged_into；
-- unrelated。
+- merged_into。
 
-当前只做人工或 Codex 辅助查重，不做自动语义查重。
+当前只做人工或 Codex 辅助检查，不做自动语义查重。
 
 ## 7. Step 4：Present / 向用户呈现决策选项
 
-向用户呈现候选需求时，至少提供以下决策选项：
+向用户呈现至少以下选项：
 
 - accept：接受并进入实施；
 - refine：要求改写后再确认；
@@ -115,40 +119,53 @@ Candidate Requirement 不是执行源。
 - needs_research：需要更多研究证据；
 - needs_human_review：需要人工复核。
 
-模型可以提出建议，但不能替用户静默决定。
+模型可以建议，但不得替用户静默决定。
 
 ## 8. Step 5：Apply / 应用用户确认结果
 
-只有用户确认后，才可更新 `current/human-approved-spec.md`。
+只有用户确认后，才可更新：
 
-常见应用方式：
+- `current/human-approved-spec.md`
 
-- 如果进入执行原则，更新 `current/human-approved-spec.md`；
-- 如果只是未来工作，更新 `current/todo.md`；
-- 如果仍未决定，更新 `current/open-questions.md`；
-- 如果形成设计取舍，更新 `notes/decision-log.md`；
-- 如果影响当前工作状态，更新 `current/active-context.md`；
-- 如果影响新会话接手，更新 `handoff/handoff-current.md` 或 `handoff/startup-instructions.md`。
+如果只是未来工作，更新：
+
+- `current/todo.md`
+
+如果仍未决定，更新：
+
+- `current/open-questions.md`
+
+如果形成设计取舍，更新：
+
+- `notes/decision-log.md`
+
+如果影响当前工作状态，更新：
+
+- `current/active-context.md`
+
+如果影响新会话接手，更新：
+
+- `handoff/handoff-current.md`
+- `handoff/startup-instructions.md`
 
 ## 9. Step 6：Refresh / 刷新接手材料
 
-在以下情况后，应检查是否需要更新 active-context / handoff：
+以下情况后应检查是否刷新 active-context / handoff：
 
-- `current/human-approved-spec.md` 发生变化；
+- human-approved-spec 发生变化；
 - 当前阶段发生变化；
-- v0.2 方向发生变化；
-- 接手流程发生变化；
+- v0.2 方向变化；
+- 接手流程变化；
 - 研究证据影响能力边界；
 - 目标项目交付状态变化；
-- 模型迁移或工具切换。
+- 模型迁移或工具切换；
+- Codex 任务结果显示实际文件状态与任务总结不一致。
 
 ## 10. Codex Task Result Record 规则
 
 Codex 任务完成后，除了对话界面总结外，重要任务还应把任务结果写入仓库。
 
-结果记录不是执行源，只是审计材料。
-
-最终判断仍以 Git diff、仓库文件和用户 review 为准。
+结果记录不是执行源，只是审计材料。最终判断仍以 Git diff、仓库文件和用户 review 为准。
 
 如果任务已有专门报告文件，例如独立验证报告，可以写入该报告。
 
@@ -223,7 +240,8 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 - 决定某项机制延期；
 - 决定某项能力不在 v0.1 / v0.2 承诺中；
 - 决定采用某个目录结构、模板、流程或约束；
-- 决定从某个 research cycle 继承证据视图。
+- 决定从某个 research cycle 继承证据视图；
+- 决定将某个异常或修复结果纳入长期维护规则。
 
 ## 15. 失败与偏差处理
 
@@ -257,7 +275,7 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 
 ## 17. 最小操作清单
 
-处理一次自我改进输入时，至少检查：
+每次处理新构想、反馈或任务结果时，至少检查：
 
 1. 这是不是新构想 / 反馈 / 任务结果？
 2. 是否需要保存 raw 或 task result？
@@ -265,7 +283,7 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 4. 是否需要查重 / 冲突检查？
 5. 是否需要读取 research evidence？
 6. 是否需要用户确认？
-7. 应更新 spec、todo、open question、decision-log 中的哪一个？
+7. 更新 spec、todo、open question、decision-log 中的哪一个？
 8. 是否需要更新 active-context / handoff？
 9. 是否需要记录 Codex task result？
 10. 是否产生下一步 TODO？
@@ -282,15 +300,3 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 - `current/active-context.md`：当前工作集；
 - `handoff/handoff-current.md`：新会话接手卡；
 - `notes/codex-task-results/`：Codex 任务结果审计材料。
-
-## 19. 后续待设计模板
-
-本文件只定义流程，不定义完整模板。
-
-后续可设计：
-
-- self-improvement input 模板；
-- Codex Task Result Record 模板；
-- Similarity / Conflict Report 模板；
-- User Decision Record 模板；
-- Spec Update Proposal 模板。

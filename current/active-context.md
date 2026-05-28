@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 正在设计。
+v0.2 第一方向 self-improvement workflow 已建立，正在清理格式和记录一致性。
 
 ## 当前目标
 
@@ -37,7 +37,7 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 ## 当前未完成内容
 
 - self-improvement workflow 用户 review；
-- 是否需要拆出 self-improvement workflow 模板；
+- self-improvement workflow 模板设计；
 - 目标项目设计模板；
 - 研究报告 summary；
 - PDF 图表人工复核；
@@ -49,5 +49,5 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 ## 下一步建议
 
 1. 用户 review self-improvement workflow；
-2. 根据 review 结果决定是否细化模板；
-3. 再选择 v0.2 下一项。
+2. 执行 MNEMOSYNE-026：self-improvement workflow 模板设计；
+3. 再考虑目标项目 memory system design spec 模板或 AGENTS.md / CLAUDE.md。

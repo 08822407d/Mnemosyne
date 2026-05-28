@@ -202,6 +202,21 @@
 - 来源：RAW-0024
 - 反映位置：notes/self-improvement-workflow.md
 
+
+## CAND-0034
+
+- 内容：v0.2 第一方向已选择 self-improvement workflow。
+- 状态：reflected
+- 来源：RAW-0024
+- 反映位置：current/active-context.md；current/todo.md
+
+## CAND-0035
+
+- 内容：self-improvement workflow 仍保持半自动，不引入自动写回、自动查重、GitHub Actions、AGENTS.md 或 CLAUDE.md。
+- 状态：reflected
+- 来源：RAW-0024；RAW-0025
+- 反映位置：notes/self-improvement-workflow.md
+
 ## CAND-0036
 
 - 内容：进入 self-improvement workflow 设计时仍不引入自动写回、自动查重、GitHub Actions、AGENTS.md 或 CLAUDE.md。
