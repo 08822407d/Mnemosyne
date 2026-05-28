@@ -25,6 +25,7 @@ v0.2 第一方向 self-improvement workflow 已建立，下一步应先完成工
 - `current/active-context.md`
 - `handoff/handoff-current.md`
 - `handoff/startup-instructions.md`
+- `notes/system-construction-baseline.md`
 
 如果其他文件与 `human-approved-spec` 冲突，以 `human-approved-spec` 为准，并登记 open question。
 
@@ -70,6 +71,6 @@ v0.2 第一方向 self-improvement workflow 已建立，下一步应先完成工
 
 ## 下一步建议
 
-1. 用户 review `notes/self-improvement-workflow.md`；
-2. 进入 MNEMOSYNE-026：self-improvement workflow 模板设计；
-3. 暂不创建 AGENTS.md / CLAUDE.md / GitHub Actions。
+1. 用户 review `notes/system-construction-baseline.md`；
+2. 清理 `notes/self-improvement-workflow.md`；
+3. 再进入 MNEMOSYNE-026：self-improvement workflow 模板设计。

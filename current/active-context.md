@@ -23,6 +23,7 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - `current/active-context.md`
 - `handoff/handoff-current.md`
 - `handoff/startup-instructions.md`
+- `notes/system-construction-baseline.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -50,6 +51,6 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 
 ## 下一步建议
 
-1. 用户 review self-improvement workflow；
-2. 执行 MNEMOSYNE-026：self-improvement workflow 模板设计；
-3. 再考虑目标项目 memory system design spec 模板或 AGENTS.md / CLAUDE.md。
+1. 用户 review `notes/system-construction-baseline.md`；
+2. 清理 `notes/self-improvement-workflow.md`；
+3. 执行 self-improvement workflow 模板设计。
