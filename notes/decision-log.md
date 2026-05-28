@@ -267,3 +267,81 @@
 - 理由：workflow 主体已建立，下一阶段应进入模板化以提升复用与一致性。
 - 状态：accepted
 - 来源：MNEMOSYNE-025C
+
+## DEC-0041
+
+- 决策：创建 `notes/overall-target-and-roadmap-snapshot.md`。
+- 理由：将当前长期目标与路线图固化入库，避免只存在于长对话上下文。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0042
+
+- 决策：`notes/overall-target-and-roadmap-snapshot.md` 作为规划快照，不作为执行源。
+- 理由：执行源仍为 `current/human-approved-spec.md`，避免说明性文件越权。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0043
+
+- 决策：后续任务可按路线图快照检查是否偏离长期目标。
+- 理由：为跨会话/跨任务持续一致性提供统一回查锚点。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0044
+
+- 决策：在进入 self-improvement 模板设计前，先清理 self-improvement workflow 的格式和路径问题。
+- 理由：先修复现有记录一致性，再进入模板化，降低错误扩散。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0045
+
+- 决策：后续 Codex 任务默认写入 task result record。
+- 理由：增强任务可追溯性与审计一致性，降低“口头完成”风险。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0046
+
+- 决策：建立 `notes/system-construction-baseline.md`。
+- 理由：将当前相对确定的系统建设目标、工作约定、后续路线和诊断暂存为更明确的基线快照，降低长对话压缩后的路线偏移风险。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0047
+
+- 决策：`notes/system-construction-baseline.md` 不是执行源。
+- 理由：执行源仍为 `current/human-approved-spec.md`，基线快照仅用于路线回查和上下文恢复。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0048
+
+- 决策：后续 Codex 任务是否必须新开，按“是否必须在全新任务中执行”判断。
+- 理由：避免把“新开更好”误写为硬性要求；在现有任务干净、基于最新 master 且无未合并改动时可以继续使用。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0049
+
+- 决策：后续 Codex 任务内容优先通过 txt 文件提供。
+- 理由：减少聊天界面代码块嵌套导致任务描述复制不完整的风险。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0050
+
+- 决策：Codex Task Result Record 默认路径为 `notes/codex-task-results/<TASK_ID>-result.md`。
+- 理由：统一任务审计记录位置和命名，避免出现缺失 TASK_ID 的错误路径。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0051
+
+- 决策：在进入模板设计前先修正 self-improvement workflow 的格式和路径问题。
+- 理由：先稳定现有 workflow 文档和记录路径，避免后续模板继承错误。
+- 状态：accepted
+- 来源：RAW-0027
+
