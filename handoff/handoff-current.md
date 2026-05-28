@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.1 接手层已完成强制覆盖修复，等待用户 review、`startup-instructions` 和接手演练。
+v0.1 接手演练已通过，等待用户 review 和 v0.2 方向选择。
 
 ## 当前执行源
 
@@ -38,6 +38,12 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、`startup-instr
 - `raw/research-reports/current/current-capability-boundaries.md`
 
 研究报告是高权重证据层，不是执行源。PDF 图表和图片仍需人工复核。
+
+## 已完成机制
+
+- `handoff/startup-instructions.md` 已创建；
+- `notes/startup-rehearsal-report.md` 已创建；
+- 新 ChatGPT / 新 Codex 接手演练结论为 pass。
 
 ## 新会话推荐读取顺序
 
@@ -69,7 +75,6 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、`startup-instr
 
 ## 下一步建议
 
-1. 用户 review `human-approved-spec`、`active-context`、`handoff-current`；
-2. 创建 `startup-instructions`；
-3. 做一次新会话接手演练；
-4. 再选择 v0.2 方向。
+1. 用户 review startup-instructions 和 startup-rehearsal-report；
+2. 选择 v0.2 第一方向；
+3. 或先补研究报告 summary / PDF 图表复核。

@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instructions 和接手演练。
+v0.1 接手演练已通过，等待用户 review 和 v0.2 方向选择。
 
 ## 当前目标
 
@@ -44,12 +44,14 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instru
 - 7 份研究报告作为 `RC-2026Q2-initial` 证据层入库；
 - `current-evidence-map` 与 `current-capability-boundaries` 建立；
 - `human-approved-spec` 已同步为 v0.1 当前执行源；
-- `handoff-current` 已更新为新会话接手卡。
+- `handoff-current` 已更新为新会话接手卡；
+- `startup-instructions` 已创建；
+- 新 ChatGPT / 新 Codex 接手演练已通过；
+- `notes/startup-rehearsal-report.md` 已创建。
 
 ## 当前未完成内容
 
-- `startup-instructions`；
-- 新 ChatGPT / 新 Codex 接手演练；
+- 用户 review 接手演练结果；
 - 为每份研究报告生成 summary；
 - PDF 图表人工复核；
 - 目标项目设计模板；
@@ -75,7 +77,7 @@ v0.1 接手层已完成强制覆盖修复，等待用户 review、startup-instru
 
 ## 下一步建议
 
-1. 用户 review 本次同步结果；
-2. 创建 `startup-instructions`；
-3. 做一次新 ChatGPT / 新 Codex 接手演练；
-4. 再选择 v0.2 方向。
+1. 用户 review `human-approved-spec`、`startup-instructions` 和 `startup-rehearsal-report`；
+2. 根据 review 结果修正少量状态文件；
+3. 选择 v0.2 第一方向；
+4. 不建议在 review 前直接开始 AGENTS.md、CLAUDE.md 或自动化。
