@@ -22,8 +22,13 @@
    - 是否需要进一步拆出模板仍为 open。
 2. similarity/conflict 在 v0.2 中先人工执行还是由 Codex 辅助？
 3. 用户反馈和 Codex 任务结果如何进入 raw？
+   - 结论：当前由 `notes/self-improvement-workflow.md` 定义基本流程；
+   - 具体模板仍待设计。
 4. Codex Task Result Record 是否需要固定模板？
 5. 是否需要把重要 Codex 完成回复精简保存？
+   - 结论：重要任务、异常任务、验证任务应保存精简结果记录；
+   - 普通任务可不保存完整回复；
+   - 固定模板仍待设计。
 6. 研究报告 summary 是否先于目标项目模板？
 7. PDF 图表人工复核何时做？
 8. 是否需要隐私分级后再导入更多 raw？
