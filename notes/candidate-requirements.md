@@ -125,3 +125,45 @@
 - 状态：reflected
 - 来源：RAW-0019
 - 反映位置：handoff/handoff-current.md；raw/research-reports/current/current-evidence-map.md；raw/research-reports/current/current-capability-boundaries.md
+
+## CAND-0023
+
+- 内容：Mnemosyne 需要记录 MNEMOSYNE-021 接手演练结果为 pass，并将该结论写入当前状态层。
+- 状态：reflected
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+- 反映位置：current/active-context.md；handoff/handoff-current.md；notes/v0.1-scope-and-consistency-check.md
+
+## CAND-0024
+
+- 内容：active-context 应在接手演练通过后进入“v0.1 最终 review / v0.2 方向选择”状态。
+- 状态：reflected
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+- 反映位置：current/active-context.md
+
+## CAND-0025
+
+- 内容：handoff-current 应明确 startup-instructions 已创建、接手演练已通过，且当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
+- 状态：reflected
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+- 反映位置：handoff/handoff-current.md
+
+## CAND-0026
+
+- 内容：v0.1-final TODO 应将“做一次新 ChatGPT / 新 Codex 接手演练”标记为完成，并保留用户最终 review 与研究证据补强项为未完成。
+- 状态：reflected
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+- 反映位置：current/todo.md
+
+## CAND-0027
+
+- 内容：open-questions 应将“v0.1 是否足以支持新对话接手”标记为 answered，并引用接手演练 pass 结论。
+- 状态：reflected
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+- 反映位置：current/open-questions.md
+
+## CAND-0028
+
+- 内容：v0.1-scope-and-consistency-check 应删除“startup-instructions 待完成 / 接手演练待完成”的旧状态，并改为“v0.1 接手能力已覆盖、等待用户最终 review”。
+- 状态：reflected
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+- 反映位置：notes/v0.1-scope-and-consistency-check.md

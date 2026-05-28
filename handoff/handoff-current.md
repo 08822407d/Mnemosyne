@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-startup-instructions 已创建，等待 review 和接手演练。
+v0.1 接手演练已通过，等待用户最终 review，并选择 v0.2 第一方向。
 
 ## 当前执行源
 
@@ -49,7 +49,8 @@ startup-instructions 已创建，等待 review 和接手演练。
 
 - `handoff/startup-instructions.md` 已创建；
 - `notes/startup-rehearsal-report.md` 已创建；
-- 新 ChatGPT / 新 Codex 接手演练结论为 pass。
+- 新 ChatGPT / 新 Codex 接手演练结果为 pass；
+- 当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
 
 ## 新会话推荐读取顺序
 
@@ -61,13 +62,14 @@ startup-instructions 已创建，等待 review 和接手演练。
 6. `current/open-questions.md`
 7. `current/todo.md`
 8. `notes/v0.1-scope-and-consistency-check.md`
-9. `raw/research-reports/current/research-report-index.md`
-10. `raw/research-reports/current/current-evidence-map.md`
-11. `raw/research-reports/current/current-capability-boundaries.md`
-12. `notes/core-object-model.md`
-13. `notes/requirement-intake-workflow.md`
-14. `notes/delivery-package-workflow.md`
-15. `raw/concept-origin-extract-001.md` 按需回查
+9. `notes/startup-rehearsal-report.md`
+10. `raw/research-reports/current/research-report-index.md`
+11. `raw/research-reports/current/current-evidence-map.md`
+12. `raw/research-reports/current/current-capability-boundaries.md`
+13. `notes/core-object-model.md`
+14. `notes/requirement-intake-workflow.md`
+15. `notes/delivery-package-workflow.md`
+16. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -82,6 +84,6 @@ startup-instructions 已创建，等待 review 和接手演练。
 
 ## 下一步建议
 
-1. 用户 review `startup-instructions`；
-2. 做一次新会话接手演练；
-3. 再选择 v0.2 方向。
+1. 用户 review 关键接手文件和接手演练报告；
+2. 选择 v0.2 第一方向；
+3. 可选：先处理研究报告 summary / PDF 图表复核。

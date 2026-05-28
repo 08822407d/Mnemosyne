@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-startup-instructions 已创建，等待用户 review 和接手演练。
+v0.1 接手演练已通过，`startup-instructions` 已创建；当前进入 v0.1 最终 review 与 v0.2 第一方向选择阶段。
 
 ## 当前目标
 
@@ -46,11 +46,13 @@ startup-instructions 已创建，等待用户 review 和接手演练。
 - `current-evidence-map` 与 `current-capability-boundaries` 建立；
 - `human-approved-spec` 已同步为 v0.1 当前执行源；
 - `handoff-current` 已更新为新会话接手卡；
-- `handoff/startup-instructions.md` 已创建。
+- `handoff/startup-instructions.md` 已创建；
+- `notes/startup-rehearsal-report.md` 已创建；
+- 新 ChatGPT / 新 Codex 接手演练结果为 pass。
 
 ## 当前未完成内容
 
-- 新 ChatGPT / 新 Codex 接手演练；
+- 用户最终 review v0.1 接手文件和接手演练报告；
 - 为每份研究报告生成 summary；
 - PDF 图表人工复核；
 - 目标项目设计模板；
@@ -77,6 +79,7 @@ startup-instructions 已创建，等待用户 review 和接手演练。
 
 ## 下一步建议
 
-1. 用户 review startup-instructions；
-2. 做一次新 ChatGPT / 新 Codex 接手演练；
-3. 再选择 v0.2 方向。
+1. 用户 review `human-approved-spec`、`active-context`、`handoff-current`、`startup-instructions` 和 `startup-rehearsal-report`；
+2. 选择 v0.2 第一方向；
+3. 可选：先为 7 份研究报告建立 summary 或人工复核 PDF 图表；
+4. 根据选择进入对应设计任务。
