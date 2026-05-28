@@ -167,3 +167,31 @@
 - 状态：accepted
 - 来源：RAW-0022
 
+## DEC-0027
+
+- 决策：接受 MNEMOSYNE-023 独立验证结论为 `PASS_WITH_WARNINGS`。
+- 理由：验证报告未发现阻断接手的严重冲突，v0.1 已具备按仓库文件接手的最低可用能力，但仍存在非阻断警告。
+- 状态：accepted
+- 来源：notes/v0.1-independent-verification-report.md
+
+## DEC-0028
+
+- 决策：将 CAND-0020 与 CAND-0021 状态同步为 reflected。
+- 理由：startup-instructions 已创建，接手演练已 pass，继续标记为 todo 会误导后续任务。
+- 状态：accepted
+- 来源：notes/v0.1-independent-verification-report.md
+
+## DEC-0029
+
+- 决策：研究报告 summary、PDF 图表人工复核与可选只读回归验证作为非阻断 v0.1-final 后续项保留。
+- 理由：这些事项会提升质量与审计可靠性，但不阻断 v0.1 可接手结论。
+- 状态：accepted
+- 来源：notes/v0.1-independent-verification-report.md
+
+## DEC-0030
+
+- 决策：在用户最终 review 前不进入 v0.2 实施。
+- 理由：v0.1 已具备接手能力，但 v0.2 第一方向仍需用户确认优先级。
+- 状态：accepted
+- 来源：notes/v0.1-final-review.md；notes/v0.1-independent-verification-report.md
+

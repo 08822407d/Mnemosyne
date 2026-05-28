@@ -9,6 +9,11 @@
 3. v0.1 是否已经足以支持新对话接手？
    - 结论：根据 `notes/startup-rehearsal-report.md`，当前结论为 pass，当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
 
+4. startup-instructions 在新 ChatGPT / 新 Codex 接手演练中的可执行性是否足够？
+   - 结论：根据 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md`，当前为可执行且足以支撑 v0.1 接手（PASS_WITH_WARNINGS），但仍建议用户做最终 review。
+5. 接手演练是否需要固定检查清单？
+   - 结论：当前已有 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md` 作为临时检查机制；标准模板可在 v0.2 / future 继续完善。
+
 ## open
 
 1. 用户是否确认 v0.1 可作为可接手版本？
