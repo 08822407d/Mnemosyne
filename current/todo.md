@@ -4,8 +4,7 @@
 
 - [ ] 用户 review 本次同步结果；
 - [x] 创建 `startup-instructions`；
-- [x] 做一次新 ChatGPT / 新 Codex 接手演练；
-- [ ] 用户 review 接手演练报告；
+- [ ] 做一次新 ChatGPT / 新 Codex 接手演练；
 - [ ] 为每份研究报告建立 summary；
 - [ ] 人工复核 PDF 中的图表和图片；
 - [ ] 必要时将 PDF 转换为 Markdown / TXT。
