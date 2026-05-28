@@ -14,8 +14,6 @@
    - 结论：用户接受 `PASS_WITH_WARNINGS`，其不阻断进入 v0.2。
 6. v0.2 第一方向应选择哪个？
    - 结论：v0.2 第一方向选择 `self-improvement workflow`。
-7. Codex Task Result Record 路径写法是否需要固定？
-   - 结论：默认路径使用 `notes/codex-task-results/<TASK_ID>-result.md`。
 
 ## open
 

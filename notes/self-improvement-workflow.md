@@ -25,18 +25,12 @@ Mnemosyne 的自我改进输入至少包括：
 
 ## 3. 总体流程
 
-Input
-
-→ Raw / Task Result Record
-
-→ Candidate Requirement
-
-→ Similarity / Conflict Check
-
-→ User Decision
-
-→ Apply to Spec / TODO / Open Question / Decision Log
-
+Input  
+→ Raw / Task Result Record  
+→ Candidate Requirement  
+→ Similarity / Conflict Check  
+→ User Decision  
+→ Apply to Spec / TODO / Open Question / Decision Log  
 → Refresh Active Context / Handoff
 
 ### Step 1：Capture / 保存输入
