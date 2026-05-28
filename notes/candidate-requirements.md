@@ -110,14 +110,14 @@
 - 内容：startup-instructions 应作为下一项 v0.1-final 收尾工作，用于让新 ChatGPT 对话或新 Codex 任务按固定读取顺序接手 Mnemosyne。
 - 状态：reflected
 - 来源：RAW-0019
-- 反映位置：handoff/startup-instructions.md；current/todo.md；handoff/handoff-current.md
+- 反映位置：handoff/startup-instructions.md；current/todo.md；notes/v0.1-independent-verification-report.md
 
 ## CAND-0021
 
 - 内容：需要进行一次新 ChatGPT / 新 Codex 接手演练，以验证 startup-instructions、handoff-current、active-context 和 human-approved-spec 是否足以支持接手。
 - 状态：reflected
 - 来源：RAW-0019
-- 反映位置：notes/startup-rehearsal-report.md；current/todo.md；notes/v0.1-scope-and-consistency-check.md
+- 反映位置：notes/startup-rehearsal-report.md；current/todo.md；notes/v0.1-independent-verification-report.md
 
 ## CAND-0022
 
@@ -186,7 +186,7 @@
 - 内容：v0.1 final review 不是执行源。
 - 状态：reflected
 - 来源：RAW-0022
-- 反映位置：notes/v0.1-final-review.md
+- 反映位置：notes/v0.1-final-review.md；notes/decision-log.md
 
 ## CAND-0032
 
