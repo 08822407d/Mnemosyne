@@ -36,8 +36,6 @@
 
 ## 4. 执行源识别结果
 
-> 说明：本报告不是执行源。
-
 执行源：
 
 - `current/human-approved-spec.md`
@@ -118,7 +116,12 @@
 
 ## 10. 下一步建议
 
-1. 用户 review 本报告；
-2. 根据 review 修正少量状态文件；
-3. 选择 v0.2 第一方向；
-4. 可选：补研究报告 summary / PDF 图表复核。
+1. 用户 review startup-instructions 和接手演练报告；
+2. 根据需要为研究报告生成 summary 或复核 PDF 图表；
+3. 选择 v0.2 方向：
+   - 目标项目 memory system design spec 模板；
+   - self-improvement workflow；
+   - Idea Capture Buffer；
+   - AGENTS.md / CLAUDE.md；
+   - Evidence Item / delta report；
+   - GitHub Actions 文档检查。

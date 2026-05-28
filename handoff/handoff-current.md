@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.1 接手链路已通过演练，等待用户 review 和 v0.2 方向选择。
+startup-instructions 已创建，等待 review 和接手演练。
 
 ## 当前执行源
 
@@ -25,7 +25,6 @@ v0.1 接手链路已通过演练，等待用户 review 和 v0.2 方向选择。
 - `current/active-context.md`
 - `handoff/handoff-current.md`
 - `handoff/startup-instructions.md`
-- `notes/startup-rehearsal-report.md`
 
 如果其他文件与 `human-approved-spec` 冲突，以 `human-approved-spec` 为准，并登记 open question。
 
@@ -33,12 +32,6 @@ v0.1 接手链路已通过演练，等待用户 review 和 v0.2 方向选择。
 
 - `handoff/startup-instructions.md` 是固定启动说明入口，用于新 ChatGPT 对话、新 Codex Cloud 任务或未来其他 Agent 接手。
 - 该文件不是执行源。
-
-## 接手演练状态
-
-- `notes/startup-rehearsal-report.md` 已创建。
-- 演练结论：pass。
-- 当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
 
 ## 研究证据层状态
 
@@ -52,6 +45,12 @@ v0.1 接手链路已通过演练，等待用户 review 和 v0.2 方向选择。
 
 研究报告是高权重证据层，不是执行源。PDF 图表和图片仍需人工复核。
 
+## 已完成机制
+
+- `handoff/startup-instructions.md` 已创建；
+- `notes/startup-rehearsal-report.md` 已创建；
+- 新 ChatGPT / 新 Codex 接手演练结论为 pass。
+
 ## 新会话推荐读取顺序
 
 1. `README.md`
@@ -62,14 +61,13 @@ v0.1 接手链路已通过演练，等待用户 review 和 v0.2 方向选择。
 6. `current/open-questions.md`
 7. `current/todo.md`
 8. `notes/v0.1-scope-and-consistency-check.md`
-9. `notes/startup-rehearsal-report.md`
-10. `raw/research-reports/current/research-report-index.md`
-11. `raw/research-reports/current/current-evidence-map.md`
-12. `raw/research-reports/current/current-capability-boundaries.md`
-13. `notes/core-object-model.md`
-14. `notes/requirement-intake-workflow.md`
-15. `notes/delivery-package-workflow.md`
-16. `raw/concept-origin-extract-001.md` 按需回查
+9. `raw/research-reports/current/research-report-index.md`
+10. `raw/research-reports/current/current-evidence-map.md`
+11. `raw/research-reports/current/current-capability-boundaries.md`
+12. `notes/core-object-model.md`
+13. `notes/requirement-intake-workflow.md`
+14. `notes/delivery-package-workflow.md`
+15. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -84,11 +82,6 @@ v0.1 接手链路已通过演练，等待用户 review 和 v0.2 方向选择。
 
 ## 下一步建议
 
-1. 用户 review v0.1 当前状态；
-2. 选择 v0.2 第一方向；
-3. 推荐候选方向：
-   - 目标项目 memory system design spec 模板；
-   - self-improvement workflow；
-   - 研究报告 summary / Evidence Item；
-   - 隐私分级；
-   - AGENTS.md / CLAUDE.md。
+1. 用户 review `startup-instructions`；
+2. 做一次新会话接手演练；
+3. 再选择 v0.2 方向。
