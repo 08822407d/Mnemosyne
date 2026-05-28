@@ -2,7 +2,8 @@
 
 ## v0.1-final
 
-- [ ] 用户最终 review v0.1 接手文件和接手演练报告；
+- [ ] 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
+- [ ] 用户选择 v0.2 第一方向；
 - [x] 创建 `startup-instructions`；
 - [x] 做一次新 ChatGPT / 新 Codex 接手演练；
 - [ ] 为每份研究报告建立 summary；

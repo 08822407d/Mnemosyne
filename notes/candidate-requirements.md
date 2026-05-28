@@ -167,3 +167,28 @@
 - 状态：reflected
 - 来源：RAW-0022；notes/startup-rehearsal-report.md
 - 反映位置：notes/v0.1-scope-and-consistency-check.md
+
+## CAND-0029
+
+- 内容：Mnemosyne 需要 v0.1 final review 文件帮助用户最终确认可接手性。
+- 状态：pending
+- 来源：RAW-0022
+
+## CAND-0030
+
+- 内容：v0.2 第一方向应由用户在 final review 后选择。
+- 状态：pending
+- 来源：RAW-0022
+
+## CAND-0031
+
+- 内容：v0.1 final review 不是执行源。
+- 状态：pending
+- 来源：RAW-0022
+
+## CAND-0032
+
+- 内容：final review 应列出已完成内容、未完成内容、v0.2 候选方向和用户需决定的问题。
+- 状态：pending
+- 来源：RAW-0022
+
