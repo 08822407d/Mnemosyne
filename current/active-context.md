@@ -2,16 +2,11 @@
 
 ## 当前阶段
 
-v0.1 接手演练已通过，`startup-instructions` 已创建；当前进入 v0.1 最终 review 与 v0.2 第一方向选择阶段。
+v0.1 已被接受为可接手版本，当前进入 v0.2 第一方向：self-improvement workflow。
 
 ## 当前目标
 
-让新 ChatGPT 对话或新 Codex 任务可以按固定读取顺序接手 Mnemosyne，并继续：
-
-- 为其他项目设计外部持久记忆系统；
-- 根据用户新构想和使用反馈完善 Mnemosyne 自身；
-- 正确区分执行源、证据层、候选需求、决策记录、handoff、TODO 和开放问题；
-- 尊重 7 份研究报告给出的能力边界。
+下一阶段目标是设计 Mnemosyne 的自我改进工作流，使用户新构想、使用反馈、Codex/ChatGPT 结果能够稳定进入 raw、candidate、similarity/conflict、用户确认和 human-approved-spec / todo / open question。
 
 ## 当前执行源
 
@@ -53,10 +48,8 @@ v0.1 接手演练已通过，`startup-instructions` 已创建；当前进入 v0.
 
 ## 当前未完成内容
 
-- 用户最终 review；
 - 为每份研究报告生成 summary；
 - PDF 图表人工复核；
-- v0.2 第一方向选择；
 - 目标项目设计模板；
 - `AGENTS.md`；
 - `CLAUDE.md`；
@@ -81,6 +74,6 @@ v0.1 接手演练已通过，`startup-instructions` 已创建；当前进入 v0.
 
 ## 下一步建议
 
-1. 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
-2. 用户确认 v0.1 是否可作为可接手版本；
-3. 用户选择 v0.2 第一方向。
+1. 执行 `MNEMOSYNE-025：self-improvement workflow 设计`；
+2. 先设计半自动、人工确认的自我改进流程；
+3. 不要立即进入 AGENTS.md、CLAUDE.md 或自动化。

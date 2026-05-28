@@ -2,20 +2,21 @@
 
 ## v0.1-final
 
-- [ ] 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
-- [ ] 用户选择 v0.2 第一方向；
+- [x] 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
+- [x] 用户选择 v0.2 第一方向（self-improvement workflow）；
 - [x] 创建 `startup-instructions`；
 - [x] 做一次新 ChatGPT / 新 Codex 接手演练；
 - [ ] 为每份研究报告建立 summary；
 - [ ] 人工复核 PDF 中的图表和图片；
 - [ ] 必要时将 PDF 转换为 Markdown / TXT。
+- [ ] 可选：执行一次只读回归验证，复核 MNEMOSYNE-023 的 PASS_WITH_WARNINGS 结论。
 
 ## v0.2
 
+- [ ] `MNEMOSYNE-025：self-improvement workflow 设计`
 - [ ] 目标项目 memory system design spec 模板；
 - [ ] delivery manifest 模板；
 - [ ] target project intake 模板；
-- [ ] self-improvement workflow；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
