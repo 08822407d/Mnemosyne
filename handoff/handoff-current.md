@@ -45,6 +45,12 @@ startup-instructions 已创建，等待 review 和接手演练。
 
 研究报告是高权重证据层，不是执行源。PDF 图表和图片仍需人工复核。
 
+## 已完成机制
+
+- `handoff/startup-instructions.md` 已创建；
+- `notes/startup-rehearsal-report.md` 已创建；
+- 新 ChatGPT / 新 Codex 接手演练结论为 pass。
+
 ## 新会话推荐读取顺序
 
 1. `README.md`
