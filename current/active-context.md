@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 已建立，正在清理格式和记录一致性。
+v0.2 第一方向 self-improvement workflow 已建立，正在进行工作流清理与后续模板设计准备。
 
 ## 当前目标
 
@@ -32,10 +32,12 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - v0.2 第一方向已选择为 self-improvement workflow；
 - `raw/chatgpt-discussion-025.md` 已创建；
 - `notes/self-improvement-workflow.md` 已创建；
-- `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则。
+- `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
+- `notes/overall-target-and-roadmap-snapshot.md` 已创建，用于保存总体目标与路线图快照（非执行源）。
 
 ## 当前未完成内容
 
+- self-improvement workflow 清理（Markdown 格式与记录路径一致性）；
 - self-improvement workflow 用户 review；
 - self-improvement workflow 模板设计；
 - 目标项目设计模板；

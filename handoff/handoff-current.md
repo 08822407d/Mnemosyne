@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 已建立，下一步是模板设计。
+v0.2 第一方向 self-improvement workflow 已建立，下一步应先完成工作流清理，再进入模板设计。
 
 ## 当前执行源
 
@@ -53,10 +53,11 @@ v0.2 第一方向 self-improvement workflow 已建立，下一步是模板设计
 9. `notes/v0.1-final-review.md`
 10. `notes/requirement-intake-workflow.md`
 11. `notes/self-improvement-workflow.md`
-12. `raw/research-reports/current/research-report-index.md`
-13. `raw/research-reports/current/current-evidence-map.md`
-14. `raw/research-reports/current/current-capability-boundaries.md`
-15. `raw/concept-origin-extract-001.md` 按需回查
+12. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
+13. `raw/research-reports/current/research-report-index.md`
+14. `raw/research-reports/current/current-evidence-map.md`
+15. `raw/research-reports/current/current-capability-boundaries.md`
+16. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
