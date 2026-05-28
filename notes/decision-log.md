@@ -169,57 +169,29 @@
 
 ## DEC-0027
 
-- 决策：接受 MNEMOSYNE-023 独立验证结论为 PASS_WITH_WARNINGS。
-- 理由：独立验证未发现阻断性问题，Mnemosyne v0.1 已具备新 ChatGPT / 新 Codex 任务按仓库文件接手的基础能力；剩余问题属于非阻断补强项。
+- 决策：接受 MNEMOSYNE-023 独立验证结论为 `PASS_WITH_WARNINGS`。
+- 理由：验证报告未发现阻断接手的严重冲突，v0.1 已具备按仓库文件接手的最低可用能力，但仍存在非阻断警告。
 - 状态：accepted
-- 来源：notes/v0.1-independent-verification-report.md；MNEMOSYNE-023A；MNEMOSYNE-023B
+- 来源：notes/v0.1-independent-verification-report.md
 
 ## DEC-0028
 
-- 决策：将 CAND-0020 与 CAND-0021 同步为 reflected。
-- 理由：startup-instructions 已创建，接手演练已通过，继续保留 todo 状态会误导后续任务。
+- 决策：将 CAND-0020 与 CAND-0021 状态同步为 reflected。
+- 理由：startup-instructions 已创建，接手演练已 pass，继续标记为 todo 会误导后续任务。
 - 状态：accepted
-- 来源：MNEMOSYNE-023B
+- 来源：notes/v0.1-independent-verification-report.md
 
 ## DEC-0029
 
-- 决策：保留研究报告 summary、PDF 图表人工复核和 Evidence Item 模板为后续补强项。
-- 理由：这些事项有助于提高证据层质量，但不阻断 v0.1 可接手性。
+- 决策：研究报告 summary、PDF 图表人工复核与可选只读回归验证作为非阻断 v0.1-final 后续项保留。
+- 理由：这些事项会提升质量与审计可靠性，但不阻断 v0.1 可接手结论。
 - 状态：accepted
-- 来源：notes/v0.1-independent-verification-report.md；MNEMOSYNE-023B
+- 来源：notes/v0.1-independent-verification-report.md
 
 ## DEC-0030
 
-- 决策：将“只读回归验证”作为可选非阻断项，而不是进入 v0.2 的硬性前置条件。
-- 理由：MNEMOSYNE-023 已经完成独立验证并给出 PASS_WITH_WARNINGS；如用户需要更强信心，可再执行只读回归验证。
+- 决策：在用户最终 review 前不进入 v0.2 实施。
+- 理由：v0.1 已具备接手能力，但 v0.2 第一方向仍需用户确认优先级。
 - 状态：accepted
-- 来源：MNEMOSYNE-023B
+- 来源：notes/v0.1-final-review.md；notes/v0.1-independent-verification-report.md
 
-
-## DEC-0031
-
-- 决策：接受 v0.1 独立验证结论 `PASS_WITH_WARNINGS`。
-- 理由：独立验证未发现阻断接手的严重冲突；剩余 warning 属于研究报告 summary、PDF 图表复核、可选回归验证等非阻断项。
-- 状态：accepted
-- 来源：RAW-0024；notes/v0.1-independent-verification-report.md
-
-## DEC-0032
-
-- 决策：确认 v0.1 可作为当前可接手版本。
-- 理由：startup-instructions 已创建，接手演练已通过，human-approved-spec、active-context、handoff-current 和研究证据 current 视图已支持新任务接手。
-- 状态：accepted
-- 来源：RAW-0024；notes/startup-rehearsal-report.md
-
-## DEC-0033
-
-- 决策：v0.2 第一方向选择 `self-improvement workflow`。
-- 理由：该方向最贴合 Mnemosyne 的核心目标，即根据新构想、使用反馈和任务结果持续完善自身；其他方向可在其后继续推进。
-- 状态：accepted
-- 来源：RAW-0024
-
-## DEC-0034
-
-- 决策：进入 self-improvement workflow 设计时继续保持半自动和人工确认。
-- 理由：自动写回、自动查重、AGENTS.md、CLAUDE.md 和 GitHub Actions 仍属于后续阶段，不应在工作流基础设计阶段提前引入。
-- 状态：accepted
-- 来源：RAW-0024

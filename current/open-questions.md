@@ -15,6 +15,11 @@
 6. v0.2 第一方向应选择哪个？
    - 结论：v0.2 第一方向选择 `self-improvement workflow`。
 
+4. startup-instructions 在新 ChatGPT / 新 Codex 接手演练中的可执行性是否足够？
+   - 结论：根据 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md`，当前为可执行且足以支撑 v0.1 接手（PASS_WITH_WARNINGS），但仍建议用户做最终 review。
+5. 接手演练是否需要固定检查清单？
+   - 结论：当前已有 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md` 作为临时检查机制；标准模板可在 v0.2 / future 继续完善。
+
 ## open
 
 1. self-improvement workflow 的最小对象和模板是什么？
@@ -26,4 +31,12 @@
 7. PDF 图表人工复核何时做？
 8. 是否需要隐私分级后再导入更多 raw？
 9. 第一个目标项目记忆系统模板优先服务哪类场景？
-10. 何时开始 AGENTS.md / CLAUDE.md？
+10. 是否先设计 AGENTS.md / CLAUDE.md，还是先设计目标项目模板？
+11. 是否需要隐私分级后再导入更多 raw？
+12. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
+
+## 独立验证后续判断
+
+- 问题：用户是否接受 MNEMOSYNE-023 的 PASS_WITH_WARNINGS 结论，并允许进入 v0.2 第一方向选择？
+- 状态：open
+- 说明：独立验证未发现阻断性问题，但仍保留研究报告 summary、PDF 图表人工复核、用户最终 review、可选只读回归验证等非阻断事项。

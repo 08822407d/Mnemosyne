@@ -110,14 +110,14 @@
 - 内容：startup-instructions 应作为下一项 v0.1-final 收尾工作，用于让新 ChatGPT 对话或新 Codex 任务按固定读取顺序接手 Mnemosyne。
 - 状态：reflected
 - 来源：RAW-0019
-- 反映位置：handoff/startup-instructions.md；current/todo.md；handoff/handoff-current.md
+- 反映位置：handoff/startup-instructions.md；current/todo.md；notes/v0.1-independent-verification-report.md
 
 ## CAND-0021
 
 - 内容：需要进行一次新 ChatGPT / 新 Codex 接手演练，以验证 startup-instructions、handoff-current、active-context 和 human-approved-spec 是否足以支持接手。
 - 状态：reflected
 - 来源：RAW-0019
-- 反映位置：notes/startup-rehearsal-report.md；current/todo.md；notes/v0.1-scope-and-consistency-check.md
+- 反映位置：notes/startup-rehearsal-report.md；current/todo.md；notes/v0.1-independent-verification-report.md
 
 ## CAND-0022
 
@@ -186,7 +186,7 @@
 - 内容：v0.1 final review 不是执行源。
 - 状态：reflected
 - 来源：RAW-0022
-- 反映位置：notes/v0.1-final-review.md
+- 反映位置：notes/v0.1-final-review.md；notes/decision-log.md
 
 ## CAND-0032
 
@@ -194,23 +194,6 @@
 - 状态：reflected
 - 来源：RAW-0022
 - 反映位置：notes/v0.1-final-review.md
-
-
-## CAND-0033
-
-- 内容：用户接受 v0.1 独立验证 `PASS_WITH_WARNINGS`，并确认其不阻断进入 v0.2。
-- 状态：reflected
-- 来源：RAW-0024
-- 反映位置：current/open-questions.md；notes/decision-log.md
-
-## CAND-0034
-
-- 内容：v0.2 第一方向选择 `self-improvement workflow`。
-- 状态：reflected
-- 来源：RAW-0024
-- 反映位置：current/active-context.md；handoff/handoff-current.md；current/todo.md
-
-## CAND-0035
 
 - 内容：self-improvement workflow 应优先设计“用户新构想 / 使用反馈 / Codex 或 ChatGPT 结果 → raw → candidate → similarity/conflict → 用户确认 → spec/todo/open question”的半自动流程。
 - 状态：pending
