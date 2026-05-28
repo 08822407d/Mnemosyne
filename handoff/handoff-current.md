@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.1 最终 review 与 v0.2 第一方向选择。
+v0.1 已被接受为可接手版本，v0.2 第一方向选择 self-improvement workflow。
 
 ## 当前执行源
 
@@ -85,6 +85,6 @@ v0.1 最终 review 与 v0.2 第一方向选择。
 
 ## 下一步建议
 
-1. 用户 review `notes/v0.1-final-review.md`；
-2. 确认 v0.1 是否可作为可接手版本；
-3. 选择 v0.2 第一方向。
+1. 执行 `MNEMOSYNE-025：self-improvement workflow 设计`；
+2. 设计新构想和使用反馈如何进入 raw / candidate / similarity-conflict / 用户确认 / spec 或 todo；
+3. 保持半自动，不引入自动写回、自动查重或 GitHub Actions。

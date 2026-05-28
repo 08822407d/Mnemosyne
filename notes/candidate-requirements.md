@@ -195,3 +195,14 @@
 - 来源：RAW-0022
 - 反映位置：notes/v0.1-final-review.md
 
+- 内容：self-improvement workflow 应优先设计“用户新构想 / 使用反馈 / Codex 或 ChatGPT 结果 → raw → candidate → similarity/conflict → 用户确认 → spec/todo/open question”的半自动流程。
+- 状态：pending
+- 来源：RAW-0024
+- 反映位置：current/todo.md
+
+## CAND-0036
+
+- 内容：进入 self-improvement workflow 设计时仍不引入自动写回、自动查重、GitHub Actions、AGENTS.md 或 CLAUDE.md。
+- 状态：reflected
+- 来源：RAW-0024
+- 反映位置：current/active-context.md；handoff/handoff-current.md
