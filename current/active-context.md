@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 已建立；系统建设基线快照已创建；下一步是清理 self-improvement workflow 并进入模板设计。
+v0.2 第一方向 self-improvement workflow 已建立，正在进行工作流清理与后续模板设计准备。
 
 ## 当前目标
 
@@ -34,10 +34,7 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - `raw/chatgpt-discussion-025.md` 已创建；
 - `notes/self-improvement-workflow.md` 已创建；
 - `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
-- `notes/overall-target-and-roadmap-snapshot.md` 已创建，用于保存总体目标与路线图快照（非执行源）；
-- `notes/system-construction-baseline.md` 已创建，用于暂存系统建设基线（非执行源）；
-- 已确认后续 Codex 任务说明应优先以 txt 文件提供；
-- 已确认 Codex Task Result Record 默认路径为 `notes/codex-task-results/<TASK_ID>-result.md`。
+- `notes/overall-target-and-roadmap-snapshot.md` 已创建，用于保存总体目标与路线图快照（非执行源）。
 
 ## 当前未完成内容
 

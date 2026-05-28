@@ -88,16 +88,13 @@ v0.2 第一方向已经选择为：
 
 1. `notes/self-improvement-workflow.md` 主体已经创建。
 2. 该文件仍可能接近单行 Markdown，需要格式清理。
-3. 该文件中 Codex Task Result Record 默认路径曾存在缺失 TASK_ID 的错误写法。
+3. 该文件中 Codex Task Result Record 默认路径曾被发现写成 `notes/codex-task-results/-result.md`。
 4. 正确路径应为 `notes/codex-task-results/<TASK_ID>-result.md`。
 5. `notes/candidate-requirements.md` 中可能仍有 self-improvement 相关孤立条目或 pending 状态需要清理。
 6. 在进入模板设计前，应先完成 self-improvement workflow 清理。
 7. 每个后续 Codex 任务都应要求写入 Codex Task Result Record。
 8. Codex Task Result Record 不是执行源，只是审计材料。
 9. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
-10. 后续 Codex 任务是否需要新开，应按“是否必须在全新 Codex 任务中执行”判断，而不是按“新开更好”判断。
-11. 后续任务内容应优先以 txt 文件提供，避免聊天代码块嵌套导致复制不完整。
-12. `notes/system-construction-baseline.md` 是当前更明确的系统建设基线快照，同样不是执行源。
 
 ## 6. self-improvement workflow 的目标
 
