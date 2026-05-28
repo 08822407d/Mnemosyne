@@ -61,3 +61,60 @@
 - 理由：保留历史可追溯性并显式管理证据变化。
 - 来源：RAW-0013
 - 状态：accepted
+
+## DEC-0012
+- 决策：确认 MNEMOSYNE-019A 已完成接手层三文件修复。
+- 理由：active-context、handoff-current、todo 已经不再停留在“执行 v0.1 接手能力修复”的过期状态。
+- 状态：accepted
+- 来源：RAW-0019
+
+## DEC-0013
+- 决策：将 active-context 定位为当前工作集，不是执行源。
+- 理由：新会话需要快速理解当前阶段，但执行依据仍应来自 human-approved-spec。
+- 状态：accepted
+- 来源：RAW-0019
+
+## DEC-0014
+- 决策：将 handoff-current 定位为新会话接手卡，不是执行源。
+- 理由：handoff-current 用于快速恢复工作状态，不应替代 human-approved-spec。
+- 状态：accepted
+- 来源：RAW-0019
+
+## DEC-0015
+- 决策：将 startup-instructions 作为下一项 v0.1-final 收尾工作。
+- 理由：当前已有执行源、active-context、handoff 和研究证据入口，但还缺少固定启动说明来指导新 ChatGPT / Codex 任务读取文件。
+- 状态：accepted
+- 来源：RAW-0019
+
+## DEC-0016
+- 决策：在进入 v0.2 前应先完成一次新会话接手演练。
+- 理由：需要验证 Mnemosyne 是否真的能从仓库文件接手当前工作，而不是依赖当前对话上下文。
+- 状态：accepted
+- 来源：RAW-0019
+
+## DEC-0017
+- 决策：新机制设计前应参考 current-evidence-map 和 current-capability-boundaries。
+- 理由：7 份研究报告是当前高权重证据层，可降低平台能力误判和过度自动化承诺。
+- 状态：accepted
+- 来源：RAW-0019
+
+## DEC-0018
+
+- 决策：确认 MNEMOSYNE-021 接手演练结论为 pass。
+- 理由：startup-rehearsal-report 已记录当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
+- 状态：accepted
+- 来源：RAW-0021B
+
+## DEC-0019
+
+- 决策：将 v0.1 当前状态收口为“可接手，等待用户 review 和 v0.2 方向选择”。
+- 理由：startup-instructions 已创建，接手演练已通过，剩余工作主要是 review、研究报告细化和 v0.2 方向选择。
+- 状态：accepted
+- 来源：RAW-0021B
+
+## DEC-0020
+
+- 决策：暂不进入 AGENTS.md、CLAUDE.md、GitHub Actions 或自动化实现。
+- 理由：这些仍属于 v0.2 或 future，应在用户选择下一阶段方向后再展开。
+- 状态：accepted
+- 来源：RAW-0021B
