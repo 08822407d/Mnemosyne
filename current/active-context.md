@@ -48,13 +48,15 @@ v0.1 接手演练已通过，`startup-instructions` 已创建；当前进入 v0.
 - `handoff-current` 已更新为新会话接手卡；
 - `handoff/startup-instructions.md` 已创建；
 - `notes/startup-rehearsal-report.md` 已创建；
-- 新 ChatGPT / 新 Codex 接手演练结果为 pass。
+- 新 ChatGPT / 新 Codex 接手演练结果为 pass；
+- `notes/v0.1-final-review.md` 已创建。
 
 ## 当前未完成内容
 
-- 用户最终 review v0.1 接手文件和接手演练报告；
+- 用户最终 review；
 - 为每份研究报告生成 summary；
 - PDF 图表人工复核；
+- v0.2 第一方向选择；
 - 目标项目设计模板；
 - `AGENTS.md`；
 - `CLAUDE.md`；
@@ -79,7 +81,6 @@ v0.1 接手演练已通过，`startup-instructions` 已创建；当前进入 v0.
 
 ## 下一步建议
 
-1. 用户 review `human-approved-spec`、`active-context`、`handoff-current`、`startup-instructions` 和 `startup-rehearsal-report`；
-2. 选择 v0.2 第一方向；
-3. 可选：先为 7 份研究报告建立 summary 或人工复核 PDF 图表；
-4. 根据选择进入对应设计任务。
+1. 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
+2. 用户确认 v0.1 是否可作为可接手版本；
+3. 用户选择 v0.2 第一方向。

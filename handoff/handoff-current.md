@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.1 接手演练已通过，等待用户最终 review，并选择 v0.2 第一方向。
+v0.1 最终 review 与 v0.2 第一方向选择。
 
 ## 当前执行源
 
@@ -63,13 +63,14 @@ v0.1 接手演练已通过，等待用户最终 review，并选择 v0.2 第一�
 7. `current/todo.md`
 8. `notes/v0.1-scope-and-consistency-check.md`
 9. `notes/startup-rehearsal-report.md`
-10. `raw/research-reports/current/research-report-index.md`
-11. `raw/research-reports/current/current-evidence-map.md`
-12. `raw/research-reports/current/current-capability-boundaries.md`
-13. `notes/core-object-model.md`
-14. `notes/requirement-intake-workflow.md`
-15. `notes/delivery-package-workflow.md`
-16. `raw/concept-origin-extract-001.md` 按需回查
+10. `notes/v0.1-final-review.md`
+11. `raw/research-reports/current/research-report-index.md`
+12. `raw/research-reports/current/current-evidence-map.md`
+13. `raw/research-reports/current/current-capability-boundaries.md`
+14. `notes/core-object-model.md`
+15. `notes/requirement-intake-workflow.md`
+16. `notes/delivery-package-workflow.md`
+17. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -84,6 +85,6 @@ v0.1 接手演练已通过，等待用户最终 review，并选择 v0.2 第一�
 
 ## 下一步建议
 
-1. 用户 review 关键接手文件和接手演练报告；
-2. 选择 v0.2 第一方向；
-3. 可选：先处理研究报告 summary / PDF 图表复核。
+1. 用户 review `notes/v0.1-final-review.md`；
+2. 确认 v0.1 是否可作为可接手版本；
+3. 选择 v0.2 第一方向。

@@ -138,3 +138,32 @@
 - 理由：接手能力已验证通过，证据补强项仍重要但与“可接手”判定不构成阻断关系。
 - 状态：accepted
 - 来源：RAW-0022；notes/startup-rehearsal-report.md
+
+## DEC-0023
+
+- 决策：创建 `notes/v0.1-final-review.md`。
+- 理由：需要集中向用户呈现 v0.1 可接手性、一致性检查结果与后续方向候选。
+- 状态：accepted
+- 来源：RAW-0022
+
+## DEC-0024
+
+- 决策：在进入 v0.2 前先让用户 review v0.1 可接手性。
+- 理由：v0.1 接手能力虽已演练 pass，但仍需用户进行最终确认收口。
+- 状态：accepted
+- 来源：RAW-0022
+
+## DEC-0025
+
+- 决策：v0.2 第一方向由用户选择。
+- 理由：v0.2 存在多候选方向，优先级应由用户目标驱动。
+- 状态：accepted
+- 来源：RAW-0022
+
+## DEC-0026
+
+- 决策：final review 不是执行源。
+- 理由：执行源仍保持为 `current/human-approved-spec.md`，避免说明性文档越权。
+- 状态：accepted
+- 来源：RAW-0022
+
