@@ -15,14 +15,11 @@
 6. v0.2 第一方向应选择哪个？
    - 结论：v0.2 第一方向选择 `self-improvement workflow`。
 
-4. startup-instructions 在新 ChatGPT / 新 Codex 接手演练中的可执行性是否足够？
-   - 结论：根据 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md`，当前为可执行且足以支撑 v0.1 接手（PASS_WITH_WARNINGS），但仍建议用户做最终 review。
-5. 接手演练是否需要固定检查清单？
-   - 结论：当前已有 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md` 作为临时检查机制；标准模板可在 v0.2 / future 继续完善。
-
 ## open
 
 1. self-improvement workflow 的最小对象和模板是什么？
+   - 当前已建立流程说明；
+   - 是否需要进一步拆出模板仍为 open。
 2. similarity/conflict 在 v0.2 中先人工执行还是由 Codex 辅助？
 3. 用户反馈和 Codex 任务结果如何进入 raw？
 4. Codex Task Result Record 是否需要固定模板？
@@ -32,11 +29,7 @@
 8. 是否需要隐私分级后再导入更多 raw？
 9. 第一个目标项目记忆系统模板优先服务哪类场景？
 10. 是否先设计 AGENTS.md / CLAUDE.md，还是先设计目标项目模板？
-11. 是否需要隐私分级后再导入更多 raw？
-12. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
-
-## 独立验证后续判断
-
-- 问题：用户是否接受 MNEMOSYNE-023 的 PASS_WITH_WARNINGS 结论，并允许进入 v0.2 第一方向选择？
-- 状态：open
-- 说明：独立验证未发现阻断性问题，但仍保留研究报告 summary、PDF 图表人工复核、用户最终 review、可选只读回归验证等非阻断事项。
+11. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
+12. self-improvement workflow 是否需要单独模板文件？
+13. 是否需要为 similarity/conflict report 设计最小格式？
+14. 是否需要为 user decision 设计固定记录格式？
