@@ -167,3 +167,31 @@
 - 状态：accepted
 - 来源：RAW-0022
 
+## DEC-0027
+
+- 决策：接受 MNEMOSYNE-023 独立验证结论为 PASS_WITH_WARNINGS。
+- 理由：独立验证未发现阻断性问题，Mnemosyne v0.1 已具备新 ChatGPT / 新 Codex 任务按仓库文件接手的基础能力；剩余问题属于非阻断补强项。
+- 状态：accepted
+- 来源：notes/v0.1-independent-verification-report.md；MNEMOSYNE-023A；MNEMOSYNE-023B
+
+## DEC-0028
+
+- 决策：将 CAND-0020 与 CAND-0021 同步为 reflected。
+- 理由：startup-instructions 已创建，接手演练已通过，继续保留 todo 状态会误导后续任务。
+- 状态：accepted
+- 来源：MNEMOSYNE-023B
+
+## DEC-0029
+
+- 决策：保留研究报告 summary、PDF 图表人工复核和 Evidence Item 模板为后续补强项。
+- 理由：这些事项有助于提高证据层质量，但不阻断 v0.1 可接手性。
+- 状态：accepted
+- 来源：notes/v0.1-independent-verification-report.md；MNEMOSYNE-023B
+
+## DEC-0030
+
+- 决策：将“只读回归验证”作为可选非阻断项，而不是进入 v0.2 的硬性前置条件。
+- 理由：MNEMOSYNE-023 已经完成独立验证并给出 PASS_WITH_WARNINGS；如用户需要更强信心，可再执行只读回归验证。
+- 状态：accepted
+- 来源：MNEMOSYNE-023B
+
