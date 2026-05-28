@@ -103,3 +103,38 @@
 - 理由：7 份研究报告是当前高权重证据层，可降低平台能力误判和过度自动化承诺。
 - 状态：accepted
 - 来源：RAW-0019
+
+## DEC-0018
+
+- 决策：确认 MNEMOSYNE-021 接手演练结果为 pass。
+- 理由：`notes/startup-rehearsal-report.md` 已给出 pass 结论，且说明当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
+- 状态：accepted
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+
+## DEC-0019
+
+- 决策：将 v0.1 状态推进为“可接手，等待用户最终 review，并选择 v0.2 第一方向”。
+- 理由：接手能力已通过演练验证，当前需要用户确认收口状态并决定下一阶段重点。
+- 状态：accepted
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+
+## DEC-0020
+
+- 决策：将接手演练从 v0.1-final TODO 中标记为完成。
+- 理由：对应任务已执行且结论为 pass，不应继续列为未完成项。
+- 状态：accepted
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
+
+## DEC-0021
+
+- 决策：进入 v0.2 前先由用户选择第一方向。
+- 理由：v0.2 包含多条并行方向，需由用户按优先级确定首个落地点。
+- 状态：accepted
+- 来源：RAW-0022
+
+## DEC-0022
+
+- 决策：研究报告 summary 与 PDF 图表复核作为 v0.1-final 后续补强项保留，但不阻断“v0.1 可接手”成立。
+- 理由：接手能力已验证通过，证据补强项仍重要但与“可接手”判定不构成阻断关系。
+- 状态：accepted
+- 来源：RAW-0022；notes/startup-rehearsal-report.md
