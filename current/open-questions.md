@@ -28,3 +28,9 @@
 10. 是否先设计 AGENTS.md / CLAUDE.md，还是先设计目标项目模板？
 11. 是否需要隐私分级后再导入更多 raw？
 12. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
+
+## 独立验证后续判断
+
+- 问题：用户是否接受 MNEMOSYNE-023 的 PASS_WITH_WARNINGS 结论，并允许进入 v0.2 第一方向选择？
+- 状态：open
+- 说明：独立验证未发现阻断性问题，但仍保留研究报告 summary、PDF 图表人工复核、用户最终 review、可选只读回归验证等非阻断事项。
