@@ -267,3 +267,39 @@
 - 理由：workflow 主体已建立，下一阶段应进入模板化以提升复用与一致性。
 - 状态：accepted
 - 来源：MNEMOSYNE-025C
+
+## DEC-0041
+
+- 决策：创建 `notes/overall-target-and-roadmap-snapshot.md`。
+- 理由：将当前长期目标与路线图固化入库，避免只存在于长对话上下文。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0042
+
+- 决策：`notes/overall-target-and-roadmap-snapshot.md` 作为规划快照，不作为执行源。
+- 理由：执行源仍为 `current/human-approved-spec.md`，避免说明性文件越权。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0043
+
+- 决策：后续任务可按路线图快照检查是否偏离长期目标。
+- 理由：为跨会话/跨任务持续一致性提供统一回查锚点。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0044
+
+- 决策：在进入 self-improvement 模板设计前，先清理 self-improvement workflow 的格式和路径问题。
+- 理由：先修复现有记录一致性，再进入模板化，降低错误扩散。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0045
+
+- 决策：后续 Codex 任务默认写入 task result record。
+- 理由：增强任务可追溯性与审计一致性，降低“口头完成”风险。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+

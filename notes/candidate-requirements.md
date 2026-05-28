@@ -265,3 +265,34 @@
 - 内容：后续可能需要 self-improvement 模板、similarity/conflict 模板和 user decision 模板。
 - 状态：pending
 - 来源：RAW-0025
+
+## CAND-0043
+
+- 内容：需要保存总体目标与路线图快照，防止长期规划只留在当前对话上下文。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0044
+
+- 内容：总体目标与路线图快照不是执行源。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0045
+
+- 内容：后续任务应根据路线图快照检查是否偏离长期目标。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0046
+
+- 内容：self-improvement workflow 清理应先于模板设计。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0047
+
+- 内容：每个后续 Codex 任务应写入 Codex Task Result Record。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
