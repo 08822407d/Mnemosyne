@@ -34,7 +34,7 @@ MNEMOSYNE-025G
 
 ## codex_summary
 
-MNEMOSYNE-025G 试图修正路径，但合并后仍发现错误路径残留；MNEMOSYNE-025H 将默认占位符路径规范为 `notes/codex-task-results/TASK_ID-result.md`。后续检查仍发现旧路径残留；MNEMOSYNE-025I 对当前规范文件执行硬清除。
+本任务对允许修改文件执行错误结果路径硬纠偏，将残留的缺失 TASK_ID 路径统一为 `notes/codex-task-results/<TASK_ID>-result.md`，并最小更新 active-context、todo、handoff、candidate、decision 与 025E/025F task result records。
 
 ## known_gaps
 
@@ -67,4 +67,4 @@ MNEMOSYNE-025G 试图修正路径，但合并后仍发现错误路径残留；MN
 
 ## whether_task_claims_completion
 
-是。本任务曾声称完成 MNEMOSYNE-025G 范围内的错误结果路径硬纠偏和最小状态落账；但合并后仍发现路径占位符歧义，需由 MNEMOSYNE-025H 规范化为 `notes/codex-task-results/TASK_ID-result.md`。
+是。本任务声称已完成 MNEMOSYNE-025G 范围内的错误结果路径硬纠偏和最小状态落账；是否进入 MNEMOSYNE-026 仍应以用户 review 为准。

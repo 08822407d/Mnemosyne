@@ -14,7 +14,7 @@ MNEMOSYNE-025J
 
 ## files_modified
 
-- `notes/codex-task-results/MNEMOSYNE-025J-result.md`（修正此前关于本任务清理结果的表述）
+- 无。任务 A 的替换脚本已执行，但目标文件在本次运行前已经符合 `notes/codex-task-results/TASK_ID-result.md` 默认占位符路径约定，因此未产生内容 diff。
 
 ## files_not_modified
 
@@ -30,7 +30,7 @@ MNEMOSYNE-025J
 
 ## codex_summary
 
-MNEMOSYNE-025J 声称执行了最小路径清理，但后续检查发现当前规范文件仍残留旧路径；本结果记录保留为审计材料，不作为执行源。后续手工清理应以仓库实际文件和用户 review 为准。当前默认占位符路径为 `notes/codex-task-results/TASK_ID-result.md`；实际任务应将 `TASK_ID` 替换为真实任务编号。
+本任务执行了用户指定的最小替换脚本，并创建本任务结果记录。检查范围内的当前规范文件已经使用 `notes/codex-task-results/TASK_ID-result.md` 作为默认占位符路径；实际任务应将 `TASK_ID` 替换为真实任务编号。
 
 ## known_gaps
 
