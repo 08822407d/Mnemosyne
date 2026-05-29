@@ -344,3 +344,206 @@
 - 理由：自我改进入口稳定后，应转向 Mnemosyne 面向目标项目交付的核心模板能力。
 - 状态：accepted
 - 来源：RAW-0031
+
+## DEC-0052
+
+- 决策：执行 MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计。
+- 理由：self-improvement workflow 模板包完成后，Mnemosyne 需要推进面向目标项目交付的核心模板能力。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0053
+
+- 决策：创建 `notes/target-project-memory-system-template-pack.md`。
+- 理由：需要为目标项目 intake、项目类型分类、memory system design spec、文件结构、执行源规则、handoff、unsupported assumptions、drift review 和最小 runbook 提供统一模板入口。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0054
+
+- 决策：目标项目模板包不是执行源。
+- 理由：模板包只用于设计目标项目记忆系统；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0055
+
+- 决策：intake 与 memory system design spec 在同一模板包中一起创建。
+- 理由：两者强相关；intake 收集约束，design spec 基于 intake 生成设计草案，同一入口有利于保持设计闭环。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0056
+
+- 决策：当前仍不做真实目标项目交付。
+- 理由：本任务只创建模板，不为任何真实目标项目生成交付包，也不假设用户已经确定第一个目标项目场景。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0057
+
+- 决策：完成目标项目模板包后，下一步是用户 review、选择第一个目标项目场景或深化 delivery manifest。
+- 理由：目标项目模板包需要人工确认；后续可在交付清单闭环和首个场景验证之间选择优先级。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0058
+
+- 决策：AGENTS.md / CLAUDE.md / GitHub Actions / 自动化继续延期。
+- 理由：MNEMOSYNE-027A 只做目标项目模板包完成后的状态同步和记录补账，不引入自动化、项目级 agent 指令文件或 CI 工作流。
+- 状态：accepted
+- 来源：RAW-0036
+
+## DEC-0059
+
+- 决策：执行 MNEMOSYNE-028：delivery manifest / 目标项目交付包模板深化。
+- 理由：目标项目模板包已有 Delivery Package Draft Template，但还需要稳定的交付清单、复制清单、落地检查、handoff package、rollback / revision plan、delivery result record 和 drift review 入口。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0060
+
+- 决策：创建 `notes/delivery-manifest-template-pack.md`。
+- 理由：为目标项目记忆系统交付提供统一的 manifest、文件清单、运行真相源检查、手工步骤、unsupported assumptions linkage、review、handoff、rollback 和 result record 模板入口。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0061
+
+- 决策：delivery manifest template pack 不是执行源。
+- 理由：该模板包只用于生成交付草案和检查项，不能越权成为 Mnemosyne 或目标项目的执行规则。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0062
+
+- 决策：当前仍不为真实目标项目生成交付包。
+- 理由：MNEMOSYNE-028 只设计模板，不假设用户已经确定第一个目标项目场景，也不执行真实交付。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0063
+
+- 决策：目标项目运行真相源应在目标项目仓库 / 目录中。
+- 理由：Mnemosyne 仓库是设计工厂和设计档案；真实交付后，目标项目运行状态应以目标项目仓库 / 目录中的运行文件为准。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0064
+
+- 决策：交付前必须明确 unsupported assumptions、manual setup steps、handoff package、rollback / revision plan 和 drift review。
+- 理由：这些对象是交付安全、可回滚、可接手和可审计的必要条件。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0065
+
+- 决策：完成 delivery manifest template pack 后，下一步是用户 review、选择第一个目标项目场景或进入 Idea Capture Buffer。
+- 理由：delivery manifest 模板需要用户确认；后续可以通过首个目标项目场景验证模板，也可以先补充 Idea Capture Buffer 改善想法进入流程。
+- 状态：accepted
+- 来源：RAW-0037
+
+## DEC-0066
+
+- 决策：执行 MNEMOSYNE-028A：delivery manifest template pack 状态同步与结果记录补账。
+- 理由：MNEMOSYNE-028 已创建 delivery manifest template pack；需要确认 current、handoff、todo、open questions、candidate、decision、roadmap、baseline 和 task result record 都同步为“已创建，等待用户 review”。
+- 状态：accepted
+- 来源：RAW-0038
+
+## DEC-0067
+
+- 决策：MNEMOSYNE-028A 继续保持不新增模板、不为真实目标项目生成交付包、不引入自动化。
+- 理由：本任务只做状态同步和审计记录补账，真实目标项目交付仍需用户 review、目标项目场景确认和目标项目落地。
+- 状态：accepted
+- 来源：RAW-0038
+
+## DEC-0068
+
+- 决策：执行 MNEMOSYNE-028B：delivery manifest 状态硬同步与路线图纠偏。
+- 理由：人工核查指出 MNEMOSYNE-028 / MNEMOSYNE-028A 后仍可能存在状态层同步残留，需要硬同步 active-context、handoff、todo、open-questions、candidate、decision、roadmap、baseline 和 task result record。
+- 状态：accepted
+- 来源：RAW-0039；MNEMOSYNE-028B
+
+## DEC-0069
+
+- 决策：确认 `notes/delivery-manifest-template-pack.md` 已创建，delivery manifest template pack 进入用户 review / 小修阶段。
+- 理由：delivery manifest 模板主体已存在，当前不应继续把 delivery manifest 深化作为未来待做项。
+- 状态：accepted
+- 来源：RAW-0039；MNEMOSYNE-028B
+
+## DEC-0070
+
+- 决策：delivery manifest template pack 不是执行源；当前仍不为真实目标项目生成交付包。
+- 理由：该模板包只用于交付清单草案和检查项，真实目标项目交付仍需用户确认和目标项目落地。
+- 状态：accepted
+- 来源：RAW-0039；MNEMOSYNE-028B
+
+## DEC-0071
+
+- 决策：目标项目运行真相源应在目标项目仓库 / 目录中。
+- 理由：Mnemosyne 仓库是设计工厂和设计档案；真实交付后的运行真相源不能停留在 Mnemosyne 草案文件中。
+- 状态：accepted
+- 来源：RAW-0039；MNEMOSYNE-028B
+
+## DEC-0072
+
+- 决策：完成 delivery manifest template pack 后，下一步是用户 review、选择第一个目标项目场景或进入 Idea Capture Buffer。
+- 理由：模板需要人工 review；后续可通过首个目标项目场景验证模板，也可先补 Idea Capture Buffer 改善想法入口。
+- 状态：accepted
+- 来源：RAW-0039；MNEMOSYNE-028B
+
+## DEC-0073
+
+- 决策：AGENTS.md / CLAUDE.md / GitHub Actions / 自动化继续延期。
+- 理由：MNEMOSYNE-028B 只做状态硬同步和路线图纠偏，不创建 agent 指令文件、CI 工作流或自动化机制。
+- 状态：accepted
+- 来源：RAW-0039；MNEMOSYNE-028B
+
+## DEC-0074
+
+- 决策：执行 MNEMOSYNE-028C：delivery manifest 状态四文件硬替换与记录补账。
+- 理由：MNEMOSYNE-028B 后人工核查发现关键状态文件仍存在未同步残留，需要直接替换 active-context、handoff-current、todo 和 open-questions。
+- 状态：accepted
+- 来源：RAW-0040
+
+## DEC-0075
+
+- 决策：确认 `notes/delivery-manifest-template-pack.md` 已创建。
+- 理由：delivery manifest / 目标项目交付包模板主体已由 MNEMOSYNE-028 创建，本任务只做状态层纠偏。
+- 状态：accepted
+- 来源：RAW-0040
+
+## DEC-0076
+
+- 决策：delivery manifest template pack 不是执行源。
+- 理由：当前执行源仍是 `current/human-approved-spec.md`；template pack 只作为设计模板和交付清单模板入口。
+- 状态：accepted
+- 来源：RAW-0040
+
+## DEC-0077
+
+- 决策：将 active-context / handoff / todo / open-questions 硬同步到 delivery manifest 已创建状态。
+- 理由：状态文件反复出现残留，完整替换四个关键状态文件可降低继续漂移的风险。
+- 状态：accepted
+- 来源：RAW-0040
+
+## DEC-0078
+
+- 决策：将“是否先深化 delivery manifest”标记为 answered，因为 MNEMOSYNE-028 已选择先深化 delivery manifest。
+- 理由：`notes/delivery-manifest-template-pack.md` 已创建，该选择问题不应继续保留在 open 区域。
+- 状态：accepted
+- 来源：RAW-0040
+
+## DEC-0079
+
+- 决策：完成 delivery manifest template pack 后，下一步是用户 review、选择第一个目标项目场景或进入 Idea Capture Buffer。
+- 理由：当前三类模板包已形成基础版本，后续应先 review 或用第一个场景试用，而不是直接进入自动化或真实交付。
+- 状态：accepted
+- 来源：RAW-0040
+
+## DEC-0080
+
+- 决策：AGENTS.md / CLAUDE.md / GitHub Actions / 自动化继续延期。
+- 理由：MNEMOSYNE-028C 只做状态硬替换与记录补账，不创建项目指令文件、CI 或自动化机制。
+- 状态：accepted
+- 来源：RAW-0040
