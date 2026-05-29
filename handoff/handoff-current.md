@@ -26,6 +26,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - `handoff/handoff-current.md`
 - `handoff/startup-instructions.md`
 - `notes/system-construction-baseline.md`
+- `notes/overall-target-and-roadmap-snapshot.md`
 - `notes/self-improvement-template-pack.md`
 - `notes/target-project-memory-system-template-pack.md`
 
@@ -70,6 +71,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - 不要创建 `CLAUDE.md`；
 - 不要创建 GitHub Actions；
 - 不要添加自动化脚本；
+- 不要实现自动查重、自动索引、自动写回、MCP、RAG 或多 Agent 自动协调；
 - 不要把 research reports 当执行源；
 - 不要把 candidate / decision / active-context / handoff / startup-instructions / self-improvement template pack / target project template pack 当执行源。
 

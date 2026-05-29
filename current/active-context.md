@@ -22,6 +22,7 @@
 - `handoff/handoff-current.md`
 - `handoff/startup-instructions.md`
 - `notes/system-construction-baseline.md`
+- `notes/overall-target-and-roadmap-snapshot.md`
 - `notes/self-improvement-template-pack.md`
 - `notes/target-project-memory-system-template-pack.md`
 
@@ -64,6 +65,24 @@
 - 研究报告 summary / PDF 图表人工复核；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
+
+## 当前最重要文件
+
+- `current/human-approved-spec.md`
+- `current/active-context.md`
+- `handoff/handoff-current.md`
+- `current/open-questions.md`
+- `current/todo.md`
+- `handoff/startup-instructions.md`
+- `notes/self-improvement-workflow.md`
+- `notes/self-improvement-template-pack.md`
+- `notes/target-project-memory-system-template-pack.md`
+- `notes/delivery-manifest-template-pack.md`
+- `notes/system-construction-baseline.md`
+- `notes/overall-target-and-roadmap-snapshot.md`
+- `raw/research-reports/current/research-report-index.md`
+- `raw/research-reports/current/current-evidence-map.md`
+- `raw/research-reports/current/current-capability-boundaries.md`
 
 ## 下一步建议
 
