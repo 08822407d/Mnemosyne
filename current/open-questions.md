@@ -52,10 +52,13 @@
 
 ## open
 
-1. 用户是否接受当前 `notes/self-improvement-template-pack.md`，是否需要小修？
+1. 用户是否接受当前 `notes/delivery-manifest-template-pack.md`，是否需要小修？
+   - 说明：`notes/delivery-manifest-template-pack.md` 已创建，但尚未经过用户 review。
+
+2. 用户是否接受当前 `notes/self-improvement-template-pack.md`，是否需要小修？
    - 说明：template pack 已创建，但尚未经过用户最终 review。
 
-2. self-improvement template pack 是否需要拆成多个独立模板文件？
+3. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
 
 3. 用户是否接受当前目标项目模板包，是否需要小修？

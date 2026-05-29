@@ -334,7 +334,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 支持不同项目类型；
 - 创建 `notes/target-project-memory-system-template-pack.md`。
 
-### MNEMOSYNE-028：delivery manifest 与目标项目交付包模板
+### MNEMOSYNE-028：delivery manifest 与目标项目交付包模板（已完成 / 等待用户 review）
 
 目标：
 
