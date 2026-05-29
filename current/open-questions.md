@@ -7,7 +7,7 @@
 2. startup-instructions 是否应强制读取 `current-capability-boundaries`？
    - 结论：涉及能力边界、新机制设计、平台适配、目标项目设计时必须读取。
 3. v0.1 是否已经足以支持新对话接手？
-   - 结论：根据 `notes/startup-rehearsal-report.md`，当前结论为 pass，当前文件集足以支持新 ChatGPT / 新 Codex 任务仅依赖仓库文件接手。
+   - 结论：根据接手演练和独立验证，v0.1 已被用户接受为可接手版本。
 4. startup-instructions 在新 ChatGPT / 新 Codex 接手演练中的可执行性是否足够？
    - 结论：根据 `notes/startup-rehearsal-report.md` 与 `notes/v0.1-independent-verification-report.md`，当前为可执行且足以支撑 v0.1 接手（PASS_WITH_WARNINGS）。
 5. 用户是否接受 MNEMOSYNE-023 的 `PASS_WITH_WARNINGS` 结论，并允许进入 v0.2 第一方向选择？
