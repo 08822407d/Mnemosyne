@@ -273,12 +273,9 @@ rollback_or_revision_plan:
 
 说明：
 
-- 本模板是 Delivery Package Draft 的草案入口。
-- delivery manifest 深化入口为 `notes/delivery-manifest-template-pack.md`。
-- 完整交付清单、复制清单、落地检查、handoff package、rollback / revision plan 和 delivery result record 应参考 `notes/delivery-manifest-template-pack.md`。
-- delivery manifest template pack 不是执行源。
-- 交付包不是自动生效，真正交付目标项目之前必须经用户确认和目标项目落地。
-- 目标项目运行真相源应位于目标项目仓库 / 目录，而不是 Mnemosyne 草案文件。
+- 本任务只创建草案模板。
+- 完整 delivery manifest 可在后续任务中细化。
+- 交付包不是自动生效，必须经用户确认和目标项目落地。
 - `files_to_copy_to_target_project` 与 `files_to_keep_in_mnemosyne` 必须分开，避免把设计档案误当运行真相源。
 
 ---

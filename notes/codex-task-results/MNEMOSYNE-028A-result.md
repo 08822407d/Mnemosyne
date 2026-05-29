@@ -65,10 +65,5 @@ limits_or_uncertainties:
   - 本任务不为真实目标项目生成交付包。
   - delivery manifest template pack 不是执行源；当前执行源仍是 current/human-approved-spec.md。
   - 最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
-reviewer_notes:
-  - MNEMOSYNE-028A 声称状态同步完成，但后续核查发现 active-context、handoff、todo、open-questions、decision、candidate、roadmap、baseline 仍有同步残留。
-  - MNEMOSYNE-028B 用于状态硬同步。
-  - 本结果记录不是执行源。
-  - 最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
 whether_task_claims_completion: true
 ```
