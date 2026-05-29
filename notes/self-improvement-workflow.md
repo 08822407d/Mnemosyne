@@ -32,6 +32,22 @@ Mnemosyne 的自我改进输入至少包括：
 - 必须进入自我改进流程；
 - 临时点子速记当前仍属于 Idea Capture Buffer 的未来方向。
 
+## 2.1 模板入口
+
+self-improvement workflow 的模板入口为：
+
+- `notes/self-improvement-template-pack.md`
+
+执行实际自我改进时，应优先使用该 template pack 中的可复制模板，再根据用户确认更新对应文件。
+
+该 template pack 不是执行源。当前执行源仍是 `current/human-approved-spec.md`。如果 template pack 与执行源冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
+
+Codex Task Result Record 默认路径统一使用：
+
+- `notes/codex-task-results/TASK_ID-result.md`
+
+实际任务应将 `TASK_ID` 替换为真实任务编号。
+
 ## 3. 总体流程
 
 推荐流程：

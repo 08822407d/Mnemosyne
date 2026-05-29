@@ -57,7 +57,8 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `raw/research-reports/current/current-evidence-map.md` 已建立；
 - `raw/research-reports/current/current-capability-boundaries.md` 已建立；
 - v0.2 第一方向已确定为 self-improvement workflow；
-- `notes/self-improvement-workflow.md` 已创建。
+- `notes/self-improvement-workflow.md` 已创建；
+- `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包。
 
 ## 4. 当前已知问题和最新诊断
 
@@ -65,9 +66,9 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 
 - `notes/self-improvement-workflow.md` 仍可能需要 Markdown 格式清理；
 - `notes/self-improvement-workflow.md` 默认占位符路径应统一为 `notes/codex-task-results/TASK_ID-result.md`，实际任务应将 `TASK_ID` 替换为真实任务编号；
-- `notes/overall-target-and-roadmap-snapshot.md` 中如果仍存在 `notes/codex-task-results/TASK_ID-result.md`，也应修正；
+- 相关说明文件中的 Codex Task Result Record 默认路径应统一为 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
-- 在进入模板设计前，应先完成 self-improvement workflow 清理。
+- self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成，当前进入用户 review / 小修 template pack 阶段；下一步指向目标项目 intake / memory system design spec 模板设计。
 
 ## 5. self-improvement workflow 的目标
 
@@ -87,6 +88,14 @@ self-improvement workflow 要解决：
 - 何时更新 active-context 和 handoff；
 - 何时回查 research evidence；
 - 何时不能自动升级为执行源。
+
+## 5.1 self-improvement template pack
+
+当前模板入口：
+
+- `notes/self-improvement-template-pack.md`
+
+该模板包不是执行源。执行源仍为 `current/human-approved-spec.md`。模板填写结果需要经过用户确认后，才可能更新执行源。
 
 ## 6. Codex 任务执行约定
 
@@ -121,7 +130,7 @@ self-improvement workflow 要解决：
 建议后续路线：
 
 1. self-improvement workflow 清理；
-2. self-improvement workflow 模板设计；
+2. self-improvement workflow 模板设计（已完成，当前为用户 review / 小修 template pack）；
 3. 目标项目 intake 与 memory system design spec 模板；
 4. delivery manifest 与目标项目交付包模板；
 5. Idea Capture Buffer；
