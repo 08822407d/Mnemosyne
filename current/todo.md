@@ -21,10 +21,9 @@
 - [ ] 后续阶段按 `notes/overall-target-and-roadmap-snapshot.md` 校验是否偏离长期路线；
 - [X] MNEMOSYNE-026：self-improvement workflow 模板设计；
 - [ ] 用户 review `notes/self-improvement-template-pack.md`；
-- [ ] 根据 review 小修 self-improvement template pack；
-- [X] 设计 Codex Task Result Record 固定模板（已由 template pack 覆盖，后续可小修）；
-- [X] 设计 Similarity / Conflict Report 最小格式（已由 template pack 覆盖，后续可小修）；
-- [X] 设计 User Decision Record 模板（已由 template pack 覆盖，后续可小修）；
+- [X] 设计 Codex Task Result Record 固定模板；
+- [X] 设计 Similarity / Conflict Report 最小格式；
+- [X] 设计 User Decision Record 模板；
 - [ ] 设计 Spec Update Proposal 模板；
 - [ ] memory system design spec 模板；
 - [ ] delivery manifest 模板；
