@@ -179,7 +179,7 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 
 如果没有专门报告文件，则写入：
 
-- `notes/codex-task-results/<TASK_ID>-result.md`
+- `notes/codex-task-results/TASK_ID-result.md`
 
 结果记录应至少包含：
 
