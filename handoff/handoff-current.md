@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 已建立；正在完成任务结果路径占位符规范化和进入模板设计前的清理。
+v0.2 第一方向 self-improvement workflow 已建立，下一步应先完成工作流清理，再进入模板设计。
 
 ## 当前执行源
 
@@ -54,12 +54,11 @@ v0.2 第一方向 self-improvement workflow 已建立；正在完成任务结果
 9. `notes/v0.1-final-review.md`
 10. `notes/requirement-intake-workflow.md`
 11. `notes/self-improvement-workflow.md`
-12. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线、长期路线和工作约定时按需读取；不是执行源）
-13. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
-14. `raw/research-reports/current/research-report-index.md`
-15. `raw/research-reports/current/current-evidence-map.md`
-16. `raw/research-reports/current/current-capability-boundaries.md`
-17. `raw/concept-origin-extract-001.md` 按需回查
+12. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
+13. `raw/research-reports/current/research-report-index.md`
+14. `raw/research-reports/current/current-evidence-map.md`
+15. `raw/research-reports/current/current-capability-boundaries.md`
+16. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -72,6 +71,6 @@ v0.2 第一方向 self-improvement workflow 已建立；正在完成任务结果
 
 ## 下一步建议
 
-1. 用户 review 路径占位符规范化结果；
-2. 清理 self-improvement workflow Markdown 格式；
-3. 进入 MNEMOSYNE-026。
+1. 用户 review `notes/system-construction-baseline.md`；
+2. 清理 `notes/self-improvement-workflow.md`；
+3. 再进入 MNEMOSYNE-026：self-improvement workflow 模板设计。

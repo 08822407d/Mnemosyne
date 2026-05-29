@@ -32,7 +32,7 @@ MNEMOSYNE-025E
 
 ## codex_summary
 
-本任务创建了系统建设基线快照，补充了 RAW-0027 证据记录，并同步更新 active-context、todo、handoff、candidate 和 decision 记录。任务原本试图纠正 Codex Task Result Record 默认路径，但仍残留错误路径；后续 MNEMOSYNE-025G 将残留错误路径硬纠偏为 `notes/codex-task-results/<TASK_ID>-result.md`。本任务也补充了后续 Codex 任务是否必须新开的判断标准和 txt 任务文件优先约定。
+本任务创建了系统建设基线快照，补充了 RAW-0027 证据记录，并同步更新 active-context、todo、handoff、candidate 和 decision 记录。任务还纠正了 Codex Task Result Record 默认路径应使用 `notes/codex-task-results/<TASK_ID>-result.md` 的约定，并补充后续 Codex 任务是否必须新开的判断标准和 txt 任务文件优先约定。
 
 ## known_gaps
 
