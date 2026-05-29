@@ -65,7 +65,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 
 - `notes/self-improvement-workflow.md` 仍可能需要 Markdown 格式清理；
 - `notes/self-improvement-workflow.md` 中 Codex Task Result Record 默认路径应统一为 `notes/codex-task-results/<TASK_ID>-result.md`；
-- `notes/overall-target-and-roadmap-snapshot.md` 中如果仍存在 `notes/codex-task-results/-result.md`，也应修正；
+- `notes/overall-target-and-roadmap-snapshot.md` 中如果仍存在 `notes/codex-task-results/TASK_ID-result.md`，也应修正；
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
 - 在进入模板设计前，应先完成 self-improvement workflow 清理。
 

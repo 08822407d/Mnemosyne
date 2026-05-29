@@ -88,8 +88,8 @@ v0.2 第一方向已经选择为：
 
 1. `notes/self-improvement-workflow.md` 主体已经创建。
 2. 该文件仍可能接近单行 Markdown，需要格式清理。
-3. 该文件中 Codex Task Result Record 默认路径曾被发现写成 `notes/codex-task-results/-result.md`。
-4. 正确路径应为 `notes/codex-task-results/<TASK_ID>-result.md`。
+3. 该文件中 Codex Task Result Record 默认占位符路径曾被发现写成 `notes/codex-task-results/TASK_ID-result.md`。
+4. 实际任务应将 TASK_ID 替换为真实任务编号，例如 notes/codex-task-results/MNEMOSYNE-026-result.md。
 5. `notes/candidate-requirements.md` 中可能仍有 self-improvement 相关孤立条目或 pending 状态需要清理。
 6. 在进入模板设计前，应先完成 self-improvement workflow 清理。
 7. 每个后续 Codex 任务都应要求写入 Codex Task Result Record。
@@ -122,6 +122,7 @@ self-improvement workflow 是 v0.2 的第一核心能力。
 自我改进流程应保持半自动：
 
 1. Capture / 保存输入
+
    - 用户新构想；
    - 使用反馈；
    - Codex Task Result Record；
@@ -129,8 +130,8 @@ self-improvement workflow 是 v0.2 的第一核心能力。
    - research refresh；
    - 目标项目反馈；
    - 失败案例或冲突案例。
-
 2. Classify / 分类
+
    - 新需求；
    - 设计反馈；
    - 工具能力边界；
@@ -141,12 +142,12 @@ self-improvement workflow 是 v0.2 的第一核心能力。
    - 自动化候选；
    - open question；
    - future idea。
-
 3. Extract / 抽取 candidate
+
    - 将输入整理为 Candidate Requirement。
    - Candidate 不是执行源。
-
 4. Compare / 查重和冲突检查
+
    - 与 human-approved-spec；
    - candidate-requirements；
    - decision-log；
@@ -154,24 +155,24 @@ self-improvement workflow 是 v0.2 的第一核心能力。
    - todo；
    - research evidence；
    - relevant raw 进行对比。
-
 5. Decide / 用户确认
+
    - reflected；
    - accepted；
    - rejected；
    - deferred；
    - keep_candidate；
    - ask_followup。
-
 6. Apply / 应用
+
    - 更新 human-approved-spec；
    - 或更新 todo；
    - 或更新 open-questions；
    - 或更新 decision-log；
    - 或更新 active-context / handoff；
    - 或仅保存 raw / candidate。
-
 7. Record / 记录任务结果
+
    - Codex Task Result Record；
    - ChatGPT 阶段总结；
    - follow-up task；

@@ -14,7 +14,7 @@ MNEMOSYNE-025J
 
 ## files_modified
 
-- 无。任务 A 的替换脚本已执行，但目标文件在本次运行前已经符合 `notes/codex-task-results/TASK_ID-result.md` 默认占位符路径约定，因此未产生内容 diff。
+- MNEMOSYNE-025J 声称已执行最小路径检查，但后续人工核查发现当前规范文件仍残留缺失 TASK_ID 的旧路径。本结果记录仅作为审计材料，不作为执行源。后续以 Git diff、仓库文件、用户 review 和必要验证为准。
 
 ## files_not_modified
 
