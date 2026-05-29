@@ -58,19 +58,19 @@
 2. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
 
-3. 用户是否接受当前 `notes/target-project-memory-system-template-pack.md`，是否需要小修？
+3. 用户是否接受当前目标项目模板包，是否需要小修？
    - 说明：`notes/target-project-memory-system-template-pack.md` 已创建，但尚未经过用户 review。
 
 4. 第一个目标项目模板优先服务哪类场景？
    - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话或多 Agent 团队，尚未由用户确认。
 
-5. 是否先深化 delivery manifest，还是先选择第一个目标项目场景试用模板？
+5. 是否先深化 delivery manifest，还是先选择第一个目标项目场景？
    - 说明：delivery manifest 可增强交付闭环；第一个目标项目场景可验证模板实用性，优先级待用户决定。
 
 6. 是否需要先做 Idea Capture Buffer？
    - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于目标项目模板 review / delivery manifest 仍待决定。
 
-7. 是否需要在目标项目模板中加入更正式的隐私分级字段？
+7. 是否需要更正式的隐私分级字段？
    - 说明：目标项目 intake 已包含 `privacy_level` 和 `sensitive_content_types`，但是否扩展为正式隐私分级体系仍待决定。
 
 8. 研究报告 summary 是否先于真实目标项目交付？

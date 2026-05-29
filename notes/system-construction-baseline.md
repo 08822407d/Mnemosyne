@@ -143,13 +143,12 @@ self-improvement workflow 要解决：
 1. self-improvement workflow 清理；
 2. self-improvement workflow 模板设计（已完成，下一步为 template pack review / 小修）；
 3. 目标项目 intake 与 memory system design spec 模板（已完成，下一步为目标项目模板包 review / 小修）；
-4. 用户 review 目标项目模板包；
-5. delivery manifest 深化或第一个目标项目场景选择；
-6. delivery manifest 与目标项目交付包模板；
-7. Idea Capture Buffer；
-8. 研究报告 summary / PDF 图表复核；
-9. AGENTS.md / CLAUDE.md；
-10. GitHub Actions / 自动查重 / similarity index / MCP / RAG 等后续增强。
+4. delivery manifest 深化或第一个目标项目场景选择；
+5. delivery manifest 与目标项目交付包模板；
+6. Idea Capture Buffer；
+7. 研究报告 summary / PDF 图表复核；
+8. AGENTS.md / CLAUDE.md；
+9. GitHub Actions / 自动查重 / similarity index / MCP / RAG 等后续增强。
 
 ## 9. 当前不应直接做的事
 

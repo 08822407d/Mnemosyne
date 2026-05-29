@@ -301,15 +301,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
-1. 用户 review 目标项目模板包；
-2. delivery manifest 深化；
-3. 选择第一个目标项目场景；
-4. Idea Capture Buffer；
-5. 研究报告 summary / PDF 图表复核；
-6. AGENTS.md / CLAUDE.md；
-7. 自动化增强。
-
-当前下一阶段入口已从“目标项目 intake / memory system design spec 模板设计”切换为“目标项目模板包用户 review”。下一步应先进行 `notes/target-project-memory-system-template-pack.md` 用户 review；如无需小修，则在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
+下一步应先进行 `notes/target-project-memory-system-template-pack.md` 用户 review；如无需小修，则在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
 
 ### MNEMOSYNE-025C 或后续清理任务
 

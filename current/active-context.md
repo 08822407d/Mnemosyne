@@ -6,7 +6,7 @@
 
 ## 当前目标
 
-本阶段目标是同步 MNEMOSYNE-027 完成后的状态层，确认 Mnemosyne 已具备为不同目标项目 / 场景设计外部持久记忆系统的基础模板包，并把下一阶段入口指向用户 review、模板小修、delivery manifest 深化或第一个目标项目场景选择。
+本阶段目标是让 Mnemosyne 具备为不同目标项目 / 场景设计外部持久记忆系统的基础模板能力，包括 intake、目标项目分类、memory system design spec、文件结构、执行源规则、handoff、unsupported assumptions、drift review 和最小 runbook。
 
 ## 当前执行源
 
@@ -46,16 +46,20 @@
 - drift review template 已创建；
 - minimal target project design runbook 已创建；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
-- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
+- `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
+- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源；
+- `notes/target-project-memory-system-template-pack.md` 已创建；
+- 目标项目 intake 模板已创建；
+- memory system design spec 模板已创建；
+- 目标项目文件结构、执行源规则、handoff、unsupported assumptions、drift review 等草案模板已创建。
 
 ## 当前未完成内容
 
 - 用户 review `notes/self-improvement-template-pack.md`；
 - 用户 review `notes/target-project-memory-system-template-pack.md`；
-- 根据 review 小修目标项目模板包；
-- 是否先深化 delivery manifest，还是选择第一个目标项目场景；
+- 是否需要小修目标项目模板包；
+- delivery manifest 深化；
 - 第一个目标项目场景选择；
-- delivery manifest 模板深化；
 - Idea Capture Buffer；
 - 研究报告 summary / PDF 图表人工复核；
 - `AGENTS.md` / `CLAUDE.md`；
@@ -64,5 +68,5 @@
 ## 下一步建议
 
 1. 用户 review `notes/target-project-memory-system-template-pack.md`；
-2. 根据 review 小修目标项目模板包；
-3. 决定下一步是深化 delivery manifest，还是选择第一个目标项目场景试用模板。
+2. 决定是否小修；
+3. 选择第一个目标项目场景或进入 delivery manifest 模板深化。

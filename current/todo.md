@@ -32,7 +32,6 @@
 - [ ] 根据 review 小修目标项目模板包；
 - [ ] delivery manifest 模板深化；
 - [ ] 选择第一个目标项目场景；
-- [ ] 决定下一步入口：delivery manifest 深化或第一个目标项目场景试用模板；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；

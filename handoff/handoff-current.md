@@ -76,5 +76,5 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 ## 下一步建议
 
 1. 用户 review 目标项目模板包；
-2. 根据 review 小修模板；
-3. 决定进入 delivery manifest 深化，还是选择第一个目标项目场景试用模板。
+2. 小修模板；
+3. 选择第一个目标项目场景或进入 delivery manifest 模板深化。
