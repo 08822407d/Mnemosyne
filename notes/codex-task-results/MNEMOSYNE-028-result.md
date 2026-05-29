@@ -63,10 +63,5 @@ limits_or_uncertainties:
   - delivery manifest template pack 不是执行源；当前执行源仍是 current/human-approved-spec.md。
   - 研究报告是高权重证据层但不是执行源；PDF 图表和图片证据仍需人工复核。
   - 当前 v0.2 仍是半自动流程，不默认自动交付、自动写回、自动查重或全量读取 raw。
-reviewer_notes:
-  - MNEMOSYNE-028 已创建 delivery manifest template pack。
-  - MNEMOSYNE-028A 用于同步 active-context / handoff / todo / open questions / candidate / decision / roadmap / baseline 状态，并补齐结果记录。
-  - 本结果记录不是执行源。
-  - 最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
 whether_task_claims_completion: true
 ```

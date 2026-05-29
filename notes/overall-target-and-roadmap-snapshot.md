@@ -91,14 +91,6 @@ self-improvement workflow 已从流程说明推进到基础模板包。`notes/se
 
 该模板包用于 Mnemosyne 为目标项目设计外部持久记忆系统，覆盖 Target Project Intake、Target Project Type Classifier、Memory System Design Spec、目标项目文件结构、执行源规则、workflow、delivery package draft、handoff、unsupported assumptions、drift review、minimal runbook 和 completion criteria。该文件不是执行源，仍需用户 review。
 
-### 4.5 delivery manifest template pack 已创建
-
-当前已经创建：
-
-- `notes/delivery-manifest-template-pack.md`
-
-该模板包用于 Mnemosyne 将记忆系统设计交付到目标项目时生成交付清单，覆盖 Delivery Manifest、Files To Create / Update、Runtime Truth Source、Manual Setup Steps、Unsupported Assumptions Linkage、Delivery Review、Handoff Package、Rollback / Revision、Delivery Result、Minimal Delivery Runbook 和 Completion Criteria。该文件不是执行源，仍需用户 review。
-
 ## 5. 当前最新诊断
 
 当前 ChatGPT 对仓库的最新诊断包括：
@@ -108,15 +100,12 @@ self-improvement workflow 已从流程说明推进到基础模板包。`notes/se
 3. v0.2 第一方向 self-improvement workflow 已从流程说明推进到基础模板包。
 4. `notes/target-project-memory-system-template-pack.md` 已创建，作为目标项目 intake / memory system design spec 模板入口。
 5. 目标项目 intake / memory system design spec 模板包已创建，等待用户 review。
-6. `notes/delivery-manifest-template-pack.md` 已创建，作为 delivery manifest / 目标项目交付包模板入口。
-7. delivery manifest / 目标项目交付包模板已创建，等待用户 review。
-8. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
-9. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-028-result.md`。
-10. template pack 不是执行源，仍需用户 review。
-11. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
-12. Codex Task Result Record 不是执行源，只是审计材料。
-13. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
-14. MNEMOSYNE-028A 已同步 delivery manifest template pack 创建后的状态层和任务结果记录。
+6. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+7. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-027-result.md`。
+8. template pack 不是执行源，仍需用户 review。
+9. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
+10. Codex Task Result Record 不是执行源，只是审计材料。
+11. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
 
 ## 6. self-improvement workflow 的目标
 
@@ -261,7 +250,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 后续仍需深化：
 
-- 用户 review delivery manifest template pack；
+- delivery manifest template；
 - target project memory package template；
 - post-delivery feedback workflow；
 - 第一个目标项目场景验证。
@@ -312,14 +301,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
-1. 用户 review delivery manifest template pack；
-2. 选择第一个目标项目场景；
-3. Idea Capture Buffer；
-4. 研究报告 summary / PDF 图表复核；
-5. AGENTS.md / CLAUDE.md；
-6. 自动化增强。
-
-当前下一阶段入口已从“delivery manifest 深化”切换为“delivery manifest template pack 用户 review”。下一步应先进行 `notes/delivery-manifest-template-pack.md` 用户 review；如无需小修，则在第一个目标项目场景选择与 Idea Capture Buffer 之间确认优先级。
+下一步应先进行 `notes/target-project-memory-system-template-pack.md` 用户 review；如无需小修，则在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
 
 ### MNEMOSYNE-025C 或后续清理任务
 
@@ -357,8 +339,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 目标：
 
 - 深化 delivery manifest；
-- 创建 `notes/delivery-manifest-template-pack.md`；
-- 设计 files to create / update、runtime truth source、manual setup steps、unsupported assumptions linkage、delivery review、handoff package、rollback / revision plan 和 delivery result record；
+- 设计 target project memory package；
 - 衔接已创建的 unsupported assumptions 与 drift review 模板。
 
 ### MNEMOSYNE-029：Idea Capture Buffer
