@@ -303,3 +303,44 @@
 - 状态：accepted
 - 来源：RAW-0026；MNEMOSYNE-025D
 
+## DEC-0046
+
+- 决策：执行 MNEMOSYNE-026：self-improvement workflow 模板设计。
+- 理由：self-improvement workflow 已有流程说明，需要推进为可复制、可审计的模板包。
+- 状态：accepted
+- 来源：RAW-0031
+
+## DEC-0047
+
+- 决策：创建 `notes/self-improvement-template-pack.md`。
+- 理由：为 raw、candidate、conflict check、user decision、task result、stage summary、research refresh、target project feedback、open question、todo、apply checklist 和 runbook 提供统一入口。
+- 状态：accepted
+- 来源：RAW-0031
+
+## DEC-0048
+
+- 决策：template pack 不是执行源，当前执行源仍为 `current/human-approved-spec.md`。
+- 理由：模板只用于记录与整理，不能越权成为执行规则。
+- 状态：accepted
+- 来源：RAW-0031
+
+## DEC-0049
+
+- 决策：先使用单文件模板包，后续如有需要再拆分为多个模板文件。
+- 理由：当前阶段优先降低入口复杂度，待用户 review 后再决定是否拆分。
+- 状态：accepted
+- 来源：RAW-0031
+
+## DEC-0050
+
+- 决策：Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`。
+- 理由：统一无尖括号占位符，减少路径写法歧义。
+- 状态：accepted
+- 来源：RAW-0031
+
+## DEC-0051
+
+- 决策：完成 self-improvement template pack 后，下一方向优先考虑目标项目 intake / memory system design spec 模板。
+- 理由：自我改进入口稳定后，应转向 Mnemosyne 面向目标项目交付的核心模板能力。
+- 状态：accepted
+- 来源：RAW-0031

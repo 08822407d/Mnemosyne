@@ -296,3 +296,44 @@
 - 状态：pending
 - 来源：RAW-0026；MNEMOSYNE-025D
 
+## CAND-0048
+
+- 内容：需要创建 `notes/self-improvement-template-pack.md`，作为 self-improvement workflow 的可操作模板入口。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md
+
+## CAND-0049
+
+- 内容：self-improvement template pack 不是执行源；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md；notes/self-improvement-workflow.md
+
+## CAND-0050
+
+- 内容：template pack 应包含 raw、candidate、conflict check、user decision、codex task result、ChatGPT summary、research refresh、target project feedback、open question、todo、apply checklist 和 runbook。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md
+
+## CAND-0051
+
+- 内容：Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`，实际任务将 `TASK_ID` 替换为真实任务编号。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md；notes/self-improvement-workflow.md；notes/codex-task-results/MNEMOSYNE-026-result.md
+
+## CAND-0052
+
+- 内容：完成 self-improvement template pack 后需要用户 review，并根据 review 决定是否小修模板。
+- 状态：pending
+- 来源：RAW-0031
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0053
+
+- 内容：self-improvement template pack 完成后，后续应进入目标项目 intake / memory system design spec 模板设计。
+- 状态：pending
+- 来源：RAW-0031
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
