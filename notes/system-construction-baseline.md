@@ -68,7 +68,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `notes/self-improvement-workflow.md` 默认占位符路径应统一为 `notes/codex-task-results/TASK_ID-result.md`，实际任务应将 `TASK_ID` 替换为真实任务编号；
 - 相关说明文件中的 Codex Task Result Record 默认路径应统一为 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
-- self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成，当前进入用户 review / 小修 template pack 阶段；下一步指向目标项目 intake / memory system design spec 模板设计。
+- self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成后进入用户 review 阶段。
 
 ## 5. self-improvement workflow 的目标
 
@@ -130,7 +130,7 @@ self-improvement workflow 要解决：
 建议后续路线：
 
 1. self-improvement workflow 清理；
-2. self-improvement workflow 模板设计（已完成，当前为用户 review / 小修 template pack）；
+2. self-improvement workflow 模板设计（已完成，下一步为 template pack review / 小修）；
 3. 目标项目 intake 与 memory system design spec 模板；
 4. delivery manifest 与目标项目交付包模板；
 5. Idea Capture Buffer；

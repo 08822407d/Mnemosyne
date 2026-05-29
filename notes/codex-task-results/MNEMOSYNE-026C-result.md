@@ -52,7 +52,6 @@
 
 ## known_gaps
 
-- MNEMOSYNE-026C 声称完成 open-questions 去重，但后续核查发现 open 区域仍残留已由 template pack 覆盖的问题；MNEMOSYNE-026D 用于硬替换 `current/open-questions.md` 并完成去重。
 - `notes/self-improvement-template-pack.md` 仍需用户 review。
 - 是否小修或拆分 template pack 仍待用户决定。
 - MNEMOSYNE-027 尚未实施，本任务不创建目标项目 intake 或 memory system design spec 模板。
@@ -87,7 +86,4 @@
 
 ## reviewer_notes
 
-- MNEMOSYNE-026C 声称完成 open-questions 去重，但后续核查发现 open 区域仍残留已由 template pack 覆盖的问题。
-- MNEMOSYNE-026D 用于硬替换 `current/open-questions.md` 并完成去重。
-- 本结果记录不是执行源。
-- 等待用户 review。
+等待用户 review。
