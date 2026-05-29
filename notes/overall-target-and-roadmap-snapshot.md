@@ -78,21 +78,22 @@ v0.2 第一方向已经选择为：
 
 当前已经创建：
 
-- notes/self-improvement-workflow.md
+- `notes/self-improvement-workflow.md`
+- `notes/self-improvement-template-pack.md`
 
-该文件用于描述用户新构想、使用反馈、Codex/ChatGPT 任务结果和研究更新如何进入 Mnemosyne 的自我改进流程。
+self-improvement workflow 已从流程说明推进到基础模板包。`notes/self-improvement-workflow.md` 用于描述用户新构想、使用反馈、Codex/ChatGPT 任务结果和研究更新如何进入 Mnemosyne 的自我改进流程；`notes/self-improvement-template-pack.md` 是模板入口，但不是执行源。
 
 ## 5. 当前最新诊断
 
 当前 ChatGPT 对仓库的最新诊断包括：
 
 1. `notes/self-improvement-workflow.md` 主体已经创建。
-2. 该文件仍可能接近单行 Markdown，需要格式清理。
-3. 该文件中 Codex Task Result Record 默认占位符路径曾被发现写成 `notes/codex-task-results/TASK_ID-result.md`。
-4. 实际任务应将 TASK_ID 替换为真实任务编号，例如 notes/codex-task-results/MNEMOSYNE-026-result.md。
-5. `notes/candidate-requirements.md` 中可能仍有 self-improvement 相关孤立条目或 pending 状态需要清理。
-6. 在进入模板设计前，应先完成 self-improvement workflow 清理。
-7. 每个后续 Codex 任务都应要求写入 Codex Task Result Record。
+2. `notes/self-improvement-template-pack.md` 已创建，作为 self-improvement workflow 的模板入口。
+3. v0.2 第一方向 self-improvement workflow 已从流程说明推进到基础模板包。
+4. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+5. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-026-result.md`。
+6. template pack 不是执行源，仍需用户 review。
+7. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
 8. Codex Task Result Record 不是执行源，只是审计材料。
 9. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
 
@@ -177,6 +178,14 @@ self-improvement workflow 是 v0.2 的第一核心能力。
    - ChatGPT 阶段总结；
    - follow-up task；
    - known gaps。
+
+## 7.1 模板入口
+
+self-improvement workflow 的模板入口为：
+
+- `notes/self-improvement-template-pack.md`
+
+执行实际自我改进时，应优先使用该模板包。模板包不是执行源；当前执行源仍是 `current/human-approved-spec.md`。
 
 ## 8. Codex Task Result Record 规则
 
@@ -274,6 +283,8 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
+下一步应先进行 `notes/self-improvement-template-pack.md` 用户 review；如无需小修，则转向目标项目 intake / memory system design spec 模板设计。
+
 ### MNEMOSYNE-025C 或后续清理任务
 
 目标：
@@ -283,7 +294,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 补齐 candidate / decision 中 self-improvement 相关状态；
 - 保持不引入新机制。
 
-### MNEMOSYNE-026：self-improvement workflow 模板设计
+### MNEMOSYNE-026：self-improvement workflow 模板设计（已完成 / 等待用户 review）
 
 目标：
 
@@ -293,7 +304,8 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 设计 user decision record template；
 - 设计 Codex Task Result Record template；
 - 设计 ChatGPT handoff / feedback template；
-- 设计 open question / todo update template。
+- 设计 open question / todo update template；
+- 创建 `notes/self-improvement-template-pack.md`。
 
 ### MNEMOSYNE-027：目标项目 intake 与 memory system design spec 模板
 

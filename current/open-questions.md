@@ -33,8 +33,22 @@
 7. PDF 图表人工复核何时做？
 8. 是否需要隐私分级后再导入更多 raw？
 9. 第一个目标项目记忆系统模板优先服务哪类场景？
+   - 来源：RAW-0031；
+   - 说明：目标项目类型尚未由用户确认。
 10. 是否先设计 AGENTS.md / CLAUDE.md，还是先设计目标项目模板？
 11. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
 12. self-improvement workflow 是否需要单独模板文件？
 13. 是否需要为 similarity/conflict report 设计最小格式？
 14. 是否需要为 user decision 设计固定记录格式？
+15. self-improvement template pack 是否需要拆成多个独立模板文件？
+   - 来源：RAW-0031；
+   - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
+16. 目标项目 intake 和 memory system design spec 应先做哪个？
+   - 来源：RAW-0031；
+   - 说明：两者相关但先后顺序尚未确认。
+17. 是否需要先做 Idea Capture Buffer？
+   - 来源：RAW-0031；
+   - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于目标项目模板仍待决定。
+18. 是否需要在模板中加入隐私分级字段？
+   - 来源：RAW-0031；
+   - 说明：Raw Input Entry Template 已包含 `sensitivity`，但是否扩展为正式隐私分级体系仍待决定。
