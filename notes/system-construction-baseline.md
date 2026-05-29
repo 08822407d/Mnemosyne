@@ -58,7 +58,8 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `raw/research-reports/current/current-capability-boundaries.md` 已建立；
 - v0.2 第一方向已确定为 self-improvement workflow；
 - `notes/self-improvement-workflow.md` 已创建；
-- `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包。
+- `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包；
+- `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包。
 
 ## 4. 当前已知问题和最新诊断
 
@@ -68,7 +69,9 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `notes/self-improvement-workflow.md` 默认占位符路径应统一为 `notes/codex-task-results/TASK_ID-result.md`，实际任务应将 `TASK_ID` 替换为真实任务编号；
 - 相关说明文件中的 Codex Task Result Record 默认路径应统一为 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
-- self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成后进入用户 review 阶段。
+- self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成后进入用户 review 阶段；
+- 目标项目 intake / memory system design spec 模板设计已在 MNEMOSYNE-027 完成后进入用户 review / 小修阶段；
+- 下一步应在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
 
 ## 5. self-improvement workflow 的目标
 
@@ -131,12 +134,13 @@ self-improvement workflow 要解决：
 
 1. self-improvement workflow 清理；
 2. self-improvement workflow 模板设计（已完成，下一步为 template pack review / 小修）；
-3. 目标项目 intake 与 memory system design spec 模板；
-4. delivery manifest 与目标项目交付包模板；
-5. Idea Capture Buffer；
-6. 研究报告 summary / PDF 图表复核；
-7. AGENTS.md / CLAUDE.md；
-8. GitHub Actions / 自动查重 / similarity index / MCP / RAG 等后续增强。
+3. 目标项目 intake 与 memory system design spec 模板（已完成，下一步为目标项目模板包 review / 小修）；
+4. delivery manifest 深化或第一个目标项目场景选择；
+5. delivery manifest 与目标项目交付包模板；
+6. Idea Capture Buffer；
+7. 研究报告 summary / PDF 图表复核；
+8. AGENTS.md / CLAUDE.md；
+9. GitHub Actions / 自动查重 / similarity index / MCP / RAG 等后续增强。
 
 ## 9. 当前不应直接做的事
 
@@ -149,7 +153,9 @@ self-improvement workflow 要解决：
 - 创建 GitHub Actions；
 - 上 MCP / RAG；
 - 做目标项目正式交付；
-- 把 self-improvement workflow 的未清理草案当成完全稳定规范。
+- 把 self-improvement workflow 的未清理草案当成完全稳定规范；
+- 把目标项目模板包当成执行源；
+- 在用户确认第一个目标项目场景前生成真实目标项目交付包。
 
 ## 10. 使用方式
 
