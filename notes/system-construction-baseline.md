@@ -59,8 +59,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - v0.2 第一方向已确定为 self-improvement workflow；
 - `notes/self-improvement-workflow.md` 已创建；
 - `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包；
-- `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包；
-- `notes/delivery-manifest-template-pack.md` 已创建，delivery manifest / 目标项目交付包已具备基础模板包。
+- `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包。
 
 ## 4. 当前已知问题和最新诊断
 
@@ -72,11 +71,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
 - self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成后进入用户 review 阶段；
 - 目标项目 intake / memory system design spec 模板设计已在 MNEMOSYNE-027 完成后进入用户 review / 小修阶段；
-- delivery manifest 深化已在 MNEMOSYNE-028 完成后进入用户 review / 小修阶段；
-- MNEMOSYNE-028A 已完成 delivery manifest template pack 状态同步与结果记录补账；
-- MNEMOSYNE-028B 已完成 delivery manifest 状态硬同步与路线图纠偏；
-- MNEMOSYNE-028C 已通过四文件硬替换修复 delivery manifest 状态残留并补齐审计记录；
-- 下一步应在第一个目标项目场景选择与 Idea Capture Buffer 之间确认优先级。
+- 下一步应在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
 
 ## 5. self-improvement workflow 的目标
 
@@ -113,14 +108,6 @@ self-improvement workflow 要解决：
 
 该模板包用于为目标项目设计外部持久记忆系统，覆盖 intake、目标项目分类、memory system design spec、文件结构、执行源规则、workflow、delivery package draft、handoff、unsupported assumptions、drift review、minimal runbook 和 completion criteria。该模板包不是执行源，执行源仍为 `current/human-approved-spec.md`。真实目标项目设计和交付仍需用户 review 与目标项目落地确认。
 
-## 5.3 delivery manifest template pack
-
-当前模板入口：
-
-- `notes/delivery-manifest-template-pack.md`
-
-该模板包用于为目标项目交付记忆系统运行文件提供交付清单、文件创建 / 更新清单、运行真相源检查、手工落地步骤、unsupported assumptions linkage、delivery review、handoff package、rollback / revision plan、delivery result record 和 minimal delivery runbook。该模板包不是执行源，执行源仍为 `current/human-approved-spec.md`。真实目标项目交付必须经用户确认并落地到目标项目仓库 / 目录。
-
 ## 6. Codex 任务执行约定
 
 后续 Codex 任务执行约定如下：
@@ -153,14 +140,15 @@ self-improvement workflow 要解决：
 
 建议后续路线：
 
-1. 用户 review delivery manifest template pack；
-2. 选择第一个目标项目场景；
-3. Idea Capture Buffer；
-4. 研究报告 summary / PDF 图表复核；
-5. AGENTS.md / CLAUDE.md；
-6. 自动化增强。
-
-delivery manifest 深化已完成，不再作为未来待做项；下一步应在第一个目标项目场景选择与 Idea Capture Buffer 之间确认优先级。
+1. self-improvement workflow 清理；
+2. self-improvement workflow 模板设计（已完成，下一步为 template pack review / 小修）；
+3. 目标项目 intake 与 memory system design spec 模板（已完成，下一步为目标项目模板包 review / 小修）；
+4. delivery manifest 深化或第一个目标项目场景选择；
+5. delivery manifest 与目标项目交付包模板；
+6. Idea Capture Buffer；
+7. 研究报告 summary / PDF 图表复核；
+8. AGENTS.md / CLAUDE.md；
+9. GitHub Actions / 自动查重 / similarity index / MCP / RAG 等后续增强。
 
 ## 9. 当前不应直接做的事
 
