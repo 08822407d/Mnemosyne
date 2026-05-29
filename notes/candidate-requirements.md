@@ -263,8 +263,9 @@
 ## CAND-0042
 
 - 内容：后续可能需要 self-improvement 模板、similarity/conflict 模板和 user decision 模板。
-- 状态：pending
-- 来源：RAW-0025
+- 状态：reflected
+- 来源：RAW-0025；RAW-0031；RAW-0033；MNEMOSYNE-026；MNEMOSYNE-026B
+- 反映位置：notes/self-improvement-template-pack.md
 
 ## CAND-0043
 
@@ -296,3 +297,86 @@
 - 状态：pending
 - 来源：RAW-0026；MNEMOSYNE-025D
 
+## CAND-0048
+
+- 内容：需要创建 `notes/self-improvement-template-pack.md`，作为 self-improvement workflow 的可操作模板入口。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md
+
+## CAND-0049
+
+- 内容：self-improvement template pack 不是执行源；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md；notes/self-improvement-workflow.md
+
+## CAND-0050
+
+- 内容：template pack 应包含 raw、candidate、conflict check、user decision、codex task result、ChatGPT summary、research refresh、target project feedback、open question、todo、apply checklist 和 runbook。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md
+
+## CAND-0051
+
+- 内容：Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`，实际任务将 `TASK_ID` 替换为真实任务编号。
+- 状态：reflected
+- 来源：RAW-0031
+- 反映位置：notes/self-improvement-template-pack.md；notes/self-improvement-workflow.md；notes/codex-task-results/MNEMOSYNE-026-result.md
+
+## CAND-0052
+
+- 内容：完成 self-improvement template pack 后需要用户 review，并根据 review 决定是否小修模板。
+- 状态：pending
+- 来源：RAW-0031
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0053
+
+- 内容：self-improvement template pack 完成后，后续应进入目标项目 intake / memory system design spec 模板设计。
+- 状态：pending
+- 来源：RAW-0031
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0054
+
+- 内容：MNEMOSYNE-026A 用于同步 MNEMOSYNE-026 后的 active-context、todo、candidate、decision、roadmap、baseline 和 task result 状态。
+- 状态：reflected
+- 来源：RAW-0032；MNEMOSYNE-026A
+- 反映位置：current/active-context.md；current/todo.md；notes/candidate-requirements.md；notes/decision-log.md；notes/overall-target-and-roadmap-snapshot.md；notes/system-construction-baseline.md；notes/codex-task-results/MNEMOSYNE-026A-result.md
+
+## CAND-0055
+
+- 内容：template pack 完成后应先进行用户 review；如需小修则先小修，再进入目标项目 intake / memory system design spec 模板设计。
+- 状态：pending
+- 来源：RAW-0032；MNEMOSYNE-026A
+- 反映位置：current/active-context.md；current/todo.md；handoff/handoff-current.md
+
+## CAND-0056
+
+- 内容：active-context 和 todo 必须反映 `notes/self-improvement-template-pack.md` 已创建，且 MNEMOSYNE-026 不再作为未完成项。
+- 状态：reflected
+- 来源：RAW-0032；MNEMOSYNE-026A
+- 反映位置：current/active-context.md；current/todo.md
+
+## CAND-0057
+
+- 内容：MNEMOSYNE-026B 用于修正 MNEMOSYNE-026 / 026A 后的状态落账残留。
+- 状态：reflected
+- 来源：RAW-0033；MNEMOSYNE-026B
+- 反映位置：current/todo.md；notes/candidate-requirements.md；notes/decision-log.md；current/open-questions.md；notes/system-construction-baseline.md；notes/overall-target-and-roadmap-snapshot.md；notes/codex-task-results/MNEMOSYNE-026B-result.md
+
+## CAND-0058
+
+- 内容：`current/todo.md` 必须反映 MNEMOSYNE-026 已完成，且 template pack 覆盖的模板类 TODO 应标记为已完成并保留后续小修入口。
+- 状态：reflected
+- 来源：RAW-0033；MNEMOSYNE-026B
+- 反映位置：current/todo.md
+
+## CAND-0059
+
+- 内容：下一阶段应在用户 review template pack 后，进入目标项目 intake / memory system design spec 模板设计；当前不进入自动化。
+- 状态：pending
+- 来源：RAW-0033；MNEMOSYNE-026B
+- 反映位置：current/active-context.md；handoff/handoff-current.md；notes/overall-target-and-roadmap-snapshot.md
