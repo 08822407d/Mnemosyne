@@ -33,7 +33,7 @@ Codex Task Result Record 路径占位符规范化
 
 ## codex_summary
 
-本任务将 Codex Task Result Record 的默认占位符路径规范化为 `notes/codex-task-results/TASK_ID-result.md`，并在 self-improvement workflow、system construction baseline、roadmap snapshot、todo、active-context、handoff、candidate、decision 和 MNEMOSYNE-025G result 中完成最小同步。后续检查仍发现旧路径残留；MNEMOSYNE-025I 对当前规范文件执行硬清除。
+本任务将 Codex Task Result Record 的默认占位符路径规范化为 `notes/codex-task-results/TASK_ID-result.md`，并在 self-improvement workflow、system construction baseline、roadmap snapshot、todo、active-context、handoff、candidate、decision 和 MNEMOSYNE-025G result 中完成最小同步。
 
 ## known_gaps
 
@@ -66,4 +66,4 @@ Codex Task Result Record 路径占位符规范化
 
 ## whether_task_claims_completion
 
-是。本任务曾声称完成 MNEMOSYNE-025H 范围内的路径占位符规范化和最小状态落账；后续检查仍发现旧路径残留；MNEMOSYNE-025I 对当前规范文件执行硬清除。
+是。本任务声称已完成 MNEMOSYNE-025H 范围内的路径占位符规范化和最小状态落账；是否进入 MNEMOSYNE-026 仍应以用户 review 为准。

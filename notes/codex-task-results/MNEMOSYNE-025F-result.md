@@ -33,7 +33,7 @@ MNEMOSYNE-025F
 
 ## codex_summary
 
-本任务创建 RAW-0028 和 MNEMOSYNE-025F 任务结果记录，并试图统一允许修改文件中的 Codex Task Result Record 默认路径为 `notes/codex-task-results/<TASK_ID>-result.md`。MNEMOSYNE-025F 试图修正路径，但合并后仍发现错误路径残留；MNEMOSYNE-025G 执行硬纠偏。
+本任务创建 RAW-0028 和 MNEMOSYNE-025F 任务结果记录，统一允许修改文件中的 Codex Task Result Record 默认路径为 `notes/codex-task-results/<TASK_ID>-result.md`，并完成 `notes/self-improvement-workflow.md` 与 `notes/system-construction-baseline.md` 的基础 Markdown 格式清理和状态同步。
 
 ## known_gaps
 
@@ -67,4 +67,4 @@ MNEMOSYNE-025F
 
 ## whether_task_claims_completion
 
-是。本任务曾声称完成 MNEMOSYNE-025F 范围内的路径纠偏、基础 Markdown 格式清理和记录补账；但合并后仍发现错误路径残留，需由 MNEMOSYNE-025G 执行硬纠偏。
+是。本任务声称已完成 MNEMOSYNE-025F 范围内的路径纠偏、基础 Markdown 格式清理和记录补账；下一步应进入用户 review 与 MNEMOSYNE-026 模板设计。
