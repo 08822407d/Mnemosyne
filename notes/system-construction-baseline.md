@@ -100,6 +100,14 @@ self-improvement workflow 要解决：
 
 该模板包不是执行源。执行源仍为 `current/human-approved-spec.md`。模板填写结果需要经过用户确认后，才可能更新执行源。
 
+## 5.2 target project memory system template pack
+
+当前模板入口：
+
+- `notes/target-project-memory-system-template-pack.md`
+
+该模板包用于为目标项目设计外部持久记忆系统，覆盖 intake、目标项目分类、memory system design spec、文件结构、执行源规则、workflow、delivery package draft、handoff、unsupported assumptions、drift review、minimal runbook 和 completion criteria。该模板包不是执行源，执行源仍为 `current/human-approved-spec.md`。真实目标项目设计和交付仍需用户 review 与目标项目落地确认。
+
 ## 6. Codex 任务执行约定
 
 后续 Codex 任务执行约定如下：

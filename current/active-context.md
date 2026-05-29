@@ -30,11 +30,21 @@
 ## 已完成内容
 
 - v0.1 已被接受为可接手版本；
-- v0.2 第一方向已选择为 self-improvement workflow；
-- `raw/chatgpt-discussion-025.md` 已创建；
+- v0.2 第一方向 self-improvement workflow 已完成流程说明和模板包；
 - `notes/self-improvement-workflow.md` 已创建；
 - `notes/self-improvement-template-pack.md` 已创建；
-- self-improvement workflow 已具备基础模板包；
+- `notes/target-project-memory-system-template-pack.md` 已创建；
+- 目标项目 intake 模板已创建；
+- memory system design spec 模板已创建；
+- target project type classifier 已创建；
+- target project memory file layout template 已创建；
+- target project execution source rule template 已创建；
+- target project workflow template 已创建；
+- delivery package draft template 已创建；
+- target project handoff template 已创建；
+- unsupported assumptions template 已创建；
+- drift review template 已创建；
+- minimal target project design runbook 已创建；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
 - `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源；
