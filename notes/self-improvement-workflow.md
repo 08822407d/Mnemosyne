@@ -167,13 +167,13 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 
 结果记录不是执行源，只是审计材料。最终判断仍以 Git diff、仓库文件、用户 review 和必要验证为准。
 
-每个后续 Codex 任务原则上都应写入对应 `<TASK_ID>-result.md`。
+默认占位符路径为：
 
-如果任务已有专门验证报告或演练报告，可以在该报告中写入结果，但仍需在任务总结中说明。
+`notes/codex-task-results/TASK_ID-result.md`
 
-每个后续 Codex 任务原则上都应写入对应 `<TASK_ID>-result.md`。
+实际任务应将 `TASK_ID` 替换为真实任务编号，例如：
 
-默认路径为：`notes/codex-task-results/<TASK_ID>-result.md`。
+`notes/codex-task-results/MNEMOSYNE-026-result.md`
 
 如果任务已有专门验证报告或演练报告，可以在该报告中写入结果，但仍需在任务总结中说明。
 

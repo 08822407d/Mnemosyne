@@ -64,7 +64,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 当前已知问题和最新诊断包括：
 
 - `notes/self-improvement-workflow.md` 仍可能需要 Markdown 格式清理；
-- `notes/self-improvement-workflow.md` 中 Codex Task Result Record 默认路径应统一为 `notes/codex-task-results/<TASK_ID>-result.md`；
+- `notes/self-improvement-workflow.md` 默认占位符路径应统一为 `notes/codex-task-results/TASK_ID-result.md`，实际任务应将 `TASK_ID` 替换为真实任务编号；
 - `notes/overall-target-and-roadmap-snapshot.md` 中如果仍存在 `notes/codex-task-results/TASK_ID-result.md`，也应修正；
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
 - 在进入模板设计前，应先完成 self-improvement workflow 清理。
@@ -98,7 +98,7 @@ self-improvement workflow 要解决：
 - 如果现有任务干净、基于最新 master、没有未合并改动，可以继续使用；
 - 如果任务目标是验证新任务能否接手、现有任务状态不明、已有未合并改动、分支不是最新，或需要隔离上下文，则必须新开；
 - 后续 Codex 任务内容应优先作为 `.txt` 文件提供，避免聊天代码块嵌套导致复制不完整；
-- 任务完成后必须写入 Codex Task Result Record：`notes/codex-task-results/<TASK_ID>-result.md`；
+- 任务完成后必须写入 Codex Task Result Record：`notes/codex-task-results/TASK_ID-result.md`；
 - Codex Task Result Record 不是执行源；
 - 最终判断仍以 Git diff、仓库文件、用户 review 和必要验证为准。
 

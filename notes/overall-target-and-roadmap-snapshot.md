@@ -184,7 +184,7 @@ self-improvement workflow 是 v0.2 的第一核心能力。
 
 默认路径：
 
-- `notes/codex-task-results/<TASK_ID>-result.md`
+- `notes/codex-task-results/TASK_ID-result.md`
 
 该记录不是执行源。
 

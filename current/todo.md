@@ -17,7 +17,7 @@
 - [ ] 用户 review `notes/self-improvement-workflow.md`；
 - [X] 清理 notes/self-improvement-workflow.md 的 Codex Task Result Record 路径，默认占位符路径为 notes/codex-task-results/TASK_ID-result.md；
 - [ ] 清理 `notes/self-improvement-workflow.md` 的 Markdown 格式和 Codex Task Result Record 路径；
-- [ ] 为每个后续 Codex 任务写入 task result record（默认路径：`notes/codex-task-results/<TASK_ID>-result.md`）；
+- [ ] 为每个后续 Codex 任务写入 task result record（默认路径：`notes/codex-task-results/TASK_ID-result.md`）；
 - [ ] 后续阶段按 `notes/overall-target-and-roadmap-snapshot.md` 校验是否偏离长期路线；
 - [ ] MNEMOSYNE-026：self-improvement workflow 模板设计；
 - [ ] 设计 Codex Task Result Record 固定模板；
