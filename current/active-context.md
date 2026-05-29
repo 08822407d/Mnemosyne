@@ -40,7 +40,8 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 
 - self-improvement workflow 清理（Markdown 格式与记录路径一致性）；
 - self-improvement workflow 用户 review；
-- self-improvement workflow 模板设计；
+- self-improvement workflow Markdown 格式清理；
+- MNEMOSYNE-026：self-improvement workflow 模板设计；
 - 目标项目设计模板；
 - 研究报告 summary；
 - PDF 图表人工复核；
