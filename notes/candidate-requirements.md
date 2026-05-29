@@ -338,3 +338,66 @@
 - 状态：pending
 - 来源：RAW-0031
 - 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0054
+
+- 内容：需要创建目标项目 intake 模板，用于在设计目标项目记忆系统前收集项目类型、目标、工具、隐私、自动化期望、review 要求和 open questions。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md
+
+## CAND-0055
+
+- 内容：需要创建 memory system design spec 模板，用于为目标项目生成记忆系统设计说明草案。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md
+
+## CAND-0056
+
+- 内容：需要创建目标项目文件结构模板，提供可裁剪的 `memory/` 通用推荐结构。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md
+
+## CAND-0057
+
+- 内容：需要创建目标项目执行源规则模板，明确每个目标项目自己的执行源、非执行源、冲突规则、确认规则和版本规则。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md
+
+## CAND-0058
+
+- 内容：需要创建 unsupported assumptions 模板，用于记录目标工具写文件、访问 GitHub、读取 PDF / 图片 / 图表、自动触发、外部工具许可和隐私存储等未验证前提。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md
+
+## CAND-0059
+
+- 内容：需要创建 drift review 模板，用于定期检查目标项目记忆系统是否偏离原设计。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md
+
+## CAND-0060
+
+- 内容：目标项目模板包不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：notes/target-project-memory-system-template-pack.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0061
+
+- 内容：完成目标项目模板包后需要用户 review，并根据 review 决定是否小修。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0062
+
+- 内容：目标项目模板包完成后，后续应选择第一个目标项目场景或深化 delivery manifest。
+- 状态：reflected
+- 来源：RAW-0035
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md；notes/overall-target-and-roadmap-snapshot.md；notes/system-construction-baseline.md

@@ -83,6 +83,14 @@ v0.2 第一方向已经选择为：
 
 self-improvement workflow 已从流程说明推进到基础模板包。`notes/self-improvement-workflow.md` 用于描述用户新构想、使用反馈、Codex/ChatGPT 任务结果和研究更新如何进入 Mnemosyne 的自我改进流程；`notes/self-improvement-template-pack.md` 是模板入口，但不是执行源。
 
+### 4.4 目标项目模板包已创建
+
+当前已经创建：
+
+- `notes/target-project-memory-system-template-pack.md`
+
+该模板包用于 Mnemosyne 为目标项目设计外部持久记忆系统，覆盖 Target Project Intake、Target Project Type Classifier、Memory System Design Spec、目标项目文件结构、执行源规则、workflow、delivery package draft、handoff、unsupported assumptions、drift review、minimal runbook 和 completion criteria。该文件不是执行源，仍需用户 review。
+
 ## 5. 当前最新诊断
 
 当前 ChatGPT 对仓库的最新诊断包括：
@@ -90,12 +98,14 @@ self-improvement workflow 已从流程说明推进到基础模板包。`notes/se
 1. `notes/self-improvement-workflow.md` 主体已经创建。
 2. `notes/self-improvement-template-pack.md` 已创建，作为 self-improvement workflow 的模板入口。
 3. v0.2 第一方向 self-improvement workflow 已从流程说明推进到基础模板包。
-4. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
-5. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-026-result.md`。
-6. template pack 不是执行源，仍需用户 review。
-7. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
-8. Codex Task Result Record 不是执行源，只是审计材料。
-9. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
+4. `notes/target-project-memory-system-template-pack.md` 已创建，作为目标项目 intake / memory system design spec 模板入口。
+5. 目标项目 intake / memory system design spec 模板包已创建，等待用户 review。
+6. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+7. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-027-result.md`。
+8. template pack 不是执行源，仍需用户 review。
+9. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
+10. Codex Task Result Record 不是执行源，只是审计材料。
+11. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
 
 ## 6. self-improvement workflow 的目标
 
@@ -227,15 +237,23 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 源码学习项目；
 - 普通长期对话 / 个人知识管理项目。
 
-未来需要建立：
+当前已经建立基础模板：
 
 - target project intake template；
 - memory system design spec template；
-- delivery manifest template；
-- target project memory package template；
+- target project type classifier；
+- target project memory file layout template；
+- target project execution source rule template；
 - unsupported assumptions template；
 - drift review template；
-- post-delivery feedback workflow。
+- target project handoff template。
+
+后续仍需深化：
+
+- delivery manifest template；
+- target project memory package template；
+- post-delivery feedback workflow；
+- 第一个目标项目场景验证。
 
 交付原则：
 
@@ -283,7 +301,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
-下一步应先进行 `notes/self-improvement-template-pack.md` 用户 review；如无需小修，则转向目标项目 intake / memory system design spec 模板设计。
+下一步应先进行 `notes/target-project-memory-system-template-pack.md` 用户 review；如无需小修，则在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
 
 ### MNEMOSYNE-025C 或后续清理任务
 
@@ -307,22 +325,22 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 设计 open question / todo update template；
 - 创建 `notes/self-improvement-template-pack.md`。
 
-### MNEMOSYNE-027：目标项目 intake 与 memory system design spec 模板
+### MNEMOSYNE-027：目标项目 intake 与 memory system design spec 模板（已完成 / 等待用户 review）
 
 目标：
 
 - 设计目标项目需求采集模板；
 - 设计 memory system design spec 模板；
-- 支持不同项目类型。
+- 支持不同项目类型；
+- 创建 `notes/target-project-memory-system-template-pack.md`。
 
 ### MNEMOSYNE-028：delivery manifest 与目标项目交付包模板
 
 目标：
 
-- 设计 delivery manifest；
+- 深化 delivery manifest；
 - 设计 target project memory package；
-- 设计 unsupported assumptions；
-- 设计 drift review。
+- 衔接已创建的 unsupported assumptions 与 drift review 模板。
 
 ### MNEMOSYNE-029：Idea Capture Buffer
 

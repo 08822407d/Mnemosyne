@@ -2,13 +2,11 @@
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 模板包已创建，等待用户 review。
+目标项目 intake / memory system design spec 模板包已创建，等待用户 review。
 
 ## 当前目标
 
-本阶段目标是设计 Mnemosyne 的自我改进工作流，使用户新构想、使用反馈、Codex/ChatGPT 结果和其他上游反馈能够稳定进入：
-
-raw → candidate → similarity/conflict → user decision → human-approved-spec / todo / open question / decision-log → active-context / handoff。
+本阶段目标是让 Mnemosyne 具备为不同目标项目 / 场景设计外部持久记忆系统的基础模板能力，包括 intake、目标项目分类、memory system design spec、文件结构、执行源规则、handoff、unsupported assumptions、drift review 和最小 runbook。
 
 ## 当前执行源
 
@@ -25,6 +23,7 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - `handoff/startup-instructions.md`
 - `notes/system-construction-baseline.md`
 - `notes/self-improvement-template-pack.md`
+- `notes/target-project-memory-system-template-pack.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -38,14 +37,19 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - self-improvement workflow 已具备基础模板包；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
-- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
+- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源；
+- `notes/target-project-memory-system-template-pack.md` 已创建；
+- 目标项目 intake 模板已创建；
+- memory system design spec 模板已创建；
+- 目标项目文件结构、执行源规则、handoff、unsupported assumptions、drift review 等草案模板已创建。
 
 ## 当前未完成内容
 
-- 用户 review self-improvement template pack；
-- 目标项目 intake 模板；
-- memory system design spec 模板；
-- delivery manifest 模板；
+- 用户 review `notes/self-improvement-template-pack.md`；
+- 用户 review `notes/target-project-memory-system-template-pack.md`；
+- 是否需要小修目标项目模板包；
+- delivery manifest 深化；
+- 第一个目标项目场景选择；
 - Idea Capture Buffer；
 - 研究报告 summary / PDF 图表人工复核；
 - `AGENTS.md` / `CLAUDE.md`；
@@ -53,6 +57,6 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 
 ## 下一步建议
 
-1. 用户 review self-improvement template pack；
-2. 决定是否需要小修模板；
-3. 进入目标项目 intake 与 memory system design spec 模板设计。
+1. 用户 review `notes/target-project-memory-system-template-pack.md`；
+2. 决定是否小修；
+3. 选择第一个目标项目场景或进入 delivery manifest 模板深化。

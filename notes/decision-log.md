@@ -344,3 +344,45 @@
 - 理由：自我改进入口稳定后，应转向 Mnemosyne 面向目标项目交付的核心模板能力。
 - 状态：accepted
 - 来源：RAW-0031
+
+## DEC-0052
+
+- 决策：执行 MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计。
+- 理由：self-improvement workflow 模板包完成后，Mnemosyne 需要推进面向目标项目交付的核心模板能力。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0053
+
+- 决策：创建 `notes/target-project-memory-system-template-pack.md`。
+- 理由：需要为目标项目 intake、项目类型分类、memory system design spec、文件结构、执行源规则、handoff、unsupported assumptions、drift review 和最小 runbook 提供统一模板入口。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0054
+
+- 决策：目标项目模板包不是执行源。
+- 理由：模板包只用于设计目标项目记忆系统；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0055
+
+- 决策：intake 与 memory system design spec 在同一模板包中一起创建。
+- 理由：两者强相关；intake 收集约束，design spec 基于 intake 生成设计草案，同一入口有利于保持设计闭环。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0056
+
+- 决策：当前仍不做真实目标项目交付。
+- 理由：本任务只创建模板，不为任何真实目标项目生成交付包，也不假设用户已经确定第一个目标项目场景。
+- 状态：accepted
+- 来源：RAW-0035
+
+## DEC-0057
+
+- 决策：完成目标项目模板包后，下一步是用户 review、选择第一个目标项目场景或深化 delivery manifest。
+- 理由：目标项目模板包需要人工确认；后续可在交付清单闭环和首个场景验证之间选择优先级。
+- 状态：accepted
+- 来源：RAW-0035
