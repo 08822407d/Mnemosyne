@@ -47,6 +47,9 @@
 13. 是否先设计 AGENTS.md / CLAUDE.md，还是先设计目标项目模板？
     - 结论：当前先进入目标项目 intake / memory system design spec 模板设计；AGENTS.md / CLAUDE.md 留作后续。
 
+14. 目标项目 intake 和 memory system design spec 应先做哪个，还是一起做？
+    - 结论：MNEMOSYNE-027 选择一起创建基础模板包。
+
 ## open
 
 1. 用户是否接受当前 `notes/self-improvement-template-pack.md`，是否需要小修？
@@ -55,23 +58,26 @@
 2. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
 
-3. 目标项目 intake 和 memory system design spec 应先做哪个，还是一起做？
-   - 说明：两者相关；下一阶段入口暂定为 `MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计`。
+3. 用户是否接受当前 `notes/target-project-memory-system-template-pack.md`，是否需要小修？
+   - 说明：`notes/target-project-memory-system-template-pack.md` 已创建，但尚未经过用户 review。
 
 4. 第一个目标项目模板优先服务哪类场景？
-   - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目或多 Agent 团队，尚未由用户确认。
+   - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话或多 Agent 团队，尚未由用户确认。
 
-5. 是否需要先做 Idea Capture Buffer？
-   - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于目标项目模板仍待决定。
+5. 是否先深化 delivery manifest，还是先选择第一个目标项目场景试用模板？
+   - 说明：delivery manifest 可增强交付闭环；第一个目标项目场景可验证模板实用性，优先级待用户决定。
 
-6. 是否需要在目标项目模板中加入更正式的隐私分级字段？
-   - 说明：Raw Input Entry Template 已包含 `sensitivity`，但是否扩展为正式隐私分级体系仍待决定。
+6. 是否需要先做 Idea Capture Buffer？
+   - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于目标项目模板 review / delivery manifest 仍待决定。
 
-7. 研究报告 summary 是否先于目标项目模板？
-   - 说明：研究报告 summary 可增强证据可读性，但当前不阻断目标项目模板设计。
+7. 是否需要在目标项目模板中加入更正式的隐私分级字段？
+   - 说明：目标项目 intake 已包含 `privacy_level` 和 `sensitive_content_types`，但是否扩展为正式隐私分级体系仍待决定。
 
-8. PDF 图表人工复核何时做？
-   - 说明：PDF 图表和图片仍需人工复核，但当前不阻断 v0.2 模板设计。
+8. 研究报告 summary 是否先于真实目标项目交付？
+   - 说明：研究报告 summary 可增强证据可读性；是否作为真实目标项目交付前置条件仍待决定。
 
-9. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
-   - 说明：当前可按需回查；是否拆分仍待决定。
+9. PDF 图表人工复核何时做？
+   - 说明：PDF 图表和图片仍需人工复核；若真实目标项目设计依赖图表证据，应先复核。
+
+10. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
+    - 说明：当前可按需回查；是否拆分仍待决定。

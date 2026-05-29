@@ -25,15 +25,21 @@
 - [X] 设计 Similarity / Conflict Report 最小格式；
 - [X] 设计 User Decision Record 模板；
 - [ ] 设计 Spec Update Proposal 模板；
-- [ ] memory system design spec 模板；
-- [ ] delivery manifest 模板；
-- [ ] 目标项目 intake 模板；
+- [X] MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计；
+- [X] 目标项目 intake 模板；
+- [X] memory system design spec 模板；
+- [ ] 用户 review `notes/target-project-memory-system-template-pack.md`；
+- [ ] 根据 review 小修目标项目模板包；
+- [ ] delivery manifest 模板深化；
+- [ ] 选择第一个目标项目场景；
+- [ ] 决定下一步入口：delivery manifest 深化或第一个目标项目场景试用模板；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
 - [ ] delta report 模板；
-- [ ] AGENTS.md；
-- [ ] CLAUDE.md。
+- [ ] 研究报告 summary / PDF 图表人工复核；
+- [ ] AGENTS.md / CLAUDE.md；
+- [ ] 自动化增强。
 
 ## future
 
