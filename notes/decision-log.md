@@ -267,3 +267,172 @@
 - 理由：workflow 主体已建立，下一阶段应进入模板化以提升复用与一致性。
 - 状态：accepted
 - 来源：MNEMOSYNE-025C
+
+## DEC-0041
+
+- 决策：创建 `notes/overall-target-and-roadmap-snapshot.md`。
+- 理由：将当前长期目标与路线图固化入库，避免只存在于长对话上下文。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0042
+
+- 决策：`notes/overall-target-and-roadmap-snapshot.md` 作为规划快照，不作为执行源。
+- 理由：执行源仍为 `current/human-approved-spec.md`，避免说明性文件越权。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0043
+
+- 决策：后续任务可按路线图快照检查是否偏离长期目标。
+- 理由：为跨会话/跨任务持续一致性提供统一回查锚点。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0044
+
+- 决策：在进入 self-improvement 模板设计前，先清理 self-improvement workflow 的格式和路径问题。
+- 理由：先修复现有记录一致性，再进入模板化，降低错误扩散。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0045
+
+- 决策：后续 Codex 任务默认写入 task result record。
+- 理由：增强任务可追溯性与审计一致性，降低“口头完成”风险。
+- 状态：accepted
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## DEC-0046
+
+- 决策：建立 `notes/system-construction-baseline.md`。
+- 理由：将当前相对确定的系统建设目标、工作约定、后续路线和诊断暂存为更明确的基线快照，降低长对话压缩后的路线偏移风险。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0047
+
+- 决策：`notes/system-construction-baseline.md` 不是执行源。
+- 理由：执行源仍为 `current/human-approved-spec.md`，基线快照仅用于路线回查和上下文恢复。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0048
+
+- 决策：后续 Codex 任务是否必须新开，按“是否必须在全新任务中执行”判断。
+- 理由：避免把“新开更好”误写为硬性要求；在现有任务干净、基于最新 master 且无未合并改动时可以继续使用。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0049
+
+- 决策：后续 Codex 任务内容优先通过 txt 文件提供。
+- 理由：减少聊天界面代码块嵌套导致任务描述复制不完整的风险。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0050
+
+- 决策：Codex Task Result Record 默认路径为 `notes/codex-task-results/TASK_ID-result.md`。
+- 理由：统一任务审计记录位置和命名，避免出现缺失 TASK_ID 的错误路径。
+- 状态：accepted
+- 来源：RAW-0027
+
+## DEC-0051
+
+- 决策：在进入模板设计前先修正 self-improvement workflow 的格式和路径问题。
+- 理由：先稳定现有 workflow 文档和记录路径，避免后续模板继承错误。
+- 状态：accepted
+- 来源：RAW-0027
+
+
+## DEC-0052
+
+- 决策：执行 MNEMOSYNE-025F：任务结果路径纠偏与 self-improvement 工作流格式清理。
+- 理由：进入模板设计前，需要先消除 task result record 路径错误并提高 workflow / baseline 的可 review 性。
+- 状态：accepted
+- 来源：RAW-0028
+
+## DEC-0053
+
+- 决策：Codex Task Result Record 默认路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+- 理由：避免缺失 TASK_ID 的错误路径继续传播到后续任务和模板。
+- 状态：accepted
+- 来源：RAW-0028
+
+## DEC-0054
+
+- 决策：在进入 self-improvement workflow 模板设计前，先清理 workflow 与 baseline 的格式。
+- 理由：先保证基础说明文件可读、可 diff、可局部维护，再进入模板设计。
+- 状态：accepted
+- 来源：RAW-0028
+
+## DEC-0055
+
+- 决策：修正 MNEMOSYNE-025E-result 中关于路径纠偏的错误表述。
+- 理由：025E 实际仍残留错误路径，需要由 025F 如实记录纠偏。
+- 状态：accepted
+- 来源：RAW-0028
+
+## DEC-0056
+
+- 决策：执行 MNEMOSYNE-025G：错误结果路径全仓库硬纠偏。
+- 理由：MNEMOSYNE-025F 后仍发现错误结果路径残留，需在进入模板设计前硬性纠偏。
+- 状态：accepted
+- 来源：RAW-0029
+
+## DEC-0057
+
+- 决策：Codex Task Result Record 默认路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+- 理由：避免缺失 TASK_ID 的错误路径继续污染后续任务结果记录和模板设计。
+- 状态：accepted
+- 来源：RAW-0029
+
+## DEC-0058
+
+- 决策：路径纠偏必须先于 MNEMOSYNE-026。
+- 理由：模板设计会复用路径约定，必须先保证路径正确。
+- 状态：accepted
+- 来源：RAW-0029
+
+## DEC-0059
+
+- 决策：Markdown 格式清理可以作为非阻断后续任务，但不应影响路径正确性。
+- 理由：当前最小目标是硬纠偏错误路径；格式优化可独立后续处理。
+- 状态：accepted
+- 来源：RAW-0029
+
+## DEC-0060
+
+- 决策：执行 MNEMOSYNE-025H：Codex Task Result Record 路径占位符规范化。
+- 理由：尖括号占位符在 Markdown、HTML、工具或模型改写中存在歧义，且此前多次出现缺失 TASK_ID 的错误路径。
+- 状态：accepted
+- 来源：RAW-0030
+
+## DEC-0061
+
+- 决策：Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+- 理由：使用无尖括号的 TASK_ID 占位符降低转义、渲染和自动改写风险。
+- 状态：accepted
+- 来源：RAW-0030
+
+## DEC-0062
+
+- 决策：不再使用 `<TASK_ID>` 作为默认占位符。
+- 理由：尖括号形式容易被 Markdown、HTML、工具或模型处理为特殊标记，增加错误写回风险。
+- 状态：accepted
+- 来源：RAW-0030
+
+## DEC-0063
+
+- 决策：路径占位符规范化必须先于 MNEMOSYNE-026。
+- 理由：self-improvement workflow 模板设计会复用任务结果记录路径，必须先稳定占位符规范。
+- 状态：accepted
+- 来源：RAW-0030
+
+## DEC-0064
+
+- 决策：Markdown 格式清理可以作为非阻断后续任务，但不应影响路径正确性。
+- 理由：当前最小目标是路径占位符规范化；格式优化可独立后续处理。
+- 状态：accepted
+- 来源：RAW-0030
