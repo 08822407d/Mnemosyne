@@ -265,3 +265,132 @@
 - 内容：后续可能需要 self-improvement 模板、similarity/conflict 模板和 user decision 模板。
 - 状态：pending
 - 来源：RAW-0025
+
+## CAND-0043
+
+- 内容：需要保存总体目标与路线图快照，防止长期规划只留在当前对话上下文。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0044
+
+- 内容：总体目标与路线图快照不是执行源。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0045
+
+- 内容：后续任务应根据路线图快照检查是否偏离长期目标。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0046
+
+- 内容：self-improvement workflow 清理应先于模板设计。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0047
+
+- 内容：每个后续 Codex 任务应写入 Codex Task Result Record。
+- 状态：pending
+- 来源：RAW-0026；MNEMOSYNE-025D
+
+## CAND-0048
+
+- 内容：需要建立系统建设基线快照，防止当前对话上下文压缩后路线丢失。
+- 状态：pending
+- 来源：RAW-0027
+
+## CAND-0049
+
+- 内容：系统建设基线不是执行源。
+- 状态：pending
+- 来源：RAW-0027
+
+## CAND-0050
+
+- 内容：后续 Codex 任务开头必须说明是否必须新开 Codex Cloud 任务。
+- 状态：pending
+- 来源：RAW-0027
+
+## CAND-0051
+
+- 内容：判断是否新开的标准是是否必须隔离为全新任务，而不是“新开更好”。
+- 状态：pending
+- 来源：RAW-0027
+
+## CAND-0052
+
+- 内容：后续 Codex 任务内容应优先以 txt 文件提供，避免聊天代码块嵌套导致复制不完整。
+- 状态：pending
+- 来源：RAW-0027
+
+## CAND-0053
+
+- 内容：Codex Task Result Record 默认路径必须是 `notes/codex-task-results/<TASK_ID>-result.md`。
+- 状态：pending
+- 来源：RAW-0027
+
+## CAND-0054
+
+- 内容：self-improvement workflow 中错误的 task result path 需要修正。
+- 状态：pending
+- 来源：RAW-0027
+
+
+## CAND-0055
+
+- 内容：需要将 Codex Task Result Record 默认路径统一为 `notes/codex-task-results/<TASK_ID>-result.md`。
+- 状态：reflected
+- 来源：RAW-0028
+- 反映位置：notes/self-improvement-workflow.md；notes/system-construction-baseline.md；current/todo.md
+
+## CAND-0056
+
+- 内容：self-improvement workflow 需要正常 Markdown 格式，便于 review 和后续模板设计。
+- 状态：reflected
+- 来源：RAW-0028
+- 反映位置：notes/self-improvement-workflow.md
+
+## CAND-0057
+
+- 内容：system-construction-baseline 需要正常 Markdown 格式，便于未来任务接手。
+- 状态：reflected
+- 来源：RAW-0028
+- 反映位置：notes/system-construction-baseline.md
+
+## CAND-0058
+
+- 内容：进入 MNEMOSYNE-026 前应先完成路径纠偏和格式清理。
+- 状态：reflected
+- 来源：RAW-0028
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0059
+
+- 内容：Codex Task Result Record 默认路径必须统一为 `notes/codex-task-results/<TASK_ID>-result.md`。
+- 状态：reflected
+- 来源：RAW-0029
+- 反映位置：notes/self-improvement-workflow.md；notes/system-construction-baseline.md；current/todo.md
+
+## CAND-0060
+
+- 内容：任何残留的 `notes/codex-task-results/-result.md` 都是错误路径，必须修正。
+- 状态：reflected
+- 来源：RAW-0029
+- 反映位置：notes/codex-task-results/MNEMOSYNE-025G-result.md
+
+## CAND-0061
+
+- 内容：self-improvement workflow 的 Markdown 格式清理仍可作为后续非阻断任务。
+- 状态：pending
+- 来源：RAW-0029
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0062
+
+- 内容：进入 MNEMOSYNE-026 前至少要完成路径纠偏。
+- 状态：reflected
+- 来源：RAW-0029
+- 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md
