@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow 已建立，正在清理格式和记录一致性。
+v0.2 第一方向 self-improvement workflow 已建立；当前正在完成任务结果路径规范落账和进入模板设计前的清理。
 
 ## 当前目标
 
@@ -23,6 +23,7 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - `current/active-context.md`
 - `handoff/handoff-current.md`
 - `handoff/startup-instructions.md`
+- `notes/system-construction-baseline.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -32,12 +33,17 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - v0.2 第一方向已选择为 self-improvement workflow；
 - `raw/chatgpt-discussion-025.md` 已创建；
 - `notes/self-improvement-workflow.md` 已创建；
-- `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则。
+- `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
+- `notes/overall-target-and-roadmap-snapshot.md` 已创建，用于保存总体目标与路线图快照（非执行源）；
+- `notes/system-construction-baseline.md` 已创建，用于暂存系统建设基线（非执行源）；
+- 已确认后续 Codex 任务说明应优先以 txt 文件提供；
+- Codex Task Result Record 默认占位符路径已统一为 `notes/codex-task-results/TASK_ID-result.md`。
 
 ## 当前未完成内容
 
 - self-improvement workflow 用户 review；
-- self-improvement workflow 模板设计；
+- self-improvement workflow Markdown 格式清理；
+- MNEMOSYNE-026：self-improvement workflow 模板设计；
 - 目标项目设计模板；
 - 研究报告 summary；
 - PDF 图表人工复核；
@@ -48,6 +54,6 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 
 ## 下一步建议
 
-1. 用户 review self-improvement workflow；
-2. 执行 MNEMOSYNE-026：self-improvement workflow 模板设计；
-3. 再考虑目标项目 memory system design spec 模板或 AGENTS.md / CLAUDE.md。
+1. 用户 review 路径规范化结果；
+2. 根据需要做 Markdown 格式清理；
+3. 进入 MNEMOSYNE-026。

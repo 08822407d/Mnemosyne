@@ -165,13 +165,23 @@ Input
 
 Codex 任务完成后，除了对话界面总结外，重要任务还应把任务结果写入仓库。
 
-结果记录不是执行源，只是审计材料。最终判断仍以 Git diff、仓库文件和用户 review 为准。
+结果记录不是执行源，只是审计材料。最终判断仍以 Git diff、仓库文件、用户 review 和必要验证为准。
 
-如果任务已有专门报告文件，例如独立验证报告，可以写入该报告。
+每个后续 Codex 任务原则上都应写入对应 `TASK_ID-result.md`。
+
+默认占位符路径是：`notes/codex-task-results/TASK_ID-result.md`。
+
+实际任务应替换 `TASK_ID`，例如：`notes/codex-task-results/MNEMOSYNE-026-result.md`。
+
+不再使用缺失 TASK_ID 的旧路径。
+
+不再使用尖括号 TASK_ID 旧占位符路径。
+
+如果任务已有专门验证报告或演练报告，可以在该报告中写入结果，但仍需在任务总结中说明。
 
 如果没有专门报告文件，则写入：
 
-- `notes/codex-task-results/<TASK_ID>-result.md`
+- `notes/codex-task-results/TASK_ID-result.md`
 
 结果记录应至少包含：
 
