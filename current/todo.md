@@ -19,14 +19,17 @@
 - [ ] 清理 `notes/self-improvement-workflow.md` 的 Markdown 格式和 Codex Task Result Record 路径；
 - [ ] 为每个后续 Codex 任务写入 task result record（默认路径：`notes/codex-task-results/TASK_ID-result.md`）；
 - [ ] 后续阶段按 `notes/overall-target-and-roadmap-snapshot.md` 校验是否偏离长期路线；
-- [ ] MNEMOSYNE-026：self-improvement workflow 模板设计；
-- [ ] 设计 Codex Task Result Record 固定模板；
-- [ ] 设计 Similarity / Conflict Report 最小格式；
-- [ ] 设计 User Decision Record 模板；
+- [X] MNEMOSYNE-026：self-improvement workflow 模板设计；
+- [ ] 用户 review `notes/self-improvement-template-pack.md`；
+- [ ] 根据 review 小修 self-improvement template pack；
+- [ ] MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计；
+- [X] 设计 Codex Task Result Record 固定模板（已由 template pack 覆盖，后续可小修）；
+- [X] 设计 Similarity / Conflict Report 最小格式（已由 template pack 覆盖，后续可小修）；
+- [X] 设计 User Decision Record 模板（已由 template pack 覆盖，后续可小修）；
 - [ ] 设计 Spec Update Proposal 模板；
-- [ ] 目标项目 memory system design spec 模板；
+- [ ] memory system design spec 模板；
 - [ ] delivery manifest 模板；
-- [ ] target project intake 模板；
+- [ ] 目标项目 intake 模板；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
