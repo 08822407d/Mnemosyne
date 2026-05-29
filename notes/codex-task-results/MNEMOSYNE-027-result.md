@@ -61,10 +61,5 @@ limits_or_uncertainties:
   - 本任务不新增 MCP、RAG、多 Agent 自动协调等机制。
   - 研究报告是高权重证据层但不是执行源；PDF 图表和图片证据仍需人工复核。
   - 当前 v0.2 仍是半自动流程，不默认自动写回、自动查重或全量读取 raw。
-reviewer_notes:
-  - MNEMOSYNE-027 已创建目标项目模板包。
-  - 后续 MNEMOSYNE-027A 用于同步 active-context / handoff / decision / roadmap / baseline 状态。
-  - 本结果记录不是执行源。
-  - 最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
 whether_task_claims_completion: true
 ```

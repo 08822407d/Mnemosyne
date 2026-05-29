@@ -50,10 +50,6 @@
 14. 目标项目 intake 和 memory system design spec 应先做哪个，还是一起做？
     - 结论：MNEMOSYNE-027 选择一起创建基础模板包。
 
-
-15. 是否先深化 delivery manifest，还是先选择第一个目标项目场景试用模板？
-    - 结论：MNEMOSYNE-028 先深化 delivery manifest。
-
 ## open
 
 1. 用户是否接受当前 `notes/delivery-manifest-template-pack.md`，是否需要小修？
@@ -65,11 +61,14 @@
 3. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
 
-4. 用户是否接受当前 `notes/target-project-memory-system-template-pack.md`，是否需要小修？
+3. 用户是否接受当前目标项目模板包，是否需要小修？
    - 说明：`notes/target-project-memory-system-template-pack.md` 已创建，但尚未经过用户 review。
 
-5. 是否选择第一个目标项目场景作为模板试用？
+4. 第一个目标项目模板优先服务哪类场景？
    - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话或多 Agent 团队，尚未由用户确认。
+
+5. 是否先深化 delivery manifest，还是先选择第一个目标项目场景？
+   - 说明：delivery manifest 可增强交付闭环；第一个目标项目场景可验证模板实用性，优先级待用户决定。
 
 6. 是否需要先做 Idea Capture Buffer？
    - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于目标项目模板 review / delivery manifest 仍待决定。
@@ -85,6 +84,3 @@
 
 10. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
     - 说明：当前可按需回查；是否拆分仍待决定。
-
-11. 第一个目标项目模板优先服务哪类场景？
-    - 说明：若决定选择第一个目标项目场景试用模板，仍需确认优先服务长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话或多 Agent 团队中的哪一类。

@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-delivery manifest / 目标项目交付包模板已创建，等待 review。
+目标项目 intake / memory system design spec 模板包已创建，等待 review。
 
 ## 当前执行源
 
@@ -28,7 +28,6 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 - `notes/system-construction-baseline.md`
 - `notes/self-improvement-template-pack.md`
 - `notes/target-project-memory-system-template-pack.md`
-- `notes/delivery-manifest-template-pack.md`
 
 如果其他文件与 `human-approved-spec` 冲突，以 `human-approved-spec` 为准，并登记 open question。
 
@@ -59,12 +58,11 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 11. `notes/self-improvement-workflow.md`
 12. `notes/self-improvement-template-pack.md`
 13. `notes/target-project-memory-system-template-pack.md`
-14. `notes/delivery-manifest-template-pack.md`
-15. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
-16. `raw/research-reports/current/research-report-index.md`
-17. `raw/research-reports/current/current-evidence-map.md`
-18. `raw/research-reports/current/current-capability-boundaries.md`
-19. `raw/concept-origin-extract-001.md` 按需回查
+14. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
+15. `raw/research-reports/current/research-report-index.md`
+16. `raw/research-reports/current/current-evidence-map.md`
+17. `raw/research-reports/current/current-capability-boundaries.md`
+18. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -73,10 +71,10 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 - 不要创建 GitHub Actions；
 - 不要添加自动化脚本；
 - 不要把 research reports 当执行源；
-- 不要把 candidate / decision / active-context / handoff / startup-instructions / self-improvement template pack / target project template pack / delivery manifest template pack 当执行源。
+- 不要把 candidate / decision / active-context / handoff / startup-instructions / self-improvement template pack / target project template pack 当执行源。
 
 ## 下一步建议
 
-1. 用户 review delivery manifest template pack；
+1. 用户 review 目标项目模板包；
 2. 小修模板；
-3. 选择第一个目标项目场景或进入 Idea Capture Buffer。
+3. 选择第一个目标项目场景或进入 delivery manifest 模板深化。

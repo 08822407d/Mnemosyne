@@ -2,11 +2,11 @@
 
 ## 当前阶段
 
-delivery manifest / 目标项目交付包模板已创建，等待用户 review。
+目标项目 intake / memory system design spec 模板包已创建，等待用户 review。
 
 ## 当前目标
 
-本阶段目标是让 Mnemosyne 具备稳定的目标项目交付清单模板能力，用于未来在用户确认后把目标项目记忆系统设计落地为目标项目仓库 / 目录中的运行文件包、handoff package、rollback / revision plan、delivery result record 和 drift review 入口。
+本阶段目标是让 Mnemosyne 具备为不同目标项目 / 场景设计外部持久记忆系统的基础模板能力，包括 intake、目标项目分类、memory system design spec、文件结构、执行源规则、handoff、unsupported assumptions、drift review 和最小 runbook。
 
 ## 当前执行源
 
@@ -24,7 +24,6 @@ delivery manifest / 目标项目交付包模板已创建，等待用户 review�
 - `notes/system-construction-baseline.md`
 - `notes/self-improvement-template-pack.md`
 - `notes/target-project-memory-system-template-pack.md`
-- `notes/delivery-manifest-template-pack.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -46,27 +45,21 @@ delivery manifest / 目标项目交付包模板已创建，等待用户 review�
 - unsupported assumptions template 已创建；
 - drift review template 已创建；
 - minimal target project design runbook 已创建；
-- `notes/delivery-manifest-template-pack.md` 已创建；
-- delivery manifest 模板已创建；
-- files to create / update checklist 已创建；
-- target project runtime truth source checklist 已创建；
-- manual setup steps template 已创建；
-- unsupported assumptions linkage template 已创建；
-- delivery review checklist 已创建；
-- handoff package template 已创建；
-- rollback / revision plan template 已创建；
-- delivery result record template 已创建；
-- minimal delivery runbook 已创建；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
-- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
+- `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
+- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源；
+- `notes/target-project-memory-system-template-pack.md` 已创建；
+- 目标项目 intake 模板已创建；
+- memory system design spec 模板已创建；
+- 目标项目文件结构、执行源规则、handoff、unsupported assumptions、drift review 等草案模板已创建。
 
 ## 当前未完成内容
 
 - 用户 review `notes/self-improvement-template-pack.md`；
 - 用户 review `notes/target-project-memory-system-template-pack.md`；
-- 用户 review `notes/delivery-manifest-template-pack.md`；
-- 根据 review 小修 delivery manifest template pack；
-- 选择第一个目标项目场景；
+- 是否需要小修目标项目模板包；
+- delivery manifest 深化；
+- 第一个目标项目场景选择；
 - Idea Capture Buffer；
 - 研究报告 summary / PDF 图表人工复核；
 - `AGENTS.md` / `CLAUDE.md`；
@@ -74,6 +67,6 @@ delivery manifest / 目标项目交付包模板已创建，等待用户 review�
 
 ## 下一步建议
 
-1. 用户 review `notes/delivery-manifest-template-pack.md`；
+1. 用户 review `notes/target-project-memory-system-template-pack.md`；
 2. 决定是否小修；
-3. 选择第一个目标项目场景，或先做 Idea Capture Buffer。
+3. 选择第一个目标项目场景或进入 delivery manifest 模板深化。

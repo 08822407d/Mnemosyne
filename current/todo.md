@@ -30,9 +30,7 @@
 - [X] memory system design spec 模板；
 - [ ] 用户 review `notes/target-project-memory-system-template-pack.md`；
 - [ ] 根据 review 小修目标项目模板包；
-- [X] delivery manifest 模板深化；
-- [ ] 用户 review `notes/delivery-manifest-template-pack.md`；
-- [ ] 根据 review 小修 delivery manifest template pack；
+- [ ] delivery manifest 模板深化；
 - [ ] 选择第一个目标项目场景；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
