@@ -14,6 +14,25 @@
    - 结论：用户接受 `PASS_WITH_WARNINGS`，其不阻断进入 v0.2。
 6. v0.2 第一方向应选择哪个？
    - 结论：v0.2 第一方向选择 `self-improvement workflow`。
+7. self-improvement workflow 的最小对象和模板是什么？
+   - 结论：当前由 `notes/self-improvement-template-pack.md` 提供基础模板包。
+   - 来源：RAW-0033；MNEMOSYNE-026B
+8. 用户反馈和 Codex 任务结果如何进入 raw？
+   - 结论：当前由 `notes/self-improvement-workflow.md` 与 `notes/self-improvement-template-pack.md` 定义基础流程和模板。
+   - 状态：partially_answered；具体使用效果仍待用户 review。
+   - 来源：RAW-0033；MNEMOSYNE-026B
+9. Codex Task Result Record 是否需要固定模板？
+   - 结论：当前由 `notes/self-improvement-template-pack.md` 中的 Codex Task Result Record Template 覆盖。
+   - 来源：RAW-0033；MNEMOSYNE-026B
+10. 是否需要为 similarity/conflict report 设计最小格式？
+    - 结论：当前由 `notes/self-improvement-template-pack.md` 中的 Similarity / Conflict Check Template 覆盖。
+    - 来源：RAW-0033；MNEMOSYNE-026B
+11. 是否需要为 user decision 设计固定记录格式？
+    - 结论：当前由 `notes/self-improvement-template-pack.md` 中的 User Decision Record Template 覆盖。
+    - 来源：RAW-0033；MNEMOSYNE-026B
+12. self-improvement workflow 是否需要单独模板文件？
+    - 结论：当前先采用 `notes/self-improvement-template-pack.md` 单文件模板包；是否拆成多个独立模板文件仍作为 open question 保留。
+    - 来源：RAW-0033；MNEMOSYNE-026B
 
 ## open
 
