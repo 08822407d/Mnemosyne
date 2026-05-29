@@ -90,7 +90,4 @@
 
 ## reviewer_notes
 
-- MNEMOSYNE-026A 声称状态同步完成，但后续核查发现 `current/todo.md` 和 `CAND-0042` 仍有未同步残留。
-- MNEMOSYNE-026B 用于修复这些状态残留。
-- 本结果记录不是执行源。
-- 等待用户 review。
+等待用户 review。

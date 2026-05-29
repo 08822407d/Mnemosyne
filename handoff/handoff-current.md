@@ -75,4 +75,4 @@ v0.2 第一方向 self-improvement workflow template pack 已创建，等待 rev
 
 1. 用户 review self-improvement template pack；
 2. 小修模板；
-3. 进入 `MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计`。
+3. 进入目标项目 intake 与 memory system design spec 模板设计。

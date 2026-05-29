@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-v0.2 第一方向 self-improvement workflow template pack 已创建，当前等待用户 review，并准备进入目标项目 intake / memory system design spec 模板设计。
+v0.2 第一方向 self-improvement workflow 模板包已创建，等待用户 review。
 
 ## 当前目标
 
@@ -42,21 +42,17 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 
 ## 当前未完成内容
 
-- 用户 review `notes/self-improvement-template-pack.md`；
-- 是否需要小修或拆分 template pack 为多个独立模板文件；
+- 用户 review self-improvement template pack；
 - 目标项目 intake 模板；
 - memory system design spec 模板；
 - delivery manifest 模板；
-- 第一个目标项目模板优先服务场景待确认；
-- 研究报告 summary；
-- PDF 图表人工复核；
 - Idea Capture Buffer；
-- AGENTS.md；
-- CLAUDE.md；
-- 自动化项（自动查重、自动写回、自动索引等）。
+- 研究报告 summary / PDF 图表人工复核；
+- `AGENTS.md` / `CLAUDE.md`；
+- 自动化增强（自动查重、自动写回、自动索引等）。
 
 ## 下一步建议
 
-1. 用户 review `notes/self-improvement-template-pack.md`；
-2. 如需要，进行小修；
-3. 进入 `MNEMOSYNE-027：目标项目 intake / memory system design spec 模板设计`。
+1. 用户 review self-improvement template pack；
+2. 决定是否需要小修模板；
+3. 进入目标项目 intake 与 memory system design spec 模板设计。
