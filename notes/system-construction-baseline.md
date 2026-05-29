@@ -130,7 +130,7 @@ self-improvement workflow 要解决：
 建议后续路线：
 
 1. self-improvement workflow 清理；
-2. self-improvement workflow 模板设计；
+2. self-improvement workflow 模板设计（已完成，下一步为 template pack review / 小修）；
 3. 目标项目 intake 与 memory system design spec 模板；
 4. delivery manifest 与目标项目交付包模板；
 5. Idea Capture Buffer；

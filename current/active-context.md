@@ -38,7 +38,7 @@ raw → candidate → similarity/conflict → user decision → human-approved-s
 - self-improvement workflow 已具备基础模板包；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `current/human-approved-spec.md` 已补充 self-improvement workflow 高层原则；
-- `notes/overall-target-and-roadmap-snapshot.md` 已创建，用于保存总体目标与路线图快照（非执行源）。
+- `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
 
 ## 当前未完成内容
 

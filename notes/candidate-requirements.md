@@ -263,8 +263,9 @@
 ## CAND-0042
 
 - 内容：后续可能需要 self-improvement 模板、similarity/conflict 模板和 user decision 模板。
-- 状态：pending
-- 来源：RAW-0025
+- 状态：reflected
+- 来源：RAW-0025；RAW-0031；MNEMOSYNE-026
+- 反映位置：notes/self-improvement-template-pack.md
 
 ## CAND-0043
 
