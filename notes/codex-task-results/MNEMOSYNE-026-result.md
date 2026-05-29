@@ -98,7 +98,4 @@ MNEMOSYNE-026 已完成文件创建与小步同步，self-improvement workflow �
 
 ## reviewer_notes
 
-- MNEMOSYNE-026 已创建 `notes/self-improvement-template-pack.md`。
-- 后续 MNEMOSYNE-026A 用于同步 active-context / todo / candidate / decision / roadmap 状态。
-- 本结果记录不是执行源。
-- 等待用户 review。
+等待用户 review。

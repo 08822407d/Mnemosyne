@@ -44,7 +44,6 @@
 13. 是否需要为 similarity/conflict report 设计最小格式？
    - 结论：`notes/self-improvement-template-pack.md` 已提供 Similarity / Conflict Check Template；是否需要小修仍待 review。
 14. 是否需要为 user decision 设计固定记录格式？
-   - 结论：`notes/self-improvement-template-pack.md` 已提供 User Decision Record Template；是否需要小修仍待 review。
 15. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 来源：RAW-0031；
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
@@ -54,9 +53,6 @@
 17. 是否需要先做 Idea Capture Buffer？
    - 来源：RAW-0031；
    - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于目标项目模板仍待决定。
-18. 是否需要在目标项目模板中加入隐私分级字段？
+18. 是否需要在模板中加入隐私分级字段？
    - 来源：RAW-0031；
-   - 说明：Raw Input Entry Template 已包含 `sensitivity`，但目标项目模板是否需要正式隐私分级字段仍待决定。
-19. 是否需要先小修 self-improvement template pack 再进入目标项目模板？
-   - 来源：RAW-0032；
-   - 说明：当前建议先由用户 review template pack；若问题较小，可小修后再进入目标项目 intake / memory system design spec 模板设计。
+   - 说明：Raw Input Entry Template 已包含 `sensitivity`，但是否扩展为正式隐私分级体系仍待决定。

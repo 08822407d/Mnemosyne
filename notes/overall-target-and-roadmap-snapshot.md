@@ -283,7 +283,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
-下一步应先进行 `notes/self-improvement-template-pack.md` 用户 review；如需小修则先小修；随后转向目标项目 intake / memory system design spec 模板设计。
+下一步应先进行 `notes/self-improvement-template-pack.md` 用户 review；如无需小修，则转向目标项目 intake / memory system design spec 模板设计。
 
 ### MNEMOSYNE-025C 或后续清理任务
 
@@ -294,7 +294,7 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 补齐 candidate / decision 中 self-improvement 相关状态；
 - 保持不引入新机制。
 
-### MNEMOSYNE-026：self-improvement workflow 模板设计（已完成）
+### MNEMOSYNE-026：self-improvement workflow 模板设计（已完成 / 等待用户 review）
 
 目标：
 
@@ -306,14 +306,6 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 - 设计 ChatGPT handoff / feedback template；
 - 设计 open question / todo update template；
 - 创建 `notes/self-improvement-template-pack.md`。
-
-### MNEMOSYNE-026A：template pack review / 小修准备
-
-目标：
-
-- 同步 active-context / todo / candidate / decision / roadmap 状态；
-- 保持 template pack 不是执行源；
-- 等待用户 review，并根据 review 决定是否小修或拆分。
 
 ### MNEMOSYNE-027：目标项目 intake 与 memory system design spec 模板
 
