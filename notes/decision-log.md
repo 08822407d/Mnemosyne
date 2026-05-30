@@ -386,3 +386,45 @@
 - 理由：目标项目模板包需要人工确认；后续可在交付清单闭环和首个场景验证之间选择优先级。
 - 状态：accepted
 - 来源：RAW-0035
+
+## DEC-0058
+
+- 决策：执行 MNEMOSYNE-029：三类模板包 review 清单与首个目标项目场景选择准备。
+- 理由：三类基础模板包已创建，下一步需要为用户 review 和首个试用场景选择提供清晰检查清单与决策矩阵。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0059
+
+- 决策：创建 `notes/template-pack-review-and-first-scenario-selection.md`。
+- 理由：需要集中呈现三类模板包 review checklist、首个场景候选矩阵、trial run minimal input request 和用户决策选项。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0060
+
+- 决策：`notes/template-pack-review-and-first-scenario-selection.md` 不是执行源。
+- 理由：该文件只用于 review 和场景选择准备；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0061
+
+- 决策：当前不直接选择真实目标项目。
+- 理由：本任务只做 review / selection 准备，不替用户最终选择，也不生成真实目标项目交付包。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0062
+
+- 决策：第一轮试用目标是验证 `intake → design spec → delivery manifest → handoff → review` 的人工闭环。
+- 理由：当前 Mnemosyne 仍是半自动设计仓库，第一轮试用应优先验证模板链路，而不是追求完整自动化。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0063
+
+- 决策：MNEMOSYNE-029 不进入自动化，不创建 AGENTS.md / CLAUDE.md / GitHub Actions。
+- 理由：当前任务边界明确禁止新增自动化脚本、GitHub Actions、RAG、MCP、多 Agent 自动协调，以及 AGENTS.md / CLAUDE.md。
+- 状态：accepted
+- 来源：RAW-0041
