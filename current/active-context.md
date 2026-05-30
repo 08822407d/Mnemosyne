@@ -47,29 +47,7 @@
 - `notes/self-improvement-workflow.md` 已创建；
 - `notes/self-improvement-template-pack.md` 已创建；
 - `notes/target-project-memory-system-template-pack.md` 已创建；
-- 目标项目 intake 模板已创建；
-- memory system design spec 模板已创建；
-- target project type classifier 已创建；
-- target project memory file layout template 已创建；
-- target project execution source rule template 已创建；
-- target project workflow template 已创建；
-- delivery package draft template 已创建；
-- target project handoff template 已创建；
-- unsupported assumptions template 已创建；
-- drift review template 已创建；
-- minimal target project design runbook 已创建；
 - `notes/delivery-manifest-template-pack.md` 已创建；
-- delivery manifest 模板已创建；
-- files to create / update checklist 已创建；
-- target project runtime truth source checklist 已创建；
-- manual setup steps template 已创建；
-- unsupported assumptions linkage template 已创建；
-- delivery review checklist 已创建；
-- handoff package template 已创建；
-- rollback / revision plan template 已创建；
-- delivery result record template 已创建；
-- minimal delivery runbook 已创建；
-- delivery completion criteria 已创建；
 - `notes/template-pack-review-and-first-scenario-selection.md` 已创建；
 - 三类模板包 review 清单已创建；
 - 首个场景候选矩阵已创建；
@@ -91,9 +69,7 @@
 - 用户 review `notes/target-project-memory-system-template-pack.md`；
 - 用户 review `notes/self-improvement-template-pack.md`；
 - 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
-- 根据 review 小修 self-improvement template pack；
-- 根据 review 小修目标项目模板包；
-- 根据 review 小修 delivery manifest template pack；
+- 根据 review 小修三类 template packs；
 - 选择第一个目标项目场景；
 - 第一轮 dry-run intake；
 - Idea Capture Buffer；
@@ -113,13 +89,14 @@
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
-- `notes/system-construction-baseline.md`
-- `notes/overall-target-and-roadmap-snapshot.md`
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
 - `raw/research-reports/current/current-report-summaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-summaries/README.md`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `notes/system-construction-baseline.md`
+- `notes/overall-target-and-roadmap-snapshot.md`
 
 ## 下一步建议
 
