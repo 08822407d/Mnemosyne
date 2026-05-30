@@ -37,7 +37,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - 模型是可替换计算单元，不是长期真相源；
 - GitHub / Git / Markdown 是当前长期状态和审计基础；
 - `current/human-approved-spec.md` 是执行源；
-- raw、research reports、candidate、decision-log、active-context、handoff、startup-instructions、system-construction-baseline 都不是执行源；
+- raw、research reports、candidate、decision-log、active-context、handoff、startup-instructions、system-construction-baseline、template pack 和 review / scenario selection 文件都不是执行源；
 - 新输入必须先进入 raw / candidate / review 流程，用户确认后才可更新执行源；
 - 不默认全量读取 raw；
 - 不默认自动写回；
@@ -59,7 +59,10 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - v0.2 第一方向已确定为 self-improvement workflow；
 - `notes/self-improvement-workflow.md` 已创建；
 - `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包；
-- `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包。
+- `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包；
+- `notes/delivery-manifest-template-pack.md` 已创建，delivery manifest / 目标项目交付包模板已具备基础版本；
+- `notes/template-pack-review-and-first-scenario-selection.md` 已创建，三类模板包 review 清单与首个目标项目场景候选矩阵已具备基础版本；
+- MNEMOSYNE-029A 已补账修复 review / scenario selection 文件缺失问题，并同步相关状态文件。
 
 ## 4. 当前已知问题和最新诊断
 
@@ -71,7 +74,10 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `notes/candidate-requirements.md` 中 self-improvement 相关候选需求状态可能需要校正；
 - self-improvement workflow 模板设计已在 MNEMOSYNE-026 完成后进入用户 review 阶段；
 - 目标项目 intake / memory system design spec 模板设计已在 MNEMOSYNE-027 完成后进入用户 review / 小修阶段；
-- 下一步应在 delivery manifest 深化与第一个目标项目场景选择之间确认优先级。
+- delivery manifest template pack 已在 MNEMOSYNE-028 完成后进入用户 review / 小修阶段；
+- MNEMOSYNE-029 已创建三类模板包 review 清单与首个目标项目场景候选矩阵；
+- MNEMOSYNE-029A 已用于修复 MNEMOSYNE-029 后文件缺失与状态同步缺口；
+- 下一步应由用户 review 三类模板包与 review / scenario selection 文件，并选择第一个目标项目场景或决定先小修模板。
 
 ## 5. self-improvement workflow 的目标
 
@@ -140,15 +146,13 @@ self-improvement workflow 要解决：
 
 建议后续路线：
 
-1. self-improvement workflow 清理；
-2. self-improvement workflow 模板设计（已完成，下一步为 template pack review / 小修）；
-3. 目标项目 intake 与 memory system design spec 模板（已完成，下一步为目标项目模板包 review / 小修）；
-4. delivery manifest 深化或第一个目标项目场景选择；
-5. delivery manifest 与目标项目交付包模板；
-6. Idea Capture Buffer；
-7. 研究报告 summary / PDF 图表复核；
-8. AGENTS.md / CLAUDE.md；
-9. GitHub Actions / 自动查重 / similarity index / MCP / RAG 等后续增强。
+1. 用户 review 三类模板包和 review / scenario selection 文件；
+2. 选择第一个目标项目场景或先小修模板；
+3. 第一轮 dry-run intake；
+4. Idea Capture Buffer；
+5. 研究报告 summary / PDF 图表复核；
+6. AGENTS.md / CLAUDE.md；
+7. 自动化增强。
 
 ## 9. 当前不应直接做的事
 
