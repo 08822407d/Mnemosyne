@@ -68,7 +68,6 @@
 - minimal delivery runbook 已创建；
 - delivery completion criteria 已创建；
 - `notes/template-pack-review-and-first-scenario-selection.md` 已创建；
-- MNEMOSYNE-029A 已用于补账 / 修复 MNEMOSYNE-029 后 review / scenario selection 文件缺失问题；
 - 三类模板包 review 清单已创建；
 - 首个场景候选矩阵已创建；
 - trial run minimal input request 已创建；

@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-三类模板包已创建，进入用户 review 与首个目标项目场景选择准备阶段。MNEMOSYNE-029A 已补账修复 review / scenario selection 文件缺失问题。
+三类模板包已创建，进入用户 review 与首个目标项目场景选择准备阶段。
 
 ## 当前执行源
 

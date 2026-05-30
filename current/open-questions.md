@@ -56,9 +56,6 @@
 16. 是否先直接选择第一个目标项目场景，还是先建立 review / selection 准备文件？
     - 结论：MNEMOSYNE-029 先建立三类模板包 review 清单与首个场景选择矩阵。
 
-17. MNEMOSYNE-029A 如何处理 MNEMOSYNE-029 后 review / scenario selection 文件缺失问题？
-    - 结论：MNEMOSYNE-029A 补账记录该缺口，并确保 `notes/template-pack-review-and-first-scenario-selection.md` 存在且状态文件指向 review 与首个场景选择准备阶段。
-
 ## open
 
 1. 用户是否接受 `notes/template-pack-review-and-first-scenario-selection.md`？

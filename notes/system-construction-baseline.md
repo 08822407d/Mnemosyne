@@ -61,8 +61,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包；
 - `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包；
 - `notes/delivery-manifest-template-pack.md` 已创建，delivery manifest / 目标项目交付包模板已具备基础版本；
-- `notes/template-pack-review-and-first-scenario-selection.md` 已创建，三类模板包 review 清单与首个目标项目场景候选矩阵已具备基础版本；
-- MNEMOSYNE-029A 已补账修复 review / scenario selection 文件缺失问题，并同步相关状态文件。
+- `notes/template-pack-review-and-first-scenario-selection.md` 已创建，三类模板包 review 清单与首个目标项目场景候选矩阵已具备基础版本。
 
 ## 4. 当前已知问题和最新诊断
 
@@ -76,7 +75,6 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - 目标项目 intake / memory system design spec 模板设计已在 MNEMOSYNE-027 完成后进入用户 review / 小修阶段；
 - delivery manifest template pack 已在 MNEMOSYNE-028 完成后进入用户 review / 小修阶段；
 - MNEMOSYNE-029 已创建三类模板包 review 清单与首个目标项目场景候选矩阵；
-- MNEMOSYNE-029A 已用于修复 MNEMOSYNE-029 后文件缺失与状态同步缺口；
 - 下一步应由用户 review 三类模板包与 review / scenario selection 文件，并选择第一个目标项目场景或决定先小修模板。
 
 ## 5. self-improvement workflow 的目标

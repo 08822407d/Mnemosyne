@@ -34,7 +34,6 @@
 - [x] `MNEMOSYNE-028：delivery manifest / 目标项目交付包模板深化`；
 - [x] delivery manifest 模板深化；
 - [x] `MNEMOSYNE-029：三类模板包 review 清单与首个目标项目场景选择准备`；
-- [x] `MNEMOSYNE-029A：review / scenario selection 文件缺失修复与状态同步`；
 - [x] 三类模板包 review 清单；
 - [x] 首个目标项目场景候选矩阵；
 - [ ] 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
