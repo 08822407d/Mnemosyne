@@ -443,3 +443,31 @@
 - 状态：reflected
 - 来源：RAW-0041
 - 反映位置：notes/template-pack-review-and-first-scenario-selection.md；notes/codex-task-results/MNEMOSYNE-029-result.md
+
+## CAND-0069
+
+- 内容：需要补齐 PDF 图表 / 图片人工复核索引，用于登记 RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的 `pending_manual_review` 状态。
+- 状态：reflected
+- 来源：RAW-0044 / MNEMOSYNE-030A
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md
+
+## CAND-0070
+
+- 内容：需要将 report summaries 状态同步到 active-context / handoff / todo / open-questions，避免交接状态仍停留在模板包 review 阶段。
+- 状态：reflected
+- 来源：RAW-0044 / MNEMOSYNE-030A
+- 反映位置：current/active-context.md；handoff/handoff-current.md；current/todo.md；current/open-questions.md
+
+## CAND-0071
+
+- 内容：report summaries 不是执行源，figure review index 也不是执行源；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0044 / MNEMOSYNE-030A
+- 反映位置：raw/chatgpt-discussion-044.md；raw/research-reports/current/current-report-summaries.md；raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md
+
+## CAND-0072
+
+- 内容：不应把未复核 PDF 图表 / 图片当作已验证证据；后续目标项目设计若依赖 PDF 图表证据，应先人工复核并登记结果。
+- 状态：reflected
+- 来源：RAW-0044 / MNEMOSYNE-030A
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md；current/open-questions.md；handoff/handoff-current.md

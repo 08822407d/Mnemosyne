@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-三类模板包已创建，进入用户 review 与首个目标项目场景选择准备阶段。
+研究报告 summary 与 PDF 图表复核准备已建立，等待 review / 人工复核。
 
 ## 当前执行源
 
@@ -73,7 +73,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 18. `raw/research-reports/current/research-report-index.md`
 19. `raw/research-reports/current/current-evidence-map.md`
 20. `raw/research-reports/current/current-capability-boundaries.md`
-21. `raw/concept-origin-extract-001.md` 按需回查
+21. `raw/research-reports/current/current-report-summaries.md`
+22. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+23. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -88,6 +90,6 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 下一步建议
 
-1. 用户 review template pack review / scenario selection 文件；
-2. 用户选择第一个目标项目场景，或决定先小修模板 / 做 Idea Capture Buffer；
-3. 如选择目标项目场景，进入第一轮 dry-run intake。
+1. 用户 review report summaries；
+2. 人工复核依赖设计判断的 PDF 图表 / 图片；
+3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
