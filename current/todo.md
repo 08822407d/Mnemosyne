@@ -6,8 +6,10 @@
 - [x] 用户选择 v0.2 第一方向（self-improvement workflow）；
 - [x] 创建 `startup-instructions`；
 - [x] 做一次新 ChatGPT / 新 Codex 接手演练；
-- [ ] 为每份研究报告建立 summary；
+- [x] 为每份研究报告建立 summary；
 - [ ] 人工复核 PDF 中的图表和图片；
+- [ ] 根据人工复核结果更新 pdf-figure-review-index；
+- [ ] 用户 review `raw/research-reports/current/current-report-summaries.md`；
 - [ ] 必要时将 PDF 转换为 Markdown / TXT；
 - [ ] 可选：执行一次新 ChatGPT 对话或第二个新 Codex 任务的只读回归验证（非阻断）。
 
@@ -33,14 +35,21 @@
 - [ ] 根据 review 小修目标项目模板包；
 - [x] `MNEMOSYNE-028：delivery manifest / 目标项目交付包模板深化`；
 - [x] delivery manifest 模板深化；
+- [x] `MNEMOSYNE-029：三类模板包 review 清单与首个目标项目场景选择准备`；
+- [x] `MNEMOSYNE-029A：review / scenario selection 文件缺失修复与状态同步`；
+- [x] 三类模板包 review 清单；
+- [x] 首个目标项目场景候选矩阵；
+- [ ] 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
 - [ ] 用户 review `notes/delivery-manifest-template-pack.md`；
 - [ ] 根据 review 小修 delivery manifest template pack；
 - [ ] 选择第一个目标项目场景；
+- [ ] 第一轮 dry-run intake；
+- [ ] 根据 review 小修三类模板包；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
 - [ ] delta report 模板；
-- [ ] 研究报告 summary / PDF 图表人工复核；
+- [ ] 用户 review report summaries / PDF 图表人工复核；
 - [ ] `AGENTS.md` / `CLAUDE.md`；
 - [ ] 自动化增强。
 

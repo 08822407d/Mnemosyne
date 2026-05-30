@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-delivery manifest / 目标项目交付包模板已创建，等待 review。
+研究报告 summary 与 PDF 图表复核准备已建立，等待 review / 人工复核。
 
 ## 当前执行源
 
@@ -20,6 +20,9 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 
 - `raw/`
 - `raw/research-reports/`
+- `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `raw/research-reports/current/current-report-summaries.md`
 - `notes/candidate-requirements.md`
 - `notes/decision-log.md`
 - `current/active-context.md`
@@ -30,6 +33,7 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 - `notes/self-improvement-template-pack.md`
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
+- `notes/template-pack-review-and-first-scenario-selection.md`
 
 如果其他文件与 `human-approved-spec` 冲突，以 `human-approved-spec` 为准，并登记 open question。
 
@@ -42,6 +46,8 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
+- `raw/research-reports/current/current-report-summaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 
 研究报告是高权重证据层，不是执行源。PDF 图表和图片仍需人工复核。
 
@@ -61,12 +67,15 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 12. `notes/self-improvement-template-pack.md`
 13. `notes/target-project-memory-system-template-pack.md`
 14. `notes/delivery-manifest-template-pack.md`
-15. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
-16. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
-17. `raw/research-reports/current/research-report-index.md`
-18. `raw/research-reports/current/current-evidence-map.md`
-19. `raw/research-reports/current/current-capability-boundaries.md`
-20. `raw/concept-origin-extract-001.md` 按需回查
+15. `notes/template-pack-review-and-first-scenario-selection.md`
+16. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
+17. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
+18. `raw/research-reports/current/research-report-index.md`
+19. `raw/research-reports/current/current-evidence-map.md`
+20. `raw/research-reports/current/current-capability-boundaries.md`
+21. `raw/research-reports/current/current-report-summaries.md`
+22. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+23. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -76,11 +85,11 @@ delivery manifest / 目标项目交付包模板已创建，等待 review。
 - 不要添加自动化脚本；
 - 不要实现自动查重、自动索引、自动写回、MCP、RAG 或多 Agent 自动协调；
 - 不要把 research reports 当执行源；
-- 不要把 candidate / decision / active-context / handoff / startup-instructions / template packs 当执行源；
+- 不要把 candidate / decision / active-context / handoff / startup-instructions / template packs / review selection 文件当执行源；
 - 不要为真实目标项目生成交付包，除非用户明确选择目标项目场景并确认进入交付试用阶段。
 
 ## 下一步建议
 
-1. 用户 review delivery manifest template pack；
-2. 根据 review 小修模板；
-3. 决定选择第一个目标项目场景试用整套模板，还是进入 Idea Capture Buffer。
+1. 用户 review report summaries；
+2. 人工复核依赖设计判断的 PDF 图表 / 图片；
+3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。

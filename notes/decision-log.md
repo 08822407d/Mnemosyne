@@ -386,3 +386,122 @@
 - 理由：目标项目模板包需要人工确认；后续可在交付清单闭环和首个场景验证之间选择优先级。
 - 状态：accepted
 - 来源：RAW-0035
+
+## DEC-0058
+
+- 决策：执行 MNEMOSYNE-029：三类模板包 review 清单与首个目标项目场景选择准备。
+- 理由：三类基础模板包已创建，下一步需要为用户 review 和首个试用场景选择提供清晰检查清单与决策矩阵。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0059
+
+- 决策：创建 `notes/template-pack-review-and-first-scenario-selection.md`。
+- 理由：需要集中呈现三类模板包 review checklist、首个场景候选矩阵、trial run minimal input request 和用户决策选项。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0060
+
+- 决策：`notes/template-pack-review-and-first-scenario-selection.md` 不是执行源。
+- 理由：该文件只用于 review 和场景选择准备；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0061
+
+- 决策：当前不直接选择真实目标项目。
+- 理由：本任务只做 review / selection 准备，不替用户最终选择，也不生成真实目标项目交付包。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0062
+
+- 决策：第一轮试用目标是验证 `intake → design spec → delivery manifest → handoff → review` 的人工闭环。
+- 理由：当前 Mnemosyne 仍是半自动设计仓库，第一轮试用应优先验证模板链路，而不是追求完整自动化。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0063
+
+- 决策：MNEMOSYNE-029 不进入自动化，不创建 AGENTS.md / CLAUDE.md / GitHub Actions。
+- 理由：当前任务边界明确禁止新增自动化脚本、GitHub Actions、RAG、MCP、多 Agent 自动协调，以及 AGENTS.md / CLAUDE.md。
+- 状态：accepted
+- 来源：RAW-0041
+
+## DEC-0064
+
+- 决策：执行 MNEMOSYNE-029A：review / scenario selection 文件缺失修复与状态同步。
+- 理由：MNEMOSYNE-029-result 声称创建 `notes/template-pack-review-and-first-scenario-selection.md`，但后续人工核查发现 master 上缺失，需要补上文件并同步状态。
+- 状态：accepted
+- 来源：RAW-0042
+
+## DEC-0065
+
+- 决策：确保 `notes/template-pack-review-and-first-scenario-selection.md` 存在，并继续将其定位为非执行源。
+- 理由：该文件只用于三类模板包 review 与首个目标项目场景选择准备；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：accepted
+- 来源：RAW-0042
+
+## DEC-0066
+
+- 决策：MNEMOSYNE-029A 当前不直接选择真实目标项目，不生成真实交付包。
+- 理由：本任务只修复缺失文件和状态同步，不进入真实目标项目试用或交付阶段。
+- 状态：accepted
+- 来源：RAW-0042
+
+## DEC-0067
+
+- 决策：第一轮试用目标仍是验证 `intake → design spec → delivery manifest → handoff → review` 的人工闭环。
+- 理由：当前 Mnemosyne 仍按半自动设计仓库推进，不在 MNEMOSYNE-029A 中引入自动化、AGENTS.md、CLAUDE.md 或 GitHub Actions。
+- 状态：accepted
+- 来源：RAW-0042
+
+## DEC-0068
+
+- 决策：执行 MNEMOSYNE-030：研究报告 summary 与 PDF 图表复核准备。
+- 理由：用户选择先执行路线 D，需要为 `RC-2026Q2-initial` 建立更易读的证据入口和图表复核准备层。
+- 状态：accepted
+- 来源：RAW-0043
+
+## DEC-0069
+
+- 决策：先建立 report summaries 和 figure review index，而不是直接进入首个目标项目 dry-run。
+- 理由：summary 层和复核索引可降低后续 dry-run 与能力边界判断的证据回查成本，并避免未复核 PDF 图表被误用。
+- 状态：accepted
+- 来源：RAW-0043
+
+## DEC-0070
+
+- 决策：report summaries / figure review index 不是执行源。
+- 理由：它们是研究证据派生材料和复核索引；当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：accepted
+- 来源：RAW-0043
+
+## DEC-0071
+
+- 决策：MNEMOSYNE-030 不修改研究报告原件。
+- 理由：原始研究报告是证据来源，应保留原貌以便后续审计和冲突核查。
+- 状态：accepted
+- 来源：RAW-0043
+
+## DEC-0072
+
+- 决策：MNEMOSYNE-030 不做 OCR。
+- 理由：本任务只基于可读取文本建立摘要和复核索引，不生成或提交 OCR 输出。
+- 状态：accepted
+- 来源：RAW-0043
+
+## DEC-0073
+
+- 决策：未人工复核的 PDF 图表 / 图片不得作为已验证设计证据。
+- 理由：PDF 图表、图片和版式内容可能无法被文本抽取准确表达，必须保留 pending_manual_review 边界。
+- 状态：accepted
+- 来源：RAW-0043
+
+## DEC-0074
+
+- 决策：后续目标项目设计如果依赖 PDF 图表 / 图片，应先进行人工复核。
+- 理由：目标项目 dry-run、capability boundaries 或 delivery manifest 若依赖图表证据，需要先在 figure review index 中登记复核结果。
+- 状态：accepted
+- 来源：RAW-0043

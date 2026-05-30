@@ -401,3 +401,122 @@
 - 状态：reflected
 - 来源：RAW-0035
 - 反映位置：current/todo.md；current/active-context.md；handoff/handoff-current.md；notes/overall-target-and-roadmap-snapshot.md；notes/system-construction-baseline.md
+
+## CAND-0063
+
+- 内容：需要创建三类模板包 review 清单，用于用户 review self-improvement、target project memory system 和 delivery manifest 三类模板包。
+- 状态：reflected
+- 来源：RAW-0041
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md
+
+## CAND-0064
+
+- 内容：需要创建首个目标项目场景候选矩阵，覆盖长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、多 Agent 团队、个人长期对话 / 知识管理和混合未知场景。
+- 状态：reflected
+- 来源：RAW-0041
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md
+
+## CAND-0065
+
+- 内容：需要创建 trial run minimal input request，明确用户选择第一个场景后至少需要提供的目标项目名称、类型、状态、目标、资料、隐私级别、交付位置和风险等信息。
+- 状态：reflected
+- 来源：RAW-0041
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md
+
+## CAND-0066
+
+- 内容：需要用户在“选择场景 / 小修模板 / Idea Capture Buffer / 研究报告 summary”等选项中决策。
+- 状态：pending
+- 来源：RAW-0041
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；current/open-questions.md；current/todo.md
+
+## CAND-0067
+
+- 内容：review / scenario selection 文件不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0041
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0068
+
+- 内容：MNEMOSYNE-029 不选择真实目标项目，不生成真实目标项目交付包。
+- 状态：reflected
+- 来源：RAW-0041
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；notes/codex-task-results/MNEMOSYNE-029-result.md
+
+## CAND-0069
+
+- 内容：需要补账修复 MNEMOSYNE-029 后 `notes/template-pack-review-and-first-scenario-selection.md` 在 master 上缺失的问题，并同步状态文件。
+- 状态：reflected
+- 来源：RAW-0042
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；current/active-context.md；handoff/handoff-current.md；current/todo.md；current/open-questions.md；notes/codex-task-results/MNEMOSYNE-029A-result.md
+
+## CAND-0070
+
+- 内容：review / scenario selection 文件不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0042
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0071
+
+- 内容：MNEMOSYNE-029A 当前不直接选择真实目标项目，不生成真实目标项目交付包。
+- 状态：reflected
+- 来源：RAW-0042
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；notes/codex-task-results/MNEMOSYNE-029A-result.md
+
+## CAND-0072
+
+- 内容：第一轮试用目标仍是验证 `intake → design spec → delivery manifest → handoff → review` 的人工闭环，而不是引入完整自动化。
+- 状态：reflected
+- 来源：RAW-0042
+- 反映位置：notes/template-pack-review-and-first-scenario-selection.md；notes/decision-log.md；notes/codex-task-results/MNEMOSYNE-029A-result.md
+
+## CAND-0073
+
+- 内容：需要为 `RC-2026Q2-initial` 的 7 份研究报告建立 summary 层，提高证据入口可读性。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/report-summaries/
+
+## CAND-0074
+
+- 内容：需要建立 PDF 图表 / 图片人工复核索引，登记 RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的图表、图片和版式复核状态。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md
+
+## CAND-0075
+
+- 内容：需要建立 `current-report-summaries` 派生视图，索引当前激活研究轮次的 summary 文件。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/current/current-report-summaries.md
+
+## CAND-0076
+
+- 内容：report summaries 不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/report-summaries/README.md；raw/research-reports/current/current-report-summaries.md
+
+## CAND-0077
+
+- 内容：PDF figure review index 不是执行源，也不是 OCR 输出。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md
+
+## CAND-0078
+
+- 内容：不应把未复核 PDF 图表 / 图片 / 版式内容当作已验证证据。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md；raw/research-reports/current/current-report-summaries.md
+
+## CAND-0079
+
+- 内容：后续目标项目设计若依赖 PDF 图表 / 图片证据，应先进行人工复核，并在 figure review index 中登记结果。
+- 状态：reflected
+- 来源：RAW-0043
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md；current/open-questions.md
