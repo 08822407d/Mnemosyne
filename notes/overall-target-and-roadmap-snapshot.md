@@ -69,7 +69,7 @@ Mnemosyne 的最终目标是成为一个“记忆系统元 Agent”工作仓库�
 - current-capability-boundaries 已建立当前能力边界派生视图。
 - 研究报告具有时效性，未来应通过新 research cycle 和 delta report 更新。
 - PDF 图表和图片仍需人工复核。
-- MNEMOSYNE-030 已建立 report summaries 层、current-report-summaries 派生视图和 PDF figure review index；这些文件不是执行源。
+- MNEMOSYNE-030 / MNEMOSYNE-030A 已建立研究报告 summary 层、current-report-summaries 派生视图和 PDF 图表复核索引；这些文件不是执行源。
 
 ### 4.3 v0.2 第一方向已开始
 
@@ -313,15 +313,15 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
-1. 用户 review 三类模板包和 review / scenario selection 文件；
-2. 选择第一个目标项目场景或先小修模板；
-3. 第一轮 dry-run intake；
-4. Idea Capture Buffer；
-5. 研究报告 summary / PDF 图表复核；
+1. 用户 review report summaries；
+2. 人工复核相关 PDF 图表 / 图片；
+3. 选择第一个目标项目场景；
+4. 第一轮 dry-run intake；
+5. Idea Capture Buffer；
 6. AGENTS.md / CLAUDE.md；
 7. 自动化增强。
 
-当前已创建 `notes/template-pack-review-and-first-scenario-selection.md`，下一步应先由用户 review 该文件与三类模板包。
+当前研究报告 summary 层和 PDF 图表复核索引已建立。下一步应先由用户 review `raw/research-reports/current/current-report-summaries.md`，并按目标项目设计依赖程度决定优先复核哪些 PDF 图表 / 图片。
 
 ### MNEMOSYNE-025C 或后续清理任务
 
@@ -374,9 +374,9 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 目标：
 
-- 为每份报告建立 summary；
-- 对 PDF 图表进行人工复核；
-- 必要时转换为 Markdown / TXT；
+- 用户 review 已建立的 7 份 report summaries；
+- 对相关 PDF 图表 / 图片进行人工复核；
+- 根据人工复核结果更新 `pdf-figure-review-index.md`；
 - 为 Evidence Item / delta report 打基础。
 
 ### 后续 v0.2 / v0.3 方向

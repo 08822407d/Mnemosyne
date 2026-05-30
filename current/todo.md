@@ -7,6 +7,7 @@
 - [x] 创建 `startup-instructions`；
 - [x] 做一次新 ChatGPT / 新 Codex 接手演练；
 - [x] 为每份研究报告建立 summary；
+- [x] MNEMOSYNE-030：研究报告 summary 与 PDF 图表复核准备；
 - [ ] 人工复核 PDF 中的图表和图片；
 - [ ] 根据人工复核结果更新 pdf-figure-review-index；
 - [ ] 用户 review `raw/research-reports/current/current-report-summaries.md`；
