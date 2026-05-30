@@ -33,9 +33,15 @@
 - [ ] 根据 review 小修目标项目模板包；
 - [x] `MNEMOSYNE-028：delivery manifest / 目标项目交付包模板深化`；
 - [x] delivery manifest 模板深化；
+- [x] `MNEMOSYNE-029：三类模板包 review 清单与首个目标项目场景选择准备`；
+- [x] 三类模板包 review 清单；
+- [x] 首个目标项目场景候选矩阵；
+- [ ] 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
 - [ ] 用户 review `notes/delivery-manifest-template-pack.md`；
 - [ ] 根据 review 小修 delivery manifest template pack；
-- [ ] 选择第一个目标项目场景；
+- [ ] 用户选择第一个目标项目场景；
+- [ ] 第一轮 dry-run intake；
+- [ ] 根据 review 小修三类模板包；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
