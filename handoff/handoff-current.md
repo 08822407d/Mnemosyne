@@ -20,6 +20,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 - `raw/`
 - `raw/research-reports/`
+- `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `raw/research-reports/current/current-report-summaries.md`
 - `notes/candidate-requirements.md`
 - `notes/decision-log.md`
 - `current/active-context.md`
@@ -43,6 +46,8 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
+- `raw/research-reports/current/current-report-summaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 
 研究报告是高权重证据层，不是执行源。PDF 图表和图片仍需人工复核。
 

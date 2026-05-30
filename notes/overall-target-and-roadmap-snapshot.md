@@ -69,6 +69,7 @@ Mnemosyne 的最终目标是成为一个“记忆系统元 Agent”工作仓库�
 - current-capability-boundaries 已建立当前能力边界派生视图。
 - 研究报告具有时效性，未来应通过新 research cycle 和 delta report 更新。
 - PDF 图表和图片仍需人工复核。
+- MNEMOSYNE-030 已建立 report summaries 层、current-report-summaries 派生视图和 PDF figure review index；这些文件不是执行源。
 
 ### 4.3 v0.2 第一方向已开始
 

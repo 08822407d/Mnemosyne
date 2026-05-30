@@ -23,6 +23,9 @@
 
 - `raw/`
 - `raw/research-reports/`
+- `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `raw/research-reports/current/current-report-summaries.md`
 - `notes/candidate-requirements.md`
 - `notes/decision-log.md`
 - `current/active-context.md`
@@ -86,7 +89,10 @@
 - 选择第一个目标项目场景；
 - 第一轮 dry-run intake；
 - Idea Capture Buffer；
-- 研究报告 summary / PDF 图表人工复核；
+- 用户 review 7 份 report summaries；
+- 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- 人工复核 PDF 图表 / 图片；
+- 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
 
@@ -108,6 +114,8 @@
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
+- `raw/research-reports/current/current-report-summaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 
 ## 下一步建议
 
