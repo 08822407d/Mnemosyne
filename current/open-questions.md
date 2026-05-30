@@ -56,6 +56,9 @@
 16. 是否先直接选择第一个目标项目场景，还是先建立 review / selection 准备文件？
     - 结论：MNEMOSYNE-029 先建立三类模板包 review 清单与首个场景选择矩阵。
 
+17. 是否先做研究报告 summary / PDF 图表复核？
+   - 结论：用户选择先做一次 D；MNEMOSYNE-030 建立 report summaries，MNEMOSYNE-030A 补齐 PDF figure review index 和状态同步。
+
 ## open
 
 1. 用户是否接受 `notes/template-pack-review-and-first-scenario-selection.md`？
@@ -73,23 +76,32 @@
 5. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
 
-6. 用户是否选择第一个目标项目场景作为模板试用？
+6. 用户是否接受当前 7 份 report summaries？
+   - 说明：7 份 report summaries 与 current-report-summaries 已建立，但仍需用户 review。
+
+7. 哪些 PDF 图表 / 图片需要优先人工复核？
+   - 说明：RPT-2026Q2-0002 ~ RPT-2026Q2-0007 均为 pending_manual_review。
+
+8. 人工复核结果是否会影响目标项目模板或 capability boundaries？
+   - 说明：若复核发现关键差异，可能需要登记后续修正任务。
+
+9. 是否在进入首个目标项目 dry-run 前完成全部 PDF 图表复核，还是只复核相关部分？
+   - 说明：可先复核与首个目标项目设计直接相关的图表 / 图片。
+
+10. 是否选择第一个目标项目场景作为模板试用？
    - 说明：整套 self-improvement / target project / delivery manifest 模板已经建立基础版本，下一步可选择一个真实、半真实或玩具目标项目场景试用。
 
-7. 第一个目标项目模板优先服务哪类场景？
+11. 第一个目标项目模板优先服务哪类场景？
    - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话 / 知识管理、多 Agent 团队或混合未知场景，尚未由用户确认。
 
-8. 是否先小修某个 template pack？
+12. 是否先小修某个 template pack？
    - 说明：用户可能选择先小修 delivery manifest、target project 或 self-improvement template pack，而不是直接进入场景试用。
 
-9. 是否需要先做 Idea Capture Buffer？
+13. 是否先做 Idea Capture Buffer？
    - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于模板 review / 场景试用仍待决定。
 
-10. 是否先做研究报告 summary / PDF 图表复核？
-    - 说明：研究报告 summary 可增强证据可读性；PDF 图表和图片仍需人工复核；若真实目标项目设计依赖图表证据，应先复核。
+14. 是否需要更正式的隐私分级字段？
+   - 说明：目标项目 intake 已包含 `privacy_level` 和 `sensitive_content_types`，但是否扩展为正式隐私分级体系仍待决定。
 
-11. 是否需要更正式的隐私分级字段？
-    - 说明：目标项目 intake 已包含 `privacy_level` 和 `sensitive_content_types`，但是否扩展为正式隐私分级体系仍待决定。
-
-12. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
-    - 说明：当前可按需回查；是否拆分仍待决定。
+15. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
+   - 说明：当前可按需回查；是否拆分仍待决定。

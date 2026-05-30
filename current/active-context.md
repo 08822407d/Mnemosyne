@@ -2,18 +2,13 @@
 
 ## 当前阶段
 
-三类模板包已创建，当前进入用户 review 与首个目标项目场景选择准备阶段。
+研究报告 summary 与 PDF 图表复核准备已建立，等待用户 review / 人工复核。
 
 ## 当前目标
 
-当前目标是收口 v0.2 已建立的三类模板包，并进入 review / 试用准备阶段：
+当前目标是让 `RC-2026Q2-initial` 的 7 份研究报告具备可读 summary 入口，并明确 PDF 图表 / 图片 / 版式证据的人工复核状态，为后续目标项目 dry-run、能力边界判断、Evidence Item / delta report 模板设计提供更可靠的证据入口。
 
-- self-improvement workflow template pack；
-- target project memory system template pack；
-- delivery manifest template pack；
-- template pack review / first scenario selection 准备文件。
-
-下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md，而是先由用户 review 三类模板包与 `notes/template-pack-review-and-first-scenario-selection.md`，再决定是选择第一个目标项目场景、先小修模板、先做 Idea Capture Buffer，还是先做研究报告 summary / PDF 图表人工复核。
+下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md，而是先由用户 review report summaries，并决定是否需要先人工复核与目标项目设计相关的 PDF 图表 / 图片，再进入首个目标项目 dry-run 或 Idea Capture Buffer。
 
 ## 当前执行源
 
@@ -47,52 +42,34 @@
 - `notes/self-improvement-workflow.md` 已创建；
 - `notes/self-improvement-template-pack.md` 已创建；
 - `notes/target-project-memory-system-template-pack.md` 已创建；
-- 目标项目 intake 模板已创建；
-- memory system design spec 模板已创建；
-- target project type classifier 已创建；
-- target project memory file layout template 已创建；
-- target project execution source rule template 已创建；
-- target project workflow template 已创建；
-- delivery package draft template 已创建；
-- target project handoff template 已创建；
-- unsupported assumptions template 已创建；
-- drift review template 已创建；
-- minimal target project design runbook 已创建；
 - `notes/delivery-manifest-template-pack.md` 已创建；
-- delivery manifest 模板已创建；
-- files to create / update checklist 已创建；
-- target project runtime truth source checklist 已创建；
-- manual setup steps template 已创建；
-- unsupported assumptions linkage template 已创建；
-- delivery review checklist 已创建；
-- handoff package template 已创建；
-- rollback / revision plan template 已创建；
-- delivery result record template 已创建；
-- minimal delivery runbook 已创建；
-- delivery completion criteria 已创建；
 - `notes/template-pack-review-and-first-scenario-selection.md` 已创建；
 - 三类模板包 review 清单已创建；
 - 首个场景候选矩阵已创建；
 - trial run minimal input request 已创建；
+- `raw/research-reports/cycles/2026Q2-initial/report-summaries/README.md` 已创建；
+- 7 份研究报告 summary 文件已创建；
+- `raw/research-reports/current/current-report-summaries.md` 已创建；
+- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md` 已创建；
+- RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的 PDF 图表 / 图片 / 版式已登记为 `pending_manual_review`；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
 
 ## 当前未完成内容
 
+- 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- 用户 review 7 份 report summaries；
+- 人工复核 PDF 图表 / 图片 / 版式；
+- 根据人工复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
+- 决定进入首个目标项目 dry-run 前是否需要复核全部 PDF 图表，还是只复核相关部分；
 - 用户 review `notes/delivery-manifest-template-pack.md`；
 - 用户 review `notes/target-project-memory-system-template-pack.md`；
 - 用户 review `notes/self-improvement-template-pack.md`；
 - 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
-- 根据 review 小修 self-improvement template pack；
-- 根据 review 小修目标项目模板包；
-- 根据 review 小修 delivery manifest template pack；
+- 根据 review 小修三类 template packs；
 - 选择第一个目标项目场景；
 - 第一轮 dry-run intake；
 - Idea Capture Buffer；
-- 用户 review 7 份 report summaries；
-- 用户 review `raw/research-reports/current/current-report-summaries.md`；
-- 人工复核 PDF 图表 / 图片；
-- 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
 
@@ -109,16 +86,17 @@
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
-- `notes/system-construction-baseline.md`
-- `notes/overall-target-and-roadmap-snapshot.md`
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
 - `raw/research-reports/current/current-report-summaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-summaries/README.md`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `notes/system-construction-baseline.md`
+- `notes/overall-target-and-roadmap-snapshot.md`
 
 ## 下一步建议
 
-1. 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
-2. 用户选择下一步：第一个目标项目场景 / 小修模板 / Idea Capture Buffer / 研究报告 summary；
-3. 若选择目标项目场景，则进入第一轮 dry-run intake。
+1. 用户 review `raw/research-reports/current/current-report-summaries.md` 和 7 份 report summaries；
+2. 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核，并更新 `pdf-figure-review-index.md`；
+3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。

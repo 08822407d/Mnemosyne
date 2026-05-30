@@ -428,3 +428,38 @@
 - 理由：当前任务边界明确禁止新增自动化脚本、GitHub Actions、RAG、MCP、多 Agent 自动协调，以及 AGENTS.md / CLAUDE.md。
 - 状态：accepted
 - 来源：RAW-0041
+
+## DEC-0064
+
+- 决策：执行 MNEMOSYNE-030A：研究报告 summary 状态同步与 PDF 图表复核索引补账。
+- 理由：MNEMOSYNE-030 后核查发现 PDF 图表复核索引、任务结果记录和状态同步仍需补齐。
+- 状态：accepted
+- 来源：RAW-0044 / MNEMOSYNE-030A
+
+## DEC-0065
+
+- 决策：补齐 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`，并将 RPT-2026Q2-0002 ~ RPT-2026Q2-0007 登记为 `pending_manual_review`。
+- 理由：PDF 图表 / 图片 / 版式证据尚未人工复核，需要明确索引和状态，避免误用。
+- 状态：accepted
+- 来源：RAW-0044 / MNEMOSYNE-030A
+
+## DEC-0066
+
+- 决策：report summaries / current-report-summaries / figure review index 不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
+- 理由：summary 与索引均为派生视图或复核登记文件，不能直接覆盖用户批准的执行源。
+- 状态：accepted
+- 来源：RAW-0044 / MNEMOSYNE-030A
+
+## DEC-0067
+
+- 决策：MNEMOSYNE-030A 不修改研究报告原件，不做 OCR，不声称 PDF 图表 / 图片已经被复核。
+- 理由：本任务只做补账和状态同步，研究报告原件与 PDF 图表内容复核均超出本任务边界。
+- 状态：accepted
+- 来源：RAW-0044 / MNEMOSYNE-030A
+
+## DEC-0068
+
+- 决策：未人工复核的 PDF 图表 / 图片不得作为已验证设计证据；后续目标项目设计如果依赖 PDF 图表，应先进行人工复核。
+- 理由：避免将仅基于可读取文本的 summary 扩展为图表 / 图片 / 版式已验证事实。
+- 状态：accepted
+- 来源：RAW-0044 / MNEMOSYNE-030A
