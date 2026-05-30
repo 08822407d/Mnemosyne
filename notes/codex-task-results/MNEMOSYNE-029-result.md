@@ -103,16 +103,8 @@
 - 本任务不修改 `current/human-approved-spec.md`。
 - 研究报告是高权重证据层，但不是执行源；PDF 图表和图片仍需人工复核。
 
-## MNEMOSYNE-029A 补充核查
-
-后续人工核查指出：本结果记录声称已创建 `notes/template-pack-review-and-first-scenario-selection.md`，但 master 上实际缺失该文件，且部分状态文件未稳定进入“三类模板包 review 与首个目标项目场景选择准备”阶段。
-
-MNEMOSYNE-029A 用于修复该缺口：确保 `notes/template-pack-review-and-first-scenario-selection.md` 存在，并同步 active-context、handoff、todo、open questions、candidate requirements、decision log、roadmap snapshot、system construction baseline 和新的 task result record。
-
-该补充不改变本记录的非执行源定位。最终判断仍以 Git diff、仓库文件、用户 review 和必要验证为准。
-
 ## whether_task_claims_completion
 
-Codex 原声称：MNEMOSYNE-029 的文件创建和状态更新已完成，等待用户 review。MNEMOSYNE-029A 记录了后续核查发现的缺失问题，并用于补账修复。
+Codex 声称：MNEMOSYNE-029 的文件创建和状态更新已完成，等待用户 review。
 
 最终是否接受该完成状态，应以 Git diff、仓库文件、用户 review 和必要验证为准。

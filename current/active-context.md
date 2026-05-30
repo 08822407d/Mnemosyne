@@ -2,13 +2,18 @@
 
 ## 当前阶段
 
-研究报告 summary 与 PDF 图表复核准备已建立，等待用户 review / 人工复核。
+三类模板包已创建，当前进入用户 review 与首个目标项目场景选择准备阶段。
 
 ## 当前目标
 
-当前目标是为 `RC-2026Q2-initial` 的 7 份研究报告建立 summary 层，并创建 PDF 图表 / 图片人工复核索引。
+当前目标是收口 v0.2 已建立的三类模板包，并进入 review / 试用准备阶段：
 
-本阶段用于提高研究证据可读性，支持后续目标项目 dry-run、能力边界判断、Evidence Item / delta report 模板设计。下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md；PDF 图表 / 图片仍需人工复核，未复核内容不得作为已验证设计证据。
+- self-improvement workflow template pack；
+- target project memory system template pack；
+- delivery manifest template pack；
+- template pack review / first scenario selection 准备文件。
+
+下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md，而是先由用户 review 三类模板包与 `notes/template-pack-review-and-first-scenario-selection.md`，再决定是选择第一个目标项目场景、先小修模板、先做 Idea Capture Buffer，还是先做研究报告 summary / PDF 图表人工复核。
 
 ## 当前执行源
 
@@ -66,14 +71,9 @@
 - minimal delivery runbook 已创建；
 - delivery completion criteria 已创建；
 - `notes/template-pack-review-and-first-scenario-selection.md` 已创建；
-- MNEMOSYNE-029A 已用于补账 / 修复 MNEMOSYNE-029 后 review / scenario selection 文件缺失问题；
 - 三类模板包 review 清单已创建；
 - 首个场景候选矩阵已创建；
 - trial run minimal input request 已创建；
-- `raw/research-reports/cycles/2026Q2-initial/report-summaries/README.md` 已创建；
-- 7 份研究报告 summary 文件已创建；
-- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md` 已创建；
-- `raw/research-reports/current/current-report-summaries.md` 已创建；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
 
@@ -119,6 +119,6 @@
 
 ## 下一步建议
 
-1. 用户 review `raw/research-reports/current/current-report-summaries.md`；
-2. 对依赖设计判断的 PDF 图表 / 图片进行人工复核；
-3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+1. 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
+2. 用户选择下一步：第一个目标项目场景 / 小修模板 / Idea Capture Buffer / 研究报告 summary；
+3. 若选择目标项目场景，则进入第一轮 dry-run intake。

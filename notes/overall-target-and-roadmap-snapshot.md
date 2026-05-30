@@ -99,7 +99,7 @@ self-improvement workflow 已从流程说明推进到基础模板包。`notes/se
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
 
-`notes/delivery-manifest-template-pack.md` 用于目标项目交付清单、目标项目运行真相源、人工设置、交付 review、handoff、回滚和结果记录。`notes/template-pack-review-and-first-scenario-selection.md` 用于 review 三类模板包，并帮助用户准备首个目标项目场景选择。两者都不是执行源，仍需用户 review。MNEMOSYNE-029A 已补账修复 MNEMOSYNE-029 后该文件在 master 上缺失的问题。
+`notes/delivery-manifest-template-pack.md` 用于目标项目交付清单、目标项目运行真相源、人工设置、交付 review、handoff、回滚和结果记录。`notes/template-pack-review-and-first-scenario-selection.md` 用于 review 三类模板包，并帮助用户准备首个目标项目场景选择。两者都不是执行源，仍需用户 review。
 
 ## 5. 当前最新诊断
 
@@ -112,14 +112,12 @@ self-improvement workflow 已从流程说明推进到基础模板包。`notes/se
 5. 目标项目 intake / memory system design spec 模板包已创建，等待用户 review。
 6. delivery manifest template pack 已创建，等待用户 review。
 7. `notes/template-pack-review-and-first-scenario-selection.md` 已创建，用于三类模板包 review 与首个目标项目场景选择准备。
-8. MNEMOSYNE-029A 已用于修复 MNEMOSYNE-029 后 review / scenario selection 文件缺失问题，并同步状态文件。
-9. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
-10. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-027-result.md`。
-11. template pack 不是执行源，仍需用户 review。
-12. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
-13. Codex Task Result Record 不是执行源，只是审计材料。
-14. MNEMOSYNE-030 已建立研究报告 summary 层和 PDF 图表复核索引，等待用户 review / 人工复核。
-15. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
+8. Codex Task Result Record 默认占位符路径统一为 `notes/codex-task-results/TASK_ID-result.md`。
+9. 实际任务应将 `TASK_ID` 替换为真实任务编号，例如 `notes/codex-task-results/MNEMOSYNE-027-result.md`。
+10. template pack 不是执行源，仍需用户 review。
+11. 每个后续重要 Codex 任务都应要求写入 Codex Task Result Record。
+12. Codex Task Result Record 不是执行源，只是审计材料。
+13. 最终判断仍以仓库文件、Git diff、用户 review 和必要验证为准。
 
 ## 6. self-improvement workflow 的目标
 
@@ -315,15 +313,15 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 建议后续路线按以下顺序推进：
 
-1. 用户 review report summaries；
-2. 人工复核相关 PDF 图表 / 图片；
-3. 选择第一个目标项目场景；
-4. 第一轮 dry-run intake；
-5. Idea Capture Buffer；
+1. 用户 review 三类模板包和 review / scenario selection 文件；
+2. 选择第一个目标项目场景或先小修模板；
+3. 第一轮 dry-run intake；
+4. Idea Capture Buffer；
+5. 研究报告 summary / PDF 图表复核；
 6. AGENTS.md / CLAUDE.md；
 7. 自动化增强。
 
-当前已创建 `raw/research-reports/current/current-report-summaries.md` 和 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`，下一步应先由用户 review summaries，并对依赖设计判断的 PDF 图表 / 图片进行人工复核。
+当前已创建 `notes/template-pack-review-and-first-scenario-selection.md`，下一步应先由用户 review 该文件与三类模板包。
 
 ### MNEMOSYNE-025C 或后续清理任务
 

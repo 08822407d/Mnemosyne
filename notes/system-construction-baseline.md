@@ -61,11 +61,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - `notes/self-improvement-template-pack.md` 已创建，self-improvement workflow 已具备基础模板包；
 - `notes/target-project-memory-system-template-pack.md` 已创建，目标项目 intake / memory system design spec 已具备基础模板包；
 - `notes/delivery-manifest-template-pack.md` 已创建，delivery manifest / 目标项目交付包模板已具备基础版本；
-- `notes/template-pack-review-and-first-scenario-selection.md` 已创建，三类模板包 review 清单与首个目标项目场景候选矩阵已具备基础版本；
-- MNEMOSYNE-029A 已补账修复 review / scenario selection 文件缺失问题，并同步相关状态文件；
-- `raw/research-reports/cycles/2026Q2-initial/report-summaries/` 已创建，7 份研究报告 summary 已具备基础版本；
-- `raw/research-reports/current/current-report-summaries.md` 已创建，作为当前激活轮次 summary 派生视图；
-- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md` 已创建，用于 PDF 图表 / 图片人工复核登记。
+- `notes/template-pack-review-and-first-scenario-selection.md` 已创建，三类模板包 review 清单与首个目标项目场景候选矩阵已具备基础版本。
 
 ## 4. 当前已知问题和最新诊断
 
@@ -79,9 +75,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - 目标项目 intake / memory system design spec 模板设计已在 MNEMOSYNE-027 完成后进入用户 review / 小修阶段；
 - delivery manifest template pack 已在 MNEMOSYNE-028 完成后进入用户 review / 小修阶段；
 - MNEMOSYNE-029 已创建三类模板包 review 清单与首个目标项目场景候选矩阵；
-- MNEMOSYNE-029A 已用于修复 MNEMOSYNE-029 后文件缺失与状态同步缺口；
-- MNEMOSYNE-030 已建立研究报告 summary 层与 PDF 图表复核准备；
-- 下一步应由用户 review report summaries，人工复核相关 PDF 图表 / 图片，并决定进入目标项目 dry-run 还是先做 Idea Capture Buffer / 小修模板。
+- 下一步应由用户 review 三类模板包与 review / scenario selection 文件，并选择第一个目标项目场景或决定先小修模板。
 
 ## 5. self-improvement workflow 的目标
 
@@ -150,11 +144,11 @@ self-improvement workflow 要解决：
 
 建议后续路线：
 
-1. 用户 review report summaries；
-2. 人工复核相关 PDF 图表 / 图片；
-3. 选择第一个目标项目场景；
-4. 第一轮 dry-run intake；
-5. Idea Capture Buffer；
+1. 用户 review 三类模板包和 review / scenario selection 文件；
+2. 选择第一个目标项目场景或先小修模板；
+3. 第一轮 dry-run intake；
+4. Idea Capture Buffer；
+5. 研究报告 summary / PDF 图表复核；
 6. AGENTS.md / CLAUDE.md；
 7. 自动化增强。
 
