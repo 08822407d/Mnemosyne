@@ -6,9 +6,14 @@
 
 ## 当前目标
 
-当前目标是让 `RC-2026Q2-initial` 的 7 份研究报告具备可读 summary 入口，并明确 PDF 图表 / 图片 / 版式证据的人工复核状态，为后续目标项目 dry-run、能力边界判断、Evidence Item / delta report 模板设计提供更可靠的证据入口。
+当前目标是收口 MNEMOSYNE-030 / MNEMOSYNE-030A 的补账状态：
 
-下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md，而是先由用户 review report summaries，并决定是否需要先人工复核与目标项目设计相关的 PDF 图表 / 图片，再进入首个目标项目 dry-run 或 Idea Capture Buffer。
+- 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
+- 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核；
+- 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
+- 再决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+
+下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md。report summaries、current-report-summaries 与 PDF figure review index 都不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
 
 ## 当前执行源
 
@@ -47,21 +52,19 @@
 - 三类模板包 review 清单已创建；
 - 首个场景候选矩阵已创建；
 - trial run minimal input request 已创建；
-- `raw/research-reports/cycles/2026Q2-initial/report-summaries/README.md` 已创建；
+- report-summaries README 已创建；
 - 7 份研究报告 summary 文件已创建；
-- `raw/research-reports/current/current-report-summaries.md` 已创建；
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md` 已创建；
-- RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的 PDF 图表 / 图片 / 版式已登记为 `pending_manual_review`；
+- `raw/research-reports/current/current-report-summaries.md` 已创建；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
 
 ## 当前未完成内容
 
-- 用户 review `raw/research-reports/current/current-report-summaries.md`；
 - 用户 review 7 份 report summaries；
-- 人工复核 PDF 图表 / 图片 / 版式；
-- 根据人工复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
-- 决定进入首个目标项目 dry-run 前是否需要复核全部 PDF 图表，还是只复核相关部分；
+- 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- 人工复核 PDF 图表 / 图片；
+- 根据复核结果更新 figure review index；
 - 用户 review `notes/delivery-manifest-template-pack.md`；
 - 用户 review `notes/target-project-memory-system-template-pack.md`；
 - 用户 review `notes/self-improvement-template-pack.md`；
@@ -97,6 +100,6 @@
 
 ## 下一步建议
 
-1. 用户 review `raw/research-reports/current/current-report-summaries.md` 和 7 份 report summaries；
-2. 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核，并更新 `pdf-figure-review-index.md`；
+1. 用户 review `raw/research-reports/current/current-report-summaries.md`；
+2. 对依赖设计判断的 PDF 图表进行人工复核；
 3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。

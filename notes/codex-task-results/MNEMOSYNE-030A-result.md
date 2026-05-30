@@ -92,13 +92,6 @@ MNEMOSYNE-030A 补齐了 MNEMOSYNE-030 后发现的状态同步与复核索引�
 - 本任务不为真实目标项目生成交付包。
 - 本任务不创建 AGENTS.md、CLAUDE.md、GitHub Actions 或自动化脚本。
 
-## reviewer_notes
-
-- MNEMOSYNE-030A 声称同步 active-context，但后续核查发现 `current/active-context.md` 的当前阶段仍停留在“三类模板包 review 与首个场景选择准备阶段”，未完全硬同步到研究报告 summary / PDF 图表复核准备状态。
-- MNEMOSYNE-030B 用于硬同步 `current/active-context.md`，并确认 report summaries review / PDF 图表人工复核入口。
-- 本结果记录不是执行源；当前执行源仍是 `current/human-approved-spec.md`。
-- 最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
-
 ## whether_task_claims_completion
 
 Codex 声称：MNEMOSYNE-030A 的补账范围已完成，等待用户 review / 人工复核。
