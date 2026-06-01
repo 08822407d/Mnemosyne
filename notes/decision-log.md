@@ -463,3 +463,108 @@
 - 理由：避免将仅基于可读取文本的 summary 扩展为图表 / 图片 / 版式已验证事实。
 - 状态：accepted
 - 来源：RAW-0044 / MNEMOSYNE-030A
+
+## DEC-0069
+
+- 决策：执行 MNEMOSYNE-030C：RC-2026Q2-initial 研究动机 raw 补充与索引。
+- 理由：当前仓库已有 7 份研究报告、summaries、evidence map、capability boundaries 和 PDF figure review index，但缺少显式说明这轮研究为什么被发起。
+- 状态：accepted
+- 来源：RAW-0046 / MNEMOSYNE-030C
+
+## DEC-0070
+
+- 决策：创建 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`。
+- 理由：需要帮助后续 ChatGPT / Codex / Claude / Claude Code 理解 7 份报告为什么存在、分别服务什么设计问题、如何约束 Mnemosyne。
+- 状态：accepted
+- 来源：RAW-0046 / MNEMOSYNE-030C
+
+## DEC-0071
+
+- 决策：research motivation 不是执行源，也不替代研究报告原件或 report summaries。
+- 理由：当前执行源仍是 `current/human-approved-spec.md`；研究报告和 motivation 都属于证据 / 背景 / 审计材料。
+- 状态：accepted
+- 来源：RAW-0046 / MNEMOSYNE-030C
+
+## DEC-0072
+
+- 决策：后续模型接手时应使用 motivation 理解研究报告作用，推荐先读 motivation，再读 current report summaries，再按需回查原始报告。
+- 理由：只读结论可能丢失研究问题、边界和使用方式，增加误把研究证据当执行规则的风险。
+- 状态：accepted
+- 来源：RAW-0046 / MNEMOSYNE-030C
+
+## DEC-0073
+
+- 决策：后续研究周期也应保留研究动机 / 起点说明。
+- 理由：研究动机是设计演化审计材料；新研究或三个月后的 refresh 应创建新 cycle 和 delta report，而不是覆盖历史动机。
+- 状态：accepted
+- 来源：RAW-0046 / MNEMOSYNE-030C
+
+## DEC-0074
+
+- 决策：执行 MNEMOSYNE-030D：研究课题 prompt 原文入库约定与 report-topic mapping。
+- 理由：在研究动机之外，还需要明确本轮研究输入 prompt 与 7 份 report 的对应关系，避免后续模型混淆 prompt、report、summary、motivation 和执行源。
+- 状态：accepted
+- 来源：RAW-0047 / MNEMOSYNE-030D
+
+## DEC-0075
+
+- 决策：pro prompt 文件约定路径为 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`，且不重命名用户提供的 pro prompt 文件。
+- 理由：prompt 原文是用户提供的研究输入材料，应保持原文件名和可追溯路径。
+- 状态：accepted
+- 来源：RAW-0047 / MNEMOSYNE-030D
+
+## DEC-0076
+
+- 决策：6 个轻度研究 prompt 原文缺失时不得编造。
+- 理由：缺失 prompt 只能记录 report title / topic title / inferred topic，并标记 `missing_original_prompt`；伪造原文会污染研究输入层。
+- 状态：accepted
+- 来源：RAW-0047 / MNEMOSYNE-030D
+
+## DEC-0077
+
+- 决策：建立 `research-prompt-index.md`、`report-topic-and-prompt-map.md` 和 `current-research-prompts.md`。
+- 理由：需要索引 prompt availability、report-topic mapping 和 current 派生视图，帮助后续模型理解研究输入层。
+- 状态：accepted
+- 来源：RAW-0047 / MNEMOSYNE-030D
+
+## DEC-0078
+
+- 决策：research prompts / mapping 不是执行源。
+- 理由：当前执行源仍是 `current/human-approved-spec.md`；prompt / mapping 仅用于理解研究输入和 report-topic 关系。
+- 状态：accepted
+- 来源：RAW-0047 / MNEMOSYNE-030D
+
+## DEC-0079
+
+- 决策：prompt 是研究输入，report / summary / evidence map 是研究结果 / 派生证据，不得混淆。
+- 理由：prompt 可帮助理解研究问题，但不代表研究结论，也不能直接覆盖执行源。
+- 状态：accepted
+- 来源：RAW-0047 / MNEMOSYNE-030D
+
+## DEC-0080
+
+- 决策：执行 MNEMOSYNE-030E：research motivation / research prompts 状态同步与索引补账。
+- 理由：MNEMOSYNE-030C / 030D 主体文件已创建，但 current 索引、状态文件和 task result records 仍需要补齐同步说明。
+- 状态：accepted
+- 来源：RAW-0048 / MNEMOSYNE-030E
+
+## DEC-0081
+
+- 决策：确认 research motivation 已入库，pro prompt 文件已放入约定路径，6 个轻度研究 prompt 原文缺失且不得编造。
+- 理由：这些状态需要进入 answered / todo / handoff / active-context，作为后续接手入口的稳定事实。
+- 状态：accepted
+- 来源：RAW-0048 / MNEMOSYNE-030E
+
+## DEC-0082
+
+- 决策：补齐 current 索引、active-context、handoff、todo、open-questions、candidate / decision、roadmap / baseline 和 030C / 030D task result reviewer notes。
+- 理由：后续模型接手需要从 current 视图和交接文件中看到 research motivation / prompt mapping 已建立，而不是只在主体文件中存在。
+- 状态：accepted
+- 来源：RAW-0048 / MNEMOSYNE-030E
+
+## DEC-0083
+
+- 决策：motivation / prompts / mapping 不是执行源。
+- 理由：当前执行源仍是 `current/human-approved-spec.md`；motivation / prompts / mapping 只用于解释研究动机、研究输入和 report-topic 关系。
+- 状态：accepted
+- 来源：RAW-0048 / MNEMOSYNE-030E

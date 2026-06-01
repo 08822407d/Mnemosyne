@@ -471,3 +471,87 @@
 - 状态：reflected
 - 来源：RAW-0044 / MNEMOSYNE-030A
 - 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md；current/open-questions.md；handoff/handoff-current.md
+
+## CAND-0073
+
+- 内容：需要保存 `RC-2026Q2-initial` 的研究动机，解释 7 份研究报告为什么存在、服务什么设计问题、如何约束 Mnemosyne。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+
+## CAND-0074
+
+- 内容：research motivation 不是执行源，也不是研究报告原件；它用于解释研究起点和使用方式，不能替代原始报告或 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/chatgpt-discussion-046.md；raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+
+## CAND-0075
+
+- 内容：后续模型接手 `RC-2026Q2-initial` 时，应先读 motivation，再读 summaries，再按需回查原始报告；若依赖 PDF 图表 / 图片，应先查看 figure review index。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/research-reports/current/research-report-index.md；raw/research-reports/current/current-report-summaries.md；handoff/handoff-current.md
+
+## CAND-0076
+
+- 内容：后续研究周期也应保留 motivation / origin 文件；研究 refresh 应通过新 cycle 和 delta report 更新，而不是覆盖历史研究动机。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+
+## CAND-0077
+
+- 内容：需要建立 research prompts / topic mapping 层，说明哪个 prompt 文件对应哪个 report、哪些 prompt 已保留、哪些 prompt 缺失。
+- 状态：reflected
+- 来源：RAW-0047 / MNEMOSYNE-030D
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md；raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md；raw/research-reports/current/current-research-prompts.md
+
+## CAND-0078
+
+- 内容：pro 深度研究 prompt 文件应放入约定路径 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`，并保持用户提供的文件名，不随意重命名。
+- 状态：reflected
+- 来源：RAW-0047 / MNEMOSYNE-030D
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-prompts/README.md；raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md
+
+## CAND-0079
+
+- 内容：6 个轻度研究 prompt 原文缺失，不得编造；只能记录 topic title / inferred topic，并标记 `missing_original_prompt`。
+- 状态：reflected
+- 来源：RAW-0047 / MNEMOSYNE-030D
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md；raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md；raw/research-reports/current/current-research-prompts.md
+
+## CAND-0080
+
+- 内容：prompt 是研究输入，不是研究结果；research prompts / mapping 不是执行源。
+- 状态：reflected
+- 来源：RAW-0047 / MNEMOSYNE-030D
+- 反映位置：raw/chatgpt-discussion-047.md；raw/research-reports/cycles/2026Q2-initial/research-prompts/README.md；raw/research-reports/current/current-research-prompts.md
+
+## CAND-0081
+
+- 内容：后续模型应区分 motivation、prompt、report、summary、evidence map 和 execution source；如未来找回轻度研究 prompt，应补入 originals 并更新索引。
+- 状态：reflected
+- 来源：RAW-0047 / MNEMOSYNE-030D
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md；handoff/handoff-current.md；current/open-questions.md
+
+## CAND-0082
+
+- 内容：需要同步 research motivation / prompt mapping 状态，使 current 索引、active-context、handoff、todo、open-questions、roadmap / baseline 和 task result records 稳定反映 MNEMOSYNE-030C / 030D。
+- 状态：reflected
+- 来源：RAW-0048 / MNEMOSYNE-030E
+- 反映位置：raw/research-reports/current/research-report-index.md；raw/research-reports/current/current-report-summaries.md；current/active-context.md；handoff/handoff-current.md；current/todo.md；current/open-questions.md
+
+## CAND-0083
+
+- 内容：motivation / prompts / topic mapping 不是执行源；prompt 是研究输入，不是研究结果；后续模型应区分 motivation、prompt、report、summary、evidence map、execution source。
+- 状态：reflected
+- 来源：RAW-0048 / MNEMOSYNE-030E
+- 反映位置：raw/chatgpt-discussion-048.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0084
+
+- 内容：pro prompt 文件已放入约定路径；6 个轻度研究 prompt 原文缺失，不得编造，只能保留 `missing_original_prompt` 状态和 topic title / inferred topic。
+- 状态：reflected
+- 来源：RAW-0048 / MNEMOSYNE-030E
+- 反映位置：current/open-questions.md；current/todo.md；notes/codex-task-results/MNEMOSYNE-030D-result.md；notes/codex-task-results/MNEMOSYNE-030E-result.md
