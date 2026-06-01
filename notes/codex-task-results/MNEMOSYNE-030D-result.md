@@ -81,12 +81,3 @@
 ## whether_task_claims_completion
 
 Codex 声称 MNEMOSYNE-030D 的 prompt index、report-topic map、current prompt view、状态同步和任务结果记录已经完成；最终完成判断仍应以 Git diff、仓库文件、用户 review 和必要验证为准。
-
-## reviewer_notes
-
-- 030D 已创建 prompt index / report-topic map / current-research-prompts。
-- pro prompt 文件存在并被标记为 `available_original_prompt`。
-- 6 个轻度研究 prompt 标记为 `missing_original_prompt`。
-- 后续核查发现 current 索引和状态文件仍未完全同步。
-- MNEMOSYNE-030E 用于补账。
-- 本记录不是执行源；最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。

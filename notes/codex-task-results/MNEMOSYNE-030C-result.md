@@ -71,10 +71,3 @@
 ## whether_task_claims_completion
 
 Codex 声称 MNEMOSYNE-030C 的文件创建、索引补充和状态同步已经完成；最终完成判断仍应以 Git diff、仓库文件、用户 review 和必要验证为准。
-
-## reviewer_notes
-
-- 030C 已创建 research motivation 文件。
-- 后续核查发现 active-context / handoff / todo / open-questions 等状态仍未完全反映 030C / 030D。
-- MNEMOSYNE-030E 用于状态同步和索引补账。
-- 本记录不是执行源；最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。

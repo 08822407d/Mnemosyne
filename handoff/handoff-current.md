@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-research motivation / research prompts / report summaries / PDF figure review index 已建立，等待 review / 人工复核 / dry-run 决策。
+研究报告动机、summary 与 PDF 图表复核准备已建立，等待 review / 人工复核。
 
 ## 当前执行源
 
@@ -20,11 +20,7 @@ research motivation / research prompts / report summaries / PDF figure review in
 
 - `raw/`
 - `raw/research-reports/`
-- research prompts / topic mapping
 - `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
-- `raw/research-reports/current/current-research-prompts.md`
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
@@ -44,7 +40,7 @@ research motivation / research prompts / report summaries / PDF figure review in
 
 ## 研究证据层状态
 
-7 份研究报告已作为 `RC-2026Q2-initial` 入库；MNEMOSYNE-030C 已补充该轮研究的 origin / motivation 文件；MNEMOSYNE-030D 已建立 research prompt / topic mapping 层；MNEMOSYNE-030E 已完成 current 索引与状态同步补账。
+7 份研究报告已作为 `RC-2026Q2-initial` 入库；MNEMOSYNE-030C 已补充该轮研究的 origin / motivation 文件。
 
 当前研究证据入口：
 
@@ -52,9 +48,6 @@ research motivation / research prompts / report summaries / PDF figure review in
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
 - `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
-- `raw/research-reports/current/current-research-prompts.md`
 - `raw/research-reports/current/current-report-summaries.md`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 
@@ -83,12 +76,9 @@ research motivation / research prompts / report summaries / PDF figure review in
 19. `raw/research-reports/current/current-evidence-map.md`
 20. `raw/research-reports/current/current-capability-boundaries.md`
 21. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-22. `raw/research-reports/current/current-research-prompts.md`
-23. `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
-24. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-25. `raw/research-reports/current/current-report-summaries.md`
-26. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-27. `raw/concept-origin-extract-001.md` 按需回查
+22. `raw/research-reports/current/current-report-summaries.md`
+23. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+24. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -105,6 +95,7 @@ research motivation / research prompts / report summaries / PDF figure review in
 
 ## 下一步建议
 
-1. 用户 review research motivation / prompts / summaries；
-2. 决定是否先人工复核与目标项目设计相关的 PDF 图表；
-3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+1. 用户 review research motivation；
+2. 用户 review report summaries；
+3. 人工复核依赖设计判断的 PDF 图表 / 图片；
+4. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
