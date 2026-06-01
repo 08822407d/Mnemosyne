@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-研究报告 summary 与 PDF 图表复核准备已建立，等待 review / 人工复核。
+研究报告动机、research prompt / topic mapping、summary 与 PDF 图表复核准备已建立，等待 review / 人工复核。
 
 ## 当前执行源
 
@@ -20,6 +20,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 - `raw/`
 - `raw/research-reports/`
+- research prompts / topic mapping
+- `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- `raw/research-reports/current/current-research-prompts.md`
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
@@ -39,13 +44,17 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 研究证据层状态
 
-7 份研究报告已作为 `RC-2026Q2-initial` 入库。
+7 份研究报告已作为 `RC-2026Q2-initial` 入库；MNEMOSYNE-030C 已补充该轮研究的 origin / motivation 文件；MNEMOSYNE-030D 已建立 research prompt / topic mapping 层。
 
 当前研究证据入口：
 
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- `raw/research-reports/current/current-research-prompts.md`
 - `raw/research-reports/current/current-report-summaries.md`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 
@@ -73,9 +82,13 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 18. `raw/research-reports/current/research-report-index.md`
 19. `raw/research-reports/current/current-evidence-map.md`
 20. `raw/research-reports/current/current-capability-boundaries.md`
-21. `raw/research-reports/current/current-report-summaries.md`
-22. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-23. `raw/concept-origin-extract-001.md` 按需回查
+21. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
+22. `raw/research-reports/current/current-research-prompts.md`
+23. `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+24. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+25. `raw/research-reports/current/current-report-summaries.md`
+26. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+27. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -90,6 +103,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 下一步建议
 
-1. 用户 review report summaries；
-2. 人工复核依赖设计判断的 PDF 图表 / 图片；
-3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+1. 用户确认 pro 深度研究 prompt 文件是否已放入约定路径；
+2. 用户 review current-research-prompts / report-topic-and-prompt-map；
+3. 用户 review research motivation；
+4. 用户 review report summaries；
+5. 人工复核依赖设计判断的 PDF 图表 / 图片；
+6. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。

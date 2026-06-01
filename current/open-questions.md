@@ -59,7 +59,37 @@
 17. 是否先做研究报告 summary / PDF 图表复核？
    - 结论：用户选择先做一次 D；MNEMOSYNE-030 建立 report summaries，MNEMOSYNE-030A 补齐 PDF figure review index 和状态同步。
 
+
+18. 是否需要把 7 份研究报告的研究动机入库？
+   - 结论：需要。MNEMOSYNE-030C 创建 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`，用于解释 7 份报告为什么存在、服务什么设计问题、如何约束 Mnemosyne，以及为什么研究报告和 motivation 都不是执行源。
+   - 状态：answered；仍需用户 review motivation 文件。
+
+19. 研究课题 prompt 原文应该放在哪里？
+   - 结论：pro prompt 原文约定放在 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`。
+   - 状态：answered；文件路径约定已由 MNEMOSYNE-030D 入库，仍需用户确认 pro prompt 文件内容和路径。
+
+20. 6 个轻度研究 prompt 原文缺失时应如何处理？
+   - 结论：不得编造原文；只记录 topic title / inferred topic，并标记 `missing_original_prompt`。
+   - 状态：answered；MNEMOSYNE-030D 已在 research prompt index / report-topic map 中显式记录缺失状态。
+
 ## open
+
+0a. 用户是否已确认 pro prompt 文件放入约定路径？
+   - 说明：约定路径为 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`。当前检查结果：pro 深度研究 prompt 文件当前存在；仍需用户确认内容和路径。
+
+0b. 用户是否接受 `raw/research-reports/current/current-research-prompts.md` 与 `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`？
+   - 说明：MNEMOSYNE-030D 已建立 research prompts / topic mapping 层，仍需用户 review。
+
+0c. 如果未来找回轻度研究 prompt，是否补入 `research-prompts/originals/` 并更新索引？
+   - 说明：当前 6 个轻度研究 prompt 均标记为 `missing_original_prompt`，不得编造原文。
+
+0d. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？
+   - 说明：prompt 是研究输入，report / summary 是研究结果或派生证据；如果二者差异影响理解，可登记 delta / review note。
+
+
+0. 用户是否接受 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`？
+   - 说明：MNEMOSYNE-030C 已创建 research motivation 文件，但需要用户 review，确认其是否准确保留研究动机、边界和后续读取顺序。
+
 
 1. 用户是否接受 `notes/template-pack-review-and-first-scenario-selection.md`？
    - 说明：该文件已创建，用于 review 三类模板包并准备首个场景选择，但尚未经过用户 review。
