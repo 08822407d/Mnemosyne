@@ -78,12 +78,3 @@
 ## whether_task_claims_completion
 
 Codex 声称 MNEMOSYNE-030E 的状态同步、current 索引补账、030C / 030D result reviewer notes 和 MNEMOSYNE-030E result record 已完成；最终完成判断仍应以 Git diff、仓库文件、用户 review 和必要验证为准。
-
-## reviewer_notes
-
-- MNEMOSYNE-030E 声称完成状态同步和 current 索引补账。
-- 后续核查发现 `raw/research-reports/current/research-report-index.md` 缺 current-research-prompts / prompt index / report-topic map 入口。
-- 后续核查发现 `raw/research-reports/current/current-report-summaries.md` 缺 current-research-prompts 入口。
-- 后续核查发现 active-context / handoff / todo / open-questions 仍未完全反映 research prompt mapping。
-- MNEMOSYNE-030F 用于硬同步和纠偏。
-- 本记录不是执行源；最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。

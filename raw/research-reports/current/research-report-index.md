@@ -18,16 +18,6 @@
 - 定位：该文件不是执行源，不是研究报告原件，也不是 summary；它用于解释 `RC-2026Q2-initial` 的 7 份报告为什么存在、分别服务什么设计问题，以及后续模型应如何使用这些报告。
 - 建议读取顺序：先读 motivation，再读 `raw/research-reports/current/current-report-summaries.md`，再按需回查原始报告。
 
-## 研究课题 / Prompt Mapping 入口
-
-- current prompts: `raw/research-reports/current/current-research-prompts.md`
-- prompt index: `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
-- report-topic map: `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-
-这些文件属于 research prompt / topic mapping 层，不是执行源，也不是研究报告结果。Prompt 是研究输入；report / summary / evidence map 是研究结果或派生证据。缺失的轻度研究 prompt 不得编造。
-
-MNEMOSYNE-030F 已硬同步该入口，用于后续模型接手时快速区分 motivation、prompt、report、summary、evidence map 和 execution source。
-
 ## 报告索引
 
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
