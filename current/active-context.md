@@ -12,6 +12,7 @@
 - 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
 - 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核；
 - 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
+- 如果未来找回轻度研究 prompt，更新 research-prompt-index；
 - 再决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
 
 下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md。research motivation、report summaries、current-report-summaries 与 PDF figure review index 都不是执行源，当前执行源仍是 `current/human-approved-spec.md`。

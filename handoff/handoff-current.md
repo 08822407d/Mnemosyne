@@ -88,6 +88,8 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - 不要添加自动化脚本；
 - 不要实现自动查重、自动索引、自动写回、MCP、RAG 或多 Agent 自动协调；
 - 不要把 research reports 当执行源；
+- 不要把 motivation / prompt / topic mapping 当执行源；
+- 不要编造缺失 prompt；
 - 不要把 candidate / decision / active-context / handoff / startup-instructions / template packs / review selection 文件当执行源；
 - 不要为真实目标项目生成交付包，除非用户明确选择目标项目场景并确认进入交付试用阶段。
 
