@@ -11,6 +11,14 @@
 - PDF 图表 / 图片复核状态见 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
 - 如 summary 与原始报告冲突，应以原始报告为证据来源；如 summary 与 `current/human-approved-spec.md` 冲突，应以执行源为准。
 
+
+## 推荐读取顺序
+
+- 先读 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`，理解 7 份报告为什么存在、服务什么设计问题，以及为什么研究报告是高权重证据层但不是执行源。
+- 再读本文件和各 report summary，获得当前激活研究轮次的摘要入口。
+- 再按需回查 `raw/research-reports/cycles/2026Q2-initial/originals/` 中的原始报告。
+- 若设计依赖 PDF 图表 / 图片 / 版式，应先查看 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`，不要把未复核图表当作已验证证据。
+
 ## Summary Index
 
 | report_id | topic | summary_file | source_file | summary_status | figure_review_status | active_evidence | notes |

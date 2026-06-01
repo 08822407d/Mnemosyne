@@ -63,3 +63,9 @@
 - [ ] 多 Agent 自动协调；
 - [ ] 自动 drift review；
 - [ ] 自动模型迁移辅助。
+
+## MNEMOSYNE-030C 状态同步
+
+- [x] MNEMOSYNE-030C：RC-2026Q2-initial 研究动机 raw 补充与索引
+- [x] 记录 RC-2026Q2-initial 的研究动机
+- [ ] 用户 review raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
