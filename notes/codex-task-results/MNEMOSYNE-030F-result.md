@@ -52,6 +52,19 @@
 - 尚未执行第一轮 dry-run intake。
 - Idea Capture Buffer 仍未创建。
 
+## reviewer_notes
+
+MNEMOSYNE-030F 声称完成 research prompt mapping 硬同步，但后续人工核查发现若干关键文件仍未完全同步：
+
+- `current/active-context.md` 未纳入 `current-research-prompts.md` / `report-topic-and-prompt-map.md`；
+- `handoff/handoff-current.md` 推荐读取顺序未纳入 `current-research-prompts.md` / `report-topic-and-prompt-map.md`；
+- `current/todo.md` 未记录 MNEMOSYNE-030D / pro prompt 已放入约定路径 / review current-research-prompts；
+- `current/open-questions.md` 未把 pro prompt 路径和轻度 prompt 缺失处理移入 answered；
+- `research-report-index.md` 未包含 current-research-prompts / prompt index / report-topic map 入口；
+- `current-report-summaries.md` 未指向 current-research-prompts。
+
+MNEMOSYNE-030G-MANUAL 用于手工硬同步这些残留状态。本记录不是执行源，最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
+
 ## manual_review_required
 
 - 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`。

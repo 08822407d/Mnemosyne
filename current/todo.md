@@ -37,6 +37,17 @@
 - [x] `MNEMOSYNE-028：delivery manifest / 目标项目交付包模板深化`；
 - [x] delivery manifest 模板深化；
 - [x] `MNEMOSYNE-029：三类模板包 review 清单与首个目标项目场景选择准备`；
+- [x] MNEMOSYNE-030C：RC-2026Q2-initial 研究动机 raw 补充与索引；
+- [x] 记录 RC-2026Q2-initial 的研究动机；
+- [x] MNEMOSYNE-030D：研究课题 prompt 原文入库约定与 report-topic mapping；
+- [x] 建立 research prompt index / report-topic map；
+- [x] pro 深度研究 prompt 文件已放入约定路径；
+- [x] MNEMOSYNE-030E：research motivation / research prompts 状态同步与索引补账；
+- [x] MNEMOSYNE-030F：research prompt mapping 硬同步与 030E 结果纠偏；
+- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
+- [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
+- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
+- [ ] 如果未来找回轻度研究 prompt，更新 research-prompt-index；
 - [x] 三类模板包 review 清单；
 - [x] 首个目标项目场景候选矩阵；
 - [ ] 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；

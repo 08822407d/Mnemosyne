@@ -2,20 +2,20 @@
 
 ## 当前阶段
 
-研究报告动机、summary 与 PDF 图表复核准备已建立，等待用户 review / 人工复核。
+研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 人工复核 / dry-run 决策。
 
 ## 当前目标
 
-当前目标是收口 MNEMOSYNE-030 / MNEMOSYNE-030A / MNEMOSYNE-030C 的补账状态：
+当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态：
 
 - 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
+- 用户 review `raw/research-reports/current/current-research-prompts.md`；
+- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
 - 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
 - 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核；
 - 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
 - 如果未来找回轻度研究 prompt，更新 research-prompt-index；
 - 再决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
-
-下一步不进入自动化实现，也不创建 AGENTS.md / CLAUDE.md。research motivation、report summaries、current-report-summaries 与 PDF figure review index 都不是执行源，当前执行源仍是 `current/human-approved-spec.md`。
 
 ## 当前执行源
 
@@ -25,6 +25,9 @@
 
 - `raw/`
 - `raw/research-reports/`
+- `raw/research-reports/current/current-research-prompts.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 - `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
@@ -62,6 +65,12 @@
 - `raw/research-reports/current/current-report-summaries.md` 已创建；
 - Codex Task Result Record 默认路径使用 `notes/codex-task-results/TASK_ID-result.md`；
 - `notes/overall-target-and-roadmap-snapshot.md` 和 `notes/system-construction-baseline.md` 已作为规划 / 建设基线快照入库，且不是执行源。
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/README.md` 已创建；
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md` 已创建；
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md` 已创建；
+- `raw/research-reports/current/current-research-prompts.md` 已创建；
+- pro 深度研究 prompt 原文路径约定已建立，且文件存在；
+- RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
 
 ## 当前未完成内容
 
@@ -80,6 +89,9 @@
 - Idea Capture Buffer；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
+- 用户 review `raw/research-reports/current/current-research-prompts.md`；
+- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
+- 如果未来找回轻度研究 prompt，更新 `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`；
 
 ## 当前最重要文件
 
@@ -103,10 +115,12 @@
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `notes/system-construction-baseline.md`
 - `notes/overall-target-and-roadmap-snapshot.md`
+- `raw/research-reports/current/current-research-prompts.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 
 ## 下一步建议
 
-1. 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
-2. 用户 review `raw/research-reports/current/current-report-summaries.md`；
-3. 对依赖设计判断的 PDF 图表进行人工复核；
-4. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+1. 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`、`raw/research-reports/current/current-research-prompts.md` 和 `raw/research-reports/current/current-report-summaries.md`；
+2. 决定是否先人工复核与目标项目设计相关的 PDF 图表 / 图片 / 版式；
+3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。

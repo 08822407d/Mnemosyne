@@ -64,6 +64,18 @@
    - 结论：需要。MNEMOSYNE-030C 创建 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`，用于解释 7 份报告为什么存在、服务什么设计问题、如何约束 Mnemosyne，以及为什么研究报告和 motivation 都不是执行源。
    - 状态：answered；仍需用户 review motivation 文件。
 
+19. 研究课题 prompt 原文应该放在哪里？
+    - 结论：pro 深度研究 prompt 原文约定放在 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`。
+    - 状态：answered；pro prompt 文件已放入约定路径。
+
+20. 6 个轻度研究 prompt 原文缺失时应如何处理？
+    - 结论：不得编造原文；只记录 report title / summary 可确认的 topic title，并在 `research-prompt-index.md` 和 `report-topic-and-prompt-map.md` 中标记 `missing_original_prompt`。
+    - 状态：answered。
+
+21. 是否需要同步 research motivation / prompt mapping 到 current 索引与接手文件？
+    - 结论：需要。MNEMOSYNE-030F 负责补齐 current 索引、active-context、handoff、todo、open-questions 的状态。
+    - 状态：answered；MNEMOSYNE-030G-MANUAL 用于手工修正 030F 后仍残留的状态不同步。
+
 ## open
 
 
@@ -115,3 +127,7 @@
 
 15. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
    - 说明：当前可按需回查；是否拆分仍待决定。
+
+16. 用户是否接受 current-research-prompts / report-topic-and-prompt-map？
+17. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
+18. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？

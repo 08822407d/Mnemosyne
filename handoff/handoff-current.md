@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-研究报告动机、summary 与 PDF 图表复核准备已建立，等待 review / 人工复核。
+研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待 review / 人工复核 / dry-run 决策。
 
 ## 当前执行源
 
@@ -20,6 +20,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 - `raw/`
 - `raw/research-reports/`
+- `raw/research-reports/current/current-research-prompts.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 - `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
@@ -50,6 +53,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
 - `raw/research-reports/current/current-report-summaries.md`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `raw/research-reports/current/current-research-prompts.md`
+- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 
 研究报告是高权重证据层，不是执行源。PDF 图表和图片仍需人工复核。
 
@@ -76,9 +82,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 19. `raw/research-reports/current/current-evidence-map.md`
 20. `raw/research-reports/current/current-capability-boundaries.md`
 21. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-22. `raw/research-reports/current/current-report-summaries.md`
-23. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-24. `raw/concept-origin-extract-001.md` 按需回查
+22. `raw/research-reports/current/current-research-prompts.md`
+23. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+24. `raw/research-reports/current/current-report-summaries.md`
+25. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+26. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -96,6 +104,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 ## 下一步建议
 
 1. 用户 review research motivation；
-2. 用户 review report summaries；
-3. 人工复核依赖设计判断的 PDF 图表 / 图片；
-4. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+2. 用户 review current-research-prompts / report-topic-and-prompt-map；
+3. 用户 review report summaries；
+4. 人工复核依赖设计判断的 PDF 图表 / 图片；
+5. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。

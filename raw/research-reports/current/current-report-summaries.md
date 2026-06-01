@@ -19,6 +19,24 @@
 - 再按需回查 `raw/research-reports/cycles/2026Q2-initial/originals/` 中的原始报告。
 - 若设计依赖 PDF 图表 / 图片 / 版式，应先查看 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`，不要把未复核图表当作已验证证据。
 
+
+## 相关研究输入与读取顺序
+
+- research motivation: `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
+- current research prompts: `raw/research-reports/current/current-research-prompts.md`
+- prompt index: `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
+- report-topic map: `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+
+建议读取顺序：
+
+1. 先读 research motivation，理解这轮研究为什么存在；
+2. 按需读 current-research-prompts，理解研究输入 / prompt 可用性；
+3. 再读 current-report-summaries，理解研究结果摘要；
+4. 最后按需回查原始报告。
+
+注意：summary 是研究结果摘要，prompt 是研究输入，两者不同。缺失的轻度研究 prompt 不得编造。
+
+
 ## Summary Index
 
 | report_id | topic | summary_file | source_file | summary_status | figure_review_status | active_evidence | notes |
