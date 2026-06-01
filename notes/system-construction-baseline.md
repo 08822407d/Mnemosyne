@@ -181,3 +181,11 @@ self-improvement workflow 要解决：
 本文件不是执行源。
 
 与 human-approved-spec 冲突时，以 human-approved-spec 为准。
+
+## MNEMOSYNE-030C 更新：研究动机入库
+
+- `RC-2026Q2-initial` 的研究动机已保存到 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`。
+- 该 motivation 文件用于解释 7 份研究报告为什么存在、服务什么设计问题、如何约束 Mnemosyne，以及为什么研究报告是高权重证据层但不是执行源。
+- 当前执行源仍是 `current/human-approved-spec.md`；motivation、研究报告、summary、candidate、decision、active-context、handoff 和 task result records 都不是执行源。
+- 当前路线保留：用户 review research motivation / report summaries、PDF 图表复核、首个目标项目 dry-run、Idea Capture Buffer、AGENTS.md / CLAUDE.md、自动化增强。
+- 后续研究 refresh 应创建新 cycle 和 delta report，不覆盖 `RC-2026Q2-initial` 的历史研究动机。

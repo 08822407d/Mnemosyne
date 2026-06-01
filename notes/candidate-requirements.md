@@ -471,3 +471,31 @@
 - 状态：reflected
 - 来源：RAW-0044 / MNEMOSYNE-030A
 - 反映位置：raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md；current/open-questions.md；handoff/handoff-current.md
+
+## CAND-0073
+
+- 内容：需要保存 `RC-2026Q2-initial` 的研究动机，解释 7 份研究报告为什么存在、服务什么设计问题、如何约束 Mnemosyne。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+
+## CAND-0074
+
+- 内容：research motivation 不是执行源，也不是研究报告原件；它用于解释研究起点和使用方式，不能替代原始报告或 `current/human-approved-spec.md`。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/chatgpt-discussion-046.md；raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+
+## CAND-0075
+
+- 内容：后续模型接手 `RC-2026Q2-initial` 时，应先读 motivation，再读 summaries，再按需回查原始报告；若依赖 PDF 图表 / 图片，应先查看 figure review index。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/research-reports/current/research-report-index.md；raw/research-reports/current/current-report-summaries.md；handoff/handoff-current.md
+
+## CAND-0076
+
+- 内容：后续研究周期也应保留 motivation / origin 文件；研究 refresh 应通过新 cycle 和 delta report 更新，而不是覆盖历史研究动机。
+- 状态：reflected
+- 来源：RAW-0046 / MNEMOSYNE-030C
+- 反映位置：raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
