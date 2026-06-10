@@ -189,3 +189,12 @@ self-improvement workflow 要解决：
 - 当前执行源仍是 `current/human-approved-spec.md`；motivation、研究报告、summary、candidate、decision、active-context、handoff 和 task result records 都不是执行源。
 - 当前路线保留：用户 review research motivation / report summaries、PDF 图表复核、首个目标项目 dry-run、Idea Capture Buffer、AGENTS.md / CLAUDE.md、自动化增强。
 - 后续研究 refresh 应创建新 cycle 和 delta report，不覆盖 `RC-2026Q2-initial` 的历史研究动机。
+
+## MNEMOSYNE-031A 更新：研究复核与用户构想重述
+
+- MNEMOSYNE-031 review 不假定用户已通读、掌握或验证全部研究报告；研究报告主要供元 Agent 作为高权重证据层使用。
+- 元 Agent 应基于研究证据进行可行性评价、能力边界确认、已有实践对照和现代化优化建议，并标记过时、低效、过于理想化或过于科幻的构想。
+- MNEMOSYNE-031 扩展为 R1-R3 研究材料复核与 R4A-R4C 用户设计构想重述，之后汇总并等待用户确认。
+- 用户重述是 raw user intent evidence，不是原始需求、最终设计或执行源，不得直接写入 `current/human-approved-spec.md`。
+- 后续路线为：普通 ChatGPT 完成 R1-R4；用户确认后再写入 review / restatement records；之后决定 PDF 图表复核、首个 dry-run 或 Idea Capture Buffer。
+- 本次更新只同步规划 / 建设基线，不表示 MNEMOSYNE-031 review 已完成。
