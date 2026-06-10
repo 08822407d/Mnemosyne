@@ -76,6 +76,14 @@
     - 结论：需要。MNEMOSYNE-030F 负责补齐 current 索引、active-context、handoff、todo、open-questions 的状态。
     - 状态：answered；MNEMOSYNE-030G-MANUAL 用于手工修正 030F 后仍残留的状态不同步。
 
+22. 研究报告 review 是否应假定用户已通读和理解全部报告？
+    - 结论：不应假定。研究报告主要供 Mnemosyne 元 Agent 作为高权重证据层使用；用户接受证据入口，不等于亲自验证全部报告结论。
+    - 状态：answered。
+
+23. MNEMOSYNE-031 是否需要加入用户设计构想重述？
+    - 结论：需要。由于用户记忆不强且原始构想经过多轮讨论形成，应先由 AI 整理待重述清单，再由用户口语化重述，最后整理为 raw user intent evidence。
+    - 状态：answered；用户重述不是原始需求、最终设计或执行源。
+
 ## open
 
 
@@ -131,3 +139,11 @@
 16. 用户是否接受 current-research-prompts / report-topic-and-prompt-map？
 17. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
 18. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？
+19. 用户是否接受 research motivation？
+20. 用户是否接受 prompt mapping？
+21. 用户是否接受 summaries 作为暂用文本证据入口？
+22. 用户设计构想重述清单应覆盖哪些方面？
+23. 用户重述后哪些内容可进入 candidate requirements？
+24. 哪些用户构想需要研究报告校验？
+25. 哪些用户构想可能落后、过于理想化或与现有设计冲突？
+26. 是否需要创建 `raw/user-design-restatements/` 目录？

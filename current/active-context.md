@@ -2,13 +2,22 @@
 
 ## 当前阶段
 
-研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 人工复核 / dry-run 决策。
+研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 用户构想重述 / 人工复核 / dry-run 决策。
 
 ## 当前目标
 
-当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态：
+当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态，并按 MNEMOSYNE-031A 修正复核协议：
 
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
+- MNEMOSYNE-031 review 将通过普通 ChatGPT 对话执行；
+- review 不假定用户已通读研究报告；研究报告主要作为元 Agent 的高权重证据层；
+- 元 Agent 应基于报告进行可行性评价、能力边界确认、当前实践对照和现代化优化建议；
+- MNEMOSYNE-031 增加用户设计构想重述流程：先由 AI 整理待重述清单，再由用户口语化重述；
+- 重述结果不是原始需求、不是最终设计、不是执行源；
+
+后续材料复核包括：
+
+- MNEMOSYNE-031 R1-R3 研究材料复核；
+- MNEMOSYNE-031 R4A-R4C 用户设计构想重述；
 - 用户 review `raw/research-reports/current/current-research-prompts.md`；
 - 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
 - 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
@@ -32,6 +41,8 @@
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
+- future MNEMOSYNE-031 review record
+- future user design restatement record
 - `notes/candidate-requirements.md`
 - `notes/decision-log.md`
 - `current/active-context.md`
@@ -43,6 +54,7 @@
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
+- `notes/research-review-and-user-intent-restatement-workflow.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -71,6 +83,7 @@
 - `raw/research-reports/current/current-research-prompts.md` 已创建；
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
+- MNEMOSYNE-031A 已建立研究复核与用户构想重述协议，但尚未执行 review 或生成 review / restatement record；
 
 ## 当前未完成内容
 
@@ -106,6 +119,7 @@
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
+- `notes/research-review-and-user-intent-restatement-workflow.md`
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
@@ -121,6 +135,7 @@
 
 ## 下一步建议
 
-1. 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`、`raw/research-reports/current/current-research-prompts.md` 和 `raw/research-reports/current/current-report-summaries.md`；
-2. 决定是否先人工复核与目标项目设计相关的 PDF 图表 / 图片 / 版式；
-3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+1. 普通 ChatGPT 执行 MNEMOSYNE-031 R1-R3 研究材料复核；
+2. 执行 R4A-R4C 用户设计构想重述；
+3. 将 R1-R4 结果交给 Codex 或手工写入 review record / restatement record；
+4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。
