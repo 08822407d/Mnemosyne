@@ -2,25 +2,25 @@
 
 ## 当前阶段
 
-研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 用户构想重述 / 人工复核 / dry-run 决策。
+研究动机、研究课题 prompt mapping 与 report summaries 的 R1-R3 review 已完成，R4A 待重述清单也已完成；当前等待从 R4B 恢复用户口语化重述，并继续人工复核 / dry-run 路线决策。
 
 ## MNEMOSYNE-031 current status
 
-当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态，并按 MNEMOSYNE-031A 修正复核协议：
+MNEMOSYNE-031 已有 checkpoint record。当前准确状态为：
 
-- MNEMOSYNE-031 review 将通过普通 ChatGPT 对话执行；
-- review 不假定用户已通读研究报告；研究报告主要作为元 Agent 的高权重证据层；
-- 元 Agent 应基于报告进行可行性评价、能力边界确认、当前实践对照和现代化优化建议；
-- MNEMOSYNE-031 增加用户设计构想重述流程：先由 AI 整理待重述清单，再由用户口语化重述；
-- 重述结果不是原始需求、不是最终设计、不是执行源；
+- R1 Research Motivation Review: completed; user decision B; accepted with review notes.
+- R2 Research Prompts and Topic Mapping Review: completed; user decision B; accepted with review notes.
+- R3 Report Summaries Review: completed; user decision B; accepted with review notes.
+- R4A User Design Intent Restatement Prompt List: completed.
+- R4B User Oral Restatement: pending / deferred.
+- R4C User Design Intent Restatement Result: not generated.
+- R5 Combined Final Writeback Package: not generated.
+- Continuation point: resume from R4B.
 
-后续材料复核包括：
+后续工作包括：
 
-- MNEMOSYNE-031 R1-R3 研究材料复核；
-- MNEMOSYNE-031 R4A-R4C 用户设计构想重述；
-- 用户 review `raw/research-reports/current/current-research-prompts.md`；
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
-- 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
+- 从 MNEMOSYNE-031 R4B 恢复用户口语化重述；
+- R4B 完成后生成 R4C，并在用户确认后生成 R5；
 - 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核；
 - 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
 - 如果未来找回轻度研究 prompt，更新 research-prompt-index；
@@ -83,7 +83,7 @@
 - `raw/research-reports/current/current-research-prompts.md` 已创建；
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
-- MNEMOSYNE-031A 已建立研究复核与用户构想重述协议，但尚未执行 review 或生成 review / restatement record；
+- MNEMOSYNE-031 R1-R3 已完成且用户均选择 B；R4A 待重述清单已完成；checkpoint record 已保存这些结果；
 
 ## 当前未完成内容
 
@@ -133,7 +133,7 @@
 
 ## Next step / 下一步
 
-1. 普通 ChatGPT 执行 MNEMOSYNE-031 R1-R3 研究材料复核；
-2. 执行 R4A-R4C 用户设计构想重述；
-3. 将 R1-R4 结果交给 Codex 或手工写入 review record / restatement record；
+1. 从 MNEMOSYNE-031 R4B 恢复用户口语化重述，不要重启 R1-R3；
+2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
+3. R4C 经确认后生成 R5 combined final writeback package；
 4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。

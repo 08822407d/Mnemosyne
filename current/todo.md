@@ -49,13 +49,15 @@
 - [x] MNEMOSYNE-031A：复核协议修正与用户设计构想重述准备
 - [x] 记录“研究报告主要供元 Agent 使用，不要求用户通读掌握全部报告”的复核前提
 - [x] 记录 MNEMOSYNE-031 增加用户设计构想重述流程
-- [ ] MNEMOSYNE-031 Round 1：research motivation review
-- [ ] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review
-- [ ] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review
-- [ ] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
+- [x] MNEMOSYNE-031 Round 1：research motivation review
+- [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review
+- [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review
+- [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
 - [ ] MNEMOSYNE-031 Round 4B：用户按清单口语化重述
 - [ ] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果
-- [ ] MNEMOSYNE-031 review / restatement 结果写回仓库
+- [ ] MNEMOSYNE-031 Round 5：汇总 R1-R4 结果，生成给 Codex 的写回包
+
+R1-R3 and R4A were persisted in the MNEMOSYNE-031 checkpoint record. Continue from R4B.
 - [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
 - [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
 - [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；

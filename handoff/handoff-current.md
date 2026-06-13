@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，当前阶段包含用户构想重述，等待 review / 用户构想重述 / 人工复核 / dry-run 决策。
+研究动机、研究课题 prompt mapping 与 report summaries 的 R1-R3 review 已完成，R4A 待重述清单也已完成；当前等待从 R4B 恢复用户口语化重述，并继续人工复核 / dry-run 路线决策。
 
 ## 当前执行源
 
@@ -63,6 +63,26 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 MNEMOSYNE-031 增加用户构想重述：先由 AI 整理待重述清单，再由用户口语化重述。重述结果不是原始需求、不是最终设计、不是执行源。
 
+## MNEMOSYNE-031 continuation point
+
+MNEMOSYNE-031 has a checkpoint record.
+
+Completed:
+- R1 Research Motivation Review: user decision B.
+- R2 Research Prompts and Topic Mapping Review: user decision B.
+- R3 Report Summaries Review: user decision B.
+- R4A User Design Intent Restatement Prompt List.
+
+Pending:
+- R4B user oral restatement.
+- R4C user design intent restatement result.
+- R5 final combined writeback package.
+
+Next assistant should resume from R4B.
+Do not restart R1-R3.
+Do not regenerate R4A unless the user explicitly asks.
+Do not create `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-restatement.md` until R4B/R4C are completed and user confirms.
+
 ## 新会话推荐读取顺序
 
 1. `README.md`
@@ -111,7 +131,7 @@ MNEMOSYNE-031 增加用户构想重述：先由 AI 整理待重述清单，再�
 
 ## 下一步建议
 
-1. 普通 ChatGPT 执行 MNEMOSYNE-031 R1-R3 研究材料复核；
-2. 执行 R4A-R4C 用户设计构想重述；
-3. 用户确认后，将 R1-R4 结果交给 Codex 或手工写入 review record / restatement record；
-4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。
+1. 从 MNEMOSYNE-031 R4B 恢复用户口语化重述，不要重启 R1-R3；
+2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
+3. R4C 经确认后生成 R5 final combined writeback package；
+4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer / template small fixes。
