@@ -12,7 +12,7 @@
 - [x] MNEMOSYNE-030：研究报告 summary 与 PDF 图表复核准备；
 - [ ] 人工复核 PDF 中的图表和图片；
 - [ ] 根据人工复核结果更新 pdf-figure-review-index；
-- [ ] 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- [x] 用户通过 MNEMOSYNE-031 R3 接受 current-report-summaries 与 7 份 summaries 作为暂用文本证据入口（决策 B）；
 - [ ] 必要时将 PDF 转换为 Markdown / TXT；
 - [ ] 可选：执行一次新 ChatGPT 对话或第二个新 Codex 任务的只读回归验证（非阻断）。
 
@@ -72,7 +72,7 @@
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
 - [ ] delta report 模板；
-- [ ] 用户 review report summaries / PDF 图表人工复核；
+- [ ] PDF 图表 / 图片 / 版式人工复核（report summaries 已在 R3 以决策 B 接受为暂用文本证据入口）；
 - [ ] `AGENTS.md` / `CLAUDE.md`；
 - [ ] 自动化增强。
 
@@ -91,4 +91,4 @@
 
 - [x] MNEMOSYNE-030C：RC-2026Q2-initial 研究动机 raw 补充与索引
 - [x] 记录 RC-2026Q2-initial 的研究动机
-- [ ] 用户 review raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+- [x] 用户通过 MNEMOSYNE-031 R1 接受 research motivation（决策 B，保留 review notes）

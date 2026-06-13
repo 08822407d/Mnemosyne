@@ -64,7 +64,7 @@
 
 18. 是否需要把 7 份研究报告的研究动机入库？
    - 结论：需要。MNEMOSYNE-030C 创建 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`，用于解释 7 份报告为什么存在、服务什么设计问题、如何约束 Mnemosyne，以及为什么研究报告和 motivation 都不是执行源。
-   - 状态：answered；仍需用户 review motivation 文件。
+   - 状态：answered；motivation 已在 MNEMOSYNE-031 R1 由用户选择 B 接受，并保留 review notes。
 
 19. 研究课题 prompt 原文应该放在哪里？
     - 结论：pro 深度研究 prompt 原文约定放在 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`。
