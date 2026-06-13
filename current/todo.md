@@ -1,5 +1,7 @@
 # TODO
 
+> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+
 ## v0.1-final
 
 - [x] 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
@@ -10,7 +12,7 @@
 - [x] MNEMOSYNE-030：研究报告 summary 与 PDF 图表复核准备；
 - [ ] 人工复核 PDF 中的图表和图片；
 - [ ] 根据人工复核结果更新 pdf-figure-review-index；
-- [ ] 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- [x] 用户通过 MNEMOSYNE-031 R3 接受 current-report-summaries 与 7 份 summaries 作为暂用文本证据入口（决策 B）；
 - [ ] 必要时将 PDF 转换为 Markdown / TXT；
 - [ ] 可选：执行一次新 ChatGPT 对话或第二个新 Codex 任务的只读回归验证（非阻断）。
 
@@ -44,9 +46,20 @@
 - [x] pro 深度研究 prompt 文件已放入约定路径；
 - [x] MNEMOSYNE-030E：research motivation / research prompts 状态同步与索引补账；
 - [x] MNEMOSYNE-030F：research prompt mapping 硬同步与 030E 结果纠偏；
-- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
-- [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
-- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
+- [x] MNEMOSYNE-031A：复核协议修正与用户设计构想重述准备
+- [x] 记录“研究报告主要供元 Agent 使用，不要求用户通读掌握全部报告”的复核前提
+- [x] 记录 MNEMOSYNE-031 增加用户设计构想重述流程
+- [x] MNEMOSYNE-031 Round 1：research motivation review（用户选择 B）
+- [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review（用户选择 B）
+- [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review（用户选择 B）
+- [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
+- [x] MNEMOSYNE-031 R1-R3 / R4A checkpoint writeback
+- [x] R1-R3 and R4A have been persisted in the MNEMOSYNE-031 checkpoint record. Continue from R4B: `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
+- [ ] MNEMOSYNE-031 Round 4B：用户按清单口语化重述（用户延期）
+- [ ] 从 R4B 恢复，不要从 R1 重新开始，也不要重新生成 R4A
+- [ ] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果（未生成）
+- [ ] MNEMOSYNE-031 Round 5：汇总 R1-R4 结果，生成给 Codex 的最终 combined writeback package（未生成）
+- [ ] R4B / R4C 完成并经用户确认后，再创建用户设计构想重述记录
 - [ ] 如果未来找回轻度研究 prompt，更新 research-prompt-index；
 - [x] 三类模板包 review 清单；
 - [x] 首个目标项目场景候选矩阵；
@@ -60,7 +73,7 @@
 - [ ] 隐私分级；
 - [ ] Evidence Item 模板；
 - [ ] delta report 模板；
-- [ ] 用户 review report summaries / PDF 图表人工复核；
+- [ ] PDF 图表 / 图片 / 版式人工复核（report summaries 已在 R3 以决策 B 接受为暂用文本证据入口）；
 - [ ] `AGENTS.md` / `CLAUDE.md`；
 - [ ] 自动化增强。
 
@@ -79,4 +92,4 @@
 
 - [x] MNEMOSYNE-030C：RC-2026Q2-initial 研究动机 raw 补充与索引
 - [x] 记录 RC-2026Q2-initial 的研究动机
-- [ ] 用户 review raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+- [x] 用户通过 MNEMOSYNE-031 R1 接受 research motivation（决策 B，保留 review notes）
