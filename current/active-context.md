@@ -4,7 +4,7 @@
 
 研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 用户构想重述 / 人工复核 / dry-run 决策。
 
-## 当前目标
+## MNEMOSYNE-031 current status
 
 当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态，并按 MNEMOSYNE-031A 修正复核协议：
 
@@ -131,7 +131,7 @@
 - `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
 - `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 
-## 下一步建议
+## Next step / 下一步
 
 1. 普通 ChatGPT 执行 MNEMOSYNE-031 R1-R3 研究材料复核；
 2. 执行 R4A-R4C 用户设计构想重述；
