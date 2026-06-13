@@ -1,5 +1,7 @@
 # TODO
 
+> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+
 ## v0.1-final
 
 - [x] 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
@@ -44,9 +46,18 @@
 - [x] pro 深度研究 prompt 文件已放入约定路径；
 - [x] MNEMOSYNE-030E：research motivation / research prompts 状态同步与索引补账；
 - [x] MNEMOSYNE-030F：research prompt mapping 硬同步与 030E 结果纠偏；
-- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
-- [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
-- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
+- [x] MNEMOSYNE-031A：复核协议修正与用户设计构想重述准备
+- [x] 记录“研究报告主要供元 Agent 使用，不要求用户通读掌握全部报告”的复核前提
+- [x] 记录 MNEMOSYNE-031 增加用户设计构想重述流程
+- [x] MNEMOSYNE-031 Round 1：research motivation review（用户选择 B）
+- [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review（用户选择 B）
+- [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review（用户选择 B）
+- [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
+- [x] MNEMOSYNE-031 R1-R3 / R4A checkpoint writeback
+- [ ] MNEMOSYNE-031 Round 4B：用户按清单口语化重述（用户延期）
+- [ ] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果（未生成）
+- [ ] MNEMOSYNE-031 Round 5：最终 combined writeback package（未生成）
+- [ ] R4B / R4C 完成并经用户确认后，再创建用户设计构想重述记录
 - [ ] 如果未来找回轻度研究 prompt，更新 research-prompt-index；
 - [x] 三类模板包 review 清单；
 - [x] 首个目标项目场景候选矩阵；
