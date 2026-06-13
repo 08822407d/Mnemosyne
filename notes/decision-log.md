@@ -498,3 +498,38 @@
 - 理由：研究动机是设计演化审计材料；新研究或三个月后的 refresh 应创建新 cycle 和 delta report，而不是覆盖历史动机。
 - 状态：accepted
 - 来源：RAW-0046 / MNEMOSYNE-030C
+
+## DEC-0074
+
+- 决策：执行 MNEMOSYNE-031A，记录复核协议修正与用户设计构想重述准备。
+- 理由：MNEMOSYNE-031 普通对话复核前需要明确报告使用对象、元 Agent 责任和用户重述边界。
+- 状态：accepted
+- 来源：RAW-0052 / MNEMOSYNE-031A
+
+## DEC-0075
+
+- 决策：修正 MNEMOSYNE-031 review 前提，不假定用户已经通读或验证全部研究报告；报告主要供元 Agent 作为高权重证据层使用。
+- 理由：用户接受证据入口不等于用户亲自验证全部研究结论，元 Agent 应主动承担证据分析责任。
+- 状态：accepted
+- 来源：RAW-0052 / MNEMOSYNE-031A
+
+## DEC-0076
+
+- 决策：MNEMOSYNE-031 加入 R4A-R4C 用户设计构想重述流程。
+- 理由：用户原始构想经过多轮讨论形成，应先由 AI 整理清单，再让用户口语化重述并结构化整理。
+- 状态：accepted
+- 来源：RAW-0052 / MNEMOSYNE-031A
+
+## DEC-0077
+
+- 决策：用户重述不是原始需求、不是最终设计、不是执行源，不得直接覆盖 `current/human-approved-spec.md`。
+- 理由：重述是当前时点的 raw user intent evidence，可能与最初版本不同，仍需冲突分析、研究校验和用户确认。
+- 状态：accepted
+- 来源：RAW-0052 / MNEMOSYNE-031A
+
+## DEC-0078
+
+- 决策：后续写回 MNEMOSYNE-031 review record / user design restatement record 必须经用户明确确认。
+- 理由：普通 ChatGPT 对话中的 R1-R4 结果在确认前只是待审材料，不能自动写回或升级为执行源。
+- 状态：accepted
+- 来源：RAW-0052 / MNEMOSYNE-031A
