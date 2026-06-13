@@ -2,22 +2,29 @@
 
 ## 当前阶段
 
-MNEMOSYNE-031 已完成 R1-R3 研究材料复核和 R4A 用户设计构想待重述清单，并已创建阶段性 checkpoint；R4B 由用户延期，R4C 尚未生成，最终 R5 写回包尚未生成。
+研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 用户构想重述 / 人工复核 / dry-run 决策。
 
 ## MNEMOSYNE-031 current status
 
-当前状态以 MNEMOSYNE-031 checkpoint 为准：
+当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态，并按 MNEMOSYNE-031A 修正复核协议：
 
-- R1 Research Motivation Review: completed; user decision B; accepted with review notes.
-- R2 Research Prompts and Topic Mapping Review: completed; user decision B; accepted with review notes.
-- R3 Report Summaries Review: completed; user decision B; accepted with review notes.
-- R4A User Design Intent Restatement Prompt List: completed.
-- R4B User Oral Restatement: pending / deferred.
-- R4C User Design Intent Restatement Result: not generated.
-- R5 Combined Final Writeback Package: not generated.
-- checkpoint 已写入 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`。
+- MNEMOSYNE-031 review 将通过普通 ChatGPT 对话执行；
+- review 不假定用户已通读研究报告；研究报告主要作为元 Agent 的高权重证据层；
+- 元 Agent 应基于报告进行可行性评价、能力边界确认、当前实践对照和现代化优化建议；
+- MNEMOSYNE-031 增加用户设计构想重述流程：先由 AI 整理待重述清单，再由用户口语化重述；
+- 重述结果不是原始需求、不是最终设计、不是执行源；
 
-该 checkpoint 不是执行源，不是最终 R5 写回包，也不包含用户设计构想重述结果。R1-R3 的确认不等于全面验证全部报告或未复核的 PDF 图表 / 图片 / 版式。
+后续材料复核包括：
+
+- MNEMOSYNE-031 R1-R3 研究材料复核；
+- MNEMOSYNE-031 R4A-R4C 用户设计构想重述；
+- 用户 review `raw/research-reports/current/current-research-prompts.md`；
+- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
+- 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
+- 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核；
+- 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
+- 如果未来找回轻度研究 prompt，更新 research-prompt-index；
+- 再决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
 
 ## 当前执行源
 
@@ -34,7 +41,6 @@ MNEMOSYNE-031 已完成 R1-R3 研究材料复核和 R4A 用户设计构想待重
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
-- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
 - future MNEMOSYNE-031 review record
 - future user design restatement record
 - `notes/candidate-requirements.md`
@@ -77,8 +83,7 @@ MNEMOSYNE-031 已完成 R1-R3 研究材料复核和 R4A 用户设计构想待重
 - `raw/research-reports/current/current-research-prompts.md` 已创建；
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
-- MNEMOSYNE-031 R1-R3 已完成并由用户选择 B；R4A prompt list 已完成；
-- MNEMOSYNE-031 R1-R3 / R4A checkpoint 已创建，但它不是最终 R5 写回包；
+- MNEMOSYNE-031A 已建立研究复核与用户构想重述协议，但尚未执行 review 或生成 review / restatement record；
 
 ## 当前未完成内容
 
@@ -113,7 +118,6 @@ MNEMOSYNE-031 已完成 R1-R3 研究材料复核和 R4A 用户设计构想待重
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
 - `notes/research-review-and-user-intent-restatement-workflow.md`
-- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
@@ -129,10 +133,7 @@ MNEMOSYNE-031 已完成 R1-R3 研究材料复核和 R4A 用户设计构想待重
 
 ## Next step / 下一步
 
-1. Resume MNEMOSYNE-031 from R4B User Oral Restatement when the user is ready.
-2. Do not restart R1-R3.
-3. Do not regenerate R4A unless the user explicitly asks.
-4. After R4B, generate R4C from the user's oral restatement and wait for confirmation.
-5. After R4C, generate the final R5 combined writeback package.
-6. After R5, decide PDF figure review / first dry-run / Idea Capture Buffer.
-7. Do not create a user design restatement record until R4B / R4C are complete and the user confirms.
+1. 普通 ChatGPT 执行 MNEMOSYNE-031 R1-R3 研究材料复核；
+2. 执行 R4A-R4C 用户设计构想重述；
+3. 将 R1-R4 结果交给 Codex 或手工写入 review record / restatement record；
+4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。
