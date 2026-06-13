@@ -87,9 +87,9 @@
 
 ## 当前未完成内容
 
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
-- 用户 review 7 份 report summaries；
-- 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- MNEMOSYNE-031 R4B 用户口语化重述；
+- MNEMOSYNE-031 R4C 用户构想重述结果；
+- MNEMOSYNE-031 R5 最终 combined writeback package；
 - 人工复核 PDF 图表 / 图片；
 - 根据复核结果更新 figure review index；
 - 用户 review `notes/delivery-manifest-template-pack.md`；
@@ -102,8 +102,6 @@
 - Idea Capture Buffer；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
-- 用户 review `raw/research-reports/current/current-research-prompts.md`；
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
 - 如果未来找回轻度研究 prompt，更新 `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`；
 
 ## 当前最重要文件

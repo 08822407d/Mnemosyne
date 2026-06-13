@@ -1,5 +1,7 @@
 # Open Questions
 
+> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+
 ## answered
 
 1. startup-instructions 应放在 `current/` 还是 `handoff/`？
@@ -86,9 +88,19 @@
 
 ## open
 
+25. 用户是否接受 MNEMOSYNE-031 R2 Research Prompts and Topic Mapping Review？
+    - 结论：接受 B。pro prompt 可追溯；6 个轻度 prompt 继续标记缺失且不得编造；inferred topic titles 只作追踪辅助。
+    - 状态：answered。
 
-0. 用户是否接受 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`？
-   - 说明：MNEMOSYNE-030C 已创建 research motivation 文件，但需要用户 review，确认其是否准确保留研究动机、边界和后续读取顺序。
+26. 用户是否接受 MNEMOSYNE-031 R3 Report Summaries Review？
+    - 结论：接受 B。7 份 summaries 可作为暂用文本证据入口，但不是执行源。
+    - 状态：answered；RPT-2026Q2-0002 至 RPT-2026Q2-0007 的 PDF 图表 / 图片 / 版式仍待人工复核。
+
+27. MNEMOSYNE-031 R4A 是否完成？
+    - 结论：已完成用户设计构想待重述 prompt list。
+    - 状态：answered；该清单不包含用户回答或用户设计构想重述结果。
+
+## open
 
 
 1. 用户是否接受 `notes/template-pack-review-and-first-scenario-selection.md`？
@@ -105,9 +117,6 @@
 
 5. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
-
-6. 用户是否接受当前 7 份 report summaries？
-   - 说明：7 份 report summaries 与 current-report-summaries 已建立，但仍需用户 review。
 
 7. 哪些 PDF 图表 / 图片需要优先人工复核？
    - 说明：RPT-2026Q2-0002 ~ RPT-2026Q2-0007 均为 pending_manual_review。
@@ -136,7 +145,6 @@
 15. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
    - 说明：当前可按需回查；是否拆分仍待决定。
 
-16. 用户是否接受 current-research-prompts / report-topic-and-prompt-map？
 17. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
 18. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？
 19. 用户是否接受 research motivation？

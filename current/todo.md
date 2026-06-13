@@ -1,5 +1,7 @@
 # TODO
 
+> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+
 ## v0.1-final
 
 - [x] 用户 review `notes/v0.1-final-review.md` 和关键接手文件；
