@@ -86,9 +86,7 @@
     - 结论：需要。由于用户记忆不强且原始构想经过多轮讨论形成，应先由 AI 整理待重述清单，再由用户口语化重述，最后整理为 raw user intent evidence。
     - 状态：answered；用户重述不是原始需求、最终设计或执行源。
 
-24. 用户是否接受 MNEMOSYNE-031 R1 Research Motivation Review？
-    - 结论：接受 B。motivation 基本可接受，并保留 checkpoint 中的 review notes。
-    - 状态：answered；不代表用户已通读 7 份报告，也不代表 PDF 图表 / 图片 / 版式已验证。
+## open
 
 25. 用户是否接受 MNEMOSYNE-031 R2 Research Prompts and Topic Mapping Review？
     - 结论：接受 B。pro prompt 可追溯；6 个轻度 prompt 继续标记缺失且不得编造；inferred topic titles 只作追踪辅助。
@@ -137,12 +135,11 @@
 
 17. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
 18. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？
+19. 用户是否接受 research motivation？
+20. 用户是否接受 prompt mapping？
+21. 用户是否接受 summaries 作为暂用文本证据入口？
+22. 用户设计构想重述清单应覆盖哪些方面？
 23. 用户重述后哪些内容可进入 candidate requirements？
 24. 哪些用户构想需要研究报告校验？
 25. 哪些用户构想可能落后、过于理想化或与现有设计冲突？
-26. 用户何时准备恢复 MNEMOSYNE-031 R4B 口语化重述？
-27. R4B 完成后，用户是否确认生成 R4C 用户设计构想重述结果？
-28. R4C 确认后，何时生成最终 R5 combined writeback package？
-29. R4 / R5 完成后，应优先进入 PDF 图表 / 图片 / 版式复核、首个 dry-run、Idea Capture Buffer，还是 template small fixes？
-30. 哪些具有时效性的产品 / 工具能力陈述需要在高影响使用前优先 refresh？
-31. R4B / R4C 完成并经用户确认后，是否创建 `raw/user-design-restatements/` 目录及正式用户设计构想重述记录？
+26. 是否需要创建 `raw/user-design-restatements/` 目录？
