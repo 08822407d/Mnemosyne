@@ -124,20 +124,8 @@
 8. 人工复核结果是否会影响目标项目模板或 capability boundaries？
    - 说明：若复核发现关键差异，可能需要登记后续修正任务。
 
-9. 是否在进入首个目标项目 dry-run 前完成全部 PDF 图表复核，还是只复核相关部分？
-   - 说明：可先复核与首个目标项目设计直接相关的图表 / 图片。
-
-10. 是否选择第一个目标项目场景作为模板试用？
-   - 说明：整套 self-improvement / target project / delivery manifest 模板已经建立基础版本，下一步可选择一个真实、半真实或玩具目标项目场景试用。
-
 11. 第一个目标项目模板优先服务哪类场景？
    - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话 / 知识管理、多 Agent 团队或混合未知场景，尚未由用户确认。
-
-12. 是否先小修某个 template pack？
-   - 说明：用户可能选择先小修 delivery manifest、target project 或 self-improvement template pack，而不是直接进入场景试用。
-
-13. 是否先做 Idea Capture Buffer？
-   - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于模板 review / 场景试用仍待决定。
 
 14. 是否需要更正式的隐私分级字段？
    - 说明：目标项目 intake 已包含 `privacy_level` 和 `sensitive_content_types`，但是否扩展为正式隐私分级体系仍待决定。
