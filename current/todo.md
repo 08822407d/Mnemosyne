@@ -49,17 +49,16 @@
 - [x] MNEMOSYNE-031A：复核协议修正与用户设计构想重述准备
 - [x] 记录“研究报告主要供元 Agent 使用，不要求用户通读掌握全部报告”的复核前提
 - [x] 记录 MNEMOSYNE-031 增加用户设计构想重述流程
-- [x] MNEMOSYNE-031 Round 1：research motivation review（用户选择 B）
-- [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review（用户选择 B）
-- [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review（用户选择 B）
-- [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
-- [x] MNEMOSYNE-031 R1-R3 / R4A checkpoint writeback
-- [x] R1-R3 与 R4A 已持久化到 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
-- [ ] MNEMOSYNE-031 Round 4B：用户按清单口语化重述（用户延期）
-- [ ] 从 R4B 恢复，不要从 R1 重新开始，也不要重新生成 R4A
-- [ ] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果（未生成）
-- [ ] MNEMOSYNE-031 Round 5：最终 combined writeback package（未生成）
-- [ ] R4B / R4C 完成并经用户确认后，再创建用户设计构想重述记录
+- [ ] MNEMOSYNE-031 Round 1：research motivation review
+- [ ] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review
+- [ ] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review
+- [ ] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
+- [ ] MNEMOSYNE-031 Round 4B：用户按清单口语化重述
+- [ ] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果
+- [ ] MNEMOSYNE-031 review / restatement 结果写回仓库
+- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
+- [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
+- [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
 - [ ] 如果未来找回轻度研究 prompt，更新 research-prompt-index；
 - [x] 三类模板包 review 清单；
 - [x] 首个目标项目场景候选矩阵；

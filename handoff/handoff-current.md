@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-MNEMOSYNE-031 已完成 R1-R3（用户均选择 B）和 R4A prompt list，并已创建 checkpoint；R4B 由用户延期，R4C 尚未生成，最终 R5 写回包尚未生成。
+研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，当前阶段包含用户构想重述，等待 review / 用户构想重述 / 人工复核 / dry-run 决策。
 
 ## 当前执行源
 
@@ -27,7 +27,6 @@ MNEMOSYNE-031 已完成 R1-R3（用户均选择 B）和 R4A prompt list，并已
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
-- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
 - future MNEMOSYNE-031 review record
 - future user design restatement record
 - `notes/candidate-requirements.md`
@@ -64,16 +63,6 @@ MNEMOSYNE-031 已完成 R1-R3（用户均选择 B）和 R4A prompt list，并已
 
 MNEMOSYNE-031 增加用户构想重述：先由 AI 整理待重述清单，再由用户口语化重述。重述结果不是原始需求、不是最终设计、不是执行源。
 
-当前 checkpoint 状态：
-
-- R1-R3 已完成并由用户选择 B；
-- R4A prompt list 已完成；
-- R4B 用户口语化重述由用户延期；
-- R4C 未生成；
-- R5 最终 combined writeback package 未生成。
-
-checkpoint 不是执行源，不是最终 R5 写回包，也不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`。
-
 ## 新会话推荐读取顺序
 
 1. `README.md`
@@ -102,8 +91,7 @@ checkpoint 不是执行源，不是最终 R5 写回包，也不包含用户设�
 24. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 25. `raw/research-reports/current/current-report-summaries.md`
 26. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-27. `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
-28. `raw/concept-origin-extract-001.md` 按需回查
+27. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -116,8 +104,6 @@ checkpoint 不是执行源，不是最终 R5 写回包，也不包含用户设�
 - 不要把 research reports 当执行源；
 - 不要把 motivation / prompt / topic mapping 当执行源；
 - 不要把用户设计构想重述当原始需求、最终设计或执行源；
-- R4B / R4C 完成且用户确认前，不要创建用户设计构想重述记录；
-- 不要把 checkpoint 当作最终 MNEMOSYNE-031 R5 写回包；
 - 不要把 review 结果写回仓库，除非用户明确确认；
 - 不要编造缺失 prompt；
 - 不要把 candidate / decision / active-context / handoff / startup-instructions / template packs / review selection 文件当执行源；
@@ -125,9 +111,7 @@ checkpoint 不是执行源，不是最终 R5 写回包，也不包含用户设�
 
 ## 下一步建议
 
-1. 不要重启或重跑 R1-R3；这些轮次已经完成，并由用户选择 B 接受且保留 review notes；
-2. 不要重新生成 R4A，除非用户明确要求修改 prompt list；
-3. 用户准备好后，从 R4B 作为精确续接点继续：使用已完成的 R4A prompt list，请用户逐项进行口语化重述；
-4. R4B 完成后生成 R4C 用户设计构想重述结果，并等待用户确认；
-5. R4C 确认后生成最终 R5 combined writeback package；
-6. 在 R4B / R4C 完成并经用户确认前，不创建 `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-restatement.md`。
+1. 普通 ChatGPT 执行 MNEMOSYNE-031 R1-R3 研究材料复核；
+2. 执行 R4A-R4C 用户设计构想重述；
+3. 用户确认后，将 R1-R4 结果交给 Codex 或手工写入 review record / restatement record；
+4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。
