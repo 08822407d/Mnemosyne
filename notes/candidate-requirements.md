@@ -499,3 +499,38 @@
 - 状态：reflected
 - 来源：RAW-0046 / MNEMOSYNE-030C
 - 反映位置：raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+
+## CAND-0077
+
+- 内容：研究复核不得假定用户已经通读、掌握并校验全部研究报告。
+- 状态：reflected
+- 来源：RAW-0052 / MNEMOSYNE-031A
+- 反映位置：notes/research-review-and-user-intent-restatement-workflow.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0078
+
+- 内容：研究报告主要供元 Agent 作为高权重证据层，用于可行性评价、能力边界确认、已有实践对照和现代化优化建议。
+- 状态：reflected
+- 来源：RAW-0052 / MNEMOSYNE-031A
+- 反映位置：notes/research-review-and-user-intent-restatement-workflow.md
+
+## CAND-0079
+
+- 内容：用户设计构想重述属于 raw user intent evidence，不是原始需求、最终设计或执行源。
+- 状态：reflected
+- 来源：RAW-0052 / MNEMOSYNE-031A
+- 反映位置：notes/research-review-and-user-intent-restatement-workflow.md；current/active-context.md；handoff/handoff-current.md
+
+## CAND-0080
+
+- 内容：用户重述前应由 AI 整理待重述、待确认和待补充清单，再由用户按清单口语化回答。
+- 状态：reflected
+- 来源：RAW-0052 / MNEMOSYNE-031A
+- 反映位置：notes/research-review-and-user-intent-restatement-workflow.md
+
+## CAND-0081
+
+- 内容：用户构想中的假设、矛盾、落后点、过于理想化或科幻的部分应被标记并接受研究证据校验，不应直接升级为 spec。
+- 状态：reflected
+- 来源：RAW-0052 / MNEMOSYNE-031A
+- 反映位置：notes/research-review-and-user-intent-restatement-workflow.md

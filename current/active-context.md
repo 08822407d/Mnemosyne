@@ -2,20 +2,22 @@
 
 ## 当前阶段
 
-研究动机、研究课题 prompt mapping、report summaries 与 PDF 图表复核准备已建立，等待用户 review / 人工复核 / dry-run 决策。
+MNEMOSYNE-031 已完成 R1-R3 研究材料复核和 R4A 用户设计构想待重述清单，并已创建阶段性 checkpoint；R4B 由用户延期，R4C 尚未生成，最终 R5 写回包尚未生成。
 
 ## 当前目标
 
-当前目标是收口 MNEMOSYNE-030C / 030D / 030E / 030F 后的研究证据层状态：
+当前目标是保存 MNEMOSYNE-031 已确认的阶段成果，并等待用户恢复用户设计构想重述：
 
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
-- 用户 review `raw/research-reports/current/current-research-prompts.md`；
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
-- 用户 review `raw/research-reports/current/current-report-summaries.md` 与 7 份 report summaries；
-- 对依赖设计判断的 PDF 图表 / 图片 / 版式进行人工复核；
-- 根据复核结果更新 `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`；
-- 如果未来找回轻度研究 prompt，更新 research-prompt-index；
-- 再决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+- R1 Research Motivation Review：已完成，用户选择 B；
+- R2 Research Prompts and Topic Mapping Review：已完成，用户选择 B；
+- R3 Report Summaries Review：已完成，用户选择 B；
+- R4A User Design Intent Restatement Prompt List：已完成；
+- R4B 用户口语化重述：用户延期；
+- R4C 用户构想重述结果：未生成；
+- R5 最终 combined writeback package：未生成；
+- checkpoint 已写入 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`。
+
+该 checkpoint 不是执行源，不是最终 R5 写回包，也不包含用户设计构想重述结果。R1-R3 的确认不等于全面验证全部报告或未复核的 PDF 图表 / 图片 / 版式。
 
 ## 当前执行源
 
@@ -32,6 +34,9 @@
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
+- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
+- future MNEMOSYNE-031 review record
+- future user design restatement record
 - `notes/candidate-requirements.md`
 - `notes/decision-log.md`
 - `current/active-context.md`
@@ -43,6 +48,7 @@
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
+- `notes/research-review-and-user-intent-restatement-workflow.md`
 
 如发生冲突，以 `current/human-approved-spec.md` 为准，并登记 open question。
 
@@ -71,12 +77,14 @@
 - `raw/research-reports/current/current-research-prompts.md` 已创建；
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
+- MNEMOSYNE-031 R1-R3 已完成并由用户选择 B；R4A prompt list 已完成；
+- MNEMOSYNE-031 R1-R3 / R4A checkpoint 已创建，但它不是最终 R5 写回包；
 
 ## 当前未完成内容
 
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
-- 用户 review 7 份 report summaries；
-- 用户 review `raw/research-reports/current/current-report-summaries.md`；
+- MNEMOSYNE-031 R4B 用户口语化重述；
+- MNEMOSYNE-031 R4C 用户构想重述结果；
+- MNEMOSYNE-031 R5 最终 combined writeback package；
 - 人工复核 PDF 图表 / 图片；
 - 根据复核结果更新 figure review index；
 - 用户 review `notes/delivery-manifest-template-pack.md`；
@@ -89,8 +97,6 @@
 - Idea Capture Buffer；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
-- 用户 review `raw/research-reports/current/current-research-prompts.md`；
-- 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
 - 如果未来找回轻度研究 prompt，更新 `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`；
 
 ## 当前最重要文件
@@ -106,6 +112,8 @@
 - `notes/target-project-memory-system-template-pack.md`
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
+- `notes/research-review-and-user-intent-restatement-workflow.md`
+- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R1-R3-and-R4A-checkpoint.md`
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
@@ -121,6 +129,9 @@
 
 ## 下一步建议
 
-1. 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`、`raw/research-reports/current/current-research-prompts.md` 和 `raw/research-reports/current/current-report-summaries.md`；
-2. 决定是否先人工复核与目标项目设计相关的 PDF 图表 / 图片 / 版式；
-3. 决定进入首个目标项目 dry-run，还是先做 Idea Capture Buffer / 小修模板。
+1. 用户准备好后从 MNEMOSYNE-031 R4B 恢复，不要重跑 R1-R3 或重新生成 R4A；
+2. 使用已完成的 R4A prompt list，请用户进行 R4B 口语化重述；
+3. R4B 完成后生成 R4C 用户设计构想重述结果，并等待用户确认；
+4. R4C 确认后生成最终 R5 combined writeback package；
+5. R5 完成后，再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer；
+6. R4B / R4C 完成且用户确认前，不创建用户设计构想重述记录。

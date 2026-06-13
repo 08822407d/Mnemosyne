@@ -1,5 +1,7 @@
 # Open Questions
 
+> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+
 ## answered
 
 1. startup-instructions 应放在 `current/` 还是 `handoff/`？
@@ -62,7 +64,7 @@
 
 18. 是否需要把 7 份研究报告的研究动机入库？
    - 结论：需要。MNEMOSYNE-030C 创建 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`，用于解释 7 份报告为什么存在、服务什么设计问题、如何约束 Mnemosyne，以及为什么研究报告和 motivation 都不是执行源。
-   - 状态：answered；仍需用户 review motivation 文件。
+   - 状态：answered；motivation 已在 MNEMOSYNE-031 R1 由用户选择 B 接受，并保留 review notes。
 
 19. 研究课题 prompt 原文应该放在哪里？
     - 结论：pro 深度研究 prompt 原文约定放在 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/AI_agent_external_persistent_memory_deep_research_prompt_pro.md`。
@@ -76,11 +78,31 @@
     - 结论：需要。MNEMOSYNE-030F 负责补齐 current 索引、active-context、handoff、todo、open-questions 的状态。
     - 状态：answered；MNEMOSYNE-030G-MANUAL 用于手工修正 030F 后仍残留的状态不同步。
 
+22. 研究报告 review 是否应假定用户已通读和理解全部报告？
+    - 结论：不应假定。研究报告主要供 Mnemosyne 元 Agent 作为高权重证据层使用；用户接受证据入口，不等于亲自验证全部报告结论。
+    - 状态：answered。
+
+23. MNEMOSYNE-031 是否需要加入用户设计构想重述？
+    - 结论：需要。由于用户记忆不强且原始构想经过多轮讨论形成，应先由 AI 整理待重述清单，再由用户口语化重述，最后整理为 raw user intent evidence。
+    - 状态：answered；用户重述不是原始需求、最终设计或执行源。
+
+24. 用户是否接受 MNEMOSYNE-031 R1 Research Motivation Review？
+    - 结论：接受 B。motivation 基本可接受，并保留 checkpoint 中的 review notes。
+    - 状态：answered；不代表用户已通读 7 份报告，也不代表 PDF 图表 / 图片 / 版式已验证。
+
+25. 用户是否接受 MNEMOSYNE-031 R2 Research Prompts and Topic Mapping Review？
+    - 结论：接受 B。pro prompt 可追溯；6 个轻度 prompt 继续标记缺失且不得编造；inferred topic titles 只作追踪辅助。
+    - 状态：answered。
+
+26. 用户是否接受 MNEMOSYNE-031 R3 Report Summaries Review？
+    - 结论：接受 B。7 份 summaries 可作为暂用文本证据入口，但不是执行源。
+    - 状态：answered；RPT-2026Q2-0002 至 RPT-2026Q2-0007 的 PDF 图表 / 图片 / 版式仍待人工复核。
+
+27. MNEMOSYNE-031 R4A 是否完成？
+    - 结论：已完成用户设计构想待重述 prompt list。
+    - 状态：answered；该清单不包含用户回答或用户设计构想重述结果。
+
 ## open
-
-
-0. 用户是否接受 `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`？
-   - 说明：MNEMOSYNE-030C 已创建 research motivation 文件，但需要用户 review，确认其是否准确保留研究动机、边界和后续读取顺序。
 
 
 1. 用户是否接受 `notes/template-pack-review-and-first-scenario-selection.md`？
@@ -98,29 +120,14 @@
 5. self-improvement template pack 是否需要拆成多个独立模板文件？
    - 说明：当前先采用单文件模板包；是否拆分仍待用户 review 后决定。
 
-6. 用户是否接受当前 7 份 report summaries？
-   - 说明：7 份 report summaries 与 current-report-summaries 已建立，但仍需用户 review。
-
 7. 哪些 PDF 图表 / 图片需要优先人工复核？
    - 说明：RPT-2026Q2-0002 ~ RPT-2026Q2-0007 均为 pending_manual_review。
 
 8. 人工复核结果是否会影响目标项目模板或 capability boundaries？
    - 说明：若复核发现关键差异，可能需要登记后续修正任务。
 
-9. 是否在进入首个目标项目 dry-run 前完成全部 PDF 图表复核，还是只复核相关部分？
-   - 说明：可先复核与首个目标项目设计直接相关的图表 / 图片。
-
-10. 是否选择第一个目标项目场景作为模板试用？
-   - 说明：整套 self-improvement / target project / delivery manifest 模板已经建立基础版本，下一步可选择一个真实、半真实或玩具目标项目场景试用。
-
 11. 第一个目标项目模板优先服务哪类场景？
    - 说明：候选场景包括长期研究、学习系统、源码学习、软件开发项目、AI Agent 项目、个人长期对话 / 知识管理、多 Agent 团队或混合未知场景，尚未由用户确认。
-
-12. 是否先小修某个 template pack？
-   - 说明：用户可能选择先小修 delivery manifest、target project 或 self-improvement template pack，而不是直接进入场景试用。
-
-13. 是否先做 Idea Capture Buffer？
-   - 说明：Idea Capture Buffer 可能改善临时想法进入流程，但是否优先于模板 review / 场景试用仍待决定。
 
 14. 是否需要更正式的隐私分级字段？
    - 说明：目标项目 intake 已包含 `privacy_level` 和 `sensitive_content_types`，但是否扩展为正式隐私分级体系仍待决定。
@@ -128,6 +135,14 @@
 15. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
    - 说明：当前可按需回查；是否拆分仍待决定。
 
-16. 用户是否接受 current-research-prompts / report-topic-and-prompt-map？
 17. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
 18. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？
+23. 用户重述后哪些内容可进入 candidate requirements？
+24. 哪些用户构想需要研究报告校验？
+25. 哪些用户构想可能落后、过于理想化或与现有设计冲突？
+26. 用户何时准备恢复 MNEMOSYNE-031 R4B 口语化重述？
+27. R4B 完成后，用户是否确认生成 R4C 用户设计构想重述结果？
+28. R4C 确认后，何时生成最终 R5 combined writeback package？
+29. R4 / R5 完成后，应优先进入 PDF 图表 / 图片 / 版式复核、首个 dry-run、Idea Capture Buffer，还是 template small fixes？
+30. 哪些具有时效性的产品 / 工具能力陈述需要在高影响使用前优先 refresh？
+31. R4B / R4C 完成并经用户确认后，是否创建 `raw/user-design-restatements/` 目录及正式用户设计构想重述记录？
