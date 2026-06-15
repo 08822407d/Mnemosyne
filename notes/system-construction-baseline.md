@@ -126,6 +126,8 @@ self-improvement workflow 要解决：
 - 如果现有任务干净、基于最新 master、没有未合并改动，可以继续使用；
 - 如果任务目标是验证新任务能否接手、现有任务状态不明、已有未合并改动、分支不是最新，或需要隔离上下文，则必须新开；
 - 后续 Codex 任务内容应优先作为 `.txt` 文件提供，避免聊天代码块嵌套导致复制不完整；
+- Codex 文件修改任务不得只依赖自然语言完成声明，应要求 `git status --short`、`git diff HEAD --stat`、`git diff HEAD --name-only` 和关键目标文件 diff；
+- 多文件、高风险、清理 stale text、入口文件状态修复任务，优先使用 exact replacement blocks 或 patch script；
 - 任务完成后必须写入 Codex Task Result Record：`notes/codex-task-results/TASK_ID-result.md`；
 - Codex Task Result Record 不是执行源；
 - 最终判断仍以 Git diff、仓库文件、用户 review 和必要验证为准。

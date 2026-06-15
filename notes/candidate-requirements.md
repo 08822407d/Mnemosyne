@@ -550,3 +550,16 @@ All entries in this section are candidate requirements unless separately promote
 - CR-09: Development-project memory template.
 - CR-10: Upstream Agent-team design document interface.
 - CR-11: Memory-system testing / feedback / debugging / troubleshooting workflow.
+
+## MNEMOSYNE-032 candidate / reflected workflow guardrail
+
+- 内容：Codex 文件修改任务应使用 diff-based verification；多文件、高风险、清理 stale text、入口状态修复任务应优先使用 exact replacement blocks 或 patch script，避免自然语言描述导致 Codex 未实际修改全部目标文件。
+- 状态：reflected
+- 来源：MNEMOSYNE-031 post-checkpoint consistency cleanup / hard-fix 经验
+- 反映位置：
+  - `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+  - `handoff/startup-instructions.md`
+  - `notes/self-improvement-workflow.md`
+  - `notes/self-improvement-template-pack.md`
+  - `notes/system-construction-baseline.md`
+  - `handoff/handoff-current.md`
