@@ -143,3 +143,9 @@ The result-record placeholder marker check returned no matches after this file w
 - It does not introduce automation.
 - It does not modify the current execution source.
 - Future Codex file-editing tasks still need to explicitly include and enforce these diff verification rules in their prompts.
+
+## reviewer_correction_after_MNEMOSYNE_032D
+
+A later default-branch inspection found that MNEMOSYNE-032 / MNEMOSYNE-032B / MNEMOSYNE-032C result records were not enough by themselves to prove that the final default branch contained the visible handoff reminder and active-context status correction.
+
+MNEMOSYNE-032D was created as a direct-command master-entry fix. Future review should verify the final default branch files directly, not only the task result prose or an intermediate branch/commit.
