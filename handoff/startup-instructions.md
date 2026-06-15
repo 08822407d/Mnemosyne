@@ -85,15 +85,9 @@
 - PDF 图表和图片仍需人工复核；
 - 研究证据具有时效性，未来通过新 research cycle 和 delta report 更新。
 
-## 5.1 Codex / ChatGPT task verification reminder
+## 5.1 Codex task authoring and diff verification rule
 
-MNEMOSYNE-031 showed that natural-language Codex task descriptions may fail to produce all intended file edits. For future repository-editing tasks, read:
-
-- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
-
-When generating or executing Codex tasks that modify files, require actual diff evidence: `git status --short`, `git diff HEAD --stat`, `git diff HEAD --name-only`, targeted `git diff HEAD -- <target files>`, protected-file checks, and task result records comparing intended files with actual changed files.
-
-Detailed Codex task authoring and diff verification rule:
+MNEMOSYNE-031 revealed that Codex may not reliably apply every intended file edit when a task is described only in natural language.
 
 For any Codex task that modifies repository files:
 
