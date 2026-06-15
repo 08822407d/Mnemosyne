@@ -1,6 +1,6 @@
 # TODO
 
-> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+> MNEMOSYNE-031 final checkpoint records are non-execution-source review/restatement records. Current execution source remains `current/human-approved-spec.md`.
 
 ## v0.1-final
 
@@ -53,11 +53,11 @@
 - [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review
 - [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review
 - [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
-- [ ] MNEMOSYNE-031 Round 4B：用户按清单口语化重述
-- [ ] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果
-- [ ] MNEMOSYNE-031 Round 5：汇总 R1-R4 结果，生成给 Codex 的写回包
+- [x] MNEMOSYNE-031 Round 4B：用户按清单口语化重述 / user restatement records
+- [x] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果 / R4C synthesis
+- [x] MNEMOSYNE-031 Round 5：D-01 to D-07 user decision review and checkpoint records
 
-R1-R3 and R4A were persisted in the MNEMOSYNE-031 checkpoint record. Continue from R4B.
+MNEMOSYNE-031 R1-R5 final checkpoint records are now persisted; do not regenerate R4B/R4C.
 - [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
 - [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
 - [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
@@ -94,3 +94,23 @@ R1-R3 and R4A were persisted in the MNEMOSYNE-031 checkpoint record. Continue fr
 - [x] MNEMOSYNE-030C：RC-2026Q2-initial 研究动机 raw 补充与索引
 - [x] 记录 RC-2026Q2-initial 的研究动机
 - [x] 用户通过 MNEMOSYNE-031 R1 接受 research motivation（决策 B，保留 review notes）
+
+## MNEMOSYNE-031 final checkpoint update
+
+Completed:
+
+- [x] MNEMOSYNE-031 R1 review
+- [x] MNEMOSYNE-031 R2 review
+- [x] MNEMOSYNE-031 R3 review
+- [x] MNEMOSYNE-031 R4A prompt list
+- [x] MNEMOSYNE-031 R4B user restatement records
+- [x] MNEMOSYNE-031 R4B manifest
+- [x] MNEMOSYNE-031 R4C synthesis
+- [x] MNEMOSYNE-031 R5 user decision review
+- [x] MNEMOSYNE-031 checkpoint records
+
+Pending / next:
+
+- [ ] decide next route: PDF figure review / first dry-run / Idea Capture Buffer / small fixes
+- [ ] design future execution-source promotion workflow
+- [ ] research memory-system testing/debugging feasibility
