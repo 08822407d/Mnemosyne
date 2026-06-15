@@ -311,17 +311,17 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 ## 11. 后续阶段建议
 
-建议后续路线按以下顺序推进：
+MNEMOSYNE-031 final checkpoint 已完成。旧路线中“先 review report summaries”的状态已经被 MNEMOSYNE-031 R1-R3/R4/R5 checkpoint 覆盖：report summaries 已被用户接受为暂用文本证据入口，但 PDF 图表 / 图片 / 版式仍待人工复核。
 
-1. 用户 review report summaries；
-2. 人工复核相关 PDF 图表 / 图片；
-3. 选择第一个目标项目场景；
-4. 第一轮 dry-run intake；
-5. Idea Capture Buffer；
-6. AGENTS.md / CLAUDE.md；
-7. 自动化增强。
+当前建议路线由用户选择：
 
-当前研究报告 summary 层和 PDF 图表复核索引已建立。下一步应先由用户 review `raw/research-reports/current/current-report-summaries.md`，并按目标项目设计依赖程度决定优先复核哪些 PDF 图表 / 图片。
+1. PDF figure/table/image review decision；
+2. first dry-run using Mnemosyne itself or a small target scenario；
+3. Idea Capture Buffer / candidate requirements cleanup；
+4. template pack review / small fixes as needed。
+
+如果后续设计依赖 PDF visual/table evidence，应先执行相关 PDF 图表 / 图片人工复核并更新 `pdf-figure-review-index.md`。
+如果目标是验证 MNEMOSYNE-031 新确认的记忆层原则，优先考虑小型 Mnemosyne self-validation dry-run。
 
 ### MNEMOSYNE-025C 或后续清理任务
 
@@ -447,6 +447,8 @@ Codex 的完成总结不能作为最终依据。
 - 后续研究 refresh 应创建新 cycle 和 delta report，不覆盖 `RC-2026Q2-initial` 的历史研究动机。
 
 ## MNEMOSYNE-031A 更新：研究复核与用户构想重述
+
+> Supersession note: this section records the earlier MNEMOSYNE-031A state before the final R4B/R4C/R5 checkpoint. For current continuation, use `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md` and the `MNEMOSYNE-031 final checkpoint roadmap update` section below.
 
 - MNEMOSYNE-031 review 不假定用户已通读、掌握或验证全部研究报告；研究报告主要供元 Agent 作为高权重证据层使用。
 - 元 Agent 应基于研究证据进行可行性评价、能力边界确认、已有实践对照和现代化优化建议，并标记过时、低效、过于理想化或过于科幻的构想。

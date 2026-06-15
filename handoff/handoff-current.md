@@ -65,12 +65,12 @@ MNEMOSYNE-031 增加用户构想重述：先由 AI 整理待重述清单，再�
 
 ## MNEMOSYNE-031 continuation point
 
-MNEMOSYNE-031 has a checkpoint record.
+MNEMOSYNE-031 has reached the final writeback checkpoint.
 
 Completed:
-- R1 Research Motivation Review: user decision B.
-- R2 Research Prompts and Topic Mapping Review: user decision B.
-- R3 Report Summaries Review: user decision B.
+- R1 Research Motivation Review.
+- R2 Research Prompts and Topic Mapping Review.
+- R3 Report Summaries Review.
 - R4A User Design Intent Restatement Prompt List.
 
 Pending:

@@ -79,7 +79,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - delivery manifest template pack 已在 MNEMOSYNE-028 完成后进入用户 review / 小修阶段；
 - MNEMOSYNE-029 已创建三类模板包 review 清单与首个目标项目场景候选矩阵；
 - MNEMOSYNE-030 / MNEMOSYNE-030A 已建立 report summaries、current-report-summaries 和 pdf-figure-review-index；
-- 下一步应由用户 review report summaries，人工复核相关 PDF 图表 / 图片，并选择第一个目标项目场景或决定先做 Idea Capture Buffer / 小修模板。
+- MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；R4B/R4C/R5 不应重生成。当前下一路线由用户选择：PDF 图表复核、首次 dry-run、Idea Capture Buffer / candidate cleanup，或必要的模板包 review / 小修。
 
 ## 5. self-improvement workflow 的目标
 
@@ -147,15 +147,18 @@ self-improvement workflow 要解决：
 
 ## 8. 后续路线
 
-建议后续路线：
+MNEMOSYNE-031 final checkpoint 已完成。当前建议路线不再从 R4B/R4C/R5 或 report summary review 重新开始。
 
-1. 用户 review report summaries；
-2. 人工复核相关 PDF 图表 / 图片；
-3. 选择第一个目标项目场景；
-4. 第一轮 dry-run intake；
-5. Idea Capture Buffer；
-6. AGENTS.md / CLAUDE.md；
-7. 自动化增强。
+后续路线由用户选择：
+
+1. PDF 图表 / 图片 / 版式人工复核；
+2. 首次 dry-run using Mnemosyne itself or a small target scenario；
+3. Idea Capture Buffer / candidate requirements cleanup；
+4. 三类模板包 review / small fixes；
+5. 后续再考虑 AGENTS.md / CLAUDE.md；
+6. 自动化增强。
+
+如果后续任务依赖 PDF 图表 / 图片证据，应先完成相关人工复核并更新 `pdf-figure-review-index.md`。如果目标是验证新确认的记忆层原则，优先考虑小型 Mnemosyne self-validation dry-run。
 
 ## 9. 当前不应直接做的事
 
@@ -191,6 +194,8 @@ self-improvement workflow 要解决：
 - 后续研究 refresh 应创建新 cycle 和 delta report，不覆盖 `RC-2026Q2-initial` 的历史研究动机。
 
 ## MNEMOSYNE-031A 更新：研究复核与用户构想重述
+
+> Supersession note: this section records the earlier MNEMOSYNE-031A state before the final R4B/R4C/R5 checkpoint. Current continuation should use the final MNEMOSYNE-031 checkpoint record and should not resume from R4B.
 
 - MNEMOSYNE-031 review 不假定用户已通读、掌握或验证全部研究报告；研究报告主要供元 Agent 作为高权重证据层使用。
 - 元 Agent 应基于研究证据进行可行性评价、能力边界确认、已有实践对照和现代化优化建议，并标记过时、低效、过于理想化或过于科幻的构想。
