@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；当前等待用户选择下一路线：PDF 图表复核、首次 dry-run、Idea Capture Buffer 或小型一致性修复。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。当前等待用户选择下一路线：PDF 图表复核、首次 dry-run 或 Idea Capture Buffer / candidate cleanup。
 
 ## 当前执行源
 
@@ -72,16 +72,29 @@ Completed:
 - R2 Research Prompts and Topic Mapping Review.
 - R3 Report Summaries Review.
 - R4A User Design Intent Restatement Prompt List.
+- R4B user oral restatement: 9 main records + 1 addendum.
+- R4B manifest/index.
+- R4C user design intent synthesis / candidate requirements draft.
+- R5 final D-01 to D-07 user decision review.
+- Final checkpoint records.
 
-Pending:
-- R4B user oral restatement.
-- R4C user design intent restatement result.
-- R5 final combined writeback package.
+Current continuation:
+- Do not resume from R4B.
+- Do not regenerate R4B, R4C, or R5.
+- Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
+- Next route should be selected by the user: PDF figure review / first dry-run / Idea Capture Buffer / candidate cleanup.
 
-Next assistant should resume from R4B.
-Do not restart R1-R3.
-Do not regenerate R4A unless the user explicitly asks.
-Do not regenerate R4B/R4C. The user design restatement has been created after final user confirmation and remains non-execution-source.
+Historical note:
+- Earlier MNEMOSYNE-031 checkpoint/status-sync files that say R4B/R4C/R5 are pending are historical records from before the final checkpoint.
+- They are superseded for current continuation purposes by the final checkpoint record and this handoff section.
+
+## Codex / ChatGPT task verification reminder
+
+MNEMOSYNE-031 showed that natural-language Codex task descriptions may fail to produce all intended file edits. For future repository-editing tasks, read:
+
+- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+
+When generating or executing Codex tasks that modify files, require actual diff evidence: `git status --short`, `git diff HEAD --stat`, `git diff HEAD --name-only`, targeted `git diff HEAD -- <target files>`, protected-file checks, and task result records comparing intended files with actual changed files.
 
 ## 新会话推荐读取顺序
 
@@ -92,26 +105,27 @@ Do not regenerate R4B/R4C. The user design restatement has been created after fi
 5. `handoff/startup-instructions.md`
 6. `current/open-questions.md`
 7. `current/todo.md`
-8. `notes/v0.1-scope-and-consistency-check.md`
-9. `notes/v0.1-final-review.md`
-10. `notes/requirement-intake-workflow.md`
-11. `notes/self-improvement-workflow.md`
-12. `notes/self-improvement-template-pack.md`
-13. `notes/target-project-memory-system-template-pack.md`
-14. `notes/delivery-manifest-template-pack.md`
-15. `notes/template-pack-review-and-first-scenario-selection.md`
-16. `notes/research-review-and-user-intent-restatement-workflow.md`
-17. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
-18. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
-19. `raw/research-reports/current/research-report-index.md`
-20. `raw/research-reports/current/current-evidence-map.md`
-21. `raw/research-reports/current/current-capability-boundaries.md`
-22. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-23. `raw/research-reports/current/current-research-prompts.md`
-24. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-25. `raw/research-reports/current/current-report-summaries.md`
-26. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-27. `raw/concept-origin-extract-001.md` 按需回查
+8. `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+9. `notes/v0.1-scope-and-consistency-check.md`
+10. `notes/v0.1-final-review.md`
+11. `notes/requirement-intake-workflow.md`
+12. `notes/self-improvement-workflow.md`
+13. `notes/self-improvement-template-pack.md`
+14. `notes/target-project-memory-system-template-pack.md`
+15. `notes/delivery-manifest-template-pack.md`
+16. `notes/template-pack-review-and-first-scenario-selection.md`
+17. `notes/research-review-and-user-intent-restatement-workflow.md`
+18. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
+19. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
+20. `raw/research-reports/current/research-report-index.md`
+21. `raw/research-reports/current/current-evidence-map.md`
+22. `raw/research-reports/current/current-capability-boundaries.md`
+23. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
+24. `raw/research-reports/current/current-research-prompts.md`
+25. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+26. `raw/research-reports/current/current-report-summaries.md`
+27. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+28. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
@@ -131,10 +145,9 @@ Do not regenerate R4B/R4C. The user design restatement has been created after fi
 
 ## 下一步建议
 
-1. 不要重生成 MNEMOSYNE-031 R4B/R4C；使用 final D-01 to D-07 决策继续后续路线；
-2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
-3. R4C 经确认后生成 R5 final combined writeback package；
-4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer / template small fixes。
+1. 不要重生成 MNEMOSYNE-031 R4B/R4C/R5；使用 final D-01 to D-07 决策继续后续路线。
+2. 下一路线由用户选择：PDF 图表复核 / first dry-run / Idea Capture Buffer / candidate cleanup。
+3. 如果执行 dry-run，应显式记住：MNEMOSYNE-031 review/restatement materials 不是执行源；`current/human-approved-spec.md` 仍是当前执行源。
 
 ## MNEMOSYNE-031 final checkpoint handoff
 

@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；当前等待用户选择下一路线：PDF 图表复核、首次 dry-run、Idea Capture Buffer 或小型一致性修复。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。当前等待用户选择下一路线：PDF 图表复核、首次 dry-run 或 Idea Capture Buffer / candidate cleanup。
 
 ## MNEMOSYNE-031 current status
 
@@ -24,7 +24,7 @@ Next route should be selected by the user:
 - PDF figure/table/image review;
 - first dry-run using Mnemosyne itself or a small target scenario;
 - Idea Capture Buffer / candidate requirements cleanup;
-- small fixes to tracking files if consistency issues are found.
+- template pack review / small fixes if needed.
 
 ## 当前执行源
 
@@ -84,6 +84,7 @@ Next route should be selected by the user:
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
 - MNEMOSYNE-031 R1-R3 review、R4A prompt list、R4B restatement records、R4B manifest、R4C synthesis、R5 user decision review 与 final checkpoint records 已完成；
+- MNEMOSYNE-032：Codex task authoring / diff verification guideline 已写入并落账，用于防止自然语言任务描述导致 Codex 未实际修改全部目标文件。
 
 ## 当前未完成内容
 
@@ -116,6 +117,7 @@ Next route should be selected by the user:
 - `notes/delivery-manifest-template-pack.md`
 - `notes/template-pack-review-and-first-scenario-selection.md`
 - `notes/research-review-and-user-intent-restatement-workflow.md`
+- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
 - `raw/research-reports/current/research-report-index.md`
 - `raw/research-reports/current/current-evidence-map.md`
 - `raw/research-reports/current/current-capability-boundaries.md`
@@ -131,7 +133,7 @@ Next route should be selected by the user:
 
 ## Next step / 下一步
 
-1. 不要重生成 MNEMOSYNE-031 R4B/R4C；使用 final D-01 to D-07 决策继续后续路线；
-2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
-3. R4C 经确认后生成 R5 combined final writeback package；
-4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。
+1. MNEMOSYNE-031 R4B/R4C/R5 已完成并 checkpoint；不要重生成 R4B、R4C 或 R5。
+2. 后续任务应使用 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md` 中的 final D-01 to D-07 决策。
+3. 当前下一路线由用户选择：PDF 图表复核 / first dry-run / Idea Capture Buffer / candidate cleanup。
+4. 如果未来再次发现入口文件状态残留，可另开小型一致性修复；不要把这类修复写入 `current/human-approved-spec.md`。

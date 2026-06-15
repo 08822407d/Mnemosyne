@@ -166,7 +166,14 @@ files_created:
 files_modified:
 files_not_modified:
 claimed_completion:
+actual_git_status_short:
+actual_git_diff_stat:
+actual_git_diff_name_only:
+targeted_diff_hunks_or_summary:
+stale_phrase_or_presence_checks:
+protected_file_check:
 actual_diff_summary:
+claim_vs_diff_consistency:
 codex_summary:
 known_gaps:
 manual_review_required:
@@ -182,6 +189,9 @@ reviewer_notes:
 - Codex Task Result Record 不是执行源。
 - 最终判断以 Git diff、仓库文件、用户 review 和必要验证为准。
 - 如果 Codex 声称完成但文件未实际修改，应记录偏差。
+- 文件修改类 Codex 任务应要求 `git status --short`、`git diff HEAD --stat`、`git diff HEAD --name-only` 和关键目标文件 diff。
+- 多文件、高风险、清理 stale text 或入口状态修复任务，优先使用 exact replacement blocks 或 patch script。
+- 任务结果必须比较 intended files 与 actual changed files，不能只保存 Codex prose summary。
 
 ## 6. ChatGPT Stage Summary Template
 
@@ -306,6 +316,10 @@ notes:
 - [ ] 是否需要更新 `handoff/startup-instructions.md`；
 - [ ] 是否需要更新 research evidence current 视图；
 - [ ] 是否需要创建 task result record；
+- [ ] 如果是 Codex 文件修改任务，是否要求 `git status --short`、`git diff HEAD --stat`、`git diff HEAD --name-only`；
+- [ ] 是否要求关键目标文件的 targeted diff；
+- [ ] 是否要求 grep/rg 检查旧文字删除或新文字存在；
+- [ ] 是否确认 protected files 未修改；
 - [ ] 是否需要用户最终 review。
 
 说明：Apply Result Checklist 是人工检查清单，不是自动执行系统。

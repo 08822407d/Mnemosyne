@@ -26,14 +26,15 @@
 4. `handoff/handoff-current.md`
 5. `current/open-questions.md`
 6. `current/todo.md`
-7. `notes/v0.1-scope-and-consistency-check.md`
-8. `raw/research-reports/current/research-report-index.md`
-9. `raw/research-reports/current/current-evidence-map.md`
-10. `raw/research-reports/current/current-capability-boundaries.md`
-11. `notes/core-object-model.md`
-12. `notes/requirement-intake-workflow.md`
-13. `notes/delivery-package-workflow.md`
-14. `raw/concept-origin-extract-001.md` 按需回查
+7. `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+8. `notes/v0.1-scope-and-consistency-check.md`
+9. `raw/research-reports/current/research-report-index.md`
+10. `raw/research-reports/current/current-evidence-map.md`
+11. `raw/research-reports/current/current-capability-boundaries.md`
+12. `notes/core-object-model.md`
+13. `notes/requirement-intake-workflow.md`
+14. `notes/delivery-package-workflow.md`
+15. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 4. 执行源与非执行源
 
@@ -84,6 +85,33 @@
 - PDF 图表和图片仍需人工复核；
 - 研究证据具有时效性，未来通过新 research cycle 和 delta report 更新。
 
+## 5.1 Codex / ChatGPT task verification reminder
+
+MNEMOSYNE-031 showed that natural-language Codex task descriptions may fail to produce all intended file edits. For future repository-editing tasks, read:
+
+- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+
+When generating or executing Codex tasks that modify files, require actual diff evidence: `git status --short`, `git diff HEAD --stat`, `git diff HEAD --name-only`, targeted `git diff HEAD -- <target files>`, protected-file checks, and task result records comparing intended files with actual changed files.
+
+Detailed Codex task authoring and diff verification rule:
+
+For any Codex task that modifies repository files:
+
+- require exact target files;
+- require protected-file list;
+- prefer exact replacement blocks or a patch script for multi-file / high-risk / stale-text cleanup tasks;
+- require `git status --short`;
+- require `git diff HEAD --stat`;
+- require `git diff HEAD --name-only`;
+- require targeted `git diff HEAD -- <target files>` for important files;
+- require grep/rg checks for expected additions/removals when applicable;
+- require a task result record comparing intended files with actual changed files;
+- do not accept Codex prose completion as sufficient evidence.
+
+Detailed guideline:
+
+- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+
 ## 6. 新 ChatGPT 对话启动提示
 
 ```text
@@ -101,10 +129,11 @@
 4. handoff/handoff-current.md
 5. current/open-questions.md
 6. current/todo.md
-7. notes/v0.1-scope-and-consistency-check.md
-8. raw/research-reports/current/research-report-index.md
-9. raw/research-reports/current/current-evidence-map.md
-10. raw/research-reports/current/current-capability-boundaries.md
+7. notes/codex-task-authoring-and-diff-verification-guidelines.md
+8. notes/v0.1-scope-and-consistency-check.md
+9. raw/research-reports/current/research-report-index.md
+10. raw/research-reports/current/current-evidence-map.md
+11. raw/research-reports/current/current-capability-boundaries.md
 
 接手后请先输出：
 - 你理解的当前阶段；
@@ -135,6 +164,7 @@ raw、research reports、candidate、decision-log、active-context、handoff、s
 - handoff/handoff-current.md
 - current/open-questions.md
 - current/todo.md
+- notes/codex-task-authoring-and-diff-verification-guidelines.md
 - notes/v0.1-scope-and-consistency-check.md
 - raw/research-reports/current/research-report-index.md
 - raw/research-reports/current/current-evidence-map.md
@@ -169,6 +199,7 @@ raw、research reports、candidate、decision-log、active-context、handoff、s
 - 当前未完成任务；
 - 你建议的下一步；
 - 本次计划修改哪些文件。
+- 如果本次会修改文件，说明将如何用 `git status --short`、`git diff HEAD --stat`、`git diff HEAD --name-only` 和目标文件 diff 验证实际修改。
 ```
 
 ## 8. 常见任务入口
