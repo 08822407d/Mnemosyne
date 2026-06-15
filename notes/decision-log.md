@@ -563,3 +563,11 @@
 ### MNEMOSYNE-031-D07: accepted_with_checkpoint_scope_revision
 
 - Codex may checkpoint R4B/R4C/R5 materials and create a combined final review record. Original R5 draft must be marked superseded/revised where it conflicts with final D-01 to D-07 decisions.
+
+## MNEMOSYNE-032: Codex task diff verification guardrail
+
+- 决策：后续 Codex 文件修改任务应显式要求 diff-based verification；多文件、高风险、stale text 清理和入口状态修复任务应优先使用 exact replacement blocks 或 patch script。
+- 理由：MNEMOSYNE-031 中观察到 Codex 在自然语言任务描述下可能未实际修改全部目标文件，且 task result 可能与仓库实际内容不一致；最终通过 hard-fix + `git diff HEAD` 验证才修正。
+- 状态：accepted_as_workflow_guardrail
+- 来源：MNEMOSYNE-031 post-checkpoint consistency cleanup / hard-fix 经验
+- 非执行源说明：本 decision log 记录不是执行源；当前执行源仍是 `current/human-approved-spec.md`。
