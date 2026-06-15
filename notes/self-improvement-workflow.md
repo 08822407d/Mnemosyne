@@ -210,6 +210,27 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 - follow_up_tasks；
 - whether_any_limits_or_uncertainties。
 
+## 10.1 Codex 文件修改任务的 diff 验证规则
+
+MNEMOSYNE-031 暴露出一个实际问题：当 Codex 任务只用自然语言描述文件修改目标时，Codex 有时会生成看似合理的完成总结，但实际没有修改所有目标文件，或者 task result 中的检查结论与仓库真实内容不一致。
+
+因此，后续 Codex 文件修改任务应默认加入 diff-based verification：
+
+- 明确 `files_intended_to_edit`；
+- 明确禁止修改的 protected files；
+- 对多文件、高风险、清理 stale text、入口文件状态修复任务，优先使用 exact replacement blocks 或 patch script；
+- 要求 `git status --short`；
+- 要求 `git diff HEAD --stat`；
+- 要求 `git diff HEAD --name-only`；
+- 要求重要目标文件的 targeted `git diff HEAD -- <target files>`；
+- 按需要求 `rg` / `grep` 验证目标文字已加入、旧文字已删除；
+- task result 必须比较 intended files 与 actual changed files；
+- 不得仅凭 Codex prose summary 判断任务完成。
+
+详细准则见：
+
+- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+
 ## 11. 什么时候必须回查研究证据
 
 在以下场景必须读取 research current 视图：
@@ -269,13 +290,14 @@ Codex 任务完成后，除了对话界面总结外，重要任务还应把任�
 
 ## 15. 失败与偏差处理
 
-如果 Codex 声称完成但文件未修改，应：
+如果 Codex 声称完成但文件未修改，或 task result 的检查结论与仓库真实内容不一致，应：
 
 - 以仓库文件和 diff 为准；
 - 不以 Codex 总结为准；
 - 创建修复任务；
 - 在 codex task result 或 decision-log 中记录偏差；
-- 必要时缩小任务范围或改为手工修改。
+- 下一次任务应缩小范围，并优先使用 exact replacement / patch script / targeted `git diff HEAD -- <target files>`；
+- 必要时改为手工修改。
 
 如果 startup-instructions、handoff、active-context 和 human-approved-spec 冲突，应：
 
