@@ -534,3 +534,19 @@
 - 状态：reflected
 - 来源：RAW-0052 / MNEMOSYNE-031A
 - 反映位置：notes/research-review-and-user-intent-restatement-workflow.md
+
+## MNEMOSYNE-031 candidate requirements
+
+All entries in this section are candidate requirements unless separately promoted through the approved execution-source promotion process. Memory-system testing/debugging is research-gated and not final design.
+
+- CR-01: Layered memory architecture.
+- CR-02: Execution-source promotion workflow.
+- CR-03: Public/private memory permission model.
+- CR-04: Original-source preservation policy.
+- CR-05: Handoff local-exception policy.
+- CR-06: Authorized memory content update policy for ordinary project Agents.
+- CR-07: Index and summary system.
+- CR-08: Capability versioning and upgrades.
+- CR-09: Development-project memory template.
+- CR-10: Upstream Agent-team design document interface.
+- CR-11: Memory-system testing / feedback / debugging / troubleshooting workflow.

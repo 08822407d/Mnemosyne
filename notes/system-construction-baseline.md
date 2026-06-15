@@ -79,7 +79,7 @@ Mnemosyne 的最终目标是成为“记忆系统元 Agent”工作仓库，用�
 - delivery manifest template pack 已在 MNEMOSYNE-028 完成后进入用户 review / 小修阶段；
 - MNEMOSYNE-029 已创建三类模板包 review 清单与首个目标项目场景候选矩阵；
 - MNEMOSYNE-030 / MNEMOSYNE-030A 已建立 report summaries、current-report-summaries 和 pdf-figure-review-index；
-- 下一步应由用户 review report summaries，人工复核相关 PDF 图表 / 图片，并选择第一个目标项目场景或决定先做 Idea Capture Buffer / 小修模板。
+- MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；R4B/R4C/R5 不应重生成。当前下一路线由用户选择：PDF 图表复核、首次 dry-run、Idea Capture Buffer / candidate cleanup，或必要的模板包 review / 小修。
 
 ## 5. self-improvement workflow 的目标
 
@@ -147,15 +147,18 @@ self-improvement workflow 要解决：
 
 ## 8. 后续路线
 
-建议后续路线：
+MNEMOSYNE-031 final checkpoint 已完成。当前建议路线不再从 R4B/R4C/R5 或 report summary review 重新开始。
 
-1. 用户 review report summaries；
-2. 人工复核相关 PDF 图表 / 图片；
-3. 选择第一个目标项目场景；
-4. 第一轮 dry-run intake；
-5. Idea Capture Buffer；
-6. AGENTS.md / CLAUDE.md；
-7. 自动化增强。
+后续路线由用户选择：
+
+1. PDF 图表 / 图片 / 版式人工复核；
+2. 首次 dry-run using Mnemosyne itself or a small target scenario；
+3. Idea Capture Buffer / candidate requirements cleanup；
+4. 三类模板包 review / small fixes；
+5. 后续再考虑 AGENTS.md / CLAUDE.md；
+6. 自动化增强。
+
+如果后续任务依赖 PDF 图表 / 图片证据，应先完成相关人工复核并更新 `pdf-figure-review-index.md`。如果目标是验证新确认的记忆层原则，优先考虑小型 Mnemosyne self-validation dry-run。
 
 ## 9. 当前不应直接做的事
 
@@ -192,9 +195,21 @@ self-improvement workflow 要解决：
 
 ## MNEMOSYNE-031A 更新：研究复核与用户构想重述
 
+> Supersession note: this section records the earlier MNEMOSYNE-031A state before the final R4B/R4C/R5 checkpoint. Current continuation should use the final MNEMOSYNE-031 checkpoint record and should not resume from R4B.
+
 - MNEMOSYNE-031 review 不假定用户已通读、掌握或验证全部研究报告；研究报告主要供元 Agent 作为高权重证据层使用。
 - 元 Agent 应基于研究证据进行可行性评价、能力边界确认、已有实践对照和现代化优化建议，并标记过时、低效、过于理想化或过于科幻的构想。
 - MNEMOSYNE-031 扩展为 R1-R3 研究材料复核与 R4A-R4C 用户设计构想重述，之后汇总并等待用户确认。
 - 用户重述是 raw user intent evidence，不是原始需求、最终设计或执行源，不得直接写入 `current/human-approved-spec.md`。
 - 后续路线为：普通 ChatGPT 完成 R1-R4；用户确认后再写入 review / restatement records；之后决定 PDF 图表复核、首个 dry-run 或 Idea Capture Buffer。
-- 本次更新只同步规划 / 建设基线，不表示 MNEMOSYNE-031 review 已完成。
+- Historical status note: this earlier MNEMOSYNE-031A statement has been superseded. MNEMOSYNE-031 R1-R5 review/restatement checkpoint is now complete and recorded in the final checkpoint review record.
+
+## MNEMOSYNE-031 final checkpoint non-execution principles
+
+- Mnemosyne is a persistent-memory-system meta-agent.
+- Model computes; external state remembers.
+- Original-source materials must be preserved as durable source layer.
+- Evidence layers and execution source must remain separate.
+- Handoff is task-local continuation context, not global project law.
+- Ordinary project Agents may maintain authorized memory content but cannot redesign public memory-system rules.
+- Memory-system testing/debugging is an important research-gated candidate capability.
