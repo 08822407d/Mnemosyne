@@ -88,6 +88,14 @@ Historical note:
 - Earlier MNEMOSYNE-031 checkpoint/status-sync files that say R4B/R4C/R5 are pending are historical records from before the final checkpoint.
 - They are superseded for current continuation purposes by the final checkpoint record and this handoff section.
 
+## Codex / ChatGPT task verification reminder
+
+MNEMOSYNE-031 showed that natural-language Codex task descriptions may fail to produce all intended file edits. For future repository-editing tasks, read:
+
+- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+
+When generating or executing Codex tasks that modify files, require actual diff evidence: `git status --short`, `git diff HEAD --stat`, `git diff HEAD --name-only`, targeted `git diff HEAD -- <target files>`, protected-file checks, and task result records comparing intended files with actual changed files.
+
 ## 新会话推荐读取顺序
 
 1. `README.md`

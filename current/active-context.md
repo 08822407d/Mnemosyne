@@ -84,7 +84,7 @@ Next route should be selected by the user:
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
 - MNEMOSYNE-031 R1-R3 review、R4A prompt list、R4B restatement records、R4B manifest、R4C synthesis、R5 user decision review 与 final checkpoint records 已完成；
-- MNEMOSYNE-032：Codex task authoring / diff verification guideline 已准备写入，用于防止自然语言任务描述导致 Codex 未实际修改全部目标文件。
+- MNEMOSYNE-032：Codex task authoring / diff verification guideline 已写入并落账，用于防止自然语言任务描述导致 Codex 未实际修改全部目标文件。
 
 ## 当前未完成内容
 

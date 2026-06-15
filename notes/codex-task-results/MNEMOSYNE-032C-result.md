@@ -144,3 +144,9 @@ MNEMOSYNE-032C result placeholder-marker check: no matches after this file was f
 - This result record is not an execution source.
 - The current execution source remains `current/human-approved-spec.md`.
 - No further MNEMOSYNE-032C follow-up is known after visibility checks passed on the actual files.
+
+## reviewer_correction_after_MNEMOSYNE_032D
+
+MNEMOSYNE-032D was created because final default-branch inspection after MNEMOSYNE-032C still required a direct-command verification pass.
+
+This record remains useful as historical audit material, but final task continuation should trust current default-branch file content and `MNEMOSYNE-032D-result.md`.
