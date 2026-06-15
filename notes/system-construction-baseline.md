@@ -126,6 +126,8 @@ self-improvement workflow 要解决：
 - 如果现有任务干净、基于最新 master、没有未合并改动，可以继续使用；
 - 如果任务目标是验证新任务能否接手、现有任务状态不明、已有未合并改动、分支不是最新，或需要隔离上下文，则必须新开；
 - 后续 Codex 任务内容应优先作为 `.txt` 文件提供，避免聊天代码块嵌套导致复制不完整；
+- Codex 文件修改任务不得只依赖自然语言完成声明，应要求 `git status --short`、`git diff HEAD --stat`、`git diff HEAD --name-only` 和关键目标文件 diff；
+- 多文件、高风险、清理 stale text、入口文件状态修复任务，优先使用 exact replacement blocks 或 patch script；
 - 任务完成后必须写入 Codex Task Result Record：`notes/codex-task-results/TASK_ID-result.md`；
 - Codex Task Result Record 不是执行源；
 - 最终判断仍以 Git diff、仓库文件、用户 review 和必要验证为准。
@@ -202,7 +204,7 @@ MNEMOSYNE-031 final checkpoint 已完成。当前建议路线不再从 R4B/R4C/R
 - MNEMOSYNE-031 扩展为 R1-R3 研究材料复核与 R4A-R4C 用户设计构想重述，之后汇总并等待用户确认。
 - 用户重述是 raw user intent evidence，不是原始需求、最终设计或执行源，不得直接写入 `current/human-approved-spec.md`。
 - 后续路线为：普通 ChatGPT 完成 R1-R4；用户确认后再写入 review / restatement records；之后决定 PDF 图表复核、首个 dry-run 或 Idea Capture Buffer。
-- 本次更新只同步规划 / 建设基线，不表示 MNEMOSYNE-031 review 已完成。
+- Historical status note: this earlier MNEMOSYNE-031A statement has been superseded. MNEMOSYNE-031 R1-R5 review/restatement checkpoint is now complete and recorded in the final checkpoint review record.
 
 ## MNEMOSYNE-031 final checkpoint non-execution principles
 
