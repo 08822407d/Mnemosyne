@@ -455,17 +455,16 @@ Codex 的完成总结不能作为最终依据。
 - MNEMOSYNE-031 扩展为 R1-R3 研究材料复核与 R4A-R4C 用户设计构想重述，之后汇总并等待用户确认。
 - 用户重述是 raw user intent evidence，不是原始需求、最终设计或执行源，不得直接写入 `current/human-approved-spec.md`。
 - 后续路线为：普通 ChatGPT 完成 R1-R4；用户确认后再写入 review / restatement records；之后决定 PDF 图表复核、首个 dry-run 或 Idea Capture Buffer。
-- 本次更新只同步规划 / 建设基线，不表示 MNEMOSYNE-031 review 已完成。
+- Historical status note: this earlier MNEMOSYNE-031A statement has been superseded. MNEMOSYNE-031 R1-R5 review/restatement checkpoint is now complete and recorded in the final checkpoint review record.
 
 ## MNEMOSYNE-031 final checkpoint roadmap update
 
-Near-term route options:
+Near-term route options after completed repository checkpoint:
 
-1. Repository checkpoint of MNEMOSYNE-031 records.
-2. PDF figure/table/image review decision.
-3. First dry-run using Mnemosyne itself or a small target scenario.
-4. Idea Capture Buffer / candidate requirements cleanup.
-5. Small fixes to tracking files if consistency issues are found.
+1. PDF figure/table/image review decision.
+2. First dry-run using Mnemosyne itself or a small target scenario.
+3. Idea Capture Buffer / candidate requirements cleanup.
+4. Template pack review / small fixes if needed.
 
 Medium-term candidate roadmap:
 
