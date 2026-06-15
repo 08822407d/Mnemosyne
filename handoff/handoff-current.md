@@ -97,26 +97,27 @@ Historical note:
 5. `handoff/startup-instructions.md`
 6. `current/open-questions.md`
 7. `current/todo.md`
-8. `notes/v0.1-scope-and-consistency-check.md`
-9. `notes/v0.1-final-review.md`
-10. `notes/requirement-intake-workflow.md`
-11. `notes/self-improvement-workflow.md`
-12. `notes/self-improvement-template-pack.md`
-13. `notes/target-project-memory-system-template-pack.md`
-14. `notes/delivery-manifest-template-pack.md`
-15. `notes/template-pack-review-and-first-scenario-selection.md`
-16. `notes/research-review-and-user-intent-restatement-workflow.md`
-17. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
-18. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
-19. `raw/research-reports/current/research-report-index.md`
-20. `raw/research-reports/current/current-evidence-map.md`
-21. `raw/research-reports/current/current-capability-boundaries.md`
-22. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-23. `raw/research-reports/current/current-research-prompts.md`
-24. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-25. `raw/research-reports/current/current-report-summaries.md`
-26. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-27. `raw/concept-origin-extract-001.md` 按需回查
+8. `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+9. `notes/v0.1-scope-and-consistency-check.md`
+10. `notes/v0.1-final-review.md`
+11. `notes/requirement-intake-workflow.md`
+12. `notes/self-improvement-workflow.md`
+13. `notes/self-improvement-template-pack.md`
+14. `notes/target-project-memory-system-template-pack.md`
+15. `notes/delivery-manifest-template-pack.md`
+16. `notes/template-pack-review-and-first-scenario-selection.md`
+17. `notes/research-review-and-user-intent-restatement-workflow.md`
+18. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
+19. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
+20. `raw/research-reports/current/research-report-index.md`
+21. `raw/research-reports/current/current-evidence-map.md`
+22. `raw/research-reports/current/current-capability-boundaries.md`
+23. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
+24. `raw/research-reports/current/current-research-prompts.md`
+25. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+26. `raw/research-reports/current/current-report-summaries.md`
+27. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+28. `raw/concept-origin-extract-001.md` 按需回查
 
 ## 当前不要做
 
