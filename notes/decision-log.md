@@ -533,3 +533,33 @@
 - 理由：普通 ChatGPT 对话中的 R1-R4 结果在确认前只是待审材料，不能自动写回或升级为执行源。
 - 状态：accepted
 - 来源：RAW-0052 / MNEMOSYNE-031A
+
+## MNEMOSYNE-031 final user decisions
+
+### MNEMOSYNE-031-D01: accepted
+
+- Mnemosyne is a persistent-memory-system meta-agent, not a direct project implementation/coding Agent.
+
+### MNEMOSYNE-031-D02: accepted
+
+- Accept “model computes; external state remembers.”
+
+### MNEMOSYNE-031-D03: accepted_with_wording_revision
+
+- Evidence layers and handoff cannot automatically become global execution source. Handoff is task-local continuation context and may contain explicit local exceptions for task recovery, but cannot silently become global project law.
+
+### MNEMOSYNE-031-D04: accepted_with_wording_revision
+
+- Ordinary project Agents may maintain authorized memory content, but cannot redesign public memory-system rules, structure, permissions, collaboration protocols, or execution-source boundaries unless explicitly authorized.
+
+### MNEMOSYNE-031-D05: accepted_with_principle_revision
+
+- Original-source materials must be preserved as durable source/reference layer in all cases. Summaries/indexes/cleaned records cannot replace raw/original materials. Raw materials remain non-execution evidence.
+
+### MNEMOSYNE-031-D06: accepted_with_research_gated_testing_revision
+
+- Memory-system testing / feedback / debugging / troubleshooting is promoted to first-class research-gated candidate requirement, not final design or verified capability.
+
+### MNEMOSYNE-031-D07: accepted_with_checkpoint_scope_revision
+
+- Codex may checkpoint R4B/R4C/R5 materials and create a combined final review record. Original R5 draft must be marked superseded/revised where it conflicts with final D-01 to D-07 decisions.

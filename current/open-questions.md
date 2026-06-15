@@ -1,6 +1,6 @@
 # Open Questions
 
-> MNEMOSYNE-031 checkpoint 不是执行源，也不是最终 R5 写回包，不包含用户设计构想重述结果。当前执行源仍是 `current/human-approved-spec.md`；R4B / R4C / R5 仍未完成，在 R4B / R4C 完成并经用户确认前不得创建用户设计构想重述记录。
+> MNEMOSYNE-031 final checkpoint records are non-execution-source review/restatement records. Current execution source remains `current/human-approved-spec.md`.
 
 ## answered
 
@@ -127,11 +127,11 @@
    - 说明：当前可按需回查；是否拆分仍待决定。
 
 17. MNEMOSYNE-031 R4B 用户口语化重述的具体内容是什么？
-    - 说明：仍为 pending / deferred；下一 continuation point 是从 R4B 恢复。
+    - 状态：answered；R4B 已完成 9 个 main records + 1 个 addendum。
 18. MNEMOSYNE-031 R4C 用户设计构想重述结果何时生成？
-    - 说明：尚未生成；需等待 R4B 完成。
+    - 状态：answered；R4C synthesis candidate draft 已生成，且不是执行源。
 19. MNEMOSYNE-031 R5 final combined writeback package 何时生成？
-    - 说明：尚未生成；需等待 R4C 完成并经用户确认。
+    - 状态：answered；final writeback checkpoint 已生成，final D-01 to D-07 决策以 research review record 为准。
 20. 完成 R4 / R5 后优先走哪条路线？
     - 说明：PDF review、first dry-run、Idea Capture Buffer 或 template small fixes 仍待决定。
 21. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
@@ -139,3 +139,18 @@
 23. 用户重述后哪些内容可进入 candidate requirements？
 24. 哪些用户构想需要研究报告校验？
 25. 哪些用户构想可能落后、过于理想化或与现有设计冲突？
+
+
+## MNEMOSYNE-031 final open questions
+
+- OP-01: What exact approval form is required before candidate material becomes execution source?
+- OP-02: How abstract should the first storage backend design be?
+- OP-03: What default directory names and lifecycle rules should task-private workspaces use?
+- OP-04: What minimum index format should be used first?
+- OP-05: Should each target project have a memory-system issue log and troubleshooting record?
+- OP-06: How often should capability research be performed, and how should capability versions be named?
+- OP-07: Which first reusable template should be built after Mnemosyne itself: software development, source-code explanation, or language learning?
+- OP-08: What privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?
+- OP-09: Can current models reliably perform memory-system testing / debugging / root-cause diagnosis?
+- OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
+- OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?

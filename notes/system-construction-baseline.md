@@ -198,3 +198,13 @@ self-improvement workflow 要解决：
 - 用户重述是 raw user intent evidence，不是原始需求、最终设计或执行源，不得直接写入 `current/human-approved-spec.md`。
 - 后续路线为：普通 ChatGPT 完成 R1-R4；用户确认后再写入 review / restatement records；之后决定 PDF 图表复核、首个 dry-run 或 Idea Capture Buffer。
 - 本次更新只同步规划 / 建设基线，不表示 MNEMOSYNE-031 review 已完成。
+
+## MNEMOSYNE-031 final checkpoint non-execution principles
+
+- Mnemosyne is a persistent-memory-system meta-agent.
+- Model computes; external state remembers.
+- Original-source materials must be preserved as durable source layer.
+- Evidence layers and execution source must remain separate.
+- Handoff is task-local continuation context, not global project law.
+- Ordinary project Agents may maintain authorized memory content but cannot redesign public memory-system rules.
+- Memory-system testing/debugging is an important research-gated candidate capability.

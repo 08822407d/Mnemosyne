@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-研究动机、研究课题 prompt mapping 与 report summaries 的 R1-R3 review 已完成，R4A 待重述清单也已完成；当前等待从 R4B 恢复用户口语化重述，并继续人工复核 / dry-run 路线决策。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；当前等待用户选择下一路线：PDF 图表复核、首次 dry-run、Idea Capture Buffer 或小型一致性修复。
 
 ## 当前执行源
 
@@ -27,8 +27,8 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
 - `raw/research-reports/current/current-report-summaries.md`
-- future MNEMOSYNE-031 review record
-- future user design restatement record
+- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`
+- `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-restatement.md`
 - `notes/candidate-requirements.md`
 - `notes/decision-log.md`
 - `current/active-context.md`
@@ -81,7 +81,7 @@ Pending:
 Next assistant should resume from R4B.
 Do not restart R1-R3.
 Do not regenerate R4A unless the user explicitly asks.
-Do not create `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-restatement.md` until R4B/R4C are completed and user confirms.
+Do not regenerate R4B/R4C. The user design restatement has been created after final user confirmation and remains non-execution-source.
 
 ## 新会话推荐读取顺序
 
@@ -131,7 +131,23 @@ Do not create `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-res
 
 ## 下一步建议
 
-1. 从 MNEMOSYNE-031 R4B 恢复用户口语化重述，不要重启 R1-R3；
+1. 不要重生成 MNEMOSYNE-031 R4B/R4C；使用 final D-01 to D-07 决策继续后续路线；
 2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
 3. R4C 经确认后生成 R5 final combined writeback package；
 4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer / template small fixes。
+
+## MNEMOSYNE-031 final checkpoint handoff
+
+Current handoff:
+
+- MNEMOSYNE-031 review and restatement phase has reached final writeback checkpoint.
+- Do not regenerate R4B or R4C.
+- Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
+- Next route should be selected by user: PDF figure review / first dry-run / Idea Capture Buffer / small fixes.
+
+Handoff concept clarification:
+
+- Handoff is task-local continuation context.
+- It is not global project law.
+- It may carry explicit local recovery constraints or temporary exceptions.
+- Such local exceptions must not silently become global execution-source changes.
