@@ -106,6 +106,23 @@ Detailed guideline:
 
 - `notes/codex-task-authoring-and-diff-verification-guidelines.md`
 
+## 5.2 Codex Cloud stale-branch / conflict-resolution troubleshooting rule
+
+MNEMOSYNE-032D follow-up diagnosis identified a likely root cause for repeated "file edits did not stick" incidents:
+
+- a Codex Cloud task environment / branch can become stale after its PR is merged into `master` / the default branch;
+- continuing from that stale task environment can produce a PR based on old repository content;
+- if the PR conflicts and the user resolves conflicts by unconditionally choosing "Accept Incoming", stale incoming content can roll back previously correct default-branch content;
+- the result can look like Codex failed to edit the files, even though the real issue was stale branch state plus conflict-resolution rollback.
+
+For future Codex repository-editing tasks:
+
+- prefer a fresh Codex Cloud task after each merged PR;
+- treat old Codex task environments as stale after their PR has been merged;
+- if a Codex PR has conflicts, do not use unconditional "Accept Incoming" as the default resolution;
+- low-manual-review fallback: close / discard the conflicted PR and rerun the deterministic task from a new Codex Cloud task based on the latest default branch;
+- verify final default-branch content after merge, especially for `current/active-context.md`, `handoff/handoff-current.md`, and `handoff/startup-instructions.md`.
+
 ## 6. 新 ChatGPT 对话启动提示
 
 ```text
