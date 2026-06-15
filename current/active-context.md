@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency cleanup 已执行 / 正在落账。当前等待用户选择下一路线：PDF 图表复核、首次 dry-run 或 Idea Capture Buffer / candidate cleanup。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；当前等待用户选择下一路线：PDF 图表复核、首次 dry-run、Idea Capture Buffer 或小型一致性修复。
 
 ## MNEMOSYNE-031 current status
 
@@ -15,7 +15,6 @@ MNEMOSYNE-031 final writeback checkpoint status:
 - R4C synthesis completed as candidate draft, not execution source.
 - R5 review completed through user confirmation of D-01 to D-07.
 - Final writeback package prepared and checkpointed.
-- Post-checkpoint consistency cleanup completed or in progress.
 - Current execution source remains `current/human-approved-spec.md`.
 - No PDF figure/table/image/layout review should be claimed.
 - Original R5 draft is superseded by final user-confirmed decisions where they differ.
@@ -132,7 +131,7 @@ Next route should be selected by the user:
 
 ## Next step / 下一步
 
-1. MNEMOSYNE-031 R4B/R4C/R5 已完成并 checkpoint；不要重生成 R4B、R4C 或 R5。
-2. 后续任务应使用 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md` 中的 final D-01 to D-07 决策。
-3. 当前下一路线由用户选择：PDF 图表复核 / first dry-run / Idea Capture Buffer / candidate cleanup。
-4. 如果未来再次发现入口文件状态残留，可另开小型一致性修复；不要把这类修复写入 `current/human-approved-spec.md`。
+1. 不要重生成 MNEMOSYNE-031 R4B/R4C；使用 final D-01 to D-07 决策继续后续路线；
+2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
+3. R4C 经确认后生成 R5 combined final writeback package；
+4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer。

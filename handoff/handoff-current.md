@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency cleanup 已执行 / 正在落账。当前等待用户选择下一路线：PDF 图表复核、首次 dry-run 或 Idea Capture Buffer / candidate cleanup。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；当前等待用户选择下一路线：PDF 图表复核、首次 dry-run、Idea Capture Buffer 或小型一致性修复。
 
 ## 当前执行源
 
@@ -72,21 +72,16 @@ Completed:
 - R2 Research Prompts and Topic Mapping Review.
 - R3 Report Summaries Review.
 - R4A User Design Intent Restatement Prompt List.
-- R4B restatement completed: 9 main records + 1 addendum.
-- R4B manifest/index.
-- R4C user design intent synthesis / candidate requirements draft.
-- R5 final D-01 to D-07 user decision review.
-- Final checkpoint records.
 
-Current continuation:
-- Do not resume from R4B.
-- Do not regenerate R4B, R4C, or R5.
-- Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
-- Next route should be selected by the user: PDF figure review / first dry-run / Idea Capture Buffer / candidate cleanup.
+Pending:
+- R4B user oral restatement.
+- R4C user design intent restatement result.
+- R5 final combined writeback package.
 
-Historical note:
-- Earlier MNEMOSYNE-031 checkpoint/status-sync files that say R4B/R4C/R5 are pending are historical records from before the final checkpoint.
-- They are superseded for current continuation purposes by the final checkpoint record and this handoff section.
+Next assistant should resume from R4B.
+Do not restart R1-R3.
+Do not regenerate R4A unless the user explicitly asks.
+Do not regenerate R4B/R4C. The user design restatement has been created after final user confirmation and remains non-execution-source.
 
 ## 新会话推荐读取顺序
 
@@ -136,9 +131,10 @@ Historical note:
 
 ## 下一步建议
 
-1. 不要重生成 MNEMOSYNE-031 R4B/R4C/R5；使用 final D-01 to D-07 决策继续后续路线。
-2. 下一路线由用户选择：PDF 图表复核 / first dry-run / Idea Capture Buffer / candidate cleanup。
-3. 如果执行 dry-run，应显式记住：MNEMOSYNE-031 review/restatement materials 不是执行源；`current/human-approved-spec.md` 仍是当前执行源。
+1. 不要重生成 MNEMOSYNE-031 R4B/R4C；使用 final D-01 to D-07 决策继续后续路线；
+2. R4B 完成后生成 R4C 用户构想重述结果并等待用户确认；
+3. R4C 经确认后生成 R5 final combined writeback package；
+4. 再决定 PDF 图表复核 / 首个 dry-run / Idea Capture Buffer / template small fixes。
 
 ## MNEMOSYNE-031 final checkpoint handoff
 
@@ -147,7 +143,7 @@ Current handoff:
 - MNEMOSYNE-031 review and restatement phase has reached final writeback checkpoint.
 - Do not regenerate R4B or R4C.
 - Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
-- Next route should be selected by user: PDF figure review / first dry-run / Idea Capture Buffer / candidate cleanup.
+- Next route should be selected by user: PDF figure review / first dry-run / Idea Capture Buffer / small fixes.
 
 Handoff concept clarification:
 
