@@ -97,6 +97,9 @@
 - R2 Research Prompts and Topic Mapping Review: answered; user decision B.
 - R3 Report Summaries Review: answered; user decision B.
 - R4A User Design Intent Restatement Prompt List: completed.
+- R4B User Oral Restatement: answered; completed as 9 main records + 1 addendum.
+- R4C User Design Intent Synthesis: answered; synthesis candidate draft generated, not execution source.
+- R5 Final Combined Writeback Package: answered; generated, with final D-01 to D-07 decisions governed by the research review record.
 
 ## open
 
@@ -131,12 +134,6 @@
 15. `raw/concept-origin-extract-001.md` 是否需要拆分成多个 raw record？
    - 说明：当前可按需回查；是否拆分仍待决定。
 
-17. MNEMOSYNE-031 R4B 用户口语化重述的具体内容是什么？
-    - 状态：answered；R4B 已完成 9 个 main records + 1 个 addendum。
-18. MNEMOSYNE-031 R4C 用户设计构想重述结果何时生成？
-    - 状态：answered；R4C synthesis candidate draft 已生成，且不是执行源。
-19. MNEMOSYNE-031 R5 final combined writeback package 何时生成？
-    - 状态：answered；final writeback checkpoint 已生成，final D-01 to D-07 决策以 research review record 为准。
 20. 完成 R4 / R5 后优先走哪条路线？
     - 说明：PDF review、first dry-run、Idea Capture Buffer 或 template small fixes 仍待决定。
 21. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
