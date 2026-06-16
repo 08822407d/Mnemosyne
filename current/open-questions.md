@@ -135,7 +135,7 @@
    - 说明：当前可按需回查；是否拆分仍待决定。
 
 20. 完成 R4 / R5 后优先走哪条路线？
-    - 说明：PDF review、first dry-run、Idea Capture Buffer 或 template small fixes 仍待决定。
+    - 说明：first dry-run 已通过 MNEMOSYNE-032 independent verification，final verdict 为 `PASS`；当前剩余路线为 PDF review、Idea Capture Buffer / candidate cleanup、template small fixes 或 memory-system testing/debugging feasibility research。
 21. 如果未来找回轻度研究 prompt，是否补入 originals 并更新索引？
 22. 是否需要把 prompt 原文与 report summary 的差异做 delta / review note？
 23. 用户重述后哪些内容可进入 candidate requirements？
