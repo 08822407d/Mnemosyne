@@ -563,3 +563,35 @@ All entries in this section are candidate requirements unless separately promote
   - `notes/self-improvement-template-pack.md`
   - `notes/system-construction-baseline.md`
   - `handoff/handoff-current.md`
+
+## MNEMOSYNE-033 Idea Capture Buffer candidates
+
+### CAND-033-0001
+
+- 内容：Mnemosyne 需要 Idea Capture Buffer，用于保存未来 ChatGPT / Pro / Deep Research / Codex 对话中的新想法、候选需求、研究触发点、矛盾、弱假设和路线选项。
+- 状态：pending
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+### CAND-033-0002
+
+- 内容：新想法应先进入 buffer，不能直接进入 `current/human-approved-spec.md`。
+- 状态：pending
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+### CAND-033-0003
+
+- 内容：buffer 条目应分类为 raw idea / candidate / open question / research-gated / conflict / weak assumption / route option 等。
+- 状态：pending
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+### CAND-033-0004
+
+- 内容：任意新对话应知道如何记录新想法，并通过 handoff / startup / idea buffer 延续 Mnemosyne 建设。
+- 状态：pending
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+### CAND-033-0005
+
+- 内容：Pro Deep Research 结果也应进入 evidence / buffer / candidate 层，不直接成为 spec。
+- 状态：pending
+- 来源：RAW-0054 / MNEMOSYNE-033

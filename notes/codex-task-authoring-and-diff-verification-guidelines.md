@@ -156,3 +156,9 @@ This guideline does not introduce automation.
 It does not create AGENTS.md or CLAUDE.md.
 It does not modify the execution source.
 It does not make Codex task results authoritative over repository files.
+
+## idea_capture_and_status_file_operational_note
+
+- 涉及 idea buffer / status / handoff 的 repo-editing task 也必须从 fresh latest master 开始，或明确证明当前环境已刷新到最新 default branch。
+- Task result record 不应嵌入大型 raw diff，也不应保留已移除 placeholder / error strings，以免污染后续搜索和人工 review。
+- 对 high-risk status files，优先使用 deterministic patch / exact replacement / targeted diff verification。

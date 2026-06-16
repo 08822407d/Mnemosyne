@@ -475,3 +475,10 @@ Medium-term candidate roadmap:
 - capability versioning;
 - memory-system feedback/testing/debugging research;
 - first reusable target-project memory template.
+
+## MNEMOSYNE-033 foundation hardening route
+
+- 032 PASS 后，当前目标从 validation cleanup 转入 foundation hardening。
+- 近期路线：Idea Capture Buffer → Pro Deep Research / PDF review / template review → first real target dry-run。
+- 新对话可通过 handoff / startup / idea buffer 继续工作。
+- Buffer 是防上下文丢失和防 spec 污染的中间层，不是执行源。

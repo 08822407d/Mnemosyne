@@ -174,3 +174,11 @@ Handoff concept clarification:
 - It is not global project law.
 - It may carry explicit local recovery constraints or temporary exceptions.
 - Such local exceptions must not silently become global execution-source changes.
+
+## MNEMOSYNE-033 Idea Capture Buffer handoff
+
+- 新对话接手时必须读取 `notes/idea-capture-triage-rules.md` 和 `notes/idea-capture-buffer.md`。
+- 新想法不要直接进入 spec。
+- 新想法先进入 buffer，再 triage 到 candidate / open question / research-gated item。
+- Codex repo-editing task 必须使用 fresh latest master，避免 stale branch / Accept Incoming rollback。
+- 用户提出新构想时，优先问是否记录到 Idea Capture Buffer。

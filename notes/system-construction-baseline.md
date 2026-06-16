@@ -215,3 +215,10 @@ MNEMOSYNE-031 final checkpoint 已完成。当前建议路线不再从 R4B/R4C/R
 - Handoff is task-local continuation context, not global project law.
 - Ordinary project Agents may maintain authorized memory content but cannot redesign public memory-system rules.
 - Memory-system testing/debugging is an important research-gated candidate capability.
+
+## MNEMOSYNE-033 foundation hardening update
+
+- MNEMOSYNE-032 PASS 后，系统建设重点从 validation cleanup 转入 foundation hardening。
+- 近期路线：Idea Capture Buffer → Pro Deep Research / PDF review / template review → first real target dry-run。
+- 新对话可通过 `handoff/handoff-current.md`、`handoff/startup-instructions.md`、`notes/idea-capture-triage-rules.md` 和 `notes/idea-capture-buffer.md` 继续工作。
+- Idea Capture Buffer 是防上下文丢失和防 spec 污染的中间层，不是执行源。
