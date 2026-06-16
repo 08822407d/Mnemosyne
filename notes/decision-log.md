@@ -607,3 +607,12 @@
 - 理由：MNEMOSYNE-032 PASS 是 validation evidence，不是 final design 或 spec approval。
 - 状态：accepted_for_current_task
 - 来源：MNEMOSYNE-032 independent verification / MNEMOSYNE-033
+
+## DEC-MNEMOSYNE-033A
+
+- 决策：执行 MNEMOSYNE-033A，将 exported conversation derived insights 补录到 Idea Capture Buffer / Open Questions / Candidate Cleanup。
+- 理由：新普通 ChatGPT 接手对话对完整导出记录提取出了仓库尚未充分表达的历史动机、失败模式、idea entries、open questions 和 candidate cleanup 内容；这些洞察需要入 buffer / candidate / open question 层，避免继续散落在对话上下文中。
+- 状态：accepted_for_current_task
+- 来源：RAW-0055 / MNEMOSYNE-033A
+- 边界：不把完整导出对话全文入库；不把这些洞察当作执行源、最终设计或用户批准 spec；不修改 `current/human-approved-spec.md`。
+- 后续：新想法仍需经过 idea buffer / candidate / open question / approved workflow，查重并由用户确认后才可能进入执行源。

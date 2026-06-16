@@ -164,3 +164,279 @@
 - 每隔若干任务做一次 triage。
 - triage 后可以移动到 candidate requirements / open questions / decision log。
 - 已处理条目不要删除，改状态并保留 trace。
+
+## MNEMOSYNE-033A exported conversation derived insight backfill
+
+All entries in this section are `historical_conversation_derived_insight`. They are not execution source, not final design, and not approved spec. They require triage through idea buffer / candidate requirements / open questions / approved workflow before any execution-source change.
+
+### IDEA-2026-0009
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 用户不是 Agent 架构专家，需要 Mnemosyne 主动辅助设计
+- raw_note: 用户需要系统帮助持续整理、查重、比较和升级设计，而不只是提供静态模板。
+- classification: `candidate_requirement`
+- confidence: medium
+- evidence_needed: 后续 candidate cleanup 与用户确认。
+- conflicts_or_risks: 不能直接升级为 spec。
+- proposed_next_action: 进入 candidate cleanup；后续模板和 onboarding 中强调 active assistance。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认后进入 approved workflow。
+
+### IDEA-2026-0010
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 用户记忆力不强是系统设计约束
+- raw_note: 用户记忆力不强解释了 handoff、idea capture、口语化重述、待重述清单、阶段编号、路线图、任务状态落盘等机制。
+- classification: `candidate_requirement`
+- confidence: medium
+- evidence_needed: 后续 candidate rationale / onboarding rationale。
+- conflicts_or_risks: 需要避免过度个人化或未经用户确认的执行源表述。
+- proposed_next_action: 进入 candidate rationale / onboarding rationale。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认 wording 和适用范围。
+
+### IDEA-2026-0011
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 系统应持续整理、查重、比较、升级用户断续提出的想法
+- raw_note: 用户会断断续续提出需求、反馈和想法，系统应持续管理其演化。
+- classification: `candidate_requirement`
+- confidence: high
+- evidence_needed: 与 idea buffer triage / candidate cleanup / decision workflow 对齐。
+- conflicts_or_risks: 不应绕过用户确认直接更新执行源。
+- proposed_next_action: 与 idea buffer triage / candidate cleanup / decision workflow 对齐。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 与既有 self-improvement workflow 查重后由用户确认。
+
+### IDEA-2026-0012
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 中文优先策略的长期回顾理由
+- raw_note: 中文优先不仅是语言偏好，也是为了长期回顾、避免翻译误差、减少双语膨胀；英文保留路径、ID、命令、Git/GitHub、工具名、产品名。
+- classification: `candidate_requirement`
+- confidence: high
+- evidence_needed: 语言策略 candidate cleanup。
+- conflicts_or_risks: 与当前 spec 的语言策略基本一致，但理由和边界仍需候选化。
+- proposed_next_action: 进入语言策略 candidate cleanup。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认是否补充到 approved spec rationale。
+
+### IDEA-2026-0013
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: AI 关键回应也可能需要保存为 raw/context evidence
+- raw_note: 用户希望保存的不只是用户原话，也包括影响后续构想演化的 AI 关键分析和建议。
+- classification: `raw_idea`
+- confidence: medium
+- evidence_needed: raw 保存粒度、隐私和冗余控制规则。
+- conflicts_or_risks: 可能带来体积、隐私、重复和过时上下文污染风险。
+- proposed_next_action: 研究 raw 保存粒度与隐私 / 冗余控制。
+- target_followup_file: `current/open-questions.md`; `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认保存粒度策略。
+
+### IDEA-2026-0014
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 三周压缩版 Pro 根基加固路线
+- raw_note: 普通 Pro 对话和 Pro Deep Research 额度共享，实际剩余时间从一月路线压缩为三周。
+- classification: `route_option`
+- confidence: medium
+- evidence_needed: 用户当前 Pro / Deep Research 额度和优先级。
+- conflicts_or_risks: 额度和 UI 会变化，不能写成长期事实或执行源。
+- proposed_next_action: 更新 route planning view；不直接改 spec。
+- target_followup_file: `notes/overall-target-and-roadmap-snapshot.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认路线优先级。
+
+### IDEA-2026-0015
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 普通 ChatGPT + GitHub 新对话作为 onboarding rehearsal
+- raw_note: 关联仓库的普通 ChatGPT 新对话可作为只读接手、路线复核、任务分流和接手能力验证入口。
+- classification: `route_option`
+- confidence: medium
+- evidence_needed: 后续 fresh conversation onboarding rehearsal 结果。
+- conflicts_or_risks: 不应替代 repo diff 验证或执行源。
+- proposed_next_action: 后续 fresh conversation onboarding rehearsal 可使用该模式。
+- target_followup_file: `handoff/handoff-current.md`; `notes/overall-target-and-roadmap-snapshot.md`
+- status: captured_pending_triage
+- promotion_condition: 用户选择演练路线并确认边界。
+
+### IDEA-2026-0016
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: Codex 任务内容文件化交付标准化
+- raw_note: 长任务、复杂任务、含 code fence 的任务应优先文件化或使用精确替换块，避免复制截断。
+- classification: `tool_or_process_lesson`
+- confidence: high
+- evidence_needed: Codex task authoring guideline cleanup。
+- conflicts_or_risks: 需决定是全局硬规则还是高风险任务规则。
+- proposed_next_action: 进入 Codex task authoring guideline candidate cleanup。
+- target_followup_file: `current/open-questions.md`; `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认适用范围。
+
+### IDEA-2026-0017
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 每个阶段任务开头编号
+- raw_note: 用户会中途切换事务，任务开头编号可降低忘记当前任务状态的风险。
+- classification: `tool_or_process_lesson`
+- confidence: medium
+- evidence_needed: task authoring convention review。
+- conflicts_or_risks: 编号应辅助记忆，不应替代仓库状态。
+- proposed_next_action: 进入 task authoring convention。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 与现有任务编号规则查重后确认。
+
+### IDEA-2026-0018
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: Codex Cloud 文件上传失败时的 text-paste fallback
+- raw_note: 文件上传失败时需有可复制粘贴的 fallback，避免任务中断。
+- classification: `tool_or_process_lesson`
+- confidence: medium
+- evidence_needed: Codex operational fallback candidate。
+- conflicts_or_risks: text-paste fallback 仍需避免 code fence 截断。
+- proposed_next_action: 进入 Codex operational fallback candidate。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认操作约定。
+
+### IDEA-2026-0019
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 模型能力差异与工作分工需要动态核实
+- raw_note: Custom GPT、普通对话、Pro 强度、Codex Cloud 模型选择等 UI 和能力会变化，应实时核实。
+- classification: `open_question`
+- confidence: high
+- evidence_needed: 当前官方产品状态和用户实际 UI。
+- conflicts_or_risks: 不要写成长期固定事实。
+- proposed_next_action: 进入 open questions；不要写成长期固定事实。
+- target_followup_file: `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: 作为动态事实按需核实。
+
+### IDEA-2026-0020
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 完整对话导出只作本地背景，是否入库需另行决策
+- raw_note: 完整导出记录有历史价值，但存在隐私、体积、重复污染、可检索性和过时任务风险。
+- classification: `open_question`
+- confidence: high
+- evidence_needed: 用户隐私边界、选摘策略和仓库体积策略。
+- conflicts_or_risks: 默认不完整入库，避免污染与隐私风险。
+- proposed_next_action: 进入 open questions；默认不完整入库。
+- target_followup_file: `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: 用户明确确认入库范围。
+
+### IDEA-2026-0021
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 研究报告主要供元 Agent 使用，用户不必通读
+- raw_note: 研究报告作为高权重证据层，用于让元 Agent 评价用户构想是否可行、过时或有更现代方案。
+- classification: `candidate_requirement`
+- confidence: high
+- evidence_needed: research evidence usage cleanup。
+- conflicts_or_risks: 不得声称用户已通读报告或 PDF 图表已复核。
+- proposed_next_action: 进入 research evidence usage / template candidate cleanup。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认是否进入 approved rationale。
+
+### IDEA-2026-0022
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 用户口语化重述前应由 AI 生成待重述清单
+- raw_note: 031 已完成一次该流程，但可成为未来目标项目 intake 的通用机制候选。
+- classification: `candidate_requirement`
+- confidence: medium
+- evidence_needed: target-project intake template review。
+- conflicts_or_risks: 031 流程成功不等于所有场景通用。
+- proposed_next_action: 进入 target-project intake template review。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: template review 后由用户确认。
+
+### IDEA-2026-0023
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 原文—候选—查重—人类确认—实施版链路
+- raw_note: 新想法不一定比旧想法更好，必须查重后由用户决定实施版写法。
+- classification: `candidate_requirement`
+- confidence: high
+- evidence_needed: candidate lifecycle / approved workflow cleanup。
+- conflicts_or_risks: 与现有 self-improvement workflow 需查重合并。
+- proposed_next_action: 进入 candidate lifecycle / approved workflow cleanup。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 与现有 workflow 对齐后确认。
+
+### IDEA-2026-0024
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: dry-run / independent verification 机制模板化
+- raw_note: 032 PASS 证明一次流程可行，但是否将验证性 dry-run 设计为未来通用模板仍需整理。
+- classification: `candidate_requirement`
+- confidence: medium
+- evidence_needed: template review / verification workflow candidate。
+- conflicts_or_risks: 单次 PASS 不是通用机制批准。
+- proposed_next_action: 进入 template review / verification workflow candidate。
+- target_followup_file: `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认是否模板化。
+
+### IDEA-2026-0025
+
+- source: RAW-0055 / MNEMOSYNE-033A
+- source_type: historical_conversation_derived_insight
+- captured_at: 2026-06-16
+- short_title: 任务结果记录保存范围
+- raw_note: 是否只保存有警告、限制、失败、未完成、人工复核需求的精简记录，而不是保存所有 Codex 完成回复。
+- classification: `open_question`
+- confidence: medium
+- evidence_needed: result-record policy cleanup。
+- conflicts_or_risks: 保存过多会污染，保存过少会丢失审计线索。
+- proposed_next_action: 进入 open questions / result-record policy cleanup。
+- target_followup_file: `current/open-questions.md`; `notes/candidate-requirements.md`
+- status: captured_pending_triage
+- promotion_condition: 用户确认任务结果记录策略。

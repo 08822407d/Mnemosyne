@@ -145,3 +145,18 @@ Next route should be selected by the user:
 - 已创建 `notes/idea-capture-buffer.md`。
 - 新想法进入 buffer，不直接进入 execution source。
 - 下一步：使用 idea buffer 捕获新想法，生成 / 执行 Pro Deep Research prompt，后续选择 PDF review / template review / first real target dry-run。
+
+## MNEMOSYNE-033A exported conversation insight backfill
+
+- MNEMOSYNE-033A 已将导出对话洞察补录到 idea buffer / open questions / candidate cleanup。
+- 补录内容来源类型为 `historical_conversation_derived_insight`，不是执行源、不是最终设计、不是用户批准 spec。
+- 完整对话导出默认不入库；本次只创建 `RAW-0055` 摘要定位和 buffer / candidate / open question 条目。
+- 当前执行源仍是 `current/human-approved-spec.md`。
+
+Pending after MNEMOSYNE-033A:
+
+- triage IDEA-2026-0009 之后的新增 exported-conversation-derived entries；
+- 决定完整导出记录是否需要清洗版摘要 / selected excerpts；
+- 处理模型能力差异 / Codex 模型选择等 open questions；
+- 明确 AI 回复在 raw/context evidence 中保存粒度；
+- 继续 Pro Deep Research / PDF review / template review / first target selection。

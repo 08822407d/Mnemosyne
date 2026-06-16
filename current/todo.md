@@ -134,3 +134,12 @@ Pending / next:
 - [ ] PDF figure/table/image/layout 局部复核
 - [ ] template review / small fixes
 - [ ] first real target-project scenario selection
+
+## MNEMOSYNE-033A exported conversation insight buffer backfill
+
+- [x] MNEMOSYNE-033A：exported conversation insight buffer backfill
+- [ ] triage IDEA-2026-0009 之后的 exported-conversation-derived entries
+- [ ] 决定完整对话导出是否需要清洗版摘要 / selected excerpts
+- [ ] 明确 AI 回复在 raw/context evidence 中保存粒度
+- [ ] 处理模型能力差异 / Codex 模型选择等 open questions
+- [ ] 继续 Pro Deep Research prompt / PDF review / template review / onboarding rehearsal / first target selection 路线选择

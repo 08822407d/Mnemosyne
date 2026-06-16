@@ -222,3 +222,10 @@ MNEMOSYNE-031 final checkpoint 已完成。当前建议路线不再从 R4B/R4C/R
 - 近期路线：Idea Capture Buffer → Pro Deep Research / PDF review / template review → first real target dry-run。
 - 新对话可通过 `handoff/handoff-current.md`、`handoff/startup-instructions.md`、`notes/idea-capture-triage-rules.md` 和 `notes/idea-capture-buffer.md` 继续工作。
 - Idea Capture Buffer 是防上下文丢失和防 spec 污染的中间层，不是执行源。
+
+## MNEMOSYNE-033A exported conversation insight baseline update
+
+- 系统根基现在包含：从完整对话导出中提取历史洞察，并将其补入 Idea Capture Buffer / Open Questions / Candidate Cleanup 的流程。
+- 完整导出不直接入库；默认只保存任务级 raw 摘要定位和经整理的 selected insight。
+- historical conversation derived insight 不直接成为 spec、最终设计或执行源；仍需经过 idea buffer / candidate / open question / approved workflow。
+- 当前执行源仍是 `current/human-approved-spec.md`。
