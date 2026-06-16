@@ -309,6 +309,7 @@
 - 理由：self-improvement workflow 已有流程说明，需要推进为可复制、可审计的模板包。
 - 状态：accepted
 - 来源：RAW-0031
+- MNEMOSYNE-032F 追加记录：记录并接受 MNEMOSYNE-032 dry-run independent verification 的 final verdict 为 `PASS`；状态：accepted_for_status_tracking；边界：不修改 `current/human-approved-spec.md`，不把 dry-run artifact 升格为 execution source，且不代表 PDF figure/table/image/layout 已完成人工复核。
 
 ## DEC-0047
 
@@ -341,6 +342,7 @@
 ## DEC-0051
 
 - 决策：完成 self-improvement template pack 后，下一方向优先考虑目标项目 intake / memory system design spec 模板。
+- MNEMOSYNE-032F 追加决策：记录并接受 MNEMOSYNE-032 dry-run independent verification 的 final verdict 为 `PASS`，作为当前 dry-run 验证状态；状态：accepted_for_status_tracking；边界：不修改 `current/human-approved-spec.md`，不把 dry-run artifact 升格为 execution source，且不代表 PDF figure/table/image/layout 已完成人工复核。
 - 理由：自我改进入口稳定后，应转向 Mnemosyne 面向目标项目交付的核心模板能力。
 - 状态：accepted
 - 来源：RAW-0031

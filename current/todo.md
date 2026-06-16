@@ -68,7 +68,7 @@ MNEMOSYNE-031 R1-R5 final checkpoint records are now persisted; do not regenerat
 - [ ] 用户 review `notes/delivery-manifest-template-pack.md`；
 - [ ] 根据 review 小修 delivery manifest template pack；
 - [ ] 用户选择第一个目标项目场景；
-- [ ] 第一轮 dry-run intake；
+- [x] MNEMOSYNE-032 first dry-run intake and independent verification PASS；
 - [ ] 根据 review 小修三类模板包；
 - [ ] Idea Capture Buffer；
 - [ ] 隐私分级；
@@ -111,6 +111,15 @@ Completed:
 
 Pending / next:
 
-- [ ] decide next route: PDF figure review / first dry-run / Idea Capture Buffer / small fixes
+- [ ] decide next route after MNEMOSYNE-032 PASS: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research
 - [ ] design future execution-source promotion workflow
 - [ ] research memory-system testing/debugging feasibility
+
+## MNEMOSYNE-032 dry-run independent verification
+
+- [x] MNEMOSYNE-032 dry-run artifacts produced.
+- [x] Independent verification detail report received and persisted.
+- [x] Final independent verdict recorded as `PASS`.
+- [x] Invalid-test condition checked: `false`.
+- [x] Blocking issues checked: none.
+- [ ] Next route remains user-selected: PDF figure/table/image manual review, Idea Capture Buffer / candidate cleanup, template review / small fixes, or memory-system testing/debugging feasibility research.
