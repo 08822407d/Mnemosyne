@@ -10,7 +10,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## 当前阶段
 
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。当前等待用户选择下一路线：PDF 图表复核、首次 dry-run 或 Idea Capture Buffer / candidate cleanup。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 first dry-run independent verification 已完成，final verdict 为 PASS。当前等待用户选择下一路线：PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes 或 memory-system testing/debugging feasibility research。
 
 ## 当前执行源
 
@@ -82,11 +82,21 @@ Current continuation:
 - Do not resume from R4B.
 - Do not regenerate R4B, R4C, or R5.
 - Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
-- Next route should be selected by the user: PDF figure review / first dry-run / Idea Capture Buffer / candidate cleanup.
+- Next route should be selected by the user: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research.
 
 Historical note:
 - Earlier MNEMOSYNE-031 checkpoint/status-sync files that say R4B/R4C/R5 are pending are historical records from before the final checkpoint.
 - They are superseded for current continuation purposes by the final checkpoint record and this handoff section.
+
+## MNEMOSYNE-032 dry-run independent verification status
+
+- A read-only independent verification of the MNEMOSYNE-032 dry-run artifacts on `master` has completed.
+- Final independent verdict: `PASS`.
+- Invalid-test trigger: `false`.
+- Blocking issues: none.
+- Verification detail report: `notes/dry-runs/MNEMOSYNE-032/MNEMOSYNE-032-independent-verification-detail.md`.
+- Dry-run artifacts remain validation evidence only. They are not execution source, not final Mnemosyne design, and do not modify `current/human-approved-spec.md`.
+- Status files were intentionally not updated by the dry-run itself because status updates were outside the dry-run permission scope; MNEMOSYNE-032F records the authorized status update.
 
 ## Codex / ChatGPT task verification reminder
 
@@ -146,7 +156,7 @@ When generating or executing Codex tasks that modify files, require actual diff 
 ## 下一步建议
 
 1. 不要重生成 MNEMOSYNE-031 R4B/R4C/R5；使用 final D-01 to D-07 决策继续后续路线。
-2. 下一路线由用户选择：PDF 图表复核 / first dry-run / Idea Capture Buffer / candidate cleanup。
+2. 下一路线由用户选择：PDF 图表复核 / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research。
 3. 如果执行 dry-run，应显式记住：MNEMOSYNE-031 review/restatement materials 不是执行源；`current/human-approved-spec.md` 仍是当前执行源。
 
 ## MNEMOSYNE-031 final checkpoint handoff
@@ -156,7 +166,7 @@ Current handoff:
 - MNEMOSYNE-031 review and restatement phase has reached final writeback checkpoint.
 - Do not regenerate R4B or R4C.
 - Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
-- Next route should be selected by user: PDF figure review / first dry-run / Idea Capture Buffer / small fixes.
+- Next route should be selected by user: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research.
 
 Handoff concept clarification:
 
