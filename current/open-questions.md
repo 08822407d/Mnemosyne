@@ -167,3 +167,22 @@
 - 是否要先做 template review，还是 first real target dry-run？
 - 哪些 idea 可以升级到 candidate requirements？
 - 哪些 idea 需要用户 decision？
+
+## MNEMOSYNE-033A exported conversation derived insight open questions
+
+- 当前不同 ChatGPT 入口的模型能力差异如何影响 Mnemosyne 工作分工？
+  - 说明：Custom GPT、普通 ChatGPT、Pro 强度、Deep Research 和 Codex Cloud 的能力与 UI 可能变化，应按当前事实动态核实，不应写成长期固定假设。
+- Codex Cloud 当前使用哪个模型、是否可选模型，以及这个事实如何保持最新？
+  - 说明：该问题影响 repo-editing / review / verification 分工；需要以当前产品状态和用户实际界面为准。
+- 任务提示文件化交付是否应成为全局硬规则，还是仅针对长任务 / 高风险任务？
+  - 说明：历史失败包括复制截断、嵌套 code fence、云端未同步和 stale branch；适用范围仍需用户确认。
+- 哪些历史动机已被 raw / restatement 充分保存，哪些还需要单独 motivation record？
+  - 说明：避免重复保存，也避免用户核心动机只留在对话上下文中。
+- 完整对话导出是否应完整入库，还是只入 near-original extract / selected raw excerpts？
+  - 说明：默认不完整入库；需权衡隐私、体积、重复污染、检索价值和旧任务文本误导风险。
+- AI 回复在 raw/context evidence 中保存到什么粒度？
+  - 说明：用户希望保留会影响后续构想演化的 AI 关键回应，但需控制隐私、冗余和过时分析污染。
+- Idea Capture Buffer 多久 triage 一次、由谁触发、什么算“重要对话后”？
+  - 说明：当前规则只说明可在重要对话或 Codex 任务后追加，仍需确定 cadence 和触发条件。
+- 任务结果记录保存范围应如何定义？
+  - 说明：是否只保存有警告、限制、失败、未完成、人工复核需求的精简记录，而不是保存所有 Codex 完成回复，仍需策略确认。

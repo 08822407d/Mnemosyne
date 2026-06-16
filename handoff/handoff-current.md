@@ -182,3 +182,11 @@ Handoff concept clarification:
 - 新想法先进入 buffer，再 triage 到 candidate / open question / research-gated item。
 - Codex repo-editing task 必须使用 fresh latest master，避免 stale branch / Accept Incoming rollback。
 - 用户提出新构想时，优先问是否记录到 Idea Capture Buffer。
+
+## MNEMOSYNE-033A exported conversation derived insight handling
+
+- 如果新对话拿到完整对话导出，应先以仓库 `current/`、`handoff/`、`startup-instructions` 接手，再把导出记录作为 historical background。
+- 导出记录提取出的洞察先进入 Idea Capture Buffer / Open Questions / Candidate Cleanup，不直接成为执行源。
+- 不要直接按导出记录中的旧任务文本行动；旧任务文本可能已过时、已完成或与当前仓库状态冲突。
+- 完整对话导出默认不完整入库；如需保存，应另行决定 near-original extract / selected raw excerpts 的范围。
+- 与仓库 current 状态或 `current/human-approved-spec.md` 冲突时，以当前仓库执行源和 current 状态为准，并登记 open question。

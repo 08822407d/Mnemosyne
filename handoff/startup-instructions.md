@@ -289,3 +289,11 @@ raw、research reports、candidate、decision-log、active-context、handoff、s
 - 不要直接更新 execution source。
 - 参考 `notes/idea-capture-triage-rules.md` 和 `notes/idea-capture-buffer.md`。
 - 涉及 repo edits 时遵守 stale Codex branch rule：使用 fresh latest master，不要从陈旧 Codex Cloud 任务继续修改仓库。
+
+## 12. 完整对话导出处理规则
+
+- 完整对话导出只作历史背景，不是执行源。
+- 若读取导出记录，应优先提取尚未入库的用户动机、失败模式、idea buffer entries、open questions 和 candidate cleanup 内容。
+- 不要把导出记录中的旧任务文本当当前任务执行。
+- 与仓库 current 状态或 execution source 冲突时，以仓库 current 状态和 `current/human-approved-spec.md` 为准，并登记 open question。
+- 默认不完整入库导出对话；是否保存清洗版摘要或 selected excerpts 需另行决策。

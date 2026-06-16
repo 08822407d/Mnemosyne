@@ -482,3 +482,10 @@ Medium-term candidate roadmap:
 - 近期路线：Idea Capture Buffer → Pro Deep Research / PDF review / template review → first real target dry-run。
 - 新对话可通过 handoff / startup / idea buffer 继续工作。
 - Buffer 是防上下文丢失和防 spec 污染的中间层，不是执行源。
+
+## MNEMOSYNE-033A exported conversation insight route update
+
+- 三周压缩版 Pro 根基加固路线已作为当前 planning view 记录，用于替代较早的“一月路线”表述；该路线是 planning view，不是执行源，也不直接驱动 spec。
+- Idea Capture Buffer 已支持从完整对话导出中提取 historical conversation derived insight，并将其补录到 buffer / open questions / candidate cleanup。
+- 完整对话导出默认不完整入库；如需保存，只能另行决定清洗版摘要或 selected excerpts。
+- Pro Deep Research / PDF review / template review / onboarding rehearsal / first target selection 仍是后续路线，需用户选择和必要验证。

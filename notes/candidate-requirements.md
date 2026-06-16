@@ -595,3 +595,84 @@ All entries in this section are candidate requirements unless separately promote
 - 内容：Pro Deep Research 结果也应进入 evidence / buffer / candidate 层，不直接成为 spec。
 - 状态：pending
 - 来源：RAW-0054 / MNEMOSYNE-033
+
+## MNEMOSYNE-033A exported conversation derived insight candidate cleanup
+
+All entries in this section are candidate cleanup items derived from `historical_conversation_derived_insight`. They are not execution source, not final design, and not approved requirements.
+
+### CAND-033A-0001
+
+- 内容：用户不是 Agent 架构专家，Mnemosyne 应主动辅助设计，而不是只提供静态模板。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0009
+- cleanup 方向：后续模板、onboarding 和 self-improvement workflow 可强调 active assistance，但需用户确认后才能升级。
+
+### CAND-033A-0002
+
+- 内容：用户记忆力不强是系统设计约束之一，解释 handoff、idea capture、口语化重述、待重述清单、阶段编号、路线图和任务状态落盘等机制。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0010
+- cleanup 方向：进入 candidate rationale / onboarding rationale；避免未经确认直接写入执行源。
+
+### CAND-033A-0003
+
+- 内容：Mnemosyne 应持续整理、查重、比较、升级用户断续提出的需求、反馈和想法。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0011
+- cleanup 方向：与 idea buffer triage、candidate cleanup、decision workflow 和 approved workflow 查重合并。
+
+### CAND-033A-0004
+
+- 内容：中文优先策略的候选理由包括长期回顾、避免翻译误差、减少双语膨胀；英文保留范围包括路径、ID、命令、Git/GitHub、工具名、产品名等。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0012
+- cleanup 方向：语言策略 candidate cleanup；当前 spec 已有语言边界，但理由是否进入 approved rationale 需用户确认。
+
+### CAND-033A-0005
+
+- 内容：AI 关键回应可作为 raw/context evidence 的保存候选对象，但需要保存粒度、隐私、冗余和过时分析污染控制规则。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0013
+- cleanup 方向：与 open question “AI 回复保存粒度”联动。
+
+### CAND-033A-0006
+
+- 内容：研究报告主要供元 Agent 使用，不要求用户通读；其作用是作为高权重证据层，用于可行性评价、过时性判断和现代方案对照。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0021
+- cleanup 方向：research evidence usage / template cleanup；不得声称 PDF 图表已复核。
+
+### CAND-033A-0007
+
+- 内容：用户口语化重述前由 AI 生成待重述清单，可作为未来目标项目 intake 的通用机制候选。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0022
+- cleanup 方向：target-project intake template review；MNEMOSYNE-031 的成功流程不自动等于通用模板。
+
+### CAND-033A-0008
+
+- 内容：原文 → 候选 → 查重 → 用户确认 → 实施版 是新想法进入执行层的候选链路；新想法不一定比旧想法更好。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0023
+- cleanup 方向：candidate lifecycle / approved workflow cleanup；与现有 self-improvement workflow 查重。
+
+### CAND-033A-0009
+
+- 内容：dry-run / independent verification 是否模板化仍需整理；MNEMOSYNE-032 PASS 是 validation evidence，不是通用机制批准。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0024
+- cleanup 方向：verification workflow / template review。
+
+### CAND-033A-0010
+
+- 内容：Codex task authoring failure taxonomy 包括复制截断、云端未同步、完成摘要不可信、stale branch、状态文件滞后、placeholder 污染、Markdown 长行影响 review。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0016 / IDEA-2026-0017 / IDEA-2026-0018
+- cleanup 方向：Codex task authoring guideline cleanup；需决定文件化交付的适用范围。
+
+### CAND-033A-0011
+
+- 内容：route planning 文件是一月 / 三周 Pro 路线等 planning view，不是执行源，也不直接驱动 spec。
+- 状态：pending_triage
+- 来源：RAW-0055 / IDEA-2026-0014
+- cleanup 方向：roadmap / active-context / startup 中持续保持非执行源边界。
