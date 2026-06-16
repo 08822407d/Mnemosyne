@@ -123,3 +123,14 @@ Pending / next:
 - [x] Invalid-test condition checked: `false`.
 - [x] Blocking issues checked: none.
 - [ ] Next route remains user-selected: PDF figure/table/image manual review, Idea Capture Buffer / candidate cleanup, template review / small fixes, or memory-system testing/debugging feasibility research.
+
+## MNEMOSYNE-033 Idea Capture Buffer / candidate cleanup
+
+- [x] MNEMOSYNE-033：Idea Capture Buffer / candidate cleanup / 新对话接手稳固化
+- [x] 创建 `notes/idea-capture-triage-rules.md`
+- [x] 创建 `notes/idea-capture-buffer.md`
+- [ ] 定期 triage idea-capture-buffer
+- [ ] 生成 Pro Deep Research prompt：memory-system testing/debugging feasibility
+- [ ] PDF figure/table/image/layout 局部复核
+- [ ] template review / small fixes
+- [ ] first real target-project scenario selection

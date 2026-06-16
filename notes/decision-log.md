@@ -579,3 +579,31 @@
 - 状态：accepted_for_status_tracking
 - 来源：notes/dry-runs/MNEMOSYNE-032/MNEMOSYNE-032-independent-verification-detail.md；MNEMOSYNE-032F；MNEMOSYNE-032G
 - 边界：不修改 `current/human-approved-spec.md`；不把 dry-run artifact 升格为 execution source 或 final design；不代表 PDF figure/table/image/layout 已完成人工复核。
+
+## DEC-MNEMOSYNE-033
+
+- 决策：执行 MNEMOSYNE-033，建立 Idea Capture Buffer / candidate cleanup 机制。
+- 理由：用户希望任意新开对话也能继续 Mnemosyne 建设，且当前上下文巨大，需要防止新想法散落或直接污染 execution source。
+- 状态：accepted_for_current_task
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+## DEC-MNEMOSYNE-033-B
+
+- 决策：新想法不直接进入 execution source，而是先进入 Idea Capture Buffer，再按规则 triage 到 candidate / open question / research-gated item。
+- 理由：保持 `current/human-approved-spec.md` 的唯一执行源边界。
+- 状态：accepted_for_current_task
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+## DEC-MNEMOSYNE-033-C
+
+- 决策：一个月 Pro 会员高强度建设路线先作为 route planning / buffer item，不直接改执行源。
+- 理由：路线规划需要用户优先级和后续研究 / review 支撑。
+- 状态：accepted_for_current_task
+- 来源：RAW-0054 / MNEMOSYNE-033
+
+## DEC-MNEMOSYNE-033-D
+
+- 决策：继续保持 dry-run artifacts 不是执行源。
+- 理由：MNEMOSYNE-032 PASS 是 validation evidence，不是 final design 或 spec approval。
+- 状态：accepted_for_current_task
+- 来源：MNEMOSYNE-032 independent verification / MNEMOSYNE-033

@@ -282,3 +282,10 @@ raw、research reports、candidate、decision-log、active-context、handoff、s
 - 下一步建议；
 - 是否发现冲突；
 - 是否需要用户确认。
+
+## 11. Idea Capture Buffer rule
+
+- 新会话遇到新想法 / route option / research trigger / weak assumption 时，先记录为 idea-capture candidate。
+- 不要直接更新 execution source。
+- 参考 `notes/idea-capture-triage-rules.md` 和 `notes/idea-capture-buffer.md`。
+- 涉及 repo edits 时遵守 stale Codex branch rule：使用 fresh latest master，不要从陈旧 Codex Cloud 任务继续修改仓库。

@@ -137,3 +137,11 @@ Next route should be selected by the user:
 2. 后续任务应使用 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md` 中的 final D-01 to D-07 决策。
 3. 当前下一路线由用户选择：PDF 图表复核 / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research。
 4. 如果未来再次发现入口文件状态残留，可另开小型一致性修复；不要把这类修复写入 `current/human-approved-spec.md`。
+
+## MNEMOSYNE-033 Idea Capture Buffer update
+
+- MNEMOSYNE-033 已建立 Idea Capture Buffer / candidate cleanup 机制。
+- 已创建 `notes/idea-capture-triage-rules.md`。
+- 已创建 `notes/idea-capture-buffer.md`。
+- 新想法进入 buffer，不直接进入 execution source。
+- 下一步：使用 idea buffer 捕获新想法，生成 / 执行 Pro Deep Research prompt，后续选择 PDF review / template review / first real target dry-run。

@@ -91,6 +91,9 @@
     - 依据：read-only independent verification checked `master`, execution-source boundary, protected-file conditions, missing prompt boundary, PDF review boundary, dry-run artifacts, Codex self-assessment consistency, and invalid-test conditions.
     - 状态：answered；dry-run artifacts remain validation evidence only, not execution source and not final design.
 
+25. 是否需要在 first target 前建立 Idea Capture Buffer？
+   - 结论：需要。用户希望任意新开对话也能继续 Mnemosyne 建设，且当前上下文巨大；Idea Capture Buffer 用于防止新想法丢失或直接污染 execution source。
+
 ## Answered in MNEMOSYNE-031 checkpoint
 
 - R1 Research Motivation Review: answered; user decision B.
@@ -156,3 +159,11 @@
 - OP-09: Can current models reliably perform memory-system testing / debugging / root-cause diagnosis?
 - OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
 - OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
+## MNEMOSYNE-033 Idea Capture Buffer open questions
+
+- Idea Capture Buffer 的条目多久 triage 一次？
+- Pro Deep Research 优先研究哪些 memory-system testing/debugging 问题？
+- 哪些 PDF 图表 / 表格 / 图片应优先复核？
+- 是否要先做 template review，还是 first real target dry-run？
+- 哪些 idea 可以升级到 candidate requirements？
+- 哪些 idea 需要用户 decision？
