@@ -97,3 +97,20 @@ The user's "index" idea was borrowed from PC hardware / operating-system / file-
 It should not be treated as a core Mnemosyne requirement. It should be classified as a research-gated performance optimization candidate.
 
 It may later be studied as a retrieval acceleration mechanism when persistent memory grows large. Risks include stale indexes, misleading indexes, and agents treating indexes as authority rather than retrieval aids.
+
+
+## 7. Near-term target-project readiness priority
+
+The current near-term construction priority is to make Mnemosyne capable of designing and helping build persistent-memory frameworks for other target projects as soon as reasonably possible.
+
+Mnemosyne should avoid getting trapped in endless refinement of its own internal protocols before serving real target-project memory needs. Internal onboarding reliability, command conventions, and behavior guidance remain important, but they should primarily support real target-project readiness.
+
+The practical near-term success condition is not a perfect internal system. It is a usable framework that can:
+
+- intake a target project's context and constraints;
+- propose an external persistent-memory structure;
+- distinguish execution source, evidence, candidate material, handoff, and operational artifacts;
+- produce a deliverable starter memory framework for the target project;
+- receive feedback from target-project use and feed it back into Mnemosyne.
+
+This priority remains non-execution-source construction understanding unless later promoted through approved workflow.

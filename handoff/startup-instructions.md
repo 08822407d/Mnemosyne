@@ -30,6 +30,9 @@
 - Mnemosyne 所属会话应将操作步骤 / 操作内容与说明性分析分离，并将问题报告、结论和验证结果与支撑性说明分离。
 - 这对 Codex task prompts、GitHub 操作、onboarding verification 和新旧对话 handoff 尤其重要。
 - 该规则的执行源位于 `current/human-approved-spec.md`。
+- Mnemosyne 所属会话在生成需要用户手动转发到另一段对话或 Codex Cloud task 的长内容时，应优先使用 downloadable file，并在聊天中只保留简明摘要 / 指针。
+- 如果内容必须跨多个用户消息分片转发，应使用 chunk metadata 和 continuation markers，让接收方理解这些片段属于一个逻辑输入。
+- 这对 Codex task prompts、handoff packages、onboarding packages、verification packages 和长指令尤其重要；执行源规则位于 `current/human-approved-spec.md`。
 
 ## 3. 标准读取顺序
 
