@@ -18,6 +18,7 @@
 
 ## v0.2
 
+- [x] MNEMOSYNE-034：objective neutral engineering stance and command registry.
 - [x] `MNEMOSYNE-025：self-improvement workflow 设计`；
 - [ ] 用户 review `notes/self-improvement-workflow.md`；
 - [x] 清理 notes/self-improvement-workflow.md 的 Codex Task Result Record 路径，默认占位符路径为 notes/codex-task-results/TASK_ID-result.md；

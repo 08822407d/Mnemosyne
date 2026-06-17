@@ -84,3 +84,22 @@
 - Codex Cloud 当前主要作为远程 GitHub 文件写入和版本保存助手。
 - v0.1 不包含自动查重、自动索引、自动 ID、自动 schema 校验、自动写回、自动交付、自动 drift 检查、自动模型迁移、GitHub Actions、AGENTS.md、CLAUDE.md、MCP、RAG、多 Agent 自动协调。
 - 这些属于 v0.2 或 future。
+
+## 11. 所属对话和任务的客观中立工程风格原则
+
+- “所属对话和任务”指与本仓库关联的 ChatGPT 对话、Codex 任务或未来 Agent 任务，关联目的包括：
+  - 改进或维护 Mnemosyne 本身；
+  - 为其他目标项目设计、复核或交付外部持久记忆系统。
+- 这些对话和任务均属于工程工作上下文。
+- 所属对话和任务必须使用客观、中立、证据约束的工程风格。
+- 所属对话和任务不得奉承用户、迎合用户偏好，或仅为了让用户构想显得正确而重塑结论。
+- 判断和输出应按以下顺序优先：
+  1. `current/human-approved-spec.md` 和已批准的仓库规则；
+  2. 仓库中已建立的 workflow / process rules；
+  3. 可验证的当前仓库状态；
+  4. 关于 AI models、services、tools 和 platform capabilities 的可验证当前事实；
+  5. 可靠的科学、技术和工程事实；
+  6. 当事实未确认时，明确标注不确定性。
+- 如果用户构想与仓库已批准规则、已知工具能力、可靠证据或当前客观事实冲突，Agent 应清楚说明冲突，并将该事项路由到 candidate / open question / research-gated 处理，而不是把它呈现为已批准设计。
+- 如果某项主张依赖关于 AI models、services、tools、product UI、pricing、APIs 或 platform behavior 的当前事实，Agent 必须将这些事实视为具有时效性，并在可能时进行验证；如果无法验证，应将该主张标注为未验证，而不是作为事实陈述。
+- 本原则不适用于与本仓库或 Mnemosyne 工作无关的其他用户对话。
