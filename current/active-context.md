@@ -1,5 +1,13 @@
 # Active Context
 
+
+## MNEMOSYNE-036 status
+
+- MNEMOSYNE-036 records construction-stage understanding and artifact-boundary clarifications as non-execution-source notes / candidates / open questions.
+- current/human-approved-spec.md was not modified by this task.
+- Core additions include prototype-stage framing, ChatGPT-to-Codex writeback loop, evidence-guided self-improvement, HADB terminology, agent-operational artifact boundary, and indexing as research-gated performance optimization.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## 当前阶段
 
 MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 dry-run independent verification 已完成，final verdict 为 PASS。当前等待用户选择下一路线：PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes 或 memory-system testing/debugging feasibility research。

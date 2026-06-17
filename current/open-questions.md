@@ -186,3 +186,12 @@
   - 说明：当前规则只说明可在重要对话或 Codex 任务后追加，仍需确定 cadence 和触发条件。
 - 任务结果记录保存范围应如何定义？
   - 说明：是否只保存有警告、限制、失败、未完成、人工复核需求的精简记录，而不是保存所有 Codex 完成回复，仍需策略确认。
+
+## MNEMOSYNE-036 construction-stage open questions
+
+- How should HADB relate to raw records, candidate requirements, and `current/human-approved-spec.md`?
+- When should a settled HADB require a clarification addendum during artifact generation?
+- How should agent-operational artifacts be tested or verified for reproducible use by later agents?
+- What minimum evidence is needed before indexing/retrieval acceleration becomes a real Mnemosyne mechanism?
+- What cadence should research-to-improvement review use, and how should it map research findings to open questions and failure modes?
+- Which real target projects should be used to test whether Mnemosyne's prototype memory-system designs actually work?

@@ -145,3 +145,8 @@ Pending / next:
 - [ ] 明确 AI 回复在 raw/context evidence 中保存粒度
 - [ ] 处理模型能力差异 / Codex 模型选择等 open questions
 - [ ] 继续 Pro Deep Research prompt / PDF review / template review / onboarding rehearsal / first target selection 路线选择
+
+
+## MNEMOSYNE-036 construction-stage understanding backfill
+
+- [x] MNEMOSYNE-036：construction-stage understanding and artifact-boundary clarifications captured.

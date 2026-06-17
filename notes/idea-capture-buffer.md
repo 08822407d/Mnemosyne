@@ -440,3 +440,99 @@ All entries in this section are `historical_conversation_derived_insight`. They 
 - target_followup_file: `current/open-questions.md`; `notes/candidate-requirements.md`
 - status: captured_pending_triage
 - promotion_condition: 用户确认任务结果记录策略。
+
+### IDEA-2026-0026
+
+- source: current ChatGPT conversation / MNEMOSYNE-036 preparation
+- source_type: user_supplemental_explanation
+- captured_at: 2026-06-17
+- short_title: Prototype-stage Mnemosyne construction understanding
+- raw_note: Mnemosyne is currently a prototype-stage exploratory system aiming to establish a usable external persistent memory framework; maturity should come through real target-project use, observed failures, and feedback rather than premature perfect architecture.
+- classification: `candidate_requirement` / `design_rationale`
+- confidence: high
+- evidence_needed: target-project dry-runs and observed memory-system failure records.
+- conflicts_or_risks: Could be misread as permission for careless execution; must remain bounded by `current/human-approved-spec.md`.
+- proposed_next_action: Deduplicate against existing construction rationale and decide whether any wording belongs in future approved rationale.
+- target_followup_file: `notes/candidate-requirements.md`; `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: User confirms the formulation after deduplication and conflict review.
+
+### IDEA-2026-0027
+
+- source: current ChatGPT conversation / MNEMOSYNE-036 preparation
+- source_type: user_supplemental_explanation
+- captured_at: 2026-06-17
+- short_title: Ordinary ChatGPT to Codex repository writeback loop
+- raw_note: Ordinary ChatGPT discussions are read-only for repositories but may generate strict Codex tasks; Codex performs reviewed repository writes through PRs, followed by user review/merge and possible read-only verification.
+- classification: `tool_or_process_lesson` / `candidate_requirement`
+- confidence: high
+- evidence_needed: Review against current Codex task authoring guidance and repository workflow notes.
+- conflicts_or_risks: "Do not write the repository in this conversation" could be overgeneralized to block Codex task generation.
+- proposed_next_action: Consider adding a workflow clarification to future process guidance if approved.
+- target_followup_file: `notes/candidate-requirements.md`; `handoff/handoff-current.md`
+- status: captured_pending_triage
+- promotion_condition: User confirms this should become stable workflow guidance.
+
+### IDEA-2026-0028
+
+- source: current ChatGPT conversation / MNEMOSYNE-036 preparation
+- source_type: user_supplemental_explanation
+- captured_at: 2026-06-17
+- short_title: Evidence-guided self-improvement
+- raw_note: Mnemosyne should improve through self-use and project feedback plus periodic deep research and current best practices; agents should map research findings to open questions, failure modes, target-project feedback, template gaps, capability boundaries, and outdated assumptions.
+- classification: `candidate_requirement` / `research_gated_item`
+- confidence: high
+- evidence_needed: Research-to-improvement cadence and mapping template validation.
+- conflicts_or_risks: Research evidence must not be promoted directly into execution source or override human-approved spec.
+- proposed_next_action: Triage into research evidence usage and self-improvement workflow cleanup.
+- target_followup_file: `notes/candidate-requirements.md`; `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: User approves the research-to-improvement loop and its safeguards.
+
+### IDEA-2026-0029
+
+- source: current ChatGPT conversation / MNEMOSYNE-036 preparation
+- source_type: user_supplemental_explanation
+- captured_at: 2026-06-17
+- short_title: Human-readable basis materials vs agent-operational artifacts
+- raw_note: Mnemosyne should distinguish human-readable basis materials that preserve intent and reviewability from agent-operational artifacts designed for later agents to load, follow, transform, or verify reproducibly.
+- classification: `candidate_requirement` / `design_rationale`
+- confidence: high
+- evidence_needed: Artifact inventory review and verification criteria for agent-operational files.
+- conflicts_or_risks: Operational artifacts may be mistaken for deterministic machine code or silently reinterpreted by later agents.
+- proposed_next_action: Add to candidate cleanup and open questions about artifact verification.
+- target_followup_file: `notes/candidate-requirements.md`; `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: User confirms the boundary and lifecycle implications.
+
+### IDEA-2026-0030
+
+- source: current ChatGPT conversation / MNEMOSYNE-036 preparation
+- source_type: user_supplemental_explanation
+- captured_at: 2026-06-17
+- short_title: HADB terminology
+- raw_note: Human-Approved Design Basis (HADB), Chinese 人类确认设计依据稿, names a settled human-readable design-basis text formed after discussion, contradiction resolution, feasibility analysis, research-evidence checking, and user confirmation; it is not raw record and not automatically execution source.
+- classification: `candidate_requirement`
+- confidence: high
+- evidence_needed: Lifecycle review against raw records, candidate requirements, and execution-source promotion rules.
+- conflicts_or_risks: HADB could be confused with approved spec unless its non-execution-source boundary is explicit.
+- proposed_next_action: Triage HADB terminology and lifecycle into candidate cleanup.
+- target_followup_file: `notes/candidate-requirements.md`; `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: User confirms terminology, Chinese label, and lifecycle rules.
+
+### IDEA-2026-0031
+
+- source: current ChatGPT conversation / MNEMOSYNE-036 preparation
+- source_type: user_supplemental_explanation
+- captured_at: 2026-06-17
+- short_title: Indexing as research-gated performance optimization
+- raw_note: The user's index idea comes from PC hardware / operating-system / file-system analogies and has not been verified for AI agent external memory; it should be treated as a research-gated retrieval acceleration candidate, not a core Mnemosyne requirement.
+- classification: `research_gated_item` / `performance_optimization_candidate` / `weak_or_outdated_assumption`
+- confidence: high
+- evidence_needed: Evidence that indexing improves agent retrieval without stale or misleading authority risks.
+- conflicts_or_risks: Stale indexes, misleading indexes, and agents treating indexes as authority rather than retrieval aids.
+- proposed_next_action: Keep as research-gated candidate until memory scale and retrieval failure evidence justify evaluation.
+- target_followup_file: `notes/candidate-requirements.md`; `current/open-questions.md`
+- status: captured_pending_triage
+- promotion_condition: Research evidence and user confirmation support a specific indexing mechanism.
