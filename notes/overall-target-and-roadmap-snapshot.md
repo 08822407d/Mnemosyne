@@ -313,6 +313,8 @@ Mnemosyne 的后续重要能力之一，是为具体目标项目设计记忆系�
 
 MNEMOSYNE-031 final checkpoint 已完成。旧路线中“先 review report summaries”的状态已经被 MNEMOSYNE-031 R1-R3/R4/R5 checkpoint 覆盖：report summaries 已被用户接受为暂用文本证据入口，但 PDF 图表 / 图片 / 版式仍待人工复核。
 
+当前近程 construction priority：target-project readiness。Mnemosyne 应优先成为可用于为其他项目设计并帮助构建 persistent-memory frameworks 的系统；内部流程 refinements 应按是否直接支持 target-project readiness 或降低 serious construction risk 来评估。本段是 planning snapshot，不是 execution source。
+
 当前建议路线由用户选择：
 
 1. PDF figure/table/image review decision；

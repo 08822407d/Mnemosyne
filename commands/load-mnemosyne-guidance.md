@@ -40,14 +40,15 @@ If the task involves tool capability, platform capability, model behavior, autom
 6. Apply the operation/conclusion separation principle from `current/human-approved-spec.md`.
 7. If the response asks the user to do something, put the operation steps/content in a clearly marked section before explanation.
 8. If the response reports findings or conclusions, put the conclusion/problem/result in a clearly marked section before supporting explanation.
-9. The first response after loading should include:
+9. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md`. When producing long content for the user to manually forward, prefer generating a downloadable file and show only a concise summary in the chat. If the content must be split, label chunks with package/task title, stable ID, chunk number, total chunk count if known, and wait-for-all-chunks instruction.
+10. The first response after loading should include:
    - current execution source;
    - current phase;
    - non-execution-source boundaries;
    - current forbidden actions;
    - current next-route options;
    - whether any conflict or missing file was found.
-10. If required files are unavailable, ask for the missing files or clearly state the limitation. Do not invent repository state.
+11. If required files are unavailable, ask for the missing files or clearly state the limitation. Do not invent repository state.
 
 ## Boundaries
 

@@ -125,3 +125,27 @@
 - 本原则不要求每个短回答都使用僵硬格式；当用户操作、review findings、验证结果或任务交接内容可能被长篇说明淹没时，本原则适用。
 - 本原则本身不授权任何仓库编辑；它只指导回复结构。
 
+## 13. 长内容转发的文件化与分片原则
+
+- 本原则适用于 Mnemosyne 所属普通 ChatGPT 对话、Codex 任务和未来 Agent 任务中，产出需要用户手动转发到另一段 ChatGPT 对话、另一种 AI 对话或 Codex Cloud 任务的内容。
+- 当可转发内容较长时，尤其是 Codex task prompt、onboarding package、handoff package、review package、verification checklist 或 multi-part instruction，优先交付形式应是 downloadable file，而不是很长的聊天正文。
+- 这样做的目的包括：
+  - 避免在 ChatGPT web/app UI 中占用过多视觉空间；
+  - 降低用户在长文本中漏看必要操作的风险；
+  - 降低长内容未完整放入 code block 的风险；
+  - 降低复制 / 粘贴时发生截断或格式丢失的风险；
+  - 提高手动转发到另一段对话或 Codex 任务的可靠性。
+- 生成文件时，聊天回复仍应包含简明可见摘要和下载链接。
+- 如果内容无法放入单个接收消息或单个 Codex task input，应拆分为清楚标注的 chunks。
+- 分片输出必须包含足够 metadata，使接收方理解多个用户消息属于同一个逻辑输入。
+- 每个 chunk 应包含：
+  - package/task title；
+  - total chunk count if known；
+  - current chunk number；
+  - stable package or task ID；
+  - instruction to wait for all chunks before acting, unless explicitly told otherwise；
+  - clear continuation markers。
+- Chunked transfer should avoid changing requirements between chunks.
+- 如果已生成文件，该文件应被视为优先 transfer artifact；聊天消息只是摘要或指针。
+- 本原则不要求对短回答或短的一步式指令生成文件。
+- 本原则本身不授权任何仓库编辑；它只指导长转发内容应如何打包和交付。

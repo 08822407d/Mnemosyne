@@ -1,5 +1,13 @@
 # Active Context
 
+## MNEMOSYNE-037 status
+
+- MNEMOSYNE-037 adds long-transfer file/chunking guidance to the execution source.
+- MNEMOSYNE-037 records near-term target-project readiness as the current construction priority in non-execution-source construction/context notes.
+- The current near-term goal is to reach a practical ability to design and help build persistent-memory frameworks for other projects, rather than endlessly refining Mnemosyne internal process details.
+- No `AGENTS.md`, `CLAUDE.md`, GitHub Actions, or automation was added.
+- Current execution source remains `current/human-approved-spec.md`.
+
 
 ## MNEMOSYNE-036 status
 
@@ -10,7 +18,7 @@
 
 ## 当前阶段
 
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 dry-run independent verification 已完成，final verdict 为 PASS。当前等待用户选择下一路线：PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes 或 memory-system testing/debugging feasibility research。
+MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 dry-run independent verification 已完成，final verdict 为 PASS。当前近程 construction priority 是尽快让 Mnemosyne 可用于为真实 target projects 设计并帮助构建 persistent-memory frameworks；后续路线仍可在 PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes、memory-system testing/debugging feasibility research 或 first real target-project dry-run 之间选择，但应优先评估其是否直接支持 target-project readiness。
 
 ## MNEMOSYNE-035 status
 
