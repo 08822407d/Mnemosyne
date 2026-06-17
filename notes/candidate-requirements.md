@@ -676,3 +676,14 @@ All entries in this section are candidate cleanup items derived from `historical
 - 状态：pending_triage
 - 来源：RAW-0055 / IDEA-2026-0014
 - cleanup 方向：roadmap / active-context / startup 中持续保持非执行源边界。
+
+## MNEMOSYNE-036 candidate cleanup seeds
+
+These are candidate cleanup seeds. They are not approved spec, are not execution source, and require deduplication against existing candidate requirements plus user confirmation before any promotion.
+
+- Prototype-stage construction and feedback-driven maturation.
+- Ordinary ChatGPT discussion to Codex writeback workflow.
+- Evidence-guided self-improvement loop.
+- Human-readable basis materials vs agent-operational artifact boundary.
+- HADB terminology and lifecycle.
+- Indexing as research-gated performance optimization, not core requirement.

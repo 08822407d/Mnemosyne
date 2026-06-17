@@ -8,6 +8,14 @@ Mnemosyne
 
 Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
 
+
+## MNEMOSYNE-036 construction-stage understanding / artifact boundary
+
+- Read `notes/mnemosyne-construction-stage-understanding.md` when discussing Mnemosyne construction-stage assumptions, HADB, artifact boundaries, or indexing.
+- The note is not execution source.
+- Do not treat the new ideas as approved spec.
+- The ChatGPT-to-Codex writeback loop is recognized as normal construction workflow: ordinary ChatGPT can generate Codex tasks; Codex performs reviewed repo writes.
+
 ## 当前阶段
 
 MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 first dry-run independent verification 已完成，final verdict 为 PASS。当前等待用户选择下一路线：PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes 或 memory-system testing/debugging feasibility research。
