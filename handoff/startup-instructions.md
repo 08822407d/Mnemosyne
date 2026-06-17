@@ -18,6 +18,16 @@
 - 不应默认读取全部 raw；
 - 不应默认自动写回。
 
+
+## 2.1 客观中立工程风格与命令入口
+
+- Mnemosyne 所属 ChatGPT 对话、Codex 任务或未来 Agent 任务应遵循 `current/human-approved-spec.md` 中的客观中立工程风格原则：以执行源、仓库规则、可验证仓库状态、可验证当前工具 / 平台事实、可靠科学技术事实和明确不确定性为依据。
+- 如果新的 ChatGPT 对话或 Codex 任务不能自动加载仓库指导，用户可以说：
+  - “Load Mnemosyne guidance.”
+  - “加载 Mnemosyne 指导约束。”
+- 可用命令列在 `commands/README.md`。
+- `commands/` 命令注册表不是执行源，不能覆盖 `current/human-approved-spec.md`。
+
 ## 3. 标准读取顺序
 
 1. `README.md`

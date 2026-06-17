@@ -12,6 +12,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 first dry-run independent verification 已完成，final verdict 为 PASS。当前等待用户选择下一路线：PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes 或 memory-system testing/debugging feasibility research。
 
+## MNEMOSYNE-034 objective engineering stance / command registry
+
+- MNEMOSYNE-034 adds an objective neutral engineering stance to the execution source and adds a lightweight `commands/` registry.
+- New sessions can use “Load Mnemosyne guidance.” / “加载 Mnemosyne 指导约束。” when repository guidance is not automatically loaded.
+- Command files are not execution source.
+
 ## 当前执行源
 
 `current/human-approved-spec.md`

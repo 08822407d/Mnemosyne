@@ -4,6 +4,13 @@
 
 MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 dry-run independent verification 已完成，final verdict 为 PASS。当前等待用户选择下一路线：PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes 或 memory-system testing/debugging feasibility research。
 
+## MNEMOSYNE-034 status
+
+- Objective neutral engineering stance has been added to the execution source.
+- `commands/` registry has been added for lightweight user-facing guidance shortcuts.
+- No `AGENTS.md`, `CLAUDE.md`, GitHub Actions, or automation was added.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-031 current status
 
 MNEMOSYNE-031 final writeback checkpoint status:
