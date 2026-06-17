@@ -27,6 +27,9 @@
   - “加载 Mnemosyne 指导约束。”
 - 可用命令列在 `commands/README.md`。
 - `commands/` 命令注册表不是执行源，不能覆盖 `current/human-approved-spec.md`。
+- Mnemosyne 所属会话应将操作步骤 / 操作内容与说明性分析分离，并将问题报告、结论和验证结果与支撑性说明分离。
+- 这对 Codex task prompts、GitHub 操作、onboarding verification 和新旧对话 handoff 尤其重要。
+- 该规则的执行源位于 `current/human-approved-spec.md`。
 
 ## 3. 标准读取顺序
 

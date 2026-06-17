@@ -18,6 +18,12 @@ MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint co
 - New sessions can use “Load Mnemosyne guidance.” / “加载 Mnemosyne 指导约束。” when repository guidance is not automatically loaded.
 - Command files are not execution source.
 
+## MNEMOSYNE-035 operation/conclusion separation guidance
+
+- MNEMOSYNE-035 adds operation/conclusion separation guidance.
+- Mnemosyne-affiliated sessions should not bury required user actions, problems, or conclusions inside long analysis.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## 当前执行源
 
 `current/human-approved-spec.md`

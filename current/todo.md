@@ -18,6 +18,7 @@
 
 ## v0.2
 
+- [x] MNEMOSYNE-035：operation/conclusion separation guidance.
 - [x] MNEMOSYNE-034：objective neutral engineering stance and command registry.
 - [x] `MNEMOSYNE-025：self-improvement workflow 设计`；
 - [ ] 用户 review `notes/self-improvement-workflow.md`；
