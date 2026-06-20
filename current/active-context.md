@@ -1,5 +1,12 @@
 # Active Context
 
+## MNEMOSYNE-038 status
+
+- MNEMOSYNE-038 recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`.
+- The previous `missing_original_prompt` status for those six prompts is superseded by `available_original_prompt`.
+- The recovered prompts are research inputs, not execution source and not research conclusions.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-037 status
 
 - MNEMOSYNE-037 adds long-transfer file/chunking guidance to the execution source.
@@ -112,7 +119,7 @@ Next route should be selected by the user:
 - `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md` 已创建；
 - `raw/research-reports/current/current-research-prompts.md` 已创建；
 - pro 深度研究 prompt 原文路径约定已建立，且文件存在；
-- RPT-2026Q2-0002 ~ RPT-2026Q2-0007 的轻度研究 prompt 原文缺失状态已记录为 `missing_original_prompt`；
+- MNEMOSYNE-038 已恢复并索引 RPT-2026Q2-0002 ~ RPT-2026Q2-0007 对应的轻度研究 prompt 原文，先前 `missing_original_prompt` 状态已被 supersede；
 - MNEMOSYNE-031 R1-R3 review、R4A prompt list、R4B restatement records、R4B manifest、R4C synthesis、R5 user decision review 与 final checkpoint records 已完成；
 - MNEMOSYNE-032：Codex task authoring / diff verification guideline 已写入并落账，用于防止自然语言任务描述导致 Codex 未实际修改全部目标文件。
 - MNEMOSYNE-032 dry-run independent verification：final verdict `PASS`；invalid_test_triggered=false；blocking_issues=[]；dry-run artifacts remain validation evidence, not execution source or final design.
@@ -131,7 +138,7 @@ Next route should be selected by the user:
 - Idea Capture Buffer；
 - `AGENTS.md` / `CLAUDE.md`；
 - 自动化增强（自动查重、自动写回、自动索引等）。
-- 如果未来找回轻度研究 prompt，更新 `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`；
+- MNEMOSYNE-038 已找回并更新 6 个轻度研究 prompt 原文及相关索引；
 
 ## 当前最重要文件
 

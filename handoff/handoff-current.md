@@ -9,6 +9,13 @@ Mnemosyne
 Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
 
 
+## MNEMOSYNE-038 recovered light research prompts
+
+- MNEMOSYNE-038 recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`.
+- The previous `missing_original_prompt` status for those six prompts is superseded by `available_original_prompt`.
+- The recovered prompts are research inputs, not execution source and not research conclusions.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-036 construction-stage understanding / artifact boundary
 
 - Read `notes/mnemosyne-construction-stage-understanding.md` when discussing Mnemosyne construction-stage assumptions, HADB, artifact boundaries, or indexing.
@@ -177,7 +184,7 @@ When generating or executing Codex tasks that modify files, require actual diff 
 - 不要把 motivation / prompt / topic mapping 当执行源；
 - 不要把用户设计构想重述当原始需求、最终设计或执行源；
 - 不要把 review 结果写回仓库，除非用户明确确认；
-- 不要编造缺失 prompt；
+- 不要编造 prompt；MNEMOSYNE-038 已恢复 `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007` 的轻度研究 prompt 原文，若发现 prompt / summary 差异应登记 review note；
 - 不要把 candidate / decision / active-context / handoff / startup-instructions / template packs / review selection 文件当执行源；
 - 不要为真实目标项目生成交付包，除非用户明确选择目标项目场景并确认进入交付试用阶段。
 

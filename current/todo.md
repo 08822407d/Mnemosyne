@@ -18,6 +18,7 @@
 
 ## v0.2
 
+- [x] MNEMOSYNE-038：recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`; previous missing status superseded; prompts are research inputs, not execution source or research conclusions.
 - [x] MNEMOSYNE-037：long-transfer file/chunking guidance and near-term target-project readiness priority.
 - [x] MNEMOSYNE-035：operation/conclusion separation guidance.
 - [x] MNEMOSYNE-034：objective neutral engineering stance and command registry.
@@ -64,7 +65,7 @@ MNEMOSYNE-031 R1-R5 final checkpoint records are now persisted; do not regenerat
 - [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`；
 - [ ] 用户 review `raw/research-reports/current/current-research-prompts.md`；
 - [ ] 用户 review `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
-- [ ] 如果未来找回轻度研究 prompt，更新 research-prompt-index；
+- [x] MNEMOSYNE-038：已找回轻度研究 prompt 并更新 research-prompt-index / report-topic map / current-research-prompts；
 - [x] 三类模板包 review 清单；
 - [x] 首个目标项目场景候选矩阵；
 - [ ] 用户 review `notes/template-pack-review-and-first-scenario-selection.md`；
