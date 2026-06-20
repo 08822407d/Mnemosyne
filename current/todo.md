@@ -18,6 +18,16 @@
 
 ## v0.2
 
+
+### MNEMOSYNE-039 Pro quota refresh plan
+
+- [ ] Run Deep Research: AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis.
+- [ ] After Deep Research, ingest the report through the existing research workflow: raw report, summary, current evidence update/delta, capability boundary review, and non-execution-source status update.
+- [ ] Run ordinary ChatGPT-Pro Comprehensive Health Review.
+- [ ] Use the comprehensive review to decide whether any pre-dry-run Codex small fixes are required.
+- [ ] Proceed to first target-project design dry-run after must-fix issues are cleared or explicitly deferred.
+- [ ] If quota/time permits, run current AI agent memory/context-engineering/coding-agent capability delta research.
+
 - [x] MNEMOSYNE-038：recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`; previous missing status superseded; prompts are research inputs, not execution source or research conclusions.
 - [x] MNEMOSYNE-037：long-transfer file/chunking guidance and near-term target-project readiness priority.
 - [x] MNEMOSYNE-035：operation/conclusion separation guidance.

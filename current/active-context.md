@@ -1,5 +1,14 @@
 # Active Context
 
+
+## MNEMOSYNE-039 Pro quota refresh plan
+
+- MNEMOSYNE-039 records the Pro quota refresh work plan.
+- Priority 1 Deep Research is memory-system testing/debugging/evaluation/failure diagnosis.
+- Ordinary ChatGPT-Pro should run a comprehensive Mnemosyne health review before or alongside the first target-project dry-run.
+- These are planning/TODO items, not execution-source changes.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-038 status
 
 - MNEMOSYNE-038 recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`.
