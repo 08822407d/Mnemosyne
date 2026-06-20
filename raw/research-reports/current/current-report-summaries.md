@@ -34,7 +34,7 @@
 3. 再读 current-report-summaries，理解研究结果摘要；
 4. 最后按需回查原始报告。
 
-注意：summary 是研究结果摘要，prompt 是研究输入，两者不同。缺失的轻度研究 prompt 不得编造。
+注意：summary 是研究结果摘要，prompt 是研究输入，两者不同。MNEMOSYNE-038 已恢复 6 个轻度研究 prompt 原文；prompts 不替代 report summaries 或研究结论。
 
 
 ## Summary Index
