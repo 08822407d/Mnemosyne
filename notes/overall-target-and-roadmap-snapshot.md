@@ -14,6 +14,18 @@
 
 如果本文件与 `human-approved-spec` 冲突，应以 `human-approved-spec` 为准，并登记 open question。
 
+
+## MNEMOSYNE-039 near-term target-project readiness route
+
+This is a non-execution-source planning note. The near-term target-project readiness route should be supported by:
+
+1. Deep Research on external memory testing/debugging/evaluation.
+2. Ordinary ChatGPT-Pro Comprehensive Health Review.
+3. First target-project dry-run.
+4. Codex small fixes only when supported by review or dry-run findings.
+
+Current execution source remains `current/human-approved-spec.md`.
+
 ## 2. Mnemosyne 的最终目标
 
 Mnemosyne 的最终目标是成为一个“记忆系统元 Agent”工作仓库。

@@ -157,7 +157,9 @@
 - OP-07: Which first reusable template should be built after Mnemosyne itself: software development, source-code explanation, or language learning?
 - OP-08: What privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?
 - OP-09: Can current models reliably perform memory-system testing / debugging / root-cause diagnosis?
+  - Planned research route: MNEMOSYNE-039 Priority 1 Deep Research will address memory-system testing/debugging/evaluation and failure diagnosis without marking this question answered.
 - OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
+  - Planned research route: MNEMOSYNE-039 Priority 1 Deep Research will address mature practices for memory-system testing/debugging/evaluation without marking this question answered.
 - OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
 ## MNEMOSYNE-033 Idea Capture Buffer open questions
 

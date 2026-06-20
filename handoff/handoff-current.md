@@ -9,6 +9,15 @@ Mnemosyne
 Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
 
 
+
+## MNEMOSYNE-039 Pro quota refresh plan
+
+- Next high-value Pro work is the MNEMOSYNE-039 plan.
+- If the user says the Pro quota has refreshed, guide them to run the Priority 1 Deep Research prompt first: AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis.
+- Then perform or continue the ordinary ChatGPT-Pro Comprehensive Health Review.
+- Do not treat research outputs as execution source.
+- Any repo changes after review/research should go through Codex tasks and PR review.
+
 ## MNEMOSYNE-038 recovered light research prompts
 
 - MNEMOSYNE-038 recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`.
