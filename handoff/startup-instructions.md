@@ -37,6 +37,10 @@
 - When non-image files need to enter the repository and the user wants to avoid manually creating deep directories, prefer the temporary staging folder `manual-import-inbox/`.
 - After the user says files have been added, verify `manual-import-inbox/` and any canonical destination paths before acting; do not invent file existence or locations.
 - Inbox files are not canonical until verified and moved/copied to the correct repository paths.
+- Current GitHub metadata checked on 2026-06-22 reports `08822407d/Mnemosyne` as `public`; reverify repository visibility when relevant because visibility can change.
+- If repository visibility is public or unverified, only public, synthetic, or explicitly redacted material may be uploaded to `manual-import-inbox/`; do not upload secrets, credentials, private source, customer/confidential material, or unapproved personal data.
+- Removing or moving an uploaded file later does not itself remove it from Git history.
+- OP-08 remains open/partially addressed; this is a manual-import safety default, not a complete privacy policy.
 
 ## 3. 标准读取顺序
 

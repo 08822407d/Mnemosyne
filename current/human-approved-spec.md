@@ -160,11 +160,12 @@
 ## 14. Manual import inbox / Codex Cloud non-image attachment boundary
 
 - Current Codex Cloud task conversations cannot be assumed to receive non-image file attachments directly.
-- When non-image files need to enter the repository, the user may manually place them in the repository.
-- The preferred staging location for manually uploaded batches is `manual-import-inbox/`.
-- Files in `manual-import-inbox/` are temporary transfer artifacts only.
-- Files in `manual-import-inbox/` are not execution source, not raw evidence, not canonical research originals, and not target-project delivery artifacts until verified and moved/copied to canonical paths.
-- ChatGPT/Codex tasks must verify file presence, names, types, and intended destination before processing.
-- ChatGPT/Codex tasks must not assume they can detect manual file additions in real time; the user must notify the task/conversation after upload.
-- If files are missing or ambiguous, the task must stop or ask for correction rather than guessing.
-- This rule is based on current tool/platform behavior and may be revised if Codex Cloud attachment capability changes.
+- When non-image files need to enter the repository, the user may manually place them in the repository; the preferred staging location is `manual-import-inbox/`.
+- Files in `manual-import-inbox/` are temporary transfer artifacts only: not execution source, not raw evidence, not canonical research originals, and not target-project delivery artifacts until verified and moved/copied to canonical paths.
+- Before upload/staging, the conversation/task must identify or verify current repository visibility, material sensitivity, whether the material is safe for that visibility, and whether it contains credentials, secrets, personal data, private source, customer/confidential data, or other restricted content.
+- If repository visibility is public or unverified, only public, synthetic, or explicitly redacted material may be staged in `manual-import-inbox/`.
+- Do not commit secrets or credentials under any repository visibility.
+- Removing or moving a staged file later does not itself remove the file from Git history.
+- If a file is unsafe for the current repository, stop and use another user-approved transfer/storage path; do not upload it to this repository.
+- ChatGPT/Codex tasks must verify file presence, names, types, intended destinations, and safety preflight status before processing; if files are missing, unsafe, or ambiguous, stop rather than guessing.
+- Repository visibility and platform behavior are time-sensitive facts and must be reverified when relevant; this rule may be revised if Codex Cloud attachment capability changes.
