@@ -11,9 +11,16 @@
 - OP-08 remains open/partially addressed as a broader privacy/redaction/access-control question.
 - Repository public/private selection is not an open defect question because visibility is user-controlled. Verify visibility before imports and apply the safety gate.
 - D-promotion questions point to `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md`.
+- MNEMOSYNE-048 ordinary Mnemosyne conversation verification returned PASS and created onboarding/review instruments.
+- MNEMOSYNE-049 synchronizes current state; fresh ordinary Thinking startup/handoff replay is still pending.
 
 ## Current open questions
 
+- Has fresh ordinary Thinking startup/handoff replay passed after MNEMOSYNE-049?
+- Which first target project will be selected after replay PASS?
+- What safe input manifest and source map will the user provide?
+- Should any D-01/D-03/D-04/D-05 candidate wording be promoted later? (separate approval only)
+- OP-08 remains partially addressed; OP-09/OP-10 remain partially answered by DR1.
 - OP-08: What broader privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?
   - status: partially_addressed_by_MNEMOSYNE_043
 - OP-09: Can current models reliably perform memory-system testing / debugging / root-cause diagnosis?
@@ -21,8 +28,6 @@
 - OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
   - status: partially_answered_by_DR1
 - OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
-- Whether ordinary-conversation post-047 verification of Batch A returns PASS before Batch B Pro work starts.
-- Which first target-project scenario should be used after post-047 verification PASS and separate approval; no target project has been selected and no real target-project dry-run has occurred.
 
 ## Historical open-question list below
 
