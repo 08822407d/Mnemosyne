@@ -1,5 +1,14 @@
 # Active Context
 
+
+## MNEMOSYNE-043 public repository and manual-import safety gate
+
+- Current GitHub metadata checked on 2026-06-22 reports `08822407d/Mnemosyne` as `public`; future sessions must reverify repository visibility when relevant because visibility is time-sensitive.
+- For public or unverified repository visibility, do not upload secrets, credentials, private source, customer/confidential material, unapproved personal data, or other sensitive material into `manual-import-inbox/`; use only public, synthetic, or explicitly redacted material.
+- Removing or moving a staged file later does not itself remove the file from Git history.
+- OP-08 remains open/partially addressed: this task adds a safety default for manual imports, not a complete privacy/redaction/access-control policy.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-042 user-action-first reply format
 
 - MNEMOSYNE-042 clarifies user-action-first reply format for Mnemosyne-affiliated ordinary ChatGPT conversations.

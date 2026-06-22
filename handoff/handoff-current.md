@@ -9,6 +9,15 @@ Mnemosyne
 Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
 
 
+
+## MNEMOSYNE-043 public repository and manual-import safety gate
+
+- Current GitHub metadata checked on 2026-06-22 reports `08822407d/Mnemosyne` as `public`; future sessions must reverify repository visibility when relevant because visibility is time-sensitive.
+- For public or unverified repository visibility, do not upload secrets, credentials, private source, customer/confidential material, unapproved personal data, or other sensitive material into `manual-import-inbox/`; use only public, synthetic, or explicitly redacted material.
+- Removing or moving a staged file later does not itself remove the file from Git history.
+- OP-08 remains open/partially addressed: this task adds a safety default for manual imports, not a complete privacy/redaction/access-control policy.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-042 user-action-first reply format
 
 - MNEMOSYNE-042 clarifies that `操作内容` means human-required manual steps, not assistant internal plans, tool calls, or background analysis.

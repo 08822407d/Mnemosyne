@@ -156,6 +156,8 @@
 - OP-06: How often should capability research be performed, and how should capability versions be named?
 - OP-07: Which first reusable template should be built after Mnemosyne itself: software development, source-code explanation, or language learning?
 - OP-08: What privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?
+  - status: partially_addressed_by_MNEMOSYNE_043
+  - MNEMOSYNE-043 adds a manual-import safety default for public/unverified repository visibility, but does not close the broader privacy/redaction/access-control policy question.
 - OP-09: Can current models reliably perform memory-system testing / debugging / root-cause diagnosis?
   - status: partially_answered_by_DR1
   - DR1 meaning: Models can assist with evaluation, review, classification, and diagnosis, but should not be the sole judge. Reliable diagnosis needs traces, file evidence, human review, regression checks, PR/diff evidence, and postmortem-style review.

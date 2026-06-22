@@ -18,6 +18,8 @@
 
 ## v0.2
 
+- [x] MNEMOSYNE-043: public repository and manual-import safety gate added for current public/unverified visibility default; OP-08 remains open/partially addressed.
+
 - [x] MNEMOSYNE-042: clarify that `操作内容` means user-required manual actions and use `无需用户操作` when no user action is needed.
 
 
