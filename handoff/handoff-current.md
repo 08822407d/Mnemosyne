@@ -10,11 +10,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Immediate current continuation
 
-- Batch A small fixes are being completed.
-- Do not begin Batch B until the current gate says ready.
+- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification.
+- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS.
 - D-01–D-07 execution status comes from `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` plus `current/human-approved-spec.md`.
 - Unpromoted checkpoint content is not executable.
-- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
+- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved; no real target-project dry-run has occurred and no target project has been selected.
 - Repository visibility is intentionally user-controlled; do not propose a visibility change merely because the repository is public.
 - Always verify visibility before importing material and apply the MNEMOSYNE-043 safety gate.
 
@@ -39,10 +39,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-042: user-action-first reply format added to execution source.
 - MNEMOSYNE-043: manual-import safety gate established.
 - MNEMOSYNE-044: D-01–D-07 execution-source coverage map created.
+- MNEMOSYNE-045: compact current state/startup cleanup completed.
+- MNEMOSYNE-046: minimal dry-run profile, checklist, issue-log template, and result template created as non-execution-source instruments.
 
 ## Next route
 
-1. Finish Batch A small fixes and current/startup cleanup.
-2. Wait for the current gate before Batch B.
-3. When approved, route DR1 checklist/minimal-profile work to MNEMOSYNE-046.
-4. Keep the first target-project dry-run design-only unless separately approved otherwise.
+1. Return to the ordinary Mnemosyne conversation for verification of Batch A results.
+2. If verification returns PASS, the user may start Batch B Pro work.
+3. Keep the first target-project dry-run design-only unless separately approved otherwise.
+4. Do not claim Batch B has started, a target project has been selected, or a real target-project dry-run has occurred.
