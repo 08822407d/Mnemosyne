@@ -21,8 +21,8 @@
 - OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
   - status: partially_answered_by_DR1
 - OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
-- Which template-pack small fixes, if any, should precede the first target-project dry-run?
-- Which first target-project scenario should be used when dry-run work is approved?
+- Whether ordinary-conversation verification of Batch A returns PASS before Batch B Pro work starts.
+- Which first target-project scenario should be used after verification PASS and separate approval; no target project has been selected and no real target-project dry-run has occurred.
 
 ## Historical open-question list below
 

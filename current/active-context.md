@@ -4,8 +4,8 @@
 
 ### current phase
 
-- Post-MNEMOSYNE-044 Batch A current-state cleanup.
-- Batch A small fixes are being completed before any Batch B work begins.
+- Post-MNEMOSYNE-046 Batch A small-fix instrument creation.
+- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification before any Batch B work begins.
 - Near-term construction priority remains target-project readiness: make Mnemosyne practically usable for designing and helping build persistent-memory frameworks for real target projects.
 
 ### current execution source
@@ -20,18 +20,21 @@
 - MNEMOSYNE-042: user-action-first reply format added to the execution source.
 - MNEMOSYNE-043: manual-import safety gate established; public or unverified visibility allows only public, synthetic, or explicitly redacted material.
 - MNEMOSYNE-044: D-01–D-07 execution-source coverage map created; execution status comes from the coverage map plus `current/human-approved-spec.md`.
+- MNEMOSYNE-045: current-state cleanup verified the compact current view as live state.
+- MNEMOSYNE-046: first target-project dry-run minimal instruments created as non-execution-source design-only instruments; no real target-project dry-run has occurred.
 
 ### current blockers/gates
 
-- Do not begin Batch B until the current gate says ready.
+- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS after MNEMOSYNE-046.
 - Unpromoted checkpoint/candidate/research content is not executable.
 - First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
 - Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
 
 ### current next route
 
-- Finish Batch A small fixes, including this current-state consolidation and startup read-path cleanup.
-- After the gate says ready, MNEMOSYNE-046 should convert DR1 implications into a minimal checklist/profile for the first target-project dry-run.
+- Return to the ordinary Mnemosyne conversation for verification of Batch A results.
+- After ordinary-conversation verification returns PASS, the user may start Batch B Pro work.
+- No real target-project dry-run has occurred, Batch B has not started, and no target project has been selected.
 - Do not treat old pre-039 route-selection text as the current route.
 
 ### important non-execution-source references
