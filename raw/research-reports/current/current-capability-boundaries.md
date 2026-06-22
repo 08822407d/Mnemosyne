@@ -1,7 +1,7 @@
 # Current Capability Boundaries / 当前能力边界（派生视图）
 
 > 说明：本文件是当前能力边界派生视图，不是原始报告，也不是执行源。  
-> 当前来源轮次：`RC-2026Q2-initial`。  
+> 当前来源轮次：`RC-2026Q2-initial`；补充当前证据轮次：`RC-2026Q2-memory-testing`。  
 > 详细边界见：`raw/research-reports/cycles/2026Q2-initial/capability-boundaries.md`。
 
 ## 当前最重要边界（摘要）
@@ -15,3 +15,11 @@
 ## 复核提示
 
 - PDF 报告（RPT-2026Q2-0002 ~ RPT-2026Q2-0007）中的图表与图片证据需人工复核。
+
+
+## DR1 memory-testing boundary additions
+
+6. Do not assume a mature end-to-end industry standard exists for testing external persistent memory systems; combine mature sub-practices instead.
+7. Do not rely on final-answer correctness alone; memory evaluation must also inspect state correctness, source priority, temporal correctness, decision propagation, handoff executability, and delivery landability.
+8. Multi-model independent review is an auxiliary second-opinion method, not truth voting, execution source, or automatic writeback authority.
+9. Current-stage Mnemosyne should prefer half-automatic, file-backed, human-reviewable, traceable evaluation loops over fully automated meta-agent/test frameworks.

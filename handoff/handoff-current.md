@@ -10,6 +10,16 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 
 
+## MNEMOSYNE-040 DR1 memory-testing evidence
+
+- DR1 memory-system testing/debugging/evaluation Deep Research has been normalized and ingested as supplemental current research evidence cycle `RC-2026Q2-memory-testing`.
+- Report: `RPT-2026Q2-MT-0001`; prompt: `PROMPT-2026Q2-MT-0001`.
+- Summary: `raw/research-reports/cycles/2026Q2-memory-testing/report-summaries/DR1_memory_testing_debugging_evidence_review_summary.md`.
+- OP-09 and OP-10 are now `partially_answered_by_DR1`.
+- DR2 optional multi-model independent review research is not currently required unless future template/review-package design needs deeper evidence.
+- Multi-model review is auxiliary second-opinion review only, not truth voting, execution source, or automatic writeback authority.
+- Before or during the first real target-project dry-run, convert DR1 implications into a minimal checklist for execution-source reading, handoff executability, active-context propagation, layer separation, uncertainty handling, artifact landability, and honest tool capability limits.
+
 ## MNEMOSYNE-039 Pro quota refresh plan
 
 - Next high-value Pro work is the MNEMOSYNE-039 plan.
@@ -89,7 +99,7 @@ MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint co
 
 ## 研究证据层状态
 
-7 份研究报告已作为 `RC-2026Q2-initial` 入库；MNEMOSYNE-030C 已补充该轮研究的 origin / motivation 文件。
+7 份研究报告已作为 `RC-2026Q2-initial` 入库；MNEMOSYNE-030C 已补充该轮研究的 origin / motivation 文件。DR1 memory-testing report 已作为补充当前证据轮次 `RC-2026Q2-memory-testing` 入库。
 
 当前研究证据入口：
 

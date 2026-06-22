@@ -4,7 +4,7 @@
 
 本文件是 current 派生视图，用于索引当前激活研究轮次的 summary 文件。
 
-- active_cycle: RC-2026Q2-initial
+- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental)
 - 本文件不是执行源；
 - 当前执行源仍是 `current/human-approved-spec.md`；
 - 原始报告仍位于 `raw/research-reports/cycles/2026Q2-initial/originals/`；
@@ -48,3 +48,5 @@
 | RPT-2026Q2-0005 | 云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计 | `raw/research-reports/cycles/2026Q2-initial/report-summaries/RPT-2026Q2-0005-summary.md` | `raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf` | completed_from_readable_pdf_text | pending_manual_review | yes | 摘要仅基于可读取文本；图表 / 图片 / 版式仍待人工复核。 |
 | RPT-2026Q2-0006 | 外部持久记忆的理论与工程依据 | `raw/research-reports/cycles/2026Q2-initial/report-summaries/RPT-2026Q2-0006-summary.md` | `raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 5：外部持久记忆的理论与工程依据.pdf` | completed_from_readable_pdf_text | pending_manual_review | yes | 摘要仅基于可读取文本；图表 / 图片 / 版式仍待人工复核。 |
 | RPT-2026Q2-0007 | 开发场景的持久记忆经验能否迁移到普通长期对话和学习场景 | `raw/research-reports/cycles/2026Q2-initial/report-summaries/RPT-2026Q2-0007-summary.md` | `raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 6：开发场景的持久记忆经验能否迁移到普通长期对话和学习场景.pdf` | completed_from_readable_pdf_text | pending_manual_review | yes | 摘要仅基于可读取文本；图表 / 图片 / 版式仍待人工复核。 |
+
+| RPT-2026Q2-MT-0001 | AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis | `raw/research-reports/cycles/2026Q2-memory-testing/report-summaries/DR1_memory_testing_debugging_evidence_review_summary.md` | `raw/research-reports/cycles/2026Q2-memory-testing/originals/DR1_memory_testing_debugging_evidence_review_report.md` | completed_from_markdown_report | not_applicable_markdown | yes | Supplemental current evidence; no unified mature memory-specific testing standard, but reusable evaluation/debugging practices exist. |

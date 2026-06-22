@@ -1,6 +1,16 @@
 # Active Context
 
 
+## MNEMOSYNE-040 DR1 memory-testing evidence ingestion
+
+- MNEMOSYNE-040 normalized and ingested DR1 memory-system testing/debugging/evaluation evidence as `RC-2026Q2-memory-testing`.
+- DR1 report id: `RPT-2026Q2-MT-0001`; prompt id: `PROMPT-2026Q2-MT-0001`.
+- DR1 is research evidence only, not execution source; current execution source remains `current/human-approved-spec.md`.
+- OP-09 and OP-10 are partially answered by DR1, not fully answered.
+- Current-stage implication: favor a half-automatic, file-backed, human-reviewable, traceable evaluation loop instead of a fully automated meta-agent/test framework.
+- First target-project dry-run should observe execution-source reading, handoff executability, active-context decision propagation, layer separation, uncertainty handling, artifact usability by a next executor, and honest tool-capability boundaries.
+- Multi-model independent review is an auxiliary second-opinion method only; it is not truth voting, execution source, or automatic writeback authority.
+
 ## MNEMOSYNE-039 Pro quota refresh plan
 
 - MNEMOSYNE-039 records the Pro quota refresh work plan.
@@ -86,6 +96,7 @@ Next route should be selected by the user:
 - `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
 - `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
 - `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
+- `raw/research-reports/cycles/2026Q2-memory-testing/`
 - `raw/research-reports/current/current-report-summaries.md`
 - `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`
 - `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-restatement.md`
