@@ -10,6 +10,13 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 
 
+
+## MNEMOSYNE-041 manual import inbox workflow
+
+- MNEMOSYNE-041 adds `manual-import-inbox/` as the preferred temporary staging location when non-image files must be manually placed into the repository for Codex Cloud work.
+- Tasks must inventory and verify inbox files and canonical destinations before processing; do not assume file existence, guess ambiguous names, or treat inbox files as canonical storage.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-040 DR1 memory-testing evidence
 
 - DR1 memory-system testing/debugging/evaluation Deep Research has been normalized and ingested as supplemental current research evidence cycle `RC-2026Q2-memory-testing`.
