@@ -18,6 +18,8 @@
 
 ## v0.2
 
+- [x] MNEMOSYNE-042: clarify that `操作内容` means user-required manual actions and use `无需用户操作` when no user action is needed.
+
 
 ### MNEMOSYNE-041 manual import inbox workflow
 
