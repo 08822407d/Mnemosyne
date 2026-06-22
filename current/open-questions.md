@@ -208,3 +208,11 @@
 - Which DR1 failure modes should become the first minimal memory issue log / drift review checklist?
 - What minimal checklist should be used before or during the first target-project dry-run to test execution-source reading, handoff executability, active-context propagation, layer separation, uncertainty handling, artifact usability, and honest tool-capability boundaries?
 - When, if ever, should optional deeper multi-model independent review research be reopened for template/review-package design?
+
+## MNEMOSYNE-044 execution-source coverage map
+
+- MNEMOSYNE-044 created `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` as a non-execution-source review/proposal artifact.
+- Final D-01 to D-07 decisions remain authoritative checkpoint records in the MNEMOSYNE-031 review record.
+- Only D-01 to D-07 content already reflected in `current/human-approved-spec.md` is currently executable.
+- Unreflected or partially reflected promotion candidates require separate user approval before any spec change.
+- Open review item: decide whether to promote the D-01, D-03, D-04, and D-05 candidate wording from the coverage map; do not treat that wording as approved until separately confirmed.

@@ -215,7 +215,7 @@ Next route should be selected by the user:
 ## Next step / 下一步
 
 1. MNEMOSYNE-031 R4B/R4C/R5 已完成并 checkpoint；不要重生成 R4B、R4C 或 R5。
-2. 后续任务应使用 `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md` 中的 final D-01 to D-07 决策。
+2. 后续任务应参考 `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` 区分 final D-01 to D-07 checkpoint records 与当前可执行 spec 内容；不要把全部七项直接当作执行规则。
 3. 当前下一路线由用户选择：PDF 图表复核 / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research。
 4. 如果未来再次发现入口文件状态残留，可另开小型一致性修复；不要把这类修复写入 `current/human-approved-spec.md`。
 
@@ -241,3 +241,7 @@ Pending after MNEMOSYNE-033A:
 - 处理模型能力差异 / Codex 模型选择等 open questions；
 - 明确 AI 回复在 raw/context evidence 中保存粒度；
 - 继续 Pro Deep Research / PDF review / template review / first target selection。
+
+## MNEMOSYNE-044 D-01–D-07 coverage map
+
+MNEMOSYNE-044 adds `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` as a non-execution-source review/proposal artifact. The final MNEMOSYNE-031 D-01 to D-07 decisions remain authoritative checkpoint records, but they are not automatically standing execution rules. Only content already reflected in `current/human-approved-spec.md` is currently executable. The coverage map identifies D-01, D-03, D-04, and D-05 as needing separate user approval before any candidate wording can be promoted; D-06 remains research-gated/non-executable, and D-07 is checkpoint-only.
