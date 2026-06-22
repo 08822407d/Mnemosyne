@@ -8,6 +8,10 @@ This manifest is a transfer-control artifact for a manually staged batch. It is 
 - `uploaded_by`:
 - `user_notified_at`:
 - `repository_visibility_checked`:
+- `current_repository_visibility`:
+- `safety_preflight_status`:
+- `git_history_exposure_acknowledged`:
+- `alternative_storage_or_transfer_path_if_unsafe`:
 - `expected_file_count`:
 
 ## Per-file records
@@ -24,6 +28,9 @@ Repeat this block for each staged file.
 - `sensitivity`:
 - `public_repo_safe`:
 - `contains_secrets_or_credentials`:
+- `contains_personal_or_confidential_data`:
+- `git_history_exposure_acknowledged`:
+- `alternative_storage_or_transfer_path_if_unsafe`:
 - `overwrite_policy`:
 - `processed_copy_retention`:
 - `notes`:

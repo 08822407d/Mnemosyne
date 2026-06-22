@@ -101,4 +101,10 @@
   finding: "Acceptance and failure criteria are explicitly evaluated."
   severity: high
   next_action:
+- check_id: DRYRUN-CHECK-13-target-schema-tailoring
+  result: not_tested
+  evidence_path:
+  finding: "Target schema was tailored to the target project: only 3 to 7 necessary core files/roles were selected, Mnemosyne's own directory layout was not copied without justification, and each selected file has clear authority and update responsibility."
+  severity: high
+  next_action:
 ```

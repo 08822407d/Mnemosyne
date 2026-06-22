@@ -34,14 +34,24 @@ prohibited_sensitive_materials:
   - unapproved personal data
   - unredacted proprietary raw materials
 target_execution_source_or_unknown: unknown_until_user_confirms
-3_to_7_core_memory_files:
-  - target/current/human-approved-spec.md or equivalent target execution source
-  - target/current/active-context.md
-  - target/handoff/handoff-current.md
-  - target/handoff/startup-instructions.md
-  - target/current/todo.md
-  - target/current/open-questions.md
-  - target/notes/decision-log.md
+schema_tailoring_rationale: "Explain why this target project needs the selected 3 to 7 core memory files/roles, and why omitted candidate roles are unnecessary for this first design. Do not copy the Mnemosyne directory/file layout by default; file names and locations are provisional target-project design choices. 不得默认照搬 Mnemosyne 的目录或文件布局。"
+candidate_core_memory_roles_not_a_required_package:
+  - target execution source
+  - active work context
+  - handoff
+  - task/TODO state
+  - open questions
+  - raw/original-source evidence
+  - decision record
+selected_core_memory_files:
+  instruction: "Select only 3 to 7 core memory files/roles that the specific target project actually needs. Do not prepopulate a fixed seven-file Mnemosyne-shaped schema."
+  items:
+    - role:
+      proposed_path:
+      why_needed:
+      authoritative_or_non_authoritative:
+      update_owner_or_actor:
+      update_trigger:
 update_workflow:
   - read target execution source first, if present
   - record unknowns instead of inventing missing state

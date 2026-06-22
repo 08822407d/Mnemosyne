@@ -10,8 +10,8 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Immediate current continuation
 
-- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification.
-- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS.
+- MNEMOSYNE-047 corrects the final Batch A residuals; Batch A small fixes are complete subject to ordinary-conversation post-047 verification.
+- Do not begin Batch B until ordinary Mnemosyne conversation post-047 verification returns PASS.
 - D-01–D-07 execution status comes from `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` plus `current/human-approved-spec.md`.
 - Unpromoted checkpoint content is not executable.
 - First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved; no real target-project dry-run has occurred and no target project has been selected.
@@ -41,10 +41,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-044: D-01–D-07 execution-source coverage map created.
 - MNEMOSYNE-045: compact current state/startup cleanup completed.
 - MNEMOSYNE-046: minimal dry-run profile, checklist, issue-log template, and result template created as non-execution-source instruments.
+- MNEMOSYNE-047: final Batch A residuals corrected; result records compacted, dry-run schema tailoring added, manifest safety fields aligned, and the post-047 verification gate synchronized.
 
 ## Next route
 
-1. Return to the ordinary Mnemosyne conversation for verification of Batch A results.
-2. If verification returns PASS, the user may start Batch B Pro work.
+1. Return to the ordinary Mnemosyne conversation for post-047 verification of Batch A results.
+2. If post-047 verification returns PASS, the user may start Batch B Pro work.
 3. Keep the first target-project dry-run design-only unless separately approved otherwise.
 4. Do not claim Batch B has started, a target project has been selected, or a real target-project dry-run has occurred.

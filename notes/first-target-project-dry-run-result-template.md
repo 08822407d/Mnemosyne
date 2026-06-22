@@ -28,6 +28,8 @@ issues_found:
 what_worked:
 what_failed:
 root_cause_summary:
+schema_tailoring_result:
+unnecessary_file_roles_found:
 ordinary_thinking_model_handoff_result:
 must_fix_before_next_run:
 can_defer:
