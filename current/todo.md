@@ -21,8 +21,10 @@
 
 ### MNEMOSYNE-039 Pro quota refresh plan
 
-- [ ] Run Deep Research: AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis.
-- [ ] After Deep Research, ingest the report through the existing research workflow: raw report, summary, current evidence update/delta, capability boundary review, and non-execution-source status update.
+- [x] Run Deep Research: AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis.
+- [x] MNEMOSYNE-040: normalize and ingest DR1 through the research workflow as non-execution-source evidence.
+- [ ] Convert DR1 failure taxonomy into a minimal memory issue log / drift review checklist.
+- [ ] Convert DR1 first-target-project dry-run implications into a minimal checklist before or during the first application test.
 - [ ] Run ordinary ChatGPT-Pro Comprehensive Health Review.
 - [ ] Use the comprehensive review to decide whether any pre-dry-run Codex small fixes are required.
 - [ ] Proceed to first target-project design dry-run after must-fix issues are cleared or explicitly deferred.
@@ -162,3 +164,8 @@ Pending / next:
 ## MNEMOSYNE-036 construction-stage understanding backfill
 
 - [x] MNEMOSYNE-036：construction-stage understanding and artifact-boundary clarifications captured.
+
+
+## MNEMOSYNE-040 follow-up
+
+- [ ] Treat multi-model independent review only as an auxiliary second-opinion method; DR2 optional multi-model independent review research is not currently required unless future template/review-package design needs deeper evidence.

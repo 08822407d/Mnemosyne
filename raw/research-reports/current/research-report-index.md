@@ -1,7 +1,7 @@
 # Current Research Report Index / 当前研究报告索引（派生视图）
 
 > 说明：本文件是 current 派生视图，不是原件存储位置。  
-> 当前激活轮次来源：`RC-2026Q2-initial`。  
+> 当前激活轮次来源：`RC-2026Q2-initial`；补充当前证据轮次：`RC-2026Q2-memory-testing`。  
 > 原件保存在 `raw/research-reports/cycles/2026Q2-initial/originals/`。
 
 ## 当前激活轮次
@@ -9,6 +9,10 @@
 - cycle_id: RC-2026Q2-initial
 - status: active
 - total_reports: 7
+
+- cycle_id: RC-2026Q2-memory-testing
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
 
 
 ## 研究动机入口
@@ -34,3 +38,10 @@
 | RPT-2026Q2-0005 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf | light | 云端 Coding Agent + GitHub 工作流审计写回 | 支撑“PR/review/审计式写回”路径与权限边界判断 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
 | RPT-2026Q2-0006 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 5：外部持久记忆的理论与工程依据.pdf | light | 外部持久记忆理论与工程依据 | 支撑“外部文件/Git 作为长期真相源”的理论与工程正当性 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
 | RPT-2026Q2-0007 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 6：开发场景的持久记忆经验能否迁移到普通长期对话和学习场景.pdf | light | 开发场景经验向普通长期对话/学习迁移 | 约束“跨场景迁移”策略、可复用程度与必要改造项 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
+
+
+## Supplemental current evidence cycle: RC-2026Q2-memory-testing
+
+| report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
+|---|---|---|---|---|---|---|
+| RPT-2026Q2-MT-0001 | raw/research-reports/cycles/2026Q2-memory-testing/originals/DR1_memory_testing_debugging_evidence_review_report.md | deep_research | AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis | Evidence for memory-system evaluation maturity, failure taxonomy, OP-09/OP-10 partial answers, and first target-project dry-run checklist design | yes | Markdown report original; summary available at `raw/research-reports/cycles/2026Q2-memory-testing/report-summaries/DR1_memory_testing_debugging_evidence_review_summary.md`. Research evidence only, not execution source. |
