@@ -1,110 +1,56 @@
 # Active Context
 
+## Current compact view
 
-## MNEMOSYNE-043 public repository and manual-import safety gate
+### current phase
 
-- Current GitHub metadata checked on 2026-06-22 reports `08822407d/Mnemosyne` as `public`; future sessions must reverify repository visibility when relevant because visibility is time-sensitive.
-- For public or unverified repository visibility, do not upload secrets, credentials, private source, customer/confidential material, unapproved personal data, or other sensitive material into `manual-import-inbox/`; use only public, synthetic, or explicitly redacted material.
-- Removing or moving a staged file later does not itself remove the file from Git history.
-- OP-08 remains open/partially addressed: this task adds a safety default for manual imports, not a complete privacy/redaction/access-control policy.
-- Current execution source remains `current/human-approved-spec.md`.
+- Post-MNEMOSYNE-044 Batch A current-state cleanup.
+- Batch A small fixes are being completed before any Batch B work begins.
+- Near-term construction priority remains target-project readiness: make Mnemosyne practically usable for designing and helping build persistent-memory frameworks for real target projects.
 
-## MNEMOSYNE-042 user-action-first reply format
+### current execution source
 
-- MNEMOSYNE-042 clarifies user-action-first reply format for Mnemosyne-affiliated ordinary ChatGPT conversations.
-- `操作内容` means user-required manual actions; use `## 无需用户操作` when no user action is needed.
-- Current execution source remains `current/human-approved-spec.md`.
+- `current/human-approved-spec.md` is the current and only execution source.
+- Active context, handoff, TODO, open questions, research reports, candidates, decision logs, and Codex result records are not execution source.
 
+### latest completed checkpoints
 
+- MNEMOSYNE-040: DR1 memory-system testing/debugging/evaluation evidence ingested as `RC-2026Q2-memory-testing`; DR1 is evidence only, not execution source.
+- MNEMOSYNE-041: manual import inbox workflow established for current Codex Cloud non-image attachment limitations.
+- MNEMOSYNE-042: user-action-first reply format added to the execution source.
+- MNEMOSYNE-043: manual-import safety gate established; public or unverified visibility allows only public, synthetic, or explicitly redacted material.
+- MNEMOSYNE-044: D-01–D-07 execution-source coverage map created; execution status comes from the coverage map plus `current/human-approved-spec.md`.
 
+### current blockers/gates
 
-## MNEMOSYNE-041 status
+- Do not begin Batch B until the current gate says ready.
+- Unpromoted checkpoint/candidate/research content is not executable.
+- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
+- Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
 
-- MNEMOSYNE-041 adds a manual import inbox workflow for current Codex Cloud non-image attachment limitations.
-- `manual-import-inbox/` is temporary staging only: not execution source, raw evidence, canonical research/report storage, or delivery storage.
-- Future inbox-handling tasks must preflight-inventory files, verify names/types/destinations, and stop on missing or ambiguous files rather than guessing.
-- Current execution source remains `current/human-approved-spec.md`.
+### current next route
 
-## MNEMOSYNE-040 DR1 memory-testing evidence ingestion
+- Finish Batch A small fixes, including this current-state consolidation and startup read-path cleanup.
+- After the gate says ready, MNEMOSYNE-046 should convert DR1 implications into a minimal checklist/profile for the first target-project dry-run.
+- Do not treat old pre-039 route-selection text as the current route.
 
-- MNEMOSYNE-040 normalized and ingested DR1 memory-system testing/debugging/evaluation evidence as `RC-2026Q2-memory-testing`.
-- DR1 report id: `RPT-2026Q2-MT-0001`; prompt id: `PROMPT-2026Q2-MT-0001`.
-- DR1 is research evidence only, not execution source; current execution source remains `current/human-approved-spec.md`.
-- OP-09 and OP-10 are partially answered by DR1, not fully answered.
-- Current-stage implication: favor a half-automatic, file-backed, human-reviewable, traceable evaluation loop instead of a fully automated meta-agent/test framework.
-- First target-project dry-run should observe execution-source reading, handoff executability, active-context decision propagation, layer separation, uncertainty handling, artifact usability by a next executor, and honest tool-capability boundaries.
-- Multi-model independent review is an auxiliary second-opinion method only; it is not truth voting, execution source, or automatic writeback authority.
+### important non-execution-source references
 
-## MNEMOSYNE-039 Pro quota refresh plan
+- `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for D-01–D-07 reflection/promotion status.
+- `notes/codex-task-results/MNEMOSYNE-039-result.md` through `notes/codex-task-results/MNEMOSYNE-044-result.md` for recent task outcomes.
+- `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
+- Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
-- MNEMOSYNE-039 records the Pro quota refresh work plan.
-- Priority 1 Deep Research is memory-system testing/debugging/evaluation/failure diagnosis.
-- Ordinary ChatGPT-Pro should run a comprehensive Mnemosyne health review before or alongside the first target-project dry-run.
-- These are planning/TODO items, not execution-source changes.
-- Current execution source remains `current/human-approved-spec.md`.
+### visibility context
 
-## MNEMOSYNE-038 status
+- Repository visibility is user-controlled and may alternate between public/private by stage.
+- Current visibility must be reverified when material is imported.
+- Visibility state alone is not a repair issue.
+- MNEMOSYNE-043 safety rules remain applicable.
 
-- MNEMOSYNE-038 recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`.
-- The previous `missing_original_prompt` status for those six prompts is superseded by `available_original_prompt`.
-- The recovered prompts are research inputs, not execution source and not research conclusions.
-- Current execution source remains `current/human-approved-spec.md`.
+## Historical / superseded context below
 
-## MNEMOSYNE-037 status
-
-- MNEMOSYNE-037 adds long-transfer file/chunking guidance to the execution source.
-- MNEMOSYNE-037 records near-term target-project readiness as the current construction priority in non-execution-source construction/context notes.
-- The current near-term goal is to reach a practical ability to design and help build persistent-memory frameworks for other projects, rather than endlessly refining Mnemosyne internal process details.
-- No `AGENTS.md`, `CLAUDE.md`, GitHub Actions, or automation was added.
-- Current execution source remains `current/human-approved-spec.md`.
-
-
-## MNEMOSYNE-036 status
-
-- MNEMOSYNE-036 records construction-stage understanding and artifact-boundary clarifications as non-execution-source notes / candidates / open questions.
-- current/human-approved-spec.md was not modified by this task.
-- Core additions include prototype-stage framing, ChatGPT-to-Codex writeback loop, evidence-guided self-improvement, HADB terminology, agent-operational artifact boundary, and indexing as research-gated performance optimization.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## 当前阶段
-
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 dry-run independent verification 已完成，final verdict 为 PASS。当前近程 construction priority 是尽快让 Mnemosyne 可用于为真实 target projects 设计并帮助构建 persistent-memory frameworks；后续路线仍可在 PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes、memory-system testing/debugging feasibility research 或 first real target-project dry-run 之间选择，但应优先评估其是否直接支持 target-project readiness。
-
-## MNEMOSYNE-035 status
-
-- Operation/conclusion separation guidance has been added to the execution source.
-- The load command has been updated to apply the guidance.
-- No `AGENTS.md`, `CLAUDE.md`, GitHub Actions, or automation was added.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## MNEMOSYNE-034 status
-
-- Objective neutral engineering stance has been added to the execution source.
-- `commands/` registry has been added for lightweight user-facing guidance shortcuts.
-- No `AGENTS.md`, `CLAUDE.md`, GitHub Actions, or automation was added.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## MNEMOSYNE-031 current status
-
-MNEMOSYNE-031 final writeback checkpoint status:
-
-- R1/R2/R3 user review completed; no major issue reported by user.
-- R4A prompt list completed.
-- R4B user restatement completed: 9 main records + 1 addendum.
-- R4B manifest/index completed.
-- R4C synthesis completed as candidate draft, not execution source.
-- R5 review completed through user confirmation of D-01 to D-07.
-- Final writeback package prepared and checkpointed.
-- Current execution source remains `current/human-approved-spec.md`.
-- No PDF figure/table/image/layout review should be claimed.
-- Original R5 draft is superseded by final user-confirmed decisions where they differ.
-
-Next route should be selected by the user:
-
-- PDF figure/table/image review;
-- MNEMOSYNE-032 first dry-run has completed independent verification with verdict `PASS`;
-- Idea Capture Buffer / candidate requirements cleanup;
-- template pack review / small fixes if needed.
+The material below is retained for audit/history and may include superseded route wording. Do not use it as the current route when it conflicts with the compact current view above or with later task result records.
 
 ## 当前执行源
 

@@ -8,267 +8,41 @@ Mnemosyne
 
 Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
 
-
-
-## MNEMOSYNE-043 public repository and manual-import safety gate
-
-- Current GitHub metadata checked on 2026-06-22 reports `08822407d/Mnemosyne` as `public`; future sessions must reverify repository visibility when relevant because visibility is time-sensitive.
-- For public or unverified repository visibility, do not upload secrets, credentials, private source, customer/confidential material, unapproved personal data, or other sensitive material into `manual-import-inbox/`; use only public, synthetic, or explicitly redacted material.
-- Removing or moving a staged file later does not itself remove the file from Git history.
-- OP-08 remains open/partially addressed: this task adds a safety default for manual imports, not a complete privacy/redaction/access-control policy.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## MNEMOSYNE-042 user-action-first reply format
-
-- MNEMOSYNE-042 clarifies that `操作内容` means human-required manual steps, not assistant internal plans, tool calls, or background analysis.
-- Use `## 操作内容（需要你手动执行）` when manual user action is required.
-- Use `## 无需用户操作` when no manual user action is required.
-- Current execution source remains `current/human-approved-spec.md`.
-
-
-
-
-## MNEMOSYNE-041 manual import inbox workflow
-
-- MNEMOSYNE-041 adds `manual-import-inbox/` as the preferred temporary staging location when non-image files must be manually placed into the repository for Codex Cloud work.
-- Tasks must inventory and verify inbox files and canonical destinations before processing; do not assume file existence, guess ambiguous names, or treat inbox files as canonical storage.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## MNEMOSYNE-040 DR1 memory-testing evidence
-
-- DR1 memory-system testing/debugging/evaluation Deep Research has been normalized and ingested as supplemental current research evidence cycle `RC-2026Q2-memory-testing`.
-- Report: `RPT-2026Q2-MT-0001`; prompt: `PROMPT-2026Q2-MT-0001`.
-- Summary: `raw/research-reports/cycles/2026Q2-memory-testing/report-summaries/DR1_memory_testing_debugging_evidence_review_summary.md`.
-- OP-09 and OP-10 are now `partially_answered_by_DR1`.
-- DR2 optional multi-model independent review research is not currently required unless future template/review-package design needs deeper evidence.
-- Multi-model review is auxiliary second-opinion review only, not truth voting, execution source, or automatic writeback authority.
-- Before or during the first real target-project dry-run, convert DR1 implications into a minimal checklist for execution-source reading, handoff executability, active-context propagation, layer separation, uncertainty handling, artifact landability, and honest tool capability limits.
-
-## MNEMOSYNE-039 Pro quota refresh plan
-
-- Next high-value Pro work is the MNEMOSYNE-039 plan.
-- If the user says the Pro quota has refreshed, guide them to run the Priority 1 Deep Research prompt first: AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis.
-- Then perform or continue the ordinary ChatGPT-Pro Comprehensive Health Review.
-- Do not treat research outputs as execution source.
-- Any repo changes after review/research should go through Codex tasks and PR review.
-
-## MNEMOSYNE-038 recovered light research prompts
-
-- MNEMOSYNE-038 recovered and indexed six light-research prompt originals for `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007`.
-- The previous `missing_original_prompt` status for those six prompts is superseded by `available_original_prompt`.
-- The recovered prompts are research inputs, not execution source and not research conclusions.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## MNEMOSYNE-036 construction-stage understanding / artifact boundary
-
-- Read `notes/mnemosyne-construction-stage-understanding.md` when discussing Mnemosyne construction-stage assumptions, HADB, artifact boundaries, or indexing.
-- The note is not execution source.
-- Do not treat the new ideas as approved spec.
-- The ChatGPT-to-Codex writeback loop is recognized as normal construction workflow: ordinary ChatGPT can generate Codex tasks; Codex performs reviewed repo writes.
-
-## MNEMOSYNE-037 long-transfer guidance / target-project readiness
-
-- MNEMOSYNE-037 adds long-transfer file/chunking guidance.
-- Long content intended for manual forwarding should prefer downloadable files.
-- Multi-message transfer should use clear chunk metadata.
-- MNEMOSYNE-037 also records near-term target-project readiness as the current construction priority.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## 当前阶段
-
-MNEMOSYNE-031 R1-R5 review/restatement checkpoint 已完成；post-checkpoint consistency hard-fix 已执行并落账。MNEMOSYNE-032 first dry-run independent verification 已完成，final verdict 为 PASS。当前近程 construction priority 是尽快让 Mnemosyne 可用于为真实 target projects 设计并帮助构建 persistent-memory frameworks；后续路线仍可在 PDF 图表复核、Idea Capture Buffer / candidate cleanup、template review / small fixes、memory-system testing/debugging feasibility research 或 first real target-project dry-run 之间选择，但应优先评估其是否直接支持 target-project readiness。
-
-## MNEMOSYNE-034 objective engineering stance / command registry
-
-- MNEMOSYNE-034 adds an objective neutral engineering stance to the execution source and adds a lightweight `commands/` registry.
-- New sessions can use “Load Mnemosyne guidance.” / “加载 Mnemosyne 指导约束。” when repository guidance is not automatically loaded.
-- Command files are not execution source.
-
-## MNEMOSYNE-035 operation/conclusion separation guidance
-
-- MNEMOSYNE-035 adds operation/conclusion separation guidance.
-- Mnemosyne-affiliated sessions should not bury required user actions, problems, or conclusions inside long analysis.
-- Current execution source remains `current/human-approved-spec.md`.
-
-## 当前执行源
-
-`current/human-approved-spec.md`
-
-以下文件不是执行源：
-
-- `raw/`
-- `raw/research-reports/`
-- `raw/research-reports/current/current-research-prompts.md`
-- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
-- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-- `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-- `raw/research-reports/cycles/2026Q2-initial/report-summaries/`
-- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-- `raw/research-reports/current/current-report-summaries.md`
-- `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`
-- `raw/user-design-restatements/MNEMOSYNE-031-user-design-intent-restatement.md`
-- `notes/candidate-requirements.md`
-- `notes/decision-log.md`
-- `current/active-context.md`
-- `handoff/handoff-current.md`
-- `handoff/startup-instructions.md`
-- `notes/system-construction-baseline.md`
-- `notes/overall-target-and-roadmap-snapshot.md`
-- `notes/self-improvement-template-pack.md`
-- `notes/target-project-memory-system-template-pack.md`
-- `notes/delivery-manifest-template-pack.md`
-- `notes/template-pack-review-and-first-scenario-selection.md`
-
-如果其他文件与 `human-approved-spec` 冲突，以 `human-approved-spec` 为准，并登记 open question。
-
-## 研究证据层状态
-
-7 份研究报告已作为 `RC-2026Q2-initial` 入库；MNEMOSYNE-030C 已补充该轮研究的 origin / motivation 文件。DR1 memory-testing report 已作为补充当前证据轮次 `RC-2026Q2-memory-testing` 入库。
-
-当前研究证据入口：
-
-- `raw/research-reports/current/research-report-index.md`
-- `raw/research-reports/current/current-evidence-map.md`
-- `raw/research-reports/current/current-capability-boundaries.md`
-- `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-- `raw/research-reports/current/current-report-summaries.md`
-- `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-- `raw/research-reports/current/current-research-prompts.md`
-- `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
-- `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-
-研究报告主要供元 Agent 使用，是高权重证据层，不是执行源；不要求或假定用户已经通读、掌握全部报告。元 Agent 应据此进行可行性评价、能力边界确认、当前实践对照和现代化优化建议。PDF 图表和图片仍需人工复核。
-
-MNEMOSYNE-031 增加用户构想重述：先由 AI 整理待重述清单，再由用户口语化重述。重述结果不是原始需求、不是最终设计、不是执行源。
-
-## MNEMOSYNE-031 continuation point
-
-MNEMOSYNE-031 has reached the final writeback checkpoint.
-
-Completed:
-- R1 Research Motivation Review.
-- R2 Research Prompts and Topic Mapping Review.
-- R3 Report Summaries Review.
-- R4A User Design Intent Restatement Prompt List.
-- R4B user oral restatement: 9 main records + 1 addendum.
-- R4B manifest/index.
-- R4C user design intent synthesis / candidate requirements draft.
-- R5 final D-01 to D-07 user decision review.
-- Final checkpoint records.
-
-Current continuation:
-- Do not resume from R4B.
-- Do not regenerate R4B, R4C, or R5.
-- Use `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` to distinguish final D-01 to D-07 checkpoint records from content currently executable through `current/human-approved-spec.md`; do not use the unsuperseded R5 draft alone.
-- Next route should be selected by the user: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research.
-
-Historical note:
-- Earlier MNEMOSYNE-031 checkpoint/status-sync files that say R4B/R4C/R5 are pending are historical records from before the final checkpoint.
-- They are superseded for current continuation purposes by the final checkpoint record and this handoff section.
-
-## MNEMOSYNE-032 dry-run independent verification status
-
-- A read-only independent verification of the MNEMOSYNE-032 dry-run artifacts on `master` has completed.
-- Final independent verdict: `PASS`.
-- Invalid-test trigger: `false`.
-- Blocking issues: none.
-- Verification detail report: `notes/dry-runs/MNEMOSYNE-032/MNEMOSYNE-032-independent-verification-detail.md`.
-- Dry-run artifacts remain validation evidence only. They are not execution source, not final Mnemosyne design, and do not modify `current/human-approved-spec.md`.
-- Status files were intentionally not updated by the dry-run itself because status updates were outside the dry-run permission scope; MNEMOSYNE-032F records the authorized status update.
-
-## Codex / ChatGPT task verification reminder
-
-MNEMOSYNE-031 showed that natural-language Codex task descriptions may fail to produce all intended file edits. For future repository-editing tasks, read:
-
-- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
-
-When generating or executing Codex tasks that modify files, require actual diff evidence: `git status --short`, `git diff HEAD --stat`, `git diff HEAD --name-only`, targeted `git diff HEAD -- <target files>`, protected-file checks, and task result records comparing intended files with actual changed files.
-
-## 新会话推荐读取顺序
-
-1. `README.md`
-2. `current/human-approved-spec.md`
-3. `current/active-context.md`
-4. `handoff/handoff-current.md`
-5. `handoff/startup-instructions.md`
-6. `current/open-questions.md`
-7. `current/todo.md`
-8. `notes/codex-task-authoring-and-diff-verification-guidelines.md`
-9. `notes/v0.1-scope-and-consistency-check.md`
-10. `notes/v0.1-final-review.md`
-11. `notes/requirement-intake-workflow.md`
-12. `notes/self-improvement-workflow.md`
-13. `notes/self-improvement-template-pack.md`
-14. `notes/target-project-memory-system-template-pack.md`
-15. `notes/delivery-manifest-template-pack.md`
-16. `notes/template-pack-review-and-first-scenario-selection.md`
-17. `notes/research-review-and-user-intent-restatement-workflow.md`
-18. `notes/overall-target-and-roadmap-snapshot.md`（可选：当需要理解长期目标、路线图或后续计划时按需读取；不是执行源）
-19. `notes/system-construction-baseline.md`（可选：当需要理解系统建设基线时按需读取；不是执行源）
-20. `raw/research-reports/current/research-report-index.md`
-21. `raw/research-reports/current/current-evidence-map.md`
-22. `raw/research-reports/current/current-capability-boundaries.md`
-23. `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
-24. `raw/research-reports/current/current-research-prompts.md`
-25. `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
-26. `raw/research-reports/current/current-report-summaries.md`
-27. `raw/research-reports/cycles/2026Q2-initial/pdf-figure-review-index.md`
-28. `raw/concept-origin-extract-001.md` 按需回查
-
-## 当前不要做
-
-- 不要创建 `AGENTS.md`；
-- 不要创建 `CLAUDE.md`；
-- 不要创建 GitHub Actions；
-- 不要添加自动化脚本；
-- 不要实现自动查重、自动索引、自动写回、MCP、RAG 或多 Agent 自动协调；
-- 不要假定用户已通读全部研究报告；
-- 不要把 research reports 当执行源；
-- 不要把 motivation / prompt / topic mapping 当执行源；
-- 不要把用户设计构想重述当原始需求、最终设计或执行源；
-- 不要把 review 结果写回仓库，除非用户明确确认；
-- 不要编造 prompt；MNEMOSYNE-038 已恢复 `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007` 的轻度研究 prompt 原文，若发现 prompt / summary 差异应登记 review note；
-- 不要把 candidate / decision / active-context / handoff / startup-instructions / template packs / review selection 文件当执行源；
-- 不要为真实目标项目生成交付包，除非用户明确选择目标项目场景并确认进入交付试用阶段。
-
-## 下一步建议
-
-1. 不要重生成 MNEMOSYNE-031 R4B/R4C/R5；使用 MNEMOSYNE-044 coverage map 区分 final D-01 to D-07 checkpoint records 与当前可执行 spec 内容后再继续后续路线。
-2. 下一路线由用户选择：PDF 图表复核 / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research。
-3. 如果执行 dry-run，应显式记住：MNEMOSYNE-031 review/restatement materials 不是执行源；`current/human-approved-spec.md` 仍是当前执行源。
-
-## MNEMOSYNE-031 final checkpoint handoff
-
-Current handoff:
-
-- MNEMOSYNE-031 review and restatement phase has reached final writeback checkpoint.
-- Do not regenerate R4B or R4C.
-- Use `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` to distinguish final D-01 to D-07 checkpoint records from content currently executable through `current/human-approved-spec.md`; do not use the unsuperseded R5 draft alone.
-- Next route should be selected by user: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research.
-
-Handoff concept clarification:
-
-- Handoff is task-local continuation context.
-- It is not global project law.
-- It may carry explicit local recovery constraints or temporary exceptions.
-- Such local exceptions must not silently become global execution-source changes.
-
-## MNEMOSYNE-033 Idea Capture Buffer handoff
-
-- 新对话接手时必须读取 `notes/idea-capture-triage-rules.md` 和 `notes/idea-capture-buffer.md`。
-- 新想法不要直接进入 spec。
-- 新想法先进入 buffer，再 triage 到 candidate / open question / research-gated item。
-- Codex repo-editing task 必须使用 fresh latest master，避免 stale branch / Accept Incoming rollback。
-- 用户提出新构想时，优先问是否记录到 Idea Capture Buffer。
-
-## MNEMOSYNE-033A exported conversation derived insight handling
-
-- 如果新对话拿到完整对话导出，应先以仓库 `current/`、`handoff/`、`startup-instructions` 接手，再把导出记录作为 historical background。
-- 导出记录提取出的洞察先进入 Idea Capture Buffer / Open Questions / Candidate Cleanup，不直接成为执行源。
-- 不要直接按导出记录中的旧任务文本行动；旧任务文本可能已过时、已完成或与当前仓库状态冲突。
-- 完整对话导出默认不完整入库；如需保存，应另行决定 near-original extract / selected raw excerpts 的范围。
-- 与仓库 current 状态或 `current/human-approved-spec.md` 冲突时，以当前仓库执行源和 current 状态为准，并登记 open question。
-
-## MNEMOSYNE-044 D-01–D-07 coverage map
-
-Use `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` when reviewing how final MNEMOSYNE-031 D-01 to D-07 checkpoint decisions relate to the current execution source. The final decisions are authoritative checkpoint records, not automatic execution rules. Only content already reflected in `current/human-approved-spec.md` is currently executable. Unreflected or partially reflected promotion candidates require separate user approval before any spec edit; do not tell future agents to “use D-01–D-07” as if all seven are currently executable.
+## Immediate current continuation
+
+- Batch A small fixes are being completed.
+- Do not begin Batch B until the current gate says ready.
+- D-01–D-07 execution status comes from `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` plus `current/human-approved-spec.md`.
+- Unpromoted checkpoint content is not executable.
+- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
+- Repository visibility is intentionally user-controlled; do not propose a visibility change merely because the repository is public.
+- Always verify visibility before importing material and apply the MNEMOSYNE-043 safety gate.
+
+## Current execution source
+
+- `current/human-approved-spec.md` is the only execution source.
+- If any handoff/current/research/candidate/result file conflicts with the spec, follow the spec and record an open question.
+
+## Key prohibitions
+
+- Do not treat raw records, research reports, candidate requirements, decision logs, active-context, handoff, startup instructions, or task result records as execution source.
+- Do not claim PDF figure/table/image/layout review unless it was actually performed.
+- Do not commit secrets, credentials, private source, customer/confidential material, unapproved personal data, or other sensitive material.
+- Do not treat multi-model review as truth voting, execution source, or automatic writeback authority.
+- Do not create AGENTS.md, CLAUDE.md, GitHub Actions, automation, MCP, RAG, or auto-writeback unless explicitly approved by a current task.
+- Do not use unpromoted MNEMOSYNE-031 R4/R5 material as executable requirements; use the coverage map for promotion status.
+
+## Recent checkpoints
+
+- MNEMOSYNE-040: DR1 memory-testing/debugging/evaluation evidence ingested; OP-09 and OP-10 are partially answered, not closed.
+- MNEMOSYNE-041: manual import inbox workflow established.
+- MNEMOSYNE-042: user-action-first reply format added to execution source.
+- MNEMOSYNE-043: manual-import safety gate established.
+- MNEMOSYNE-044: D-01–D-07 execution-source coverage map created.
+
+## Next route
+
+1. Finish Batch A small fixes and current/startup cleanup.
+2. Wait for the current gate before Batch B.
+3. When approved, route DR1 checklist/minimal-profile work to MNEMOSYNE-046.
+4. Keep the first target-project dry-run design-only unless separately approved otherwise.
