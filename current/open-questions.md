@@ -1,5 +1,35 @@
 # Open Questions
 
+> Current execution source remains `current/human-approved-spec.md`. This file is not execution source.
+
+## Current corrections
+
+- Recovered light prompts are no longer a future hypothetical; MNEMOSYNE-038 recovered and indexed them.
+- R4/R5 route-selection wording is superseded; use the MNEMOSYNE-044 coverage map for D-01–D-07 promotion/reflection status.
+- DR1 research priority is answered for the current cycle; DR1 research and ingestion are complete.
+- OP-09 and OP-10 remain partially answered by DR1, not closed.
+- OP-08 remains open/partially addressed as a broader privacy/redaction/access-control question.
+- Repository public/private selection is not an open defect question because visibility is user-controlled. Verify visibility before imports and apply the safety gate.
+- D-promotion questions point to `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md`.
+
+## Current open questions
+
+- OP-08: What broader privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?
+  - status: partially_addressed_by_MNEMOSYNE_043
+- OP-09: Can current models reliably perform memory-system testing / debugging / root-cause diagnosis?
+  - status: partially_answered_by_DR1
+- OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
+  - status: partially_answered_by_DR1
+- OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
+- Which template-pack small fixes, if any, should precede the first target-project dry-run?
+- Which first target-project scenario should be used when dry-run work is approved?
+
+## Historical open-question list below
+
+The material below is retained for history and may include superseded route wording. Use the current corrections above for live status.
+
+# Open Questions
+
 > MNEMOSYNE-031 final checkpoint records are non-execution-source review/restatement records. Current execution source remains `current/human-approved-spec.md`.
 
 ## answered

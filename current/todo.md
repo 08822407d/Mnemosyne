@@ -1,5 +1,44 @@
 # TODO
 
+## Active now
+
+- Complete Batch A small fixes and current/startup cleanup.
+- Keep current execution source unchanged unless a future user-approved task explicitly edits `current/human-approved-spec.md`.
+- Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
+
+## Waiting for user decision
+
+- Whether to review or revise existing template packs before the first target-project dry-run.
+- Which first target-project scenario to use when dry-run work is approved.
+- Whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source.
+
+## Waiting for dry-run evidence
+
+- First target-project dry-run remains design-only and public/synthetic/explicitly redacted by default until separately approved.
+- DR1 checklist/minimal-profile work should be handled by MNEMOSYNE-046, not by treating DR1 research itself as executable.
+
+## Deferred / future
+
+- PDF figure/table/image manual review.
+- Candidate/idea cleanup beyond this current-state consolidation.
+- Optional DR2 or additional research only if a future design question needs it.
+- Platform/visibility reverification when importing files or when repository visibility materially affects the task. Do not add a recurring TODO to change repository visibility merely because it is public.
+
+## Recently completed
+
+- Comprehensive Health Review is completed by Batch A current-state work.
+- DR1 research and ingestion are completed by MNEMOSYNE-040.
+- Idea Capture Buffer creation is completed.
+- Old “choose route after 032” items are superseded by the current Batch A -> gate -> MNEMOSYNE-046/dry-run route.
+- Manual-import safety gate is complete in MNEMOSYNE-043.
+- D-decision mapping is complete in MNEMOSYNE-044.
+
+## Historical detailed task list below
+
+The material below is retained for history and may contain superseded pending/completed wording. Use the current view above for live status.
+
+# TODO
+
 > MNEMOSYNE-031 final checkpoint records are non-execution-source review/restatement records. Current execution source remains `current/human-approved-spec.md`.
 
 ## v0.1-final
