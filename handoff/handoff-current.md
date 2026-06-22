@@ -159,7 +159,7 @@ Completed:
 Current continuation:
 - Do not resume from R4B.
 - Do not regenerate R4B, R4C, or R5.
-- Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
+- Use `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` to distinguish final D-01 to D-07 checkpoint records from content currently executable through `current/human-approved-spec.md`; do not use the unsuperseded R5 draft alone.
 - Next route should be selected by the user: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research.
 
 Historical note:
@@ -233,7 +233,7 @@ When generating or executing Codex tasks that modify files, require actual diff 
 
 ## 下一步建议
 
-1. 不要重生成 MNEMOSYNE-031 R4B/R4C/R5；使用 final D-01 to D-07 决策继续后续路线。
+1. 不要重生成 MNEMOSYNE-031 R4B/R4C/R5；使用 MNEMOSYNE-044 coverage map 区分 final D-01 to D-07 checkpoint records 与当前可执行 spec 内容后再继续后续路线。
 2. 下一路线由用户选择：PDF 图表复核 / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research。
 3. 如果执行 dry-run，应显式记住：MNEMOSYNE-031 review/restatement materials 不是执行源；`current/human-approved-spec.md` 仍是当前执行源。
 
@@ -243,7 +243,7 @@ Current handoff:
 
 - MNEMOSYNE-031 review and restatement phase has reached final writeback checkpoint.
 - Do not regenerate R4B or R4C.
-- Use final D-01 to D-07 decisions from `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-research-review-record.md`, not the unsuperseded R5 draft alone.
+- Use `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` to distinguish final D-01 to D-07 checkpoint records from content currently executable through `current/human-approved-spec.md`; do not use the unsuperseded R5 draft alone.
 - Next route should be selected by user: PDF figure review / Idea Capture Buffer / candidate cleanup / template review / memory-system testing-debugging feasibility research.
 
 Handoff concept clarification:
@@ -268,3 +268,7 @@ Handoff concept clarification:
 - 不要直接按导出记录中的旧任务文本行动；旧任务文本可能已过时、已完成或与当前仓库状态冲突。
 - 完整对话导出默认不完整入库；如需保存，应另行决定 near-original extract / selected raw excerpts 的范围。
 - 与仓库 current 状态或 `current/human-approved-spec.md` 冲突时，以当前仓库执行源和 current 状态为准，并登记 open question。
+
+## MNEMOSYNE-044 D-01–D-07 coverage map
+
+Use `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` when reviewing how final MNEMOSYNE-031 D-01 to D-07 checkpoint decisions relate to the current execution source. The final decisions are authoritative checkpoint records, not automatic execution rules. Only content already reflected in `current/human-approved-spec.md` is currently executable. Unreflected or partially reflected promotion candidates require separate user approval before any spec edit; do not tell future agents to “use D-01–D-07” as if all seven are currently executable.

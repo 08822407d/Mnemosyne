@@ -178,3 +178,11 @@ Pending / next:
 ## MNEMOSYNE-040 follow-up
 
 - [ ] Treat multi-model independent review only as an auxiliary second-opinion method; DR2 optional multi-model independent review research is not currently required unless future template/review-package design needs deeper evidence.
+
+## MNEMOSYNE-044 execution-source coverage map
+
+- [x] Create D-01 to D-07 execution-source coverage map: `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md`.
+- [ ] User review: decide whether to promote any candidate wording from the MNEMOSYNE-044 coverage map into `current/human-approved-spec.md`.
+- [ ] If user approves promotion, run a separate spec-update task; do not use this coverage map as automatic approval.
+
+Status boundary: final D-01 to D-07 decisions are authoritative checkpoint records, but only content already reflected in `current/human-approved-spec.md` is currently executable. Unreflected promotion candidates require separate user approval.
