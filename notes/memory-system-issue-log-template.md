@@ -31,6 +31,13 @@ Use one or more values from this list when applicable:
 - user decision not propagated
 - artifact not actually landable
 
+## Mnemosyne-specific supplemental diagnostic modes
+
+These supplemental modes are Mnemosyne-specific diagnostics, not direct DR1-derived findings:
+
+- template maximalism / schema overfit
+- unnecessary file-role proliferation
+
 ## Issue entry template
 
 ```yaml

@@ -2,20 +2,20 @@
 
 ## Active now
 
-- Return to the ordinary Mnemosyne conversation for verification of Batch A results after MNEMOSYNE-046.
+- Return to the ordinary Mnemosyne conversation for post-047 verification of Batch A results; do not start Batch B until that verification returns PASS.
 - Keep current execution source unchanged unless a future user-approved task explicitly edits `current/human-approved-spec.md`.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
 ## Waiting for user decision
 
 - Whether to review or revise existing template packs before the first target-project dry-run.
-- Which first target-project scenario to use after verification PASS and separate approval; no target project has been selected.
+- Which first target-project scenario to use after post-047 verification PASS and separate approval; no target project has been selected.
 - Whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source.
 
 ## Waiting for dry-run evidence
 
 - First target-project dry-run remains design-only and public/synthetic/explicitly redacted by default until separately approved; no real target-project dry-run has occurred.
-- MNEMOSYNE-046 has created DR1-derived minimal instruments; those instruments are not execution source and do not promote Batch B.
+- MNEMOSYNE-046 created DR1-derived minimal instruments, and MNEMOSYNE-047 hardened their schema-tailoring and Batch A gate language; these instruments are not execution source and do not promote Batch B.
 
 ## Deferred / future
 
@@ -33,7 +33,7 @@
 - Manual-import safety gate is complete in MNEMOSYNE-043.
 - D-decision mapping is complete in MNEMOSYNE-044.
 - MNEMOSYNE-046 is complete after the four minimal instruments and result record exist.
-- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification before Batch B.
+- MNEMOSYNE-047 corrects the final Batch A residuals; Batch A small fixes are complete subject to ordinary-conversation post-047 verification before Batch B.
 
 ## Historical detailed task list below
 

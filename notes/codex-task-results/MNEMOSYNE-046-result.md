@@ -85,10 +85,11 @@ The new instruments reference existing template packs and the existing first-sce
 
 ## verification_outputs
 
-Verification was run after creating the instruments and updating current status. See final command outputs below.
+Verification was run after creating the instruments and updating current status. Concise outputs are preserved below; the raw unified diff was removed from this cleaned result record.
+
+### `git status --short`
 
 ```text
-$ git status --short
  M current/active-context.md
  M current/open-questions.md
  M current/todo.md
@@ -98,226 +99,60 @@ $ git status --short
 ?? notes/first-target-project-dry-run-minimal-profile.md
 ?? notes/first-target-project-dry-run-result-template.md
 ?? notes/memory-system-issue-log-template.md
-$ git diff HEAD --stat
+```
+
+### `git diff HEAD --stat`
+
+```text
  current/active-context.md  | 13 ++++++++-----
  current/open-questions.md  |  4 ++--
  current/todo.md            | 10 ++++++----
  handoff/handoff-current.md | 16 +++++++++-------
  4 files changed, 25 insertions(+), 18 deletions(-)
-$ git diff HEAD --name-only
+```
+
+### `git diff HEAD --name-only`
+
+```text
 current/active-context.md
 current/open-questions.md
 current/todo.md
 handoff/handoff-current.md
-$ git diff HEAD -- [target files]
-diff --git a/current/active-context.md b/current/active-context.md
-index c30059a..a62b9c0 100644
---- a/current/active-context.md
-+++ b/current/active-context.md
-@@ -4,8 +4,8 @@
- 
- ### current phase
- 
--- Post-MNEMOSYNE-044 Batch A current-state cleanup.
--- Batch A small fixes are being completed before any Batch B work begins.
-+- Post-MNEMOSYNE-046 Batch A small-fix instrument creation.
-+- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification before any Batch B work begins.
- - Near-term construction priority remains target-project readiness: make Mnemosyne practically usable for designing and helping build persistent-memory frameworks for real target projects.
- 
- ### current execution source
-@@ -20,18 +20,21 @@
- - MNEMOSYNE-042: user-action-first reply format added to the execution source.
- - MNEMOSYNE-043: manual-import safety gate established; public or unverified visibility allows only public, synthetic, or explicitly redacted material.
- - MNEMOSYNE-044: D-01–D-07 execution-source coverage map created; execution status comes from the coverage map plus `current/human-approved-spec.md`.
-+- MNEMOSYNE-045: current-state cleanup verified the compact current view as live state.
-+- MNEMOSYNE-046: first target-project dry-run minimal instruments created as non-execution-source design-only instruments; no real target-project dry-run has occurred.
- 
- ### current blockers/gates
- 
--- Do not begin Batch B until the current gate says ready.
-+- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS after MNEMOSYNE-046.
- - Unpromoted checkpoint/candidate/research content is not executable.
- - First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
- - Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
- 
- ### current next route
- 
--- Finish Batch A small fixes, including this current-state consolidation and startup read-path cleanup.
--- After the gate says ready, MNEMOSYNE-046 should convert DR1 implications into a minimal checklist/profile for the first target-project dry-run.
-+- Return to the ordinary Mnemosyne conversation for verification of Batch A results.
-+- After ordinary-conversation verification returns PASS, the user may start Batch B Pro work.
-+- No real target-project dry-run has occurred, Batch B has not started, and no target project has been selected.
- - Do not treat old pre-039 route-selection text as the current route.
- 
- ### important non-execution-source references
-diff --git a/current/open-questions.md b/current/open-questions.md
-index 3bdd2b2..96c9836 100644
---- a/current/open-questions.md
-+++ b/current/open-questions.md
-@@ -21,8 +21,8 @@
- - OP-10: Are there mature industry practices or successful examples for memory-system testing/debugging in AI-Agent teams?
-   - status: partially_answered_by_DR1
- - OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
--- Which template-pack small fixes, if any, should precede the first target-project dry-run?
--- Which first target-project scenario should be used when dry-run work is approved?
-+- Whether ordinary-conversation verification of Batch A returns PASS before Batch B Pro work starts.
-+- Which first target-project scenario should be used after verification PASS and separate approval; no target project has been selected and no real target-project dry-run has occurred.
- 
- ## Historical open-question list below
- 
-diff --git a/current/todo.md b/current/todo.md
-index a4f30ac..407e6ba 100644
---- a/current/todo.md
-+++ b/current/todo.md
-@@ -2,20 +2,20 @@
- 
- ## Active now
- 
--- Complete Batch A small fixes and current/startup cleanup.
-+- Return to the ordinary Mnemosyne conversation for verification of Batch A results after MNEMOSYNE-046.
- - Keep current execution source unchanged unless a future user-approved task explicitly edits `current/human-approved-spec.md`.
- - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
- 
- ## Waiting for user decision
- 
- - Whether to review or revise existing template packs before the first target-project dry-run.
--- Which first target-project scenario to use when dry-run work is approved.
-+- Which first target-project scenario to use after verification PASS and separate approval; no target project has been selected.
- - Whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source.
- 
- ## Waiting for dry-run evidence
- 
--- First target-project dry-run remains design-only and public/synthetic/explicitly redacted by default until separately approved.
--- DR1 checklist/minimal-profile work should be handled by MNEMOSYNE-046, not by treating DR1 research itself as executable.
-+- First target-project dry-run remains design-only and public/synthetic/explicitly redacted by default until separately approved; no real target-project dry-run has occurred.
-+- MNEMOSYNE-046 has created DR1-derived minimal instruments; those instruments are not execution source and do not promote Batch B.
- 
- ## Deferred / future
- 
-@@ -32,6 +32,8 @@
- - Old “choose route after 032” items are superseded by the current Batch A -> gate -> MNEMOSYNE-046/dry-run route.
- - Manual-import safety gate is complete in MNEMOSYNE-043.
- - D-decision mapping is complete in MNEMOSYNE-044.
-+- MNEMOSYNE-046 is complete after the four minimal instruments and result record exist.
-+- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification before Batch B.
- 
- ## Historical detailed task list below
- 
-diff --git a/handoff/handoff-current.md b/handoff/handoff-current.md
-index 468907f..dcc269f 100644
---- a/handoff/handoff-current.md
-+++ b/handoff/handoff-current.md
-@@ -10,11 +10,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
- 
- ## Immediate current continuation
- 
--- Batch A small fixes are being completed.
--- Do not begin Batch B until the current gate says ready.
-+- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification.
-+- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS.
- - D-01–D-07 execution status comes from `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` plus `current/human-approved-spec.md`.
- - Unpromoted checkpoint content is not executable.
--- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
-+- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved; no real target-project dry-run has occurred and no target project has been selected.
- - Repository visibility is intentionally user-controlled; do not propose a visibility change merely because the repository is public.
- - Always verify visibility before importing material and apply the MNEMOSYNE-043 safety gate.
- 
-@@ -39,10 +39,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
- - MNEMOSYNE-042: user-action-first reply format added to execution source.
- - MNEMOSYNE-043: manual-import safety gate established.
- - MNEMOSYNE-044: D-01–D-07 execution-source coverage map created.
-+- MNEMOSYNE-045: compact current state/startup cleanup completed.
-+- MNEMOSYNE-046: minimal dry-run profile, checklist, issue-log template, and result template created as non-execution-source instruments.
- 
- ## Next route
- 
--1. Finish Batch A small fixes and current/startup cleanup.
--2. Wait for the current gate before Batch B.
--3. When approved, route DR1 checklist/minimal-profile work to MNEMOSYNE-046.
--4. Keep the first target-project dry-run design-only unless separately approved otherwise.
-+1. Return to the ordinary Mnemosyne conversation for verification of Batch A results.
-+2. If verification returns PASS, the user may start Batch B Pro work.
-+3. Keep the first target-project dry-run design-only unless separately approved otherwise.
-+4. Do not claim Batch B has started, a target project has been selected, or a real target-project dry-run has occurred.
-$ grep -n "design_only\\|public / synthetic\\|explicitly_redacted\\|execution source\\|stop_conditions" notes/first-target-project-dry-run-minimal-profile.md
-6:- Current Mnemosyne execution source remains `current/human-approved-spec.md`; this profile is not execution source.
-7:- The target project must eventually have its own execution source; do not use Mnemosyne's execution source as the target project's runtime truth source.
-9:- Use public / synthetic / explicitly_redacted material by default.
-12:- Unpromoted D-01-D-07 content is not execution source.
-21:design_only: true by default
-22:input_safety: public / synthetic / explicitly_redacted by default
-28:  - target-project execution source if it exists and is safe to use
-38:  - target/current/human-approved-spec.md or equivalent target execution source
-46:  - read target execution source first, if present
-50:handoff_requirement: "A fresh ordinary Thinking-model session can resume from the stated execution source, active context, handoff, TODO, and open questions without hidden assumptions."
-53:  - target execution source may not exist yet
-68:stop_conditions:
-71:  - execution source conflict cannot be resolved by the stated priority rule
-77:  - whether a target execution source exists
-$ grep -n "wrong source priority\\|stale handoff\\|privacy leakage\\|artifact not actually landable" notes/memory-system-issue-log-template.md
-18:- stale handoff
-19:- wrong source priority
-29:- privacy leakage
-32:- artifact not actually landable
-$ grep -n "pass/fail/not_tested/not_applicable\\|evidence_path\\|ordinary Thinking" checklist result-template
-notes/first-target-project-dry-run-checklist.md:16:`result` must be one of: `pass/fail/not_tested/not_applicable`.
-notes/first-target-project-dry-run-checklist.md:23:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:30:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:31:  finding: "Handoff can be executed by a fresh ordinary Thinking-model session without hidden context."
-notes/first-target-project-dry-run-checklist.md:37:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:44:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:51:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:58:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:65:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:72:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:79:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:86:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:93:  evidence_path:
-notes/first-target-project-dry-run-checklist.md:100:  evidence_path:
-$ grep -n "Batch A\\|Batch B\\|MNEMOSYNE-046\\|real target-project dry-run" current/handoff files
-current/active-context.md:7:- Post-MNEMOSYNE-046 Batch A small-fix instrument creation.
-current/active-context.md:8:- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification before any Batch B work begins.
-current/active-context.md:24:- MNEMOSYNE-046: first target-project dry-run minimal instruments created as non-execution-source design-only instruments; no real target-project dry-run has occurred.
-current/active-context.md:28:- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS after MNEMOSYNE-046.
-current/active-context.md:35:- Return to the ordinary Mnemosyne conversation for verification of Batch A results.
-current/active-context.md:36:- After ordinary-conversation verification returns PASS, the user may start Batch B Pro work.
-current/active-context.md:37:- No real target-project dry-run has occurred, Batch B has not started, and no target project has been selected.
-handoff/handoff-current.md:13:- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification.
-handoff/handoff-current.md:14:- Do not begin Batch B until ordinary Mnemosyne conversation verification returns PASS.
-handoff/handoff-current.md:17:- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved; no real target-project dry-run has occurred and no target project has been selected.
-handoff/handoff-current.md:43:- MNEMOSYNE-046: minimal dry-run profile, checklist, issue-log template, and result template created as non-execution-source instruments.
-handoff/handoff-current.md:47:1. Return to the ordinary Mnemosyne conversation for verification of Batch A results.
-handoff/handoff-current.md:48:2. If verification returns PASS, the user may start Batch B Pro work.
-handoff/handoff-current.md:50:4. Do not claim Batch B has started, a target project has been selected, or a real target-project dry-run has occurred.
-current/todo.md:5:- Return to the ordinary Mnemosyne conversation for verification of Batch A results after MNEMOSYNE-046.
-current/todo.md:17:- First target-project dry-run remains design-only and public/synthetic/explicitly redacted by default until separately approved; no real target-project dry-run has occurred.
-current/todo.md:18:- MNEMOSYNE-046 has created DR1-derived minimal instruments; those instruments are not execution source and do not promote Batch B.
-current/todo.md:29:- Comprehensive Health Review is completed by Batch A current-state work.
-current/todo.md:32:- Old “choose route after 032” items are superseded by the current Batch A -> gate -> MNEMOSYNE-046/dry-run route.
-current/todo.md:35:- MNEMOSYNE-046 is complete after the four minimal instruments and result record exist.
-current/todo.md:36:- Batch A small fixes are complete after MNEMOSYNE-046, subject to ordinary-conversation verification before Batch B.
-current/open-questions.md:24:- Whether ordinary-conversation verification of Batch A returns PASS before Batch B Pro work starts.
-current/open-questions.md:25:- Which first target-project scenario should be used after verification PASS and separate approval; no target project has been selected and no real target-project dry-run has occurred.
-$ protected file grep
-$ git diff --check
 ```
 
-## protected_file_check
+### targeted-diff summary
 
-Protected-file grep produced no output, indicating no protected files are present in `git diff HEAD --name-only`.
+The targeted diff proved that MNEMOSYNE-046 added the four dry-run instrument files, created its result record, and updated only the allowed current status files. It added non-execution-source design-only dry-run boundaries, recorded that no real target-project dry-run had occurred, kept Batch B gated on ordinary-conversation verification, and did not promote any new execution-source rule.
+
+### grep and presence checks
+
+- Boundary phrases were present in each new dry-run instrument: not execution source, target project needs its own execution source, design-only unless approved, no target writes, public/synthetic/explicitly redacted inputs, no automation/MCP/RAG/Actions/multi-agent coordination, and template completeness is not success.
+- Current status checks found Batch A/Batch B gate language and the statements that no real target-project dry-run had occurred and no target project had been selected.
+- Protected-file checks produced no protected-file output.
+
+### protected-file check
+
+```text
+(no output)
+```
+
+### `git diff --check`
+
+```text
+(no output)
+```
 
 ## known_gaps
 
-- No real target-project dry-run was performed.
+- MNEMOSYNE-046 created design-only instruments only; it did not conduct a real target-project dry-run.
 - No target project was selected.
-- No target project execution source was inspected or created.
-- Batch B has not started.
+- Batch B did not start.
+- Ordinary-conversation verification was still required before Batch B.
 
 ## manual_review_required
 
-- Ordinary Mnemosyne conversation should verify Batch A results before Batch B Pro work starts.
-- User must separately select or approve any first target project and any non-public inputs.
+Ordinary Mnemosyne conversation review was required to verify the MNEMOSYNE-046 instruments and the Batch A gate before any Batch B work.
 
 ## claimed_completion
 
-Claimed complete for MNEMOSYNE-046 only after all four instruments and this result record exist, current status is synchronized, and protected files remain unchanged.
+MNEMOSYNE-046 completed the first target-project dry-run minimal instrument creation and current status synchronization, subject to ordinary-conversation verification.
