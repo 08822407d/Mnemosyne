@@ -10,7 +10,7 @@
 - Do not introduce automation, MCP, RAG, Actions, or multi-agent coordination.
 - Template completeness is not success; next-executor usability is part of success.
 - Unpromoted D-01-D-07 content is not execution source.
-- Reference, do not duplicate, the existing template packs: `notes/template-pack-review-and-first-scenario-selection.md`, `notes/target-project-memory-system-template-pack.md`, and `notes/delivery-manifest-template-pack.md`.
+- Reference, do not duplicate, the existing template packs: `notes/template-pack-review-and-first-scenario-selection.md`, `notes/target-project-memory-system-template-pack.md`, and `notes/delivery-manifest-template-pack.md`. Use `notes/first-target-project-dry-run-review-instruments.md` for drift, handoff replay, source-priority conflict, and triage review.
 
 ## Minimal profile fields
 
@@ -33,6 +33,7 @@ prohibited_sensitive_materials:
   - customer/confidential data
   - unapproved personal data
   - unredacted proprietary raw materials
+target_source_map_and_authority: "List target safe sources, authority level, owner, and whether any target execution source exists before design work begins."
 target_execution_source_or_unknown: unknown_until_user_confirms
 schema_tailoring_rationale: "Explain why this target project needs the selected 3 to 7 core memory files/roles, and why omitted candidate roles are unnecessary for this first design. Do not copy the Mnemosyne directory/file layout by default; file names and locations are provisional target-project design choices. 不得默认照搬 Mnemosyne 的目录或文件布局。"
 candidate_core_memory_roles_not_a_required_package:
