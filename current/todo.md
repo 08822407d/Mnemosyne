@@ -2,20 +2,25 @@
 
 ## Active now
 
-- Return to the ordinary Mnemosyne conversation for post-047 verification of Batch A results; do not start Batch B until that verification returns PASS.
-- Keep current execution source unchanged unless a future user-approved task explicitly edits `current/human-approved-spec.md`.
+- Run fresh ordinary Thinking startup/handoff replay after MNEMOSYNE-049.
+- Keep execution source unchanged unless separately approved.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
 ## Waiting for user decision
 
-- Whether to review or revise existing template packs before the first target-project dry-run.
-- Which first target-project scenario to use after post-047 verification PASS and separate approval; no target project has been selected.
-- Whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source.
+- Select target project after replay PASS.
+- Confirm owner/authority.
+- Provide safe input manifest.
+- Confirm no-target-write.
+- Decide whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source; separate approval only.
 
 ## Waiting for dry-run evidence
 
-- First target-project dry-run remains design-only and public/synthetic/explicitly redacted by default until separately approved; no real target-project dry-run has occurred.
-- MNEMOSYNE-046 created DR1-derived minimal instruments, and MNEMOSYNE-047 hardened their schema-tailoring and Batch A gate language; these instruments are not execution source and do not promote Batch B.
+- No real target-project dry-run has occurred.
+- Use onboarding package and review instruments when dry-run is later authorized.
+- No target project has been selected.
+- No target-project materials have been uploaded or ingested.
+- No target-project repository has been written.
 
 ## Deferred / future
 
@@ -26,14 +31,9 @@
 
 ## Recently completed
 
-- Comprehensive Health Review is completed by Batch A current-state work.
-- DR1 research and ingestion are completed by MNEMOSYNE-040.
-- Idea Capture Buffer creation is completed.
-- Old “choose route after 032” items are superseded by the current Batch A -> gate -> MNEMOSYNE-046/dry-run route.
-- Manual-import safety gate is complete in MNEMOSYNE-043.
-- D-decision mapping is complete in MNEMOSYNE-044.
-- MNEMOSYNE-046 is complete after the four minimal instruments and result record exist.
-- MNEMOSYNE-047 corrects the final Batch A residuals; Batch A small fixes are complete subject to ordinary-conversation post-047 verification before Batch B.
+- MNEMOSYNE-048 onboarding/review instruments.
+- MNEMOSYNE-049 state synchronization after 048.
+- Batch A small fixes verified passed after post-047 and post-048 verification.
 
 ## Historical detailed task list below
 

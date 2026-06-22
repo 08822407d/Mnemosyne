@@ -4,9 +4,11 @@
 
 ### current phase
 
-- Post-MNEMOSYNE-047 Batch A post-verification hardening.
-- MNEMOSYNE-047 corrects the final Batch A residuals; Batch A small fixes are complete subject to ordinary-conversation post-047 verification before any Batch B work begins.
-- Near-term construction priority remains target-project readiness: make Mnemosyne practically usable for designing and helping build persistent-memory frameworks for real target projects.
+- Post-MNEMOSYNE-048 Batch B pre-dry-run state synchronization.
+- Batch A small fixes are verified passed: post-047 ordinary Mnemosyne conversation verification result PASS, and MNEMOSYNE-048 ordinary Mnemosyne conversation verification result PASS.
+- Batch B preparation has produced onboarding/review instruments but real dry-run has not started.
+- Stage B verdict from Pro review: READY_AFTER_SMALL_FIXES.
+- The small fixes required by Stage B are now represented by MNEMOSYNE-048 and MNEMOSYNE-049.
 
 ### current execution source
 
@@ -22,26 +24,33 @@
 - MNEMOSYNE-044: D-01–D-07 execution-source coverage map created; execution status comes from the coverage map plus `current/human-approved-spec.md`.
 - MNEMOSYNE-045: current-state cleanup verified the compact current view as live state.
 - MNEMOSYNE-046: first target-project dry-run minimal instruments created as non-execution-source design-only instruments; no real target-project dry-run has occurred.
-- MNEMOSYNE-047: final Batch A residuals corrected: compacted raw-diff result records, target-specific dry-run schema tailoring, manifest safety-preflight alignment, and Batch A gate synchronization.
+- MNEMOSYNE-047: final Batch A residuals corrected and post-047 ordinary Mnemosyne conversation verification returned PASS.
+- MNEMOSYNE-048: ordinary Mnemosyne conversation verification returned PASS; created the first-target-project dry-run onboarding package and review instruments.
+- MNEMOSYNE-049: state synchronization after 048 records the fresh replay gate and current no-target/no-dry-run boundaries.
 
 ### current blockers/gates
 
-- Do not begin Batch B until ordinary Mnemosyne conversation post-047 verification returns PASS.
+- Do not start real target-project dry-run until fresh ordinary Thinking startup/handoff replay returns PASS.
+- After fresh replay PASS, user still must select target and approve safe input/no-target-write before a real dry-run.
+- No real target-project dry-run has occurred.
+- No target project has been selected.
+- No target-project materials have been uploaded or ingested.
+- No target-project repository has been written.
 - Unpromoted checkpoint/candidate/research content is not executable.
-- First target-project dry-run remains design-only and uses public/synthetic/explicitly redacted input by default until separately approved.
 - Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
 
 ### current next route
 
-- Return to the ordinary Mnemosyne conversation for post-047 verification of Batch A results.
-- After ordinary-conversation post-047 verification returns PASS, the user may start Batch B Pro work.
-- No real target-project dry-run has occurred, Batch B has not started, and no target project has been selected.
-- Do not treat old pre-039 route-selection text as the current route.
+- Run fresh ordinary Thinking startup/handoff replay using `handoff/first-target-project-dry-run-onboarding-package.md`.
+- Do not start target dry-run, choose target, or upload target material before that replay and user approval.
+- Do not treat old pre-049 route-selection text as the current route.
 
 ### important non-execution-source references
 
+- `handoff/first-target-project-dry-run-onboarding-package.md` for the next fresh ordinary Thinking startup/handoff replay.
+- `notes/first-target-project-dry-run-review-instruments.md` and related first-dry-run instruments for later authorized dry-run preparation.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for D-01–D-07 reflection/promotion status.
-- `notes/codex-task-results/MNEMOSYNE-039-result.md` through `notes/codex-task-results/MNEMOSYNE-044-result.md` for recent task outcomes.
+- `notes/codex-task-results/MNEMOSYNE-047-result.md`, `notes/codex-task-results/MNEMOSYNE-048-result.md`, and `notes/codex-task-results/MNEMOSYNE-049-result.md` for recent task outcomes.
 - `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
 - Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
