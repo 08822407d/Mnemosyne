@@ -9,6 +9,14 @@ Mnemosyne
 Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
 
 
+## MNEMOSYNE-042 user-action-first reply format
+
+- MNEMOSYNE-042 clarifies that `操作内容` means human-required manual steps, not assistant internal plans, tool calls, or background analysis.
+- Use `## 操作内容（需要你手动执行）` when manual user action is required.
+- Use `## 无需用户操作` when no manual user action is required.
+- Current execution source remains `current/human-approved-spec.md`.
+
+
 
 
 ## MNEMOSYNE-041 manual import inbox workflow

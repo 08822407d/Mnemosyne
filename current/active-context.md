@@ -1,5 +1,12 @@
 # Active Context
 
+## MNEMOSYNE-042 user-action-first reply format
+
+- MNEMOSYNE-042 clarifies user-action-first reply format for Mnemosyne-affiliated ordinary ChatGPT conversations.
+- `操作内容` means user-required manual actions; use `## 无需用户操作` when no user action is needed.
+- Current execution source remains `current/human-approved-spec.md`.
+
+
 
 
 ## MNEMOSYNE-041 status
