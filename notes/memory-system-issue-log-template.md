@@ -46,17 +46,36 @@ dry_run_id:
 observed_at:
 symptom:
 failure_mode:
+failed_check_ids:
 affected_artifact:
 expected_behavior:
 actual_behavior:
 evidence_paths:
+faulty_layer: input | write | manage | read | handoff | delivery | governance | unknown
+blocking: yes | no
 suspected_layer:
 root_cause_status:
 user_impact:
 severity:
+containment_action:
 repair_candidate:
 user_decision_needed:
+reproduction_status: reproducible | not_reproduced | unknown
+reproduction_steps:
 regression_test:
 regression_result:
+route: codex_fix | user_clarification | open_question | candidate | capability_check | defer
+next_action:
+owner:
 status:
 ```
+
+## Failure conditions
+
+An issue record fails review if:
+
+- no evidence path is provided;
+- symptom is treated as confirmed root cause without evidence;
+- P0 has no containment action;
+- the issue is closed without a regression result;
+- execution-source repair is proposed without separate user approval.

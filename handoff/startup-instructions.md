@@ -21,6 +21,7 @@ Read additional files only when the task needs them:
 - Research current views for tool/capability/new mechanism/target-project design.
 - Target-project template files for target-project work.
 - Manual-import docs for import tasks.
+- For first target-project dry-run preparation or execution, read `handoff/first-target-project-dry-run-onboarding-package.md` first, then the minimal profile/checklist/review instruments listed there.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for MNEMOSYNE-031 authority/promotion questions.
 - Historical v0.1 files only for historical/audit tasks.
 
