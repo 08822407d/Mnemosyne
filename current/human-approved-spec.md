@@ -149,3 +149,15 @@
 - 如果已生成文件，该文件应被视为优先 transfer artifact；聊天消息只是摘要或指针。
 - 本原则不要求对短回答或短的一步式指令生成文件。
 - 本原则本身不授权任何仓库编辑；它只指导长转发内容应如何打包和交付。
+
+## 14. Manual import inbox / Codex Cloud non-image attachment boundary
+
+- Current Codex Cloud task conversations cannot be assumed to receive non-image file attachments directly.
+- When non-image files need to enter the repository, the user may manually place them in the repository.
+- The preferred staging location for manually uploaded batches is `manual-import-inbox/`.
+- Files in `manual-import-inbox/` are temporary transfer artifacts only.
+- Files in `manual-import-inbox/` are not execution source, not raw evidence, not canonical research originals, and not target-project delivery artifacts until verified and moved/copied to canonical paths.
+- ChatGPT/Codex tasks must verify file presence, names, types, and intended destination before processing.
+- ChatGPT/Codex tasks must not assume they can detect manual file additions in real time; the user must notify the task/conversation after upload.
+- If files are missing or ambiguous, the task must stop or ask for correction rather than guessing.
+- This rule is based on current tool/platform behavior and may be revised if Codex Cloud attachment capability changes.

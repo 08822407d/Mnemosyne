@@ -33,6 +33,9 @@
 - Mnemosyne 所属会话在生成需要用户手动转发到另一段对话或 Codex Cloud task 的长内容时，应优先使用 downloadable file，并在聊天中只保留简明摘要 / 指针。
 - 如果内容必须跨多个用户消息分片转发，应使用 chunk metadata 和 continuation markers，让接收方理解这些片段属于一个逻辑输入。
 - 这对 Codex task prompts、handoff packages、onboarding packages、verification packages 和长指令尤其重要；执行源规则位于 `current/human-approved-spec.md`。
+- When non-image files need to enter the repository and the user wants to avoid manually creating deep directories, prefer the temporary staging folder `manual-import-inbox/`.
+- After the user says files have been added, verify `manual-import-inbox/` and any canonical destination paths before acting; do not invent file existence or locations.
+- Inbox files are not canonical until verified and moved/copied to the correct repository paths.
 
 ## 3. 标准读取顺序
 

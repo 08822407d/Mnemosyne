@@ -1,6 +1,14 @@
 # Active Context
 
 
+
+## MNEMOSYNE-041 status
+
+- MNEMOSYNE-041 adds a manual import inbox workflow for current Codex Cloud non-image attachment limitations.
+- `manual-import-inbox/` is temporary staging only: not execution source, raw evidence, canonical research/report storage, or delivery storage.
+- Future inbox-handling tasks must preflight-inventory files, verify names/types/destinations, and stop on missing or ambiguous files rather than guessing.
+- Current execution source remains `current/human-approved-spec.md`.
+
 ## MNEMOSYNE-040 DR1 memory-testing evidence ingestion
 
 - MNEMOSYNE-040 normalized and ingested DR1 memory-system testing/debugging/evaluation evidence as `RC-2026Q2-memory-testing`.

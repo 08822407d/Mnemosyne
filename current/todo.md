@@ -19,6 +19,11 @@
 ## v0.2
 
 
+### MNEMOSYNE-041 manual import inbox workflow
+
+- [x] MNEMOSYNE-041: add manual import inbox workflow for non-image file transfer to Codex Cloud.
+- [ ] Revisit manual-import-inbox workflow if Codex Cloud file attachment capability changes.
+
 ### MNEMOSYNE-039 Pro quota refresh plan
 
 - [x] Run Deep Research: AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis.
