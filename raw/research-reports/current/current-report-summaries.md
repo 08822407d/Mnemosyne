@@ -50,3 +50,23 @@
 | RPT-2026Q2-0007 | 开发场景的持久记忆经验能否迁移到普通长期对话和学习场景 | `raw/research-reports/cycles/2026Q2-initial/report-summaries/RPT-2026Q2-0007-summary.md` | `raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 6：开发场景的持久记忆经验能否迁移到普通长期对话和学习场景.pdf` | completed_from_readable_pdf_text | pending_manual_review | yes | 摘要仅基于可读取文本；图表 / 图片 / 版式仍待人工复核。 |
 
 | RPT-2026Q2-MT-0001 | AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis | `raw/research-reports/cycles/2026Q2-memory-testing/report-summaries/DR1_memory_testing_debugging_evidence_review_summary.md` | `raw/research-reports/cycles/2026Q2-memory-testing/originals/DR1_memory_testing_debugging_evidence_review_report.md` | completed_from_markdown_report | not_applicable_markdown | yes | Supplemental current evidence; no unified mature memory-specific testing standard, but reusable evaluation/debugging practices exist. |
+
+## RPT-2026Q2-HO-0001 — DR2 handoff strategy / 交接包策略量化研究
+
+- report_id: RPT-2026Q2-HO-0001
+- cycle_id: RC-2026Q2-handoff-strategy
+- title/topic: Mnemosyne handoff package strategy, correct handoff definition, quantitative evaluation, and cross-conversation/cross-agent continuation
+- source_prompt: `raw/research-reports/cycles/2026Q2-handoff-strategy/research-prompts/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_prompt.md`
+- source_report: `raw/research-reports/cycles/2026Q2-handoff-strategy/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_report.md`
+- summary_path: `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md`
+- central_conclusions:
+  - Mnemosyne's handoff direction is basically correct but insufficiently quantified.
+  - Correct handoff should be measured by recovery of execution source, current gate/state, authorities, prohibitions, next safe action, stale-state resistance, unsupported-assumption handling, and evidence-path quality.
+  - A repeatable scored replay test should precede the first real target-project dry-run; blocker failures should prevent proceeding.
+  - Handoff packages should be tiered into minimum, standard, and extended packages; longer packages are not automatically safer.
+  - Model/tool provenance and hidden-context risks must be recorded for handoff tests.
+- Mnemosyne design implications:
+  - DR2 can inform future bounded updates to replay scoring, handoff package templates, and provenance schemas.
+  - DR2 reinforces that pre-050 replay PASS does not close the post-050 gate and that current repository state must be verified against files.
+  - DR2 should be routed through candidate/open-question/template review before any execution-source promotion.
+- execution_source_status: not_execution_source

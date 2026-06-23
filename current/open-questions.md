@@ -253,3 +253,20 @@ The material below is retained for history and may include superseded route word
 - Only D-01 to D-07 content already reflected in `current/human-approved-spec.md` is currently executable.
 - Unreflected or partially reflected promotion candidates require separate user approval before any spec change.
 - Open review item: decide whether to promote the D-01, D-03, D-04, and D-05 candidate wording from the coverage map; do not treat that wording as approved until separately confirmed.
+
+## MNEMOSYNE-051 / DR2 handoff-strategy implications
+
+- What parts of DR2's handoff scoring rubric should be adopted before the first real target-project dry-run?
+  - status: open
+  - note: DR2 provides a candidate rubric, but this task does not adopt it into replay/handoff templates.
+- Should the replay protocol be updated to incorporate DR2 scoring, and if so through a separate user-approved task?
+  - status: open
+- What minimum model/tool provenance fields are required for future handoff tests?
+  - status: open
+  - candidate_fields_from_DR2: visible model/tool label, interface/session type, repository ref/commit, memory/history setting, accessible file set, automation level, and known limitations.
+- Which DR2 recommendations should become candidate requirements, and which should remain research-gated?
+  - status: open
+- Does DR2 change the required post-050 replay gate before first real target-project dry-run?
+  - status: open
+  - current_boundary: DR2 does not itself close or modify the post-050 replay gate.
+- OP-09 and OP-10 are partially_informed_by_DR2 because DR2 discusses handoff replay scoring, model/tool provenance, and the limits of model-judge evaluation, but it does not close those questions.

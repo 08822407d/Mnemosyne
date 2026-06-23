@@ -208,3 +208,13 @@ Pending after MNEMOSYNE-033A:
 ## MNEMOSYNE-044 D-01–D-07 coverage map
 
 MNEMOSYNE-044 adds `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` as a non-execution-source review/proposal artifact. The final MNEMOSYNE-031 D-01 to D-07 decisions remain authoritative checkpoint records, but they are not automatically standing execution rules. Only content already reflected in `current/human-approved-spec.md` is currently executable. The coverage map identifies D-01, D-03, D-04, and D-05 as needing separate user approval before any candidate wording can be promoted; D-06 remains research-gated/non-executable, and D-07 is checkpoint-only.
+
+## MNEMOSYNE-051 / DR2 handoff-strategy research note
+
+- MNEMOSYNE-051 ingests DR2 handoff-strategy research as `RC-2026Q2-handoff-strategy`.
+- DR2 is research evidence only, not execution source.
+- It provides evidence for correct handoff definition, scoring rubric, handoff tiers, replay testing, model/tool provenance, and pre-first-target-dry-run handoff readiness.
+- It does not itself close the post-MNEMOSYNE-050 replay gate.
+- It does not start a real target-project dry-run.
+- It does not select a target project.
+- It may inform a future bounded task to update replay/handoff templates or scoring instruments.

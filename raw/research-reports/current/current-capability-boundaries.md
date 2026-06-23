@@ -23,3 +23,13 @@
 7. Do not rely on final-answer correctness alone; memory evaluation must also inspect state correctness, source priority, temporal correctness, decision propagation, handoff executability, and delivery landability.
 8. Multi-model independent review is an auxiliary second-opinion method, not truth voting, execution source, or automatic writeback authority.
 9. Current-stage Mnemosyne should prefer half-automatic, file-backed, human-reviewable, traceable evaluation loops over fully automated meta-agent/test frameworks.
+
+## DR2 handoff-strategy boundaries — RC-2026Q2-handoff-strategy
+
+- A handoff replay PASS is bounded evidence for that package, session, repository ref, and evaluation setup; it does not prove permanent cross-model or cross-tool reliability.
+- Longer handoff packages are not automatically better. Overlong packages can increase stale-context exposure, token cost, and attention dilution.
+- Handoff tests should record visible model/tool label, interface/session type, repository ref/commit, memory/history setting, accessible file set, and known limitations where available.
+- Old conversation exports, old replay results, old task result records, and research reports are historical evidence or research input; they are contamination risks if promoted into current truth without current-file verification.
+- Handoff scoring can guide verification and candidate template updates, but it does not itself update `current/human-approved-spec.md` or any execution source.
+- Replay tests are evidence. Their claims must be checked against current repository state, especially current gate, target selection, target-material ingestion, and target-repository write status.
+- Model/judge scoring should not be the sole authority for high-risk handoff decisions; evidence paths, traceability, and human/user review remain necessary for promotion or gate changes.
