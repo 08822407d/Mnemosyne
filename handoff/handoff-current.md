@@ -14,8 +14,10 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - Batch B Pro review: READY_AFTER_SMALL_FIXES.
 - MNEMOSYNE-048 has created the onboarding package and review instruments.
 - MNEMOSYNE-049 synchronizes current state.
-- Next gate: fresh ordinary Thinking startup/handoff replay.
-- Do not start real dry-run until replay PASS and later user target/input approval.
+- The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
+- MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
+- Next gate: post-MNEMOSYNE-050 fresh ordinary Thinking replay using `notes/first-target-project-fresh-replay-protocol.md`.
+- Do not start real dry-run until post-050 replay PASS and later user target/authority/safe-input/no-target-write/run-manifest approval.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target-project materials have been uploaded or ingested.
@@ -23,8 +25,10 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Read for first dry-run preparation
 
+- `notes/first-target-project-fresh-replay-protocol.md`
 - `handoff/first-target-project-dry-run-onboarding-package.md`
-- Instruments listed by that package.
+- `notes/first-target-project-dry-run-manifest-template.md`
+- Instruments listed by the onboarding package.
 
 ## Current execution source
 
@@ -56,11 +60,13 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-046: minimal dry-run profile, checklist, issue-log template, and result template created as non-execution-source instruments.
 - MNEMOSYNE-047: final Batch A residuals corrected; post-047 ordinary Mnemosyne conversation verification returned PASS.
 - MNEMOSYNE-048: ordinary Mnemosyne conversation verification returned PASS; onboarding package and review instruments created for first target-project dry-run preparation.
-- MNEMOSYNE-049: current state synchronized after 048; fresh ordinary Thinking startup/handoff replay is the next gate.
+- MNEMOSYNE-049: current state synchronized after 048; fresh ordinary Thinking startup/handoff replay became the next gate.
+- MNEMOSYNE-050: stable manifest/replay protocols and unified result semantics added; post-050 fresh ordinary Thinking replay is now required.
 
 ## Next route
 
-1. Run fresh ordinary Thinking startup/handoff replay using `handoff/first-target-project-dry-run-onboarding-package.md`.
-2. If replay returns PASS, the user must still select the target project and approve safe input/no-target-write before a real dry-run.
-3. Keep the first target-project dry-run design-only unless separately approved otherwise.
-4. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
+1. Run post-MNEMOSYNE-050 fresh ordinary Thinking startup/handoff replay using `notes/first-target-project-fresh-replay-protocol.md` and `handoff/first-target-project-dry-run-onboarding-package.md`.
+2. Do not treat the pre-050 fresh ordinary replay PASS as closing the post-050 gate.
+3. After post-050 replay PASS, the user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest before a real dry-run.
+4. Keep the first target-project dry-run design-only unless separately approved otherwise.
+5. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.

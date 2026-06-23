@@ -12,13 +12,15 @@
 - Repository public/private selection is not an open defect question because visibility is user-controlled. Verify visibility before imports and apply the safety gate.
 - D-promotion questions point to `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md`.
 - MNEMOSYNE-048 ordinary Mnemosyne conversation verification returned PASS and created onboarding/review instruments.
-- MNEMOSYNE-049 synchronizes current state; fresh ordinary Thinking startup/handoff replay is still pending.
+- The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
+- MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
+- Next gate: post-MNEMOSYNE-050 fresh ordinary Thinking replay using the new stable replay protocol.
 
 ## Current open questions
 
-- Has fresh ordinary Thinking startup/handoff replay passed after MNEMOSYNE-049?
-- Which first target project will be selected after replay PASS?
-- What safe input manifest and source map will the user provide?
+- Has post-MNEMOSYNE-050 fresh ordinary Thinking replay passed using `notes/first-target-project-fresh-replay-protocol.md`?
+- Which first target project will be selected after post-050 replay PASS? No target project has been selected.
+- What authority/safe input/no-target-write approvals, source map, and approved run manifest will the user provide? No real target-project dry-run has occurred; no target materials have been uploaded/ingested; no target repository has been written.
 - Should any D-01/D-03/D-04/D-05 candidate wording be promoted later? (separate approval only)
 - OP-08 remains partially addressed; OP-09/OP-10 remain partially answered by DR1.
 - OP-08: What broader privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?

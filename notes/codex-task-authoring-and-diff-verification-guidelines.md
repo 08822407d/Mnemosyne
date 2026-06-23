@@ -150,6 +150,32 @@ It should check:
 - whether task result claims match repository content;
 - whether another hard-fix task is required.
 
+## post_batch_A_B_task_design_rules
+
+1. Separate `durable_rule`, `current_fact`, and `user_controlled_setting`.
+2. A task that creates a gate must define:
+   - gate input;
+   - gate output;
+   - result schema;
+   - evidence/provenance record;
+   - PASS/FAIL/BLOCKED handling;
+   - post-PASS state transition.
+3. Enumerations must be unique and consistent across all affected files.
+4. `critical` must have a mechanical definition such as `blocking: yes`.
+5. Distinguish user, ordinary ChatGPT, Codex, and target-agent capabilities/write permissions.
+6. Never default a target project to Mnemosyne's own schema; require target-specific rationale.
+7. External/user-supplied PASS results need minimum provenance:
+   - source type;
+   - tested ref/commit;
+   - verification scope;
+   - reviewer;
+   - date/time if available.
+8. Task result records must not embed large raw diffs.
+9. If a task spans multiple semantic domains or many high-risk entry files, default to splitting unless atomic consistency requires one task.
+10. State whether completion invalidates prior replay/regression evidence and whether a new replay is required.
+11. A task that changes a reusable prompt/protocol should include the fixed prompt or stable file path, not rely on a future conversation to improvise it.
+12. If completion invalidates prior replay evidence, the task must state the next replay gate and avoid claiming that prior evidence closes the new gate.
+
 ## non_goals
 
 This guideline does not introduce automation.

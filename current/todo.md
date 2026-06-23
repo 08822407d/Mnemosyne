@@ -2,16 +2,18 @@
 
 ## Active now
 
-- Run fresh ordinary Thinking startup/handoff replay after MNEMOSYNE-049.
+- Run post-MNEMOSYNE-050 fresh ordinary Thinking replay using the new stable replay protocol.
+- Treat the pre-050 fresh ordinary replay as user-supplied and verified PASS for the pre-050 package only; it does not close the post-050 gate.
 - Keep execution source unchanged unless separately approved.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
 ## Waiting for user decision
 
-- Select target project after replay PASS.
+- Select target project after post-050 replay PASS.
 - Confirm owner/authority.
 - Provide safe input manifest.
 - Confirm no-target-write.
+- Approve the run manifest before any real dry-run.
 - Decide whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source; separate approval only.
 
 ## Waiting for dry-run evidence
@@ -19,7 +21,7 @@
 - No real target-project dry-run has occurred.
 - Use onboarding package and review instruments when dry-run is later authorized.
 - No target project has been selected.
-- No target-project materials have been uploaded or ingested.
+- No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 
 ## Deferred / future
@@ -33,6 +35,7 @@
 
 - MNEMOSYNE-048 onboarding/review instruments.
 - MNEMOSYNE-049 state synchronization after 048.
+- MNEMOSYNE-050 protocol closure: manifest template, fresh replay protocol, result semantics, actor boundaries, and current gate update.
 - Batch A small fixes verified passed after post-047 and post-048 verification.
 
 ## Historical detailed task list below

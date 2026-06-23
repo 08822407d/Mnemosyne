@@ -4,16 +4,16 @@
 
 ### current phase
 
-- Post-MNEMOSYNE-048 Batch B pre-dry-run state synchronization.
+- Post-MNEMOSYNE-050 Batch B pre-real-dry-run protocol closure.
 - Batch A small fixes are verified passed: post-047 ordinary Mnemosyne conversation verification result PASS, and MNEMOSYNE-048 ordinary Mnemosyne conversation verification result PASS.
-- Batch B preparation has produced onboarding/review instruments but real dry-run has not started.
-- Stage B verdict from Pro review: READY_AFTER_SMALL_FIXES.
-- The small fixes required by Stage B are now represented by MNEMOSYNE-048 and MNEMOSYNE-049.
+- The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
+- MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
+- Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a stable fresh replay protocol, but real dry-run has not started.
 
 ### current execution source
 
 - `current/human-approved-spec.md` is the current and only execution source.
-- Active context, handoff, TODO, open questions, research reports, candidates, decision logs, and Codex result records are not execution source.
+- Active context, handoff, TODO, open questions, research reports, candidates, decision logs, dry-run/replay templates, and Codex result records are not execution source.
 
 ### latest completed checkpoints
 
@@ -27,30 +27,34 @@
 - MNEMOSYNE-047: final Batch A residuals corrected and post-047 ordinary Mnemosyne conversation verification returned PASS.
 - MNEMOSYNE-048: ordinary Mnemosyne conversation verification returned PASS; created the first-target-project dry-run onboarding package and review instruments.
 - MNEMOSYNE-049: state synchronization after 048 records the fresh replay gate and current no-target/no-dry-run boundaries.
+- MNEMOSYNE-050: added stable run-manifest and fresh replay protocol templates, unified check semantics, clarified actor/write and issue-layer semantics, and updated this state for a post-050 replay gate.
 
 ### current blockers/gates
 
-- Do not start real target-project dry-run until fresh ordinary Thinking startup/handoff replay returns PASS.
-- After fresh replay PASS, user still must select target and approve safe input/no-target-write before a real dry-run.
+- Next gate: post-MNEMOSYNE-050 fresh ordinary Thinking replay using `notes/first-target-project-fresh-replay-protocol.md`.
+- Do not start real target-project dry-run until the post-050 fresh ordinary Thinking startup/handoff replay returns reviewed PASS.
+- After post-050 replay PASS, user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
-- No target-project materials have been uploaded or ingested.
-- No target-project repository has been written.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
 - Unpromoted checkpoint/candidate/research content is not executable.
 - Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
 
 ### current next route
 
-- Run fresh ordinary Thinking startup/handoff replay using `handoff/first-target-project-dry-run-onboarding-package.md`.
+- Run post-MNEMOSYNE-050 fresh ordinary Thinking startup/handoff replay using `notes/first-target-project-fresh-replay-protocol.md` and `handoff/first-target-project-dry-run-onboarding-package.md`.
 - Do not start target dry-run, choose target, or upload target material before that replay and user approval.
-- Do not treat old pre-049 route-selection text as the current route.
+- Do not treat the pre-050 replay PASS as validating the post-050 package.
 
 ### important non-execution-source references
 
-- `handoff/first-target-project-dry-run-onboarding-package.md` for the next fresh ordinary Thinking startup/handoff replay.
+- `notes/first-target-project-fresh-replay-protocol.md` for the next post-050 fresh ordinary Thinking startup/handoff replay.
+- `notes/first-target-project-dry-run-manifest-template.md` for the run manifest required before a real dry-run.
+- `handoff/first-target-project-dry-run-onboarding-package.md` for the first target-project dry-run onboarding package.
 - `notes/first-target-project-dry-run-review-instruments.md` and related first-dry-run instruments for later authorized dry-run preparation.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for D-01–D-07 reflection/promotion status.
-- `notes/codex-task-results/MNEMOSYNE-047-result.md`, `notes/codex-task-results/MNEMOSYNE-048-result.md`, and `notes/codex-task-results/MNEMOSYNE-049-result.md` for recent task outcomes.
+- `notes/codex-task-results/MNEMOSYNE-047-result.md`, `notes/codex-task-results/MNEMOSYNE-048-result.md`, `notes/codex-task-results/MNEMOSYNE-049-result.md`, and `notes/codex-task-results/MNEMOSYNE-050-result.md` for recent task outcomes.
 - `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
 - Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
