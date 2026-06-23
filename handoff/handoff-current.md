@@ -70,3 +70,10 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 3. After post-050 replay PASS, the user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest before a real dry-run.
 4. Keep the first target-project dry-run design-only unless separately approved otherwise.
 5. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
+
+## MNEMOSYNE-051 / DR2 handoff-strategy evidence
+
+- DR2 handoff-strategy research has been ingested as evidence under `RC-2026Q2-handoff-strategy`.
+- Future sessions should read `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md` when discussing handoff package correctness, quantitative scoring, replay strategy, model/tool provenance, or pre-first-target-dry-run readiness.
+- DR2 is not execution source and does not by itself modify current gates.
+- The post-050 replay gate remains governed by current repository state unless separately updated.

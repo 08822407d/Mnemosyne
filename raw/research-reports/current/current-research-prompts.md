@@ -34,3 +34,13 @@
 - 如 prompt 与 report / summary / motivation 存在差异，可登记 delta / review note；但 prompt 本身不作为研究结论或执行源。
 
 - MNEMOSYNE-040 normalized and indexed DR1 memory-testing prompt under supplemental cycle `RC-2026Q2-memory-testing`.
+
+## PROMPT-2026Q2-HO-0001 — DR2 handoff strategy / 交接包策略量化研究
+
+- prompt_id: PROMPT-2026Q2-HO-0001
+- cycle_id: RC-2026Q2-handoff-strategy
+- file_path: `raw/research-reports/cycles/2026Q2-handoff-strategy/research-prompts/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_prompt.md`
+- topic: Mnemosyne handoff package strategy and quantitative evaluation
+- prompt_type: deep_research_prompt
+- status: original_available
+- note: Research input only; not a report conclusion and not execution source.

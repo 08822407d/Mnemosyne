@@ -230,3 +230,6 @@ Pending / next:
 - [ ] If user approves promotion, run a separate spec-update task; do not use this coverage map as automatic approval.
 
 Status boundary: final D-01 to D-07 decisions are authoritative checkpoint records, but only content already reflected in `current/human-approved-spec.md` is currently executable. Unreflected promotion candidates require separate user approval.
+
+- MNEMOSYNE-051: DR2 handoff-strategy research ingested as supplemental evidence cycle `RC-2026Q2-handoff-strategy`.
+- Review DR2 handoff-strategy implications before updating replay/handoff templates or starting first real target-project dry-run.

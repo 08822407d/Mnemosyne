@@ -37,3 +37,56 @@
 - candidate failure taxonomy: stale handoff; wrong source priority; memory drift; memory overwrite; missing critical context; over-retention; under-retention; hallucinated memory; retrieval failure; stale tool capability assumption; implicit automation assumption; privacy leakage; inconsistent handoff vs active context; user decision not recorded or not propagated; first target-project dry-run output looks complete but cannot actually land.
 - current-stage implication: evaluate state correctness, source priority, temporal correctness, decision propagation, handoff executability, and delivery landability, not only final answer correctness.
 - boundary: research evidence only; not execution source and not automatic writeback authority.
+
+## DR2 / handoff-strategy evidence — RC-2026Q2-handoff-strategy
+
+```yaml
+- evidence_id: EVID-2026Q2-HO-0001
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Correct handoff should mean fresh-session recovery of execution source, current phase/gate, live state, authorities, prohibitions, completed/incomplete work, safe next action, and explicit unknown handling without relying on old implicit context.
+  confidence_or_status: report_conclusion; candidate_for_template_review
+  mnemosyne_use: Define handoff correctness criteria for future replay/handoff template updates.
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q2-HO-0002
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Handoff packages should be tiered into minimum, standard, and extended forms, with extended packages reserved for high-risk migration, post-failure recovery, stale branch diagnosis, or historical contamination analysis.
+  confidence_or_status: report_recommendation; requires_user_review_before_adoption
+  mnemosyne_use: Candidate input for future handoff package template design.
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q2-HO-0003
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Quantitative/semi-quantitative scoring should include blocking gates plus dimensions such as execution-source recovery, gate recovery, state accuracy, authority recovery, next-action correctness, evidence quality, stale-context detection, unsupported-assumption labeling, safety/privacy preservation, token efficiency, and cross-model robustness.
+  confidence_or_status: report_recommendation; scoring_instrument_not_yet_adopted
+  mnemosyne_use: Candidate input for future replay scorecard update.
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q2-HO-0004
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Stale-context and old-conversation contamination are major risks; old replay results, old exports, old result records, and research reports must not be promoted into current truth.
+  confidence_or_status: report_conclusion_consistent_with_existing_boundaries
+  mnemosyne_use: Reinforce stale-state resistance in current handoff and verification work.
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q2-HO-0005
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Handoff tests should record model/tool provenance, including visible model/tool label, interface/session type, repository ref/commit, memory/history settings, accessible files, automation level, and known limitations.
+  confidence_or_status: report_recommendation; exact_field_set_requires_review
+  mnemosyne_use: Candidate input for future provenance schema updates.
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q2-HO-0006
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Replay/verification testing should be repeatable and evidence-backed, with PASS / PASS_WITH_WARNINGS / FAIL / BLOCKED semantics and repository evidence paths for key claims.
+  confidence_or_status: report_recommendation; aligns_with_existing_replay_direction
+  mnemosyne_use: Inform future replay protocol refinement without changing current gate automatically.
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q2-HO-0007
+  source_report: RPT-2026Q2-HO-0001
+  claim_or_implication: Before first real target-project dry-run, Mnemosyne should run and score a post-050 fresh replay; any blocking failure should prevent proceeding.
+  confidence_or_status: report_recommendation; current_gate_not_closed_by_report
+  mnemosyne_use: Inform readiness review before dry-run start.
+  not_execution_source: true
+```
