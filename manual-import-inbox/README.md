@@ -4,6 +4,12 @@ This folder is a temporary staging area for files that the user manually adds to
 
 Files placed here are not execution source and are not canonical research/report/raw/delivery files.
 
+## Standing helper files
+
+`manual-import-inbox/README.md` and `manual-import-inbox/BATCH-MANIFEST-template.md` are standing helper/template files. They are not user-staged import payloads.
+
+Processed inbox cleanup applies to user-staged import files and filled manifests, not to these standing helper files. Files copied or filled from the template must still follow the safety preflight above and should not remain in the inbox after processing unless a task documents the reason.
+
 ## Safety preflight
 
 Before any upload, inventory, move, or copy, record or verify:

@@ -28,6 +28,7 @@
 - MNEMOSYNE-048: ordinary Mnemosyne conversation verification returned PASS; created the first-target-project dry-run onboarding package and review instruments.
 - MNEMOSYNE-049: state synchronization after 048 records the fresh replay gate and current no-target/no-dry-run boundaries.
 - MNEMOSYNE-050: added stable run-manifest and fresh replay protocol templates, unified check semantics, clarified actor/write and issue-layer semantics, and updated this state for a post-050 replay gate.
+- MNEMOSYNE-051: DR2 handoff-strategy research ingested as `RC-2026Q2-handoff-strategy`; DR2 is research evidence only, not execution source, and does not close the post-050 replay gate.
 
 ### current blockers/gates
 
@@ -40,12 +41,16 @@
 - No target repository has been written.
 - Unpromoted checkpoint/candidate/research content is not executable.
 - Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
+- Review DR2 handoff-strategy implications before adopting DR2 scoring/provenance/template recommendations or starting the first real target-project dry-run.
+- DR2 does not itself modify the post-050 replay gate.
 
 ### current next route
 
 - Run post-MNEMOSYNE-050 fresh ordinary Thinking startup/handoff replay using `notes/first-target-project-fresh-replay-protocol.md` and `handoff/first-target-project-dry-run-onboarding-package.md`.
 - Do not start target dry-run, choose target, or upload target material before that replay and user approval.
 - Do not treat the pre-050 replay PASS as validating the post-050 package.
+- Review DR2 handoff-strategy implications before adopting DR2 scoring/provenance/template recommendations or starting the first real target-project dry-run.
+- DR2 does not itself modify the post-050 replay gate.
 
 ### important non-execution-source references
 
@@ -55,6 +60,8 @@
 - `notes/first-target-project-dry-run-review-instruments.md` and related first-dry-run instruments for later authorized dry-run preparation.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for D-01–D-07 reflection/promotion status.
 - `notes/codex-task-results/MNEMOSYNE-047-result.md`, `notes/codex-task-results/MNEMOSYNE-048-result.md`, `notes/codex-task-results/MNEMOSYNE-049-result.md`, and `notes/codex-task-results/MNEMOSYNE-050-result.md` for recent task outcomes.
+- `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md` for DR2 handoff-strategy evidence.
+- `notes/codex-task-results/MNEMOSYNE-051-result.md` for the DR2 ingestion result record.
 - `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
 - Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
@@ -208,13 +215,3 @@ Pending after MNEMOSYNE-033A:
 ## MNEMOSYNE-044 D-01–D-07 coverage map
 
 MNEMOSYNE-044 adds `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` as a non-execution-source review/proposal artifact. The final MNEMOSYNE-031 D-01 to D-07 decisions remain authoritative checkpoint records, but they are not automatically standing execution rules. Only content already reflected in `current/human-approved-spec.md` is currently executable. The coverage map identifies D-01, D-03, D-04, and D-05 as needing separate user approval before any candidate wording can be promoted; D-06 remains research-gated/non-executable, and D-07 is checkpoint-only.
-
-## MNEMOSYNE-051 / DR2 handoff-strategy research note
-
-- MNEMOSYNE-051 ingests DR2 handoff-strategy research as `RC-2026Q2-handoff-strategy`.
-- DR2 is research evidence only, not execution source.
-- It provides evidence for correct handoff definition, scoring rubric, handoff tiers, replay testing, model/tool provenance, and pre-first-target-dry-run handoff readiness.
-- It does not itself close the post-MNEMOSYNE-050 replay gate.
-- It does not start a real target-project dry-run.
-- It does not select a target project.
-- It may inform a future bounded task to update replay/handoff templates or scoring instruments.

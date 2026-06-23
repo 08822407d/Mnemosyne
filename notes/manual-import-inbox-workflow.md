@@ -8,6 +8,10 @@ non-execution-source operational workflow note
 
 Current Codex Cloud task conversations cannot be assumed to receive non-image file attachments directly.
 
+## Standing helper/template files
+
+`manual-import-inbox/README.md` and `manual-import-inbox/BATCH-MANIFEST-template.md` are standing helper/template files. They are not user-staged import payloads. Processed inbox cleanup applies to user-staged import files and filled manifests, not to these standing helper files. Files copied or filled from the template must still follow safety preflight and should not remain in the inbox after processing unless documented.
+
 ## Standard workflow
 
 1. ChatGPT verifies or records current repository visibility before suggesting upload.

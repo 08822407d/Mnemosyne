@@ -16,6 +16,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-049 synchronizes current state.
 - The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
 - MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
+- MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence under `RC-2026Q2-handoff-strategy`; it is not execution source and does not close the post-050 replay gate.
 - Next gate: post-MNEMOSYNE-050 fresh ordinary Thinking replay using `notes/first-target-project-fresh-replay-protocol.md`.
 - Do not start real dry-run until post-050 replay PASS and later user target/authority/safe-input/no-target-write/run-manifest approval.
 - No real target-project dry-run has occurred.
@@ -62,6 +63,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-048: ordinary Mnemosyne conversation verification returned PASS; onboarding package and review instruments created for first target-project dry-run preparation.
 - MNEMOSYNE-049: current state synchronized after 048; fresh ordinary Thinking startup/handoff replay became the next gate.
 - MNEMOSYNE-050: stable manifest/replay protocols and unified result semantics added; post-050 fresh ordinary Thinking replay is now required.
+- MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence; future sessions should read the DR2 summary when discussing handoff scoring, provenance, replay readiness, or first-dry-run readiness. DR2 is not execution source and does not close the post-050 replay gate.
 
 ## Next route
 

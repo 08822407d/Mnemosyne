@@ -36,7 +36,9 @@
 - MNEMOSYNE-048 onboarding/review instruments.
 - MNEMOSYNE-049 state synchronization after 048.
 - MNEMOSYNE-050 protocol closure: manifest template, fresh replay protocol, result semantics, actor boundaries, and current gate update.
+- MNEMOSYNE-051: DR2 handoff-strategy research ingested as supplemental evidence cycle `RC-2026Q2-handoff-strategy`; it is not execution source and does not close the post-050 replay gate.
 - Batch A small fixes verified passed after post-047 and post-048 verification.
+- MNEMOSYNE-052: post-051 compact current-state sync and manual-import helper/template review.
 
 ## Historical detailed task list below
 
