@@ -15,12 +15,13 @@ Use this unified row format for every drift check:
 
 ```yaml
 check_id:
-result: pass | fail | unknown | not_applicable
+result: pass | fail | unknown | not_tested | not_applicable
 expected_ref:
 actual_ref:
 evidence_paths:
 blocking:
 issue_id:
+result_rationale:
 ```
 
 Minimum checks:
@@ -33,6 +34,7 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 
 - check_id: DRIFT-02-active-state-matches-project
   result: unknown
@@ -41,6 +43,7 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 
 - check_id: DRIFT-03-owner-decisions-propagated
   result: unknown
@@ -49,6 +52,7 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 
 - check_id: DRIFT-04-stale-information-marked
   result: unknown
@@ -57,6 +61,7 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 
 - check_id: DRIFT-05-file-roles-justified
   result: unknown
@@ -65,6 +70,7 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 
 - check_id: DRIFT-06-privacy-tools-automation-valid
   result: unknown
@@ -73,6 +79,7 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 
 - check_id: DRIFT-07-handoff-next-step-clear
   result: unknown
@@ -81,7 +88,23 @@ Minimum checks:
   evidence_paths:
   blocking: yes
   issue_id:
+  result_rationale:
 ```
+
+Result semantics:
+
+- Check result enum: `pass | fail | unknown | not_tested | not_applicable`.
+- `pass`: evidence proves expected behavior.
+- `fail`: evidence proves a violation.
+- `unknown`: the check was attempted, but available evidence is insufficient or ambiguous.
+- `not_tested`: the check was not attempted.
+- `not_applicable`: outside the approved bounded scope, with a recorded rationale.
+- Mechanical rule: `critical_check := blocking: yes`.
+- Overall dry-run `PASS` requires every `blocking: yes` check to be `pass`.
+- `severity` describes impact and does not define criticality.
+- `unknown`, `not_tested`, or `fail` on `blocking: yes` prevents PASS.
+- `not_applicable` on a blocking check prevents PASS unless the user-approved scope explicitly reclassifies that row to `blocking: no`, with rationale.
+- Replay verdict remains separate: `PASS | FAIL | BLOCKED`.
 
 Failure conditions:
 
@@ -110,7 +133,8 @@ evidence_path_for_each_answer:
 clarifications_requested:
 already_answered_question_repeated:
 simulated_next_action:
-result:
+result: pass | fail | unknown | not_tested | not_applicable
+result_rationale:
 ```
 
 Failure conditions:
@@ -141,7 +165,8 @@ selection_reason:
 losing_source_disposition: stale | superseded | evidence_only | candidate | unresolved
 user_clarification_required:
 evidence_paths:
-result:
+result: pass | fail | unknown | not_tested | not_applicable
+result_rationale:
 issue_id:
 ```
 

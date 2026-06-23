@@ -51,12 +51,12 @@ affected_artifact:
 expected_behavior:
 actual_behavior:
 evidence_paths:
-faulty_layer: input | write | manage | read | handoff | delivery | governance | unknown
+suspected_layer: input | write | manage | read | handoff | delivery | governance | unknown
+confirmed_faulty_layer: input | write | manage | read | handoff | delivery | governance | not_confirmed
+root_cause_status: confirmed | suspected | unknown
 blocking: yes | no
-suspected_layer:
-root_cause_status:
 user_impact:
-severity:
+severity: P0 | P1 | P2
 containment_action:
 repair_candidate:
 user_decision_needed:
@@ -67,8 +67,17 @@ regression_result:
 route: codex_fix | user_clarification | open_question | candidate | capability_check | defer
 next_action:
 owner:
-status:
+status: open | contained | fixed_pending_regression | closed | deferred
 ```
+
+## Layer and status rules
+
+- `suspected_layer` may be populated before root cause confirmation.
+- `confirmed_faulty_layer` may only name a layer when `root_cause_status: confirmed` and evidence paths support it.
+- Otherwise set `confirmed_faulty_layer: not_confirmed`.
+- P0 requires containment.
+- `closed` requires regression result.
+- Do not claim confirmed root cause from plausibility alone.
 
 ## Failure conditions
 

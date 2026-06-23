@@ -16,6 +16,11 @@
 
 ```yaml
 dry_run_id: MNEMOSYNE-DRYRUN-001-PROVISIONAL
+manifest_path: notes/target-project-dry-runs/<dry_run_id>/00-run-manifest.md after user-approved run creation
+manifest_version:
+replay_protocol_version: 2026-06-22-post-MNEMOSYNE-050
+replay_result_reference:
+critical_check_definition: blocking_yes
 target_project_name: unknown_until_user_selects
 target_project_type: unknown_until_user_selects
 design_only: true by default
@@ -35,6 +40,7 @@ prohibited_sensitive_materials:
   - unredacted proprietary raw materials
 target_source_map_and_authority: "List target safe sources, authority level, owner, and whether any target execution source exists before design work begins."
 target_execution_source_or_unknown: unknown_until_user_confirms
+approved_run_manifest_required_before_real_dry_run: true
 schema_tailoring_rationale: "Explain why this target project needs the selected 3 to 7 core memory files/roles, and why omitted candidate roles are unnecessary for this first design. Do not copy the Mnemosyne directory/file layout by default; file names and locations are provisional target-project design choices. 不得默认照搬 Mnemosyne 的目录或文件布局。"
 candidate_core_memory_roles_not_a_required_package:
   - target execution source
