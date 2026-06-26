@@ -34,6 +34,20 @@
   - status: partially_answered_by_DR1
 - OP-11: When should handoff-local exceptions be promoted into global execution-source changes, and what approval form is required?
 
+
+## MNEMOSYNE-056 target-project workspace boundary questions
+
+- Should `target-projects/` become the standard root for all target-project workspaces inside the Mnemosyne repository?
+  - status: open_user_decision
+- Should target-specific Mnemosyne-generated intermediate work live under each target project's own workspace instead of global notes?
+  - status: candidate_recommendation_from_MNEMOSYNE-056
+- Where should target-project user originals, raw requirements, restatements, redactions, and user decisions live?
+  - status: open_user_decision
+- How should Mnemosyne-global lessons cite target-specific examples without promoting target-specific design into global policy?
+  - status: candidate_recommendation_from_MNEMOSYNE-056
+- Should future first-target dry-run folder conventions move from `notes/target-project-dry-runs/<dry_run_id>/` to `target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/` after user approval?
+  - status: open_user_decision
+
 ## Historical open-question list below
 
 The material below is retained for history and may include superseded route wording. Use the current corrections above for live status.
