@@ -35,22 +35,24 @@ If the task involves tool capability, platform capability, model behavior, autom
 
 1. Do not rely on old conversation context or model memory.
 2. Treat `current/human-approved-spec.md` as the only execution source.
-3. Read or ask the user to provide the required files listed above.
-4. When applicable, also read the research evidence current views referenced by `handoff/startup-instructions.md`.
-5. Apply the objective neutral engineering stance from `current/human-approved-spec.md`.
-6. Apply the operation/conclusion separation principle from `current/human-approved-spec.md`.
-7. If the response asks the user to do something, put the operation steps/content in a clearly marked section before explanation.
-8. If the response reports findings or conclusions, put the conclusion/problem/result in a clearly marked section before supporting explanation.
-9. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md`. When producing long content for the user to manually forward, prefer generating a downloadable file and show only a concise summary in the chat. If the content must be split, label chunks with package/task title, stable ID, chunk number, total chunk count if known, and wait-for-all-chunks instruction.
-10. Treat repository visibility as operator-controlled and stage-dependent; do not treat public/private state alone as a defect. Verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
-11. The first response after loading should include:
+3. Apply the handoff/continuation correctness principle from `current/human-approved-spec.md`.
+4. For handoff/replay work, do not rely on old conversation memory as current truth; recover critical state from authorized files and mark missing, stale, conflicting, or uncertain information explicitly.
+5. Read or ask the user to provide the required files listed above.
+6. When applicable, also read the research evidence current views referenced by `handoff/startup-instructions.md`.
+7. Apply the objective neutral engineering stance from `current/human-approved-spec.md`.
+8. Apply the operation/conclusion separation principle from `current/human-approved-spec.md`.
+9. If the response asks the user to do something, put the operation steps/content in a clearly marked section before explanation.
+10. If the response reports findings or conclusions, put the conclusion/problem/result in a clearly marked section before supporting explanation.
+11. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md`. When producing long content for the user to manually forward, prefer generating a downloadable file and show only a concise summary in the chat. If the content must be split, label chunks with package/task title, stable ID, chunk number, total chunk count if known, and wait-for-all-chunks instruction.
+12. Treat repository visibility as operator-controlled and stage-dependent; do not treat public/private state alone as a defect. Verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
+13. The first response after loading should include:
    - current execution source;
    - current phase;
    - non-execution-source boundaries;
    - current forbidden actions;
    - current next-route options;
    - whether any conflict or missing file was found.
-12. If required files are unavailable, ask for the missing files or clearly state the limitation. Do not invent repository state.
+14. If required files are unavailable, ask for the missing files or clearly state the limitation. Do not invent repository state.
 
 ## Boundaries
 

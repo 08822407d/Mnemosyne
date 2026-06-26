@@ -257,16 +257,18 @@ The material below is retained for history and may include superseded route word
 ## MNEMOSYNE-051 / DR2 handoff-strategy implications
 
 - What parts of DR2's handoff scoring rubric should be adopted before the first real target-project dry-run?
-  - status: open
-  - note: DR2 provides a candidate rubric, but this task does not adopt it into replay/handoff templates.
+  - status: partially_adopted_by_MNEMOSYNE-053
+  - note: DR2 scoring rubric has been provisionally adopted as `notes/handoff-replay-scorecard-v0.1.md`; which scorecard weights/thresholds should later be recalibrated remains open.
 - Should the replay protocol be updated to incorporate DR2 scoring, and if so through a separate user-approved task?
-  - status: open
+  - status: answered_for_v0.1_by_MNEMOSYNE-053
+  - note: Replay protocol was updated by MNEMOSYNE-053; future changes still require reviewed user-approved tasks.
 - What minimum model/tool provenance fields are required for future handoff tests?
-  - status: open
-  - candidate_fields_from_DR2: visible model/tool label, interface/session type, repository ref/commit, memory/history setting, accessible file set, automation level, and known limitations.
+  - status: provisionally_defined_by_MNEMOSYNE-053
+  - note: Minimum provenance fields were provisionally defined in `notes/handoff-replay-scorecard-v0.1.md` and `notes/first-target-project-fresh-replay-protocol.md`.
 - Which DR2 recommendations should become candidate requirements, and which should remain research-gated?
-  - status: open
+  - status: partially_answered_open_for_v0.2
+  - note: Cross-model thresholds, dual-review calibration, selected historical excerpts formal protocol, and automated handoff generation remain v0.2 / future / research-gated.
 - Does DR2 change the required post-050 replay gate before first real target-project dry-run?
-  - status: open
-  - current_boundary: DR2 does not itself close or modify the post-050 replay gate.
+  - status: answered_by_user_approved_MNEMOSYNE-053
+  - current_boundary: DR2 changed the current required gate only through user-approved MNEMOSYNE-053; the gate is now post-MNEMOSYNE-053 replay, not because research alone changed it.
 - OP-09 and OP-10 are partially_informed_by_DR2 because DR2 discusses handoff replay scoring, model/tool provenance, and the limits of model-judge evaluation, but it does not close those questions.
