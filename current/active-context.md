@@ -38,7 +38,7 @@
 - Do not start real target-project dry-run until the post-053 fresh ordinary Thinking startup/handoff replay returns reviewed PASS.
 - Before any real target-project dry-run, the post-053 fresh replay must return a reviewed `PASS` under the updated protocol and scorecard.
 - If quality_band is `usable_with_warnings`, user must explicitly accept documented non-blocking warnings or a repair must be performed before gate closure.
-- After post-050 replay PASS, user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest.
+- After post-053 replay reviewed PASS, user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target materials have been uploaded/ingested.
