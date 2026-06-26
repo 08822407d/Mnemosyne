@@ -14,12 +14,15 @@
 - MNEMOSYNE-048 ordinary Mnemosyne conversation verification returned PASS and created onboarding/review instruments.
 - The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
 - MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
-- Next gate: post-MNEMOSYNE-050 fresh ordinary Thinking replay using the new stable replay protocol.
+- MNEMOSYNE-053 answered the replay protocol update by adding post-053 scoring/review semantics.
+- Post-MNEMOSYNE-053 fresh ordinary Thinking replay returned maintainer-reviewed PASS with `quality_band: strong` and normalized score 95.9; the replay-quality portion of the first-target dry-run gate is satisfied.
+- MNEMOSYNE-055 synchronized the post-053 replay reviewed PASS and repaired stale live post-050 gate wording.
+- Scorecard weights/thresholds remain recalibration candidates after more evidence.
 
 ## Current open questions
 
-- Has post-MNEMOSYNE-050 fresh ordinary Thinking replay passed using `notes/first-target-project-fresh-replay-protocol.md`?
-- Which first target project will be selected after post-050 replay PASS? No target project has been selected.
+- Post-MNEMOSYNE-053 fresh replay reviewed PASS has been synchronized by MNEMOSYNE-055; remaining first dry-run blockers are user target selection, authority/safe input/no-target-write approval, and approved run manifest.
+- Which first target project will be selected after post-053 replay reviewed PASS? No target project has been selected.
 - What authority/safe input/no-target-write approvals, source map, and approved run manifest will the user provide? No real target-project dry-run has occurred; no target materials have been uploaded/ingested; no target repository has been written.
 - Should any D-01/D-03/D-04/D-05 candidate wording be promoted later? (separate approval only)
 - OP-08 remains partially addressed; OP-09/OP-10 remain partially answered by DR1.
