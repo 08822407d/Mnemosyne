@@ -4,6 +4,7 @@
 
 - Post-MNEMOSYNE-053 fresh replay has reviewed PASS with `quality_band: strong`; do not rerun it unless later protocol/current-state changes invalidate it.
 - Prepare for user target selection and authority/safe-input/no-target-write/run-manifest decisions before any real target-project dry-run.
+- Review `notes/target-project-workspace-boundary-and-layout-proposal.md` before first real target-project dry-run; decide target-project workspace root and user-input/original/restatement placement policy.
 - Keep execution source unchanged unless separately approved.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
@@ -41,6 +42,7 @@
 - MNEMOSYNE-052: post-051 compact current-state sync and manual-import helper/template review.
 - MNEMOSYNE-053: DR2 handoff-correctness principle, handoff package strategy, replay scorecard, and post-053 replay protocol update.
 - MNEMOSYNE-055: synchronized post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
+- MNEMOSYNE-056: created target-project workspace boundary/layout proposal as non-execution-source candidate design; no target selected, no target materials ingested, no target repository written, and execution source unchanged.
 
 ## Historical detailed task list below
 
