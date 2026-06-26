@@ -169,3 +169,22 @@
 - If a file is unsafe for the current repository, stop and use another user-approved transfer/storage path; do not upload it to this repository.
 - ChatGPT/Codex tasks must verify file presence, names, types, intended destinations, and safety preflight status before processing; if files are missing, unsafe, or ambiguous, stop rather than guessing.
 - Repository visibility and platform behavior are time-sensitive facts and must be reverified when relevant; this rule may be revised if Codex Cloud attachment capability changes.
+
+## 15. 交接与续接正确性原则
+
+- 本原则适用于 Mnemosyne 所属对话和任务之间的 handoff、onboarding、replay、跨会话续接、模型 / 工具迁移，以及为目标项目设计或复核交接机制的工作。
+- Handoff package、`handoff-current`、active context、replay output、scorecard、research report 和 task result record 都不是执行源；它们不得覆盖当前执行源、目标项目自己的运行真相源或用户已批准的 task-local authority。
+- Mnemosyne 自身的交接材料必须明确指出 `current/human-approved-spec.md` 是唯一执行源。目标项目交接必须指出该目标项目自己的 execution source 或 owner rule；如果尚未确认，应标记为未知，不得由 Agent 自行设定。
+- 交接材料必须足以让一个 fresh receiving session 在不依赖未授权旧对话上下文或隐藏平台记忆的情况下，仅凭被授权文件和可访问证据恢复：
+  1. 当前 execution source；
+  2. 当前 phase / gate 和真实运行状态；
+  3. 权限边界、禁止动作和仍需用户批准的事项；
+  4. 已完成事项、未完成事项和当前 task intent；
+  5. 一项安全、范围内的下一动作。
+- 交接中的关键事实主张必须能够映射到可访问的 evidence path，并在需要时标明 authority level、freshness 或适用范围。
+- 对缺失、冲突、过期或不确定的信息，Agent 必须明确标记 `unknown`、`unsupported_assumption`、`stale` 或协议定义的阻断状态，并停止依赖该信息推进关键动作；不得编造连续性、默认补全仓库状态或推断未授予的权限。
+- 旧对话导出、historical excerpt、research report、summary、result record 和模型 / 平台内部 memory 只能作为已标注的证据或背景；未经当前授权来源确认，不得当作 current truth。
+- Handoff package 应使用与任务风险相匹配的最小充分高信号上下文；默认不应包含完整旧对话导出、大型 raw diff、整份 result record 或与当前任务无关的历史材料。
+- 具体交接包层级、字段、评分权重、阈值、replay prompt 和 provenance schema 由非执行源策略 / 验证文件维护，并通过受 review 的用户批准任务更新。
+- Handoff score、LLM judge 或单一模型的流畅输出只能作为评估证据，不能作为执行源、自动 gate 关闭依据或自动写回授权。
+- 本原则本身不授权仓库写入、目标项目写入或自动化。

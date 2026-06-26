@@ -25,6 +25,7 @@
 - Evidence-only research: research reports and derived views constrain assumptions but are not execution source.
 - Non-execution templates/checklists: run manifest template, fresh replay protocol, minimal profile, dry-run checklist, review instruments, issue log, and result template guide review but do not create runtime truth.
 - D-01-D-07 coverage map boundary: use only to understand Mnemosyne reflection/promotion coverage; it is not a target-project execution source.
+- Handoff strategy / scorecard instruments: `notes/handoff-package-strategy-v0.1.md` and `notes/handoff-replay-scorecard-v0.1.md` guide package generation and maintainer review; they are not execution source and do not independently close a gate.
 
 ## 3. Exact read order
 
@@ -41,6 +42,13 @@
 11. Target safe sources, when selected and approved.
 
 An ordinary executor should not need to read full large template packs before starting. Use large template packs only as references when a specific design detail requires them.
+
+Reviewer-only / package-author references:
+
+- `notes/handoff-package-strategy-v0.1.md` for handoff package generation or tier selection.
+- `notes/handoff-replay-scorecard-v0.1.md` for maintainer review after the fresh replay output is returned.
+
+The ordinary replay executor does not need to read these two files unless a separately approved test explicitly evaluates strategy-file comprehension.
 
 ## 4. Target and scope
 
@@ -112,6 +120,14 @@ Mechanical rule: `critical_check := blocking: yes`.
 - severity describes impact and does not define criticality;
 - target schema tailored;
 - no real dry-run PASS claim without actual run evidence.
+
+For the post-MNEMOSYNE-053 replay gate:
+
+- reviewed replay verdict is `PASS`;
+- all handoff critical checks are `pass`;
+- normalized handoff score is at least 70;
+- `quality_band: strong`, or `quality_band: usable_with_warnings` with explicit user acceptance of documented non-blocking warnings;
+- the reviewed scorecard and evidence map are retained as verification evidence.
 
 ## 10. Failure logging
 

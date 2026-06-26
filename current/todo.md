@@ -2,14 +2,14 @@
 
 ## Active now
 
-- Run post-MNEMOSYNE-050 fresh ordinary Thinking replay using the new stable replay protocol.
-- Treat the pre-050 fresh ordinary replay as user-supplied and verified PASS for the pre-050 package only; it does not close the post-050 gate.
+- Run post-MNEMOSYNE-053 fresh ordinary Thinking replay using the updated protocol and maintainer scorecard.
+- Do not treat any pre-053 replay PASS as closing the post-053 gate.
 - Keep execution source unchanged unless separately approved.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
 ## Waiting for user decision
 
-- Select target project after post-050 replay PASS.
+- Select target project after post-053 replay reviewed PASS and any required user acceptance of non-blocking warnings.
 - Confirm owner/authority.
 - Provide safe input manifest.
 - Confirm no-target-write.
@@ -39,6 +39,7 @@
 - MNEMOSYNE-051: DR2 handoff-strategy research ingested as supplemental evidence cycle `RC-2026Q2-handoff-strategy`; it is not execution source and does not close the post-050 replay gate.
 - Batch A small fixes verified passed after post-047 and post-048 verification.
 - MNEMOSYNE-052: post-051 compact current-state sync and manual-import helper/template review.
+- MNEMOSYNE-053: DR2 handoff-correctness principle, handoff package strategy, replay scorecard, and post-053 replay protocol update.
 
 ## Historical detailed task list below
 

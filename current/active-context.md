@@ -4,11 +4,11 @@
 
 ### current phase
 
-- Post-MNEMOSYNE-050 Batch B pre-real-dry-run protocol closure.
+- Post-MNEMOSYNE-053 Batch B pre-real-dry-run handoff/replay protocol closure.
 - Batch A small fixes are verified passed: post-047 ordinary Mnemosyne conversation verification result PASS, and MNEMOSYNE-048 ordinary Mnemosyne conversation verification result PASS.
 - The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
-- MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
-- Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a stable fresh replay protocol, but real dry-run has not started.
+- MNEMOSYNE-050 changed the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
+- Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review, but real dry-run has not started.
 
 ### current execution source
 
@@ -29,11 +29,15 @@
 - MNEMOSYNE-049: state synchronization after 048 records the fresh replay gate and current no-target/no-dry-run boundaries.
 - MNEMOSYNE-050: added stable run-manifest and fresh replay protocol templates, unified check semantics, clarified actor/write and issue-layer semantics, and updated this state for a post-050 replay gate.
 - MNEMOSYNE-051: DR2 handoff-strategy research ingested as `RC-2026Q2-handoff-strategy`; DR2 is research evidence only, not execution source, and does not close the post-050 replay gate.
+- MNEMOSYNE-053: DR2 handoff-correctness principle adopted into the execution source; non-execution-source handoff package strategy and replay scorecard files created; first-target fresh replay protocol updated to post-053 scoring/review semantics.
 
 ### current blockers/gates
 
-- Next gate: post-MNEMOSYNE-050 fresh ordinary Thinking replay using `notes/first-target-project-fresh-replay-protocol.md`.
-- Do not start real target-project dry-run until the post-050 fresh ordinary Thinking startup/handoff replay returns reviewed PASS.
+- Next gate: post-MNEMOSYNE-053 fresh ordinary Thinking replay using the updated `notes/first-target-project-fresh-replay-protocol.md` and maintainer scorecard review.
+- Do not treat any pre-053 replay PASS as closing the post-053 gate.
+- Do not start real target-project dry-run until the post-053 fresh ordinary Thinking startup/handoff replay returns reviewed PASS.
+- Before any real target-project dry-run, the post-053 fresh replay must return a reviewed `PASS` under the updated protocol and scorecard.
+- If quality_band is `usable_with_warnings`, user must explicitly accept documented non-blocking warnings or a repair must be performed before gate closure.
 - After post-050 replay PASS, user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
@@ -41,20 +45,18 @@
 - No target repository has been written.
 - Unpromoted checkpoint/candidate/research content is not executable.
 - Manual imports must apply the MNEMOSYNE-043 safety gate and stop on unsafe or ambiguous material.
-- Review DR2 handoff-strategy implications before adopting DR2 scoring/provenance/template recommendations or starting the first real target-project dry-run.
-- DR2 does not itself modify the post-050 replay gate.
+- DR2 scoring/provenance/template recommendations adopted by MNEMOSYNE-053 remain bounded to the approved principle, strategy, scorecard, and replay protocol updates; DR2 research itself is still not execution source.
 
 ### current next route
 
-- Run post-MNEMOSYNE-050 fresh ordinary Thinking startup/handoff replay using `notes/first-target-project-fresh-replay-protocol.md` and `handoff/first-target-project-dry-run-onboarding-package.md`.
+- Run post-MNEMOSYNE-053 fresh ordinary Thinking startup/handoff replay using `notes/first-target-project-fresh-replay-protocol.md`, `handoff/first-target-project-dry-run-onboarding-package.md`, and maintainer scorecard review.
 - Do not start target dry-run, choose target, or upload target material before that replay and user approval.
-- Do not treat the pre-050 replay PASS as validating the post-050 package.
-- Review DR2 handoff-strategy implications before adopting DR2 scoring/provenance/template recommendations or starting the first real target-project dry-run.
-- DR2 does not itself modify the post-050 replay gate.
+- Do not treat any pre-053 replay PASS as closing the post-053 gate.
+- DR2 scoring/provenance/template recommendations adopted by MNEMOSYNE-053 remain bounded to the approved principle, strategy, scorecard, and replay protocol updates; DR2 research itself is still not execution source.
 
 ### important non-execution-source references
 
-- `notes/first-target-project-fresh-replay-protocol.md` for the next post-050 fresh ordinary Thinking startup/handoff replay.
+- `notes/first-target-project-fresh-replay-protocol.md` for the next post-053 fresh ordinary Thinking startup/handoff replay.
 - `notes/first-target-project-dry-run-manifest-template.md` for the run manifest required before a real dry-run.
 - `handoff/first-target-project-dry-run-onboarding-package.md` for the first target-project dry-run onboarding package.
 - `notes/first-target-project-dry-run-review-instruments.md` and related first-dry-run instruments for later authorized dry-run preparation.
@@ -62,6 +64,9 @@
 - `notes/codex-task-results/MNEMOSYNE-047-result.md`, `notes/codex-task-results/MNEMOSYNE-048-result.md`, `notes/codex-task-results/MNEMOSYNE-049-result.md`, and `notes/codex-task-results/MNEMOSYNE-050-result.md` for recent task outcomes.
 - `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md` for DR2 handoff-strategy evidence.
 - `notes/codex-task-results/MNEMOSYNE-051-result.md` for the DR2 ingestion result record.
+- `notes/handoff-package-strategy-v0.1.md` for handoff package tier/generation strategy.
+- `notes/handoff-replay-scorecard-v0.1.md` for maintainer replay review and scoring.
+- `notes/codex-task-results/MNEMOSYNE-053-result.md` for adoption result record.
 - `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
 - Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
