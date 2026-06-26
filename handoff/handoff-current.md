@@ -18,9 +18,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
 - MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence under `RC-2026Q2-handoff-strategy`; it is not execution source and does not close the post-050 replay gate.
 - MNEMOSYNE-053 adopted a minimal DR2 handoff-correctness principle into execution source, created handoff strategy and scorecard instruments, and updated the first-target replay protocol.
-- Next gate: post-MNEMOSYNE-053 fresh ordinary Thinking replay with maintainer scorecard review using `notes/first-target-project-fresh-replay-protocol.md`.
-- No pre-053 replay result closes this new gate.
-- Do not start real dry-run until post-053 replay reviewed PASS and later user target/authority/safe-input/no-target-write/run-manifest approval.
+- MNEMOSYNE-055 synchronized the post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
+- The replay-quality portion of the first-target dry-run gate is satisfied.
+- Next route: user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target-project materials have been uploaded or ingested.
@@ -69,14 +69,14 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-050: stable manifest/replay protocols and unified result semantics added; post-050 fresh ordinary Thinking replay is now required.
 - MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence; future sessions should read the DR2 summary when discussing handoff scoring, provenance, replay readiness, or first-dry-run readiness. DR2 is not execution source and does not close the post-050 replay gate.
 - MNEMOSYNE-053: minimal DR2 handoff-correctness principle adopted into execution source; handoff package strategy and replay scorecard created as non-execution-source instruments; first-target replay protocol updated to post-053 scoring/review semantics.
+- MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) synchronized; stale open-questions gate wording repaired.
 
 ## Next route
 
-1. Run post-MNEMOSYNE-053 fresh ordinary Thinking startup/handoff replay using `notes/first-target-project-fresh-replay-protocol.md` and `handoff/first-target-project-dry-run-onboarding-package.md`, followed by maintainer scorecard review.
-2. Do not treat any pre-053 replay result as closing this new gate.
-3. After post-053 replay reviewed PASS, the user must still select a target, approve authority/safe input/no-target-write, and approve the run manifest before a real dry-run.
-4. Keep the first target-project dry-run design-only unless separately approved otherwise.
-5. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
+1. Proceed to user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
+2. The replay-quality portion of the first-target dry-run gate is satisfied by the post-053 reviewed PASS.
+3. Keep the first target-project dry-run design-only unless separately approved otherwise.
+4. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 

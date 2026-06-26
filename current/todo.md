@@ -2,16 +2,16 @@
 
 ## Active now
 
-- Run post-MNEMOSYNE-053 fresh ordinary Thinking replay using the updated protocol and maintainer scorecard.
-- Do not treat any pre-053 replay PASS as closing the post-053 gate.
+- Post-MNEMOSYNE-053 fresh replay has reviewed PASS with `quality_band: strong`; do not rerun it unless later protocol/current-state changes invalidate it.
+- Prepare for user target selection and authority/safe-input/no-target-write/run-manifest decisions before any real target-project dry-run.
 - Keep execution source unchanged unless separately approved.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
 ## Waiting for user decision
 
-- Select target project after post-053 replay reviewed PASS and any required user acceptance of non-blocking warnings.
+- Select target project after post-053 replay reviewed PASS.
 - Confirm owner/authority.
-- Provide safe input manifest.
+- Provide safe input manifest/source map.
 - Confirm no-target-write.
 - Approve the run manifest before any real dry-run.
 - Decide whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source; separate approval only.
@@ -40,6 +40,7 @@
 - Batch A small fixes verified passed after post-047 and post-048 verification.
 - MNEMOSYNE-052: post-051 compact current-state sync and manual-import helper/template review.
 - MNEMOSYNE-053: DR2 handoff-correctness principle, handoff package strategy, replay scorecard, and post-053 replay protocol update.
+- MNEMOSYNE-055: synchronized post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
 
 ## Historical detailed task list below
 
