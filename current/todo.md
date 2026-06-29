@@ -49,6 +49,7 @@
 - MNEMOSYNE-057: promoted minimal target-project workspace principle and user-input storage policy into execution source; updated first dry-run manifest/onboarding for target-scoped workspace decisions; no target workspace created, no target selected, no target materials ingested, and no target repository written.
 - MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first dry-run support instruments and user-input governance.
 - MNEMOSYNE-059: ingested DR4 corrected Deep Research prompt original and repaired post-058 current-state sync.
+- MNEMOSYNE-060: repaired post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target selected/materials ingested/target repo written.
 
 ## Historical detailed task list below
 
