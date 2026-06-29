@@ -24,6 +24,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-058 processed PRO-01 and DR4, repaired first-dry-run support-instrument drift, added user-input storage governance guidance, fixed Deep Research output-delivery rule, and strengthened manifest/onboarding approval/status fields.
 - MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - Next route: user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
 - No real target-project dry-run has occurred.
@@ -80,6 +81,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
 
 ## Next route
 

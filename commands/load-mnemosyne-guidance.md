@@ -44,15 +44,16 @@ If the task involves tool capability, platform capability, model behavior, autom
 9. If the response asks the user to do something, put the operation steps/content in a clearly marked section before explanation.
 10. If the response reports findings or conclusions, put the conclusion/problem/result in a clearly marked section before supporting explanation.
 11. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md`. When producing long content for the user to manually forward, prefer generating a downloadable file and show only a concise summary in the chat. If the content must be split, label chunks with package/task title, stable ID, chunk number, total chunk count if known, and wait-for-all-chunks instruction. When designing Deep Research prompts, apply the Deep Research exception: require the full report body in the final Deep Research answer/report body; do not ask Deep Research to provide only a summary plus downloadable link; any downloadable file may be optional backup only.
-12. Treat repository visibility as operator-controlled and stage-dependent; do not treat public/private state alone as a defect. Verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
-13. The first response after loading should include:
+12. When generating multiple Pro / Deep Research / cross-conversation prompts, apply dependency-aware staged batch-gating: remind/ask the user to switch current conversation intelligence/reasoning level before high-risk or high-cost prompt packages when needed, state each prompt's `execute_in` location, and do not generate downstream prompts if upstream batch results may change them. Deep Research prompts must require the full report body in the final answer.
+13. Treat repository visibility as operator-controlled and stage-dependent; do not treat public/private state alone as a defect. Verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
+14. The first response after loading should include:
    - current execution source;
    - current phase;
    - non-execution-source boundaries;
    - current forbidden actions;
    - current next-route options;
    - whether any conflict or missing file was found.
-14. If required files are unavailable, ask for the missing files or clearly state the limitation. Do not invent repository state.
+15. If required files are unavailable, ask for the missing files or clearly state the limitation. Do not invent repository state.
 
 ## Boundaries
 

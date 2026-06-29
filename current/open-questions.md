@@ -77,6 +77,12 @@
   - status: repaired_by_MNEMOSYNE-060
   - note: `notes/codex-task-results/MNEMOSYNE-059-result.md` claimed MNEMOSYNE-058/059 were present in all current-state files, but maintainer verification found the intended open-questions follow-up section absent; this section is the repair.
 
+## MNEMOSYNE-061 staged PRO/DR prompt-batch guidance
+
+- Should future Pro/Deep Research prompt packs be generated all at once?
+  - status: answered_by_MNEMOSYNE-061
+  - note: default is dependency-aware staged generation; downstream prompts are generated only after upstream batch results are reviewed and repaired when dependency risk exists.
+
 ## Historical open-question list below
 
 The material below is retained for history and may include superseded route wording. Use the current corrections above for live status.

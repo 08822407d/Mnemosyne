@@ -36,6 +36,7 @@
 - MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 - MNEMOSYNE-059: DR4 corrected Deep Research prompt original ingested and indexed; post-058 compact current-state sync repaired; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 - MNEMOSYNE-060: repaired post-059 `current/open-questions.md` follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
+- MNEMOSYNE-061: staged Pro/Deep Research prompt-generation and execution guidance added; future high-cost prompt batches must state execution location, require user model-strength switch when needed, and avoid generating downstream prompts before upstream results are reviewed when dependency risk exists.
 
 ### current blockers/gates
 
@@ -57,6 +58,7 @@
 - Use `target-projects/<target_project_id>/` as the default target workspace root unless the user approves an exception; detailed MNEMOSYNE-056 layout remains a non-execution-source reference.
 - Do not start target dry-run, choose target, or upload target material before user approval.
 - DR2 scoring/provenance/template recommendations adopted by MNEMOSYNE-053 remain bounded to the approved principle, strategy, scorecard, and replay protocol updates; DR2 research itself is still not execution source.
+- For future PRO/DR prompt packs, generate in dependency-aware batches and review/repair each batch before generating downstream prompts when upstream findings may change them.
 
 ### important non-execution-source references
 
