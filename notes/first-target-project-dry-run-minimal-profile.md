@@ -16,9 +16,11 @@
 
 ```yaml
 dry_run_id: MNEMOSYNE-DRYRUN-001-PROVISIONAL
-manifest_path: notes/target-project-dry-runs/<dry_run_id>/00-run-manifest.md after user-approved run creation
+target_workspace_root: target-projects/<target_project_id>/ unless user approves exception
+user_input_storage_policy: originals_external_by_default; safe redacted/synthetic/decision/external_pointer only unless approved
+manifest_path: target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/00-run-manifest.md after target selection, target workspace approval, and user-approved run creation; otherwise not_applicable or user-approved external manifest path
 manifest_version:
-replay_protocol_version: 2026-06-22-post-MNEMOSYNE-050
+replay_protocol_version: 2026-06-23-post-MNEMOSYNE-053
 replay_result_reference:
 critical_check_definition: blocking_yes
 target_project_name: unknown_until_user_selects
@@ -95,3 +97,8 @@ user_confirmations:
   - approval status for any non-public input
   - confirmation that the run remains design-only unless separately approved
 ```
+
+
+## MNEMOSYNE-058 boundary repair
+
+- This minimal profile does not authorize folder/workspace creation, target selection, target material ingestion, target repository writes, or a real dry-run.

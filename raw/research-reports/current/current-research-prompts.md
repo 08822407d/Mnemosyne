@@ -44,3 +44,14 @@
 - prompt_type: deep_research_prompt
 - status: original_available
 - note: Research input only; not a report conclusion and not execution source.
+
+## DR4 user-input governance prompt status
+
+```yaml
+prompt_id: PROMPT-2026Q2-UIG-0001
+report_id: RPT-2026Q2-UIG-0001
+cycle_id: RC-2026Q2-user-input-governance
+status: not_imported_in_this_task
+prompt_path: not_imported_in_this_task
+note: Prompt original was not staged; only the completed DR4 report was ingested.
+```

@@ -161,3 +161,12 @@ Reference only; do not copy the full inbox rules here:
 ## 12. Completion statement
 
 Producing this package does not start or pass a dry-run. The user must still select a target, approve the target workspace root or exception, approve authority/source map, safe input/user originals storage policy, no-target-write, and approve the run manifest before a real dry-run.
+
+
+## MNEMOSYNE-058 user-input storage and conflict-priority notes
+
+- Read `notes/user-input-storage-governance-v0.1.md` when deciding target user-input storage policy.
+- If support instruments conflict, follow `current/human-approved-spec.md`, then the user-approved actual run manifest, then onboarding/manifest templates; record conflict instead of merging instructions.
+- AI/human restatements are explanatory layer and cannot replace originals or user-approved decisions.
+- Sensitive originals/raw requirements default outside Git; use redacted references or external pointers unless safe and user-approved.
+- This package remains non-execution-source and does not authorize target selection, target workspace creation, target material ingestion, target repository writes, or a real dry-run.

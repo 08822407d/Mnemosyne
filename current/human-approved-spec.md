@@ -155,6 +155,15 @@
 - Chunked transfer should avoid changing requirements between chunks.
 - 如果已生成文件，该文件应被视为优先 transfer artifact；聊天消息只是摘要或指针。
 - 本原则不要求对短回答或短的一步式指令生成文件。
+
+### Deep Research 报告输出例外
+
+- 对 Deep Research / 深度研究任务，完整研究报告正文必须出现在 Deep Research 最终报告 / 最终回答正文中。
+- 不得把 Deep Research 最终回答设计成只有简述、结论和 downloadable file / sandbox link。
+- 不得要求 Deep Research 报告另写入、只写入或主要写入一个可下载文件。
+- 可下载文件、导出文件或附件只能作为辅助副本 / 备份；不能作为唯一 canonical report original。
+- 如果 Deep Research 报告太长，应在最终回答中使用明确标注的分片正文，而不是用单独下载链接代替正文。
+- 后续任何行为指导、prompt pack、handoff 或 Codex task 均不得覆盖本例外规则；若与本规则冲突，以本规则为准。
 - 本原则本身不授权任何仓库编辑；它只指导长转发内容应如何打包和交付。
 
 ## 14. Manual import inbox / Codex Cloud non-image attachment boundary

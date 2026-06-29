@@ -21,11 +21,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-055 synchronized the post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
 - MNEMOSYNE-056 created a non-execution-source proposal for target-project workspace boundaries and layout. It treats target-project content inside the Mnemosyne repo as an intentional workspace pattern, not merely a Codex Cloud workaround.
 - MNEMOSYNE-057 promoted the minimal target-project workspace principle into execution source and updated first dry-run manifest/onboarding materials; the detailed MNEMOSYNE-056 proposal remains non-execution-source reference.
+- MNEMOSYNE-058 processed PRO-01 and DR4, repaired first-dry-run support-instrument drift, added user-input storage governance guidance, fixed Deep Research output-delivery rule, and strengthened manifest/onboarding approval/status fields.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - Next route: user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
-- No target-project materials have been uploaded or ingested.
 - No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 
@@ -75,6 +75,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) synchronized; stale open-questions gate wording repaired.
 - MNEMOSYNE-056: target-project workspace boundary/layout proposal created as non-execution-source candidate design; no target project selected, no target materials ingested, no target repository written, and execution source unchanged.
 - MNEMOSYNE-057: minimal target-project workspace principle promoted into execution source and first dry-run manifest/onboarding updated; no target project selected, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 
 ## Next route
 
