@@ -216,3 +216,18 @@
 - 创建目标项目工作区、摄入目标材料、执行真实 dry-run 或写入目标仓库，仍需用户先完成目标选择、authority / source map、安全 / 隐私边界、no-target-write 和 run manifest 批准。
 - 本原则本身不授权真实 target-project dry-run、target material ingestion、target repository write、自动化、MCP、RAG、auto-writeback 或其他未批准机制。
 
+## 17. Pro / Deep Research 分阶段生成与执行原则
+
+- 当 Mnemosyne 需要设计多份 Pro 扩展对话 prompt、Deep Research 课题、跨对话验证任务或类似高成本/高上下文任务时，Agent 必须先判断这些任务之间是否存在依赖关系。
+- 如果前一批结果可能改变后一批 prompt / 课题 / Codex 修补任务，默认必须分阶段生成和执行；不得为了方便一次性生成全部后续 prompt。
+- 分阶段任务应明确：
+  1. 当前只生成哪一批；
+  2. 每个 prompt 应在当前对话、独立新 Pro 对话、独立 Deep Research 任务还是 Codex Cloud 中执行；
+  3. 用户应把哪些结果带回维护对话；
+  4. 维护对话需要核验、评分、修补或入库后，才进入下一批；
+  5. 哪些后续 prompt / 课题暂缓生成，避免被上游结果淘汰。
+- 如果 prompt 设计需要更高智能强度，Agent 必须在生成 prompt 前显式提醒用户切换当前对话的智能程度；不得在低强度上下文中静默生成高风险 prompt 包。
+- 若用户明确要求一次性生成全部 prompt，Agent 仍应指出依赖风险；只有在依赖风险低或用户明确接受风险时，才可生成完整包，并必须标注推荐执行顺序和哪些结果可能导致后续 prompt 失效。
+- 每个跨对话 prompt 必须显式写明 `execute_in` / 执行位置，例如当前维护对话、new Pro 扩展 conversation、new Pro Deep Research task、Codex Cloud task 等。
+- Deep Research prompt 仍必须遵守第 13 节 Deep Research 报告输出例外：完整报告正文必须出现在最终报告 / 最终回答正文中，下载文件只能是辅助备份。
+- 本原则不授权异步后台工作、自动执行、自动写回、真实 target dry-run、target material ingestion 或 target repository write。

@@ -8,6 +8,7 @@
 - Keep detailed MNEMOSYNE-056 layout proposal as non-execution-source reference unless later promoted.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 - Review MNEMOSYNE-058 governance/support-instrument updates before first real target-project dry-run.
+- Use staged batches for PRO/DR prompt generation; current next prompt batch is PRO-02/PRO-03 only, pending maintainer review before PRO-04/DR3/DR5.
 
 ## Waiting for user decision
 
@@ -50,6 +51,7 @@
 - MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first dry-run support instruments and user-input governance.
 - MNEMOSYNE-059: ingested DR4 corrected Deep Research prompt original and repaired post-058 current-state sync.
 - MNEMOSYNE-060: repaired post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target selected/materials ingested/target repo written.
+- MNEMOSYNE-061: added staged Pro/Deep Research prompt-generation guidance.
 
 ## Historical detailed task list below
 
