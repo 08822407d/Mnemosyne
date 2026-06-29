@@ -3,18 +3,19 @@
 ## Active now
 
 - Post-MNEMOSYNE-053 fresh replay has reviewed PASS with `quality_band: strong`; do not rerun it unless later protocol/current-state changes invalidate it.
-- Prepare for user target selection and authority/safe-input/no-target-write/run-manifest decisions before any real target-project dry-run.
-- Review `notes/target-project-workspace-boundary-and-layout-proposal.md` before first real target-project dry-run; decide target-project workspace root and user-input/original/restatement placement policy.
-- Keep execution source unchanged unless separately approved.
+- Target-project workspace principle is approved in execution source; use `target-projects/<target_project_id>/` as default root unless user approves an exception.
+- Prepare for user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals before any real dry-run.
+- Keep detailed MNEMOSYNE-056 layout proposal as non-execution-source reference unless later promoted.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 
 ## Waiting for user decision
 
-- Select target project after post-053 replay reviewed PASS.
+- Select target project.
+- Approve target workspace root or exception.
 - Confirm owner/authority.
-- Provide safe input manifest/source map.
+- Approve source map and safe input/user originals storage policy.
 - Confirm no-target-write.
-- Approve the run manifest before any real dry-run.
+- Approve run manifest before any real dry-run.
 - Decide whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source; separate approval only.
 
 ## Waiting for dry-run evidence
@@ -43,6 +44,7 @@
 - MNEMOSYNE-053: DR2 handoff-correctness principle, handoff package strategy, replay scorecard, and post-053 replay protocol update.
 - MNEMOSYNE-055: synchronized post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
 - MNEMOSYNE-056: created target-project workspace boundary/layout proposal as non-execution-source candidate design; no target selected, no target materials ingested, no target repository written, and execution source unchanged.
+- MNEMOSYNE-057: promoted minimal target-project workspace principle and user-input storage policy into execution source; updated first dry-run manifest/onboarding for target-scoped workspace decisions; no target workspace created, no target selected, no target materials ingested, and no target repository written.
 
 ## Historical detailed task list below
 

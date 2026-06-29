@@ -9,6 +9,8 @@ execution_source_impact: none_in_this_task
 requires_user_approval_before_spec_promotion: true
 ```
 
+> Status after MNEMOSYNE-057: the high-level target-project workspace principle and default root were promoted into `current/human-approved-spec.md`. This proposal remains a non-execution-source design reference; its detailed layout and open policy options remain subject to user review and future refinement.
+
 ## Problem
 
 Before the first real target-project dry-run, Mnemosyne needs a stable boundary for project-specific content. Current execution-source boundaries already distinguish Mnemosyne as the memory-system meta-agent work repository from a target project's own running truth source, but the repository still needs a proposed layout for target-project work that is designed and archived by Mnemosyne before, during, and after a dry-run.

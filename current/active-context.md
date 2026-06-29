@@ -32,12 +32,14 @@
 - MNEMOSYNE-053: DR2 handoff-correctness principle adopted into the execution source; non-execution-source handoff package strategy and replay scorecard files created; first-target fresh replay protocol updated to post-053 scoring/review semantics.
 - MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) was synchronized as non-execution-source verification evidence; stale post-050 gate wording in `current/open-questions.md` was repaired.
 - MNEMOSYNE-056: target-project workspace boundary/layout proposal created as non-execution-source candidate design; no target project selected, no target materials ingested, no target repository written, and execution source unchanged.
+- MNEMOSYNE-057: minimal target-project workspace principle and user-input storage policy promoted into execution source; first dry-run manifest/onboarding updated for target-scoped workspace decisions; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 
 ### current blockers/gates
 
 - Post-MNEMOSYNE-053 fresh ordinary Thinking replay has reviewed PASS with `quality_band: strong`; the replay-quality portion of the first-target dry-run gate is satisfied.
 - Next gate: user must select a target project and approve authority/safe input/no-target-write/run manifest before any real target-project dry-run.
-- Before first real target-project dry-run, review/approve or revise the target-project workspace boundary/layout proposal, especially the placement of user originals, restatements, target-specific intermediate work, and project-derived Mnemosyne lessons.
+- Target-project workspace principle is now in execution source; detailed MNEMOSYNE-056 proposal remains a non-execution-source design reference.
+- Before first real target-project dry-run, user must still select target, approve authority/source map, approve safe input/originals storage policy, confirm no-target-write, and approve run manifest.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target materials have been uploaded/ingested.
@@ -48,8 +50,8 @@
 
 ### current next route
 
-- Prepare for user target selection and authority/safe-input/no-target-write/run-manifest approvals before any real target-project dry-run.
-- Before first real target-project dry-run, review/approve or revise the target-project workspace boundary/layout proposal, especially the placement of user originals, restatements, target-specific intermediate work, and project-derived Mnemosyne lessons.
+- Prepare for user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals before any real target-project dry-run.
+- Use `target-projects/<target_project_id>/` as the default target workspace root unless the user approves an exception; detailed MNEMOSYNE-056 layout remains a non-execution-source reference.
 - Do not start target dry-run, choose target, or upload target material before user approval.
 - DR2 scoring/provenance/template recommendations adopted by MNEMOSYNE-053 remain bounded to the approved principle, strategy, scorecard, and replay protocol updates; DR2 research itself is still not execution source.
 
@@ -59,7 +61,7 @@
 - `notes/replay-results/MNEMOSYNE-post-053-fresh-replay-reviewed-pass.md` for the reviewed post-053 replay PASS record.
 - `notes/codex-task-results/MNEMOSYNE-055-result.md` for replay PASS synchronization and stale open-questions repair.
 - `notes/target-project-workspace-boundary-and-layout-proposal.md` for candidate target-project workspace structure and boundary rules.
-- `notes/first-target-project-dry-run-manifest-template.md` for the run manifest required before a real dry-run.
+- `notes/first-target-project-dry-run-manifest-template.md` for the run manifest required before a real dry-run; it now includes target-project workspace and user-input storage policy fields.
 - `handoff/first-target-project-dry-run-onboarding-package.md` for the first target-project dry-run onboarding package.
 - `notes/first-target-project-dry-run-review-instruments.md` and related first-dry-run instruments for later authorized dry-run preparation.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for D-01–D-07 reflection/promotion status.

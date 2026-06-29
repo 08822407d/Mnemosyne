@@ -57,6 +57,18 @@ The ordinary replay executor does not need to read these two files unless a sepa
 - Do not write to any target project.
 - Use safe input only: public, synthetic, or explicitly redacted material unless separately approved for the current repository visibility/use.
 
+
+## 4.1 Target-project workspace boundary
+
+- Before a real target-project dry-run, the user must approve the target workspace root and user-input storage policy.
+- Default target workspace root after MNEMOSYNE-057: `target-projects/<target_project_id>/`.
+- The target workspace stores project-specific input, Mnemosyne-generated intermediate work, dry-run records, delivery package, feedback, and lesson candidates.
+- The target workspace is not Mnemosyne execution source and is not automatically the target runtime truth source.
+- If repository visibility is public or unverified, store only public, synthetic, or explicitly redacted target material.
+- If originals are unsafe for the repository or not approved, store only a redacted reference or external pointer.
+- No target workspace is created until target selection, authority/source map, safety/privacy boundary, no-target-write, and run manifest are approved.
+- This boundary authorizes no target repository write.
+
 ## 5. Actor permissions
 
 - ordinary ChatGPT / ordinary Thinking conversation:
@@ -89,7 +101,7 @@ If platform capabilities change later, they must be reverified and updated throu
 Future run folder structure, but do not create it now:
 
 ```text
-notes/target-project-dry-runs/<dry_run_id>/
+target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/
   00-run-manifest.md
   01-intake-and-design-draft.md
   02-delivery-and-handoff-draft.md
@@ -148,4 +160,4 @@ Reference only; do not copy the full inbox rules here:
 
 ## 12. Completion statement
 
-Producing this package does not start or pass a dry-run. The user must still complete the post-MNEMOSYNE-050 fresh replay gate, select a target, approve authority/safe input/no-target-write, and approve the run manifest before a real dry-run.
+Producing this package does not start or pass a dry-run. The user must still select a target, approve the target workspace root or exception, approve authority/source map, safe input/user originals storage policy, no-target-write, and approve the run manifest before a real dry-run.
