@@ -7,6 +7,7 @@
 - Prepare for user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals before any real dry-run.
 - Keep detailed MNEMOSYNE-056 layout proposal as non-execution-source reference unless later promoted.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
+- Review MNEMOSYNE-058 governance/support-instrument updates before first real target-project dry-run.
 
 ## Waiting for user decision
 
@@ -14,6 +15,7 @@
 - Approve target workspace root or exception.
 - Confirm owner/authority.
 - Approve source map and safe input/user originals storage policy.
+- Approve safe input/user originals storage policy using `notes/user-input-storage-governance-v0.1.md`.
 - Confirm no-target-write.
 - Approve run manifest before any real dry-run.
 - Decide whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source; separate approval only.
@@ -45,6 +47,8 @@
 - MNEMOSYNE-055: synchronized post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
 - MNEMOSYNE-056: created target-project workspace boundary/layout proposal as non-execution-source candidate design; no target selected, no target materials ingested, no target repository written, and execution source unchanged.
 - MNEMOSYNE-057: promoted minimal target-project workspace principle and user-input storage policy into execution source; updated first dry-run manifest/onboarding for target-scoped workspace decisions; no target workspace created, no target selected, no target materials ingested, and no target repository written.
+- MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first dry-run support instruments and user-input governance.
+- MNEMOSYNE-059: ingested DR4 corrected Deep Research prompt original and repaired post-058 current-state sync.
 
 ## Historical detailed task list below
 

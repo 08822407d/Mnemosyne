@@ -76,7 +76,7 @@
 - report_id: RPT-2026Q2-UIG-0001
 - cycle_id: RC-2026Q2-user-input-governance
 - title/topic: user originals, raw requirements, restatements, user-approved decisions, redactions, synthetic substitutes, external pointers, Git history exposure, repository visibility
-- source_prompt: not_imported_in_this_task
+- source_prompt: `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md`
 - source_report: `raw/research-reports/cycles/2026Q2-user-input-governance/originals/DR4_user_originals_requirements_redaction_governance_report.md`
 - summary_path: `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`
 - central_conclusions:

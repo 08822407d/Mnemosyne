@@ -33,6 +33,8 @@
 - MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) was synchronized as non-execution-source verification evidence; stale post-050 gate wording in `current/open-questions.md` was repaired.
 - MNEMOSYNE-056: target-project workspace boundary/layout proposal created as non-execution-source candidate design; no target project selected, no target materials ingested, no target repository written, and execution source unchanged.
 - MNEMOSYNE-057: minimal target-project workspace principle and user-input storage policy promoted into execution source; first dry-run manifest/onboarding updated for target-scoped workspace decisions; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
+- MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
+- MNEMOSYNE-059: DR4 corrected Deep Research prompt original ingested and indexed; post-058 compact current-state sync repaired; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 
 ### current blockers/gates
 
@@ -67,6 +69,9 @@
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for D-01–D-07 reflection/promotion status.
 - `notes/codex-task-results/MNEMOSYNE-047-result.md`, `notes/codex-task-results/MNEMOSYNE-048-result.md`, `notes/codex-task-results/MNEMOSYNE-049-result.md`, and `notes/codex-task-results/MNEMOSYNE-050-result.md` for recent task outcomes.
 - `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md` for DR2 handoff-strategy evidence.
+- `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md` for the corrected DR4 Deep Research prompt original.
+- `notes/codex-task-results/MNEMOSYNE-058-result.md` for PRO-01/DR4 processing and support-instrument hardening.
+- `notes/codex-task-results/MNEMOSYNE-059-result.md` for DR4 prompt-original ingestion and post-058 sync repair.
 - `notes/codex-task-results/MNEMOSYNE-051-result.md` for the DR2 ingestion result record.
 - `notes/handoff-package-strategy-v0.1.md` for handoff package tier/generation strategy.
 - `notes/handoff-replay-scorecard-v0.1.md` for maintainer replay review and scoring.
@@ -237,3 +242,13 @@ References:
 - `notes/user-input-storage-governance-v0.1.md`
 - `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`
 - `notes/codex-task-results/MNEMOSYNE-058-result.md`
+
+
+## MNEMOSYNE-059 checkpoint
+
+- MNEMOSYNE-059: DR4 corrected Deep Research prompt original ingested and indexed; post-058 compact current-state sync repaired; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
+
+References:
+
+- `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md`
+- `notes/codex-task-results/MNEMOSYNE-059-result.md`
