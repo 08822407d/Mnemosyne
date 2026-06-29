@@ -12,7 +12,7 @@
 - This template records evidence from a run; it does not itself prove a real target-project dry-run occurred.
 - A synthetic smoke test must not be reported as a real target-project dry-run.
 - The run must reference `notes/first-target-project-dry-run-manifest-template.md` and a user-approved run manifest before any real target-project dry-run.
-- The run must reference `notes/first-target-project-fresh-replay-protocol.md` and the reviewed post-050 replay result.
+- The run must reference `notes/first-target-project-fresh-replay-protocol.md` and the current reviewed replay result required by that protocol; as of MNEMOSYNE-055, the synchronized replay-quality gate evidence is `notes/replay-results/MNEMOSYNE-post-053-fresh-replay-reviewed-pass.md`.
 - Preserve target-specific schema tailoring; do not default target design to Mnemosyne's own schema.
 
 ## Verdict rules
@@ -64,3 +64,21 @@ Codex_task_candidates:
 user_decisions_needed:
 final_verdict: PASS | FAIL | INVALID_RUN
 ```
+
+## MNEMOSYNE-058 added result fields
+
+```yaml
+target_project_workspace:
+  workspace_root:
+  workspace_status:
+user_input_storage_policy:
+  originals_storage:
+  decision_record_reference:
+  redaction_manifest_reference:
+  external_pointer_reference:
+approval_record:
+target_material_ingestion:
+target_runtime_truth_source:
+```
+
+- Synthetic smoke-test evidence must not be reported as real dry-run evidence.

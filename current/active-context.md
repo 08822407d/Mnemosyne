@@ -224,3 +224,16 @@ Pending after MNEMOSYNE-033A:
 ## MNEMOSYNE-044 D-01–D-07 coverage map
 
 MNEMOSYNE-044 adds `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` as a non-execution-source review/proposal artifact. The final MNEMOSYNE-031 D-01 to D-07 decisions remain authoritative checkpoint records, but they are not automatically standing execution rules. Only content already reflected in `current/human-approved-spec.md` is currently executable. The coverage map identifies D-01, D-03, D-04, and D-05 as needing separate user approval before any candidate wording can be promoted; D-06 remains research-gated/non-executable, and D-07 is checkpoint-only.
+
+
+## MNEMOSYNE-058 checkpoint
+
+- MNEMOSYNE-058: PRO-01 audit and DR4 user-input governance evidence processed; Deep Research output-delivery rule repaired; first dry-run support-instrument drift repaired; manifest/onboarding strengthened with approval/status, redaction, external pointer, and storage-governance fields; no target selected, no target workspace created, no target materials ingested, no target repository written.
+- Before first real target-project dry-run, user must still select target, approve target workspace root or exception, approve authority/source map, approve safe input/user originals storage policy using the governance guidance, confirm no-target-write, and approve run manifest.
+
+References:
+
+- `notes/pro-review-results/MNEMOSYNE-PRO-01-execution-source-consistency-audit.md`
+- `notes/user-input-storage-governance-v0.1.md`
+- `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`
+- `notes/codex-task-results/MNEMOSYNE-058-result.md`

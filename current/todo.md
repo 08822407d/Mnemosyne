@@ -241,3 +241,19 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 
 - MNEMOSYNE-051: DR2 handoff-strategy research ingested as supplemental evidence cycle `RC-2026Q2-handoff-strategy`.
 - Review DR2 handoff-strategy implications before updating replay/handoff templates or starting first real target-project dry-run.
+
+
+## MNEMOSYNE-058 follow-up
+
+### Active now
+
+- [ ] Review MNEMOSYNE-058 governance/support-instrument updates before first real target-project dry-run.
+- [ ] Prepare user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals.
+
+### Waiting for user decision
+
+- [ ] Approve safe input/user originals storage policy using `notes/user-input-storage-governance-v0.1.md`.
+
+### Recently completed
+
+- [x] MNEMOSYNE-058: PRO-01 audit and DR4 governance evidence ingested; Deep Research output-delivery exception added; first-dry-run support instruments repaired/hardened.

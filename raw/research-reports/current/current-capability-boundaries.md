@@ -33,3 +33,12 @@
 - Handoff scoring can guide verification and candidate template updates, but it does not itself update `current/human-approved-spec.md` or any execution source.
 - Replay tests are evidence. Their claims must be checked against current repository state, especially current gate, target selection, target-material ingestion, and target-repository write status.
 - Model/judge scoring should not be the sole authority for high-risk handoff decisions; evidence paths, traceability, and human/user review remain necessary for promotion or gate changes.
+
+## DR4 user-input governance boundary — RPT-2026Q2-UIG-0001
+
+- DR4 is evidence only, not execution source.
+- Visibility-unverified or possibly-changing visibility must be treated as public-equivalent / public-risk for storage decisions unless a user-approved policy says otherwise within safe boundaries.
+- Mnemosyne should not assume Git is safe for originals, raw requirements, sensitive customer/project material, secrets, credentials, private source, or unredacted personal/confidential data.
+- AI/human restatements cannot be treated as original requirements or user-approved baseline.
+- Redaction manifests and external source pointers are recommended governance instruments before real target material intake.
+- Git history exposure persists beyond ordinary delete/move/revert; private repositories do not automatically authorize storing originals.

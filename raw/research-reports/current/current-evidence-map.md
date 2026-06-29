@@ -90,3 +90,33 @@
   mnemosyne_use: Inform readiness review before dry-run start.
   not_execution_source: true
 ```
+
+## DR4 / user-input governance evidence — RC-2026Q2-user-input-governance
+
+```yaml
+- evidence_id: EVID-2026Q2-UIG-0001
+  source_report: RPT-2026Q2-UIG-0001
+  claim_or_implication: visibility_unverified = public_equivalent / public-risk for storage decisions.
+  confidence_or_status: report_conclusion; candidate_for_target_input_governance
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-UIG-0002
+  source_report: RPT-2026Q2-UIG-0001
+  claim_or_implication: Originals/raw requirements/sensitive materials default outside Git; user-approved decisions, reviewed redacted excerpts, synthetic substitutes, and safe external pointers/manifests are eligible in Git if approved and safe.
+  confidence_or_status: report_conclusion; aligns_with_existing_visibility_boundary
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-UIG-0003
+  source_report: RPT-2026Q2-UIG-0001
+  claim_or_implication: AI/human restatements are explanatory layer, not original requirements or approved baseline.
+  confidence_or_status: report_conclusion
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-UIG-0004
+  source_report: RPT-2026Q2-UIG-0001
+  claim_or_implication: Redaction manifest and external pointer schemas are recommended before real target material intake.
+  confidence_or_status: report_recommendation; adopted_as_non_execution_guidance_by_MNEMOSYNE-058
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-UIG-0005
+  source_report: RPT-2026Q2-UIG-0001
+  claim_or_implication: Git history exposure means delete/move/revert does not erase historical exposure; private repo does not automatically authorize storing originals.
+  confidence_or_status: report_conclusion
+  not_execution_source: true
+```

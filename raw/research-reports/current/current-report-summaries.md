@@ -70,3 +70,19 @@
   - DR2 reinforces that pre-050 replay PASS does not close the post-050 gate and that current repository state must be verified against files.
   - DR2 should be routed through candidate/open-question/template review before any execution-source promotion.
 - execution_source_status: not_execution_source
+
+## RPT-2026Q2-UIG-0001 — DR4 user-input governance
+
+- report_id: RPT-2026Q2-UIG-0001
+- cycle_id: RC-2026Q2-user-input-governance
+- title/topic: user originals, raw requirements, restatements, user-approved decisions, redactions, synthetic substitutes, external pointers, Git history exposure, repository visibility
+- source_prompt: not_imported_in_this_task
+- source_report: `raw/research-reports/cycles/2026Q2-user-input-governance/originals/DR4_user_originals_requirements_redaction_governance_report.md`
+- summary_path: `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`
+- central_conclusions:
+  - `visibility_unverified = public_equivalent` / public-risk for storage decisions.
+  - Originals, raw requirements, sensitive project/customer materials, secrets, credentials, private source, and unredacted personal/confidential data default outside Git.
+  - User-approved decisions, reviewed redacted excerpts, synthetic substitutes, and safe external pointers/manifests are eligible in Git if approved and safe.
+  - AI/human restatements are explanatory layer, not original requirements or approved baseline.
+  - Git history exposure means delete/move/revert does not erase historical exposure; private repo does not automatically authorize originals.
+- execution_source_status: not_execution_source

@@ -56,3 +56,14 @@
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
 | RPT-2026Q2-HO-0001 | raw/research-reports/cycles/2026Q2-handoff-strategy/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_report.md | deep_research | Mnemosyne handoff package strategy and quantitative evaluation | Evidence for correct handoff definition, quantitative handoff scoring, handoff package tiering, replay/test protocol, model/tool provenance, and pre-first-target-dry-run handoff readiness | yes | Markdown report original; summary available at raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md. Research evidence only, not execution source. |
+
+## Supplemental current evidence cycle: RC-2026Q2-user-input-governance
+
+- cycle_id: RC-2026Q2-user-input-governance
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
+- positioning: research evidence only; not execution source
+
+| report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
+|---|---|---|---|---|---|---|
+| RPT-2026Q2-UIG-0001 | raw/research-reports/cycles/2026Q2-user-input-governance/originals/DR4_user_originals_requirements_redaction_governance_report.md | deep_research | User originals / raw requirements / restatements / approved decisions / redaction / external pointers / Git history exposure / repository visibility | Supplemental evidence for target user-input storage governance before first real target-project dry-run | yes | Markdown report original; summary available at `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`. Research evidence only, not execution source. |

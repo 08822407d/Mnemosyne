@@ -294,3 +294,19 @@ The material below is retained for history and may include superseded route word
   - status: answered_by_user_approved_MNEMOSYNE-053
   - current_boundary: DR2 changed the current required gate only through user-approved MNEMOSYNE-053; the gate is now post-MNEMOSYNE-053 replay, not because research alone changed it.
 - OP-09 and OP-10 are partially_informed_by_DR2 because DR2 discusses handoff replay scoring, model/tool provenance, and the limits of model-judge evaluation, but it does not close those questions.
+
+
+## MNEMOSYNE-058 PRO-01 / DR4 follow-up
+
+- PRO-01 audit status:
+  - status: processed_by_MNEMOSYNE-058
+  - note: stale first-dry-run support instrument paths/replay references repaired; manifest authority fields strengthened.
+- DR4 user-input governance:
+  - status: evidence_ingested_by_MNEMOSYNE-058
+  - note: originals/raw requirements default outside Git; user-approved decisions, redacted excerpts, synthetic substitutes, and safe external pointers/manifests are the preferred in-repo layer.
+- Deep Research output delivery:
+  - status: behavior_rule_repaired_by_MNEMOSYNE-058
+  - note: future Deep Research prompts must require full report body in the final answer/report body; downloadable files may be backup only and must not be the sole canonical report.
+- Does OP-08 close?
+  - status: not_closed
+  - note: DR4 informs v0.1 target-input governance, but broader privacy/redaction/access-control remains open until separately approved.

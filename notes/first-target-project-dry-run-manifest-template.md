@@ -89,3 +89,55 @@ stop_conditions_triggered:
 - User originals and raw requirements may be stored only under an approved repository visibility and safety policy; otherwise record only an external pointer or redacted reference.
 - After target workspace approval, dry-run outputs should be target-scoped under `target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/` instead of global notes, unless the user approves an exception.
 - Do not create `notes/target-project-dry-runs/<dry_run_id>/`, `target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/`, or any target workspace merely because this template exists.
+
+## MNEMOSYNE-058 approval/status hardening
+
+```yaml
+approval_record:
+  target_selected:
+    status: true | false | unknown
+    approved_by:
+    approved_at:
+  target_workspace_root:
+    status: approved | rejected | pending | not_applicable
+    path:
+    approved_by:
+    approved_at:
+  workspace_creation:
+    status: approved | not_approved | pending | not_applicable
+    approved_by:
+    approved_at:
+  user_input_storage_policy:
+    status: approved | rejected | pending
+    approved_by:
+    approved_at:
+  no_target_write:
+    status: confirmed | not_confirmed | contradicted
+    approved_by:
+    approved_at:
+  run_manifest:
+    status: user_approved | draft | invalid
+    approved_by:
+    approved_at:
+target_runtime_truth_source:
+  status: none | external_owner_rule_confirmed | workspace_manifest_user_approved | unknown_requires_owner_decision
+  authority_path_or_external_pointer:
+  approved_by:
+  approved_at:
+  scope:
+  limitations:
+target_material_ingestion:
+  status: none_provided | approved_to_ingest | ingested | unsafe_blocked | pending_user_decision
+  allowed_material_types:
+  prohibited_material_types:
+redaction_and_external_pointer:
+  redaction_manifest_path:
+  external_source_pointer_path:
+  git_history_exposure_acknowledged:
+```
+
+Rules:
+
+- Blank safety-critical approval fields are not approval.
+- `not_confirmed`, `pending`, `unknown`, or blank on no-target-write / workspace creation / user-input storage policy blocks real dry-run.
+- If first-dry-run support instruments conflict, follow: (1) `current/human-approved-spec.md`; (2) the user-approved actual run manifest; (3) onboarding/manifest templates; and record the conflict instead of merging instructions.
