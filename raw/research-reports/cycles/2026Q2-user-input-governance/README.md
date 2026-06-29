@@ -6,7 +6,9 @@
 - report_path: `raw/research-reports/cycles/2026Q2-user-input-governance/originals/DR4_user_originals_requirements_redaction_governance_report.md`
 - summary_path: `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`
 - topic: user originals, raw requirements, restatements, user-approved decisions, redaction, synthetic substitutes, external pointers, Git history exposure, repository visibility
-- prompt_original_status: not_imported_in_this_task
+- prompt_original_status: imported_by_MNEMOSYNE-059
+- prompt_path: `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md`
+- prompt_note: The prompt original is the corrected rerun prompt that requires full Deep Research report body delivery and forbids summary+download-only final delivery.
 - execution_source_status: research evidence only; not execution source
 
 ## Relationship to Mnemosyne

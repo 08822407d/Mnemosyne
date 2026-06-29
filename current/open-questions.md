@@ -296,14 +296,19 @@ The material below is retained for history and may include superseded route word
 - OP-09 and OP-10 are partially_informed_by_DR2 because DR2 discusses handoff replay scoring, model/tool provenance, and the limits of model-judge evaluation, but it does not close those questions.
 
 
-## MNEMOSYNE-058 PRO-01 / DR4 follow-up
+## MNEMOSYNE-058 / 059 PRO-01 and DR4 follow-up
 
 - PRO-01 audit status:
   - status: processed_by_MNEMOSYNE-058
   - note: stale first-dry-run support instrument paths/replay references repaired; manifest authority fields strengthened.
-- DR4 user-input governance:
+- DR4 user-input governance report:
   - status: evidence_ingested_by_MNEMOSYNE-058
+  - report_id: RPT-2026Q2-UIG-0001
   - note: originals/raw requirements default outside Git; user-approved decisions, redacted excerpts, synthetic substitutes, and safe external pointers/manifests are the preferred in-repo layer.
+- DR4 corrected Deep Research prompt:
+  - status: prompt_original_ingested_by_MNEMOSYNE-059
+  - prompt_id: PROMPT-2026Q2-UIG-0001
+  - note: prompt requires full report body in final Deep Research answer and forbids summary+download-only report delivery.
 - Deep Research output delivery:
   - status: behavior_rule_repaired_by_MNEMOSYNE-058
   - note: future Deep Research prompts must require full report body in the final answer/report body; downloadable files may be backup only and must not be the sole canonical report.

@@ -4,7 +4,7 @@
 
 本文件是 current 派生视图，用于索引当前激活研究轮次的 research prompts / prompt availability。
 
-- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental)
+- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental); RC-2026Q2-user-input-governance (supplemental)
 - 本文件不是执行源；
 - 当前执行源仍是 `current/human-approved-spec.md`；
 - prompt 原文是研究输入，不是研究报告结果；
@@ -51,7 +51,8 @@
 prompt_id: PROMPT-2026Q2-UIG-0001
 report_id: RPT-2026Q2-UIG-0001
 cycle_id: RC-2026Q2-user-input-governance
-status: not_imported_in_this_task
-prompt_path: not_imported_in_this_task
-note: Prompt original was not staged; only the completed DR4 report was ingested.
+status: original_available
+prompt_path: raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md
+prompt_type: corrected_deep_research_prompt
+note: Research input only; not a report conclusion and not execution source. This corrected prompt requires the full Deep Research report body in the final answer and forbids summary+download-only report delivery.
 ```
