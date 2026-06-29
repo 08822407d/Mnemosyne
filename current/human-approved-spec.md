@@ -188,3 +188,22 @@
 - 具体交接包层级、字段、评分权重、阈值、replay prompt 和 provenance schema 由非执行源策略 / 验证文件维护，并通过受 review 的用户批准任务更新。
 - Handoff score、LLM judge 或单一模型的流畅输出只能作为评估证据，不能作为执行源、自动 gate 关闭依据或自动写回授权。
 - 本原则本身不授权仓库写入、目标项目写入或自动化。
+## 16. 目标项目工作区原则
+
+- Mnemosyne 可以在自身仓库内维护目标项目工作区；这是一种正式的目标项目设计 / 构建 / 交付准备 / 经验归档模式，不应仅视为 Codex Cloud 等当前工具链限制下的临时折中。
+- 标准目标项目工作区根目录为 `target-projects/<target_project_id>/`，除非用户在具体任务中批准其他位置。
+- 目标项目工作区不是 Mnemosyne 的执行源；`current/human-approved-spec.md` 仍是 Mnemosyne 唯一执行源。
+- 目标项目工作区也不会自动成为目标项目运行真相源；只有在目标项目本地 manifest / owner rule 中明确且经用户批准时，才可在该目标项目范围内承担相应角色。
+- 一旦用户选择目标项目并批准安全 / 权限边界，目标项目专属内容应优先放入该目标项目工作区，而不是散落在 Mnemosyne 全局 notes 中。此类内容包括：
+  - 项目 meta、authority / source map、privacy / safety、status；
+  - 用户输入、原始构想、需求原文、整理版、用户决策、脱敏或合成替代材料；
+  - Mnemosyne 为该目标项目生成的 intake、analysis、candidate schema / workflow、review、issue log、unsupported assumptions；
+  - delivery package、runtime memory package、handoff package、drift-review TODO；
+  - dry-run manifest、draft、result、postmortem；
+  - project feedback、project-specific lessons、example excerpts。
+- 用户原始构想、需求原文或其他目标项目材料只有在其对当前仓库可见性和安全边界是安全的，并且用户批准后，才可进入仓库。仓库 public 或可见性未核实时，只能放入 public、synthetic 或 explicitly redacted 材料；不安全或未批准的原文应保留在仓库外，只记录用户批准的脱敏引用或外部指针。
+- 目标项目工作区可以记录该目标项目范围内的 authority / owner / source decisions，但这些决定不得自动外推为 Mnemosyne 全局规则，也不得覆盖 Mnemosyne 执行源。
+- 由具体目标项目反馈产生的 Mnemosyne 改进候选，属于 Mnemosyne 全局 self-improvement 输入；引用目标项目例证时，应使用稳定路径并标注 `example_only`、`target_project_specific`、`non_execution_source` 和 sensitivity / redaction 状态。不得因单个项目有效就自动提升为全局规则；全局规则更新仍需 candidate review 和用户批准。
+- 创建目标项目工作区、摄入目标材料、执行真实 dry-run 或写入目标仓库，仍需用户先完成目标选择、authority / source map、安全 / 隐私边界、no-target-write 和 run manifest 批准。
+- 本原则本身不授权真实 target-project dry-run、target material ingestion、target repository write、自动化、MCP、RAG、auto-writeback 或其他未批准机制。
+

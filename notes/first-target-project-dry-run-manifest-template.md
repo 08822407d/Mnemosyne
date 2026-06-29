@@ -42,6 +42,24 @@ challenge_case:
 privacy_and_repository_boundary:
 current_repository_visibility:
 input_safety_status: public | synthetic | explicitly_redacted | separately_approved_non_public | unsafe
+target_project_workspace:
+  workspace_root:
+  workspace_status: not_created | approved_to_create | created | not_applicable
+  workspace_creation_approved:
+  workspace_is_mnemosyne_execution_source: false
+  workspace_is_target_runtime_truth_source: false | target_manifest_approved | unknown
+  project_meta_path:
+  user_input_path:
+  mnemosyne_design_workbench_path:
+  delivery_package_path:
+  dry_run_path:
+  feedback_and_lessons_path:
+user_input_storage_policy:
+  originals_storage: not_provided | in_workspace_safe_public_or_redacted | external_reference_only | unsafe_do_not_store | pending_user_decision
+  restatements_path:
+  decisions_path:
+  redactions_path:
+  external_pointer_or_redacted_reference:
 no_target_write_confirmed:
 target_materials_uploaded_or_ingested:
 expected_dry_run_outputs:
@@ -64,4 +82,10 @@ stop_conditions_triggered:
 - Any unsafe or ambiguous material stops the run.
 - The manifest must record unsupported assumptions instead of allowing the executor to invent missing target facts.
 - The manifest must confirm `no_target_write_confirmed` before any real dry-run begins.
-- Do not create `notes/target-project-dry-runs/<dry_run_id>/` merely because this template exists.
+- A real target-project dry-run manifest must identify `target_project_workspace.workspace_root` or explicitly justify `workspace_status: not_applicable`.
+- Workspace creation is not authorized unless the user approves the target, authority/source map, safety/privacy boundary, no-target-write boundary, and run manifest.
+- The target workspace is not Mnemosyne execution source.
+- The target workspace is not automatically the target runtime truth source; it can hold that role only if a target manifest / owner rule explicitly and user-approvedly says so.
+- User originals and raw requirements may be stored only under an approved repository visibility and safety policy; otherwise record only an external pointer or redacted reference.
+- After target workspace approval, dry-run outputs should be target-scoped under `target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/` instead of global notes, unless the user approves an exception.
+- Do not create `notes/target-project-dry-runs/<dry_run_id>/`, `target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/`, or any target workspace merely because this template exists.

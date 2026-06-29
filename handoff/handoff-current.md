@@ -19,12 +19,14 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence under `RC-2026Q2-handoff-strategy`; it is not execution source and does not close the post-050 replay gate.
 - MNEMOSYNE-053 adopted a minimal DR2 handoff-correctness principle into execution source, created handoff strategy and scorecard instruments, and updated the first-target replay protocol.
 - MNEMOSYNE-055 synchronized the post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
-- MNEMOSYNE-056 created a non-execution-source proposal for target-project workspace boundaries and layout. It treats target-project content inside the Mnemosyne repo as an intentional workspace pattern, not merely a Codex Cloud workaround. User must still approve/revise it before first real target-project dry-run.
+- MNEMOSYNE-056 created a non-execution-source proposal for target-project workspace boundaries and layout. It treats target-project content inside the Mnemosyne repo as an intentional workspace pattern, not merely a Codex Cloud workaround.
+- MNEMOSYNE-057 promoted the minimal target-project workspace principle into execution source and updated first dry-run manifest/onboarding materials; the detailed MNEMOSYNE-056 proposal remains non-execution-source reference.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - Next route: user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target-project materials have been uploaded or ingested.
+- No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 
 ## Read for first dry-run preparation
@@ -72,14 +74,16 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-053: minimal DR2 handoff-correctness principle adopted into execution source; handoff package strategy and replay scorecard created as non-execution-source instruments; first-target replay protocol updated to post-053 scoring/review semantics.
 - MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) synchronized; stale open-questions gate wording repaired.
 - MNEMOSYNE-056: target-project workspace boundary/layout proposal created as non-execution-source candidate design; no target project selected, no target materials ingested, no target repository written, and execution source unchanged.
+- MNEMOSYNE-057: minimal target-project workspace principle promoted into execution source and first dry-run manifest/onboarding updated; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 
 ## Next route
 
-1. Review/approve target-project workspace boundary/layout before selecting/instantiating first target workspace.
-2. Proceed to user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
-3. The replay-quality portion of the first-target dry-run gate is satisfied by the post-053 reviewed PASS.
-4. Keep the first target-project dry-run design-only unless separately approved otherwise.
-5. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
+1. Select target project.
+2. Approve target workspace root or exception.
+3. Approve authority/source map, safe input/user originals storage policy, no-target-write, and run manifest.
+4. Only then proceed to first real target-project dry-run preparation.
+5. The replay-quality portion of the first-target dry-run gate is satisfied by the post-053 reviewed PASS.
+6. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 

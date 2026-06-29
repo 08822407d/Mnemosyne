@@ -38,15 +38,20 @@
 ## MNEMOSYNE-056 target-project workspace boundary questions
 
 - Should `target-projects/` become the standard root for all target-project workspaces inside the Mnemosyne repository?
-  - status: open_user_decision
+  - status: answered_by_MNEMOSYNE-057
+  - note: default root is `target-projects/<target_project_id>/`, unless user approves an exception.
 - Should target-specific Mnemosyne-generated intermediate work live under each target project's own workspace instead of global notes?
-  - status: candidate_recommendation_from_MNEMOSYNE-056
+  - status: answered_by_MNEMOSYNE-057
+  - note: high-level rule approved; detailed layout remains a non-execution-source proposal/reference.
 - Where should target-project user originals, raw requirements, restatements, redactions, and user decisions live?
-  - status: open_user_decision
+  - status: partially_answered_by_MNEMOSYNE-057
+  - note: default policy approved in principle; actual storage of originals requires per-target safety/visibility/user approval.
 - How should Mnemosyne-global lessons cite target-specific examples without promoting target-specific design into global policy?
-  - status: candidate_recommendation_from_MNEMOSYNE-056
+  - status: answered_by_MNEMOSYNE-057_at_high_level
+  - note: use stable path plus labels; global promotion still needs candidate review and user approval.
 - Should future first-target dry-run folder conventions move from `notes/target-project-dry-runs/<dry_run_id>/` to `target-projects/<target_project_id>/04-dry-runs/<dry_run_id>/` after user approval?
-  - status: open_user_decision
+  - status: answered_by_MNEMOSYNE-057_for_future_runs
+  - note: future approved target dry-run outputs should be target-scoped after workspace approval; no real workspace created yet.
 
 ## Historical open-question list below
 
