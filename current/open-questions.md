@@ -53,6 +53,30 @@
   - status: answered_by_MNEMOSYNE-057_for_future_runs
   - note: future approved target dry-run outputs should be target-scoped after workspace approval; no real workspace created yet.
 
+## MNEMOSYNE-058 / 059 PRO-01 and DR4 follow-up
+
+- PRO-01 audit status:
+  - status: processed_by_MNEMOSYNE-058
+  - note: stale first-dry-run support instrument paths/replay references repaired; manifest authority/status fields strengthened.
+- DR4 user-input governance report:
+  - status: evidence_ingested_by_MNEMOSYNE-058
+  - report_id: RPT-2026Q2-UIG-0001
+  - note: originals/raw requirements default outside Git; user-approved decisions, redacted excerpts, synthetic substitutes, and safe external pointers/manifests are the preferred in-repo layer.
+- DR4 corrected Deep Research prompt:
+  - status: prompt_original_ingested_by_MNEMOSYNE-059
+  - prompt_id: PROMPT-2026Q2-UIG-0001
+  - prompt_path: `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md`
+  - note: prompt requires full report body in final Deep Research answer and forbids summary+download-only report delivery.
+- Deep Research output delivery:
+  - status: behavior_rule_repaired_by_MNEMOSYNE-058
+  - note: future Deep Research prompts must require full report body in the final answer/report body; downloadable files may be backup only and must not be the sole canonical report.
+- Does OP-08 close?
+  - status: not_closed
+  - note: DR4 informs v0.1 target-input governance, but broader privacy/redaction/access-control remains open until separately approved.
+- 059 result-record discrepancy:
+  - status: repaired_by_MNEMOSYNE-060
+  - note: `notes/codex-task-results/MNEMOSYNE-059-result.md` claimed MNEMOSYNE-058/059 were present in all current-state files, but maintainer verification found the intended open-questions follow-up section absent; this section is the repair.
+
 ## Historical open-question list below
 
 The material below is retained for history and may include superseded route wording. Use the current corrections above for live status.
