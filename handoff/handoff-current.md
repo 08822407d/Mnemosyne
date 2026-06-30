@@ -25,8 +25,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
+- MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
+- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; downstream PRO-04/DR3/DR5 prompt generation waits for maintainer verification.
+- MNEMOSYNE-064 repaired post-063 current-state sync residue; next dependency-aware prompt batch may be generated only after maintainer accepts this repair.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - Next route: user target selection and approval of authority/safe input/no-target-write/run manifest before any real dry-run.
+- Before generating downstream PRO-04 / DR3 / DR5 prompts, maintainer must accept MNEMOSYNE-064 current-state sync repair. Recommended next prompt batch after acceptance: PRO-04 only.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target materials have been uploaded/ingested.
@@ -82,15 +86,19 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
+- MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
+- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; downstream PRO-04/DR3/DR5 prompt generation waits for maintainer verification.
+- MNEMOSYNE-064 repaired post-063 current-state sync residue; next dependency-aware prompt batch may be generated only after maintainer accepts this repair.
 
 ## Next route
 
-1. Select target project.
-2. Approve target workspace root or exception.
-3. Approve authority/source map, safe input/user originals storage policy, no-target-write, and run manifest.
-4. Only then proceed to first real target-project dry-run preparation.
-5. The replay-quality portion of the first-target dry-run gate is satisfied by the post-053 reviewed PASS.
-6. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
+1. Before generating downstream PRO-04 / DR3 / DR5 prompts, maintainer must accept MNEMOSYNE-064 current-state sync repair. Recommended next prompt batch after acceptance: PRO-04 only.
+2. Select target project.
+3. Approve target workspace root or exception.
+4. Approve authority/source map, safe input/user originals storage policy, no-target-write, and run manifest.
+5. Only then proceed to first real target-project dry-run preparation.
+6. The replay-quality portion of the first-target dry-run gate is satisfied by the post-053 reviewed PASS.
+7. Do not claim a target project has been selected, target materials have been uploaded/ingested, target repository has been written, or a real target-project dry-run has occurred.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 
@@ -102,7 +110,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 ## MNEMOSYNE-062 / 063 checkpoint
 
 - MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
-- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; downstream PRO-04 / DR3 / DR5 prompt generation waits for maintainer verification of 063.
+- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; MNEMOSYNE-064 repaired current-state sync residue; downstream PRO-04 / DR3 / DR5 prompt generation waits for maintainer verification of 064, with PRO-04 only recommended after acceptance.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target materials have been uploaded/ingested.
