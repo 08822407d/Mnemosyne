@@ -37,6 +37,9 @@
 - MNEMOSYNE-059: DR4 corrected Deep Research prompt original ingested and indexed; post-058 compact current-state sync repaired; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 - MNEMOSYNE-060: repaired post-059 `current/open-questions.md` follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 - MNEMOSYNE-061: staged Pro/Deep Research prompt-generation and execution guidance added; future high-cost prompt batches must state execution location, require user model-strength switch when needed, and avoid generating downstream prompts before upstream results are reviewed when dependency risk exists.
+- MNEMOSYNE-062: B1 PRO-02/PRO-03 ingestion task was blocked because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
+- MNEMOSYNE-063: completed B1 PRO-02/PRO-03 ingestion after payload staging; added synthetic-smoke-test, manual-import classification, target-workspace skeleton, approval-conflict, redaction-manifest, external-pointer, originals-pointer, and lesson-candidate controls as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
+- MNEMOSYNE-064: repaired post-063 current-state sync residue; no execution source changed and no target-project action occurred.
 
 ### current blockers/gates
 
@@ -58,7 +61,7 @@
 - Use `target-projects/<target_project_id>/` as the default target workspace root unless the user approves an exception; detailed MNEMOSYNE-056 layout remains a non-execution-source reference.
 - Do not start target dry-run, choose target, or upload target material before user approval.
 - DR2 scoring/provenance/template recommendations adopted by MNEMOSYNE-053 remain bounded to the approved principle, strategy, scorecard, and replay protocol updates; DR2 research itself is still not execution source.
-- For future PRO/DR prompt packs, generate in dependency-aware batches and review/repair each batch before generating downstream prompts when upstream findings may change them.
+- B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; maintainer may now generate the next dependency-aware prompt batch, likely PRO-04 first, if no further residue is found.
 
 ### important non-execution-source references
 
@@ -80,6 +83,14 @@
 - `notes/handoff-package-strategy-v0.1.md` for handoff package tier/generation strategy.
 - `notes/handoff-replay-scorecard-v0.1.md` for maintainer replay review and scoring.
 - `notes/codex-task-results/MNEMOSYNE-053-result.md` for adoption result record.
+- `notes/pro-review-results/MNEMOSYNE-PRO-02-v2-synthetic-target-project-smoke-test.md` for the B1 synthetic smoke-test result.
+- `notes/pro-review-results/MNEMOSYNE-PRO-03-v2-adversarial-failure-test.md` for the B1 adversarial failure-test result.
+- `notes/synthetic-smoke-test-result-template.md` for synthetic smoke-test result separation.
+- `notes/manual-import-artifact-classification-v0.1.md` for manual-import payload classification.
+- `notes/target-project-workspace-skeleton-templates-v0.1.md` for future target workspace skeleton guidance.
+- `notes/codex-task-results/MNEMOSYNE-062-result.md` for the blocked B1 ingestion attempt.
+- `notes/codex-task-results/MNEMOSYNE-063-result.md` for completed B1 ingestion/hardening.
+- `notes/codex-task-results/MNEMOSYNE-064-result.md` for this current-state sync repair.
 - `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
 - Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
@@ -261,7 +272,7 @@ References:
 
 - MNEMOSYNE-062: blocked B1 PRO-02/PRO-03 ingestion because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
 - MNEMOSYNE-063: PRO-02/PRO-03 B1 results ingested; synthetic-smoke-test, approval-conflict, redaction-manifest, external-pointer, manual-import classification, originals-pointer, and lesson-candidate controls hardened as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
-- B1 PRO-02/PRO-03 repair task completed by MNEMOSYNE-063; maintainer should verify 063 before generating downstream PRO-04 / DR3 / DR5 prompts.
+- B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; downstream PRO-04 / DR3 / DR5 prompt generation waits for maintainer verification of 064; recommended next batch after acceptance is PRO-04 only.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target materials have been uploaded/ingested.

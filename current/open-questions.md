@@ -346,7 +346,7 @@ The material below is retained for history and may include superseded route word
   - status: not_closed
   - note: DR4 informs v0.1 target-input governance, but broader privacy/redaction/access-control remains open until separately approved.
 
-## MNEMOSYNE-062 / 063 B1 PRO-02 / PRO-03 follow-up
+## MNEMOSYNE-062 / 063 / 064 B1 PRO-02 / PRO-03 follow-up
 
 - MNEMOSYNE-062:
   - status: blocked_missing_payloads
@@ -359,9 +359,12 @@ The material below is retained for history and may include superseded route word
   - status: ingested_by_MNEMOSYNE-063
   - verdict: REPAIR_RECOMMENDED
   - note: repository is not currently unsafe, but small deterministic controls were applied before real target dry-run/material intake.
+- MNEMOSYNE-063 current-state sync discrepancy:
+  - status: repaired_by_MNEMOSYNE-064
+  - note: `notes/codex-task-results/MNEMOSYNE-063-result.md` claimed current-state files were updated, but maintainer verification found compact state still stopped at MNEMOSYNE-061; this section and related current-state updates repair that residue.
 - B1 downstream prompt status:
-  - status: wait_for_maintainer_review_after_MNEMOSYNE-063
-  - note: do not generate PRO-04 / DR3 / DR5 until maintainer verifies MNEMOSYNE-063.
+  - status: ready_for_maintainer_to_generate_next_batch_after_MNEMOSYNE-064_review
+  - note: do not generate or run PRO-04 / DR3 / DR5 until maintainer verifies MNEMOSYNE-064; after acceptance, next recommended batch is PRO-04 only unless maintainer decides otherwise.
 - OP-08:
   - status: still_not_closed
-  - note: user-input governance and redaction/pointer controls are strengthened, but broader privacy/redaction/access-control remains open.
+  - note: user-input governance, redaction/pointer controls, and manual-import classification are strengthened, but broader privacy/redaction/access-control remains open.

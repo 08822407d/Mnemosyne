@@ -8,7 +8,8 @@
 - Keep detailed MNEMOSYNE-056 layout proposal as non-execution-source reference unless later promoted.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 - Review MNEMOSYNE-058 governance/support-instrument updates before first real target-project dry-run.
-- Use staged batches for PRO/DR prompt generation; current next prompt batch is PRO-02/PRO-03 only, pending maintainer review before PRO-04/DR3/DR5.
+- Use staged batches for PRO/DR prompt generation; B1 PRO-02/PRO-03 ingestion/hardening completed via MNEMOSYNE-063, and downstream prompt generation may proceed only after maintainer accepts MNEMOSYNE-064 sync repair.
+- Next dependency-aware prompt batch candidate after MNEMOSYNE-064 maintainer acceptance: PRO-04 first-target intake/form design; DR3/DR5 remain deferred until PRO-04 or maintainer decision clarifies dependency risk.
 
 ## Waiting for user decision
 
@@ -52,6 +53,9 @@
 - MNEMOSYNE-059: ingested DR4 corrected Deep Research prompt original and repaired post-058 current-state sync.
 - MNEMOSYNE-060: repaired post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target selected/materials ingested/target repo written.
 - MNEMOSYNE-061: added staged Pro/Deep Research prompt-generation guidance.
+- MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening applied.
+- MNEMOSYNE-063: ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls as non-execution-source support instruments.
+- MNEMOSYNE-064: repaired post-063 current-state sync residue.
 
 ## Historical detailed task list below
 
@@ -269,7 +273,7 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 
 ### Active now
 
-- [ ] Review MNEMOSYNE-063 B1 ingestion/hardening result before generating downstream PRO-04 / DR3 / DR5 prompts.
+- [ ] Review MNEMOSYNE-064 current-state sync repair before generating downstream PRO-04 / DR3 / DR5 prompts; recommended next batch after acceptance is PRO-04 only.
 
 ### Waiting for dry-run evidence
 
