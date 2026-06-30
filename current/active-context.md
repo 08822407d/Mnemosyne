@@ -256,3 +256,23 @@ References:
 
 - `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md`
 - `notes/codex-task-results/MNEMOSYNE-059-result.md`
+
+## MNEMOSYNE-062 / 063 B1 PRO-02 / PRO-03 checkpoint
+
+- MNEMOSYNE-062: blocked B1 PRO-02/PRO-03 ingestion because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
+- MNEMOSYNE-063: PRO-02/PRO-03 B1 results ingested; synthetic-smoke-test, approval-conflict, redaction-manifest, external-pointer, manual-import classification, originals-pointer, and lesson-candidate controls hardened as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
+- B1 PRO-02/PRO-03 repair task completed by MNEMOSYNE-063; maintainer should verify 063 before generating downstream PRO-04 / DR3 / DR5 prompts.
+- No real target-project dry-run has occurred.
+- No target project has been selected.
+- No target materials have been uploaded/ingested.
+- No target project repository has been written.
+
+References:
+
+- `notes/pro-review-results/MNEMOSYNE-PRO-02-v2-synthetic-target-project-smoke-test.md`
+- `notes/pro-review-results/MNEMOSYNE-PRO-03-v2-adversarial-failure-test.md`
+- `notes/synthetic-smoke-test-result-template.md`
+- `notes/manual-import-artifact-classification-v0.1.md`
+- `notes/target-project-workspace-skeleton-templates-v0.1.md`
+- `notes/codex-task-results/MNEMOSYNE-062-result.md`
+- `notes/codex-task-results/MNEMOSYNE-063-result.md`

@@ -211,3 +211,24 @@ Failure conditions:
 - every failure is blamed on model behavior;
 - target-specific defect is promoted globally;
 - P0 continues without containment.
+
+## Target input and synthetic-smoke-test adversarial review
+
+Check:
+
+- synthetic smoke-test evidence is not treated as real dry-run evidence;
+- legacy/prose approval fields do not override stricter structured `approval_record`;
+- redacted excerpts have paired manifests;
+- external pointers are non-secret and non-sensitive;
+- target-specific lesson candidates remain `target_project_specific` and `non_execution_source`;
+- no target-specific lesson is promoted globally without candidate review and user approval.
+
+```yaml
+lesson_candidate_review:
+  lesson_candidate:
+  authority_scope_required: target_project_specific
+  non_execution_source_required: true
+  global_promotion_requires:
+    - candidate_review
+    - user_approval
+```

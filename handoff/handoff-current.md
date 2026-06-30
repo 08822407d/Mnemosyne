@@ -98,3 +98,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - Future sessions should read `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md` when discussing handoff package correctness, quantitative scoring, replay strategy, model/tool provenance, or pre-first-target-dry-run readiness.
 - DR2 is not execution source and does not by itself modify current gates.
 - DR2 changed the current required gate only through user-approved MNEMOSYNE-053: the gate is now post-MNEMOSYNE-053 replay with maintainer scorecard review.
+
+## MNEMOSYNE-062 / 063 checkpoint
+
+- MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
+- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; downstream PRO-04 / DR3 / DR5 prompt generation waits for maintainer verification of 063.
+- No real target-project dry-run has occurred.
+- No target project has been selected.
+- No target materials have been uploaded/ingested.
+- No target project repository has been written.

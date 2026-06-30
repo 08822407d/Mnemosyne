@@ -57,3 +57,17 @@ Use task-specific prefixes when multiple files are uploaded.
 ## Boundaries
 
 The inbox is not execution source, not raw evidence by itself, and not canonical storage. Repository visibility and platform behavior are time-sensitive facts and must be reverified when relevant.
+
+## MNEMOSYNE-063 artifact classification gate
+
+Use `notes/manual-import-artifact-classification-v0.1.md` before moving files from `manual-import-inbox/` to canonical paths.
+
+Required classification rules:
+
+- Classify payloads before moving them; verify the classification after moving.
+- A full research report original requires full body and required sections.
+- Summary/link stubs must not become report originals.
+- Prompt originals must not be stored as report originals.
+- Pro review results must not be stored as Deep Research reports.
+- Synthetic smoke-test results must not be stored as real target dry-run results.
+- If classification is uncertain, hold for user instead of guessing.
