@@ -183,3 +183,44 @@ Overall dry-run `PASS` requires every `blocking: yes` check to be `pass`. `sever
   blocking: yes
   next_action:
 ```
+
+## MNEMOSYNE-063 preflight additions
+
+Result enum style: `pass | fail | not_tested | not_applicable | blocked`.
+
+### DRYRUN-PREFLIGHT — synthetic / real run separation
+
+- check_id: DRYRUN-PREFLIGHT-synthetic-real-run-separation
+  result: not_tested
+  blocking: yes
+  checks:
+    - If `run_kind: synthetic_smoke_test`, verify it is not represented as a real target project or real dry-run.
+    - If any real target field is true, require real target approvals and run manifest.
+
+### DRYRUN-PREFLIGHT — approval conflict resolution
+
+- check_id: DRYRUN-PREFLIGHT-approval-conflict-resolution
+  result: not_tested
+  blocking: yes
+  checks:
+    - If safety-critical structured approval fields conflict with legacy/prose fields, result is blocking fail / invalid until user clarifies.
+
+### DRYRUN-PREFLIGHT — redaction manifest pairing
+
+- check_id: DRYRUN-PREFLIGHT-redaction-manifest-pairing
+  result: not_tested
+  blocking: yes
+  checks:
+    - Any Git-stored redacted excerpt must have a redaction manifest.
+    - Missing manifest blocks ingestion / real dry-run.
+    - Apply `redacted_excerpt_storage_gate` from the run manifest.
+
+### DRYRUN-PREFLIGHT — external pointer safety
+
+- check_id: DRYRUN-PREFLIGHT-external-pointer-safety
+  result: not_tested
+  blocking: yes
+  checks:
+    - External pointers must not contain secrets, credentials, access tokens, signed URLs, private absolute paths, sensitive precise locations, or unapproved personal/confidential data.
+    - Missing pointer safety flags block ingestion / real dry-run.
+    - Apply `external_pointer_safety_gate` from the run manifest.

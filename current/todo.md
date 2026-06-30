@@ -264,3 +264,21 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 ### Recently completed
 
 - [x] MNEMOSYNE-058: PRO-01 audit and DR4 governance evidence ingested; Deep Research output-delivery exception added; first-dry-run support instruments repaired/hardened.
+
+## MNEMOSYNE-063 follow-up
+
+### Active now
+
+- [ ] Review MNEMOSYNE-063 B1 ingestion/hardening result before generating downstream PRO-04 / DR3 / DR5 prompts.
+
+### Waiting for dry-run evidence
+
+- No real target-project dry-run has occurred.
+- No target project has been selected.
+- No target materials have been uploaded/ingested.
+- No target-project repository has been written.
+
+### Recently completed
+
+- [x] MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were not present in `manual-import-inbox`; no hardening applied.
+- [x] MNEMOSYNE-063: ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls.

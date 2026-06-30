@@ -141,3 +141,54 @@ Rules:
 - Blank safety-critical approval fields are not approval.
 - `not_confirmed`, `pending`, `unknown`, or blank on no-target-write / workspace creation / user-input storage policy blocks real dry-run.
 - If first-dry-run support instruments conflict, follow: (1) `current/human-approved-spec.md`; (2) the user-approved actual run manifest; (3) onboarding/manifest templates; and record the conflict instead of merging instructions.
+
+## MNEMOSYNE-063 pre-target dry-run hardening
+
+```yaml
+synthetic_smoke_test_status:
+  synthetic_fixture_used: true | false
+  real_target_project_selected: true | false
+  real_target_project_dry_run_started: true | false
+  real_target_project_dry_run_passed: true | false
+  may_close_real_target_dry_run_gate: false
+
+approval_conflict_resolution:
+  safety_critical_conflict: blocks_run
+  permissive_legacy_field_cannot_override_approval_record: true
+  strictest_safety_interpretation_wins: true
+  required_action: user_clarification_or_manifest_reissue
+
+redacted_excerpt_storage_gate:
+  redacted_excerpt_in_git_requires_manifest: true
+  missing_manifest_blocks_ingestion_or_real_dry_run: true
+  required_fields:
+    - source_item_id
+    - original_storage_status
+    - redacted_file_path
+    - redaction_method
+    - removed_categories
+    - reviewer
+    - approved_by_user
+    - residual_risk
+    - git_history_exposure_acknowledged
+
+external_pointer_safety_gate:
+  forbidden_in_pointer:
+    - secrets
+    - credentials
+    - access_tokens
+    - signed_urls
+    - private_absolute_paths
+    - sensitive_precise_locations
+    - customer_or_confidential_names_unless_approved
+    - personal_data_unless_approved_and_safe
+  missing_safety_flags_blocks_git_storage: true
+```
+
+Rules:
+
+- If `run_kind: synthetic_smoke_test`, then `real_target_project_selected`, `real_target_project_dry_run_started`, and `real_target_project_dry_run_passed` must be `false`.
+- `synthetic_fixture_only`, `draft_only_not_real_approval`, `planned_path_not_created`, and `not_applicable_synthetic` are allowed status labels for synthetic smoke tests but are not real approvals.
+- If legacy fields conflict with `approval_record`, the manifest is invalid for real dry-run until clarified.
+- Blank/pending/unknown/not_confirmed/contradicted safety-critical fields block real dry-run.
+- A permissive prose sentence or legacy boolean cannot override stricter structured approval fields.

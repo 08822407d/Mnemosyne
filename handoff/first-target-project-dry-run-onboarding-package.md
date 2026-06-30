@@ -170,3 +170,20 @@ Producing this package does not start or pass a dry-run. The user must still sel
 - AI/human restatements are explanatory layer and cannot replace originals or user-approved decisions.
 - Sensitive originals/raw requirements default outside Git; use redacted references or external pointers unless safe and user-approved.
 - This package remains non-execution-source and does not authorize target selection, target workspace creation, target material ingestion, target repository writes, or a real dry-run.
+
+## MNEMOSYNE-063 pre-target hardening references
+
+Additional non-execution-source references:
+
+- `notes/synthetic-smoke-test-result-template.md`
+- `notes/manual-import-artifact-classification-v0.1.md`
+- `notes/target-project-workspace-skeleton-templates-v0.1.md`
+
+Rules for later use:
+
+- Synthetic smoke tests do not close the real target dry-run gate and must not be reported as real dry-run PASS.
+- If manual-imported PRO/DR files are used, classify full report vs summary/link stub vs prompt original vs Pro result before moving to canonical paths; use `notes/manual-import-artifact-classification-v0.1.md`.
+- Before creating a target workspace later, use target workspace skeleton templates to preserve pointer-only originals and non-execution-source banners.
+- Redacted excerpts require redaction manifests.
+- External pointers must not leak sensitive locations, credentials, tokens, signed URLs, private absolute paths, or unapproved personal/confidential details.
+- This onboarding package remains non-execution-source and does not authorize target selection, target workspace creation, target material ingestion, target repository writes, or a real dry-run.

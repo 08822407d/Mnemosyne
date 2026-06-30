@@ -82,3 +82,21 @@ target_runtime_truth_source:
 ```
 
 - Synthetic smoke-test evidence must not be reported as real dry-run evidence.
+
+## MNEMOSYNE-063 synthetic-smoke-test separation fields
+
+```yaml
+run_kind:
+smoke_test_verdict: PASS | PASS_WITH_WARNINGS | FAIL | BLOCKED
+synthetic_fixture_used:
+real_target_project_selected:
+real_target_project_dry_run_started:
+real_target_project_dry_run_passed:
+may_be_reported_as_real_dry_run_PASS: false
+```
+
+Rules:
+
+- A synthetic smoke-test result uses `smoke_test_verdict`, not `final_verdict`, for its synthetic result.
+- Synthetic smoke-test evidence must not be converted into real target dry-run PASS.
+- If `run_kind: synthetic_smoke_test`, then real target fields must remain false.

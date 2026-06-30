@@ -103,3 +103,25 @@ If sensitive material is found in Git or staged for Git:
 - This file is not execution source.
 - Broader OP-08 privacy/redaction/access-control remains open until explicitly closed.
 - Per-target storage policy still requires user approval.
+
+## 9. MNEMOSYNE-063 deterministic pre-target controls
+
+### Redacted excerpt storage gate
+
+Any redacted excerpt stored in Git requires a paired redaction manifest. Missing manifest blocks ingestion and blocks real target dry-run use. The manifest should record source item id, original storage status, redacted file path, redaction method, removed categories, reviewer, user approval, residual risk, and Git history exposure acknowledgement. This section corresponds to `redacted_excerpt_storage_gate` in the first-target run manifest.
+
+### External pointer safety gate
+
+External pointers must not contain secrets, credentials, access tokens, signed URLs, private absolute paths, sensitive precise locations, customer/confidential names unless approved, or personal data unless approved and safe. Missing pointer safety flags block Git storage, ingestion, and real target dry-run use. This section corresponds to `external_pointer_safety_gate` in the first-target run manifest.
+
+### `originals/` pointer-only default
+
+`originals/` remains pointer/README-only by default. Raw originals and raw requirements stay outside Git unless repository visibility, safety, explicit user approval, Git history exposure, owner/authority, allowed use, and retention are all recorded.
+
+### Restatement authority boundary
+
+AI/human restatements are explanatory interpretation only. They are not original requirements and not an approved baseline unless separately approved in a decision record.
+
+### Target-specific lesson candidates
+
+A target-specific `lesson_candidate` is non-execution-source by default. It must stay target-project-specific and requires candidate review, scope analysis, sensitivity review, and user approval before any global Mnemosyne promotion.
