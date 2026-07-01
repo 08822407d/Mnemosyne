@@ -9,7 +9,7 @@
 - Meta-Agent intake draft:
   - status: ingested_by_MNEMOSYNE-068
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-target-project-selection-complete-draft.yaml`
-- Meta-Agent draft run manifest package:
+- MNEMOSYNE-068 Meta-Agent draft run manifest package:
   - status: draft_for_user_review
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`
   - note: draft manifest package is not user-approved for real dry-run.
@@ -23,6 +23,12 @@
   - operator confirmation
   - workspace creation approval if needed
   - no-target-write proof
+- Post-068 temporal sync:
+  - status: repaired_by_MNEMOSYNE-069
+  - note: older checkpoints should not be rewritten to imply Meta-Agent had been selected before MNEMOSYNE-068; Meta-Agent selection is a current post-068 state only.
+- Meta-Agent dry-run nature:
+  - status: clarified_by_MNEMOSYNE-069
+  - note: planned dry-run is a controlled no-target-write real-target evaluation/design-package-generation run; it is not direct operational memory-system installation or target repository write for a Meta-Agent memory system.
 
 
 > Current execution source remains `current/human-approved-spec.md`. This file is not execution source.
