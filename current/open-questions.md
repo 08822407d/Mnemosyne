@@ -19,6 +19,30 @@
 - MNEMOSYNE-055 synchronized the post-053 replay reviewed PASS and repaired stale live post-050 gate wording.
 - Scorecard weights/thresholds remain recalibration candidates after more evidence.
 
+
+## MNEMOSYNE-066 PRO-04 / DR5 first-real-dry-run evaluation follow-up
+
+- PRO-04 v2 intake form:
+  - status: ingested_by_MNEMOSYNE-066
+  - verdict: READY_FOR_MAINTAINER_REVIEW
+  - note: forms support first target selection and approval intake; they do not select target, create workspace, ingest materials, or start dry-run.
+- DR5 first-real-dry-run evaluation framework:
+  - status: evidence_ingested_by_MNEMOSYNE-066
+  - report_id: RPT-2026Q2-FTDRE-0001
+  - note: real dry-run success requires evidence-backed, authority-bounded, no-target-write validation; artifact polish alone is insufficient.
+- First real dry-run scorecard:
+  - status: support_instrument_created_by_MNEMOSYNE-066
+  - note: critical blockers override score; PASS does not mean production-ready, target repository write approval, or global rule update approval.
+- Next user-facing route:
+  - status: ready_after_MNEMOSYNE-066_maintainer_review
+  - note: ask user for first target selection using intake forms; do not request raw material upload yet.
+- DR3:
+  - status: deferred
+  - note: project workspace/delivery-package industry-practice research remains optional after actual target intake/dry-run evidence clarifies need.
+- OP-08:
+  - status: still_not_closed
+  - note: DR4/DR5 and support instruments strengthen v0.1 governance, but broader privacy/redaction/access-control remains open.
+
 ## Current open questions
 
 - Post-MNEMOSYNE-053 fresh replay reviewed PASS has been synchronized by MNEMOSYNE-055; remaining first dry-run blockers are user target selection, authority/safe input/no-target-write approval, and approved run manifest.

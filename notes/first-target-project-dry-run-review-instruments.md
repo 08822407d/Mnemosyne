@@ -232,3 +232,19 @@ lesson_candidate_review:
     - candidate_review
     - user_approval
 ```
+
+## First real dry-run evaluation review
+
+Read:
+
+- `notes/first-real-target-dry-run-evaluation-framework-v0.1.md`
+- `notes/first-real-target-dry-run-scorecard-v0.1.md`
+- `notes/first-real-target-dry-run-postmortem-template.md`
+- `notes/mnemosyne-regression-test-record-template.md`
+
+Review focus:
+
+- deterministic evidence before LLM judge;
+- LLM judge only for limited quality dimensions;
+- user confirmation for usefulness/risk acceptance;
+- no PASS-to-production/write/global-rule escalation.

@@ -287,3 +287,9 @@ References:
 - `notes/target-project-workspace-skeleton-templates-v0.1.md`
 - `notes/codex-task-results/MNEMOSYNE-062-result.md`
 - `notes/codex-task-results/MNEMOSYNE-063-result.md`
+
+## MNEMOSYNE-066 checkpoint
+
+- MNEMOSYNE-066: PRO-04 v2 intake design and DR5 first-real-dry-run evaluation research ingested; first-target intake forms, real-dry-run evaluation framework, scorecard, postmortem template, and regression test record template created as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
+- After MNEMOSYNE-066 maintainer verification, next safe action is to ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not ask for raw material upload yet.
+- Important references: `notes/pro-review-results/MNEMOSYNE-PRO-04-v2-first-target-intake-form-design.md`; `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/report-summaries/DR5_first_real_target_dry_run_evaluation_framework_summary.md`; `notes/first-target-project-intake-and-approval-forms-v0.1.md`; `notes/first-real-target-dry-run-evaluation-framework-v0.1.md`; `notes/first-real-target-dry-run-scorecard-v0.1.md`; `notes/first-real-target-dry-run-postmortem-template.md`; `notes/mnemosyne-regression-test-record-template.md`; `notes/codex-task-results/MNEMOSYNE-066-result.md`.

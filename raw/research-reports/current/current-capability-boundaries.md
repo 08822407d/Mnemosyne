@@ -42,3 +42,12 @@
 - AI/human restatements cannot be treated as original requirements or user-approved baseline.
 - Redaction manifests and external source pointers are recommended governance instruments before real target material intake.
 - Git history exposure persists beyond ordinary delete/move/revert; private repositories do not automatically authorize storing originals.
+
+## DR5 first real dry-run boundary additions — RC-2026Q2-first-target-dry-run-evaluation
+
+- First real dry-run success must be evidence-backed, authority-bounded, no-target-write validation in a real target context; artifact polish is insufficient.
+- Synthetic smoke test, tabletop dry-run, real target dry-run, target delivery, and target repository write must not be conflated.
+- Critical blockers override scoring; a blocked run cannot be evaluated as real target-project dry-run evidence.
+- Deterministic checks should establish boundary and evidence completeness; LLM-as-judge is limited to quality review; user confirmation remains required for usefulness/risk acceptance.
+- PASS does not mean production-ready, target repository write approved, target delivery accepted, or global Mnemosyne rule update approved.
+- DR5 is evidence only, not execution source.

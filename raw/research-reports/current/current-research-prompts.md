@@ -56,3 +56,9 @@ prompt_path: raw/research-reports/cycles/2026Q2-user-input-governance/research-p
 prompt_type: corrected_deep_research_prompt
 note: Research input only; not a report conclusion and not execution source. This corrected prompt requires the full Deep Research report body in the final answer and forbids summary+download-only report delivery.
 ```
+
+## Supplemental prompt — DR5 first real target-project dry-run evaluation
+
+| prompt_id | related_report_id | prompt_status | prompt_file | topic_title | notes |
+|---|---|---|---|---|---|
+| PROMPT-2026Q2-FTDRE-0001 | RPT-2026Q2-FTDRE-0001 | original_available | `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/research-prompts/originals/DR5_v2_first_real_target_dry_run_evaluation_framework_prompt.md` | DR5 first real target-project dry-run evaluation framework | Prompt is research input/provenance, not report evidence or execution source. |

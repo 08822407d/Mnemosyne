@@ -224,3 +224,7 @@ Result enum style: `pass | fail | not_tested | not_applicable | blocked`.
     - External pointers must not contain secrets, credentials, access tokens, signed URLs, private absolute paths, sensitive precise locations, or unapproved personal/confidential data.
     - Missing pointer safety flags block ingestion / real dry-run.
     - Apply `external_pointer_safety_gate` from the run manifest.
+
+## MNEMOSYNE-066 real dry-run blocker and evidence checks
+
+A run cannot be evaluated as real target-project dry-run evidence if any critical blocker from `notes/first-real-target-dry-run-scorecard-v0.1.md` is present. Scorecard evaluation happens only after blockers clear. Evidence package requirements include approved run manifest, target selection record, authority/source map, safe input ledger, storage policy, redaction/pointer review, no-target-write proof, handoff/delivery inventory, assumption/conflict log, postmortem, and regression candidates. User confirmation is required for usefulness and risk acceptance.

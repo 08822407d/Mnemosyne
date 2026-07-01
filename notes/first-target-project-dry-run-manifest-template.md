@@ -192,3 +192,7 @@ Rules:
 - If legacy fields conflict with `approval_record`, the manifest is invalid for real dry-run until clarified.
 - Blank/pending/unknown/not_confirmed/contradicted safety-critical fields block real dry-run.
 - A permissive prose sentence or legacy boolean cannot override stricter structured approval fields.
+
+## MNEMOSYNE-066 evaluation reference
+
+The real dry-run result must later be evaluated by `notes/first-real-target-dry-run-scorecard-v0.1.md` after blockers clear. Critical blockers include `target_not_selected`, `authority_missing`, `no_target_write_not_confirmed`, `unsafe_material_ingested`, `target_repository_written_without_approval`, `synthetic_evidence_reported_as_real_dry_run`, `target_workspace_treated_as_execution_source`, `target_runtime_truth_source_invented`, `user_originals_stored_unsafely`, and `missing_run_manifest_approval`. Manifest approval does not approve target repository write.
