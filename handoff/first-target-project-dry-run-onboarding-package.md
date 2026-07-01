@@ -199,6 +199,7 @@ PASS does not authorize target repository write, target delivery acceptance, or 
 
 ## MNEMOSYNE-068 Meta-Agent draft-manifest preparation note
 
+- For Meta-Agent, read `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md` before approving any real dry-run or workspace creation. The current draft package is provisional while external requirements analysis remains pending.
 - First target is now Meta-Agent for draft manifest preparation only.
 - Use `notes/target-project-intake-form-filling-guide-v0.1.md` for consistent target-intake completion.
 - Use `notes/first-target-project-intake-records/README.md` to understand the non-execution-source pre-workspace intake-record holding area.

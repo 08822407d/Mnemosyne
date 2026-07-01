@@ -13,3 +13,9 @@
 ## Current records
 
 - `meta-agent/`: Meta-Agent selected for draft manifest preparation only; no workspace created, no target materials ingested, no target repository written.
+
+## Meta-Agent alignment guard
+
+- `meta-agent/meta-agent-analysis-alignment-guard.md` records that Meta-Agent requirements analysis is still pending in an external dialogue.
+- Existing Meta-Agent draft run-manifest package is a provisional pre-analysis scaffold.
+- Do not use it as completed requirements analysis, approved design specification, operational memory-system build plan, or approved real dry-run manifest.
