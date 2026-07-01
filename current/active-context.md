@@ -11,16 +11,19 @@
 - Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review, but real dry-run has not started.
 
 
-### MNEMOSYNE-069 current blockers/gates
+### MNEMOSYNE-070 current blockers/gates
 
 - Current target state: Meta-Agent is selected for draft manifest preparation only.
+- Meta-Agent analysis alignment status: `pending_external_dialogue_handoff`; draft package status: provisional pre-analysis scaffold.
 - Still required before any real dry-run: approve final run manifest, resolve/confirm target runtime truth source, approve final safe input policy, operator confirmation, workspace creation approval if needed, and no-target-write proof.
-- Next user decision: approve, revise, or reject `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`.
+- Before approving any real Meta-Agent dry-run or workspace creation, user must either provide/approve an external-analysis handoff/intake alignment package or explicitly confirm that the current draft is sufficient despite pending external analysis.
+- The Meta-Agent draft run manifest package is provisional and must not be used as completed requirements analysis, approved design spec, final memory-system build plan, or operational memory-system installation plan.
+- Next user decision: review `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md` only as a provisional pre-analysis scaffold, then provide/approve external-analysis handoff/intake alignment or explicitly confirm the current draft is sufficient despite pending external analysis.
 - If approved later, the planned dry-run is a controlled no-target-write real-target dry-run/evaluation that should produce an offline Meta-Agent memory-system design package and evidence/postmortem artifacts; it does not directly create or install an operational Meta-Agent memory system.
 - Do not upload raw materials yet.
 - Do not create `target-projects/meta-agent/` unless separately approved.
 - Do not ingest target materials, start real dry-run, or write target repository before explicit approvals.
-- Reference the non-execution-source guide `notes/target-project-intake-form-filling-guide-v0.1.md` and intake-record holding area `notes/first-target-project-intake-records/README.md`.
+- Reference the non-execution-source guide `notes/target-project-intake-form-filling-guide-v0.1.md`, intake-record holding area `notes/first-target-project-intake-records/README.md`, and guard `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md`.
 - No real target-project dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -33,6 +36,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; Meta-Agent requirements analysis remains pending in an external dialogue, and the existing draft run-manifest package is marked as a provisional pre-analysis scaffold; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
 - MNEMOSYNE-069: repaired post-068 temporal current-state contamination so older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; clarified Meta-Agent dry-run route as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
 - MNEMOSYNE-068: Meta-Agent intake draft and draft run-manifest package ingested as non-execution-source pre-workspace intake records; target-project intake filling guide created; Meta-Agent is selected for draft manifest preparation only; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
 - MNEMOSYNE-040: DR1 memory-system testing/debugging/evaluation evidence ingested as `RC-2026Q2-memory-testing`; DR1 is evidence only, not execution source.
@@ -65,7 +69,9 @@
 ### current blockers/gates
 
 - Post-MNEMOSYNE-053 fresh ordinary Thinking replay has reviewed PASS with `quality_band: strong`; the replay-quality portion of the first-target dry-run gate is satisfied.
-- Next gate: user must approve, revise, or reject the Meta-Agent draft run manifest package, then approve authority/safe input/no-target-write/run manifest before any real target-project dry-run.
+- Next gate: user must review the Meta-Agent draft run manifest package only as a provisional pre-analysis scaffold, then provide/approve external-analysis handoff/intake alignment or explicitly confirm the current draft is sufficient despite pending external analysis before any real Meta-Agent dry-run or workspace creation.
+- Before approving any real Meta-Agent dry-run or workspace creation, user must either provide/approve an external-analysis handoff/intake alignment package or explicitly confirm that the current draft is sufficient despite pending external analysis.
+- The Meta-Agent draft run manifest package is provisional and must not be used as completed requirements analysis, approved design spec, final memory-system build plan, or operational memory-system installation plan.
 - Target-project workspace principle is now in execution source; detailed MNEMOSYNE-056 proposal remains a non-execution-source design reference.
 - Before first real target-project dry-run, user must still select target, approve authority/source map, approve safe input/originals storage policy, confirm no-target-write, and approve run manifest.
 - No real target-project dry-run has occurred.
@@ -80,7 +86,7 @@
 ### current next route
 
 - Current target state: Meta-Agent is selected for draft manifest preparation only.
-- Next user decision: approve, revise, or reject `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`.
+- Next user decision: review `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md` only as a provisional pre-analysis scaffold, then provide/approve external-analysis handoff/intake alignment or explicitly confirm the current draft is sufficient despite pending external analysis.
 - If approved later, the planned dry-run is a controlled no-target-write real-target dry-run/evaluation that should produce an offline Meta-Agent memory-system design package and evidence/postmortem artifacts; it does not directly create or install an operational Meta-Agent memory system.
 - Do not upload raw materials yet.
 - Do not create `target-projects/meta-agent/` unless separately approved.
@@ -88,6 +94,7 @@
 
 ### important non-execution-source references
 
+- `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md` for the Meta-Agent analysis-alignment guard before any real dry-run or workspace approval.
 - `notes/first-target-project-fresh-replay-protocol.md` for the post-053 fresh ordinary Thinking startup/handoff replay protocol.
 - `notes/replay-results/MNEMOSYNE-post-053-fresh-replay-reviewed-pass.md` for the reviewed post-053 replay PASS record.
 - `notes/codex-task-results/MNEMOSYNE-055-result.md` for replay PASS synchronization and stale open-questions repair.

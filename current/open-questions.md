@@ -29,6 +29,13 @@
 - Meta-Agent dry-run nature:
   - status: clarified_by_MNEMOSYNE-069
   - note: planned dry-run is a controlled no-target-write real-target evaluation/design-package-generation run; it is not direct operational memory-system installation or target repository write for a Meta-Agent memory system.
+- Meta-Agent requirements-analysis alignment:
+  - status: pending_external_dialogue_handoff
+  - note: another conversation is still analyzing/aligning the concrete Meta-Agent requirements; current draft package is provisional and must not contaminate later actual memory-system build work.
+- Meta-Agent draft package contamination guard:
+  - status: created_by_MNEMOSYNE-070
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md`
+  - note: draft package is a provisional pre-analysis scaffold, not completed requirements analysis, approved design spec, final build plan, operational memory-system installation, or approved real dry-run manifest.
 
 
 > Current execution source remains `current/human-approved-spec.md`. This file is not execution source.
