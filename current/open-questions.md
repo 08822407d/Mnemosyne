@@ -1,5 +1,30 @@
 # Open Questions
 
+## MNEMOSYNE-068 Meta-Agent first-target intake follow-up
+
+- Meta-Agent target selection:
+  - status: selected_for_draft_manifest_preparation_by_user_confirmation
+  - target_project_id_candidate: meta-agent
+  - note: this does not approve real dry-run, workspace creation, material ingestion, or target repository write.
+- Meta-Agent intake draft:
+  - status: ingested_by_MNEMOSYNE-068
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-target-project-selection-complete-draft.yaml`
+- Meta-Agent draft run manifest package:
+  - status: draft_for_user_review
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`
+  - note: draft manifest package is not user-approved for real dry-run.
+- Target-project intake filling guide:
+  - status: created_by_MNEMOSYNE-068
+  - note: non-execution-source guidance for completing target intake consistently; not an execution-source requirement by itself.
+- Still unresolved before real dry-run:
+  - target_runtime_truth_source
+  - final run manifest approval
+  - final safe input policy approval
+  - operator confirmation
+  - workspace creation approval if needed
+  - no-target-write proof
+
+
 > Current execution source remains `current/human-approved-spec.md`. This file is not execution source.
 
 ## Current corrections
@@ -49,7 +74,7 @@
 ## Current open questions
 
 - Post-MNEMOSYNE-053 fresh replay reviewed PASS has been synchronized by MNEMOSYNE-055; remaining first dry-run blockers are user target selection, authority/safe input/no-target-write approval, and approved run manifest.
-- Which first target project will be selected after post-053 replay reviewed PASS? No target project has been selected.
+- Which first target project will be selected after post-053 replay reviewed PASS? Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - What authority/safe input/no-target-write approvals, source map, and approved run manifest will the user provide? No real target-project dry-run has occurred; no target materials have been uploaded/ingested; no target repository has been written.
 - Should any D-01/D-03/D-04/D-05 candidate wording be promoted later? (separate approval only)
 - OP-08 remains partially addressed; OP-09/OP-10 remain partially answered by DR1.

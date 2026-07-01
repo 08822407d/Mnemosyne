@@ -22,19 +22,20 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-056 created a non-execution-source proposal for target-project workspace boundaries and layout. It treats target-project content inside the Mnemosyne repo as an intentional workspace pattern, not merely a Codex Cloud workaround.
 - MNEMOSYNE-057 promoted the minimal target-project workspace principle into execution source and updated first dry-run manifest/onboarding materials; the detailed MNEMOSYNE-056 proposal remains non-execution-source reference.
 - MNEMOSYNE-058 processed PRO-01 and DR4, repaired first-dry-run support-instrument drift, added user-input storage governance guidance, fixed Deep Research output-delivery rule, and strengthened manifest/onboarding approval/status fields.
-- MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; Meta-Agent selected for draft manifest preparation only, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; Meta-Agent selected for draft manifest preparation only, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
 - MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
 - MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls.
 - MNEMOSYNE-064 repaired post-063 current-state sync residue.
 - MNEMOSYNE-065 moved B1 PRO-02/PRO-03 follow-up into the current open-questions section.
 - MNEMOSYNE-066 ingested PRO-04 v2 and DR5, created first-target intake/evaluation/scorecard/postmortem/regression support instruments, and preserved no-target/no-dry-run/no-material/no-write boundaries.
-- MNEMOSYNE-067 repaired post-066 active/handoff current-state sync; after maintainer verification, the next safe action is user target selection intake using `notes/first-target-project-intake-and-approval-forms-v0.1.md`.
+- MNEMOSYNE-067 repaired post-066 active/handoff current-state sync.
+- MNEMOSYNE-068 ingested the Meta-Agent intake draft and draft run-manifest package as non-execution-source pre-workspace intake records, created the target-project intake filling guide, and selected Meta-Agent for draft manifest preparation only; no workspace/material/dry-run/target-write occurred.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
-- Next route: user target selection intake first, then approval of authority/safe input/no-target-write/run manifest before any real dry-run.
+- Next route: review the Meta-Agent draft run manifest package, then approval of authority/safe input/no-target-write/run manifest before any real dry-run.
 - No real target-project dry-run has occurred.
-- No target project has been selected.
+- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 
@@ -83,10 +84,10 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-053: minimal DR2 handoff-correctness principle adopted into execution source; handoff package strategy and replay scorecard created as non-execution-source instruments; first-target replay protocol updated to post-053 scoring/review semantics.
 - MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) synchronized; stale open-questions gate wording repaired.
 - MNEMOSYNE-056: target-project workspace boundary/layout proposal created as non-execution-source candidate design; no target project selected, no target materials ingested, no target repository written, and execution source unchanged.
-- MNEMOSYNE-057: minimal target-project workspace principle promoted into execution source and first dry-run manifest/onboarding updated; no target project selected, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; no target project selected, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-057: minimal target-project workspace principle promoted into execution source and first dry-run manifest/onboarding updated; Meta-Agent selected for draft manifest preparation only, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; Meta-Agent selected for draft manifest preparation only, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; Meta-Agent selected for draft manifest preparation only, no target workspace created, no target materials ingested, no target repository written.
+- MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; Meta-Agent selected for draft manifest preparation only, no target workspace created, no target materials ingested, no target repository written.
 - MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
 - MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
 - MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; later PRO-04/DR5 ingestion completed in MNEMOSYNE-066.
@@ -97,11 +98,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. After maintainer accepts MNEMOSYNE-067, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`.
-2. Do not request raw material upload yet.
-3. Draft run manifest/source map/storage policy only after target intake answers.
-4. Do not create target workspace, ingest target materials, start real dry-run, or write target repository before explicit approvals.
-5. Use `notes/first-real-target-dry-run-scorecard-v0.1.md` only after a future approved real dry-run has run; PASS does not approve target repo write or global rule updates.
+1. Review the Meta-Agent draft run manifest package.
+2. Ask user to approve, revise, or reject it.
+3. Do not upload raw materials yet.
+4. Do not create `target-projects/meta-agent/` unless separately approved.
+5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 
@@ -115,7 +116,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
 - MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; MNEMOSYNE-064 and MNEMOSYNE-065 repaired B1 current-state residue, and MNEMOSYNE-066 later completed PRO-04/DR5 ingestion. Historical downstream prompt-generation guidance from this checkpoint is superseded by the MNEMOSYNE-067 next route.
 - No real target-project dry-run has occurred.
-- No target project has been selected.
+- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target materials have been uploaded/ingested.
 - No target project repository has been written.
 
@@ -124,8 +125,18 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-066 ingested PRO-04 v2 and DR5, created first-target intake/evaluation/scorecard/postmortem/regression support instruments, and preserved no-target/no-dry-run/no-material/no-write boundaries.
 - MNEMOSYNE-067 repaired post-066 active/handoff current-state sync and opened first-target intake route.
 
-1. After maintainer accepts MNEMOSYNE-067, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`.
-2. Do not request raw material upload yet.
-3. Draft run manifest/source map/storage policy only after target intake answers.
-4. Do not create target workspace, ingest target materials, start real dry-run, or write target repository before explicit approvals.
-5. Use `notes/first-real-target-dry-run-scorecard-v0.1.md` only after a future approved real dry-run has run; PASS does not approve target repo write or global rule updates.
+1. Review the Meta-Agent draft run manifest package.
+2. Ask user to approve, revise, or reject it.
+3. Do not upload raw materials yet.
+4. Do not create `target-projects/meta-agent/` unless separately approved.
+5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
+
+## MNEMOSYNE-068 references
+
+- `notes/target-project-intake-form-filling-guide-v0.1.md`
+- `notes/first-target-project-intake-records/README.md`
+- `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.

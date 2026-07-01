@@ -38,8 +38,11 @@
 7. `notes/first-target-project-dry-run-review-instruments.md`
 8. `notes/memory-system-issue-log-template.md`
 9. `notes/first-target-project-dry-run-result-template.md`
-10. Actual approved run manifest, when one exists.
-11. Target safe sources, when selected and approved.
+10. `notes/target-project-intake-form-filling-guide-v0.1.md`
+11. `notes/first-target-project-intake-records/README.md`
+12. `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md` (current pre-workspace draft record for maintainer/user review; not approved for real dry-run)
+13. Actual approved run manifest, when one exists.
+14. Target safe sources, when selected and approved.
 
 An ordinary executor should not need to read full large template packs before starting. Use large template packs only as references when a specific design detail requires them.
 
@@ -52,7 +55,7 @@ The ordinary replay executor does not need to read these two files unless a sepa
 
 ## 4. Target and scope
 
-- Target not selected yet.
+- First target is now Meta-Agent for draft manifest preparation only; no real dry-run is approved.
 - This package is design-only.
 - Do not write to any target project.
 - Use safe input only: public, synthetic, or explicitly redacted material unless separately approved for the current repository visibility/use.
@@ -193,3 +196,11 @@ Rules for later use:
 Before a real dry-run, use `notes/first-target-project-intake-and-approval-forms-v0.1.md` and the run manifest approval flow. During and after a real dry-run, use `notes/first-real-target-dry-run-evaluation-framework-v0.1.md` and `notes/first-real-target-dry-run-scorecard-v0.1.md`. After a dry-run, use `notes/first-real-target-dry-run-postmortem-template.md` and `notes/mnemosyne-regression-test-record-template.md` for lessons, repairs, and regression candidates.
 
 PASS does not authorize target repository write, target delivery acceptance, or execution-source updates.
+
+## MNEMOSYNE-068 Meta-Agent draft-manifest preparation note
+
+- First target is now Meta-Agent for draft manifest preparation only.
+- Use `notes/target-project-intake-form-filling-guide-v0.1.md` for consistent target-intake completion.
+- Use `notes/first-target-project-intake-records/README.md` to understand the non-execution-source pre-workspace intake-record holding area.
+- Use `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md` as the current pre-workspace draft manifest package after maintainer verification.
+- Still do not create target workspace, ingest materials, start a real dry-run, or write a target repository before explicit approvals.
