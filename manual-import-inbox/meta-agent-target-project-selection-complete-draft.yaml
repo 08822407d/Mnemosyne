@@ -1,0 +1,167 @@
+# Meta-Agent Target Project Selection and Approval Intake — Complete Draft
+# status: complete_draft_for_user_review
+# artifact_role: first-target-project selection / approval intake draft
+# execution_source: false
+# run_manifest: false
+# target_repository_write_authority: false
+# target_workspace_creation_authority: false
+#
+# Important:
+# - This draft does not authorize a real target-project dry-run.
+# - This draft does not authorize target workspace creation.
+# - This draft does not authorize target material ingestion.
+# - This draft does not authorize target repository writes.
+# - A separate user-approved run manifest is still required before any real dry-run.
+
+target_project_selection:
+  target_project_name: "Meta-Agent"
+  target_project_id_candidate: "meta-agent"
+  target_project_type: "ai_agent_project / long_term_research / software_development_methodology / hybrid_or_unknown"
+  owner_or_decision_authority: "用户本人（项目 Owner / 最终裁决者 / 学习者）"
+  why_this_target_first: >
+    Meta-Agent 是当前对话中已经形成较清晰轮廓的真实/半真实目标项目。
+    它能测试 Mnemosyne 是否可以把一个仍未完全定型的高层 Agent 构想，
+    转换为 Target Project Intake、Memory System Design Spec、delivery/handoff/review 草案，
+    并暴露目标项目模板、记忆分层、工具路由、人类裁决边界和评估流程的缺口。
+
+    Meta-Agent 的本体目标仍是通用目的：设计单 Agent、多 Agent 团队、工作流、
+    记忆结构、工具/模型路由和人工裁决边界。
+    但早期真实实践会自然偏向软件开发场景，因为用户的高频需求集中在软件工程，
+    且软件工程已有大量成熟经验和持续涌现的最佳实践，可作为早期高质量孵化样本。
+    这不改变 Meta-Agent 的通用目的定位。
+  expected_value_of_dry_run: >
+    验证 Mnemosyne 能否处理一个复杂但真实的 AI Agent 设计项目：
+    1) 从不完整项目构想中形成结构化 intake；
+    2) 保持通用 Meta-Agent 与软件开发重点实践场景之间的边界；
+    3) 设计项目级外部记忆与 handoff；
+    4) 区分元方法论资产、项目阶段性材料、research evidence、candidate improvements 和 target-specific examples；
+    5) 初步测试“轻量评估体系 + 人工 review gate + claim/verify 分离”的可操作性；
+    6) 识别 Mnemosyne 模板在复杂 target-project 场景下的缺口；
+    7) 验证 target-project workspace 机制是否能支持先在 Mnemosyne 仓库内做 staging/design/export，
+       后续再通过 git 或人工操作迁移到具体项目仓库。
+  known_non_goals:
+    - "不在本次 intake / selection draft 中实现完整 Meta-Agent 产品。"
+    - "不在本次草案中启动真实 target-project dry-run。"
+    - "不默认创建真实可运行的多 Agent 框架。"
+    - "不默认启用 MCP、RAG、GitHub Actions、自动写回、自动索引或多 Agent 自动协调。"
+    - "不默认写入任何目标项目仓库。"
+    - "不默认创建 target workspace。"
+    - "不默认摄入 target materials 或用户原始材料。"
+    - "不把 01-05 Deep Research 报告直接当作最终设计或执行源。"
+    - "不把软件开发场景等同于 Meta-Agent 的全部本体。"
+    - "不把丢失的完整原始对话内容补编为事实。"
+    - "不把私有原文、未脱敏资料、secrets、credentials 或 confidential/customer materials 存入仓库。"
+    - "不让 Meta-Agent 自动修改自己的核心方法论；项目反馈进入方法论前必须经过 review / candidate / user approval。"
+  raw_material_upload_now: "no"
+
+authority_source_map:
+  user_decision_authority: "用户本人；所有目标、价值取舍、高风险边界、方法论正式更新和最终设计采纳均需用户确认。"
+  target_owner: "用户本人"
+  allowed_sources:
+    - "当前对话中用户明确给出的 Meta-Agent 构想、澄清和确认。"
+    - "用户提供的 Meta-Agent 深度研究课题版总结；完整原对话已丢失，因此只能作为 summary-level raw description 使用。"
+    - "已上传的 01-05 Meta-Agent Deep Research 报告，作为 research evidence / design input candidates，需先接收复核。"
+    - "Mnemosyne 仓库当前执行源与启动/交接规则，用于约束 Mnemosyne 自身操作边界。"
+    - "Mnemosyne 当前 first-target intake / approval / run-manifest 支持文件，用于解释本表单字段。"
+    - "公开资料、官方文档和可验证当前事实；涉及工具/平台能力时必须标注时效性。"
+    - "明确脱敏摘录、合成替代材料或 external pointer only。"
+  forbidden_sources:
+    - "已经丢失的完整原始对话记录；不得凭空补写其内容。"
+    - "模型内部 memory 中未由用户或文件确认的内容。"
+    - "未脱敏私有源码、客户/商业机密、个人敏感信息、secrets、credentials、tokens、账号信息。"
+    - "未经核验的工具/模型/服务当前能力假设。"
+    - "将 research reports、handoff、active-context、candidate、task result、scorecard、replay output 或本草案本身当作 execution source。"
+    - "未获用户授权的目标项目仓库内容或外部私有资料。"
+  source_priority_order:
+    - "1. 用户在当前对话中的明确决策、确认和纠正。"
+    - "2. Mnemosyne 的 current/human-approved-spec.md，仅用于 Mnemosyne 操作边界。"
+    - "3. 用户批准的实际 run manifest（未来若创建并批准）。"
+    - "4. 当前对话中已形成的 Meta-Agent 回顾性需求理解和用户澄清。"
+    - "5. 用户提供的 Meta-Agent 总结版 raw description。"
+    - "6. 01-05 Deep Research 报告，经接收复核后作为 research evidence。"
+    - "7. 可验证的当前公开/官方资料。"
+    - "8. AI 推断；必须标注为 assumption / needs_user_confirmation，不得作为事实或权限来源。"
+  target_runtime_truth_source: "none_declared_yet"
+  conflict_resolution_rule: >
+    对 Mnemosyne 操作边界，current/human-approved-spec.md 优先。
+    对 Meta-Agent 目标项目设计，用户明确确认的目标、边界和后续 approved target spec / approved run manifest 优先。
+    target-projects/meta-agent/ 可在后续批准后作为 Mnemosyne 内部 target workspace，
+    但不会自动成为 Meta-Agent 的 target runtime truth source。
+    Deep Research、handoff、candidate、review notes、active context、task result、scorecard、replay output 和本文件都不能覆盖已确认的执行源或用户批准的 owner rule。
+    若来源冲突，记录为 open question / needs_user_confirmation；不得静默合并、默认补全或自行设定权限。
+  approval_status: "draft_completed_by_user_confirmation; pending_run_manifest_approval"
+
+safe_input_policy:
+  repository_visibility_checked: "checked_currently_public_for_this_selection_draft; no_raw_material_upload_now; must_reverify_before_any_import_or_staging"
+  permitted_material_categories:
+    - "public_project_description"
+    - "synthetic_substitute"
+    - "explicitly_redacted_excerpt"
+    - "external_pointer_only"
+  user_originals_storage_default: "outside_git_pointer_only"
+  store_raw_originals_in_repo: "no"
+  retention_note: >
+    当前阶段只使用用户在对话中给出的总结、澄清和已上传的 Deep Research 报告进行设计前复核。
+    本 draft 不要求用户上传 raw materials。
+    如果未来需要将材料导入或 staging 到 Mnemosyne 仓库，必须先重新执行 visibility / sensitivity preflight。
+    当前已核验仓库 visibility 为 public；因此在 public 或 visibility 未核实时，只允许 staging 公开、合成或明确脱敏材料。
+    完整原始对话已丢失，不应被补造。
+    若未来找回原始对话或其他用户原始材料，也应优先使用 external pointer / selected explicitly redacted excerpts，
+    而不是默认完整入库。
+    不得提交 secrets、credentials、private source、customer/confidential material 或未批准 personal data。
+  approval_status: "draft_completed_by_user_confirmation; pending_reverification_before_any_import_or_staging"
+
+target_workspace:
+  proposed_root: "target-projects/meta-agent/"
+  exception_requested: false
+  exception_path_if_any: ""
+  create_now: false
+  creation_requires_explicit_later_approval: true
+  note: >
+    target-projects/meta-agent/ 是后续可批准的 Mnemosyne target workspace 标准路径。
+    该 workspace 当前不创建。
+    即使未来创建，它也不是 Mnemosyne execution source，
+    且不会自动成为 Meta-Agent 的 target runtime truth source。
+    其作用应限定为 target-specific staging / design / export / dry-run / feedback workspace，
+    除非用户在目标项目 owner rule 或 approved run manifest 中另行批准其角色。
+
+no_target_write_confirmation:
+  target_repository_if_any: "none_declared_yet; future external Meta-Agent repository possible but not selected or approved"
+  target_repository_write_allowed: false
+  target_workspace_write_allowed: "false_until_explicit_approval"
+  user_confirmed: "confirmed_no_target_write_for_selection_draft_only"
+  operator_confirmed: "pending_until_manifest"
+  note: >
+    用户已接受本草案按 no-target-write selection/intake draft 处理。
+    当前不写目标项目仓库，不创建 target workspace，不摄入 target materials。
+    任何真实 dry-run、target workspace creation、target material ingestion 或 target repository write
+    仍需后续明确批准和 approved run manifest。
+
+next_step:
+  proceed_to_draft_run_manifest_next: "ask_me_first"
+  note: >
+    本 target selection / approval intake 完整草案完成后，下一步不自动进入真实 dry-run。
+    是否起草 run manifest 需先询问用户。
+    即使未来起草 run manifest，manifest draft 本身也不授权真实 dry-run、target workspace creation、target material ingestion 或 target repository write。
+
+unresolved_items_after_this_draft:
+  - field: "target_runtime_truth_source"
+    current_value: "none_declared_yet"
+    reason: >
+      Meta-Agent 尚未声明独立目标项目仓库、目标项目本地 manifest 或 owner rule。
+      target-projects/meta-agent/ 未来可作为 target workspace，但不会自动成为 runtime truth source。
+  - field: "target_repository_if_any"
+    current_value: "none_declared_yet; future external Meta-Agent repository possible but not selected or approved"
+    reason: >
+      当前未选择或批准独立 Meta-Agent target repository。
+      后续若用户创建或指定外部仓库，可在 run manifest 或 target owner rule 中更新。
+  - field: "operator_confirmed"
+    current_value: "pending_until_manifest"
+    reason: >
+      当前只是 selection/intake 草案。
+      operator confirmation 应在后续 run manifest / execution planning 阶段完成。
+  - field: "run_manifest"
+    current_value: "not_created"
+    reason: >
+      用户尚未要求生成 run manifest。
+      next_step 设置为 ask_me_first。
