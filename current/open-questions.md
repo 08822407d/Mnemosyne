@@ -33,8 +33,11 @@
 - First real dry-run scorecard:
   - status: support_instrument_created_by_MNEMOSYNE-066
   - note: critical blockers override score; PASS does not mean production-ready, target repository write approval, or global rule update approval.
+- Post-066 current-state sync:
+  - status: repaired_by_MNEMOSYNE-067
+  - note: MNEMOSYNE-066 created the required support instruments, but maintainer verification found active-context/handoff high-signal current-route wording still lagged; MNEMOSYNE-067 repairs that sync.
 - Next user-facing route:
-  - status: ready_after_MNEMOSYNE-066_maintainer_review
+  - status: ready_after_MNEMOSYNE-067_maintainer_review
   - note: ask user for first target selection using intake forms; do not request raw material upload yet.
 - DR3:
   - status: deferred

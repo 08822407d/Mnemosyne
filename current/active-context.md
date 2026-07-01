@@ -40,6 +40,9 @@
 - MNEMOSYNE-062: B1 PRO-02/PRO-03 ingestion task was blocked because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
 - MNEMOSYNE-063: completed B1 PRO-02/PRO-03 ingestion after payload staging; added synthetic-smoke-test, manual-import classification, target-workspace skeleton, approval-conflict, redaction-manifest, external-pointer, originals-pointer, and lesson-candidate controls as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
 - MNEMOSYNE-064: repaired post-063 current-state sync residue; no execution source changed and no target-project action occurred.
+- MNEMOSYNE-065: moved the B1 PRO-02/PRO-03 follow-up into the current open-questions section; no target action occurred.
+- MNEMOSYNE-066: PRO-04 v2 intake design and DR5 first-real-dry-run evaluation research ingested; first-target intake forms, real-dry-run evaluation framework, scorecard, postmortem template, and regression test record template created as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
+- MNEMOSYNE-067: repaired post-066 active/handoff current-state sync and opened the first-target intake route; no target project selected, no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
 
 ### current blockers/gates
 
@@ -57,11 +60,9 @@
 
 ### current next route
 
-- Prepare for user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals before any real target-project dry-run.
-- Use `target-projects/<target_project_id>/` as the default target workspace root unless the user approves an exception; detailed MNEMOSYNE-056 layout remains a non-execution-source reference.
-- Do not start target dry-run, choose target, or upload target material before user approval.
-- DR2 scoring/provenance/template recommendations adopted by MNEMOSYNE-053 remain bounded to the approved principle, strategy, scorecard, and replay protocol updates; DR2 research itself is still not execution source.
-- B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; maintainer may now generate the next dependency-aware prompt batch, likely PRO-04 first, if no further residue is found.
+- After MNEMOSYNE-067 maintainer verification, next safe action is to ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not request raw material upload yet.
+- Draft run manifest / authority-source-map / safe-input policy only after target intake answers.
+- Do not create a target workspace, ingest target materials, start a real dry-run, or write a target repository before explicit approvals.
 
 ### important non-execution-source references
 
@@ -90,7 +91,17 @@
 - `notes/target-project-workspace-skeleton-templates-v0.1.md` for future target workspace skeleton guidance.
 - `notes/codex-task-results/MNEMOSYNE-062-result.md` for the blocked B1 ingestion attempt.
 - `notes/codex-task-results/MNEMOSYNE-063-result.md` for completed B1 ingestion/hardening.
-- `notes/codex-task-results/MNEMOSYNE-064-result.md` for this current-state sync repair.
+- `notes/codex-task-results/MNEMOSYNE-064-result.md` for the post-063 current-state sync repair.
+- `notes/pro-review-results/MNEMOSYNE-PRO-04-v2-first-target-intake-form-design.md` for PRO-04 v2 first-target intake form design evidence.
+- `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/report-summaries/DR5_first_real_target_dry_run_evaluation_framework_summary.md` for DR5 first-real-dry-run evaluation evidence.
+- `notes/first-target-project-intake-and-approval-forms-v0.1.md` for first target-project selection and approval intake.
+- `notes/first-real-target-dry-run-evaluation-framework-v0.1.md` for future approved real dry-run evaluation framing.
+- `notes/first-real-target-dry-run-scorecard-v0.1.md` for future approved real dry-run scoring after a real dry-run has run.
+- `notes/first-real-target-dry-run-postmortem-template.md` for future approved real dry-run postmortem capture.
+- `notes/mnemosyne-regression-test-record-template.md` for future regression record candidates.
+- `notes/codex-task-results/MNEMOSYNE-065-result.md` for B1 open-questions follow-up sync.
+- `notes/codex-task-results/MNEMOSYNE-066-result.md` for PRO-04/DR5 ingestion and support-instrument creation.
+- `notes/codex-task-results/MNEMOSYNE-067-result.md` for post-066 active/handoff sync repair.
 - `manual-import-inbox/README.md` and `notes/manual-import-inbox-workflow.md` for import tasks only.
 - Research current views under `raw/research-reports/current/` for tool/capability/new mechanism/target-project design questions.
 
@@ -272,7 +283,7 @@ References:
 
 - MNEMOSYNE-062: blocked B1 PRO-02/PRO-03 ingestion because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
 - MNEMOSYNE-063: PRO-02/PRO-03 B1 results ingested; synthetic-smoke-test, approval-conflict, redaction-manifest, external-pointer, manual-import classification, originals-pointer, and lesson-candidate controls hardened as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, and no target repository written.
-- B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; downstream PRO-04 / DR3 / DR5 prompt generation waits for maintainer verification of 064; recommended next batch after acceptance is PRO-04 only.
+- B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; later PRO-04/DR5 ingestion completed via MNEMOSYNE-066; this historical route is superseded by MNEMOSYNE-067.
 - No real target-project dry-run has occurred.
 - No target project has been selected.
 - No target materials have been uploaded/ingested.
@@ -287,9 +298,3 @@ References:
 - `notes/target-project-workspace-skeleton-templates-v0.1.md`
 - `notes/codex-task-results/MNEMOSYNE-062-result.md`
 - `notes/codex-task-results/MNEMOSYNE-063-result.md`
-
-## MNEMOSYNE-066 checkpoint
-
-- MNEMOSYNE-066: PRO-04 v2 intake design and DR5 first-real-dry-run evaluation research ingested; first-target intake forms, real-dry-run evaluation framework, scorecard, postmortem template, and regression test record template created as non-execution-source support instruments; no target project selected, no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
-- After MNEMOSYNE-066 maintainer verification, next safe action is to ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not ask for raw material upload yet.
-- Important references: `notes/pro-review-results/MNEMOSYNE-PRO-04-v2-first-target-intake-form-design.md`; `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/report-summaries/DR5_first_real_target_dry_run_evaluation_framework_summary.md`; `notes/first-target-project-intake-and-approval-forms-v0.1.md`; `notes/first-real-target-dry-run-evaluation-framework-v0.1.md`; `notes/first-real-target-dry-run-scorecard-v0.1.md`; `notes/first-real-target-dry-run-postmortem-template.md`; `notes/mnemosyne-regression-test-record-template.md`; `notes/codex-task-results/MNEMOSYNE-066-result.md`.
