@@ -1,5 +1,28 @@
 # TODO
 
+## MNEMOSYNE-068 active now
+
+- Review Meta-Agent draft run manifest package at `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`.
+- Ask user to approve/revise/reject the draft manifest package before any real dry-run preparation.
+- Use `notes/target-project-intake-form-filling-guide-v0.1.md` and `notes/first-target-project-intake-records/README.md` as non-execution-source support references.
+- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
+
+## MNEMOSYNE-068 waiting for user decision
+
+- Approve/revise/reject Meta-Agent draft run manifest package.
+- Resolve or confirm target runtime truth source.
+- Approve final safe input policy.
+- Approve whether/when to create `target-projects/meta-agent/` workspace skeleton.
+
+## MNEMOSYNE-068 recently completed
+
+- MNEMOSYNE-068 ingested Meta-Agent pre-workspace intake records and created target-project intake filling guide.
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
+
+
 ## Active now
 
 - After MNEMOSYNE-067 maintainer verification, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not request raw materials yet.
@@ -27,7 +50,7 @@
 
 - No real target-project dry-run has occurred.
 - Use onboarding package and review instruments when dry-run is later authorized.
-- No target project has been selected.
+- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 
@@ -67,6 +90,29 @@
 The material below is retained for history and may contain superseded pending/completed wording. Use the current view above for live status.
 
 # TODO
+
+## MNEMOSYNE-068 active now
+
+- Review Meta-Agent draft run manifest package at `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`.
+- Ask user to approve/revise/reject the draft manifest package before any real dry-run preparation.
+- Use `notes/target-project-intake-form-filling-guide-v0.1.md` and `notes/first-target-project-intake-records/README.md` as non-execution-source support references.
+- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
+
+## MNEMOSYNE-068 waiting for user decision
+
+- Approve/revise/reject Meta-Agent draft run manifest package.
+- Resolve or confirm target runtime truth source.
+- Approve final safe input policy.
+- Approve whether/when to create `target-projects/meta-agent/` workspace skeleton.
+
+## MNEMOSYNE-068 recently completed
+
+- MNEMOSYNE-068 ingested Meta-Agent pre-workspace intake records and created target-project intake filling guide.
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
+
 
 > MNEMOSYNE-031 final checkpoint records are non-execution-source review/restatement records. Current execution source remains `current/human-approved-spec.md`.
 
@@ -283,7 +329,7 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 ### Waiting for dry-run evidence
 
 - No real target-project dry-run has occurred.
-- No target project has been selected.
+- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 

@@ -4,6 +4,14 @@
 
 This file is a non-execution-source support instrument derived from PRO-04 v2. It supports first target selection and approval intake only. It does not select a target, create a workspace, ingest materials, start a real dry-run, or authorize target repository write. At first contact, do not ask the user to upload raw materials immediately.
 
+
+## Filling guide and pre-workspace intake records
+
+- Use `notes/target-project-intake-form-filling-guide-v0.1.md` when asking users or another project-building conversation to complete target intake.
+- Completed intake may be stored under the pre-workspace intake records area described by `notes/first-target-project-intake-records/README.md` only when the artifact is safe for repository visibility and approved for that storage.
+- Initial intake must not ask for raw material upload; use public, synthetic, explicitly redacted, or external-pointer-only inputs until safety and storage approvals exist.
+- Completed intake does not authorize target workspace creation, target material ingestion, real target-project dry-run, or target repository write.
+
 ## One-page user intake form
 
 ```yaml
