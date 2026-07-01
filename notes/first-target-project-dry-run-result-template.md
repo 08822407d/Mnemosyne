@@ -100,3 +100,9 @@ Rules:
 - A synthetic smoke-test result uses `smoke_test_verdict`, not `final_verdict`, for its synthetic result.
 - Synthetic smoke-test evidence must not be converted into real target dry-run PASS.
 - If `run_kind: synthetic_smoke_test`, then real target fields must remain false.
+
+## MNEMOSYNE-066 scorecard result fields
+
+Use `notes/first-real-target-dry-run-scorecard-v0.1.md` for verdict semantics. Include scorecard result, critical blockers, evidence package status, and user confirmation status.
+
+PASS limitations: PASS is not production-ready; not target repository write approval; not global execution-source update approval; and not target delivery acceptance unless separately confirmed.

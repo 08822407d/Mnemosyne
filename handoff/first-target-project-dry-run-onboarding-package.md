@@ -187,3 +187,9 @@ Rules for later use:
 - Redacted excerpts require redaction manifests.
 - External pointers must not leak sensitive locations, credentials, tokens, signed URLs, private absolute paths, or unapproved personal/confidential details.
 - This onboarding package remains non-execution-source and does not authorize target selection, target workspace creation, target material ingestion, target repository writes, or a real dry-run.
+
+## MNEMOSYNE-066 intake and first real dry-run evaluation instruments
+
+Before a real dry-run, use `notes/first-target-project-intake-and-approval-forms-v0.1.md` and the run manifest approval flow. During and after a real dry-run, use `notes/first-real-target-dry-run-evaluation-framework-v0.1.md` and `notes/first-real-target-dry-run-scorecard-v0.1.md`. After a dry-run, use `notes/first-real-target-dry-run-postmortem-template.md` and `notes/mnemosyne-regression-test-record-template.md` for lessons, repairs, and regression candidates.
+
+PASS does not authorize target repository write, target delivery acceptance, or execution-source updates.

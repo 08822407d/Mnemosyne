@@ -86,3 +86,9 @@
   - AI/human restatements are explanatory layer, not original requirements or approved baseline.
   - Git history exposure means delete/move/revert does not erase historical exposure; private repo does not automatically authorize originals.
 - execution_source_status: not_execution_source
+
+## Supplemental summary — DR5 first real target-project dry-run evaluation
+
+| report_id | topic | summary_file | source_file | summary_status | figure_review_status | active_evidence | notes |
+|---|---|---|---|---|---|---|---|
+| RPT-2026Q2-FTDRE-0001 | First real target-project dry-run evaluation framework | `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/report-summaries/DR5_first_real_target_dry_run_evaluation_framework_summary.md` | `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/originals/DR5_first_real_target_dry_run_evaluation_framework_report.md` | completed_from_markdown_report | not_applicable_markdown | supplemental_current_evidence | Evidence only; not execution source. |

@@ -67,3 +67,13 @@
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
 | RPT-2026Q2-UIG-0001 | raw/research-reports/cycles/2026Q2-user-input-governance/originals/DR4_user_originals_requirements_redaction_governance_report.md | deep_research | User originals / raw requirements / restatements / approved decisions / redaction / external pointers / Git history exposure / repository visibility | Supplemental evidence for target user-input storage governance before first real target-project dry-run | yes | Markdown report original; summary available at `raw/research-reports/cycles/2026Q2-user-input-governance/report-summaries/DR4_user_originals_requirements_redaction_governance_summary.md`. Research evidence only, not execution source. |
+
+## Supplemental current evidence — RC-2026Q2-first-target-dry-run-evaluation
+
+- cycle_id: RC-2026Q2-first-target-dry-run-evaluation
+- status: supplemental_current_evidence_cycle
+- report_id: RPT-2026Q2-FTDRE-0001
+- report_path: `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/originals/DR5_first_real_target_dry_run_evaluation_framework_report.md`
+- summary_path: `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/report-summaries/DR5_first_real_target_dry_run_evaluation_framework_summary.md`
+- execution_source_status: not_execution_source
+- use: supplemental evidence for first real target-project dry-run evaluation, scorecard, postmortem, and regression test design.

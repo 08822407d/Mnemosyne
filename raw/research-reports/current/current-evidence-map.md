@@ -120,3 +120,32 @@
   confidence_or_status: report_conclusion
   not_execution_source: true
 ```
+
+## DR5 first real target-project dry-run evaluation evidence — RC-2026Q2-first-target-dry-run-evaluation
+
+```yaml
+- evidence_id: EVID-2026Q2-FTDRE-0001
+  source_report: RPT-2026Q2-FTDRE-0001
+  claim_or_implication: First real dry-run success must be evidence-backed and authority-bounded, not artifact-polish-based.
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-FTDRE-0002
+  source_report: RPT-2026Q2-FTDRE-0001
+  claim_or_implication: Synthetic smoke test, tabletop dry-run, real target dry-run, target delivery, and target repository write are distinct evaluation objects.
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-FTDRE-0003
+  source_report: RPT-2026Q2-FTDRE-0001
+  claim_or_implication: Critical blockers must be checked before scoring; synthetic evidence cannot be reported as real dry-run evidence.
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-FTDRE-0004
+  source_report: RPT-2026Q2-FTDRE-0001
+  claim_or_implication: Deterministic checks cover boundaries/evidence; LLM-as-judge is limited to quality judgments; user confirmation is required for usefulness and risk acceptance.
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-FTDRE-0005
+  source_report: RPT-2026Q2-FTDRE-0001
+  claim_or_implication: PASS does not mean production-ready, target repository write approved, or global rule update approved.
+  not_execution_source: true
+- evidence_id: EVID-2026Q2-FTDRE-0006
+  source_report: RPT-2026Q2-FTDRE-0001
+  claim_or_implication: Dry-run findings should flow to postmortem/regression/candidate layers, not directly to execution source.
+  not_execution_source: true
+```

@@ -2,6 +2,9 @@
 
 ## Active now
 
+- Review MNEMOSYNE-066 ingestion/evaluation-framework result.
+- After maintainer acceptance of MNEMOSYNE-066, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not request raw materials yet.
+
 - Post-MNEMOSYNE-053 fresh replay has reviewed PASS with `quality_band: strong`; do not rerun it unless later protocol/current-state changes invalidate it.
 - Target-project workspace principle is approved in execution source; use `target-projects/<target_project_id>/` as default root unless user approves an exception.
 - Prepare for user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals before any real dry-run.
@@ -38,6 +41,8 @@
 - Platform/visibility reverification when importing files or when repository visibility materially affects the task. Do not add a recurring TODO to change repository visibility merely because it is public.
 
 ## Recently completed
+
+- MNEMOSYNE-066: ingested PRO-04 v2 and DR5; created first-target intake/evaluation/scorecard/postmortem/regression support instruments.
 
 - MNEMOSYNE-048 onboarding/review instruments.
 - MNEMOSYNE-049 state synchronization after 048.

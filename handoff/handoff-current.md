@@ -115,3 +115,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - No target project has been selected.
 - No target materials have been uploaded/ingested.
 - No target project repository has been written.
+
+## MNEMOSYNE-066 checkpoint and next route
+
+- MNEMOSYNE-066 ingested PRO-04 v2 and DR5, created first-target intake/evaluation/scorecard/postmortem/regression support instruments, and preserved no-target/no-dry-run/no-material/no-write boundaries.
+
+1. After maintainer accepts MNEMOSYNE-066, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`.
+2. Do not request raw material upload yet.
+3. Draft run manifest/source map/storage policy only after target intake answers.
+4. Do not create target workspace, ingest target materials, start real dry-run, or write target repository before explicit approvals.
