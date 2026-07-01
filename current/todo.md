@@ -2,8 +2,8 @@
 
 ## Active now
 
-- Review MNEMOSYNE-066 ingestion/evaluation-framework result.
-- After maintainer acceptance of MNEMOSYNE-066, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not request raw materials yet.
+- After MNEMOSYNE-067 maintainer verification, ask the user for first target-project selection using `notes/first-target-project-intake-and-approval-forms-v0.1.md`; do not request raw materials yet.
+- Use `notes/first-real-target-dry-run-scorecard-v0.1.md` only after a future approved real dry-run has run; it does not authorize target selection, material ingestion, workspace creation, target repository write, or execution-source updates.
 
 - Post-MNEMOSYNE-053 fresh replay has reviewed PASS with `quality_band: strong`; do not rerun it unless later protocol/current-state changes invalidate it.
 - Target-project workspace principle is approved in execution source; use `target-projects/<target_project_id>/` as default root unless user approves an exception.
@@ -11,8 +11,6 @@
 - Keep detailed MNEMOSYNE-056 layout proposal as non-execution-source reference unless later promoted.
 - Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
 - Review MNEMOSYNE-058 governance/support-instrument updates before first real target-project dry-run.
-- Use staged batches for PRO/DR prompt generation; B1 PRO-02/PRO-03 ingestion/hardening completed via MNEMOSYNE-063, and downstream prompt generation may proceed only after maintainer accepts MNEMOSYNE-064 sync repair.
-- Next dependency-aware prompt batch candidate after MNEMOSYNE-064 maintainer acceptance: PRO-04 first-target intake/form design; DR3/DR5 remain deferred until PRO-04 or maintainer decision clarifies dependency risk.
 
 ## Waiting for user decision
 
@@ -42,7 +40,9 @@
 
 ## Recently completed
 
+- MNEMOSYNE-065: moved B1 follow-up into current open-questions section.
 - MNEMOSYNE-066: ingested PRO-04 v2 and DR5; created first-target intake/evaluation/scorecard/postmortem/regression support instruments.
+- MNEMOSYNE-067: repaired post-066 active/handoff current-state sync and opened first-target intake route.
 
 - MNEMOSYNE-048 onboarding/review instruments.
 - MNEMOSYNE-049 state synchronization after 048.
@@ -278,7 +278,7 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 
 ### Active now
 
-- [ ] Review MNEMOSYNE-064 current-state sync repair before generating downstream PRO-04 / DR3 / DR5 prompts; recommended next batch after acceptance is PRO-04 only.
+- [x] Historical: MNEMOSYNE-064 sync repair was reviewed; PRO-04/DR5 ingestion later completed via MNEMOSYNE-066, and live next route is superseded by MNEMOSYNE-067.
 
 ### Waiting for dry-run evidence
 
