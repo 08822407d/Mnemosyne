@@ -30,8 +30,9 @@
   - status: clarified_by_MNEMOSYNE-069
   - note: planned dry-run is a controlled no-target-write real-target evaluation/design-package-generation run; it is not direct operational memory-system installation or target repository write for a Meta-Agent memory system.
 - Meta-Agent requirements-analysis alignment:
-  - status: pending_external_dialogue_handoff
-  - note: another conversation is still analyzing/aligning the concrete Meta-Agent requirements; current draft package is provisional and must not contaminate later actual memory-system build work.
+  - status: external_alignment_ingested_for_manifest_revision_by_MNEMOSYNE-071
+  - alignment_verdict: READY_FOR_MNEMOSYNE_MANIFEST_REVISION
+  - note: external alignment package has been received and ingested for the narrow purpose of manifest revision; requirements analysis remains incomplete and is not sufficient for real dry-run approval, workspace creation, target material ingestion, target repository write, or memory-system build.
 - Meta-Agent draft package contamination guard:
   - status: created_by_MNEMOSYNE-070
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md`
@@ -40,13 +41,23 @@
   - status: ingested_by_MNEMOSYNE-071
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-requirements-analysis-handoff-intake-alignment-package.md`
   - verdict: READY_FOR_MNEMOSYNE_MANIFEST_REVISION
-- Revised draft manifest package:
+- Revised draft manifest package v0.2:
   - status: created_by_MNEMOSYNE-071
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`
-  - note: revised draft for user review only; not approved for real dry-run.
+  - note: current revised draft for user review only; not approved for real dry-run.
 - Requirements analysis:
   - status: incomplete
   - note: requirements analysis remains incomplete; sufficient for manifest revision but not real dry-run approval, workspace creation, target material ingestion, target repository write, or memory system build.
+- Next user decision:
+  - status: awaiting_user_decision
+  - options:
+    - approve_v0_2_as_revised_draft_for_review_only
+    - request_revision
+    - reject_current_draft
+    - continue_external_requirements_analysis
+- Post-071 current-route sync:
+  - status: repaired_by_MNEMOSYNE-072
+  - note: high-signal current route now points to v0.2 and no longer asks for an external alignment package as if it were missing.
 
 
 

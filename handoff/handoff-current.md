@@ -33,12 +33,14 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-067 repaired post-066 active/handoff current-state sync.
 - MNEMOSYNE-068 ingested the Meta-Agent intake draft and draft run-manifest package as non-execution-source pre-workspace intake records, created the target-project intake filling guide, and selected Meta-Agent for draft manifest preparation only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-069 repaired post-068 temporal current-state contamination: older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; Meta-Agent dry-run route is clarified as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
-- MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard: Meta-Agent requirements analysis remains pending in an external dialogue (`pending_external_dialogue_handoff`), and the current draft run-manifest package is only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard when Meta-Agent requirements analysis was still pending in an external dialogue, and the then-current draft run-manifest package was only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only; requirements analysis remains incomplete; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-072 repaired post-071 current-route residue so the live next route points to v0.2.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - Next route: review Meta-Agent revised draft manifest package v0.2; ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before approvals.
 - No real target-project dry-run has occurred.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
+- No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target-project repository has been written.
 
@@ -110,6 +112,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 3. Do not upload raw materials.
 4. Do not create `target-projects/meta-agent/`.
 5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
+6. v0.2 approval for review-only does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 
@@ -142,7 +145,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 - `notes/target-project-intake-form-filling-guide-v0.1.md`
 - `notes/first-target-project-intake-records/README.md`
-- `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md`
+- `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`
 - No real target-project dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
