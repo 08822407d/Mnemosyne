@@ -58,6 +58,19 @@
 - Post-071 current-route sync:
   - status: repaired_by_MNEMOSYNE-072
   - note: high-signal current route now points to v0.2 and no longer asks for an external alignment package as if it were missing.
+- v0.2 review-only approval:
+  - status: approved_by_user_in_MNEMOSYNE-073
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-v0.2-review-only-approval-record.md`
+  - note: approved as review/preparation baseline only; not approved for real dry-run.
+- Post-v0.2 next approval gates:
+  - status: created_by_MNEMOSYNE-073
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`
+  - unresolved:
+    - target_runtime_truth_source
+    - final_safe_input_policy
+    - operator_no_target_write_confirmation
+    - workspace_decision
+    - final_run_manifest_next_action
 
 
 
