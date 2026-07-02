@@ -205,3 +205,7 @@ PASS does not authorize target repository write, target delivery acceptance, or 
 - Use `notes/first-target-project-intake-records/README.md` to understand the non-execution-source pre-workspace intake-record holding area.
 - Use `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md` as the current pre-workspace draft manifest package after maintainer verification.
 - Still do not create target workspace, ingest materials, start a real dry-run, or write a target repository before explicit approvals.
+
+## MNEMOSYNE-071 Meta-Agent v0.2 revised draft note
+
+For Meta-Agent, read `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md` and the alignment package before using the older v0.1 draft. v0.2 is still a revised draft for user review, not an approved real-dry-run manifest.

@@ -34,8 +34,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-068 ingested the Meta-Agent intake draft and draft run-manifest package as non-execution-source pre-workspace intake records, created the target-project intake filling guide, and selected Meta-Agent for draft manifest preparation only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-069 repaired post-068 temporal current-state contamination: older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; Meta-Agent dry-run route is clarified as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
 - MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard: Meta-Agent requirements analysis remains pending in an external dialogue (`pending_external_dialogue_handoff`), and the current draft run-manifest package is only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only; requirements analysis remains incomplete; no workspace/material/dry-run/target-write occurred.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
-- Next route: review the Meta-Agent draft run manifest package only as a provisional pre-analysis scaffold; before approving real dry-run or workspace creation, get external-analysis handoff/intake alignment or explicit user confirmation that current draft is sufficient despite pending external analysis; explain controlled no-target-write evaluation/design-package generation; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before approvals.
+- Next route: review Meta-Agent revised draft manifest package v0.2; ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before approvals.
 - No real target-project dry-run has occurred.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target materials have been uploaded/ingested.
@@ -100,15 +101,15 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-068 ingested the Meta-Agent intake draft and draft run-manifest package as non-execution-source pre-workspace intake records, created the target-project intake filling guide, and selected Meta-Agent for draft manifest preparation only.
 - MNEMOSYNE-069 repaired post-068 temporal current-state contamination: older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; Meta-Agent dry-run route is clarified as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
 - MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard: Meta-Agent requirements analysis remains pending in an external dialogue, and the current draft run-manifest package is only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only; requirements analysis remains incomplete; no workspace/material/dry-run/target-write occurred.
 
 ## Next route
 
-1. Review the Meta-Agent draft run manifest package only as a provisional pre-analysis scaffold.
-2. Before approving real dry-run or workspace creation, get external-analysis handoff/intake alignment or explicit user confirmation that current draft is sufficient despite pending external analysis.
-3. Explain that the planned dry-run remains controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
-4. Do not upload raw materials yet.
-5. Do not create `target-projects/meta-agent/` unless separately approved.
-6. Do not start real dry-run or write target repository before approved run manifest and required approvals.
+1. Review Meta-Agent revised draft manifest package v0.2.
+2. Ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+3. Do not upload raw materials.
+4. Do not create `target-projects/meta-agent/`.
+5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 
@@ -131,12 +132,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-066 ingested PRO-04 v2 and DR5, created first-target intake/evaluation/scorecard/postmortem/regression support instruments, and preserved no-target/no-dry-run/no-material/no-write boundaries.
 - MNEMOSYNE-067 repaired post-066 active/handoff current-state sync and opened first-target intake route.
 
-1. Review the Meta-Agent draft run manifest package only as a provisional pre-analysis scaffold.
-2. Before approving real dry-run or workspace creation, get external-analysis handoff/intake alignment or explicit user confirmation that current draft is sufficient despite pending external analysis.
-3. Explain that the planned dry-run remains controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
-4. Do not upload raw materials yet.
-5. Do not create `target-projects/meta-agent/` unless separately approved.
-6. Do not start real dry-run or write target repository before approved run manifest and required approvals.
+1. Review Meta-Agent revised draft manifest package v0.2.
+2. Ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+3. Do not upload raw materials.
+4. Do not create `target-projects/meta-agent/`.
+5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
 
 ## MNEMOSYNE-068 references
 
