@@ -20,19 +20,24 @@
 - Final manifest candidate preparation approval:
   - status: approved_by_user_in_MNEMOSYNE-076_for_preparation_only
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-manifest-candidate-approval-for-preparation-record.md`
-  - note: actual dry-run execution remains unapproved.
+  - note: actual dry-run execution was later approved by MNEMOSYNE-078 only for a new high-reasoning ChatGPT conversation; not Codex Cloud.
 - Controlled dry-run preparation package:
   - status: created_by_MNEMOSYNE-076
   - preparation_plan: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
   - evidence_plan: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - operator_prompt_package: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Actual controlled dry-run execution:
-  - status: not_approved
-  - next_decision_options:
-    - approve_actual_controlled_dry_run_execution
-    - request_preparation_revision
-    - defer_dry_run
-    - continue_external_requirements_analysis
+- Actual controlled dry-run execution approval:
+  - status: approved_by_user_in_MNEMOSYNE-078
+  - approval_record: `notes/first-target-project-intake-records/meta-agent/meta-agent-actual-controlled-dry-run-execution-approval-record.md`
+  - approved_execution_record: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-record-v0.1.md`
+  - approved_prompt: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`
+  - note: approved only for new high-reasoning ChatGPT conversation; not Codex Cloud; no workspace/material/target-write authorization.
+- Dry-run execution status:
+  - status: approved_but_not_executed_by_MNEMOSYNE-078
+  - next_step: user manually runs approved prompt and returns result file.
+- Result ingestion:
+  - status: pending_future_maintainer_review
+  - preflight: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-result-return-and-ingestion-preflight-v0.1.md`
 - Post-076 current-route sync:
   - status: repaired_by_MNEMOSYNE-077
   - note: live route now points to preparation package / actual-execution decision, not final-manifest-candidate approval.
@@ -153,7 +158,7 @@
 ## Current open questions
 
 - Post-MNEMOSYNE-053 fresh replay reviewed PASS has been synchronized by MNEMOSYNE-055; remaining first dry-run blockers are user target selection, authority/safe input/no-target-write approval, and approved run manifest.
-- Which first target project will be selected after post-053 replay reviewed PASS? Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
+- Which first target project will be selected after post-053 replay reviewed PASS? Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; no repository/Codex dry-run has occurred.
 - What authority/safe input/no-target-write approvals, source map, and approved run manifest will the user provide? No real target-project dry-run has occurred; no target materials have been uploaded/ingested; no target repository has been written.
 - Should any D-01/D-03/D-04/D-05 candidate wording be promoted later? (separate approval only)
 - OP-08 remains partially addressed; OP-09/OP-10 remain partially answered by DR1.

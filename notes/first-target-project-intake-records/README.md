@@ -39,4 +39,13 @@ Meta-Agent final run manifest candidate v0.1 is the current candidate for user r
 - `meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
 - `meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
 
-Meta-Agent final manifest candidate is approved for controlled no-target-write dry-run preparation only. Actual dry-run execution is still not approved.
+Meta-Agent final manifest candidate is approved for controlled no-target-write dry-run preparation only. MNEMOSYNE-078 later approved actual controlled dry-run execution for a separate high-reasoning ChatGPT conversation only; Codex Cloud execution is not approved. No target workspace/material/target-write is authorized.
+
+## MNEMOSYNE-078 Meta-Agent approved execution package
+
+- `meta-agent/meta-agent-actual-controlled-dry-run-execution-approval-record.md`
+- `meta-agent/meta-agent-controlled-dry-run-approved-execution-record-v0.1.md`
+- `meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`
+- `meta-agent/meta-agent-controlled-dry-run-result-return-and-ingestion-preflight-v0.1.md`
+
+Meta-Agent actual controlled dry-run execution is approved for a separate high-reasoning ChatGPT conversation only; Codex Cloud execution is not approved. No target workspace/material/target-write is authorized.
