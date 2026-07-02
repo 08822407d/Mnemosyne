@@ -2,8 +2,9 @@
 
 ## Active now
 
-- Review MNEMOSYNE-079 dry-run ingestion result.
-- Decide next Meta-Agent path after PASS_WITH_WARNINGS: accept result as current evidence baseline, continue requirements analysis, request repair run, convert regression candidates, or plan a later workspace/material phase.
+- Review MNEMOSYNE-081 pre-handoff stabilization roadmap and regression-candidate triage.
+- Current stabilization artifact: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`.
+- Next recommended action: record phase-closure decision before handoff package generation.
 - Current dry-run result: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -11,6 +12,7 @@
 
 ## Waiting for user decision
 
+- Decide phase closure: accept current dry-run result as evidence baseline and defer high-risk follow-ups, or request a different closure path.
 - Decide next path after Meta-Agent controlled dry-run result ingestion.
 - Resolve or confirm target runtime truth source if the accepted result identifies a remaining decision.
 - Approve final safe input policy if a future ingestion task requires it.
@@ -34,6 +36,7 @@
 
 ## Recently completed
 
+- MNEMOSYNE-081: created post-079 pre-handoff stabilization roadmap and regression-candidate triage; no phase closure/handoff/regression formalization/workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-079: ingested Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-078: recorded actual controlled dry-run execution approval and created approved prompt / return preflight; no dry-run executed in Codex.
 - MNEMOSYNE-077: repaired post-076 current-state live-route residue.

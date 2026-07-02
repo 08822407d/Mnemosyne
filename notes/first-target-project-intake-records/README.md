@@ -59,3 +59,10 @@ Meta-Agent actual controlled dry-run execution is approved for a separate high-r
 - `meta-agent/meta-agent-controlled-dry-run-approval-chain-clarification-v0.1.md`
 
 The returned Meta-Agent controlled no-target-write dry-run result is accepted as non-execution-source target-specific evidence with `PASS_WITH_WARNINGS`, score `89/100`, and no critical blockers. This acceptance does not approve production-ready status, target delivery, target workspace creation, target material ingestion, target repository write, operational memory-system installation, or Mnemosyne execution-source update.
+
+## MNEMOSYNE-081 pre-handoff stabilization planning
+
+- `meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`
+- `meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
+
+MNEMOSYNE-081 adds pre-handoff stabilization planning and regression-candidate triage only. It does not close the phase, formalize regression tests, create workspace/material phase, or generate the final handoff package.
