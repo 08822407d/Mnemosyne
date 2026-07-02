@@ -33,6 +33,9 @@
     - request_preparation_revision
     - defer_dry_run
     - continue_external_requirements_analysis
+- Post-076 current-route sync:
+  - status: repaired_by_MNEMOSYNE-077
+  - note: live route now points to preparation package / actual-execution decision, not final-manifest-candidate approval.
 - Still unresolved before real dry-run:
   - target_runtime_truth_source
   - final run manifest approval
@@ -96,13 +99,8 @@
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`
   - note: candidate for user review only; not approved for real dry-run.
 - Final manifest candidate next decision:
-  - status: awaiting_user_decision
-  - options:
-    - approve_final_manifest_candidate_for_controlled_no_target_write_dry_run_preparation
-    - request_revision
-    - reject_candidate
-    - keep_v0_2_review_baseline_without_dry_run
-    - continue_external_requirements_analysis
+  - status: superseded_by_MNEMOSYNE-076_preparation_approval
+  - note: final manifest candidate was approved for preparation only; live next decision is actual controlled dry-run execution / preparation revision / defer / continue analysis.
 
 
 

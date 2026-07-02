@@ -5,32 +5,16 @@
 - Review Meta-Agent controlled dry-run preparation package.
 - Ask user whether to approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
 - Current preparation package: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`, `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`, `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`.
-- Meta-Agent final manifest candidate approved for controlled no-target-write dry-run preparation only; actual dry-run execution remains unapproved.
+- Actual dry-run execution remains unapproved.
+- Do not execute the operator prompt package until actual execution is explicitly approved.
 - No real target-project dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
 
-- Review Meta-Agent final run manifest candidate v0.1.
-- Ask user to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
-- Current Meta-Agent run manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`.
-- v0.2 is approved as the current review/preparation baseline only; it does not approve real dry-run, workspace creation, target material ingestion, target repository write, operational memory-system installation, or execution-source update.
-- Clarify to the user that the planned dry-run is controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
-- Use `notes/target-project-intake-form-filling-guide-v0.1.md` and `notes/first-target-project-intake-records/README.md` as non-execution-source support references.
-- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
-- Use `notes/first-real-target-dry-run-scorecard-v0.1.md` only after a future approved real dry-run has run; it does not authorize target selection, material ingestion, workspace creation, target repository write, or execution-source updates.
-
-- Post-MNEMOSYNE-053 fresh replay has reviewed PASS with `quality_band: strong`; do not rerun it unless later protocol/current-state changes invalidate it.
-- Target-project workspace principle is approved in execution source; use `target-projects/<target_project_id>/` as default root unless user approves an exception.
-- Prepare for user target selection and authority/source map/safe input/user originals storage/no-target-write/run-manifest approvals before any real dry-run.
-- Keep detailed MNEMOSYNE-056 layout proposal as non-execution-source reference unless later promoted.
-- Maintain the MNEMOSYNE-043 manual-import safety gate when imports occur.
-- Review MNEMOSYNE-058 governance/support-instrument updates before first real target-project dry-run.
-
 ## Waiting for user decision
 
 - Approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
-- Decide whether to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
 - Resolve or confirm target runtime truth source.
 - Approve final safe input policy.
 - Approve target workspace root or exception.
@@ -59,6 +43,7 @@
 
 ## Recently completed
 
+- MNEMOSYNE-077: repaired post-076 current-state live-route residue.
 - MNEMOSYNE-076: recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only; created preparation/evidence/operator prompt package; actual dry-run execution remains unapproved; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
