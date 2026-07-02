@@ -224,3 +224,7 @@ For Meta-Agent after MNEMOSYNE-074, read `notes/first-target-project-intake-reco
 ## MNEMOSYNE-076 Meta-Agent controlled dry-run preparation note
 
 For Meta-Agent after MNEMOSYNE-076, read the preparation plan, evidence/no-write proof plan, and operator prompt package. They prepare a controlled no-target-write dry-run but do not approve executing it. Actual execution requires a later explicit user approval and operator no-target-write confirmation.
+
+## MNEMOSYNE-078 Meta-Agent approved execution prompt note
+
+For Meta-Agent after MNEMOSYNE-078, use `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md` only in a new high-reasoning ChatGPT conversation. Do not execute it in Codex Cloud. After the result returns, use `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-result-return-and-ingestion-preflight-v0.1.md` before any ingestion.

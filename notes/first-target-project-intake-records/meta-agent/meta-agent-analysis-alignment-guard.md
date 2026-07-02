@@ -124,3 +124,21 @@ real_target_project_dry_run_started: false
 ```
 
 The final manifest candidate approval is for preparation only. Actual dry-run execution still requires a later explicit user approval and operator no-target-write confirmation.
+
+## MNEMOSYNE-078 status update
+
+```yaml
+actual_controlled_dry_run_execution_approved: true
+approved_execution_record: notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-record-v0.1.md
+approved_execution_prompt: notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md
+execution_environment: new_high_reasoning_chatgpt_conversation
+codex_cloud_execution_approved: false
+target_workspace_creation_approved: false
+target_material_ingestion_approved: false
+target_repository_write_approved: false
+operational_memory_system_installation_approved: false
+mnemosyne_execution_source_update_approved: false
+dry_run_executed_by_this_task: false
+```
+
+MNEMOSYNE-078 records approval and prepares the prompt only. It does not execute the dry-run.

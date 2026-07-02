@@ -11,22 +11,25 @@
 - Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review, but real dry-run has not started.
 
 
-### MNEMOSYNE-077 current blockers/gates
+### MNEMOSYNE-078 current blockers/gates
 
-- MNEMOSYNE-076: user approved Meta-Agent final run manifest candidate v0.1 for controlled no-target-write dry-run preparation only; preparation plan, evidence/no-write proof plan, and operator prompt package created; actual dry-run execution remains unapproved; no target workspace/material/dry-run/target write occurred.
+- MNEMOSYNE-076: user approved Meta-Agent final run manifest candidate v0.1 for controlled no-target-write dry-run preparation only; preparation plan, evidence/no-write proof plan, and operator prompt package created; actual dry-run execution was unapproved at that time; no target workspace/material/dry-run/target write occurred.
 - Current target state: Meta-Agent is selected for draft manifest preparation only.
 - Current preparation package:
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Next user decision: approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
-- Actual controlled dry-run execution remains unapproved.
-- The operator prompt package must not be executed until actual execution is explicitly approved.
+- Current Meta-Agent state: actual controlled no-target-write dry-run execution approved for a separate high-reasoning ChatGPT conversation only.
+- Approved execution prompt: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`.
+- Next action: user manually opens a new high-reasoning ChatGPT conversation and pastes the approved execution prompt.
+- Do not run the approved execution prompt in Codex Cloud.
+- After dry-run result returns, review it in the maintainer conversation before any repository ingestion.
+- No dry-run has been executed by MNEMOSYNE-078.
 - Do not upload raw materials yet.
 - Do not create `target-projects/meta-agent/`.
 - Do not create `notes/target-project-dry-runs/`.
-- Do not ingest target materials, execute dry-run, or write target repository before explicit approval.
-- No real target-project dry-run has occurred.
+- Do not ingest target materials, execute the approved prompt in Codex Cloud, or write target repository.
+- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
@@ -38,6 +41,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-078: user approved actual Meta-Agent controlled no-target-write dry-run execution in a separate high-reasoning ChatGPT conversation; approved execution record, approved prompt, and result-return/ingestion-preflight note created; Codex Cloud execution remains not approved; no dry-run executed by this task, no target workspace/material/target-write occurred.
 - MNEMOSYNE-077: repaired post-076 current-state live-route residue so active-context/TODO/open-questions/handoff consistently point to the Meta-Agent controlled dry-run preparation package and actual-execution decision; no target workspace/material/dry-run/target write or execution-source change occurred.
 - MNEMOSYNE-075: repaired post-074 `current/active-context.md` live-route residue so the high-signal current route points to Meta-Agent final run manifest candidate v0.1; no target workspace/material/dry-run/target write or execution-source change occurred.
 - MNEMOSYNE-073: user approved Meta-Agent v0.2 as revised draft for review/preparation baseline only; approval record and next approval-gates checklist created; real dry-run/workspace/material/target-write/operational installation approvals remain false; no target workspace/material/dry-run/target write occurred.
@@ -81,14 +85,16 @@
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Next user decision: approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
-- Actual execution remains unapproved.
-- Do not execute the operator prompt package until actual execution is explicitly approved.
+- Current Meta-Agent state: actual controlled no-target-write dry-run execution approved for a separate high-reasoning ChatGPT conversation only.
+- Approved execution prompt: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`.
+- Next action: user manually opens a new high-reasoning ChatGPT conversation and pastes the approved execution prompt.
+- Do not run the approved execution prompt in Codex Cloud.
+- After dry-run result returns, review it in the maintainer conversation before any repository ingestion.
 - The external alignment package has been received and ingested by MNEMOSYNE-071 for manifest revision only; it is not enough for real dry-run approval, workspace creation, material ingestion, target repository write, or memory-system build.
 - Target-project workspace principle is now in execution source; detailed MNEMOSYNE-056 proposal remains a non-execution-source design reference.
-- Before first real target-project dry-run, user must still approve actual execution, authority/source map, safe input/originals storage policy, no-target-write proof, and any needed workspace creation.
-- No real target-project dry-run has occurred.
-- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
+- Before any repository ingestion of the later dry-run result, maintainer must review returned evidence, authority/source map, safe input/originals storage policy, no-write proof, and workspace/material/write boundaries.
+- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
+- Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; no repository/Codex dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
@@ -103,13 +109,15 @@
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Next user decision: approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
-- Actual execution remains unapproved.
-- Do not execute the operator prompt package until actual execution is explicitly approved.
+- Current Meta-Agent state: actual controlled no-target-write dry-run execution approved for a separate high-reasoning ChatGPT conversation only.
+- Approved execution prompt: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`.
+- Next action: user manually opens a new high-reasoning ChatGPT conversation and pastes the approved execution prompt.
+- Do not run the approved execution prompt in Codex Cloud.
+- After dry-run result returns, review it in the maintainer conversation before any repository ingestion.
 - Do not upload raw materials yet.
 - Do not create `target-projects/meta-agent/`.
 - Do not create `notes/target-project-dry-runs/`.
-- Do not ingest target materials, execute dry-run, or write target repository before explicit approval.
+- Do not ingest target materials, execute the approved prompt in Codex Cloud, or write target repository.
 
 ### important non-execution-source references
 
@@ -251,15 +259,14 @@ The material below is retained for audit/history and may include superseded rout
 
 ## MNEMOSYNE-076 checkpoint
 
-- MNEMOSYNE-076: user approved Meta-Agent final run manifest candidate v0.1 for controlled no-target-write dry-run preparation only; preparation plan, evidence/no-write proof plan, and operator prompt package created; actual dry-run execution remains unapproved; no target workspace/material/dry-run/target write occurred.
+- MNEMOSYNE-076: user approved Meta-Agent final run manifest candidate v0.1 for controlled no-target-write dry-run preparation only; preparation plan, evidence/no-write proof plan, and operator prompt package created; actual dry-run execution was unapproved at that time; no target workspace/material/dry-run/target write occurred.
 - Current Meta-Agent state: final manifest candidate approved for controlled no-target-write dry-run preparation only.
 - Current preparation package:
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Next user decision: approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
-- Actual execution remains unapproved.
-- No real target-project dry-run has occurred.
+- Historical MNEMOSYNE-077 next decision was actual execution approval; MNEMOSYNE-078 later approved execution only for a separate high-reasoning ChatGPT conversation.
+- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
@@ -354,8 +361,8 @@ References:
 - MNEMOSYNE-062: blocked B1 PRO-02/PRO-03 ingestion because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
 - MNEMOSYNE-063: PRO-02/PRO-03 B1 results ingested; synthetic-smoke-test, approval-conflict, redaction-manifest, external-pointer, manual-import classification, originals-pointer, and lesson-candidate controls hardened as non-execution-source support instruments; no target project selected at that time, no target workspace created, no target materials ingested, and no target repository written.
 - B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; later PRO-04/DR5 ingestion completed via MNEMOSYNE-066; this historical route is superseded by MNEMOSYNE-067.
-- No real target-project dry-run has occurred.
-- Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
+- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
+- Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; no repository/Codex dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target project repository has been written.
@@ -377,7 +384,7 @@ References:
 - Historical MNEMOSYNE-074 Meta-Agent run manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`.
 - Historical MNEMOSYNE-074 next decision requested final manifest-candidate preparation approval before MNEMOSYNE-076 superseded that route.
 - Candidate approval, if later granted, would only authorize controlled no-target-write dry-run preparation/evaluation; it would not authorize target repository write, operational memory-system installation, or Mnemosyne execution-source update.
-- No real target-project dry-run has occurred.
+- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
