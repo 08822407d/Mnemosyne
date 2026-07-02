@@ -1,5 +1,6 @@
 # Handoff Current
 
+- MNEMOSYNE-081 created a post-079 pre-handoff stabilization roadmap and regression-candidate triage; it did not close the phase or create the handoff package, and no workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-079 ingested the Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence; maintainer review accepted PASS_WITH_WARNINGS with score 89/100 and no critical blockers; no workspace/material/target-write/execution-source change occurred.
 
 ## 仓库
@@ -45,6 +46,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-077 repaired post-076 current-state live-route residue so the next route consistently points to actual controlled dry-run execution decision.
 - MNEMOSYNE-078 recorded user approval for actual Meta-Agent controlled no-target-write dry-run execution in a separate high-reasoning ChatGPT conversation and created approved execution prompt / return preflight; Codex Cloud execution was not approved and no dry-run was executed by that task.
 - MNEMOSYNE-079 ingested the Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence; maintainer review accepted PASS_WITH_WARNINGS with score 89/100 and no critical blockers; no workspace/material/target-write/execution-source change occurred.
+- MNEMOSYNE-081 created a post-079 pre-handoff stabilization roadmap and regression-candidate triage; it did not close the phase or create the handoff package, and no workspace/material/target-write/execution-source change occurred.
 - One Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -113,12 +115,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. Review the MNEMOSYNE-079 dry-run ingestion result and maintainer review.
-2. Ask user to choose next Meta-Agent path: accept result as current evidence baseline, continue requirements analysis, request repair run, convert regression candidates, or plan later workspace/material phase.
-3. Do not create `target-projects/meta-agent/` without separate approval.
-4. Do not ingest target materials without separate approval.
-5. Do not write target repository.
-6. Do not treat PASS_WITH_WARNINGS as production-ready, target delivery, or execution-source update approval.
+1. Review MNEMOSYNE-081 stabilization roadmap and regression-candidate triage:
+   - `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`
+   - `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
+2. Ask user to record phase-closure decision.
+3. Recommended closure: accept PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline and defer requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target write, and execution-source update.
+4. After phase closure, generate handoff package / next-conversation startup prompt.
 
 - Current preparation package:
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`

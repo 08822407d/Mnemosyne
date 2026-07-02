@@ -16,3 +16,9 @@
   - score: `89/100`
   - accepted as: non-execution-source target-specific controlled no-target-write dry-run evidence
   - not accepted as: production-ready, target delivery, target repository write approval, operational installation, execution-source update
+
+## MNEMOSYNE-081 regression-candidate triage
+
+- `META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
+  - status: triage_only
+  - formal_regression_tests_created: false

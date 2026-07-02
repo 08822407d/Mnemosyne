@@ -48,6 +48,16 @@
 - Post-079 current-route sync:
   - status: repaired_by_MNEMOSYNE-080
   - note: live route now reflects that the result has been ingested and next decision is the post-ingestion Meta-Agent path.
+- Pre-handoff stabilization roadmap:
+  - status: created_by_MNEMOSYNE-081
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`
+- Regression-candidate triage:
+  - status: created_by_MNEMOSYNE-081
+  - path: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
+  - note: triage only; no formal regression tests or global rule promotions created.
+- Phase closure:
+  - status: pending_user_decision_after_MNEMOSYNE-081
+  - recommended: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
 - Next Meta-Agent path:
   - status: awaiting_user_decision_after_ingestion
   - options:

@@ -233,3 +233,12 @@ For Meta-Agent after MNEMOSYNE-078, use `notes/first-target-project-intake-recor
 ## MNEMOSYNE-079 Meta-Agent dry-run result ingestion note
 
 For Meta-Agent after MNEMOSYNE-079, the first controlled no-target-write dry-run result is ingested as non-execution-source evidence under `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/`. Review the maintainer review and no-write evidence review before using it. PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, or execution-source updates.
+
+## MNEMOSYNE-081 Meta-Agent pre-handoff stabilization note
+
+For Meta-Agent after MNEMOSYNE-081, review the post-079 stabilization roadmap and regression-candidate triage before handoff or future regression work. The triage does not formalize regression tests and does not promote target-specific lessons into execution source.
+
+MNEMOSYNE-081 references:
+
+- `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`
+- `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
