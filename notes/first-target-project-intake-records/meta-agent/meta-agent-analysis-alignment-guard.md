@@ -90,3 +90,20 @@ approved_for_operational_memory_system_installation: false
 ```
 
 The v0.2 approval is review-only and preparation-baseline only. It does not resolve target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace creation, material ingestion, or final run-manifest approval.
+
+
+## MNEMOSYNE-074 status update
+
+```yaml
+post_v0_2_gate_decision_recorded: true
+gate_decision_record: notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-gate-decision-record.md
+final_run_manifest_candidate_created: true
+final_run_manifest_candidate: notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md
+final_manifest_candidate_approved_for_real_dry_run: false
+target_workspace_created: false
+target_materials_ingested: false
+target_repository_written: false
+real_target_project_dry_run_started: false
+```
+
+The final manifest candidate may become a scope-limited truth source only if the user later approves it. It is not approved by MNEMOSYNE-074.

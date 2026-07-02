@@ -22,7 +22,12 @@
 - `meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md` is the current revised draft for user review, not approved for real dry-run.
 - `meta-agent/meta-agent-v0.2-review-only-approval-record.md` records the v0.2 review-only approval.
 - `meta-agent/meta-agent-post-v0.2-next-approval-gates.md` lists the remaining post-v0.2 approval gates.
+- `meta-agent/meta-agent-post-v0.2-next-gate-decision-record.md` records the user-provided post-v0.2 next gate decision.
+- `meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md` is the current final run manifest candidate for user review only.
+- `meta-agent/meta-agent-final-run-manifest-candidate-review-checklist.md` is the review checklist for the final run manifest candidate.
 - `meta-agent/meta-agent-first-target-draft-run-manifest-package.md` remains preserved as the v0.1 draft.
 - Do not use v0.2 as completed requirements analysis, approved design specification, operational memory-system build plan, or approved real dry-run manifest.
 
 Meta-Agent v0.2 is approved as the current review/preparation baseline only. This does not approve real dry-run, workspace creation, material ingestion, target repository write, operational memory-system installation, or execution-source update.
+
+Meta-Agent final run manifest candidate v0.1 is the current candidate for user review only. It is not approved for real dry-run and does not create target workspace, ingest materials, or write target repository.

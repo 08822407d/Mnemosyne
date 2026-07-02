@@ -38,7 +38,8 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-072 repaired post-071 current-route residue so the live next route points to v0.2.
 - MNEMOSYNE-073 recorded user approval of Meta-Agent v0.2 as review/preparation baseline only and created the post-v0.2 next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
-- Next route: use `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`; ask user for target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before approvals.
+- MNEMOSYNE-074 recorded post-v0.2 gate decisions and created Meta-Agent final run manifest candidate v0.1 for user review only; no workspace/material/dry-run/target-write occurred.
+- Next route: review `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`; ask user to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before explicit approval.
 - No real target-project dry-run has occurred.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target workspace has been created.
@@ -108,11 +109,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. Use `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`.
-2. Ask user for target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action.
+1. Review Meta-Agent final run manifest candidate v0.1.
+2. Ask user to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
 3. Do not upload raw materials.
 4. Do not create `target-projects/meta-agent/`.
-5. Do not start real dry-run or write target repository before approved final run manifest and required approvals.
+5. Do not start real dry-run or write target repository before explicit approval.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 
