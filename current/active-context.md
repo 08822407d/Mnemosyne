@@ -11,19 +11,19 @@
 - Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review, but real dry-run has not started.
 
 
-### MNEMOSYNE-070 current blockers/gates
+### MNEMOSYNE-071 current blockers/gates
 
+- MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 for user review only; requirements analysis remains incomplete, real dry-run/workspace/material/target-write approvals remain false, and no target workspace/material/dry-run/target write occurred.
 - Current target state: Meta-Agent is selected for draft manifest preparation only.
-- Meta-Agent analysis alignment status: `pending_external_dialogue_handoff`; draft package status: provisional pre-analysis scaffold.
-- Still required before any real dry-run: approve final run manifest, resolve/confirm target runtime truth source, approve final safe input policy, operator confirmation, workspace creation approval if needed, and no-target-write proof.
-- Before approving any real Meta-Agent dry-run or workspace creation, user must either provide/approve an external-analysis handoff/intake alignment package or explicitly confirm that the current draft is sufficient despite pending external analysis.
-- The Meta-Agent draft run manifest package is provisional and must not be used as completed requirements analysis, approved design spec, final memory-system build plan, or operational memory-system installation plan.
-- Next user decision: review `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package.md` only as a provisional pre-analysis scaffold, then provide/approve external-analysis handoff/intake alignment or explicitly confirm the current draft is sufficient despite pending external analysis.
+- Current Meta-Agent manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`.
+- Next user decision: approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+- v0.2 does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
+- The external alignment package supports manifest revision only; requirements analysis remains incomplete.
 - If approved later, the planned dry-run is a controlled no-target-write real-target dry-run/evaluation that should produce an offline Meta-Agent memory-system design package and evidence/postmortem artifacts; it does not directly create or install an operational Meta-Agent memory system.
 - Do not upload raw materials yet.
 - Do not create `target-projects/meta-agent/` unless separately approved.
 - Do not ingest target materials, start real dry-run, or write target repository before explicit approvals.
-- Reference the non-execution-source guide `notes/target-project-intake-form-filling-guide-v0.1.md`, intake-record holding area `notes/first-target-project-intake-records/README.md`, and guard `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md`.
+- Reference the non-execution-source guide `notes/target-project-intake-form-filling-guide-v0.1.md`, intake-record holding area `notes/first-target-project-intake-records/README.md`, guard `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md`, and v0.2 manifest candidate.
 - No real target-project dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -36,6 +36,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-071: external Meta-Agent requirements-analysis alignment package ingested and revised draft manifest package v0.2 created for user review only; requirements analysis remains incomplete and no workspace/material/dry-run/target write occurred.
 - MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; Meta-Agent requirements analysis remains pending in an external dialogue, and the existing draft run-manifest package is marked as a provisional pre-analysis scaffold; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
 - MNEMOSYNE-069: repaired post-068 temporal current-state contamination so older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; clarified Meta-Agent dry-run route as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
 - MNEMOSYNE-068: Meta-Agent intake draft and draft run-manifest package ingested as non-execution-source pre-workspace intake records; target-project intake filling guide created; Meta-Agent is selected for draft manifest preparation only; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.

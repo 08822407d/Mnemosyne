@@ -2,9 +2,10 @@
 
 ## Active now
 
-- Review Meta-Agent draft run manifest package only as a provisional pre-analysis scaffold.
-- Wait for external Meta-Agent requirements-analysis handoff/intake alignment, or get explicit user confirmation that current draft is sufficient despite pending external analysis, before approving real dry-run/workspace creation.
-- Meta-Agent analysis alignment status: `pending_external_dialogue_handoff`; draft package status: provisional pre-analysis scaffold.
+- Review Meta-Agent revised draft manifest package v0.2.
+- Ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+- Current Meta-Agent manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`.
+- v0.2 is a revised draft for user review only; it does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
 - Clarify to the user that the planned dry-run is controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
 - Use `notes/target-project-intake-form-filling-guide-v0.1.md` and `notes/first-target-project-intake-records/README.md` as non-execution-source support references.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
@@ -19,8 +20,8 @@
 
 ## Waiting for user decision
 
-- Provide/approve external-analysis handoff/intake alignment package, or explicitly confirm current draft is sufficient despite pending external analysis.
-- Approve, revise, or reject Meta-Agent draft run manifest package only as a provisional pre-analysis scaffold.
+- Approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+- Review Meta-Agent revised draft manifest package v0.2.
 - Resolve or confirm target runtime truth source.
 - Approve final safe input policy.
 - Approve target workspace root or exception.
@@ -49,6 +50,7 @@
 
 ## Recently completed
 
+- MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; requirements analysis remains pending external dialogue handoff and the draft package is provisional.
 - MNEMOSYNE-065: moved B1 follow-up into current open-questions section.
 - MNEMOSYNE-066: ingested PRO-04 v2 and DR5; created first-target intake/evaluation/scorecard/postmortem/regression support instruments.

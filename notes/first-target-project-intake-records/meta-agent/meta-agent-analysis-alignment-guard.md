@@ -57,3 +57,20 @@ Expected output, if later authorized:
 - regression candidates.
 
 It must not directly create or install an operational Meta-Agent memory system.
+
+
+## MNEMOSYNE-071 status update
+
+```yaml
+external_alignment_package_received: true
+external_alignment_package_path: notes/first-target-project-intake-records/meta-agent/meta-agent-requirements-analysis-handoff-intake-alignment-package.md
+alignment_verdict: READY_FOR_MNEMOSYNE_MANIFEST_REVISION
+requirements_analysis_complete: false
+current_draft_manifest_package_status: revised_draft_v0_2_for_user_review_not_approved
+approved_for_real_dry_run: false
+approved_for_workspace_creation: false
+approved_for_target_material_ingestion: false
+approved_for_target_repository_write: false
+```
+
+The previous `pending_external_dialogue_handoff` guard is resolved only for the narrow purpose of manifest revision. It is not resolved for real dry-run approval, workspace creation, material ingestion, target repository write, or operational memory-system build.

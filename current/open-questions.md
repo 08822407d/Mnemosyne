@@ -36,6 +36,18 @@
   - status: created_by_MNEMOSYNE-070
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-analysis-alignment-guard.md`
   - note: draft package is a provisional pre-analysis scaffold, not completed requirements analysis, approved design spec, final build plan, operational memory-system installation, or approved real dry-run manifest.
+- External alignment package:
+  - status: ingested_by_MNEMOSYNE-071
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-requirements-analysis-handoff-intake-alignment-package.md`
+  - verdict: READY_FOR_MNEMOSYNE_MANIFEST_REVISION
+- Revised draft manifest package:
+  - status: created_by_MNEMOSYNE-071
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`
+  - note: revised draft for user review only; not approved for real dry-run.
+- Requirements analysis:
+  - status: incomplete
+  - note: requirements analysis remains incomplete; sufficient for manifest revision but not real dry-run approval, workspace creation, target material ingestion, target repository write, or memory system build.
+
 
 
 > Current execution source remains `current/human-approved-spec.md`. This file is not execution source.
