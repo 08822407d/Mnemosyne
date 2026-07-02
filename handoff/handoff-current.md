@@ -40,6 +40,8 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - MNEMOSYNE-074 recorded post-v0.2 gate decisions and created Meta-Agent final run manifest candidate v0.1 for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-076 recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only and created preparation/evidence/operator prompt package; actual dry-run execution remains unapproved; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-077 repaired post-076 current-state live-route residue so the next route consistently points to actual controlled dry-run execution decision.
+- Next route: review Meta-Agent controlled dry-run preparation package; ask user whether to approve actual controlled dry-run execution, request preparation revision, defer dry-run, or continue external requirements analysis.
 - No real target-project dry-run has occurred.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target workspace has been created.
