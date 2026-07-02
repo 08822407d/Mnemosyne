@@ -338,3 +338,15 @@ References:
 - `notes/target-project-workspace-skeleton-templates-v0.1.md`
 - `notes/codex-task-results/MNEMOSYNE-062-result.md`
 - `notes/codex-task-results/MNEMOSYNE-063-result.md`
+
+
+## MNEMOSYNE-074 checkpoint
+
+- MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
+- Current Meta-Agent run manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`.
+- Next user decision: approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
+- Candidate approval, if later granted, would only authorize controlled no-target-write dry-run preparation/evaluation; it would not authorize target repository write, operational memory-system installation, or Mnemosyne execution-source update.
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.

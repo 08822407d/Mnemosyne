@@ -71,6 +71,21 @@
     - operator_no_target_write_confirmation
     - workspace_decision
     - final_run_manifest_next_action
+- Post-v0.2 gate decision record:
+  - status: created_by_MNEMOSYNE-074
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-gate-decision-record.md`
+- Final run manifest candidate:
+  - status: created_by_MNEMOSYNE-074
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`
+  - note: candidate for user review only; not approved for real dry-run.
+- Final manifest candidate next decision:
+  - status: awaiting_user_decision
+  - options:
+    - approve_final_manifest_candidate_for_controlled_no_target_write_dry_run_preparation
+    - request_revision
+    - reject_candidate
+    - keep_v0_2_review_baseline_without_dry_run
+    - continue_external_requirements_analysis
 
 
 

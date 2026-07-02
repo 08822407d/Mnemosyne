@@ -214,3 +214,8 @@ For Meta-Agent, read `notes/first-target-project-intake-records/meta-agent/meta-
 ## MNEMOSYNE-073 Meta-Agent v0.2 review-only approval note
 
 For Meta-Agent after MNEMOSYNE-073, read `notes/first-target-project-intake-records/meta-agent/meta-agent-v0.2-review-only-approval-record.md` and `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`. v0.2 is approved only as the current review/preparation baseline, not as a real-dry-run manifest.
+
+
+## MNEMOSYNE-074 Meta-Agent final manifest candidate note
+
+For Meta-Agent after MNEMOSYNE-074, read `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md` and `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-review-checklist.md`. The candidate is not approved for real dry-run until the user explicitly approves it.
