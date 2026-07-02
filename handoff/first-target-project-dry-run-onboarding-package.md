@@ -219,3 +219,8 @@ For Meta-Agent after MNEMOSYNE-073, read `notes/first-target-project-intake-reco
 ## MNEMOSYNE-074 Meta-Agent final manifest candidate note
 
 For Meta-Agent after MNEMOSYNE-074, read `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md` and `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-review-checklist.md`. The candidate is not approved for real dry-run until the user explicitly approves it.
+
+
+## MNEMOSYNE-076 Meta-Agent controlled dry-run preparation note
+
+For Meta-Agent after MNEMOSYNE-076, read the preparation plan, evidence/no-write proof plan, and operator prompt package. They prepare a controlled no-target-write dry-run but do not approve executing it. Actual execution requires a later explicit user approval and operator no-target-write confirmation.

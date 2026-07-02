@@ -31,3 +31,12 @@
 Meta-Agent v0.2 is approved as the current review/preparation baseline only. This does not approve real dry-run, workspace creation, material ingestion, target repository write, operational memory-system installation, or execution-source update.
 
 Meta-Agent final run manifest candidate v0.1 is the current candidate for user review only. It is not approved for real dry-run and does not create target workspace, ingest materials, or write target repository.
+
+## MNEMOSYNE-076 Meta-Agent preparation package
+
+- `meta-agent/meta-agent-final-manifest-candidate-approval-for-preparation-record.md`
+- `meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
+- `meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
+- `meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
+
+Meta-Agent final manifest candidate is approved for controlled no-target-write dry-run preparation only. Actual dry-run execution is still not approved.

@@ -2,6 +2,15 @@
 
 ## Active now
 
+- Review Meta-Agent controlled dry-run preparation package.
+- Ask user whether to approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
+- Current preparation package: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`, `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`, `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`.
+- Meta-Agent final manifest candidate approved for controlled no-target-write dry-run preparation only; actual dry-run execution remains unapproved.
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
+
 - Review Meta-Agent final run manifest candidate v0.1.
 - Ask user to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
 - Current Meta-Agent run manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`.
@@ -20,6 +29,7 @@
 
 ## Waiting for user decision
 
+- Approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
 - Decide whether to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
 - Resolve or confirm target runtime truth source.
 - Approve final safe input policy.
@@ -49,6 +59,7 @@
 
 ## Recently completed
 
+- MNEMOSYNE-076: recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only; created preparation/evidence/operator prompt package; actual dry-run execution remains unapproved; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/dry-run/target-write occurred.
@@ -284,10 +295,12 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 
 ### Waiting for user decision
 
+- Approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
+- Approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
+
 - [ ] Approve safe input/user originals storage policy using `notes/user-input-storage-governance-v0.1.md`.
 
 ### Recently completed
-
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
 - [x] MNEMOSYNE-058: PRO-01 audit and DR4 governance evidence ingested; Deep Research output-delivery exception added; first-dry-run support instruments repaired/hardened.
 
@@ -305,7 +318,6 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 - No target-project repository has been written.
 
 ### Recently completed
-
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
 - [x] MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were not present in `manual-import-inbox`; no hardening applied.
 - [x] MNEMOSYNE-063: ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls.

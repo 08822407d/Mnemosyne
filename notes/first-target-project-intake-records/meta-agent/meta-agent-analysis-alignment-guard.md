@@ -107,3 +107,20 @@ real_target_project_dry_run_started: false
 ```
 
 The final manifest candidate may become a scope-limited truth source only if the user later approves it. It is not approved by MNEMOSYNE-074.
+
+
+## MNEMOSYNE-076 status update
+
+```yaml
+final_manifest_candidate_approved_for_preparation: true
+final_manifest_candidate_approved_for_actual_dry_run_execution_now: false
+preparation_plan: notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md
+evidence_and_no_write_proof_plan: notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md
+operator_prompt_package: notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md
+target_workspace_created: false
+target_materials_ingested: false
+target_repository_written: false
+real_target_project_dry_run_started: false
+```
+
+The final manifest candidate approval is for preparation only. Actual dry-run execution still requires a later explicit user approval and operator no-target-write confirmation.
