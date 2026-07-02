@@ -8,7 +8,7 @@
 - Batch A small fixes are verified passed: post-047 ordinary Mnemosyne conversation verification result PASS, and MNEMOSYNE-048 ordinary Mnemosyne conversation verification result PASS.
 - The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
 - MNEMOSYNE-050 changed the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
-- Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review, but real dry-run has not started.
+- Batch B preparation produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review; one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested by MNEMOSYNE-079 as non-execution-source evidence with PASS_WITH_WARNINGS.
 
 
 ### MNEMOSYNE-079 current blockers/gates
@@ -30,6 +30,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-080: repaired post-079 current-state residue so active-context/open-questions/handoff no longer say the Meta-Agent dry-run is merely approved/pending execution; no target workspace/material/target-write or execution-source change occurred.
 - MNEMOSYNE-079: Meta-Agent controlled no-target-write dry-run result ingested as non-execution-source evidence with maintainer review verdict ACCEPT_FOR_NON_EXECUTION_SOURCE_INGESTION_WITH_WARNINGS; dry-run verdict PASS_WITH_WARNINGS, score 89/100, critical blockers []; no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-078: user approved actual Meta-Agent controlled no-target-write dry-run execution in a separate high-reasoning ChatGPT conversation; approved execution record, approved prompt, and result-return/ingestion-preflight note created; Codex Cloud execution remains not approved; no dry-run executed by this task, no target workspace/material/target-write occurred.
 - MNEMOSYNE-077: repaired post-076 current-state live-route residue so active-context/TODO/open-questions/handoff consistently point to the Meta-Agent controlled dry-run preparation package and actual-execution decision; no target workspace/material/dry-run/target write or execution-source change occurred.
@@ -235,7 +236,7 @@ The material below is retained for audit/history and may include superseded rout
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
 - Historical MNEMOSYNE-077 next decision was actual execution approval; MNEMOSYNE-078 later approved execution only for a separate high-reasoning ChatGPT conversation.
-- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
+- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
@@ -330,7 +331,7 @@ References:
 - MNEMOSYNE-062: blocked B1 PRO-02/PRO-03 ingestion because required payload files were absent from `manual-import-inbox`; no ingestion, hardening, target selection, target workspace, target material ingestion, or target repository write occurred.
 - MNEMOSYNE-063: PRO-02/PRO-03 B1 results ingested; synthetic-smoke-test, approval-conflict, redaction-manifest, external-pointer, manual-import classification, originals-pointer, and lesson-candidate controls hardened as non-execution-source support instruments; no target project selected at that time, no target workspace created, no target materials ingested, and no target repository written.
 - B1 PRO-02/PRO-03 ingestion/hardening has completed via MNEMOSYNE-063 and current-state sync residue is repaired by MNEMOSYNE-064; later PRO-04/DR5 ingestion completed via MNEMOSYNE-066; this historical route is superseded by MNEMOSYNE-067.
-- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
+- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write occurred.
 - Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; no repository/Codex dry-run has occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -353,7 +354,7 @@ References:
 - Historical MNEMOSYNE-074 Meta-Agent run manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`.
 - Historical MNEMOSYNE-074 next decision requested final manifest-candidate preparation approval before MNEMOSYNE-076 superseded that route.
 - Candidate approval, if later granted, would only authorize controlled no-target-write dry-run preparation/evaluation; it would not authorize target repository write, operational memory-system installation, or Mnemosyne execution-source update.
-- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
+- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
