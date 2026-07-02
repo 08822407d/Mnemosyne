@@ -16,6 +16,23 @@
 - Target-project intake filling guide:
   - status: created_by_MNEMOSYNE-068
   - note: non-execution-source guidance for completing target intake consistently; not an execution-source requirement by itself.
+
+- Final manifest candidate preparation approval:
+  - status: approved_by_user_in_MNEMOSYNE-076_for_preparation_only
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-final-manifest-candidate-approval-for-preparation-record.md`
+  - note: actual dry-run execution remains unapproved.
+- Controlled dry-run preparation package:
+  - status: created_by_MNEMOSYNE-076
+  - preparation_plan: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
+  - evidence_plan: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
+  - operator_prompt_package: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
+- Actual controlled dry-run execution:
+  - status: not_approved
+  - next_decision_options:
+    - approve_actual_controlled_dry_run_execution
+    - request_preparation_revision
+    - defer_dry_run
+    - continue_external_requirements_analysis
 - Still unresolved before real dry-run:
   - target_runtime_truth_source
   - final run manifest approval

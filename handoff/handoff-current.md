@@ -39,7 +39,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-073 recorded user approval of Meta-Agent v0.2 as review/preparation baseline only and created the post-v0.2 next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
 - MNEMOSYNE-074 recorded post-v0.2 gate decisions and created Meta-Agent final run manifest candidate v0.1 for user review only; no workspace/material/dry-run/target-write occurred.
-- Next route: review `notes/first-target-project-intake-records/meta-agent/meta-agent-final-run-manifest-candidate-v0.1.md`; ask user to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before explicit approval.
+- MNEMOSYNE-076 recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only and created preparation/evidence/operator prompt package; actual dry-run execution remains unapproved; no workspace/material/dry-run/target-write occurred.
 - No real target-project dry-run has occurred.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target workspace has been created.
@@ -109,11 +109,22 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. Review Meta-Agent final run manifest candidate v0.1.
-2. Ask user to approve final manifest candidate for controlled no-target-write dry-run preparation, request revision, reject candidate, keep v0.2 review baseline without dry-run, or continue external requirements analysis.
-3. Do not upload raw materials.
-4. Do not create `target-projects/meta-agent/`.
-5. Do not start real dry-run or write target repository before explicit approval.
+1. Review Meta-Agent controlled dry-run preparation package.
+2. Ask user to approve actual controlled dry-run execution, request preparation revision, defer dry-run, or continue external requirements analysis.
+3. Do not execute the operator prompt package until actual execution is explicitly approved.
+4. Do not upload raw materials.
+5. Do not create `target-projects/meta-agent/`.
+6. Do not start real dry-run or write target repository before explicit approval.
+
+- Current preparation package:
+  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
+  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
+  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
+- Actual dry-run execution remains unapproved.
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 

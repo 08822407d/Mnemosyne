@@ -231,6 +231,22 @@ The material below is retained for audit/history and may include superseded rout
 - 自动化增强（自动查重、自动写回、自动索引等）。
 - MNEMOSYNE-038 已找回并更新 6 个轻度研究 prompt 原文及相关索引；
 
+
+## MNEMOSYNE-076 checkpoint
+
+- MNEMOSYNE-076: user approved Meta-Agent final run manifest candidate v0.1 for controlled no-target-write dry-run preparation only; preparation plan, evidence/no-write proof plan, and operator prompt package created; actual dry-run execution remains unapproved; no target workspace/material/dry-run/target write occurred.
+- Current Meta-Agent state: final manifest candidate approved for controlled no-target-write dry-run preparation only.
+- Current preparation package:
+  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
+  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
+  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
+- Next user decision: approve actual controlled dry-run execution from the preparation package, request preparation revision, defer dry-run, or continue external requirements analysis.
+- Actual execution remains unapproved.
+- No real target-project dry-run has occurred.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
+
 ## 当前最重要文件
 
 - `current/human-approved-spec.md`
