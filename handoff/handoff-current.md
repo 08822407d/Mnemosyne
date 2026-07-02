@@ -43,9 +43,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-074 recorded post-v0.2 gate decisions and created Meta-Agent final run manifest candidate v0.1 for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-076 recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only and created preparation/evidence/operator prompt package; actual dry-run execution was unapproved at that time; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-077 repaired post-076 current-state live-route residue so the next route consistently points to actual controlled dry-run execution decision.
-- MNEMOSYNE-078 recorded user approval for actual Meta-Agent controlled no-target-write dry-run execution in a separate high-reasoning ChatGPT conversation and created approved execution prompt / return preflight; Codex Cloud execution is not approved and no dry-run was executed by this task.
-- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
-- Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation.
+- MNEMOSYNE-078 recorded user approval for actual Meta-Agent controlled no-target-write dry-run execution in a separate high-reasoning ChatGPT conversation and created approved execution prompt / return preflight; Codex Cloud execution was not approved and no dry-run was executed by that task.
+- MNEMOSYNE-079 ingested the Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence; maintainer review accepted PASS_WITH_WARNINGS with score 89/100 and no critical blockers; no workspace/material/target-write/execution-source change occurred.
+- One Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target-project repository has been written.
@@ -113,19 +113,19 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. User opens a new high-reasoning ChatGPT conversation.
-2. User pastes `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`.
-3. User brings the returned `META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md` back to the maintainer conversation.
-4. Maintainer reviews result and no-write evidence before any repository ingestion.
-5. Do not run the prompt in Codex Cloud.
-6. Do not stage the result in `manual-import-inbox/` until maintainer review approves.
+1. Review the MNEMOSYNE-079 dry-run ingestion result and maintainer review.
+2. Ask user to choose next Meta-Agent path: accept result as current evidence baseline, continue requirements analysis, request repair run, convert regression candidates, or plan later workspace/material phase.
+3. Do not create `target-projects/meta-agent/` without separate approval.
+4. Do not ingest target materials without separate approval.
+5. Do not write target repository.
+6. Do not treat PASS_WITH_WARNINGS as production-ready, target delivery, or execution-source update approval.
 
 - Current preparation package:
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Actual dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; it has not been executed in this repository/Codex task.
-- No real target-project dry-run has occurred in this repository/Codex task; actual execution is approved but pending manual high-reasoning conversation.
+- Historical preparation package is superseded by MNEMOSYNE-079 ingestion of the controlled no-target-write dry-run result as non-execution-source evidence.
+- One Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
@@ -141,8 +141,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 - MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
 - MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; MNEMOSYNE-064 and MNEMOSYNE-065 repaired B1 current-state residue, and MNEMOSYNE-066 later completed PRO-04/DR5 ingestion. Historical downstream prompt-generation guidance from this checkpoint is superseded by the MNEMOSYNE-067 next route.
-- No real target-project dry-run has occurred.
-- Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; no repository/Codex dry-run has occurred.
+- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings; no repository/Codex dry-run occurred.
 - No target materials have been uploaded/ingested.
 - No target project repository has been written.
 
@@ -162,7 +161,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - `notes/target-project-intake-form-filling-guide-v0.1.md`
 - `notes/first-target-project-intake-records/README.md`
 - `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`
-- No real target-project dry-run has occurred.
+- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings; no workspace/material/target-write occurred.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
@@ -175,7 +174,7 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 3. Do not create `target-projects/meta-agent/` without separate approval.
 4. Do not ingest target materials without separate approval.
 5. Do not write target repository.
-6. Do not treat PASS_WITH_WARNINGS as production-ready or execution-source update approval.
+6. Do not treat PASS_WITH_WARNINGS as production-ready, target delivery, or execution-source update approval.
 
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.

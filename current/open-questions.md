@@ -32,12 +32,30 @@
   - approved_execution_record: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-record-v0.1.md`
   - approved_prompt: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md`
   - note: approved only for new high-reasoning ChatGPT conversation; not Codex Cloud; no workspace/material/target-write authorization.
-- Dry-run execution status:
-  - status: approved_but_not_executed_by_MNEMOSYNE-078
-  - next_step: user manually runs approved prompt and returns result file.
-- Result ingestion:
-  - status: pending_future_maintainer_review
-  - preflight: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-result-return-and-ingestion-preflight-v0.1.md`
+- Controlled dry-run result:
+  - status: ingested_by_MNEMOSYNE-079
+  - path: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`
+  - verdict: PASS_WITH_WARNINGS
+  - score: 89/100
+  - critical_blockers: []
+  - note: accepted as non-execution-source dry-run evidence with warnings, not production-ready or target-write approval.
+- No-write evidence review:
+  - status: accepted_by_MNEMOSYNE-079_with_equivalent_evidence
+  - path: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-no-write-evidence-review.md`
+- Approval-chain clarification:
+  - status: created_by_MNEMOSYNE-079
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approval-chain-clarification-v0.1.md`
+- Post-079 current-route sync:
+  - status: repaired_by_MNEMOSYNE-080
+  - note: live route now reflects that the result has been ingested and next decision is the post-ingestion Meta-Agent path.
+- Next Meta-Agent path:
+  - status: awaiting_user_decision_after_ingestion
+  - options:
+    - accept_result_as_current_evidence_baseline
+    - continue_requirements_analysis
+    - request_repair_run
+    - convert_regression_candidates
+    - plan_later_workspace_or_material_phase
 - Post-076 current-route sync:
   - status: repaired_by_MNEMOSYNE-077
   - note: live route now points to preparation package / actual-execution decision, not final-manifest-candidate approval.
@@ -159,7 +177,7 @@
 
 - Post-MNEMOSYNE-053 fresh replay reviewed PASS has been synchronized by MNEMOSYNE-055; remaining first dry-run blockers are user target selection, authority/safe input/no-target-write approval, and approved run manifest.
 - Which first target project will be selected after post-053 replay reviewed PASS? Meta-Agent actual controlled no-target-write dry-run execution is approved only for a separate high-reasoning ChatGPT conversation; no repository/Codex dry-run has occurred.
-- What authority/safe input/no-target-write approvals, source map, and approved run manifest will the user provide? No real target-project dry-run has occurred; no target materials have been uploaded/ingested; no target repository has been written.
+- What authority/safe input/no-target-write approvals, source map, and approved run manifest will the user provide? One Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested by MNEMOSYNE-079 as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write occurred.
 - Should any D-01/D-03/D-04/D-05 candidate wording be promoted later? (separate approval only)
 - OP-08 remains partially addressed; OP-09/OP-10 remain partially answered by DR1.
 - OP-08: What broader privacy/redaction/access-control rule should govern original-source materials if sensitive content appears?
@@ -521,6 +539,9 @@ The material below is retained for history and may include superseded route word
 - Approval-chain clarification:
   - status: created_by_MNEMOSYNE-079
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approval-chain-clarification-v0.1.md`
+- Post-079 current-route sync:
+  - status: repaired_by_MNEMOSYNE-080
+  - note: live route now reflects that the result has been ingested and next decision is the post-ingestion Meta-Agent path.
 - Next Meta-Agent path:
   - status: awaiting_user_decision_after_ingestion
   - options:
