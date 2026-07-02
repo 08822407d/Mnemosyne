@@ -209,3 +209,8 @@ PASS does not authorize target repository write, target delivery acceptance, or 
 ## MNEMOSYNE-071 Meta-Agent v0.2 revised draft note
 
 For Meta-Agent, read `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md` and the alignment package before using the older v0.1 draft. v0.2 is still a revised draft for user review, not an approved real-dry-run manifest.
+
+
+## MNEMOSYNE-073 Meta-Agent v0.2 review-only approval note
+
+For Meta-Agent after MNEMOSYNE-073, read `notes/first-target-project-intake-records/meta-agent/meta-agent-v0.2-review-only-approval-record.md` and `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`. v0.2 is approved only as the current review/preparation baseline, not as a real-dry-run manifest.

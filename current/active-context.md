@@ -11,13 +11,14 @@
 - Batch B preparation has produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review, but real dry-run has not started.
 
 
-### MNEMOSYNE-071 current blockers/gates
+### MNEMOSYNE-073 current blockers/gates
 
 - MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 for user review only; requirements analysis remains incomplete, real dry-run/workspace/material/target-write approvals remain false, and no target workspace/material/dry-run/target write occurred.
 - Current target state: Meta-Agent is selected for draft manifest preparation only.
 - Current Meta-Agent manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`.
-- Next user decision: approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
-- v0.2 does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
+- Next gate: decide target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action using `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`.
+- Current Meta-Agent baseline: v0.2 approved as review/preparation baseline only.
+- v0.2 approval does not approve real dry-run, target workspace creation, target material ingestion, target repository write, operational memory-system installation, or Mnemosyne execution-source update.
 - The external alignment package supports manifest revision only; requirements analysis remains incomplete.
 - If approved later, the planned dry-run is a controlled no-target-write real-target dry-run/evaluation that should produce an offline Meta-Agent memory-system design package and evidence/postmortem artifacts; it does not directly create or install an operational Meta-Agent memory system.
 - Do not upload raw materials yet.
@@ -36,6 +37,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-073: user approved Meta-Agent v0.2 as revised draft for review/preparation baseline only; approval record and next approval-gates checklist created; real dry-run/workspace/material/target-write/operational installation approvals remain false; no target workspace/material/dry-run/target write occurred.
 - MNEMOSYNE-072: repaired post-071 current-route residue so active-context/open-questions/handoff consistently point to Meta-Agent v0.2 as the current revised draft for user review only; no target workspace, target materials, real dry-run, target repository write, or execution-source change occurred.
 - MNEMOSYNE-071: external Meta-Agent requirements-analysis alignment package ingested and revised draft manifest package v0.2 created for user review only; requirements analysis remains incomplete and no workspace/material/dry-run/target write occurred.
 - MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; Meta-Agent requirements analysis remains pending in an external dialogue, and the existing draft run-manifest package is marked as a provisional pre-analysis scaffold; no target workspace created, no target materials ingested, no real dry-run started, and no target repository written.
@@ -74,7 +76,8 @@
 - MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only.
 - Requirements analysis remains incomplete.
 - Current Meta-Agent manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`.
-- v0.2 is a revised draft for user review only; it does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
+- Current Meta-Agent baseline: v0.2 approved as review/preparation baseline only.
+- v0.2 approval does not approve real dry-run, target workspace creation, target material ingestion, target repository write, operational memory-system installation, or Mnemosyne execution-source update.
 - The external alignment package has been received and ingested by MNEMOSYNE-071 for manifest revision only; it is not enough for real dry-run approval, workspace creation, material ingestion, target repository write, or memory-system build.
 - Target-project workspace principle is now in execution source; detailed MNEMOSYNE-056 proposal remains a non-execution-source design reference.
 - Before first real target-project dry-run, user must still select target, approve authority/source map, approve safe input/originals storage policy, confirm no-target-write, and approve run manifest.
@@ -91,8 +94,9 @@
 
 - Current target state: Meta-Agent is selected for draft manifest preparation only.
 - Current manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`.
-- Next user decision: approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
-- If v0.2 is approved as review-only later, that still does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
+- Next gate: decide target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action using `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`.
+- Current Meta-Agent baseline: v0.2 approved as review/preparation baseline only.
+- v0.2 approval does not approve real dry-run, target workspace creation, target material ingestion, target repository write, operational memory-system installation, or Mnemosyne execution-source update.
 - If a real dry-run is later approved, it remains a controlled no-target-write real-target evaluation/design-package generation run that produces an offline Meta-Agent memory-system design package and evidence/postmortem artifacts; it does not directly create or install an operational Meta-Agent memory system.
 - Do not upload raw materials yet.
 - Do not create `target-projects/meta-agent/` unless separately approved.

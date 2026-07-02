@@ -74,3 +74,19 @@ approved_for_target_repository_write: false
 ```
 
 The previous `pending_external_dialogue_handoff` guard is resolved only for the narrow purpose of manifest revision. It is not resolved for real dry-run approval, workspace creation, material ingestion, target repository write, or operational memory-system build.
+
+
+## MNEMOSYNE-073 status update
+
+```yaml
+v0_2_review_only_baseline_approved: true
+v0_2_approval_record: notes/first-target-project-intake-records/meta-agent/meta-agent-v0.2-review-only-approval-record.md
+next_approval_gates: notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md
+approved_for_real_dry_run: false
+approved_for_workspace_creation: false
+approved_for_target_material_ingestion: false
+approved_for_target_repository_write: false
+approved_for_operational_memory_system_installation: false
+```
+
+The v0.2 approval is review-only and preparation-baseline only. It does not resolve target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace creation, material ingestion, or final run-manifest approval.

@@ -2,10 +2,10 @@
 
 ## Active now
 
-- Review Meta-Agent revised draft manifest package v0.2.
-- Ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+- Use `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md` to collect the next Meta-Agent approval decisions.
+- Ask user for target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action.
 - Current Meta-Agent manifest candidate: `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`.
-- v0.2 is a revised draft for user review only; it does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
+- v0.2 is approved as the current review/preparation baseline only; it does not approve real dry-run, workspace creation, target material ingestion, target repository write, operational memory-system installation, or execution-source update.
 - Clarify to the user that the planned dry-run is controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
 - Use `notes/target-project-intake-form-filling-guide-v0.1.md` and `notes/first-target-project-intake-records/README.md` as non-execution-source support references.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
@@ -20,8 +20,7 @@
 
 ## Waiting for user decision
 
-- Approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
-- Review Meta-Agent revised draft manifest package v0.2.
+- Complete Meta-Agent post-v0.2 next approval gates.
 - Resolve or confirm target runtime truth source.
 - Approve final safe input policy.
 - Approve target workspace root or exception.
@@ -50,6 +49,7 @@
 
 ## Recently completed
 
+- MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; requirements analysis remains pending external dialogue handoff and the draft package is provisional.
 - MNEMOSYNE-065: moved B1 follow-up into current open-questions section.

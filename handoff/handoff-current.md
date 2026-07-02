@@ -36,8 +36,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 - MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard when Meta-Agent requirements analysis was still pending in an external dialogue, and the then-current draft run-manifest package was only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only; requirements analysis remains incomplete; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-072 repaired post-071 current-route residue so the live next route points to v0.2.
+- MNEMOSYNE-073 recorded user approval of Meta-Agent v0.2 as review/preparation baseline only and created the post-v0.2 next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
 - The replay-quality portion of the first-target dry-run gate is satisfied.
-- Next route: review Meta-Agent revised draft manifest package v0.2; ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before approvals.
+- Next route: use `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`; ask user for target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action; do not upload raw materials, create `target-projects/meta-agent/`, start dry-run, or write target repository before approvals.
 - No real target-project dry-run has occurred.
 - Meta-Agent selected for draft manifest preparation only; no real dry-run approved.
 - No target workspace has been created.
@@ -107,12 +108,11 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. Review Meta-Agent revised draft manifest package v0.2.
-2. Ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
+1. Use `notes/first-target-project-intake-records/meta-agent/meta-agent-post-v0.2-next-approval-gates.md`.
+2. Ask user for target runtime truth source, final safe input policy, operator no-target-write confirmation, workspace decision, and final run manifest next action.
 3. Do not upload raw materials.
 4. Do not create `target-projects/meta-agent/`.
-5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
-6. v0.2 approval for review-only does not approve real dry-run, workspace creation, target material ingestion, target repository write, or operational memory-system installation.
+5. Do not start real dry-run or write target repository before approved final run manifest and required approvals.
 
 ## MNEMOSYNE-051 / DR2 handoff-strategy evidence
 
