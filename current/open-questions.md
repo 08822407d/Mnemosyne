@@ -504,3 +504,28 @@ The material below is retained for history and may include superseded route word
 - Does OP-08 close?
   - status: not_closed
   - note: DR4 informs v0.1 target-input governance, but broader privacy/redaction/access-control remains open until separately approved.
+
+
+## Meta-Agent post-MNEMOSYNE-079 dry-run result questions
+
+- Controlled dry-run result:
+  - status: ingested_by_MNEMOSYNE-079
+  - path: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`
+  - verdict: PASS_WITH_WARNINGS
+  - score: 89/100
+  - critical_blockers: []
+  - note: accepted as non-execution-source dry-run evidence with warnings, not production-ready or target-write approval.
+- No-write evidence review:
+  - status: accepted_by_MNEMOSYNE-079_with_equivalent_evidence
+  - path: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-no-write-evidence-review.md`
+- Approval-chain clarification:
+  - status: created_by_MNEMOSYNE-079
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approval-chain-clarification-v0.1.md`
+- Next Meta-Agent path:
+  - status: awaiting_user_decision_after_ingestion
+  - options:
+    - accept_result_as_current_evidence_baseline
+    - continue_requirements_analysis
+    - request_repair_run
+    - convert_regression_candidates
+    - plan_later_workspace_or_material_phase

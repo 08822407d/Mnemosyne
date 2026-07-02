@@ -228,3 +228,8 @@ For Meta-Agent after MNEMOSYNE-076, read the preparation plan, evidence/no-write
 ## MNEMOSYNE-078 Meta-Agent approved execution prompt note
 
 For Meta-Agent after MNEMOSYNE-078, use `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-approved-execution-prompt-v0.1.md` only in a new high-reasoning ChatGPT conversation. Do not execute it in Codex Cloud. After the result returns, use `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-result-return-and-ingestion-preflight-v0.1.md` before any ingestion.
+
+
+## MNEMOSYNE-079 Meta-Agent dry-run result ingestion note
+
+For Meta-Agent after MNEMOSYNE-079, the first controlled no-target-write dry-run result is ingested as non-execution-source evidence under `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/`. Review the maintainer review and no-write evidence review before using it. PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, or execution-source updates.
