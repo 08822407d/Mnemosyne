@@ -62,9 +62,18 @@
 - Baseline freeze for handoff:
   - status: created_by_MNEMOSYNE-082
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
-- Handoff package:
-  - status: pending_after_MNEMOSYNE-082
-  - next_step: generate handoff package and next-conversation startup prompt
+- Official handoff package:
+  - status: created_by_MNEMOSYNE-083
+  - path: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`
+- Next-conversation startup prompt:
+  - status: created_by_MNEMOSYNE-083
+  - path: `handoff/meta-agent-next-conversation-startup-prompt.md`
+- Post-083 current-route sync:
+  - status: repaired_by_MNEMOSYNE-084
+  - note: live route now points to official MNEMOSYNE-083 handoff artifacts and does not ask to generate them again.
+- Post-084 handoff validation:
+  - status: pending_user_or_next_conversation_review
+  - next_possible_task: MNEMOSYNE-085_only_if_residue_found
 - Next Meta-Agent path:
   - status: resolved_by_MNEMOSYNE-082_phase_closure_decision
   - resolution: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
@@ -557,9 +566,18 @@ The material below is retained for history and may include superseded route word
 - Baseline freeze for handoff:
   - status: created_by_MNEMOSYNE-082
   - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
-- Handoff package:
-  - status: pending_after_MNEMOSYNE-082
-  - next_step: generate handoff package and next-conversation startup prompt
+- Official handoff package:
+  - status: created_by_MNEMOSYNE-083
+  - path: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`
+- Next-conversation startup prompt:
+  - status: created_by_MNEMOSYNE-083
+  - path: `handoff/meta-agent-next-conversation-startup-prompt.md`
+- Post-083 current-route sync:
+  - status: repaired_by_MNEMOSYNE-084
+  - note: live route now points to official MNEMOSYNE-083 handoff artifacts and does not ask to generate them again.
+- Post-084 handoff validation:
+  - status: pending_user_or_next_conversation_review
+  - next_possible_task: MNEMOSYNE-085_only_if_residue_found
 - Next Meta-Agent path:
   - status: resolved_by_MNEMOSYNE-082_phase_closure_decision
   - resolution: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups

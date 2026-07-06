@@ -1,47 +1,24 @@
 # TODO
 
-## Active now
+## Active
 
-- Review MNEMOSYNE-083 handoff package and next-conversation startup prompt.
-- If handoff package is valid, start a new conversation with `handoff/meta-agent-next-conversation-startup-prompt.md` and reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
-- Only create MNEMOSYNE-084 if post-083 residue or handoff defect is found.
-
-
-- Generate Meta-Agent handoff package and next-conversation startup prompt.
-- Use MNEMOSYNE-082 phase-closure decision and baseline-freeze record as the handoff baseline.
-- Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
-- No target workspace has been created.
-- No target materials have been uploaded/ingested.
-- No target repository has been written.
+- Review MNEMOSYNE-084 post-083 residue repair.
+- If no further residue is found, start a new conversation with `handoff/meta-agent-next-conversation-startup-prompt.md` and reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
+- Do not create MNEMOSYNE-085 unless post-084 validation finds remaining residue or handoff defects.
 
 ## Waiting for user decision
 
-- Decide whether to migrate to a new conversation using the MNEMOSYNE-083 handoff package or request a post-083 residue repair.
+- Decide whether to migrate to a new conversation using the MNEMOSYNE-083 official handoff package after MNEMOSYNE-084 verification, or request another small residue repair only if needed.
 
+## Current boundaries
 
-- Await handoff package generation/review.
-- Resolve or confirm target runtime truth source if a later post-handoff task requires it.
-- Approve final safe input policy if a future ingestion task requires it.
-- Approve target workspace root or exception only if a later task proposes workspace creation.
-- Confirm owner/authority as needed after result review.
-- Decide whether any D-01–D-07 candidate wording from the MNEMOSYNE-044 coverage map should be promoted into the execution source; separate approval only.
-
-## Waiting for dry-run evidence
-
-- Meta-Agent controlled no-target-write dry-run result has been ingested as non-execution-source evidence with PASS_WITH_WARNINGS.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
 
-## Deferred / future
-
-- PDF figure/table/image manual review.
-- Candidate/idea cleanup beyond this current-state consolidation.
-- Optional DR2 or additional research only if a future design question needs it.
-- Platform/visibility reverification when importing files or when repository visibility materially affects the task. Do not add a recurring TODO to change repository visibility merely because it is public.
-
 ## Recently completed
 
+- MNEMOSYNE-084: repaired post-083 handoff current-state residue; no handoff artifacts, dry-run evidence, target workspace/material/target-write, or execution-source change occurred.
 - MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
 
 
