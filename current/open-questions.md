@@ -55,17 +55,19 @@
   - status: created_by_MNEMOSYNE-081
   - path: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
   - note: triage only; no formal regression tests or global rule promotions created.
-- Phase closure:
-  - status: pending_user_decision_after_MNEMOSYNE-081
-  - recommended: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
+- Phase closure decision:
+  - status: recorded_by_MNEMOSYNE-082
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`
+  - decision: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
+- Baseline freeze for handoff:
+  - status: created_by_MNEMOSYNE-082
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
+- Handoff package:
+  - status: pending_after_MNEMOSYNE-082
+  - next_step: generate handoff package and next-conversation startup prompt
 - Next Meta-Agent path:
-  - status: awaiting_user_decision_after_ingestion
-  - options:
-    - accept_result_as_current_evidence_baseline
-    - continue_requirements_analysis
-    - request_repair_run
-    - convert_regression_candidates
-    - plan_later_workspace_or_material_phase
+  - status: resolved_by_MNEMOSYNE-082_phase_closure_decision
+  - resolution: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
 - Post-076 current-route sync:
   - status: repaired_by_MNEMOSYNE-077
   - note: live route now points to preparation package / actual-execution decision, not final-manifest-candidate approval.
@@ -102,12 +104,8 @@
   - status: incomplete
   - note: requirements analysis remains incomplete; sufficient for manifest revision but not real dry-run approval, workspace creation, target material ingestion, target repository write, or memory system build.
 - Next user decision:
-  - status: awaiting_user_decision
-  - options:
-    - approve_v0_2_as_revised_draft_for_review_only
-    - request_revision
-    - reject_current_draft
-    - continue_external_requirements_analysis
+  - status: historical_resolved_by_later_MNEMOSYNE_073_to_082_sequence
+  - note: current live route is MNEMOSYNE-082 handoff package generation/review.
 - Post-071 current-route sync:
   - status: repaired_by_MNEMOSYNE-072
   - note: high-signal current route now points to v0.2 and no longer asks for an external alignment package as if it were missing.
@@ -552,11 +550,16 @@ The material below is retained for history and may include superseded route word
 - Post-079 current-route sync:
   - status: repaired_by_MNEMOSYNE-080
   - note: live route now reflects that the result has been ingested and next decision is the post-ingestion Meta-Agent path.
+- Phase closure decision:
+  - status: recorded_by_MNEMOSYNE-082
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`
+  - decision: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
+- Baseline freeze for handoff:
+  - status: created_by_MNEMOSYNE-082
+  - path: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
+- Handoff package:
+  - status: pending_after_MNEMOSYNE-082
+  - next_step: generate handoff package and next-conversation startup prompt
 - Next Meta-Agent path:
-  - status: awaiting_user_decision_after_ingestion
-  - options:
-    - accept_result_as_current_evidence_baseline
-    - continue_requirements_analysis
-    - request_repair_run
-    - convert_regression_candidates
-    - plan_later_workspace_or_material_phase
+  - status: resolved_by_MNEMOSYNE-082_phase_closure_decision
+  - resolution: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups

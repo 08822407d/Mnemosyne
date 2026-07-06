@@ -242,3 +242,12 @@ MNEMOSYNE-081 references:
 
 - `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`
 - `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
+
+## MNEMOSYNE-082 Meta-Agent phase closure / baseline-freeze note
+
+After MNEMOSYNE-082, read the phase-closure decision record and baseline-freeze record before handoff:
+
+- `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`
+- `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
+
+All high-risk follow-ups are deferred until after handoff, including requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and Mnemosyne execution-source update.

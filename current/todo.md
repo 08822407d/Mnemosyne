@@ -2,19 +2,17 @@
 
 ## Active now
 
-- Review MNEMOSYNE-081 pre-handoff stabilization roadmap and regression-candidate triage.
-- Current stabilization artifact: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`.
-- Next recommended action: record phase-closure decision before handoff package generation.
-- Current dry-run result: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
+- Generate Meta-Agent handoff package and next-conversation startup prompt.
+- Use MNEMOSYNE-082 phase-closure decision and baseline-freeze record as the handoff baseline.
+- Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
 
 ## Waiting for user decision
 
-- Decide phase closure: accept current dry-run result as evidence baseline and defer high-risk follow-ups, or request a different closure path.
-- Decide next path after Meta-Agent controlled dry-run result ingestion.
-- Resolve or confirm target runtime truth source if the accepted result identifies a remaining decision.
+- Await handoff package generation/review.
+- Resolve or confirm target runtime truth source if a later post-handoff task requires it.
 - Approve final safe input policy if a future ingestion task requires it.
 - Approve target workspace root or exception only if a later task proposes workspace creation.
 - Confirm owner/authority as needed after result review.
@@ -36,6 +34,7 @@
 
 ## Recently completed
 
+- MNEMOSYNE-082: recorded Meta-Agent phase closure and froze the PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline for handoff preparation only; no handoff package/regression formalization/workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-081: created post-079 pre-handoff stabilization roadmap and regression-candidate triage; no phase closure/handoff/regression formalization/workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-079: ingested Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-078: recorded actual controlled dry-run execution approval and created approved prompt / return preflight; no dry-run executed in Codex.

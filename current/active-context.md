@@ -19,7 +19,12 @@
 - One controlled no-target-write Meta-Agent dry-run has now been executed outside Codex and ingested as non-execution-source evidence; no target workspace/material/target-write occurred.
 - Current stabilization artifact: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`.
 - Current regression-candidate triage: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`.
-- Next recommended action: record phase-closure decision, likely accepting the PASS_WITH_WARNINGS result as current non-execution-source evidence baseline while deferring requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target write, and execution-source update.
+- Current phase status: Meta-Agent first controlled no-target-write dry-run evidence phase is closed for handoff preparation.
+- Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
+- Phase closure record: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`.
+- Baseline freeze: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`.
+- Next recommended action: generate the handoff package and next-conversation startup prompt.
+- Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, production-ready status, or Mnemosyne execution-source update.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -32,6 +37,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-082: recorded Meta-Agent phase-closure decision accepting the PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline and deferring high-risk follow-ups until after handoff; baseline-freeze record created; no handoff package yet, no regression formalization, no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-081: created post-079 pre-handoff stabilization roadmap and regression-candidate triage; no phase closure yet, no handoff package yet, no regression formalization, no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-080: repaired post-079 current-state residue so active-context/open-questions/handoff no longer say the Meta-Agent dry-run is merely approved/pending execution; no target workspace/material/target-write or execution-source change occurred.
 - MNEMOSYNE-079: Meta-Agent controlled no-target-write dry-run result ingested as non-execution-source evidence with maintainer review verdict ACCEPT_FOR_NON_EXECUTION_SOURCE_INGESTION_WITH_WARNINGS; dry-run verdict PASS_WITH_WARNINGS, score 89/100, critical blockers []; no target workspace/material/target-write/execution-source change occurred.
@@ -77,7 +83,12 @@
 - Result status: accepted as non-execution-source target-specific dry-run evidence with warnings.
 - Current stabilization artifact: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-pre-handoff-stabilization-roadmap-v0.1.md`.
 - Current regression-candidate triage: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`.
-- Next recommended action: record phase-closure decision, likely accepting the PASS_WITH_WARNINGS result as current non-execution-source evidence baseline while deferring requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target write, and execution-source update.
+- Current phase status: Meta-Agent first controlled no-target-write dry-run evidence phase is closed for handoff preparation.
+- Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
+- Phase closure record: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`.
+- Baseline freeze: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`.
+- Next recommended action: generate the handoff package and next-conversation startup prompt.
+- Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, production-ready status, or Mnemosyne execution-source update.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
@@ -87,11 +98,15 @@
 
 ### current next route
 
-- Review the MNEMOSYNE-081 pre-handoff stabilization roadmap and regression-candidate triage.
-- Next recommended action: record phase-closure decision, likely accepting the PASS_WITH_WARNINGS result as current non-execution-source evidence baseline while deferring requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target write, and execution-source update.
-- Do not create `target-projects/meta-agent/` without separate approval.
-- Do not ingest target materials without separate approval.
-- Do not write target repository.
+- Current phase status: Meta-Agent first controlled no-target-write dry-run evidence phase is closed for handoff preparation.
+- Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
+- Phase closure record: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`.
+- Baseline freeze: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`.
+- Next recommended action: generate the handoff package and next-conversation startup prompt.
+- Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
+- No target workspace has been created.
+- No target materials have been uploaded/ingested.
+- No target repository has been written.
 - Do not treat PASS_WITH_WARNINGS as production-ready or execution-source update approval.
 
 ### important non-execution-source references
