@@ -73,3 +73,10 @@ MNEMOSYNE-081 adds pre-handoff stabilization planning and regression-candidate t
 - `meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
 
 MNEMOSYNE-082 closes the current Meta-Agent controlled dry-run evidence phase for handoff preparation only. The PASS_WITH_WARNINGS dry-run result is accepted as the current non-execution-source evidence baseline, and high-risk follow-ups are deferred until after handoff. MNEMOSYNE-082 does not create the handoff package, formalize regression tests, create a target workspace, ingest target materials, write a target repository, install an operational memory system, or modify Mnemosyne execution source.
+
+## MNEMOSYNE-083 official handoff artifacts
+
+- `../../handoff/meta-agent-post-079-phase-closure-handoff-package.md`: official Meta-Agent phase-closure handoff package created by MNEMOSYNE-083.
+- `../../handoff/meta-agent-next-conversation-startup-prompt.md`: official next-conversation startup prompt created by MNEMOSYNE-083.
+
+These artifacts supersede local/sandbox handoff drafts. They do not approve target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
