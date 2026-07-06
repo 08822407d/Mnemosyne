@@ -23,7 +23,10 @@
 - Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
 - Phase closure record: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`.
 - Baseline freeze: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`.
-- Next recommended action: generate the handoff package and next-conversation startup prompt.
+- Current handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
+- Current next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
+- Current phase status: Meta-Agent phase is handoff-ready after MNEMOSYNE-083.
+- Next recommended action: user starts a new conversation using the official startup prompt and handoff package, or run MNEMOSYNE-084 only if post-083 residue is found.
 - Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, production-ready status, or Mnemosyne execution-source update.
 - No target workspace has been created.
@@ -37,6 +40,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-082: recorded Meta-Agent phase-closure decision accepting the PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline and deferring high-risk follow-ups until after handoff; baseline-freeze record created; no handoff package yet, no regression formalization, no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-081: created post-079 pre-handoff stabilization roadmap and regression-candidate triage; no phase closure yet, no handoff package yet, no regression formalization, no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-080: repaired post-079 current-state residue so active-context/open-questions/handoff no longer say the Meta-Agent dry-run is merely approved/pending execution; no target workspace/material/target-write or execution-source change occurred.
@@ -87,7 +91,10 @@
 - Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
 - Phase closure record: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`.
 - Baseline freeze: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`.
-- Next recommended action: generate the handoff package and next-conversation startup prompt.
+- Current handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
+- Current next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
+- Current phase status: Meta-Agent phase is handoff-ready after MNEMOSYNE-083.
+- Next recommended action: user starts a new conversation using the official startup prompt and handoff package, or run MNEMOSYNE-084 only if post-083 residue is found.
 - Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, production-ready status, or Mnemosyne execution-source update.
 - No target workspace has been created.
@@ -102,7 +109,10 @@
 - Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
 - Phase closure record: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-phase-closure-decision-record.md`.
 - Baseline freeze: `notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`.
-- Next recommended action: generate the handoff package and next-conversation startup prompt.
+- Current handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
+- Current next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
+- Current phase status: Meta-Agent phase is handoff-ready after MNEMOSYNE-083.
+- Next recommended action: user starts a new conversation using the official startup prompt and handoff package, or run MNEMOSYNE-084 only if post-083 residue is found.
 - Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.

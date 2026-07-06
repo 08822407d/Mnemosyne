@@ -16,6 +16,14 @@
 - supersedes: `handoff/first-mnemosyne-application-test-handoff-package.md`
 - design_only: true
 
+
+## MNEMOSYNE-083 official Meta-Agent handoff artifacts
+
+- Official handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
+- Next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
+- These MNEMOSYNE-083 artifacts supersede local/sandbox handoff drafts for Meta-Agent phase migration.
+- They do not approve target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
+
 ## 2. Authority map
 
 - Mnemosyne execution source: `current/human-approved-spec.md` is the only Mnemosyne execution source.

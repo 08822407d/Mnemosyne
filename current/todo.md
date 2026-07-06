@@ -2,6 +2,11 @@
 
 ## Active now
 
+- Review MNEMOSYNE-083 handoff package and next-conversation startup prompt.
+- If handoff package is valid, start a new conversation with `handoff/meta-agent-next-conversation-startup-prompt.md` and reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
+- Only create MNEMOSYNE-084 if post-083 residue or handoff defect is found.
+
+
 - Generate Meta-Agent handoff package and next-conversation startup prompt.
 - Use MNEMOSYNE-082 phase-closure decision and baseline-freeze record as the handoff baseline.
 - Current evidence baseline: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
@@ -10,6 +15,9 @@
 - No target repository has been written.
 
 ## Waiting for user decision
+
+- Decide whether to migrate to a new conversation using the MNEMOSYNE-083 handoff package or request a post-083 residue repair.
+
 
 - Await handoff package generation/review.
 - Resolve or confirm target runtime truth source if a later post-handoff task requires it.
@@ -33,6 +41,9 @@
 - Platform/visibility reverification when importing files or when repository visibility materially affects the task. Do not add a recurring TODO to change repository visibility merely because it is public.
 
 ## Recently completed
+
+- MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
+
 
 - MNEMOSYNE-082: recorded Meta-Agent phase closure and froze the PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline for handoff preparation only; no handoff package/regression formalization/workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-081: created post-079 pre-handoff stabilization roadmap and regression-candidate triage; no phase closure/handoff/regression formalization/workspace/material/target-write/execution-source change occurred.
