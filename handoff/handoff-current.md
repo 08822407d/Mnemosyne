@@ -1,6 +1,7 @@
 # Handoff Current
 
-- MNEMOSYNE-084 repaired post-083 handoff current-state residue; official MNEMOSYNE-083 handoff artifacts remain the migration baseline.
+- MNEMOSYNE-085 recorded a user-approved interruption marker and resume guard: `task_type: current_state_marker_only`, interrupted route `post_084_handoff_validation_and_migration`, status `suspended_by_user_inserted_long_work`; it is not a residue repair and does not modify execution source.
+- MNEMOSYNE-084 remains the latest substantive residue repair; post-084 validation found no current residue requiring a repair task; official MNEMOSYNE-083 handoff artifacts remain the migration baseline.
 - MNEMOSYNE-083 created the official Meta-Agent phase-closure handoff package and next-conversation startup prompt. Use these repository artifacts for migration; do not use local/sandbox handoff drafts.
 - MNEMOSYNE-082 recorded the Meta-Agent phase-closure decision: the PASS_WITH_WARNINGS dry-run result is accepted as current non-execution-source evidence baseline; high-risk follow-ups are deferred until after handoff; baseline-freeze record created; no handoff package yet and no workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-081 created a post-079 pre-handoff stabilization roadmap and regression-candidate triage; MNEMOSYNE-082 later recorded phase closure for handoff preparation only and froze the current baseline.
@@ -118,11 +119,12 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 
 ## Next route
 
-1. Review MNEMOSYNE-084 post-083 residue repair.
-2. Use `handoff/meta-agent-next-conversation-startup-prompt.md` to start the new conversation.
-3. Provide or reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md` as the official handoff package.
-4. Do not propose MNEMOSYNE-080/081/082 again.
-5. Do not create workspace/material/target-write/build/regression-formalization tasks before a new explicit post-handoff decision.
+1. MNEMOSYNE-085 recorded a user-approved interruption marker for the interrupted route `post_084_handoff_validation_and_migration`; the route is paused because the user is inserting longer work.
+2. Inserted long work may proceed only when specified by the user; do not use this marker to begin that work.
+3. After the inserted long work completes or the user asks to resume, remind the user to continue or choose the paused post-handoff path.
+4. The paused post-handoff path remains: review MNEMOSYNE-084 if needed; use `handoff/meta-agent-next-conversation-startup-prompt.md`; provide or reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`; choose a post-handoff path only after explicit user decision.
+5. Do not propose MNEMOSYNE-080/081/082 again.
+6. This marker does not approve workspace/material/target-write/build/regression-formalization, target repository write, operational memory-system installation, or execution-source update.
 
 - Current preparation package:
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`

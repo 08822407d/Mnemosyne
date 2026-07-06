@@ -72,8 +72,14 @@
   - status: repaired_by_MNEMOSYNE-084
   - note: live route now points to official MNEMOSYNE-083 handoff artifacts and does not ask to generate them again.
 - Post-084 handoff validation:
-  - status: pending_user_or_next_conversation_review
-  - next_possible_task: MNEMOSYNE-085_only_if_residue_found
+  - status: reviewed_in_maintenance_conversation
+  - post_084_residue_found: false
+  - MNEMOSYNE_085_used_for: user_approved_interruption_marker
+  - used_for_residue_repair: false
+  - future_residue_repair_task: only_if_later_validation_finds_new_residue_or_handoff_defect
+  - post_handoff_route_status: paused_not_closed
+  - interruption_status: suspended_by_user_inserted_long_work
+  - resume_action: remind_user_to_continue_or_choose_the_paused_post_handoff_path
 - Next Meta-Agent path:
   - status: resolved_by_MNEMOSYNE-082_phase_closure_decision
   - resolution: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups
@@ -576,8 +582,14 @@ The material below is retained for history and may include superseded route word
   - status: repaired_by_MNEMOSYNE-084
   - note: live route now points to official MNEMOSYNE-083 handoff artifacts and does not ask to generate them again.
 - Post-084 handoff validation:
-  - status: pending_user_or_next_conversation_review
-  - next_possible_task: MNEMOSYNE-085_only_if_residue_found
+  - status: reviewed_in_maintenance_conversation
+  - post_084_residue_found: false
+  - MNEMOSYNE_085_used_for: user_approved_interruption_marker
+  - used_for_residue_repair: false
+  - future_residue_repair_task: only_if_later_validation_finds_new_residue_or_handoff_defect
+  - post_handoff_route_status: paused_not_closed
+  - interruption_status: suspended_by_user_inserted_long_work
+  - resume_action: remind_user_to_continue_or_choose_the_paused_post_handoff_path
 - Next Meta-Agent path:
   - status: resolved_by_MNEMOSYNE-082_phase_closure_decision
   - resolution: accept_result_as_current_evidence_baseline_and_defer_high_risk_followups

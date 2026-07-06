@@ -2,23 +2,27 @@
 
 ## Active
 
-- Review MNEMOSYNE-084 post-083 residue repair.
-- If no further residue is found, start a new conversation with `handoff/meta-agent-next-conversation-startup-prompt.md` and reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
-- Do not create MNEMOSYNE-085 unless post-084 validation finds remaining residue or handoff defects.
+- Inserted long work may proceed only when specified by the user.
+- After inserted long work completes, remind the user to resume the paused post-handoff path or choose another post-handoff path.
+- The paused route remains: review MNEMOSYNE-084 if needed; use `handoff/meta-agent-next-conversation-startup-prompt.md`; reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`; choose a post-handoff path only after explicit user decision.
 
 ## Waiting for user decision
 
-- Decide whether to migrate to a new conversation using the MNEMOSYNE-083 official handoff package after MNEMOSYNE-084 verification, or request another small residue repair only if needed.
+- Choose or specify the inserted long work.
+- After inserted long work, choose whether to resume migration using the official MNEMOSYNE-083 artifacts or choose another post-handoff path.
 
 ## Current boundaries
 
+- MNEMOSYNE-085 has been used for a user-approved interruption marker and resume guard, not for residue repair.
+- Future residue or handoff-defect repair tasks require later validation and a new explicit user-approved task number.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
 - No target repository has been written.
 
 ## Recently completed
 
-- MNEMOSYNE-084: repaired post-083 handoff current-state residue; no handoff artifacts, dry-run evidence, target workspace/material/target-write, or execution-source change occurred.
+- MNEMOSYNE-085: recorded user-approved interruption marker and resume guard; no residue repair, no execution-source change, no workspace/material/target-write/build/regression-formalization occurred.
+- MNEMOSYNE-084: repaired post-083 handoff current-state residue; post-084 validation found no current residue requiring a repair task; no handoff artifacts, dry-run evidence, target workspace/material/target-write, or execution-source change occurred.
 - MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
 
 
