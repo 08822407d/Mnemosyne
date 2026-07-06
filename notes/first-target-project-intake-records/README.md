@@ -66,3 +66,10 @@ The returned Meta-Agent controlled no-target-write dry-run result is accepted as
 - `meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-regression-candidate-triage-v0.1.md`
 
 MNEMOSYNE-081 adds pre-handoff stabilization planning and regression-candidate triage only. It does not close the phase, formalize regression tests, create workspace/material phase, or generate the final handoff package.
+
+## MNEMOSYNE-082 phase closure and baseline freeze
+
+- `meta-agent/meta-agent-post-079-phase-closure-decision-record.md`
+- `meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md`
+
+MNEMOSYNE-082 closes the current Meta-Agent controlled dry-run evidence phase for handoff preparation only. The PASS_WITH_WARNINGS dry-run result is accepted as the current non-execution-source evidence baseline, and high-risk follow-ups are deferred until after handoff. MNEMOSYNE-082 does not create the handoff package, formalize regression tests, create a target workspace, ingest target materials, write a target repository, install an operational memory system, or modify Mnemosyne execution source.
