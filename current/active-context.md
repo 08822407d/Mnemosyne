@@ -11,7 +11,7 @@
 - Batch B preparation produced onboarding/review instruments, a stable run-manifest template, and a post-MNEMOSYNE-053 fresh replay protocol with maintainer scorecard review; one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested by MNEMOSYNE-079 as non-execution-source evidence with PASS_WITH_WARNINGS.
 
 
-### MNEMOSYNE-084 current blockers/gates
+### MNEMOSYNE-085 interruption marker current blockers/gates
 
 - MNEMOSYNE-079: Meta-Agent controlled no-target-write dry-run result ingested as non-execution-source evidence with maintainer review verdict ACCEPT_FOR_NON_EXECUTION_SOURCE_INGESTION_WITH_WARNINGS; dry-run verdict PASS_WITH_WARNINGS, score 89/100, critical blockers []; no target workspace/material/target-write/execution-source change occurred.
 - Current Meta-Agent dry-run result: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
@@ -26,7 +26,11 @@
 - Current handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
 - Current next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
 - Current phase status: Meta-Agent phase is handoff-ready after MNEMOSYNE-083.
-- Next recommended action: review MNEMOSYNE-084 result; if no further residue is found, start a new conversation using the official MNEMOSYNE-083 startup prompt and handoff package.
+- MNEMOSYNE-084 remains the latest substantive residue repair; post-084 validation found no current residue requiring a repair task.
+- MNEMOSYNE-085 is a user-approved current-state marker task, not a residue repair: `task_type: current_state_marker_only`, `used_for_residue_repair: false`, `user_explicitly_approved_task_number_reuse: true`.
+- Interruption marker: `status: suspended_by_user_inserted_long_work`; interrupted route: `post_084_handoff_validation_and_migration`; previous guard was `MNEMOSYNE_085_only_if_residue_found`; user authorization now explicitly approved using MNEMOSYNE-085 for this interruption marker before inserted long work.
+- The post-084 handoff validation / migration route is paused because the user is inserting longer work; this pause is not a failure and does not make handoff/current/task-result/research files execution source.
+- After the inserted long work completes or the user asks to resume, remind the user to continue or choose the paused post-handoff path.
 - Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, production-ready status, or Mnemosyne execution-source update.
 - No target workspace has been created.
@@ -40,6 +44,7 @@
 
 ### latest completed checkpoints
 
+- MNEMOSYNE-085: recorded user-approved interruption marker and resume guard for the paused post-handoff route; no residue repair, no handoff artifact, dry-run evidence, target workspace/material/target-write, build, regression-formalization, or execution-source change occurred.
 - MNEMOSYNE-084: repaired post-083 handoff current-state residue so active-context/TODO/open-questions/handoff consistently point to official MNEMOSYNE-083 handoff artifacts; no handoff artifacts, dry-run evidence, target workspace/material/target-write, or execution-source change occurred.
 - MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-082: recorded Meta-Agent phase-closure decision accepting the PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline and deferring high-risk follow-ups until after handoff; baseline-freeze record created; no handoff package yet, no regression formalization, no target workspace/material/target-write/execution-source change occurred.
@@ -95,7 +100,8 @@
 - Current handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
 - Current next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
 - Current phase status: Meta-Agent phase is handoff-ready after MNEMOSYNE-083.
-- Next recommended action: review MNEMOSYNE-084 result; if no further residue is found, start a new conversation using the official MNEMOSYNE-083 startup prompt and handoff package.
+- Current interruption marker: MNEMOSYNE-085 records `suspended_by_user_inserted_long_work` for the `post_084_handoff_validation_and_migration` route; post-084 residue found: false; used for residue repair: false.
+- After the inserted long work completes or the user asks to resume, remind the user to resume or choose the paused post-handoff path.
 - Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - PASS_WITH_WARNINGS does not approve target workspace creation, target material ingestion, target repository write, operational memory-system installation, production-ready status, or Mnemosyne execution-source update.
 - No target workspace has been created.
@@ -113,7 +119,8 @@
 - Current handoff package: `handoff/meta-agent-post-079-phase-closure-handoff-package.md`.
 - Current next-conversation startup prompt: `handoff/meta-agent-next-conversation-startup-prompt.md`.
 - Current phase status: Meta-Agent phase is handoff-ready after MNEMOSYNE-083.
-- Next recommended action: review MNEMOSYNE-084 result; if no further residue is found, start a new conversation using the official MNEMOSYNE-083 startup prompt and handoff package.
+- Paused post-handoff route remains: review MNEMOSYNE-084 if needed; use `handoff/meta-agent-next-conversation-startup-prompt.md`; reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`; choose a post-handoff path only after explicit user decision.
+- Inserted long work may proceed only when specified by the user; after it completes, remind the user to continue or choose the paused post-handoff path.
 - Deferred until after handoff: requirements continuation, repair run, formal regression conversion, workspace/material phase, operational build, target repository write, and execution-source update.
 - No target workspace has been created.
 - No target materials have been uploaded/ingested.
