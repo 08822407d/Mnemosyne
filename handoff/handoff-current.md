@@ -123,8 +123,9 @@ Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付
 2. Inserted long work may proceed only when specified by the user; do not use this marker to begin that work.
 3. After the inserted long work completes or the user asks to resume, remind the user to continue or choose the paused post-handoff path.
 4. The paused post-handoff path remains: review MNEMOSYNE-084 if needed; use `handoff/meta-agent-next-conversation-startup-prompt.md`; provide or reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`; choose a post-handoff path only after explicit user decision.
-5. Do not propose MNEMOSYNE-080/081/082 again.
-6. This marker does not approve workspace/material/target-write/build/regression-formalization, target repository write, operational memory-system installation, or execution-source update.
+5. Live-route safety note: the official MNEMOSYNE-083 startup prompt is a frozen MNEMOSYNE-083-era artifact; after MNEMOSYNE-084 and MNEMOSYNE-085, its `completed_through: MNEMOSYNE-083` field and `MNEMOSYNE-084_only_if_post_083_residue_guard` are superseded by live current-state files and this `handoff/handoff-current.md`. Do not re-propose MNEMOSYNE-084 or MNEMOSYNE-085; any future repair requires a new explicit user-approved task number.
+6. Do not propose MNEMOSYNE-080/081/082 again.
+7. This marker does not approve workspace/material/target-write/build/regression-formalization, target repository write, operational memory-system installation, or execution-source update.
 
 - Current preparation package:
   - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
