@@ -6,6 +6,7 @@ These guides are product-research notes, not execution source. They may inform p
 
 Product capabilities are time-sensitive. Re-verify current product documentation before relying on a guide for high-stakes or workflow-changing decisions.
 
-Current guide:
+Current guides:
 
 - `claude-conversation-capabilities-and-settings-guide-v0.1.md` — Claude ordinary conversation settings for Projects, GitHub/connectors, Research, web search, skills, plugins, code execution/file creation, and Mnemosyne prompt-preflight usage.
+- `chatgpt-github-app-capabilities-guide-v0.1.md` — ChatGPT ordinary-conversation GitHub app read/write capability update, permission prompts, write-action safety classification, and Mnemosyne prompt-preflight guidance.
