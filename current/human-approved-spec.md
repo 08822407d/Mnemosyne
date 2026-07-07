@@ -231,3 +231,24 @@
 - 每个跨对话 prompt 必须显式写明 `execute_in` / 执行位置，例如当前维护对话、new Pro 扩展 conversation、new Pro Deep Research task、Codex Cloud task 等。
 - Deep Research prompt 仍必须遵守第 13 节 Deep Research 报告输出例外：完整报告正文必须出现在最终报告 / 最终回答正文中，下载文件只能是辅助备份。
 - 本原则不授权异步后台工作、自动执行、自动写回、真实 target dry-run、target material ingestion 或 target repository write。
+
+## 18. ChatGPT GitHub App 写入能力与任务授权原则
+
+- 本原则适用于 Mnemosyne 所属普通 ChatGPT 对话、Codex 任务和未来 Agent 任务中，需要读取、创建、修改、评论、提交 PR、合并 PR 或以其他方式影响 GitHub 仓库状态的场景。
+- 自 2026 年 7 月起，本仓库不得再假设“普通 ChatGPT 对话只能读取 GitHub，不能创建分支、文件或 PR”。当用户在官方 ChatGPT 网页端 / app 中连接并选择 GitHub app，且当前模型 / 账户 / workspace / app action 配置支持相应能力时，普通 ChatGPT 对话也可能对关联 GitHub 仓库执行写入类 actions，包括创建分支、创建文件和创建 pull request。
+- Codex Cloud 仍可作为较大、较复杂、需要代码执行式工作流或独立任务审计的首选远程 GitHub 写入助手；但“必须进入 Codex Cloud 才能向 GitHub 仓库提交 PR”不再是 Mnemosyne 的全局规则。
+- 关于 ChatGPT/GitHub app 能力、可用模型、计划限制、workspace/admin action controls、approval card 和 permission options 的事实具有时效性。涉及这些能力时，Agent 必须优先查验当前官方 OpenAI 文档、当前 ChatGPT UI、已连接 app 的 action 列表和实际 approval card；若无法查验，应标注为未验证或 stale。
+- 平台权限与 Mnemosyne 任务授权必须分离：
+  - `platform_permission` 只表示 ChatGPT 技术上可能调用某个 GitHub app action；
+  - `mnemosyne_task_authority` 表示用户已在当前 Mnemosyne 任务范围内明确批准该仓库动作。
+- GitHub 写入只有在平台权限和当前任务授权都成立时才能执行。过去授权、app 连接状态、approval card 出现或 `Always allow` 设置，都不能单独构成 Mnemosyne 写入授权。
+- 对 Mnemosyne 仓库的写入类 actions 应优先通过新分支和 PR 进行，避免直接向默认分支写入；例外只能在用户明确批准且风险很低时使用，并应在结果记录中说明原因。
+- 对任何写入类 GitHub action，Agent 在执行前必须明确说明该动作会影响 GitHub 外部状态，不只是读取；同时核对 repository、branch、file paths、protected paths、目标项目工作区 / material / target-write 边界以及是否需要 result record。
+- 对普通 ChatGPT GitHub app 写入，默认建议用户选择 `Allow once` / 一次性允许，而不是 `Always allow`。若用户选择持久授权，Agent 仍不得把持久授权视为未来任务授权。
+- 对本仓库的 GitHub actions 可按风险分级处理：
+  - read-only：读取文件、搜索仓库、读取 PR / issue metadata；需要证据引用，不得改变仓库。
+  - low-scope write：创建分支、创建 / 更新单个文档文件、创建 PR、添加普通评论；需要当前任务明确授权和平台 approval。
+  - high-scope or sensitive write：合并 PR、删除文件、批量修改 issue/label、启用 auto-merge、改变安全或权限相关配置；需要用户在动作前再次明确批准，通常应避免，除非任务专门要求。
+- 当普通 ChatGPT 对话执行了 GitHub 写入并改变 Mnemosyne 维护状态或创建持久文档时，应创建或更新相应 result record，至少记录 actor / action source、文件 created/modified、是否修改 execution source/current-state/handoff/target workspace/material/write/build/regression 文件、验证结果和已知限制。
+- 若发现旧文件仍声称普通 ChatGPT 对话只能读 GitHub 或不能提交 PR，应区分：历史记录可以作为当时平台状态或当时假设保留； live route、平台指南或执行源中的过时能力假设必须标注为 stale，并按当前 user-approved task 更新。
+- 本原则不授权自动写回、自动合并、GitHub Actions、MCP/RAG、多 Agent 自动协调、目标项目写入、target material ingestion、target workspace creation、regression formalization、operational build，或任何未被当前任务明确批准的仓库动作。
