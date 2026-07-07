@@ -3,13 +3,14 @@ review_model: Fable 5
 review_type: independent_heterogeneous_model_review
 scope: regression_candidate_and_warning_closure_traceability_review
 authority_level: non_execution_source_advisory_evidence
-status: received_in_chat_not_canonical
+status: canonical_copy_stored
 source_files_received_in_maintenance_conversation:
   - FABLE5-REVIEW-002-regression-warning-traceability-review-result.md
-canonical_files_pending:
+canonical_files:
   - 01-regression-warning-traceability-review-result.md
   - 02-maintainer-triage.md
-  - finding-index.yaml
+  - findings.yaml
+canonical_source_note: copied verbatim from manual-import-inbox by MNEMOSYNE-091
 summary:
   overall_assessment: SAFE_FOR_CONTINUATION_WITH_REPAIRS_RECOMMENDED
   blocking_findings: 0
@@ -25,5 +26,5 @@ questions:
   - Q2-2 canonical warning list layer
   - Q2-3 first_batch_to_consider default formalization agenda
 notes:
-  - Full review file still needs verbatim repository ingestion before this round is canonical_copy_stored.
+  - Full review file was copied verbatim into this canonical directory by MNEMOSYNE-091.
   - FABLE5-REVIEW-002 did not see MNEMOSYNE-088/089 due connector snapshot limits; this is not a defect.
