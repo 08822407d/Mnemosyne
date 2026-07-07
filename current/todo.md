@@ -5,6 +5,7 @@
 - Inserted long work may proceed only when specified by the user.
 - After inserted long work completes, remind the user to resume the paused post-handoff path or choose another post-handoff path.
 - The paused route remains: review MNEMOSYNE-084 if needed; use `handoff/meta-agent-next-conversation-startup-prompt.md`; reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`; choose a post-handoff path only after explicit user decision.
+- Live-route safety note: the official MNEMOSYNE-083 startup prompt is a frozen MNEMOSYNE-083-era artifact; after MNEMOSYNE-084 and MNEMOSYNE-085, its `completed_through: MNEMOSYNE-083` field and `MNEMOSYNE-084_only_if_post_083_residue_guard` are superseded by live current-state files and `handoff/handoff-current.md`. Do not re-propose MNEMOSYNE-084 or MNEMOSYNE-085; any future repair requires a new explicit user-approved task number.
 
 ## Waiting for user decision
 
@@ -28,6 +29,7 @@
 
 - MNEMOSYNE-082: recorded Meta-Agent phase closure and froze the PASS_WITH_WARNINGS dry-run result as current non-execution-source evidence baseline for handoff preparation only; no handoff package/regression formalization/workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-081: created post-079 pre-handoff stabilization roadmap and regression-candidate triage; no phase closure/handoff/regression formalization/workspace/material/target-write/execution-source change occurred.
+- MNEMOSYNE-080: repaired post-079 current-state residue; `current/todo.md` was inspected only at task time, so this line is a later readability repair.
 - MNEMOSYNE-079: ingested Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence with PASS_WITH_WARNINGS; no target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-078: recorded actual controlled dry-run execution approval and created approved prompt / return preflight; no dry-run executed in Codex.
 - MNEMOSYNE-077: repaired post-076 current-state live-route residue.
