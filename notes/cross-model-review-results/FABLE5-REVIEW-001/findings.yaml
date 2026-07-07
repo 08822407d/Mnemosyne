@@ -1,0 +1,27 @@
+review_id: FABLE5-REVIEW-001
+source_status: received_in_chat_not_canonical
+findings:
+  - id: F-001
+    severity: REPAIR_RECOMMENDED
+    topic: frozen startup prompt stale state and task-number guard
+    triage: accepted_repaired_by_MNEMOSYNE_088
+  - id: F-002
+    severity: OBSERVATION
+    topic: same-family self-attestation evidence pattern
+    triage: accepted_no_repair
+  - id: F-003
+    severity: NON_BLOCKING
+    topic: current todo omitted MNEMOSYNE-080 from recently completed
+    triage: accepted_repaired_by_MNEMOSYNE_088
+  - id: F-004
+    severity: QUESTION
+    topic: maintainer review provenance identity
+    triage: deferred_user_decision
+  - id: F-005
+    severity: QUESTION
+    topic: equivalent evidence precedent scoping
+    triage: deferred_user_decision
+  - id: F-006
+    severity: QUESTION
+    topic: inserted long work and review output repository home
+    triage: partially_addressed_by_storage_scaffold
