@@ -1,0 +1,19 @@
+review_id: FABLE5-REVIEW-002
+source_status: received_in_chat_not_canonical
+findings:
+  - id: R2-F-001
+    severity: REPAIR_RECOMMENDED
+    topic: W4 user-acceptance warning partially stale without supersession pointer
+    triage: accepted_deferred_pending_Q2_1
+  - id: R2-F-002
+    severity: NON_BLOCKING
+    topic: warning list membership drift between maintainer review and freeze/package
+    triage: accepted_deferred_optional_annotation
+  - id: R2-F-003
+    severity: NON_BLOCKING
+    topic: live current-state files preserve regression candidates as pointer only
+    triage: accepted_no_immediate_repair
+  - id: R2-F-004
+    severity: OBSERVATION
+    topic: warnings tracked as frozen block rather than per-warning owner/status fields
+    triage: accepted_no_direct_repair
