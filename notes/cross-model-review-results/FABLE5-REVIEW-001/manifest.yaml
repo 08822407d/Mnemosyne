@@ -1,0 +1,28 @@
+review_id: FABLE5-REVIEW-001
+review_model: Fable 5
+review_type: independent_heterogeneous_model_review
+scope: post_079_to_085_handoff_authority_and_state_machine_review
+authority_level: non_execution_source_advisory_evidence
+status: received_in_chat_not_canonical
+source_files_received_in_maintenance_conversation:
+  - FABLE5-independent-review-output1-project-understanding-and-scope-proposal.md
+  - FABLE5-REVIEW-001-formal-result.md
+canonical_files_pending:
+  - 01-project-understanding-and-scope-proposal.md
+  - 02-formal-review-result.md
+  - 03-maintainer-triage.md
+  - finding-index.yaml
+summary:
+  overall_assessment: SAFE_FOR_CONTINUATION_WITH_REPAIRS_RECOMMENDED
+  blocking_findings: 0
+  repair_recommended_findings:
+    - F-001
+  non_blocking_findings:
+    - F-003
+  questions:
+    - F-004 maintainer-review provenance
+    - F-005 equivalent no-write evidence scoping
+    - F-006 review output repository home
+notes:
+  - MNEMOSYNE-088 already repaired the accepted live-route clarity subset from FABLE5-REVIEW-001.
+  - Full review files still need verbatim repository ingestion before this round is canonical_copy_stored.
