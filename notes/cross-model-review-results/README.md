@@ -12,6 +12,7 @@ Findings become actionable only after maintainer/user validation and, if needed,
 
 - `FABLE5-REVIEW-001/` — post-079 to post-085 handoff authority and state-machine review.
 - `FABLE5-REVIEW-002/` — regression-candidate and warning-closure traceability review.
+- `FABLE5-REVIEW-003/` — post-repair snapshot refresh and portable continuation delta review after MNEMOSYNE-088/089/090/091.
 
 ## Ingestion status convention
 
