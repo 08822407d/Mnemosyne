@@ -4,39 +4,57 @@ This file is not an execution source. The current execution source is `current/h
 
 ## Startup scope
 
-These startup instructions are for Mnemosyne repository startup. They must not be read as a rule that every conversation loading Mnemosyne guidance should adopt the current Mnemosyne maintenance route as its local task.
+These startup instructions are for Mnemosyne-related conversations and tasks. They separate behavior-guidance refresh from work handoff.
 
-Use the load-mode rules from `commands/load-mnemosyne-guidance.md` when the user says "Load Mnemosyne guidance" / "加载 Mnemosyne 指导约束".
+Loading Mnemosyne guidance does not start handoff, does not import the Mnemosyne maintenance live route, and does not replace the current conversation's local task.
 
-## Minimum maintenance startup set
+Work handoff is a separate explicit artifact-mediated workflow:
 
-Read these files for a Mnemosyne maintenance handoff or repository-maintenance continuation:
+- Prepare a handoff package in the old conversation only when the user explicitly requests handoff preparation.
+- Receive a handoff package in the new conversation only when the user explicitly provides a handoff package or authorized handoff-package path and asks to continue from it.
 
-- `README.md`
-- `current/human-approved-spec.md`
-- `current/active-context.md`
-- `handoff/handoff-current.md`
-- `current/todo.md`
-- `current/open-questions.md`
-- `notes/codex-task-authoring-and-diff-verification-guidelines.md`
+Do not try to detect a handoff pair across hidden conversation contexts. A receiving conversation can verify only the current user instruction, the provided handoff package or authorized path, and accessible evidence paths.
 
-This set imports the Mnemosyne maintenance live route only when the applied load mode is `maintenance_handoff`.
+## Guidance refresh startup
 
-## Guidance-only / target-project startup set
+When the user says "Load Mnemosyne guidance" / "加载 Mnemosyne 指导约束" / "加载最新指导", use `commands/load-mnemosyne-guidance.md`.
 
-For behavior-guidance-only, external review, or target-project support conversations, read at minimum:
+For behavior-guidance refresh, read or ask the user to provide:
 
 - `README.md`
 - `current/human-approved-spec.md`
 - `commands/load-mnemosyne-guidance.md`, if available
 
-Then read only task-relevant files:
+Then continue the current local task under the refreshed behavior constraints.
 
-- target-project handoff/intake/manifest/source-map files supplied or authorized for the local task;
-- platform guides when platform/model/tool facts are part of the task;
-- research current views when the task involves capability boundaries, new mechanisms, or target-project memory-system design.
+Do not require these files as local action-plan sources merely for guidance refresh:
 
-Do not require `current/active-context.md`, `handoff/handoff-current.md`, `current/todo.md`, or `current/open-questions.md` as local action-plan files for guidance-only or target-project conversations. If read, treat their maintenance route as `background_only`.
+- `current/active-context.md`
+- `handoff/handoff-current.md`
+- `current/todo.md`
+- `current/open-questions.md`
+
+## Handoff prepare startup
+
+When the user explicitly asks the current / old conversation to prepare a handoff package, use `commands/prepare-mnemosyne-handoff.md`.
+
+A handoff package is a transfer artifact, not an execution source. It should identify the execution source, non-execution-source boundaries, current task or phase, completed and unresolved work, forbidden actions, evidence paths, freshness limits, and one safe next action for a receiving conversation.
+
+## Handoff receive startup
+
+When the user explicitly asks a new conversation to receive a handoff package, use `commands/receive-mnemosyne-handoff.md`.
+
+A receiving conversation must not infer old-conversation state from hidden memory. If no handoff package content or authorized handoff-package path is present, the receiving conversation is not in handoff mode and must not invent the missing package.
+
+For handoff receive, read or ask the user to provide:
+
+- `README.md`
+- `current/human-approved-spec.md`
+- `commands/receive-mnemosyne-handoff.md`, if available
+- the handoff package content or authorized package path
+- task-relevant evidence files cited by the package, as needed and accessible
+
+Do not treat the handoff package, `current/active-context.md`, `handoff/handoff-current.md`, `current/todo.md`, `current/open-questions.md`, task result records, review outputs, or research reports as execution source.
 
 ## Task-extended reads
 
@@ -52,23 +70,6 @@ Read additional files only when the task needs them:
 
 `notes/v0.1-scope-and-consistency-check.md` is not part of mandatory ordinary startup or Codex startup; use it only for historical/audit work.
 
-## Dialogue-locality guard
-
-Before stating "next step", determine whether "next step" means:
-
-```yaml
-next_step_scope:
-  local_conversation_task:
-    source: current user request and visible local context
-  mnemosyne_maintenance_route:
-    source: current/active-context.md + handoff/handoff-current.md + current/todo.md + current/open-questions.md
-    allowed_as_action_plan_only_when: applied_load_mode == maintenance_handoff
-  target_project_route:
-    source: target-project authority/source map, handoff package, manifest, intake package, or user-provided target materials
-```
-
-If a local task exists and the user only asks to load Mnemosyne guidance, preserve the local task. Do not replace it with the Mnemosyne maintenance route.
-
 ## Visibility instruction
 
 Visibility is operator-controlled and may change. Do not treat public/private state alone as a defect. Verify current visibility only when relevant, especially before imports.
@@ -76,9 +77,8 @@ Visibility is operator-controlled and may change. Do not treat public/private st
 ## Startup behavior
 
 - Do not rely on old conversation context or model memory.
-- Apply handoff/continuation correctness guidance from `current/human-approved-spec.md`; do not rely on old conversation memory as current truth, and mark missing, stale, conflicting, or uncertain handoff information explicitly.
 - State the current execution source and non-execution-source boundaries before making execution claims.
 - Apply objective neutral engineering style, user-action-first response structure, and long-transfer guidance from `current/human-approved-spec.md`.
-- Report the applied load mode and local-task binding.
-- If maintenance live-state files are missing in `maintenance_handoff`, say so; do not invent repository state.
-- If maintenance live-state files are not read in `behavior_guidance_only` or `target_project_support`, say that the maintenance route was not imported.
+- For guidance refresh, report that the current conversation task is preserved and no handoff was started.
+- For handoff receive, report the package identity, package status as non-execution-source, evidence paths checked or missing, and safe next action.
+- If required files for the selected explicit workflow are missing, say so; do not invent repository state.
