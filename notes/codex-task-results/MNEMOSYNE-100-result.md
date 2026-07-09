@@ -11,7 +11,8 @@ base_branch: master
 files_created:
   - notes/cross-model-review-results/FABLE5-TRIAGE-001/review-packages/MNEMOSYNE-100-higher-model-transfer-prompt.md
   - notes/codex-task-results/MNEMOSYNE-100-result.md
-files_modified: []
+files_modified:
+  - notes/cross-model-review-results/README.md
 execution_source_modified: false
 current_state_files_modified: false
 handoff_files_modified: false
@@ -43,7 +44,7 @@ notes/cross-model-review-results/FABLE5-TRIAGE-001/review-packages/MNEMOSYNE-100
 
 - Branch was created first: `mnemosyne-100-higher-model-transfer-prompt`.
 - A known file was fetched from that branch using `ref=mnemosyne-100-higher-model-transfer-prompt` before writes.
-- File creations included the branch parameter.
+- File writes included the branch parameter.
 - PR should be created with `draft=false`.
 
 ## Boundary
