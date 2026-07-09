@@ -14,12 +14,17 @@ Findings become actionable only after maintainer/user validation and, if needed,
 - `FABLE5-REVIEW-002/` — regression-candidate and warning-closure traceability review.
 - `FABLE5-REVIEW-003/` — post-repair snapshot refresh and portable continuation delta review after MNEMOSYNE-088/089/090/091.
 
+## Follow-up triage records
+
+- `FABLE5-TRIAGE-001/` — Fable response after user answers to earlier review questions; closes several question items, raises Q2-2 warning-layer tracing to high priority, and leaves R3 hygiene cleanup unapproved pending re-check / user decision.
+
 ## Ingestion status convention
 
 ```yaml
 status_values:
   received_in_chat_not_canonical: file was received in a maintenance conversation but not yet copied verbatim here
   canonical_copy_stored: file has been copied here verbatim or with documented normalization
+  canonical_summary_stored: non-verbatim summary has been stored with documented provenance
   triaged: maintainer triage record exists
   repair_candidates_routed: accepted repair candidates have been routed to user-approved tasks or explicitly deferred
 ```
