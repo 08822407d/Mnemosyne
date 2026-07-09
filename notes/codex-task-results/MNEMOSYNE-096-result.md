@@ -25,6 +25,7 @@ files_created:
   - notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/06-user-lower-model-risk-instruction.md
   - notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/07-user-followup-authorization-statement.md
   - notes/codex-task-results/MNEMOSYNE-096-result.md
+  - notes/codex-task-results/MNEMOSYNE-096-web-check-note.md
 files_modified:
   - notes/cross-model-review-results/FABLE5-TRIAGE-001/manifest.yaml
   - notes/cross-model-review-results/README.md
@@ -102,6 +103,10 @@ placeholder for MNEMOSYNE-096 raw-preservation files
 ```
 
 This was not an execution-source/current-state/handoff/target/regression/build change. The MNEMOSYNE-096 branch deletes the placeholder so that, if this PR is merged, the placeholder will be removed and replaced by the actual raw-preservation files.
+
+## Web check note
+
+The user invoked web search. A web check was performed, but external web results are not used as execution source for this repository task. The write authority for this task comes from the user's current instruction and existing repository governance, not from web results.
 
 ## Verification notes
 
