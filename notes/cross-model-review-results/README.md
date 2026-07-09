@@ -22,6 +22,10 @@ Findings become actionable only after maintainer/user validation and, if needed,
 
 - `FABLE5-TRIAGE-001/evidence-audits/MNEMOSYNE-097-q2-2-r3-readonly-audit.md` — read-only evidence table for Q2-2 warning-layer source/model/latest-version tracing and R3 hygiene fresh-snapshot recheck. It does not select a canonical warning layer or approve cleanup.
 
+## Follow-up review packages
+
+- `FABLE5-TRIAGE-001/review-packages/MNEMOSYNE-099-higher-model-q2-r3-decision-package.md` — package for future higher-model / restored-Pro review of Q2-2 and R3 options. It does not decide Q2-2 or approve cleanup.
+
 ## Ingestion status convention
 
 ```yaml
@@ -31,6 +35,7 @@ status_values:
   canonical_summary_stored: non-verbatim summary has been stored with documented provenance
   raw_originals_partially_preserved: available originals and transfer metadata are stored, but some original materials are unavailable or not fully embedded
   read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
+  review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
   triaged: maintainer triage record exists
   repair_candidates_routed: accepted repair candidates have been routed to user-approved tasks or explicitly deferred
 ```
