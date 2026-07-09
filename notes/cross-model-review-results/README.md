@@ -25,6 +25,7 @@ Findings become actionable only after maintainer/user validation and, if needed,
 ## Follow-up review packages
 
 - `FABLE5-TRIAGE-001/review-packages/MNEMOSYNE-099-higher-model-q2-r3-decision-package.md` — package for future higher-model / restored-Pro review of Q2-2 and R3 options. It does not decide Q2-2 or approve cleanup.
+- `FABLE5-TRIAGE-001/review-packages/MNEMOSYNE-100-higher-model-transfer-prompt.md` — copyable transfer prompt for executing the MNEMOSYNE-099 review package in a future higher-reasoning conversation. It does not itself decide or authorize repair.
 
 ## Ingestion status convention
 
@@ -36,6 +37,7 @@ status_values:
   raw_originals_partially_preserved: available originals and transfer metadata are stored, but some original materials are unavailable or not fully embedded
   read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
   review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
+  transfer_prompt_prepared: a copyable prompt is prepared for later execution in another conversation but does not itself decide or authorize repair
   triaged: maintainer triage record exists
   repair_candidates_routed: accepted repair candidates have been routed to user-approved tasks or explicitly deferred
 ```
