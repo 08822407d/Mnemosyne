@@ -14,7 +14,8 @@ user_authorization_context:
 files_created:
   - notes/cross-model-review-results/FABLE5-TRIAGE-001/review-packages/MNEMOSYNE-099-higher-model-q2-r3-decision-package.md
   - notes/codex-task-results/MNEMOSYNE-099-result.md
-files_modified: []
+files_modified:
+  - notes/cross-model-review-results/README.md
 execution_source_modified: false
 current_state_files_modified: false
 handoff_files_modified: false
@@ -53,7 +54,7 @@ The package asks the future reviewer to evaluate:
 
 - Branch was created first: `mnemosyne-099-higher-model-q2-r3-package`.
 - A known file was fetched from that branch using `ref=mnemosyne-099-higher-model-q2-r3-package` before writes.
-- File creations included the branch parameter.
+- File writes included the branch parameter.
 - PR should be created with `draft=false`.
 
 ## Boundary
