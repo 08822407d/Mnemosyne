@@ -28,9 +28,11 @@ files_preserved:
   - path: 04-fable-response-context-user-pasted.md
     status: preserved_from_current_user_message
     verbatim_status: copied_from_current_conversation_visible_text
-  - path: 05-fable-next-review-response-uploaded-yaml-verbatim.txt
-    status: preserved_from_uploaded_txt_attachment
-    verbatim_status: verbatim_unedited_uploaded_file_content
+  - path: 05-fable-next-review-response-uploaded-yaml-preservation-note.md
+    status: attachment_metadata_and_integrity_hash_preserved
+    verbatim_status: full_uploaded_text_not_embedded_in_repository_by_this_task
+    expected_size_bytes: 18714
+    expected_sha256: 32c8030b432d9340286109e439f9ec0cc214c8e2c6b2e91ae40d640541d67753
   - path: 06-user-lower-model-risk-instruction.md
     status: preserved_from_current_maintenance_conversation
     verbatim_status: copied_from_current_conversation_visible_text
@@ -44,10 +46,14 @@ missing_or_not_available_in_current_conversation:
   - path: 02-conservative-interpretation-package-as-sent-to-fable-unavailable.md
     missing_material: full FABLE5-HUMAN-TRIAGE-REPLY-001 package as originally sent
     handling: do_not_reconstruct_from_summary
+  - path: 05-fable-next-review-response-uploaded-yaml-verbatim.txt
+    missing_material: full uploaded Fable response text copied byte-faithfully into repository
+    handling: metadata_and_sha_preserved_now_full_copy_should_be_done_by_later_high_fidelity_transfer_if_needed
 known_transfer_limitations:
   - Some source materials are preserved from visible current-conversation text rather than machine-exported chat logs.
   - The earlier seven original Chinese answers and the full earlier conservative interpretation package were not available verbatim in this conversation at MNEMOSYNE-096 time.
-  - Missing raw items must not be inferred from summaries; future high-judgment review should ask the user for the original artifact if needed.
+  - The uploaded Fable txt attachment was readable locally, but this task preserved its metadata and hash rather than manually chunking and embedding the full content.
+  - Missing raw items must not be inferred from summaries; future high-judgment review should ask the user for the original artifact or a high-fidelity file transfer if exact wording is needed.
 boundaries:
   execution_source_modified: false
   current_state_files_modified: false
@@ -57,4 +63,5 @@ boundaries:
   target_repository_written: false
   regression_formalized: false
   operational_build_started: false
+  codex_task_generated: false
   paused_post_handoff_route_resumed_or_closed: false
