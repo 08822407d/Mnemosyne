@@ -6,6 +6,14 @@ authority_level: non_execution_source_advisory_evidence
 status: canonical_summary_stored
 verbatim_status: summarized_not_verbatim
 created_by_task: MNEMOSYNE-095
+raw_preservation:
+  status: partial_available_originals_preserved_by_MNEMOSYNE_096
+  path: notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/
+  manifest: notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/00-raw-preservation-manifest.yaml
+  limitations:
+    - earlier_user_original_answers_zh_not_available_verbatim
+    - conservative_interpretation_package_not_available_verbatim
+    - uploaded_fable_yaml_attachment_metadata_and_sha_preserved_but_full_text_not_embedded
 related_reviews:
   - FABLE5-REVIEW-001
   - FABLE5-REVIEW-002
