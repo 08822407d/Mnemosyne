@@ -1,0 +1,91 @@
+step_record_id: FABLE5-GREENFIELD-001-GF-STEP-1B
+track_id: FABLE5-GREENFIELD-001
+step_id: GF-STEP-1B
+step_name: deferred_origin_need_extraction_and_question_consolidation
+record_type: independent_need_model_continuation
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+status: STEP1B_complete_GF_STEP_1_not_complete
+stored_by_task: MNEMOSYNE-103
+prior_step: GF-STEP-1A
+source_conversation:
+  service: Fable 5 web conversation
+  research_mode: false
+  same_conversation_as_prior_steps: true
+inputs:
+  - FABLE5-GREENFIELD-001-STEP1A-core-needs-pilot.md
+  - raw/concept-origin-extract-001.md
+source_integrity:
+  source_ref: master
+  expected_source_blob_sha: b47248f1052ecac679c2e3a0afab4d93ca2c6649
+  fable_reported_source_blob_sha_verified: true
+  new_repository_retrieval_batteries_reported: 0
+uploaded_artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP1B-deferred-needs-and-questions.md
+  source_size_bytes: 18558
+  source_sha256: ae4b462a26c6bc3d4f3c0d21931deb69d5dd3d20e3edd6cb44113b243de5b6f3
+  canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-1B/02-deferred-needs-and-questions.md
+  canonical_size_bytes: 18557
+  canonical_sha256: 72fe3a4c028b8ef9e8f63cba862208b334bb916aaed8380eb8e856245ed7b616
+  canonical_git_blob_sha: 6f85ca17e7a5e8d37a97db7dbad9cf77b7a3e5ca
+  encoding: utf-8
+  line_endings: lf
+  normalization: removed_single_final_lf_only
+  verbatim_status: content_faithful_with_documented_final_newline_normalization
+public_repository_check:
+  repository_visibility: public
+  checked_before_write: true
+  content_scope: conceptual_requirements_and_methodology_only
+  credentials_or_direct_personal_identifiers_detected: false
+structural_validation:
+  required_sections_present: 11_of_11
+  ending_clean: true
+  leaked_artifact_or_tool_status_lines_detected: false
+  new_need_records:
+    count: 6
+    ids:
+      - GF1B-N13
+      - GF1B-N14
+      - GF1B-N15
+      - GF1B-N16
+      - GF1B-N17
+      - GF1B-N18
+  source_class_counts:
+    user_origin_evidence: 5
+    mixed_or_uncertain: 1
+  assistant_era_mechanism_entries:
+    count: 5
+    ids: [M-01, M-02, M-03, M-04, M-05]
+  consolidated_open_questions:
+    count: 6
+    ids: [Q-01, Q-02, Q-03, Q-04, Q-05, Q-06]
+  incidental_prohibited_tier_exposure_reported: none_this_step
+  word_counts:
+    fable_reported_approximate: 2105
+    local_whitespace_token_count: 2146
+    local_english_word_pattern_count: 1997
+    hard_cap: 2200
+    status: within_hard_cap_under_reported_and_local_methods
+files:
+  - 00-prompt-as-sent.md
+  - 01-fable-chat-summary.md
+  - 02-deferred-needs-and-questions.md
+substantive_review:
+  performed: false
+  reason: deferred_until_GPT_Pro_quota_restored_per_user_instruction
+continuation:
+  next_proposed_step: GF-STEP-1C
+  purpose: research_prompt_index_need_extraction_and_STEP1_assembly
+  executed_by_this_task: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  current_design_compared_or_repaired: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false

@@ -18,6 +18,7 @@ Findings and design proposals become actionable only after maintainer/user valid
 
 - `FABLE5-GREENFIELD-001/` — Fable 5 independent greenfield reconstruction track. The stored charter defines a source firewall, atomic multi-step plan, raw-preservation requirements, and a later comparison phase. It is a contrastive reference track, not a replacement for the current GPT design or execution source.
   - `steps/GF-STEP-1A/` — bounded core-user-need extraction pilot. Prompt, Fable chat summary, downloadable Markdown output, integrity metadata, structural validation, exposure ledger, and continuation status are stored. GF-STEP-1 remains incomplete; no substantive acceptance/rejection review has been performed.
+  - `steps/GF-STEP-1B/` — bounded deferred-origin-need extraction and consolidated-question continuation. Prompt, Fable chat summary, downloadable Markdown output, integrity metadata, mechanism provenance register, question list, and continuation status are stored. GF-STEP-1 remains incomplete; no substantive acceptance/rejection review has been performed.
 
 ## Follow-up triage records
 
