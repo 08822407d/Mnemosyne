@@ -17,6 +17,7 @@ Findings and design proposals become actionable only after maintainer/user valid
 ## Independent contrastive design tracks
 
 - `FABLE5-GREENFIELD-001/` — Fable 5 independent greenfield reconstruction track. The stored charter defines a source firewall, atomic multi-step plan, raw-preservation requirements, and a later comparison phase. It is a contrastive reference track, not a replacement for the current GPT design or execution source.
+  - `steps/GF-STEP-1A/` — bounded core-user-need extraction pilot. Prompt, Fable chat summary, downloadable Markdown output, integrity metadata, structural validation, exposure ledger, and continuation status are stored. GF-STEP-1 remains incomplete; no substantive acceptance/rejection review has been performed.
 
 ## Follow-up triage records
 
@@ -40,6 +41,7 @@ status_values:
   canonical_summary_stored: non-verbatim summary has been stored with documented provenance
   raw_originals_partially_preserved: available originals and transfer metadata are stored, but some original materials remain unavailable
   charter_canonical_copy_stored: an independent design/review charter has been stored as non-execution-source evidence
+  step_output_canonical_copy_stored: a bounded step prompt, response summary, and downloadable output have been stored with integrity and continuation metadata
   read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
   review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
   transfer_prompt_prepared: a copyable prompt is prepared for later execution in another conversation but does not itself decide or authorize repair
