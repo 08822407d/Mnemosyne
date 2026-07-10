@@ -4,16 +4,17 @@ record_type: follow_up_triage_response_after_human_answers
 source_response: user_supplied_fable5_reply_in_maintenance_conversation
 authority_level: non_execution_source_advisory_evidence
 status: canonical_summary_stored
-verbatim_status: summarized_not_verbatim
+verbatim_status: summarized_not_verbatim_with_raw_complement
 created_by_task: MNEMOSYNE-095
 raw_preservation:
-  status: partial_available_originals_preserved_by_MNEMOSYNE_096
+  status: partial_originals_preserved_full_fable_response_text_added_by_MNEMOSYNE_101
   path: notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/
   manifest: notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/00-raw-preservation-manifest.yaml
-  limitations:
+  full_fable_response_path: notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/05-fable-next-review-response-uploaded-yaml-verbatim.txt
+  remaining_limitations:
     - earlier_user_original_answers_zh_not_available_verbatim
     - conservative_interpretation_package_not_available_verbatim
-    - uploaded_fable_yaml_attachment_metadata_and_sha_preserved_but_full_text_not_embedded
+    - full_fable_response_line_endings_normalized_CRLF_to_LF
 related_reviews:
   - FABLE5-REVIEW-001
   - FABLE5-REVIEW-002
