@@ -1,0 +1,236 @@
+fable_next_review_response:
+  repository_access:
+    status: accessed
+    access_detail: >
+      GitHub connector / attached project knowledge, retrieval-based. Notably,
+      the connector snapshot includes the PR #142 / mnemosyne-095-fable-triage-response
+      branch files even though the PR is recorded as draft/not merged — so the
+      sync evidently covers that branch state. Branch identity and freshness
+      remain not independently verifiable by me; all statements below reflect
+      the synced snapshot.
+    files_checked:
+      - current/human-approved-spec.md (execution-source anchors; section 18 previously verified)
+      - commands/load-mnemosyne-guidance.md (current behavior-refresh version; loaded as behavior guidance only)
+      - notes/cross-model-review-results/README.md (updated version incl. FABLE5-TRIAGE-001 index and canonical_summary_stored convention)
+      - notes/cross-model-review-results/FABLE5-REVIEW-003/manifest.yaml
+      - notes/codex-task-results/MNEMOSYNE-094-result.md
+      - notes/codex-task-results/MNEMOSYNE-095-result.md
+      - notes/cross-model-review-results/FABLE5-TRIAGE-001/manifest.yaml
+      - notes/cross-model-review-results/FABLE5-TRIAGE-001/01-fable-response-after-human-answers-summary.md
+      - notes/cross-model-review-results/FABLE5-REVIEW-001/manifest.yaml (prior rounds; already in evidence)
+      - notes/cross-model-review-results/FABLE5-REVIEW-001/03-maintainer-triage.md (prior rounds; already in evidence)
+      - notes/cross-model-review-results/FABLE5-REVIEW-001/findings.yaml (prior rounds; already in evidence)
+      - notes/cross-model-review-results/FABLE5-REVIEW-002/manifest.yaml (prior rounds; already in evidence)
+      - notes/cross-model-review-results/FABLE5-REVIEW-002/findings.yaml (prior rounds; already in evidence)
+    files_missing_or_unavailable:
+      - notes/cross-model-review-results/FABLE5-REVIEW-002/02-maintainer-triage.md (existence confirmed via MNEMOSYNE-090 files_created; content never surfaced across three rounds of query batteries)
+      - notes/cross-model-review-results/FABLE5-REVIEW-003/02-maintainer-triage.md (existence confirmed via MNEMOSYNE-094 files_created; content not surfaced)
+      - notes/cross-model-review-results/FABLE5-REVIEW-003/findings.yaml (existence via 094; content not surfaced)
+    note: >
+      The three unavailable files are triage/finding scaffolds whose parent
+      records were retrieved; nothing in this response depends on their
+      contents, and no inference about their contents has been made.
+
+  mnemosyne_095_summary_fidelity:
+    assessment: mostly_accurate_with_corrections
+    comparison_basis: >
+      Direct comparison against my actual previous response, which exists
+      verbatim in this conversation — a stronger basis than reconstruction.
+      The FABLE5-TRIAGE-001 summary is faithful on all closed/open item
+      statuses, the severity/priority change list, the R3 cause
+      classification (including the connector_sync_lag: not_supported
+      judgment), the Q2-2 rule-conflict analysis, and every authority
+      boundary. No unsafe wording, no authority leakage, no
+      overclaim-toward-approval drift was found anywhere in it.
+    required_corrections:
+      - item: F-005 closure characterization is slightly lossy
+        detail: >
+          The summary's closed-items list records F-005 as simply closed;
+          my response closed it "as a decision; elevated in consequence"
+          with two consequence notes the manifest captures only partially:
+          (a) the eventual repair note should state plainly that the
+          no-write claim is NOT user-verified (user's own words), and
+          (b) the decision materially strengthens REG-META-DRYRUN-002's
+          case at future regression-formalization time. Item (a) is a
+          safety-relevant nuance that should not be lost; it currently
+          survives only in the un-ingested original response.
+      - item: Q2-2 evidence detail is compressed below re-derivability
+        detail: >
+          The summary correctly states the two fallback rules point in
+          opposite directions, but drops the specific evidence chain:
+          maintainer-review-layer list ↔ pre-079 dry-run cycle ↔
+          visible_model_label: GPT-5.5 Pro (indirect attribution — the
+          label is on the dry-run result, not the review file);
+          freeze/package-layer list ↔ MNEMOSYNE-082/083 Codex tasks with
+          no model label. A future analyst working only from the summary
+          would need to re-derive this. Raw preservation fixes this
+          without any repository judgment call.
+      - item: W4 recording nuance
+        detail: >
+          The summary says "validation_completion_uncertain_or_interrupted_per_user"
+          — accurate — but my response also carried the user-mandated
+          conservative wording sentence verbatim ("W4 remains open or
+          uncertain for real-project acceptance purposes...").
+          Recommending the verbatim sentence be preserved so future
+          repair drafting quotes the user-approved formula rather than
+          paraphrasing it again.
+      - item: provenance of the audited response is one hop deep
+        detail: >
+          source_response: user_supplied_fable5_reply — correct, but the
+          chain (Fable conversation → user copy → maintenance conversation
+          → summary) is exactly the multi-hop transfer pattern where
+          summary-only storage compounds loss. Not an error; a structural
+          reason for raw preservation.
+    raw_preservation_needed: true
+    raw_preservation_reason: >
+      Three independent reasons converge: (1) the summary is good but
+      demonstrably lossy on at least one safety-relevant nuance (F-005
+      not-user-verified) and one evidence chain (Q2-2 attribution); 
+      (2) the items it feeds — Q2-2 canonicalization and R2-R-001 W4
+      wording — are precisely the high-judgment work being deferred, so
+      the deferred future session needs originals, not summaries;
+      (3) the current maintenance conversation is running at reduced
+      strength (GPT-5.5 Thinking, Pro exhausted), which is the exact
+      condition under which verbatim preservation beats interpretation —
+      preserve now, judge later. This matches the user's standing rule
+      that each validation/real-demand run gets dedicated centralized
+      storage, and the repository's own philosophy (模型负责计算，文件负责记忆).
+
+  raw_materials_to_preserve:
+    recommended_path: notes/cross-model-review-results/FABLE5-TRIAGE-001/raw/
+    recommended_files:
+      - 00-raw-preservation-manifest.yaml
+      - 01-user-original-answers-zh.md (the seven verbatim Chinese answers, unedited)
+      - 02-conservative-interpretation-package-as-sent-to-fable.md (the full FABLE5-HUMAN-TRIAGE-REPLY-001 document verbatim)
+      - 03-fable-continuation-prompt-as-sent.md (the exact review-continuation prompt/package text sent to Fable, if the maintenance conversation retains it)
+      - 04-fable-full-response-verbatim.md (my complete previous response, unsummarized)
+      - 05-user-lower-model-risk-instruction.md (the current instruction: Pro exhausted, GPT-5.5 Thinking only, preserve originals, defer high-judgment work until higher model / restored quota / GPT-5.6)
+    required_contents:
+      - user's original Chinese answers, byte-faithful, with the yaml interpretation blocks that accompanied them
+      - the conservative interpretation exactly as supplied to Fable (including its if_summary_conflicts_with_original trust rule)
+      - the exact prompt/package sent to Fable for the triage-continuation round
+      - Fable's full previous response verbatim (the one FABLE5-TRIAGE-001 summarizes)
+      - the user's lower-model-risk / deferral instruction as given
+    required_metadata:
+      - record_type: raw_preservation_only
+      - authority_level: non_execution_source_raw_preservation_only
+      - repair_authority: none
+      - verbatim_status: verbatim_unedited
+      - provenance_chain: fable_conversation -> user_copy -> maintenance_conversation -> repository
+      - source_conversation_context: model names and dates for each hop where known (Fable 5; GPT-5.5 Thinking maintenance; Pro-exhausted state)
+      - transfer_fidelity_note: any known truncation/normalization applied at each hop, or none
+      - conflict_rule: if_summary_conflicts_with_raw, trust_raw_and_ask_user
+      - related_records: FABLE5-TRIAGE-001 summary, MNEMOSYNE-095, FABLE5-REVIEW-001/002/003
+      - created_by_task: to_be_assigned_by_user_approved_task_only
+    authority_boundary: non_execution_source_raw_preservation_only
+    note: >
+      Recommendation only — no file is created by this response, and the
+      storage act itself requires a user-approved task. Placing raw/ under
+      the existing FABLE5-TRIAGE-001 directory keeps the summary and its
+      source physically adjacent, mirroring the manifest's existing
+      canonical_summary_stored convention with a raw-preservation
+      complement; the README's status_values could gain
+      raw_originals_preserved when that task runs.
+
+  q2_2_warning_layer_audit_plan:
+    status: open
+    priority: high
+    evidence_to_check:
+      - file_or_fact: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-maintainer-review.md — full header/metadata for any model/actor label on the review file itself (current attribution to Pro is indirect via the dry-run result's visible_model_label)
+      - file_or_fact: notes/.../DRY-RUN-001-result.md — confirm visible_model_label: GPT-5.5 Pro and whether the §1 warnings list and the review's Warnings preserved block were authored in the same cycle/actor
+      - file_or_fact: notes/first-target-project-intake-records/meta-agent/meta-agent-post-079-baseline-freeze-for-handoff-v0.1.md — any actor/model metadata; created by MNEMOSYNE-082 per its result record
+      - file_or_fact: notes/codex-task-results/MNEMOSYNE-082-result.md and MNEMOSYNE-083-result.md — any executing-model identification for the freeze/package layer (none found so far; confirm absence with coverage)
+      - file_or_fact: raw/ or notes records of the pre-079 dry-run request cycle (e.g., MNEMOSYNE-078 approved-prompt package) — whether the maintainer-review generation model is recorded anywhere
+      - file_or_fact: git history timestamps/PR numbers for each list layer, to establish the latest-version ordering beyond task-number inference
+      - file_or_fact: authority level of each layer — maintainer review (acceptance-gate record) vs freeze (baseline-carry record) vs package (official frozen handoff artifact) — since canonical choice may need to respect the freeze discipline regardless of model origin
+      - file_or_fact: the user's triage answer itself, raw-preserved, so the decision rule text is quoted not paraphrased at decision time
+    current_known_conflict:
+      pro_version_rule: >
+        "If model origin identifiable, choose the GPT Pro version" — currently
+        favors the maintainer-review-layer list (sixth slot: approval-chain
+        provenance), via the dry-run cycle's visible_model_label: GPT-5.5 Pro.
+      latest_version_rule: >
+        "If not identifiable, use the latest" — favors the freeze/package
+        list (sixth slot: PASS_WITH_WARNINGS-not-production-ready), created
+        later by MNEMOSYNE-082/083.
+      attribution_strength_issue: >
+        The Pro attribution attaches to the dry-run result file, not to the
+        maintainer-review file; the freeze/package generating model is
+        unidentified. So neither rule's precondition is cleanly satisfied:
+        "identifiable" is arguable for one layer and absent for the other.
+        Additionally, choosing the maintainer-review list as canonical would
+        interact with the frozen-artifact discipline (the package is an
+        official frozen artifact restating the other list), which the user's
+        rules do not address — a genuine rule-conflict requiring either
+        stronger evidence or a user clarification, not a model judgment call
+        at current conversation strength.
+    decision_now: no
+    reason: >
+      Evidence is not conclusive (indirect Pro attribution; unidentified
+      freeze/package model), the user's two rules point in opposite
+      directions under that evidence, and a third dimension (frozen-artifact
+      authority) is unaddressed by the rules. Per the user's own instruction,
+      high-judgment canonicalization defers until higher model strength /
+      restored Pro quota; per this charter, no canonical decision unless
+      unambiguous. The audit plan above is executable read-only at any
+      strength; only the final selection is deferred.
+
+  r3_hygiene_recheck_plan:
+    R3-F-001:
+      fresh_checks:
+        - retrieve both manifests in the freshest snapshot and check whether the line-29 known-issue text ("Full review files still need verbatim repository ingestion...") still coexists with status: canonical_copy_stored — noting MNEMOSYNE-095 modified the README but no record claims a manifest fix
+        - check whether any task after 091 (092/093/094/095) touched either manifest (none observed so far; 094 created the REVIEW-003 manifest fresh — verify that one lacks the stale line, which current retrieval suggests)
+      likely_classification_if_unchanged: real_repository_residue (high confidence — the contradiction was visible inside 091's own final-state grep, ruling out sync/retrieval causes)
+      cleanup_approval: not_approved
+    R3-F-003:
+      fresh_checks:
+        - list manual-import-inbox/ current contents in the freshest snapshot (FABLE5 files still present?)
+        - retrieve manual-import-inbox README or per-file headers for any supersession/transfer marker added after 091 (none observed so far; coverage on inbox-side labeling was incomplete in REVIEW-003)
+        - check whether any 092-095 record mentions inbox cleanup or labeling (none observed)
+      likely_classification_if_unchanged: by_design_transfer_artifact_with_unlabeled_residue_risk (medium confidence — deliberate copy-not-move by 091; whether to label or delete is genuinely a user decision, not residue cleanup)
+      cleanup_approval: user_decision_required
+    R3-F-004:
+      fresh_checks:
+        - re-retrieve current/todo.md and handoff/handoff-current.md live sections in the freshest snapshot for any pointer to notes/cross-model-review-results/ added by 092-095 (MNEMOSYNE-095 records current_state_files_modified: false and handoff_files_modified: false, so the pointer likely still does not exist — verify rather than assume)
+        - check current/active-context.md live sections for the same (its coverage was the weakest of the three live files)
+        - re-check whether the Waiting-section line "Choose or specify the inserted long work." has been refreshed by any post-091 task (no record claims it)
+      likely_classification_if_unchanged: real_current_state_absence (medium-high confidence; the parallel-work-overtake caveat from my previous classification is now largely resolved by 092-095 records all declaring current-state/handoff files unmodified — but absence-based discipline still requires the fresh-snapshot check before any repair)
+      cleanup_approval: not_approved_until_rechecked
+    cross_cutting_note: >
+      None of the three items classifies as connector/retrieval issue in the
+      current snapshot; the REVIEW-003 O-1 episode was query-shape
+      sensitivity, and these three were specifically re-probed. Parallel-work
+      timing is now bounded by the 092-095 result records' explicit
+      files-modified declarations.
+
+  next_safe_steps:
+    safe_now:
+      - this response itself (fidelity check, preservation recommendation, audit plans) — done read-only
+      - user-approved raw-preservation task (mechanical verbatim copying; explicitly low-judgment; the one write-class action worth doing at current strength precisely because it requires no interpretation) — still requires explicit user approval before any write
+      - executing the Q2-2 evidence-audit retrievals (read-only tracing of actor/model/timestamp facts into an evidence table, without selecting the canonical layer)
+      - executing the R3 fresh-snapshot rechecks listed above (read-only)
+      - merging or not merging PR #142 is a user platform decision; if merged, adding the raw/ complement keeps the summary from becoming the only durable record
+    defer_until_higher_model_or_pro_quota:
+      - the Q2-2 canonical-layer selection itself (rule conflict + inconclusive attribution + frozen-artifact interaction)
+      - final wording of the R2-R-001 W4 repair (user-approved formula exists, but embedding it correctly across live files is judgment work touching the freeze discipline)
+      - any decision to reconcile the maintainer-review-layer vs freeze/package-layer lists in repository files
+      - drafting the eventual repair-bundle proposal (the FABLE5-TRIAGE-001 record itself defers this until after the evidence audit is reviewed)
+    requires_explicit_user_approval_before_write:
+      - raw-preservation storage task (path/scope recommended above)
+      - R3-F-001 manifest line fix (small, but a write)
+      - R3-F-003 inbox label-or-delete (user choice by nature)
+      - R3-F-004 live-file pointer addition (post-recheck)
+      - R3-R-003 one-line MNEMOSYNE-089 approval note (content settled; the write is not)
+      - any Q2-2 outcome recording, including the user-mandated high-priority issue-list entry for the warning-layer inconsistency
+    out_of_scope:
+      - resuming or closing the paused post-084 route (user handles manually per standing instruction; excluded from this track)
+      - Codex task generation, executable repair prompts, repair PR prompts
+      - execution-source updates of any kind
+      - target workspace/material/write/build/regression actions
+      - treating this or any Fable output as truth voting or writeback authority
+      - re-reviewing FABLE5-REVIEW-001/002/003 conclusions absent new evidence
+
+  final_boundary_statement: >
+    No repository writes, no Codex tasks, no execution-source update, no target
+    workspace/material/write/build/regression action, and no paused-route resumption
+    are authorized by this response.
