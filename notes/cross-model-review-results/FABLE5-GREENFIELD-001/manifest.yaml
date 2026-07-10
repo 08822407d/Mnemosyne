@@ -2,8 +2,9 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_canonical_copy_stored
+status: charter_and_GF_STEP_1A_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
+last_storage_task: MNEMOSYNE-102
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -20,14 +21,35 @@ charter:
     - GF-STEP-3 independent_architecture_design
     - GF-STEP-4 self_critique_and_assumption_register
     - GF-STEP-5 contrastive_comparison_against_existing_design
+step_records:
+  - step_id: GF-STEP-1A
+    path: steps/GF-STEP-1A/
+    status: pilot_complete_GF_STEP_1_not_complete
+    stored_by_task: MNEMOSYNE-102
+    substantive_review_performed: false
+    next_proposed_step: GF-STEP-1B
 files:
   - 00-task-charter.md
   - 01-maintainer-high-model-intake-review.md
+  - steps/GF-STEP-1A/manifest.yaml
+  - steps/GF-STEP-1A/00-prompt-as-sent.md
+  - steps/GF-STEP-1A/01-fable-chat-summary.md
+  - steps/GF-STEP-1A/02-core-needs-pilot.md
 raw_preservation_rule:
   - preserve_each_step_prompt_verbatim
   - preserve_each_step_downloadable_output_verbatim
   - preserve_user_answers_in_original_language
   - preserve_incidental_exposure_ledger
+review_boundary:
+  current_xhigh_scope:
+    - generate_bounded_step_prompts_from_Fable_charter
+    - receive_and_structurally_validate_Fable_outputs
+    - preserve_outputs_and_submit_ready_PRs
+  deferred_until_Pro_quota_restored:
+    - substantive_acceptance_or_rejection_of_Fable_findings
+    - repairs_based_on_Fable_findings
+    - canonical_warning_layer_decision
+    - formal_comparison_and_enhancement_decisions
 boundaries:
   execution_source_modified: false
   current_state_files_modified: false
