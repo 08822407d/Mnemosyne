@@ -1,0 +1,74 @@
+step_record_id: FABLE5-GREENFIELD-001-GF-STEP-1A
+track_id: FABLE5-GREENFIELD-001
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-1A
+step_name: core_user_need_extraction_pilot
+record_type: independent_need_model_pilot_preservation
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+step_status: pilot_complete_GF_STEP_1_not_complete
+stored_by_task: MNEMOSYNE-102
+source_conversation:
+  service: Fable_5_conversation
+  research_setting: not_checked
+  note: user reported the Research option was not selected
+files:
+  - path: 00-prompt-as-sent.md
+    role: prompt_preservation
+    verbatim_status: prompt_body_copied_from_current_conversation_visible_text
+  - path: 01-fable-chat-summary.md
+    role: user_pasted_Fable_chat_summary
+    verbatim_status: pasted_text_preserved_with_repository_heading
+  - path: 02-core-needs-pilot.md
+    role: downloadable_Fable_deliverable
+    verbatim_status: byte_faithful_utf8_lf_copy
+    uploaded_filename: FABLE5-GREENFIELD-001-STEP1A-core-needs-pilot.md
+    size_bytes: 16618
+    sha256: 56f5efe95b6de5046ad9767c2c10a9fa75e18931007a5282440fa5ade058f1e0
+    git_blob_sha: 6d6ee52021bd415d8a83539b4b73d3a5e5aa88e1
+    line_count: 208
+    line_endings: LF
+    ends_with_newline: true
+source_evidence_check:
+  path: raw/concept-origin-extract-001.md
+  declared_blob_sha: b47248f1052ecac679c2e3a0afab4d93ca2c6649
+  repository_blob_sha_verified: true
+structural_validation:
+  status: passed
+  required_sections_present: 10_of_10
+  need_records_present: 12
+  need_ids: GF1A-N01_through_GF1A-N12
+  incidental_exposure_entries_present: 2
+  unresolved_question_entries_present: 4
+  continuation_section_present: true
+  clean_ending: true
+  artifact_or_tool_status_leak_detected: false
+  fable_reported_word_count: 1792
+  local_whitespace_token_count: 1842
+  word_count_note: counting methods differ; both values remain below the 2200 hard cap
+substantive_review:
+  performed: false
+  reason: current_xhigh_scope_is_receive_structurally_validate_preserve_and_prepare_next_bounded_task_only
+incidental_exposure_status:
+  reported_by_fable: true
+  entries:
+    - E-1 prohibited-class chunks surfaced during charter probe; reported unused
+    - E-2 research-summary snippet surfaced during conversation-history recovery; reported unused
+  maintainer_verification_of_nonuse: not_independently_possible_in_this_preservation_task
+next_step:
+  proposed: GF-STEP-1B
+  execution_status: not_started
+  research_setting_recommendation: do_not_select
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  substantive_fable_findings_accepted_or_rejected: false
+  repairs_generated_or_applied: false
+  paused_post_handoff_route_resumed_or_closed: false
