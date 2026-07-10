@@ -59,14 +59,19 @@ This task does not judge whether the six extracted needs, five assistant-era mec
 
 ```yaml
 uploaded_filename: FABLE5-GREENFIELD-001-STEP1B-deferred-needs-and-questions.md
+source_size_bytes: 18558
+source_sha256: ae4b462a26c6bc3d4f3c0d21931deb69d5dd3d20e3edd6cb44113b243de5b6f3
 canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-1B/02-deferred-needs-and-questions.md
-size_bytes: 18558
-sha256: ae4b462a26c6bc3d4f3c0d21931deb69d5dd3d20e3edd6cb44113b243de5b6f3
-git_blob_sha: fd1bf99865949a2c71ec86f0541e21b4d46d1521
+canonical_size_bytes: 18557
+canonical_sha256: 72fe3a4c028b8ef9e8f63cba862208b334bb916aaed8380eb8e856245ed7b616
+canonical_git_blob_sha: 6f85ca17e7a5e8d37a97db7dbad9cf77b7a3e5ca
 encoding: utf-8
 line_endings: lf
-verbatim_status: byte_faithful_utf8_lf_copy
+normalization: removed_single_final_lf_only
+verbatim_status: content_faithful_with_documented_final_newline_normalization
 ```
+
+The repository copy differs from the uploaded attachment only by omission of one final LF byte. No content line or substantive character changed.
 
 ## Structural validation
 
