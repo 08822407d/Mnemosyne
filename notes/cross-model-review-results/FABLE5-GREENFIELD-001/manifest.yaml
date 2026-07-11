@@ -2,9 +2,9 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-105
+last_storage_task: MNEMOSYNE-106
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -46,6 +46,21 @@ step_records:
     stored_by_task: MNEMOSYNE-105
     substantive_review_performed: false
     next_proposed_step: GF-STEP-1E
+  - step_id: GF-STEP-1E
+    path: steps/GF-STEP-1E/
+    status: STEP1E_complete_GF_STEP_1_complete_with_explicit_open_questions
+    stored_by_task: MNEMOSYNE-106
+    substantive_review_performed: false
+    next_proposed_step: GF-STEP-2
+track_progress:
+  GF_STEP_1:
+    status: complete_with_explicit_open_questions
+    completion_record: steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
+    substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
+  next_planned_step:
+    step_id: GF-STEP-2
+    name: independent_capability_boundary_baseline
+    executed: false
 raw_preservation_rule:
   - preserve_each_step_prompt_verbatim
   - preserve_each_step_downloadable_output_verbatim
