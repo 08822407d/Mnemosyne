@@ -1,0 +1,81 @@
+step_id: GF-STEP-2B2A
+track_id: FABLE5-GREENFIELD-001
+record_type: plain_dialogue_pdf_core_text_evidence_review
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+status: GF_STEP_2B2A_complete_full_text_layer_reviewed
+stored_by_task: MNEMOSYNE-109
+prior_step: GF-STEP-2B1
+research_mode: false
+source_materials:
+  - user_pasted_Fable_chat_summary
+  - uploaded_filename: FABLE5-GREENFIELD-001-STEP2B2A-plain-dialogue-core-text-evidence.md
+  - exact_prompt_previously_generated_and_sent
+canonical_files:
+  prompt: 00-prompt-as-sent.md
+  chat_summary: 01-fable-chat-summary.md
+  artifact: 02-plain-dialogue-core-text-evidence.md
+artifact_integrity:
+  source_size_bytes: 13911
+  source_sha256: c5e13b8827053f4f39db0c8d2c739ad322da67f29bc5593f335be269cd80ab63
+  canonical_size_bytes: 13911
+  canonical_sha256: c5e13b8827053f4f39db0c8d2c739ad322da67f29bc5593f335be269cd80ab63
+  canonical_git_blob_sha: 0704c05a244d94c9a629c6150009c77cecf192d4
+  encoding: utf-8
+  line_endings: lf
+  final_lf_preserved: true
+  normalization: none
+  verbatim_status: byte_faithful_utf8_lf_copy
+source_report:
+  report_id: RPT-2026Q2-0003
+  path: raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 2：ChatGPT,Claude 纯对话场景的外部记忆能力边界.pdf
+  expected_blob_sha: a1146ad6bfee5cbdc431f35fb0b7a442e162aab7
+  observed_blob_sha: a1146ad6bfee5cbdc431f35fb0b7a442e162aab7
+  sha_match: true
+  pages_reported: 5
+  extracted_characters_reported: 16924
+  execution_mode: full_text_mode
+  text_layer_usable: true
+  full_text_layer_inspected: true
+  ocr_used: false
+  visual_inspection_performed: false
+structural_validation:
+  required_sections_present: 13_of_13
+  evidence_records:
+    count: 6
+    id_range: F2B2A-E01_to_F2B2A-E06
+  signals_reassessed:
+    S-02: dedicated_report_refines
+    S-03: dedicated_report_confirms
+  compact_surface_date_rows: 5
+  STEP1_linkage_need_ids:
+    - GF1A-N01
+    - GF1A-N02
+    - GF1A-N09
+    - GF1A-N12
+  limitation_items: 3
+  artifact_or_tool_status_leakage_detected: false
+word_counts:
+  fable_reported_approximate: 1702
+  local_whitespace_delimited: 1722
+  local_english_word_pattern: 1592
+  hard_cap: 2000
+  within_hard_cap: true
+continuation:
+  STEP2B2B_needed: false
+  next_proposed_step: GF-STEP-2B3
+  next_report_id: RPT-2026Q2-0004
+substantive_review_performed: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  official_083_artifacts_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  auto_merge_authorized: false
+  paused_post_handoff_route_resumed_or_closed: false
