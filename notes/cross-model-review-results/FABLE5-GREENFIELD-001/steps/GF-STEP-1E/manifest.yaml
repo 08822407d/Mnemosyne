@@ -1,0 +1,106 @@
+step_record_id: FABLE5-GREENFIELD-001-GF-STEP-1E
+track_id: FABLE5-GREENFIELD-001
+step_id: GF-STEP-1E
+step_name: second_tier_prompt_check_and_step1_final_closure
+record_type: second_tier_original_prompt_check_and_step1_final_closure
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+status: STEP1E_complete_GF_STEP_1_complete_with_explicit_open_questions
+stored_by_task: MNEMOSYNE-106
+prior_steps:
+  - GF-STEP-1A
+  - GF-STEP-1B
+  - GF-STEP-1C
+  - GF-STEP-1D
+source_conversation:
+  service: Fable 5 web conversation
+  research_mode: false
+  same_conversation_as_prior_steps: true
+inputs:
+  attachments:
+    - FABLE5-GREENFIELD-001-STEP1A-core-needs-pilot.md
+    - FABLE5-GREENFIELD-001-STEP1B-deferred-needs-and-questions.md
+    - FABLE5-GREENFIELD-001-STEP1C-research-prompt-index-gap-map.md
+    - FABLE5-GREENFIELD-001-STEP1D-DR4-prompt-check-and-closure.md
+  repository_sources:
+    - path: raw/research-reports/cycles/2026Q2-memory-testing/research-prompts/originals/DR1_memory_testing_debugging_evidence_review_prompt.md
+      expected_blob_sha: e6fc63b1548a442e238da4e5740c77eaf9f794fd
+      fable_reported_sha_verified: true
+      fable_reported_complete_line_count: 186
+    - path: raw/research-reports/cycles/2026Q2-handoff-strategy/research-prompts/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_prompt.md
+      expected_blob_sha: 51f3927800b69d25d47e5a5dd86029cbf473c776
+      fable_reported_sha_verified: true
+      fable_reported_complete_line_count: 450
+    - path: raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/research-prompts/originals/DR5_v2_first_real_target_dry_run_evaluation_framework_prompt.md
+      expected_blob_sha: 716166c5ae54e341f94909594d99de645a19054c
+      fable_reported_sha_verified: true
+      fable_reported_complete_line_count: 293
+uploaded_artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP1E-second-tier-prompts-and-final-closure.md
+  canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
+  size_bytes: 32577
+  sha256: 60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0
+  git_blob_sha: af62ffb564fd7c227f3b651a6c666201f8102fce
+  encoding: utf-8
+  line_endings: lf
+  final_lf_present: true
+  verbatim_status: byte_faithful_utf8_lf_copy
+public_repository_check:
+  repository_visibility: public
+  checked_before_write: true
+  content_scope: conceptual_requirements_research_prompt_evidence_and_methodology
+  credentials_or_direct_personal_identifiers_detected: false
+structural_validation:
+  required_sections_present: 21_of_21
+  ending_clean: true
+  leaked_artifact_or_tool_status_lines_detected: false
+  source_integrity_rows: 3
+  decomposition_entries:
+    MT_0001: 7
+    HO_0001: 9
+    FTDRE_0001: 8
+    total: 24
+  need_record_actions:
+    GF1C_N19: refined
+    GF1C_N21: refined
+    GF1A_N12: bounded_delta_refinement
+    new_need_records: 0
+  question_actions:
+    Q_08: converted_to_method_selection_question
+    Q_09: partially_resolved_and_updated
+    Q_10: second_tier_resolved_initial_cycle_non_blocking
+    new_question: Q_13
+  final_assembly_need_count: 21
+  completion_determination: GF_STEP_1_complete_with_explicit_open_questions
+  proposed_next_step: GF-STEP-2
+  GF_STEP_1F_justified: false
+  word_counts:
+    fable_reported_approximate: 3978
+    local_whitespace_token_count: 4016
+    local_english_word_pattern_count: 3495
+    hard_cap: 4000
+    note: local_whitespace_token_count_is_not_equivalent_to_Fable_word_count
+files:
+  - 00-prompt-as-sent.md
+  - 01-fable-chat-summary.md
+  - 02-second-tier-prompts-and-final-closure.md
+substantive_review:
+  performed: false
+  reason: deferred_until_GPT_Pro_quota_restored_per_user_instruction
+continuation:
+  GF_STEP_1_status: complete_with_explicit_open_questions
+  next_proposed_step: GF-STEP-2
+  next_step_name: independent_capability_boundary_baseline
+  executed_by_this_task: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  current_design_compared_or_repaired: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false
