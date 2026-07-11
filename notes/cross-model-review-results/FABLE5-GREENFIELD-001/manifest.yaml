@@ -2,9 +2,9 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-107
+last_storage_task: MNEMOSYNE-108
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -59,6 +59,12 @@ step_records:
     substantive_review_performed: false
     next_proposed_step: GF-STEP-2B
     incident_record: incidents/INC-001-step2a-safety-routing.md
+  - step_id: GF-STEP-2B1
+    path: steps/GF-STEP-2B1/
+    status: GF_STEP_2B1_complete_foundational_report_review_ready_for_STEP2B2
+    stored_by_task: MNEMOSYNE-108
+    substantive_review_performed: false
+    next_proposed_step: GF-STEP-2B2
 track_progress:
   GF_STEP_1:
     status: complete_with_explicit_open_questions
@@ -68,8 +74,9 @@ track_progress:
     status: in_progress
     completed_substeps:
       - GF-STEP-2A
-    current_record: steps/GF-STEP-2A/02-research-source-map.md
-    next_planned_substep: GF-STEP-2B
+      - GF-STEP-2B1
+    current_record: steps/GF-STEP-2B1/02-foundational-report-evidence.md
+    next_planned_substep: GF-STEP-2B2
     substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
 provider_incidents:
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
