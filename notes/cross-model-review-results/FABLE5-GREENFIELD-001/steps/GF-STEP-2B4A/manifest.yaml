@@ -1,0 +1,74 @@
+step_id: GF-STEP-2B4A
+track_id: FABLE5-GREENFIELD-001
+record_type: hosted_repository_workflow_core_text_probe
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-111
+substantive_review_performed: false
+status: GF_STEP_2B4A_complete_probe_ready_for_STEP2B4B
+prior_step: GF-STEP-2B3
+next_proposed_step: GF-STEP-2B4B
+research_mode: false
+source_report:
+  report_id: RPT-2026Q2-0005
+  path: raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf
+  expected_blob_sha: ee4bb0ab829cb59819263858c3c4a3a0178c22da
+  observed_blob_sha: ee4bb0ab829cb59819263858c3c4a3a0178c22da
+  sha_match: true
+  execution_mode: core_text_probe_mode
+  page_count_reported: 3
+  extracted_characters_reported: 10908
+  extracted_lines_reported: 149
+  full_text_review_performed: false
+  visual_review_performed: false
+  ocr_performed: false
+artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP2B4A-hosted-workflow-core-text-probe.md
+  canonical_path: 02-hosted-workflow-core-text-probe.md
+  source_size_bytes: 8403
+  source_sha256: 2e7e7f426fc78f43011e6ffc5f4407e5aa32d59899b95911bc2ed1b72b1b85fa
+  canonical_size_bytes: 8403
+  canonical_sha256: 2e7e7f426fc78f43011e6ffc5f4407e5aa32d59899b95911bc2ed1b72b1b85fa
+  canonical_git_blob_sha: aace8dd6ef83863feb9de9975663108ddfdf9b16
+  encoding: utf-8
+  line_endings: lf
+  final_lf_preserved: true
+  normalization: none
+  verbatim_status: byte_faithful_utf8_lf_copy
+structural_validation:
+  required_sections_expected: 10
+  required_sections_present: 10
+  provisional_evidence_records:
+    count: 3
+    id_range: F2B4A-P01..F2B4A-P03
+  final_S05_disposition_made: false
+  provisional_S05_support: present
+  retrieval_batteries_reported: 1
+  word_count_fable_reported_approx: 983
+  local_whitespace_token_count: 1000
+  local_english_word_pattern_count: 966
+  artifact_or_tool_status_leakage_detected: false
+coverage:
+  inspected:
+    - title_and_overall_conclusion_lines_1_11
+    - capabilities_PR_no_self_merge_logs_artifacts_lines_12_24
+    - suitable_memory_files_opening_lines_26_35_partial
+    - PR_CODEOWNERS_branch_protection_lines_56_66
+    - manual_required_and_closing_lines_84_103
+    - heading_and_keyword_map
+  deliberately_uninspected:
+    - lines_36_55
+    - lines_67_83
+    - reference_list_lines_104_149
+  full_review_still_required: true
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false
