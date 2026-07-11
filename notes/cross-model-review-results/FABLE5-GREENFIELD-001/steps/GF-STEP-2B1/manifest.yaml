@@ -1,0 +1,89 @@
+step_record_id: FABLE5-GREENFIELD-001-GF-STEP-2B1
+track_id: FABLE5-GREENFIELD-001
+step_id: GF-STEP-2B1
+step_name: foundational_external_memory_report_evidence_review
+record_type: foundational_original_report_evidence_review
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+status: GF_STEP_2B1_complete_foundational_report_review_ready_for_STEP2B2
+stored_by_task: MNEMOSYNE-108
+prior_step: GF-STEP-2A
+source_conversation:
+  service: Fable 5 web conversation
+  research_mode: false
+  same_successful_conversation_as_STEP2A: true
+inputs:
+  - FABLE5-GREENFIELD-001-STEP2A-research-source-map.md
+  - raw/research-reports/cycles/2026Q2-initial/originals/AI agent 长期记忆系统 pro深度研究.txt
+source_integrity:
+  source_ref: master
+  expected_source_blob_sha: 1c4a48c53d7ac126eb29a0ea7ab1e0e8a0f5c82a
+  observed_source_blob_sha: 1c4a48c53d7ac126eb29a0ea7ab1e0e8a0f5c82a
+  sha_match: true
+  complete_text_inspected: true
+  source_lines_reported: 287
+  source_bytes_reported: 33062
+  report_stated_evidence_date: 2026-05-23
+  retrieval_batteries_reported: 1
+uploaded_artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP2B1-foundational-report-evidence.md
+  canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B1/02-foundational-report-evidence.md
+  size_bytes: 22142
+  sha256: 0359fd97b576f11b760fa82ef2abebc155494d6c4255202c8789d88cd67dc20b
+  git_blob_sha: fd1fa397bc1baee5e115eeefde75287cf546eb9f
+  encoding: utf-8
+  line_endings: lf
+  final_lf_present: true
+  verbatim_status: byte_faithful_utf8_lf_copy
+public_repository_check:
+  repository_visibility: public
+  checked_before_write: true
+  content_scope: archived_research_evidence_mapping_and_methodology
+  credentials_or_direct_personal_identifiers_detected: false
+structural_validation:
+  required_sections_present: 17_of_17
+  ending_clean: true
+  leaked_artifact_or_tool_status_lines_detected: false
+  foundational_evidence_records:
+    count: 14
+    id_range: F2B1-E01_through_F2B1-E14
+  signal_dispositions:
+    S-01: report_confirmed
+    S-02: report_refined
+    S-03: report_confirmed
+    S-04_S-05: preliminary_corroboration_only
+  principle_product_split:
+    low_drift_items: 4
+    dated_product_or_workflow_items: 9
+    report_recommendations: 1
+  word_counts:
+    fable_reported_approximate: 2798
+    local_whitespace_token_count: 2846
+    local_english_word_pattern_count: 2577
+    hard_cap: 3300
+    status: within_hard_cap
+  incidental_prohibited_tier_exposure_reported: none
+files:
+  - 00-prompt-as-sent.md
+  - 01-fable-chat-summary.md
+  - 02-foundational-report-evidence.md
+substantive_review:
+  performed: false
+  reason: deferred_until_GPT_Pro_quota_restored_per_user_instruction
+continuation:
+  next_proposed_step: GF-STEP-2B2
+  purpose: plain_dialogue_boundary_report_evidence_review
+  source_report: RPT-2026Q2-0003
+  executed_by_this_task: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  current_design_compared_or_repaired: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false
