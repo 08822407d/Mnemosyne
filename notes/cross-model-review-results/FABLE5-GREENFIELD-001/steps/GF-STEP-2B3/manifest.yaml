@@ -1,0 +1,76 @@
+track_id: FABLE5-GREENFIELD-001
+step_id: GF-STEP-2B3
+record_type: bounded_original_report_text_evidence_review
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-110
+research_mode: false
+status: GF_STEP_2B3_complete_full_text_layer_reviewed
+prior_step: GF-STEP-2B2A
+next_proposed_step: GF-STEP-2B4
+substantive_review_performed: false
+source_report:
+  report_id: RPT-2026Q2-0004
+  path: raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 3：Codex,Claude Code,Cursor 等本地开发 Agent 的文件式记忆能力.pdf
+  expected_blob_sha: 5fe68eb33fabcecd3bc23b8a38451f03bd0bbc2e
+  observed_blob_sha: 5fe68eb33fabcecd3bc23b8a38451f03bd0bbc2e
+  sha_match: true
+  execution_mode: full_text_mode
+  text_layer_usable: true
+  page_count_reported: 4
+  extracted_characters_reported: 17301
+  full_text_layer_inspected: true
+  ocr_used: false
+  visual_inspection_performed: false
+artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP2B3-local-project-file-text-evidence.md
+  canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B3/02-local-project-file-text-evidence.md
+  size_bytes: 14498
+  sha256: c854a82a3b6458958c6c312005011a3177b4f7bf0d7c303e799ca7b1469845fe
+  git_blob_sha: cb336839cad396ec67a72e98568787386ceb590e
+  encoding: utf-8
+  line_endings: lf
+  final_lf_preserved: true
+  normalization: none
+  verbatim_status: byte_faithful_utf8_lf_copy
+preserved_files:
+  prompt: 00-prompt-as-sent.md
+  chat_summary: 01-fable-chat-summary.md
+  downloadable_output: 02-local-project-file-text-evidence.md
+structural_validation:
+  required_sections_expected: 13
+  required_sections_present: 13
+  evidence_records:
+    count: 5
+    id_range: F2B3-E01..F2B3-E05
+  signal_dispositions:
+    S-04: dedicated_report_refines
+    S-05: preliminary_corroboration_only
+  workflow_boundary_rows: 4
+  step1_linkage_entries: 4
+  limitation_items: 3
+  reported_word_count_approx: 1746
+  local_whitespace_token_count: 1780
+  local_english_word_pattern_count: 1639
+  hard_cap_words: 1850
+  ending_clean: true
+  artifact_or_tool_status_leakage_detected: false
+incidental_exposure:
+  occurred: false
+  note: report-internal references were treated as metadata only
+continuation:
+  next_report_id: RPT-2026Q2-0005
+  next_report_topic: cloud_coding_agent_and_GitHub_writeback_audit
+  next_focus_signal: S-05
+  STEP2B3B_required: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false
