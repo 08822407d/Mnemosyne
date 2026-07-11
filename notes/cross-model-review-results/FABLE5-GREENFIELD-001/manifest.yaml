@@ -2,9 +2,9 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-106
+last_storage_task: MNEMOSYNE-107
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -52,15 +52,31 @@ step_records:
     stored_by_task: MNEMOSYNE-106
     substantive_review_performed: false
     next_proposed_step: GF-STEP-2
+  - step_id: GF-STEP-2A
+    path: steps/GF-STEP-2A/
+    status: GF_STEP_2A_complete_source_map_ready_for_STEP2B
+    stored_by_task: MNEMOSYNE-107
+    substantive_review_performed: false
+    next_proposed_step: GF-STEP-2B
+    incident_record: incidents/INC-001-step2a-safety-routing.md
 track_progress:
   GF_STEP_1:
     status: complete_with_explicit_open_questions
     completion_record: steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
     substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
-  next_planned_step:
-    step_id: GF-STEP-2
-    name: independent_capability_boundary_baseline
-    executed: false
+  GF_STEP_2:
+    status: in_progress
+    completed_substeps:
+      - GF-STEP-2A
+    current_record: steps/GF-STEP-2A/02-research-source-map.md
+    next_planned_substep: GF-STEP-2B
+    substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
+provider_incidents:
+  - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
+    path: incidents/INC-001-step2a-safety-routing.md
+    affected_step: GF-STEP-2A
+    status: resolved_by_revised_fresh_conversation_retry
+    exact_provider_trigger: unknown
 raw_preservation_rule:
   - preserve_each_step_prompt_verbatim
   - preserve_each_step_downloadable_output_verbatim
@@ -71,6 +87,7 @@ review_boundary:
     - generate_bounded_step_prompts_from_Fable_charter
     - receive_and_structurally_validate_Fable_outputs
     - preserve_outputs_and_submit_ready_PRs
+    - record_provider_routing_incidents_without_diagnosing_proprietary_classifiers
   deferred_until_Pro_quota_restored:
     - substantive_acceptance_or_rejection_of_Fable_findings
     - repairs_based_on_Fable_findings
