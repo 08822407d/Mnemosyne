@@ -1,0 +1,94 @@
+step_record_id: FABLE5-GREENFIELD-001-GF-STEP-1D
+track_id: FABLE5-GREENFIELD-001
+step_id: GF-STEP-1D
+step_name: minimal_DR4_original_prompt_check_and_step1_closure_reassessment
+record_type: minimal_original_prompt_check_and_step1_closure_reassessment
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+status: STEP1D_complete_GF_STEP_1_incomplete_second_tier_prompt_check_required
+stored_by_task: MNEMOSYNE-105
+prior_steps:
+  - GF-STEP-1A
+  - GF-STEP-1B
+  - GF-STEP-1C
+source_conversation:
+  service: Fable 5 web conversation
+  research_mode: false
+  same_conversation_as_prior_steps: true
+inputs:
+  - FABLE5-GREENFIELD-001-STEP1A-core-needs-pilot.md
+  - FABLE5-GREENFIELD-001-STEP1B-deferred-needs-and-questions.md
+  - FABLE5-GREENFIELD-001-STEP1C-research-prompt-index-gap-map.md
+  - raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md
+source_integrity:
+  source_ref: master
+  expected_source_blob_sha: b5739bca54a98d589c2d153d4a92dd26c27675b0
+  fable_reported_source_blob_sha_verified: true
+  retrieval_batteries_reported: 1
+uploaded_artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP1D-DR4-prompt-check-and-closure.md
+  source_size_bytes: 20507
+  source_sha256: a3d5e8d0ca8841d284bcb92f1b26259d52f83d936c989b5e2da22f33e96fdd06
+  canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-1D/02-DR4-prompt-check-and-closure.md
+  canonical_size_bytes: 20506
+  canonical_sha256: f80ef284d00a6d02a553bdcb0123738bffc5e67d9c2f88e429dc070920c14a64
+  canonical_git_blob_sha: 10afcec1fec7ac460f819d1540f68a1bddbb6ca8
+  encoding: utf-8
+  line_endings: lf
+  normalization: removed_single_final_lf_only
+  verbatim_status: content_faithful_with_documented_final_newline_normalization
+public_repository_check:
+  repository_visibility: public
+  checked_before_write: true
+  content_scope: conceptual_requirements_research_prompt_evidence_and_governance_questions
+  credentials_or_direct_personal_identifiers_detected: false
+structural_validation:
+  required_sections_present: 15_of_15
+  ending_clean: true
+  leaked_artifact_or_tool_status_lines_detected: false
+  decomposition_table_entries: 10
+  source_lines_reported_covered: 217
+  GF1C_N20_action: refine
+  additional_new_need_records:
+    count: 0
+    ids: []
+  Q_07_status: partially_resolved
+  new_questions:
+    count: 2
+    ids: [Q-11, Q-12]
+  carried_or_updated_questions:
+    ids: [Q-01, Q-02, Q-03, Q-04, Q-05, Q-06, Q-07-updated, Q-08, Q-09, Q-10]
+  incidental_prohibited_tier_exposure_reported: none_this_step
+  word_counts:
+    fable_reported_approximate: 2510
+    local_whitespace_token_count: 2529
+    local_english_word_pattern_count: 2373
+    hard_cap: 2800
+    status: within_hard_cap_under_reported_and_local_methods
+files:
+  - 00-prompt-as-sent.md
+  - 01-fable-chat-summary.md
+  - 02-DR4-prompt-check-and-closure.md
+substantive_review:
+  performed: false
+  reason: deferred_until_GPT_Pro_quota_restored_per_user_instruction
+continuation:
+  next_proposed_step: GF-STEP-1E
+  purpose: second_tier_prompt_check_and_step1_final_closure
+  minimum_sources:
+    - raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/research-prompts/originals/DR5_v2_first_real_target_dry_run_evaluation_framework_prompt.md
+    - raw/research-reports/cycles/2026Q2-memory-testing/research-prompts/originals/DR1_memory_testing_debugging_evidence_review_prompt.md
+    - raw/research-reports/cycles/2026Q2-handoff-strategy/research-prompts/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_prompt.md
+  executed_by_this_task: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  current_design_compared_or_repaired: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false
