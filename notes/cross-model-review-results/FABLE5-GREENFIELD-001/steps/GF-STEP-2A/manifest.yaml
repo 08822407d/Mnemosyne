@@ -1,0 +1,86 @@
+step_record_id: FABLE5-GREENFIELD-001-GF-STEP-2A
+track_id: FABLE5-GREENFIELD-001
+step_id: GF-STEP-2A
+step_name: research_evidence_catalog_and_staged_reading_plan
+record_type: research_evidence_catalog_and_read_plan
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+status: GF_STEP_2A_complete_source_map_ready_for_STEP2B
+stored_by_task: MNEMOSYNE-107
+prior_step: GF-STEP-1E
+source_conversation:
+  service: Fable 5 web conversation
+  research_mode: false
+  fresh_conversation_after_routing_incident: true
+  first_attempt_safety_routed_to: Opus 4.8
+inputs:
+  - FABLE5-GREENFIELD-001-STEP1E-second-tier-prompts-and-final-closure.md
+  - raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md
+  - raw/research-reports/current/research-report-index.md
+  - raw/research-reports/current/current-report-summaries.md
+source_integrity:
+  motivation_blob_sha: f90f4854f8cdac903d919d6918d49e667e812f3f
+  report_index_blob_sha: 0efc2af50cd4ef37abb93aa67b33fdd4c812c9be
+  summary_index_blob_sha: f22906d36613c70b686f5121f9b1d8e5091dab0b
+  all_fable_reported_matches: true
+  retrieval_batteries_reported: 3
+uploaded_artifact:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP2A-research-source-map.md
+  canonical_path: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2A/02-research-source-map.md
+  size_bytes: 27200
+  sha256: ac45e3c4217be8953bb0a2c379aa4e1d2c6bacac5e5f6c6610894f1b4dabb1a1
+  git_blob_sha_expected: 1c03aa480f90e45dc65542ab3f6c1cad9688e7e3
+  encoding: utf-8
+  line_endings: lf
+  final_lf_present: true
+  verbatim_status: byte_faithful_utf8_lf_copy
+public_repository_check:
+  repository_visibility: public
+  checked_before_write: true
+  content_scope: research_catalog_evidence_planning_and_provider_routing_observation
+  credentials_or_direct_personal_identifiers_detected: false
+structural_validation:
+  required_sections_present: 18_of_18
+  ending_clean: true
+  leaked_artifact_or_tool_status_lines_detected: false
+  active_reports_inventoried: 11
+  research_domains_mapped: 11
+  preliminary_evidence_signals: 15
+  pdf_visual_review_limitations: 6
+  date_sensitivity_items: 9
+  step2b_selected_reports:
+    - RPT-2026Q2-0001
+    - RPT-2026Q2-0003
+    - RPT-2026Q2-0004
+    - RPT-2026Q2-0005
+  deferred_reports: 7
+  word_counts:
+    fable_reported_approximate: 3397
+    local_whitespace_token_count: 3433
+    local_word_pattern_count: 2813
+    hard_cap: 3400
+incident:
+  incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
+  record_path: ../../incidents/INC-001-step2a-safety-routing.md
+  partial_output_path: ../../incidents/INC-001-partial-output-before-routing.txt
+  exact_trigger_category: unknown
+  successful_retry_prompt_path: 00-revised-prompt-as-sent.md
+substantive_review:
+  performed: false
+  reason: deferred_until_GPT_Pro_quota_restored_per_user_instruction
+continuation:
+  next_proposed_step: GF-STEP-2B
+  selected_source_count: 4
+  executed_by_this_task: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  current_design_compared_or_repaired: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false

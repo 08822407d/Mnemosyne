@@ -22,6 +22,8 @@ Findings and design proposals become actionable only after maintainer/user valid
   - `steps/GF-STEP-1C/` — bounded research-prompt-index signal mapping and STEP-1 gap analysis. Prompt, Fable chat summary, downloadable Markdown output, integrity metadata, full index coverage, assembly map, completion determination, and proposed minimal original-prompt check are stored. GF-STEP-1 remains incomplete pending the required DR4 prompt check; no substantive acceptance/rejection review has been performed.
   - `steps/GF-STEP-1D/` — bounded DR4 original-prompt inspection and STEP-1 closure reassessment. Prompt, Fable chat summary, downloadable Markdown output, integrity metadata, N20 refinement, preservation/redaction tension map, question delta, and second-tier continuation status are stored. GF-STEP-1 remains incomplete pending the bounded MT/HO/FTDRE prompt check; no substantive acceptance/rejection review has been performed.
   - `steps/GF-STEP-1E/` — bounded MT/HO/FTDRE original-prompt inspection and final STEP-1 closure record. Prompt, Fable chat summary, downloadable Markdown output, integrity metadata, N19/N21 refinements, N12 handoff delta, final need assembly, and explicit-open-question closure are stored. GF-STEP-1 is complete with explicit open questions as a Fable advisory result; substantive maintainer acceptance remains deferred until GPT Pro quota is restored.
+  - `steps/GF-STEP-2A/` — bounded research-evidence catalog and staged original-report reading plan. The revised Fable prompt, chat summary, downloadable source map, integrity metadata, report/domain inventory, date/PDF caveats, and STEP2B batch are stored. GF-STEP-2 remains incomplete; substantive acceptance remains deferred.
+  - `incidents/INC-001-step2a-safety-routing.md` — operational record of the first STEP2A attempt being visibly routed from Fable 5 to Opus 4.8, the non-editable pasted-task UI, preserved partial output, explicit uncertainty about the proprietary trigger, and successful recovery through a revised fresh-conversation Fable run.
 
 ## Follow-up triage records
 
@@ -46,6 +48,7 @@ status_values:
   raw_originals_partially_preserved: available originals and transfer metadata are stored, but some original materials remain unavailable
   charter_canonical_copy_stored: an independent design/review charter has been stored as non-execution-source evidence
   step_output_canonical_copy_stored: a bounded step prompt, response summary, and downloadable output have been stored with integrity and continuation metadata
+  provider_routing_incident_stored: a provider model-routing or safety-routing observation is stored separately from the canonical task result, with trigger uncertainty preserved
   read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
   review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
   transfer_prompt_prepared: a copyable prompt is prepared for later execution in another conversation but does not itself decide or authorize repair
