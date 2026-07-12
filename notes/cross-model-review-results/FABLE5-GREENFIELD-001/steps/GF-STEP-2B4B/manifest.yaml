@@ -1,0 +1,75 @@
+step_id: GF-STEP-2B4B
+track_id: FABLE5-GREENFIELD-001
+record_type: hosted_repository_workflow_full_text_completion
+status: GF_STEP_2B4_complete_full_text_layer_reviewed_S05_disposed
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-112
+research_mode: false
+prior_step: GF-STEP-2B4A
+substantive_review_performed: false
+files:
+  prompt:
+    path: 00-prompt-as-sent.md
+    preservation_status: pending_tool_safe_storage
+  chat_summary:
+    path: 01-fable-chat-summary.md
+    preservation_status: user_pasted_summary_stored
+  downloadable_output:
+    path: 02-hosted-workflow-final-text-evidence.md
+    uploaded_filename: FABLE5-GREENFIELD-001-STEP2B4B-hosted-workflow-final-text-evidence.md
+    size_bytes: 14867
+    sha256: 754d083eab1bcb2d21d49bf806b479ecaa069f348de9de0780b671fb0b5a0b5c
+    git_blob_sha_expected: 14c1cc47f7ff357221f85c314ebf2e1861581a79
+    encoding: utf-8
+    line_endings: lf
+    final_lf_preserved: true
+    normalization: none
+    verbatim_status: byte_faithful_utf8_lf_copy
+source_report:
+  report_id: RPT-2026Q2-0005
+  path: raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf
+  expected_blob_sha: ee4bb0ab829cb59819263858c3c4a3a0178c22da
+  observed_blob_sha: ee4bb0ab829cb59819263858c3c4a3a0178c22da
+  sha_match: true
+  text_layer_status: complete_and_untruncated
+  visual_review_performed: false
+structural_validation:
+  required_sections_expected: 14
+  required_sections_found: 14
+  final_evidence_ids:
+    - F2B4-E01
+    - F2B4-E02
+    - F2B4-E03
+    - F2B4-E04
+    - F2B4-E05
+  provisional_records_superseded:
+    - F2B4A-P01
+    - F2B4A-P02
+    - F2B4A-P03
+  final_S05_disposition: dedicated_report_refines
+  claimed_vs_observed_rows: 3
+  placement_permission_rows: 4
+  artifact_control_or_tool_status_leakage_detected: false
+word_count:
+  fable_reported_approximate: 1838
+  local_whitespace_delimited: 1857
+  local_english_word_pattern: 1654
+  hard_cap: 1850
+  note: local whitespace tokenization counts punctuation-attached and mixed-language items differently; Fable's stated count is within the task cap
+continuation:
+  next_proposed_step: GF-STEP-2B5
+  proposed_report_id: RPT-2026Q2-0006
+  executed_here: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: false
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  auto_merge_authorized: false
+  paused_post_handoff_route_resumed_or_closed: false
