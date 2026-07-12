@@ -1,0 +1,167 @@
+────────────────────────────────────
+10. Limitations and residual dependencies
+────────────────────────────────────
+
+Record at most 4 items covering:
+
+- visual content not reviewed;
+- cycle-level dating and product drift;
+- reliance on cited vendor documentation;
+- opt-in configuration versus default behavior;
+- report scope limited to the named hosted workflow;
+- any aspect of S-05 not resolved by the report;
+- later external refresh needs.
+
+Do not create a broad architecture or risk register.
+
+────────────────────────────────────
+11. Status determination
+────────────────────────────────────
+
+Choose exactly one:
+
+- GF_STEP_2B4_complete_full_text_layer_reviewed_S05_disposed
+- GF_STEP_2B4_incomplete_source_integrity_failure
+- GF_STEP_2B4_incomplete_no_usable_text_layer
+- GF_STEP_2B4_incomplete_specific_text_gap
+- GF_STEP_2B4_incomplete_other_specific_gap
+
+Do not declare GF-STEP-2 complete.
+
+If complete:
+
+- state that B4A provisional records have been superseded;
+- state that no further RPT-2026Q2-0005 text step is required;
+- propose the next bounded report-reading step based on the STEP2A deferred
+  batches;
+- do not execute that next step.
+
+────────────────────────────────────
+12. Hard workload limits
+────────────────────────────────────
+
+- repository paths: exactly 1
+- retrieval/query batteries: maximum 1
+- PDF reports opened: exactly 1
+- evidence records: maximum 5
+- claimed-vs-observed rows: maximum 4
+- placement/permission rows: maximum 4
+- final signal dispositions: exactly S-05
+- STEP-1 linkage entries: maximum 4
+- limitations: maximum 4
+- no OCR
+- no visual inspection
+- no other report, summary, prompt, or index read
+- no web or external research
+- Research mode OFF
+- no automatic continuation
+
+Word-budget policy:
+
+- soft target: 1,100–1,500 words
+- hard cap: 1,850 words
+- the soft target is advisory
+- a complete first draft inside the hard cap is acceptable
+- at most one light compression pass, only if the hard cap is exceeded
+- remove repeated B4A narration before evidence, distinctions, disposition, or
+  limitations
+- perform one approximate word-count check only
+- do not repeat counting or compression
+
+────────────────────────────────────
+13. Required downloadable file
+────────────────────────────────────
+
+Create exactly:
+
+FABLE5-GREENFIELD-001-STEP2B4B-hosted-workflow-final-text-evidence.md
+
+Required sections:
+
+1. Metadata
+2. Scope and hard limits
+3. Allowed-source and anti-contamination policy
+4. Source integrity and text-access result
+5. B4A linkage and supersession rule
+6. Completed text-layer coverage record
+7. Final evidence register
+8. Claimed-versus-observed evidence check
+9. Repository-placement and permission map
+10. Final S-05 disposition
+11. Minimal STEP-1 linkage delta
+12. Visual, date, scope, and evidence limitations
+13. Status determination and bounded continuation
+14. Boundary statement
+
+Metadata:
+
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-2B4B
+record_type: hosted_repository_workflow_full_text_completion
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_step: GF-STEP-2B4A
+research_mode: false
+source_file:
+  path: raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf
+  expected_blob_sha: ee4bb0ab829cb59819263858c3c4a3a0178c22da
+
+The coverage section must state:
+
+- expected and observed SHA;
+- text-layer usability;
+- page and extracted-text size;
+- previously inspected portions;
+- newly inspected portions;
+- whether complete substantive text coverage was achieved;
+- retrieval batteries used;
+- final evidence-record count;
+- whether P01–P03 were superseded;
+- final S-05 disposition;
+- visual inspection not performed;
+- completion status.
+
+────────────────────────────────────
+14. Chat response
+────────────────────────────────────
+
+After presenting the file, state briefly:
+
+- completion within limits;
+- SHA result;
+- text-layer usability;
+- newly inspected portions;
+- complete text-layer coverage result;
+- final evidence-record count;
+- whether P01–P03 were superseded;
+- S-05 disposition;
+- claimed-versus-observed row count;
+- placement/permission row count;
+- retrieval batteries used;
+- visual inspection performed: no;
+- approximate word count;
+- status determination;
+- downloadable file result.
+
+Do not repeat the file body.
+
+────────────────────────────────────
+15. Boundary
+────────────────────────────────────
+
+Do not:
+
+- write repository files;
+- generate execution tasks;
+- update execution source;
+- inspect another report, summary, prompt, index, or PDF;
+- use OCR or visual interpretation;
+- perform external research or security testing;
+- evaluate or rank models or vendors;
+- compare or modify the existing design;
+- begin architecture work;
+- create target-project artifacts;
+- resume or close the paused route.
+
+This output is non-execution-source advisory evidence only.
+Stop after the downloadable file and brief summary.
