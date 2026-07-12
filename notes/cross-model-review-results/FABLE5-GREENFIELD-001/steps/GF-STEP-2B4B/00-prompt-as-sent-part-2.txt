@@ -1,0 +1,175 @@
+────────────────────────────────────
+5. Final evidence register
+────────────────────────────────────
+
+Create at most 5 final evidence records.
+
+Use IDs:
+
+F2B4-E01 through F2B4-E05
+
+These final records supersede:
+
+- F2B4A-P01
+- F2B4A-P02
+- F2B4A-P03
+
+Do not retain both provisional and final records as parallel evidence.
+
+For every final record include:
+
+- evidence_id
+- supersedes_provisional_ids
+- source_anchor
+- concise_statement
+- evidence_category
+- named_workflow_scope
+- source_evidence_date_or_period
+- text_only: true
+- visual_review_status: not_performed
+- confidence_as_report_evidence:
+    high |
+    medium |
+    low
+- date_sensitivity:
+    high |
+    medium |
+    low
+- write_permission_audit_review_correctness_distinction
+- related_research_domain_ids
+- related_STEP1_need_ids
+- supports_or_challenges_S05
+- prohibited_overclaim
+- notes
+
+The register should address, when supported:
+
+- agent-created branch/commit/PR evidence;
+- mandatory versus optional human review;
+- logs, checks, and artifacts;
+- same-repository versus separate-repository placement;
+- sensitive-file and permission-scope constraints;
+- whether ignored or excluded paths remain agent-accessible;
+- claimed completion versus observable repository evidence;
+- the boundary between auditability and correctness.
+
+Do not fill all five slots unless justified.
+
+────────────────────────────────────
+6. Claimed-versus-observed evidence check
+────────────────────────────────────
+
+Create a compact table of at most 4 rows.
+
+For each row include:
+
+- check_id
+- claimed_or_requested_event
+- observable_repository_evidence
+- what_the_evidence_can_establish
+- what_it_cannot_establish
+- human_or_platform_gate
+- related_F2B4_evidence_ids
+
+Possible evidence types include:
+
+- branch existence;
+- commit SHA;
+- diff;
+- PR;
+- review decision;
+- status check;
+- Actions log;
+- uploaded artifact;
+- merge event.
+
+Do not invent an evidence type absent from the report.
+
+If the report does not explicitly discuss model-claimed completion divergence,
+state that limitation rather than forcing a conclusion.
+
+────────────────────────────────────
+7. Repository-placement and permission map
+────────────────────────────────────
+
+Create at most 4 rows covering only distinctions supported by the report.
+
+For each row:
+
+- option_or_boundary
+- report_supported_advantage
+- report_supported_risk
+- permission_or_token_scope
+- audit_implication
+- sensitive_information_implication
+- status:
+    report_finding |
+    report_recommendation |
+    unresolved_tradeoff
+
+Include the same-repository versus separate-memory-repository distinction only
+to the extent the report supports it.
+
+Do not select an architecture option for Mnemosyne.
+
+────────────────────────────────────
+8. Final S-05 disposition
+────────────────────────────────────
+
+S-05 prior theme:
+
+Hosted-repository write-back claims may differ from observable repository
+changes; reliable audit requires repository evidence, configured review gates,
+and a distinction between change traceability and semantic correctness.
+
+Choose exactly one:
+
+- dedicated_report_confirms
+- dedicated_report_refines
+- dedicated_report_partially_supports
+- dedicated_report_challenges
+- dedicated_report_does_not_resolve
+
+Record:
+
+- signal_id: S-05
+- previous_or_provisional_wording
+- disposition
+- replacement_wording_if_refined
+- supporting_F2B4_evidence_ids
+- named_surface_scope
+- write_vs_observed_change_distinction
+- audit_vs_correctness_distinction
+- configuration_and_permission_caveat
+- report_date_caveat
+- remaining_visual_dependency
+- remaining_current_fact_refresh_dependency
+- remaining_original_report_dependency
+- prohibited_overclaim
+
+Do not reassess S-01 through S-04.
+
+────────────────────────────────────
+9. Minimal STEP-1 linkage delta
+────────────────────────────────────
+
+Record evidence-coverage changes for at most 4 of:
+
+- GF1A-N02
+- GF1A-N07
+- GF1A-N11
+- GF1B-N13
+- GF1B-N15
+- GF1C-N20
+
+Select only materially affected items.
+
+For each selected item:
+
+- need_id
+- coverage_change
+- supporting_evidence_ids
+- remaining_report_dependency
+- user_decision_not_resolved
+
+Keep entries concise.

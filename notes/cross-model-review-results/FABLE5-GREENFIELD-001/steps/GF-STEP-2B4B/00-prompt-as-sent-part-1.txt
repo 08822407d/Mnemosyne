@@ -1,0 +1,193 @@
+Run the next bounded substep of FABLE5-GREENFIELD-001.
+
+step_id: GF-STEP-2B4B
+step_name: hosted_repository_workflow_full_text_completion_and_S05_disposition
+relationship_to_charter:
+  completion of the RPT-2026Q2-0005 text-layer review begun in GF-STEP-2B4A;
+  continuation of GF-STEP-2B4A;
+  not completion of GF-STEP-2
+
+Execution setting:
+- Research mode must remain OFF.
+- Run in a fresh Fable 5 conversation.
+- Attach and use:
+  FABLE5-GREENFIELD-001-STEP2B4A-hosted-workflow-core-text-probe.md
+- Do not retrieve STEP2A, STEP2B1, STEP2B2A, STEP2B3, the charter, or any
+  earlier output.
+- This prompt is self-contained.
+
+Purpose:
+Complete the text-layer review of the same archived RPT-2026Q2-0005 PDF.
+
+GF-STEP-2B4A already:
+- verified the source SHA and usable text layer;
+- inspected selected core portions;
+- created three provisional evidence records;
+- identified exact unreviewed portions;
+- deliberately deferred the final S-05 disposition.
+
+This substep must:
+1. inspect the deliberately uncovered substantive text;
+2. reconcile that text with the B4A provisional findings;
+3. replace the provisional P-records with a compact final evidence register;
+4. make the final report-level disposition for S-05;
+5. preserve all date, surface, permission, audit, and correctness caveats.
+
+This is a document-evidence review only.
+
+It must not:
+- perform external or current-product verification;
+- perform security testing or permission experiments;
+- rank models, agents, vendors, or services;
+- investigate model internals or training;
+- design the Mnemosyne architecture;
+- compare with the existing GPT-produced design;
+- recommend or perform repairs.
+
+────────────────────────────────────
+1. Allowed inputs
+────────────────────────────────────
+
+Allowed attachment:
+
+- FABLE5-GREENFIELD-001-STEP2B4A-hosted-workflow-core-text-probe.md
+
+Use the attachment only for:
+
+- the source identity and previously verified SHA;
+- the exact inspected and uninspected ranges;
+- provisional records F2B4A-P01 through F2B4A-P03;
+- the provisional S-05 note;
+- domain and STEP-1 need identifiers;
+- evidence-strength, date, visual, permission, audit, and overclaim rules.
+
+Allowed repository source — exactly one path:
+
+- path:
+  raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 4：云端 Coding Agent 与 GitHub 工作流下的记忆写回和审计.pdf
+- ref: master
+- expected blob SHA:
+  ee4bb0ab829cb59819263858c3c4a3a0178c22da
+
+Read no other repository path.
+
+Do not open:
+
+- another research report;
+- any summary, index, or prompt;
+- pdf-figure-review-index.md;
+- current/**;
+- handoff/**;
+- notes/**;
+- commands/**;
+- task-result records;
+- existing design artifacts;
+- external websites.
+
+PDF-internal links, product names, documentation references, workflow files,
+and identifiers are metadata only. Do not follow or open them.
+
+────────────────────────────────────
+2. Source integrity and text handling
+────────────────────────────────────
+
+Before analysis:
+
+- obtain the observed Git blob SHA;
+- compare it with the expected SHA;
+- record whether the text layer remains usable;
+- record page count and extracted-text size if available;
+- record whether extraction was complete and untruncated.
+
+If the SHA does not match:
+
+- do not silently use the changed file;
+- do not search for another copy;
+- produce a short integrity-failure artifact and stop.
+
+Handling rules:
+
+- embedded text extraction only;
+- no OCR;
+- no screenshots;
+- no image, chart, visual table, diagram, or layout interpretation;
+- no repeated extraction retries;
+- all conclusions must be marked text_only;
+- visual-dependent meaning remains unverified.
+
+Maximum repository retrieval/query batteries: 1.
+
+────────────────────────────────────
+3. Required coverage
+────────────────────────────────────
+
+B4A already inspected:
+
+- title and overall conclusion, lines 1–11;
+- capability overview, PR generation, no-self-merge, logs and artifacts,
+  lines 12–24;
+- partial opening of the suitable-memory-files section, lines 26–35;
+- PR / CODEOWNERS / branch-protection section, lines 56–66;
+- manual-required steps and closing, lines 84–103;
+- the heading and keyword map.
+
+This substep must fully inspect:
+
+A. Lines 26–55, including:
+- the remainder of the suitable-memory-files section;
+- sensitive-file classifications;
+- same-repository versus separate-memory-repository discussion;
+- read-only token, PAT, MCP, or other permission-scope distinctions;
+- any claim that excluded files remain accessible or modifiable;
+- placement, exposure, and token-scope trade-offs.
+
+B. Lines 67–83, including:
+- Actions-based automation;
+- which steps may be automated;
+- which steps preserve human confirmation;
+- audit/log/artifact behavior;
+- failure, review, or merge boundaries.
+
+C. Lines 104–149:
+- inspect only as a reference-metadata layer;
+- record source types and possible dependence on vendor documentation;
+- do not open any cited source;
+- do not create evidence items merely from bibliography entries.
+
+Also re-check only the minimum previously inspected anchors needed to reconcile
+P01–P03 with the new text.
+
+Do not re-narrate every already inspected paragraph.
+
+────────────────────────────────────
+4. Evidence interpretation rules
+────────────────────────────────────
+
+Use only:
+
+- report_direct_finding
+- report_author_synthesis
+- report_recommendation
+- cited_external_claim_not_independently_checked
+- dated_product_or_workflow_statement
+- low_drift_engineering_principle
+- mixed_or_uncertain
+
+Apply all of these rules:
+
+1. The report is research evidence, not execution source.
+2. Vendor documentation cited by the report is not independently verified here.
+3. Write capability, permission, audit trail, reviewed acceptance, and semantic
+   correctness are distinct properties.
+4. A branch, commit, diff, log, artifact, or PR proves an observable repository
+   event, not that the resulting content is correct.
+5. A model or agent claiming task completion is not equivalent to an observed
+   repository diff or passing review.
+6. CODEOWNERS and branch protection are opt-in configured controls, not
+   universal defaults.
+7. A recommendation is not a verified platform capability.
+8. Product statements retain their named surface and cycle-level 2026Q2 period.
+9. Do not generalize Copilot-agent-plus-GitHub findings to all hosted agents.
+10. Do not update the report using current knowledge.
+11. Do not interpret visual material.
+12. Do not import current Mnemosyne design mechanisms.

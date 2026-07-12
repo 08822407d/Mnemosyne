@@ -2,9 +2,9 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-111
+last_storage_task: MNEMOSYNE-112
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -83,6 +83,12 @@ step_records:
     stored_by_task: MNEMOSYNE-111
     substantive_review_performed: false
     next_proposed_step: GF-STEP-2B4B
+  - step_id: GF-STEP-2B4B
+    path: steps/GF-STEP-2B4B/
+    status: GF_STEP_2B4_complete_full_text_layer_reviewed_S05_disposed
+    stored_by_task: MNEMOSYNE-112
+    substantive_review_performed: false
+    next_proposed_step: GF-STEP-2B5
 track_progress:
   GF_STEP_1:
     status: complete_with_explicit_open_questions
@@ -96,8 +102,9 @@ track_progress:
       - GF-STEP-2B2A
       - GF-STEP-2B3
       - GF-STEP-2B4A
-    current_record: steps/GF-STEP-2B4A/02-hosted-workflow-core-text-probe.md
-    next_planned_substep: GF-STEP-2B4B
+      - GF-STEP-2B4B
+    current_record: steps/GF-STEP-2B4B/02-hosted-workflow-final-text-evidence.md
+    next_planned_substep: GF-STEP-2B5
     substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
 provider_incidents:
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
