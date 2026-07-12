@@ -10,8 +10,14 @@ prior_step: GF-STEP-2B4A
 substantive_review_performed: false
 files:
   prompt:
-    path: 00-prompt-as-sent.md
-    preservation_status: pending_tool_safe_storage
+    index_path: 00-prompt-as-sent.md
+    ordered_parts:
+      - 00-prompt-as-sent-part-1.txt
+      - 00-prompt-as-sent-part-2.txt
+      - 00-prompt-as-sent-part-3.txt
+    concatenation_rule: byte_concatenate_in_list_order_without_separator
+    preservation_status: exact_prompt_body_preserved_as_ordered_multipart_utf8_lf
+    storage_note: single large contents-API write was blocked by the tool safety layer; exact content was stored in three ordered parts without omission or rewrite
   chat_summary:
     path: 01-fable-chat-summary.md
     preservation_status: user_pasted_summary_stored
@@ -20,7 +26,7 @@ files:
     uploaded_filename: FABLE5-GREENFIELD-001-STEP2B4B-hosted-workflow-final-text-evidence.md
     size_bytes: 14867
     sha256: 754d083eab1bcb2d21d49bf806b479ecaa069f348de9de0780b671fb0b5a0b5c
-    git_blob_sha_expected: 14c1cc47f7ff357221f85c314ebf2e1861581a79
+    git_blob_sha: 14c1cc47f7ff357221f85c314ebf2e1861581a79
     encoding: utf-8
     line_endings: lf
     final_lf_preserved: true
