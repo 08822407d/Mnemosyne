@@ -60,3 +60,25 @@ Repository-local sources:
 - Exact ChatGPT app write capabilities remain time-sensitive and may vary by account, model surface, workspace, plan, region, GitHub app installation, action controls, and app permission settings.
 - Current OpenAI documentation says apps are available with all models except Pro models; therefore future prompts must verify current model/app compatibility instead of assuming availability.
 - This task does not resume or close the paused post-handoff route recorded by MNEMOSYNE-085.
+
+## Post-hoc user-approval confirmation — MNEMOSYNE-113
+
+```yaml
+user_decision_recorded: true
+confirmation_source: later_user_answer_in_FABLE5_human_triage
+confirmed_scope:
+  - MNEMOSYNE_089_execution_source_update_was_user_approved
+  - record_that_official_ordinary_ChatGPT_may_submit_PRs_to_a_connected_selected_GitHub_repository_when_platform_configuration_supports_it
+  - keep_platform_permission_separate_from_Mnemosyne_task_authority
+not_approved_by_that_decision:
+  - automatic_writeback
+  - auto_merge
+  - target_workspace_creation
+  - target_material_ingestion
+  - target_repository_write
+  - operational_build
+  - regression_formalization
+annotation_effect: closes_FABLE5_REVIEW_003_R3_F_002_without_expanding_original_scope
+```
+
+This post-hoc annotation records the later explicit user confirmation. It does not retroactively expand MNEMOSYNE-089's task scope or authorize any new repository action.
