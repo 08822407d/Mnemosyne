@@ -3,7 +3,7 @@ source_model: Fable 5
 record_type: follow_up_triage_response_after_human_answers
 source_response: user_supplied_fable5_reply_in_maintenance_conversation
 authority_level: non_execution_source_advisory_evidence
-status: canonical_summary_stored
+status: canonical_summary_and_pro_adjudication_stored
 verbatim_status: summarized_not_verbatim_with_raw_complement
 created_by_task: MNEMOSYNE-095
 raw_preservation:
@@ -26,7 +26,7 @@ summary:
     - F-004_maintainer_review_provenance
     - F-005_equivalent_no_write_evidence_scoping
     - paused_post_handoff_route_for_review_series
-  still_open_items:
+  original_open_items:
     - Q2-2_canonical_warning_layer
     - R3_hygiene_bundle_pending_reverification_or_user_decision
   severity_or_priority_changes:
@@ -34,9 +34,32 @@ summary:
     - R2-F-001_repair_direction_reversed_to_W4_open_uncertain_not_partially_superseded
     - F-002_observation_scope_confirmed_same_family_through_acceptance_gate
     - R-004_non_precedent_note_approved_in_principle_with_settled_wording
+pro_adjudication:
+  task_id: MNEMOSYNE-113
+  status: completed
+  record: notes/cross-model-review-results/FABLE5-TRIAGE-001/02-gpt-pro-substantive-adjudication-and-repair-decisions.md
+  decisions:
+    Q2_2:
+      status: resolved
+      decision: layered_canonicalization
+      frozen_082_083_artifacts_modified: false
+      live_interpretation: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-live-interpretation.md
+    R3_F_001:
+      status: closed_no_current_repair
+    R3_F_002:
+      status: resolved_user_approval_annotated
+    R3_F_003:
+      status: resolved_processed_retained_markers_documented
+    R3_F_004:
+      status: resolved_live_pointer_added
+  first_wave_open_findings_after_adjudication: []
+  remaining_future_decisions_not_closed_by_this_record:
+    - regression_candidate_formalization_when_paused_route_is_resumed
+    - optional_execution_source_consolidation_of_no_write_proof_rule
+    - substantive_review_of_incomplete_FABLE5_GREENFIELD_001_outputs
 boundaries:
   execution_source_modified: false
-  current_state_files_modified: false
+  current_state_files_modified: true
   handoff_files_modified: false
   target_workspace_created: false
   target_materials_ingested: false
