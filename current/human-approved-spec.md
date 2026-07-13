@@ -264,3 +264,12 @@
 - 当任务修改执行源时，result record 必须显式记录 `user_decision_recorded: true | false`、用户决定的 evidence path / conversation provenance、获批修改范围和仍未获批的相邻动作；不得用平台 permission、历史授权或推测替代当前用户决定。
 - 同一模型家族完成执行与复核不会自动使结果无效，但必须标注 evidence class / independence limitation；高风险结论应优先补充异构复核、机械 diff、可复现测试或人类抽样验证。
 - 本原则不自动批准任何 validation、dry-run、target workspace、material ingestion、target write、regression formalization、operational build、execution-source update、自动写回或自动合并。
+
+## 20. 交接接收端约束加载原则
+
+- 对 Mnemosyne 自身维护、复核、验证、replay、设计工厂工作或其他由 Mnemosyne 规则直接治理的跨会话交接，handoff package 与配套 startup prompt 必须显式要求接收新对话在继续实质任务前执行 `Load Mnemosyne guidance` / `加载 Mnemosyne 指导约束`。
+- 该命令只刷新当前已批准的行为约束；它不替代显式 handoff receive，不把 handoff package 变成执行源，也不得把与接收任务无关的 Mnemosyne maintenance live route 自动导入局部任务。
+- 对具体目标项目业务对话的交接，接收方必须加载该项目已确认的 constraint guidance、execution source、owner rule 或等价项目本地权威来源。
+- “具体目标项目业务对话是否还应同时加载 Mnemosyne 指导”当前是未决定问题。交接包必须记录明确的 task-local choice：`yes`、`no` 或 `unknown_requires_user_decision`；在后续用户批准的仔细评估完成前，不得默认将 Mnemosyne 指导强制应用于所有项目业务对话，也不得把一次 task-local choice 当作全局先例。
+- 该 open question 的非执行源记录为 `notes/handoff-guidance-scope-open-question.md`；若该记录与本执行源冲突，以本执行源为准。
+- 本原则不授权 target workspace、material ingestion、target write、operational build、execution-source update、自动写回、自动交接或任何未由当前任务明确批准的动作。
