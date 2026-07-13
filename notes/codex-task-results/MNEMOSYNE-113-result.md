@@ -141,7 +141,7 @@ The official OpenAI Apps documentation was refreshed for this task. It currently
 - Pre-result compare against master reported the branch ahead with no behind commits and only the intended review/current/spec/index files changed.
 - `current/human-approved-spec.md` changed by an additive §19 only; the compare reports no deletions in that file.
 - Frozen MNEMOSYNE-082/083 files, handoff files, target paths, regression-test paths, and build paths are absent from the changed-file list.
-- A final compare is required after this result record is added and before the PR is opened.
+- Final compare after adding this result record reported `ahead_by: 26`, `behind_by: 0`, and 21 changed files, all within the intended adjudication/repair scope.
 
 ## Known limits
 
