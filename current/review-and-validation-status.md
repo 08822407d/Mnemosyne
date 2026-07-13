@@ -24,6 +24,19 @@ greenfield_track:
   provider_status: paused_user_reported_Fable_weekly_quota_exhausted
   incident_record: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-002-weekly-quota-exhaustion.md
   note: quota exhaustion is an operational pause, not a task failure or substantive review result
+
+conversation_routing_after_MNEMOSYNE_114:
+  current_long_conversation:
+    role: FABLE5_GREENFIELD_result_receiver_and_storage_finisher
+    reason: preserve task-local Fable context while avoiding further browser-performance degradation from unrelated maintenance work
+  new_maintenance_conversation:
+    role: post_MNEMOSYNE_113_route_selection_and_execution
+    handoff_package: handoff/mnemosyne-post-113-maintenance-options-handoff-package.md
+    startup_prompt: handoff/mnemosyne-post-113-maintenance-next-conversation-startup-prompt.md
+  chatgpt_work_assessment:
+    path: notes/chatgpt-work-mode-assessment-2026-07.md
+    status: candidate_guidance_not_execution_source
+    immediate_recommendation: ordinary_Chat_for_handoff_receive_and_route_selection
 ```
 
 ## Pro adjudication outcomes
@@ -39,6 +52,13 @@ greenfield_track:
 - R3-F-003 is resolved by explicit processed/retained transfer-artifact status in `manual-import-inbox/README.md`.
 - R3-F-004 is resolved by this live file and the root README pointer.
 
+## Conversation handoff boundary
+
+- The current long conversation remains available only for continuing and storing `FABLE5-GREENFIELD-001` outputs when Fable access returns.
+- New general Mnemosyne maintenance should use the post-113 handoff package in a fresh ordinary Chat conversation.
+- Receiving the package does not automatically resume the paused post-handoff Meta-Agent route.
+- ChatGPT Work is not the default for handoff receive; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
+
 ## Still not authorized or completed
 
 - No regression candidate has been formalized.
@@ -48,3 +68,4 @@ greenfield_track:
 - No operational build has started.
 - The paused post-handoff route remains paused and is not closed.
 - FABLE5-GREENFIELD-001 outputs have not received a separate completed substantive maintainer acceptance review; the track is also incomplete.
+- ChatGPT Work surface-selection guidance has not been promoted into the execution source.
