@@ -1,19 +1,20 @@
 review_id: FABLE5-REVIEW-003
 source_status: canonical_copy_stored
+latest_adjudication_task: MNEMOSYNE-113
 findings:
   - id: R3-F-001
     severity: NON_BLOCKING
     topic: manifests retain stale pre-091 ingestion-needed line while status is canonical_copy_stored
-    triage: accepted_hygiene_candidate_defer_until_pro_or_human_triage
+    triage: closed_no_current_manifest_residue_historical_result_evidence_preserved
   - id: R3-F-002
     severity: QUESTION
     topic: MNEMOSYNE-089 execution-source update lacks explicit user-approval line in result record
-    triage: deferred_user_confirmation_needed
+    triage: resolved_user_approval_confirmed_and_annotated_by_MNEMOSYNE_113
   - id: R3-F-003
     severity: NON_BLOCKING
     topic: manual-import-inbox FABLE5 transfer copies persist without superseded-by-canonical label
-    triage: accepted_hygiene_candidate_defer_until_pro_or_human_triage
+    triage: resolved_processed_retained_and_superseded_status_documented_in_inbox_README
   - id: R3-F-004
     severity: NON_BLOCKING
     topic: no retrieved live-file section points to cross-model review tree
-    triage: accepted_hygiene_candidate_defer_until_pro_or_human_triage
+    triage: resolved_live_pointer_added_by_MNEMOSYNE_113
