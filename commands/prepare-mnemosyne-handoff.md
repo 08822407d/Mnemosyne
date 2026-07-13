@@ -44,7 +44,20 @@ A package should include:
 - evidence paths;
 - freshness or scope limits;
 - missing or unknown information;
-- instruction for the user to provide the package or authorized package path in the new conversation.
+- instruction for the user to provide the package or authorized package path in the new conversation;
+- an explicit `receiver_guidance_load` instruction.
+
+For a Mnemosyne-governed handoff, `receiver_guidance_load` must require the receiving conversation to execute `Load Mnemosyne guidance` / `加载 Mnemosyne 指导约束` before substantive continuation.
+
+For a specific target-project business-conversation handoff:
+
+```yaml
+receiver_guidance_load:
+  project_guidance: required
+  mnemosyne_guidance: yes | no | unknown_requires_user_decision
+```
+
+The project-local guidance requirement is mandatory. Whether Mnemosyne guidance should also be loaded is the unresolved scope question recorded in `notes/handoff-guidance-scope-open-question.md`; do not silently convert one task-local choice into a global rule.
 
 ## Required behavior
 
@@ -52,11 +65,14 @@ A package should include:
 2. Support critical claims with authorized files or mark them as unknown, unsupported, or stale.
 3. Keep the package minimally sufficient and high-signal.
 4. Use long-transfer file/chunking guidance when the package is long.
-5. Do not modify repository files unless the user separately authorizes repository writes.
+5. Make the receiving guidance-load instruction visible in both the package and any paired startup prompt.
+6. Keep behavior-guidance refresh separate from explicit handoff receive; neither command replaces the other.
+7. Do not modify repository files unless the user separately authorizes repository writes.
 
 ## Boundaries
 
 - This command is not an execution source.
 - This command does not modify `current/human-approved-spec.md`.
 - This command does not approve new design content.
+- This command does not decide the open target-project business-conversation Mnemosyne-guidance scope.
 - This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, automation, MCP, RAG, or auto-writeback.
