@@ -118,9 +118,11 @@ This avoids rewriting frozen MNEMOSYNE-082/083 artifacts and avoids a broad lega
 - A new branch was created from `master` before the first write.
 - Every repository write explicitly targeted `mnemosyne-115-meta-agent-test-regressions`.
 - Pre-result compare reported `ahead_by: 12`, `behind_by: 0`, with 11 changed files limited to the intended current-status, intake-index, route-decision, and regression-specification scope.
+- Post-result-record compare reported `ahead_by: 13`, `behind_by: 0`, with 12 changed files; the added file was this intended result record.
+- A separate comparison confirmed that `master` remained identical to the pinned starting commit `6d6d525a688a62d73665ff2062ac03292af53833` during the branch-only work.
 - `current/human-approved-spec.md` is absent from the changed-file set.
 - Official MNEMOSYNE-082/083 artifacts, target workspace paths, target-material paths, target repositories, build paths, and FABLE5-GREENFIELD files are absent from the changed-file set.
-- A final compare is required after adding this result record and before opening the PR.
+- This verification annotation changes only this result record; the PR publishing step performs one final compare and records the final branch count in the PR body.
 
 ## Known limitations
 
