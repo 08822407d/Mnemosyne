@@ -12,7 +12,7 @@
 
 ## Current records
 
-- `meta-agent/`: Meta-Agent selected for draft manifest preparation only; no workspace created, no target materials ingested, no target repository written.
+- `meta-agent/`: Meta-Agent was selected as a real/semi-real Mnemosyne test target. No workspace has been created, no target materials have been ingested, no target repository has been written, and no operational Meta-Agent build is authorized.
 
 ## Meta-Agent alignment guard and current revised draft
 
@@ -50,7 +50,6 @@ Meta-Agent final manifest candidate is approved for controlled no-target-write d
 
 Meta-Agent actual controlled dry-run execution is approved for a separate high-reasoning ChatGPT conversation only; Codex Cloud execution is not approved. No target workspace/material/target-write is authorized.
 
-
 ## MNEMOSYNE-079 Meta-Agent controlled dry-run result ingestion
 
 - `meta-agent/controlled-dry-run-results/README.md`
@@ -80,3 +79,12 @@ MNEMOSYNE-082 closes the current Meta-Agent controlled dry-run evidence phase fo
 - `../../handoff/meta-agent-next-conversation-startup-prompt.md`: official next-conversation startup prompt created by MNEMOSYNE-083.
 
 These artifacts supersede local/sandbox handoff drafts. They do not approve target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
+
+## MNEMOSYNE-115 post-handoff test-route resumption
+
+- `meta-agent/meta-agent-post-handoff-test-route-resumption-and-next-step-decision.md` records the current user's decision to resume the route under the verified test-only interpretation.
+- `meta-agent/controlled-dry-run-results/formal-regression-records/` stores the first formalized regression batch: `REG-META-DRYRUN-001`, `002`, `004`, `005`, and `007`.
+- The five definitions passed a current-repository definition-level static replay. This is not an independent fresh-session behavioral replay.
+- `REG-META-DRYRUN-003` remains conditional on a future explicitly approved material phase; `006` remains deferred until more real target feedback exists.
+
+MNEMOSYNE-115 does not continue Meta-Agent product requirements, create a target workspace, ingest materials, write a target repository, start an operational build, modify the execution source, or promote target-specific tests into global rules.
