@@ -38,7 +38,7 @@ conversation_routing_after_MNEMOSYNE_114:
     status: candidate_guidance_not_execution_source
     immediate_recommendation: ordinary_Chat_for_handoff_receive_and_route_selection
 
-meta_agent_test_route_after_MNEMOSYNE_115:
+meta_agent_test_route_after_MNEMOSYNE_115_116:
   live_route_status: current/meta-agent-test-route-status.md
   user_memory_verification: confirmed_by_repository_evidence
   original_role_of_Meta_Agent: real_or_semi_real_target_for_Mnemosyne_capability_testing
@@ -49,19 +49,36 @@ meta_agent_test_route_after_MNEMOSYNE_115:
     score: 89/100
     critical_blockers: []
   prior_pause: suspended_by_user_inserted_long_work
-  current_user_decision: resume_test_only_route_and_advance_to_next_step
-  selected_next_path: formalize_and_definition_validate_first_regression_batch
-  route_decision_record: notes/first-target-project-intake-records/meta-agent/meta-agent-post-handoff-test-route-resumption-and-next-step-decision.md
-  formal_regression_index: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md
-  formalized_ids:
-    - REG-META-DRYRUN-001
-    - REG-META-DRYRUN-002
-    - REG-META-DRYRUN-004
-    - REG-META-DRYRUN-005
-    - REG-META-DRYRUN-007
-  definition_level_static_replay: PASS_all_five
-  independent_fresh_session_behavioral_replay: not_yet_performed
-  repository_persistence: pending_MNEMOSYNE_115_PR_merge
+  current_user_decision: resume_test_only_route_and_continue_testing
+  MNEMOSYNE_115:
+    merge_status: merged_by_PR_162
+    merge_commit: bc4b4f098a0bcdd77cae731d59c51c79e5e8333f
+    selected_path: formalize_and_definition_validate_first_regression_batch
+    route_decision_record: notes/first-target-project-intake-records/meta-agent/meta-agent-post-handoff-test-route-resumption-and-next-step-decision.md
+    formal_regression_index: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md
+    formalized_ids:
+      - REG-META-DRYRUN-001
+      - REG-META-DRYRUN-002
+      - REG-META-DRYRUN-004
+      - REG-META-DRYRUN-005
+      - REG-META-DRYRUN-007
+    definition_level_static_replay: PASS_all_five
+  MNEMOSYNE_116:
+    current_step: prepare_independent_fresh_session_behavioral_replay
+    replay_package: handoff/meta-agent-five-regression-fresh-replay-package.md
+    startup_prompt: handoff/meta-agent-five-regression-fresh-replay-startup-prompt.md
+    package_status: prepared_requires_new_isolated_conversation
+    independent_fresh_session_behavioral_replay: not_yet_performed
+
+handoff_guidance_after_MNEMOSYNE_116:
+  execution_source_rule: current/human-approved-spec.md#20-交接接收端约束加载原则
+  prepare_command: commands/prepare-mnemosyne-handoff.md
+  receive_command: commands/receive-mnemosyne-handoff.md
+  Mnemosyne_handoff_receiver_guidance_load: required
+  required_command: Load_Mnemosyne_guidance_or_加载_Mnemosyne_指导约束
+  target_project_business_handoff_project_guidance: required
+  target_project_business_handoff_Mnemosyne_guidance: open_requires_task_local_yes_no_or_unknown
+  open_question_record: notes/handoff-guidance-scope-open-question.md
 ```
 
 ## Pro adjudication outcomes
@@ -81,9 +98,11 @@ meta_agent_test_route_after_MNEMOSYNE_115:
 
 - The current long conversation remains available only for continuing and storing `FABLE5-GREENFIELD-001` outputs when Fable access returns.
 - New general Mnemosyne maintenance uses the post-113 handoff package in this fresh ordinary Chat conversation.
-- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the current user later explicitly selected Route C and authorized the test-only next step recorded by MNEMOSYNE-115.
+- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the user later explicitly selected Route C and authorized the test-only continuation recorded by MNEMOSYNE-115 and MNEMOSYNE-116.
 - `current/meta-agent-test-route-status.md` is the newest live wayfinding for this resumed route. Its route-status statement supersedes the older MNEMOSYNE-085 interruption wording in large legacy current/handoff views, without changing their historical content.
-- The resumed route is regression hardening for Mnemosyne. It is not Meta-Agent product construction.
+- The resumed route is regression testing and replay hardening for Mnemosyne. It is not Meta-Agent product construction.
+- Mnemosyne-governed handoff packages and startup prompts must now explicitly require the receiving conversation to execute the Mnemosyne guidance-refresh command before substantive continuation.
+- The separate project-business handoff question remains open: project-local constraints are required, while simultaneous Mnemosyne guidance loading must be recorded as a task-local `yes`, `no`, or `unknown_requires_user_decision` until a later decision.
 - ChatGPT Work is not the default for this route; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
 
 ## Current boundaries and incomplete work
@@ -91,7 +110,9 @@ meta_agent_test_route_after_MNEMOSYNE_115:
 - Five target-specific regression specifications are formalized by MNEMOSYNE-115; none is promoted into the execution source or an automatic global rule.
 - `REG-META-DRYRUN-003` remains conditional on a later explicitly approved material phase.
 - `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
-- No independent fresh-session behavioral replay of the five formal specifications has yet been performed.
+- The fresh-session behavioral replay package and startup prompt are prepared by MNEMOSYNE-116.
+- No independent fresh-session behavioral replay executor output has yet been produced or maintainer-reviewed.
+- The current maintenance conversation cannot count as the required fresh session.
 - No target workspace has been created.
 - No target material has been ingested.
 - No target repository has been written.
