@@ -38,11 +38,19 @@ Do not require these files as local action-plan sources merely for guidance refr
 
 When the user explicitly asks the current / old conversation to prepare a handoff package, use `commands/prepare-mnemosyne-handoff.md`.
 
-A handoff package is a transfer artifact, not an execution source. It should identify the execution source, non-execution-source boundaries, current task or phase, completed and unresolved work, forbidden actions, evidence paths, freshness limits, and one safe next action for a receiving conversation.
+A handoff package is a transfer artifact, not an execution source. It should identify the execution source, non-execution-source boundaries, current task or phase, completed and unresolved work, forbidden actions, evidence paths, freshness limits, one safe next action, and an explicit `receiver_guidance_load` block.
 
 A Mnemosyne-owned handoff package must explicitly tell the new conversation to perform three separate operations in order: receive the package, execute `Load Mnemosyne guidance` / `加载 Mnemosyne 指导约束`, and then continue the received task. Do not assume that merely listing `current/human-approved-spec.md` makes the explicit guidance-refresh instruction unnecessary.
 
-A target-project business-conversation handoff must explicitly tell the receiver to load the target project's own confirmed constraints or owner rule when one exists. Whether it should also load Mnemosyne guidance remains an open question; use `current/handoff-guidance-open-question.md` and do not present either answer as settled.
+A target-project business-conversation handoff must tell the receiver to load the target project's confirmed constraints or owner rule and record:
+
+```yaml
+receiver_guidance_load:
+  project_guidance: required
+  mnemosyne_guidance: yes | no | unknown_requires_user_decision
+```
+
+Whether it should also load Mnemosyne guidance remains an open question; use `current/handoff-guidance-open-question.md`. A task-local choice is not a global precedent.
 
 ## Handoff receive startup
 
@@ -60,6 +68,8 @@ For handoff receive, read or ask the user to provide:
 
 For a Mnemosyne-owned handoff, complete the receive report first, then separately execute `commands/load-mnemosyne-guidance.md` before continuing the received task. The guidance refresh preserves that task and does not replace it with unrelated maintenance live state.
 
+For a target-project business handoff, follow the package's explicit project-guidance and task-local Mnemosyne-guidance values. If the value is `unknown_requires_user_decision`, preserve the decision gate rather than selecting an answer silently.
+
 Do not treat the handoff package, `current/active-context.md`, `handoff/handoff-current.md`, `current/todo.md`, `current/open-questions.md`, task result records, review outputs, or research reports as execution source.
 
 ## Task-extended reads
@@ -71,7 +81,7 @@ Read additional files only when the task needs them:
 - Manual-import docs for import tasks.
 - For first target-project dry-run preparation or execution, read `handoff/first-target-project-dry-run-onboarding-package.md` first, then the minimal profile/checklist/review instruments listed there.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for MNEMOSYNE-031 authority/promotion questions.
-- Historical v0.1 files only for historical/audit tasks.
+- Historical v0.1 files only for historical/audit work.
 - For handoff package generation, tier selection, replay review, or model/tool handoff comparison, read `notes/handoff-package-strategy-v0.1.md` and `notes/handoff-replay-scorecard-v0.1.md`.
 
 `notes/v0.1-scope-and-consistency-check.md` is not part of mandatory ordinary startup or Codex startup; use it only for historical/audit work.
@@ -86,5 +96,5 @@ Visibility is operator-controlled and may change. Do not treat public/private st
 - State the current execution source and non-execution-source boundaries before making execution claims.
 - Apply objective neutral engineering style, user-action-first response structure, and long-transfer guidance from `current/human-approved-spec.md`.
 - For guidance refresh, report that the current conversation task is preserved and no handoff was started.
-- For handoff receive, report the package identity, package status as non-execution-source, evidence paths checked or missing, safe next action, and whether the required follow-on guidance refresh is pending or complete.
+- For handoff receive, report package identity, non-execution-source status, `receiver_guidance_load`, evidence paths checked or missing, and one safe next action.
 - If required files for the selected explicit workflow are missing, say so; do not invent repository state.
