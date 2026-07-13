@@ -2,7 +2,11 @@
 
 ```yaml
 created_by_task: MNEMOSYNE-115
-record_set_status: first_batch_formalized_and_definition_replay_completed
+latest_update_task: MNEMOSYNE-116
+record_set_status: first_batch_formalized_definition_replay_PASS_fresh_behavioral_replay_prepared
+fresh_behavioral_replay_status: not_yet_executed
+fresh_replay_package: handoff/meta-agent-five-regression-fresh-replay-package.md
+fresh_replay_startup_prompt: handoff/meta-agent-five-regression-fresh-replay-startup-prompt.md
 authority_level: non_execution_source_target_specific_test_assets
 source_event: META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001
 execution_source: current/human-approved-spec.md
@@ -31,6 +35,17 @@ Formalization means that each selected candidate now has a stable input package,
 - `REG-META-DRYRUN-003` remains conditional on a future explicitly approved material phase.
 - `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
 
-## Execution note
+## Definition replay
 
-The recorded `definition_replay_result` validates each specification against current repository evidence at `master@6d6d525a688a62d73665ff2062ac03292af53833`. It is not a fresh-session behavioral replay. A later user-approved test may execute the suite in a fresh conversation and record mechanical before/after repository-state evidence.
+The recorded `definition_replay_result` validates each specification against repository evidence at `master@6d6d525a688a62d73665ff2062ac03292af53833`. It is not a fresh-session behavioral replay.
+
+## Prepared fresh-session behavioral replay
+
+MNEMOSYNE-116 prepares, but does not execute, the isolated replay:
+
+- package: `handoff/meta-agent-five-regression-fresh-replay-package.md`;
+- startup prompt: `handoff/meta-agent-five-regression-fresh-replay-startup-prompt.md`.
+
+The tested conversation must be genuinely new, load Mnemosyne guidance explicitly, pin the repository ref before substantive reading, remain read-only, provide mechanical before/after repository-state evidence, and return its complete executor output for separate maintainer scorecard review.
+
+A result from the current maintenance conversation cannot satisfy the fresh-session independence requirement.
