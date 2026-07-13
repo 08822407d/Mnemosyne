@@ -1,54 +1,45 @@
-# FABLE5-REVIEW-003 Maintainer Triage Scaffold
+# FABLE5-REVIEW-003 Maintainer Triage
 
 ```yaml
 review_id: FABLE5-REVIEW-003
-triage_status: scaffold_created_full_review_canonicalized
+triage_status: pro_substantive_triage_completed
 authority_level: non_execution_source_maintainer_triage
-created_by: MNEMOSYNE-094 storage task
+initial_scaffold_created_by: MNEMOSYNE-094
+latest_adjudication_task: MNEMOSYNE-113
+substantive_adjudication_record: notes/cross-model-review-results/FABLE5-TRIAGE-001/02-gpt-pro-substantive-adjudication-and-repair-decisions.md
 ```
 
-## Current triage summary
+## Final triage summary
 
-- R3-F-001: accepted as non-blocking hygiene issue; defer small manifest cleanup until user/pro-level triage.
-- R3-F-002: valid question; requires user confirmation that MNEMOSYNE-089 execution-source update was user-approved and whether to adopt `user_decision_recorded: true` convention for future execution-source modifications.
-- R3-F-003: accepted as non-blocking hygiene issue; defer decision whether to delete manual-import transfer copies or mark them superseded.
-- R3-F-004: accepted as non-blocking wayfinding issue; defer decision whether to add a live-file pointer to `notes/cross-model-review-results/`.
+- R3-F-001: closed with no current manifest repair. The stale coexistence remains valid historical evidence inside the MNEMOSYNE-091 result record, but current FABLE5 review manifests no longer contain the stale pre-091 line.
+- R3-F-002: resolved. The user later explicitly confirmed that the MNEMOSYNE-089 execution-source guidance update was approved. MNEMOSYNE-113 adds a scoped post-hoc approval annotation to the result record without expanding the original authorization.
+- R3-F-003: resolved non-destructively. The three retained manual-import transfer files are now explicitly documented as processed, retained for provenance, non-canonical, and superseded by canonical review-tree copies.
+- R3-F-004: resolved. `current/review-and-validation-status.md` and the root README now point to the cross-model review tree and current Pro adjudication record.
 
-## Deferrable human review queue
-
-```yaml
-R3-F-002:
-  question: Confirm whether MNEMOSYNE-089 execution-source update was user-approved and whether approval should be recorded explicitly.
-  estimated_human_time: 5 minutes
-  urgency: can_defer_until_Pro_quota_restores_or_human_review_window
-R3-F-001_R3-F-003_R3-F-004_hygiene_bundle:
-  question: Approve one small cleanup task for manifest stale line, manual-import transfer marker/delete, and live-file review-tree pointer?
-  estimated_human_time: 10 minutes
-  urgency: can_defer_until_Pro_quota_restores_or_human_review_window
-```
-
-## Prior human-review queue retained from FABLE5-REVIEW-001/002
+## Resolution record
 
 ```yaml
-FABLE5_REVIEW_001:
-  F-004_maintainer_review_provenance:
-    estimated_human_time: 5-10 minutes
-    urgency: can_defer
-  F-005_equivalent_evidence_scoping:
-    estimated_human_time: 5-10 minutes
-    urgency: can_defer
-FABLE5_REVIEW_002:
-  Q2-1_W4_acceptance_scope:
-    estimated_human_time: 10-20 minutes
-    urgency: first_priority_when_human_triage_begins
-  Q2-2_warning_list_canonical_layer:
-    estimated_human_time: 5-10 minutes
-    urgency: can_defer
-  Q2-3_first_batch_to_consider_default_agenda:
-    estimated_human_time: 5-10 minutes
-    urgency: can_defer
+R3_F_001:
+  current_residue: false
+  action: no_current_repair
+
+R3_F_002:
+  user_approval_confirmed: true
+  action: post_hoc_scoped_result_annotation
+  path: notes/codex-task-results/MNEMOSYNE-089-result.md
+
+R3_F_003:
+  transfer_files_deleted: false
+  action: mark_processed_retained_and_superseded_in_inbox_README
+  reason: preserve_transfer_provenance_without_canonical_ambiguity
+
+R3_F_004:
+  action: add_live_pointer
+  paths:
+    - current/review-and-validation-status.md
+    - README.md
 ```
 
 ## Boundary
 
-This triage scaffold does not authorize repository repairs, target workspace creation, target material ingestion, target repository write, regression formalization, operational build, execution-source update, or resuming/closing the paused post-handoff route.
+This triage record is not execution source. It does not authorize target workspace creation, target material ingestion, target repository write, regression formalization, operational build, execution-source update, automatic writeback, or resumption/closure of the paused post-handoff route.
