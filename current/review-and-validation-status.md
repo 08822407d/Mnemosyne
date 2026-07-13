@@ -37,6 +37,30 @@ conversation_routing_after_MNEMOSYNE_114:
     path: notes/chatgpt-work-mode-assessment-2026-07.md
     status: candidate_guidance_not_execution_source
     immediate_recommendation: ordinary_Chat_for_handoff_receive_and_route_selection
+
+meta_agent_test_route_after_MNEMOSYNE_115:
+  user_memory_verification: confirmed_by_repository_evidence
+  original_role_of_Meta_Agent: real_or_semi_real_target_for_Mnemosyne_capability_testing
+  operational_product_build_intent: false
+  prior_controlled_dry_run:
+    id: META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001
+    verdict: PASS_WITH_WARNINGS
+    score: 89/100
+    critical_blockers: []
+  prior_pause: suspended_by_user_inserted_long_work
+  current_user_decision: resume_test_only_route_and_advance_to_next_step
+  selected_next_path: formalize_and_definition_validate_first_regression_batch
+  route_decision_record: notes/first-target-project-intake-records/meta-agent/meta-agent-post-handoff-test-route-resumption-and-next-step-decision.md
+  formal_regression_index: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md
+  formalized_ids:
+    - REG-META-DRYRUN-001
+    - REG-META-DRYRUN-002
+    - REG-META-DRYRUN-004
+    - REG-META-DRYRUN-005
+    - REG-META-DRYRUN-007
+  definition_level_static_replay: PASS_all_five
+  independent_fresh_session_behavioral_replay: not_yet_performed
+  repository_persistence: pending_MNEMOSYNE_115_PR_merge
 ```
 
 ## Pro adjudication outcomes
@@ -55,17 +79,21 @@ conversation_routing_after_MNEMOSYNE_114:
 ## Conversation handoff boundary
 
 - The current long conversation remains available only for continuing and storing `FABLE5-GREENFIELD-001` outputs when Fable access returns.
-- New general Mnemosyne maintenance should use the post-113 handoff package in a fresh ordinary Chat conversation.
-- Receiving the package does not automatically resume the paused post-handoff Meta-Agent route.
-- ChatGPT Work is not the default for handoff receive; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
+- New general Mnemosyne maintenance uses the post-113 handoff package in this fresh ordinary Chat conversation.
+- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the current user later explicitly selected Route C and authorized the test-only next step recorded by MNEMOSYNE-115.
+- The resumed route is regression hardening for Mnemosyne. It is not Meta-Agent product construction.
+- ChatGPT Work is not the default for this route; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
 
-## Still not authorized or completed
+## Current boundaries and incomplete work
 
-- No regression candidate has been formalized.
+- Five target-specific regression specifications are formalized by MNEMOSYNE-115; none is promoted into the execution source or an automatic global rule.
+- `REG-META-DRYRUN-003` remains conditional on a later explicitly approved material phase.
+- `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
+- No independent fresh-session behavioral replay of the five formal specifications has yet been performed.
 - No target workspace has been created.
 - No target material has been ingested.
 - No target repository has been written.
 - No operational build has started.
-- The paused post-handoff route remains paused and is not closed.
+- The Meta-Agent test-only route is resumed; workspace/material/write/build and product-development subroutes remain unselected and unauthorized.
 - FABLE5-GREENFIELD-001 outputs have not received a separate completed substantive maintainer acceptance review; the track is also incomplete.
 - ChatGPT Work surface-selection guidance has not been promoted into the execution source.
