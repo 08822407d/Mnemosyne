@@ -21,7 +21,7 @@ review_method:
   - no_truth_voting
   - minimal_repair_preference
   - preserve_frozen_082_083_artifacts
-execution_source_status: current/human-approved-spec.md_remains_only_execution_source
+execution_source_status: current/human-approved-spec.md_updated_by_user_authorized_MNEMOSYNE_113_and_remains_only_execution_source
 ```
 
 ## 1. Overall decision
@@ -33,8 +33,9 @@ The accepted repair model is:
 1. preserve the original dry-run, maintainer-review, freeze, and handoff evidence layers;
 2. add a live interpretation layer instead of rewriting frozen MNEMOSYNE-082/083 artifacts;
 3. record the user's later provenance and no-write-evidence decisions explicitly;
-4. repair current discoverability and stale triage metadata;
-5. avoid regression formalization, target work, or paused-route resumption in this task.
+4. promote the settled no-write-proof and review-provenance rule into the sole execution source;
+5. repair current discoverability and stale triage metadata;
+6. avoid regression formalization, target work, or paused-route resumption in this task.
 
 ## 2. FABLE5-REVIEW-001 adjudication
 
@@ -110,19 +111,21 @@ equivalent_no_write_evidence:
   future_exception_requires: explicit_new_user_approval_and_recorded_scope
 ```
 
-The durable rule is recorded in the live interpretation and current review status. Consolidation into the sole execution source should use a deterministic protected-file update; this task does not silently make a non-execution-source file authoritative.
+The task-specific interpretation is preserved in the live record. The durable rule is promoted into `current/human-approved-spec.md` §19 through a deterministic protected-file replacement. That file remains Mnemosyne's sole execution source.
 
 ## 6. Repair set applied by MNEMOSYNE-113
 
 - add this substantive adjudication record;
 - add the live warning/provenance/regression interpretation record;
 - add `current/review-and-validation-status.md` and a root README pointer;
-- update FABLE5-REVIEW-001/002/003 triage and finding statuses;
+- add §19 to `current/human-approved-spec.md` for no-write proof, review actor/provenance, execution-source approval recording, and same-family evidence limitations;
+- update FABLE5-REVIEW-001/002/003 manifests, triage records, and finding statuses;
 - update FABLE5-TRIAGE-001 manifest to record the Pro decision;
-- append the user-approval confirmation to MNEMOSYNE-089 result;
+- append the user-approval confirmation to MNEMOSYNE-089 result and refresh its stale app-compatibility caveat;
 - document retained processed Fable transfer files in `manual-import-inbox/README.md`;
 - record Fable weekly-quota exhaustion as an operational pause, not a finding or project failure;
-- update the cross-model review index and create the MNEMOSYNE-113 result record.
+- update the greenfield manifest and cross-model review index;
+- create the MNEMOSYNE-113 result record.
 
 ## 7. Explicit non-actions
 
