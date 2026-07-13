@@ -127,7 +127,7 @@ For future validation or dry-run work that claims no repository write:
 4. every exception must record its scope, evidence substitute, approver, and non-precedent status;
 5. DRY-RUN-001's no-write claim is not recorded as personally verified by the user.
 
-This section records the settled user decision as a live non-execution-source rule. `current/human-approved-spec.md` remains the sole execution source until a separate protected-file consolidation explicitly incorporates the rule.
+This section preserves the task-specific interpretation. MNEMOSYNE-113 has also incorporated the durable rule into `current/human-approved-spec.md` §19; that file remains the sole execution source.
 
 ## 6. Regression-candidate decision agenda
 
