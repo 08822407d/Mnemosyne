@@ -42,7 +42,7 @@ The principle also records:
 
 External source:
 
-- OpenAI Help Center, `Apps in ChatGPT`, `https://help.openai.com/en/articles/11487775-connectors-in-chatgpt`, consulted 2026-07-07.
+- OpenAI Help Center, `Apps in ChatGPT`, `https://help.openai.com/en/articles/11487775-connectors-in-chatgpt`, consulted 2026-07-07 and refreshed by MNEMOSYNE-113.
 
 Repository-local sources:
 
@@ -58,7 +58,7 @@ Repository-local sources:
 ## Known limitations
 
 - Exact ChatGPT app write capabilities remain time-sensitive and may vary by account, model surface, workspace, plan, region, GitHub app installation, action controls, and app permission settings.
-- Current OpenAI documentation says apps are available with all models except Pro models; therefore future prompts must verify current model/app compatibility instead of assuming availability.
+- Current OpenAI documentation says app compatibility varies by app, capability, plan, workspace, role, supported surface, region, and model. Future prompts must verify current app/action availability instead of assuming a global model rule.
 - This task does not resume or close the paused post-handoff route recorded by MNEMOSYNE-085.
 
 ## Post-hoc user-approval confirmation — MNEMOSYNE-113
