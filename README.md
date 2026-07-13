@@ -7,3 +7,5 @@ Mnemosyne 是一个用于设计、演化和交付 AI Agent 外部持久记忆系
 核心原则：**模型负责计算，文件负责记忆。**
 
 当前阶段采用中文作为主要工作语言。
+
+当前 review / validation wayfinding：`current/review-and-validation-status.md`。该文件不是执行源；`current/human-approved-spec.md` 仍是唯一执行源。

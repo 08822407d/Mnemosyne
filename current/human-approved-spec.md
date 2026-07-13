@@ -252,3 +252,15 @@
 - 当普通 ChatGPT 对话执行了 GitHub 写入并改变 Mnemosyne 维护状态或创建持久文档时，应创建或更新相应 result record，至少记录 actor / action source、文件 created/modified、是否修改 execution source/current-state/handoff/target workspace/material/write/build/regression 文件、验证结果和已知限制。
 - 若发现旧文件仍声称普通 ChatGPT 对话只能读 GitHub 或不能提交 PR，应区分：历史记录可以作为当时平台状态或当时假设保留； live route、平台指南或执行源中的过时能力假设必须标注为 stale，并按当前 user-approved task 更新。
 - 本原则不授权自动写回、自动合并、GitHub Actions、MCP/RAG、多 Agent 自动协调、目标项目写入、target material ingestion、target workspace creation、regression formalization、operational build，或任何未被当前任务明确批准的仓库动作。
+
+## 19. Validation / dry-run 无写入证明与复核 provenance 原则
+
+- 本原则适用于 Mnemosyne 自身及其目标项目相关的 validation、dry-run、replay、review、acceptance gate 或其他会声称“未对仓库执行写入”的任务。
+- 对“未写入仓库”的默认合格证明，应优先使用可机械核验的 `git diff` 类证据，或与 pinned ref / commit 绑定的执行前后仓库状态比较；仅有自然语言声明、未调用写工具的自述或工具意图描述，默认不足以单独构成高置信度 no-write proof。
+- 如果当前环境无法提供默认机械证明，任务应标记为 `BLOCKED`、`INCOMPLETE` 或等价的不完全状态，除非用户为该次运行明确批准一个新的 run-scoped exception。
+- 每个 no-write proof 例外必须记录：适用 run、默认证明为何不可用、替代证据、批准者、批准范围、置信度、是否经过用户独立核验，以及 `not_future_precedent: true`。
+- `META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001` 使用的 equivalent no-write evidence 仅是历史、单次运行例外；它不构成未来默认标准，且用户未亲自验证其 no-write claim。
+- Maintainer review、acceptance review 或 validation result 必须记录实际 reviewer / actor。若复核由 GPT/ChatGPT/Codex/其他 Agent 生成或执行，不得把它描述为 fully manual human review；应分别记录人类回答、批准或抽样核验了哪些部分，以及哪些步骤仍由模型完成。
+- 当任务修改执行源时，result record 必须显式记录 `user_decision_recorded: true | false`、用户决定的 evidence path / conversation provenance、获批修改范围和仍未获批的相邻动作；不得用平台 permission、历史授权或推测替代当前用户决定。
+- 同一模型家族完成执行与复核不会自动使结果无效，但必须标注 evidence class / independence limitation；高风险结论应优先补充异构复核、机械 diff、可复现测试或人类抽样验证。
+- 本原则不自动批准任何 validation、dry-run、target workspace、material ingestion、target write、regression formalization、operational build、execution-source update、自动写回或自动合并。

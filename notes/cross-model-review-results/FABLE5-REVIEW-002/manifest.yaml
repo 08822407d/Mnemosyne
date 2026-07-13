@@ -3,7 +3,7 @@ review_model: Fable 5
 review_type: independent_heterogeneous_model_review
 scope: regression_candidate_and_warning_closure_traceability_review
 authority_level: non_execution_source_advisory_evidence
-status: canonical_copy_stored
+status: canonical_copy_stored_and_pro_triage_completed
 source_files_received_in_maintenance_conversation:
   - FABLE5-REVIEW-002-regression-warning-traceability-review-result.md
 canonical_files:
@@ -21,10 +21,25 @@ summary:
     - R2-F-003
   observations:
     - R2-F-004
-questions:
-  - Q2-1 W4 acceptance scope
-  - Q2-2 canonical warning list layer
-  - Q2-3 first_batch_to_consider default formalization agenda
+  original_questions:
+    - Q2-1 W4 acceptance scope
+    - Q2-2 canonical warning list layer
+    - Q2-3 first_batch_to_consider default formalization agenda
+adjudication:
+  task_id: MNEMOSYNE-113
+  status: completed
+  record: notes/cross-model-review-results/FABLE5-TRIAGE-001/02-gpt-pro-substantive-adjudication-and-repair-decisions.md
+  decisions:
+    Q2_1: W4_open_uncertain_validation_only_no_real_project_acceptance
+    Q2_2: layered_canonicalization_no_frozen_artifact_rewrite
+    Q2_3: REG_001_002_004_005_007_future_decision_agenda_not_formalized
+  final_status:
+    R2-F-001: repaired_by_live_interpretation
+    R2-F-002: resolved_by_layered_canonicalization
+    R2-F-003: repaired_by_live_wayfinding
+    R2-F-004: addressed_by_live_stable_warning_register
+  open_findings_after_adjudication: []
 notes:
   - Full review file was copied verbatim into this canonical directory by MNEMOSYNE-091.
   - FABLE5-REVIEW-002 did not see MNEMOSYNE-088/089 due connector snapshot limits; this is not a defect.
+  - MNEMOSYNE-113 preserves the original review and records later decisions separately.

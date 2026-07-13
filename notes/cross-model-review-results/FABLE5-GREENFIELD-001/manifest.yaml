@@ -2,9 +2,10 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_canonical_copies_stored_track_paused_at_GF_STEP_2B5
 created_by_task: MNEMOSYNE-101
 last_storage_task: MNEMOSYNE-112
+last_status_task: MNEMOSYNE-113
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -91,11 +92,11 @@ step_records:
     next_proposed_step: GF-STEP-2B5
 track_progress:
   GF_STEP_1:
-    status: complete_with_explicit_open_questions
+    status: complete_with_explicit_open_questions_as_Fable_advisory_result
     completion_record: steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
-    substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
+    substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete_and_outside_MNEMOSYNE_113_first_wave_scope
   GF_STEP_2:
-    status: in_progress
+    status: in_progress_paused_by_provider_quota
     completed_substeps:
       - GF-STEP-2A
       - GF-STEP-2B1
@@ -105,29 +106,31 @@ track_progress:
       - GF-STEP-2B4B
     current_record: steps/GF-STEP-2B4B/02-hosted-workflow-final-text-evidence.md
     next_planned_substep: GF-STEP-2B5
-    substantive_maintainer_acceptance: deferred_until_GPT_Pro_quota_restored
+    substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete
 provider_incidents:
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
     path: incidents/INC-001-step2a-safety-routing.md
     affected_step: GF-STEP-2A
     status: resolved_by_revised_fresh_conversation_retry
     exact_provider_trigger: unknown
+  - incident_id: FABLE5-GREENFIELD-001-INCIDENT-002
+    path: incidents/INC-002-weekly-quota-exhaustion.md
+    affected_step: GF-STEP-2B5_not_started
+    status: operational_pause_user_reported_weekly_quota_exhausted
+    task_failure: false
 raw_preservation_rule:
   - preserve_each_step_prompt_verbatim
   - preserve_each_step_downloadable_output_verbatim
   - preserve_user_answers_in_original_language
   - preserve_incidental_exposure_ledger
 review_boundary:
-  current_xhigh_scope:
-    - generate_bounded_step_prompts_from_Fable_charter
-    - receive_and_structurally_validate_Fable_outputs
-    - preserve_outputs_and_submit_ready_PRs
-    - record_provider_routing_incidents_without_diagnosing_proprietary_classifiers
-  deferred_until_Pro_quota_restored:
-    - substantive_acceptance_or_rejection_of_Fable_findings
-    - repairs_based_on_Fable_findings
-    - canonical_warning_layer_decision
-    - formal_comparison_and_enhancement_decisions
+  first_wave_Fable_review_series:
+    substantive_pro_adjudication_completed_by: MNEMOSYNE-113
+    scope_excludes_greenfield_track: true
+  greenfield_track:
+    continue_when_provider_quota_available: true
+    do_not_synthesize_missing_Fable_steps_on_Fable_behalf: true
+    formal_comparison_and_enhancement_decisions: only_after_track_outputs_and_separate_substantive_review
 boundaries:
   execution_source_modified: false
   current_state_files_modified: false
