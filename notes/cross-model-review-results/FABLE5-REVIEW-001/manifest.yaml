@@ -3,7 +3,7 @@ review_model: Fable 5
 review_type: independent_heterogeneous_model_review
 scope: post_079_to_085_handoff_authority_and_state_machine_review
 authority_level: non_execution_source_advisory_evidence
-status: canonical_copy_stored
+status: canonical_copy_stored_and_pro_triage_completed
 source_files_received_in_maintenance_conversation:
   - FABLE5-independent-review-output1-project-understanding-and-scope-proposal.md
   - FABLE5-REVIEW-001-formal-result.md
@@ -20,10 +20,23 @@ summary:
     - F-001
   non_blocking_findings:
     - F-003
-  questions:
+  original_questions:
     - F-004 maintainer-review provenance
     - F-005 equivalent no-write evidence scoping
     - F-006 review output repository home
+adjudication:
+  task_id: MNEMOSYNE-113
+  status: completed
+  record: notes/cross-model-review-results/FABLE5-TRIAGE-001/02-gpt-pro-substantive-adjudication-and-repair-decisions.md
+  final_status:
+    F-001: accepted_repaired_by_MNEMOSYNE_088
+    F-002: accepted_observation_provenance_scope_confirmed
+    F-003: accepted_repaired_by_MNEMOSYNE_088
+    F-004: resolved
+    F-005: resolved
+    F-006: resolved
+  open_findings_after_adjudication: []
 notes:
   - MNEMOSYNE-088 already repaired the accepted live-route clarity subset from FABLE5-REVIEW-001.
   - Full review files were copied verbatim into this canonical directory by MNEMOSYNE-091.
+  - MNEMOSYNE-113 records the later user answers and substantive Pro adjudication without changing the original Fable review file.
