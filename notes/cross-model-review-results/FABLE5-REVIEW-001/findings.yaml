@@ -1,5 +1,6 @@
 review_id: FABLE5-REVIEW-001
-source_status: received_in_chat_not_canonical
+source_status: canonical_copy_stored
+latest_adjudication_task: MNEMOSYNE-113
 findings:
   - id: F-001
     severity: REPAIR_RECOMMENDED
@@ -8,7 +9,7 @@ findings:
   - id: F-002
     severity: OBSERVATION
     topic: same-family self-attestation evidence pattern
-    triage: accepted_no_repair
+    triage: accepted_no_repair_provenance_scope_confirmed_by_MNEMOSYNE_113
   - id: F-003
     severity: NON_BLOCKING
     topic: current todo omitted MNEMOSYNE-080 from recently completed
@@ -16,12 +17,12 @@ findings:
   - id: F-004
     severity: QUESTION
     topic: maintainer review provenance identity
-    triage: deferred_user_decision
+    triage: resolved_by_user_answer_and_MNEMOSYNE_113_annotation
   - id: F-005
     severity: QUESTION
     topic: equivalent evidence precedent scoping
-    triage: deferred_user_decision
+    triage: resolved_historical_run_scoped_nonprecedent_rule_recorded_by_MNEMOSYNE_113
   - id: F-006
     severity: QUESTION
     topic: inserted long work and review output repository home
-    triage: partially_addressed_by_storage_scaffold
+    triage: resolved_canonical_storage_under_cross_model_review_tree
