@@ -162,7 +162,8 @@ MNEMOSYNE-116 advances the work as far as the current conversation can validly t
 - `current/human-approved-spec.md` reports 9 additions and 0 deletions.
 - A separate comparison confirmed that `master` remained identical to `bc4b4f098a0bcdd77cae731d59c51c79e5e8333f` during branch-only work.
 - Official MNEMOSYNE-082/083 frozen artifacts, target workspace paths, target-material paths, target repositories, build paths, and FABLE5-GREENFIELD files are absent from the changed-file set.
-- A final compare is required after adding this result record and before opening the PR.
+- Post-result-record compare reported `ahead_by: 12`, `behind_by: 0`, with 11 changed files; the additional file was this intended result record.
+- This verification annotation modifies only this result record. The PR body records the final branch compare after the annotation commit.
 
 ## Known limitations
 
