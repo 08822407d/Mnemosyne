@@ -21,6 +21,8 @@ Read or ask the user to provide:
 - `README.md`
 - `current/human-approved-spec.md`
 - this command file, if available
+- `notes/handoff-package-strategy-v0.1.md`, when package tier or structure is being selected
+- `notes/handoff-package-strategy-receiver-guidance-load-addendum-2026-07.md`
 - task-local materials needed for the handoff package
 - task-relevant evidence files needed to support package claims
 
@@ -67,7 +69,8 @@ The project-local guidance requirement is mandatory. Whether Mnemosyne guidance 
 4. Use long-transfer file/chunking guidance when the package is long.
 5. Make the receiving guidance-load instruction visible in both the package and any paired startup prompt.
 6. Keep behavior-guidance refresh separate from explicit handoff receive; neither command replaces the other.
-7. Do not modify repository files unless the user separately authorizes repository writes.
+7. Apply the receiver-guidance-load addendum when validating package completeness.
+8. Do not modify repository files unless the user separately authorizes repository writes.
 
 ## Boundaries
 
