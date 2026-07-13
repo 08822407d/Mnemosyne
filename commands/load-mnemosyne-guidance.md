@@ -6,12 +6,14 @@ This file is not an execution source. It defines a user-facing shortcut for refr
 
 - Load Mnemosyne guidance
 - 加载 Mnemosyne 指导约束
+- 加载 MNEMOSYNE 约束指导
 - 加载最新指导
 
 ## Invocation examples
 
 - “Load Mnemosyne guidance.”
 - “加载 Mnemosyne 指导约束。”
+- “加载 MNEMOSYNE 约束指导。”
 - “加载最新指导。”
 
 ## Purpose
@@ -24,6 +26,8 @@ It does not start, prepare, receive, infer, or auto-detect a handoff. Work hando
 
 - `commands/prepare-mnemosyne-handoff.md`
 - `commands/receive-mnemosyne-handoff.md`
+
+A Mnemosyne handoff package may explicitly require the receiving conversation to invoke this command after the package has been received. In that sequence, handoff receive and guidance refresh remain two distinct operations: the receive step establishes the transferred local task, and this command refreshes behavior constraints without replacing that task.
 
 ## Required files
 
@@ -65,7 +69,8 @@ If any of those files are read for a separate explicit task, treat their mainten
 11. Preserve the current conversation's local task mainline.
 12. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
 13. Do not infer that the user wants handoff merely because this command was invoked.
-14. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
+14. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
+15. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
 
