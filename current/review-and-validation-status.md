@@ -67,6 +67,7 @@ meta_agent_test_route_after_MNEMOSYNE_116:
   independent_fresh_session_behavioral_replay: package_prepared_not_yet_executed
 
 handoff_guidance_after_MNEMOSYNE_116:
+  execution_source_rule: current/human-approved-spec.md#15-交接与续接正确性原则
   mnemosyne_handoff_explicit_guidance_refresh_required: true
   ordered_operations:
     - receive_authorized_handoff
@@ -81,7 +82,8 @@ handoff_guidance_after_MNEMOSYNE_116:
     target_project_constraint_loading_required_if_confirmed: true
     additional_Mnemosyne_guidance_loading: undecided
     open_question: current/handoff-guidance-open-question.md
-  execution_source_modified: false
+  execution_source_modified: true
+  user_decision_recorded: true
   repository_persistence: pending_MNEMOSYNE_116_PR_merge
 ```
 
@@ -105,7 +107,7 @@ handoff_guidance_after_MNEMOSYNE_116:
 - Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the user later explicitly selected Route C and authorized the test-only steps recorded by MNEMOSYNE-115 and MNEMOSYNE-116.
 - `current/meta-agent-test-route-status.md` is the newest live wayfinding for this resumed route. Its route-status statement supersedes the older MNEMOSYNE-085 interruption wording in large legacy current/handoff views, without changing their historical content.
 - The resumed route is regression hardening and replay validation for Mnemosyne. It is not Meta-Agent product construction.
-- A Mnemosyne handoff package should now explicitly require a separate guidance-refresh operation after receive. The target-project-business-conversation variant remains partially open under `HO-GUIDANCE-001`.
+- After the MNEMOSYNE-116 PR is merged, Mnemosyne-owned handoff packages must explicitly require a separate guidance-refresh operation after receive. The target-project-business-conversation variant remains partially open under `HO-GUIDANCE-001`.
 - ChatGPT Work is not the default for this route; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
 
 ## Current boundaries and incomplete work
