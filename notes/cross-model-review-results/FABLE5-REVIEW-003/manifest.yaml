@@ -3,7 +3,7 @@ review_model: Fable 5
 review_type: independent_heterogeneous_model_review
 scope: post_repair_snapshot_refresh_and_portable_continuation_delta_review
 authority_level: non_execution_source_advisory_evidence
-status: canonical_copy_stored
+status: canonical_copy_stored_and_pro_triage_completed
 source_files_received_in_maintenance_conversation:
   - FABLE5-REVIEW-003-post-repair-snapshot-refresh-delta-result.md
 canonical_files:
@@ -19,9 +19,20 @@ summary:
     - R3-F-001
     - R3-F-003
     - R3-F-004
-  questions:
+  original_questions:
     - R3-F-002 execution-source update approval trail
+adjudication:
+  task_id: MNEMOSYNE-113
+  status: completed
+  record: notes/cross-model-review-results/FABLE5-TRIAGE-001/02-gpt-pro-substantive-adjudication-and-repair-decisions.md
+  final_status:
+    R3-F-001: closed_no_current_manifest_repair
+    R3-F-002: resolved_user_approval_annotated
+    R3-F-003: resolved_processed_retained_transfer_status_documented
+    R3-F-004: resolved_live_pointer_added
+  open_findings_after_adjudication: []
 notes:
   - FABLE5-REVIEW-003 verified MNEMOSYNE-088/089/090/091 deltas as substantially claimed.
-  - It recommends no further Fable review until human triage.
-  - This manifest is non-execution-source advisory evidence and does not authorize repairs.
+  - It recommended no further Fable review until human triage.
+  - MNEMOSYNE-113 performed the deferred Pro-level triage and minimal repair set while preserving historical and frozen evidence.
+  - This manifest is non-execution-source advisory evidence and does not authorize target, regression, build, or paused-route actions.
