@@ -52,13 +52,16 @@ pro_adjudication:
       status: resolved_processed_retained_markers_documented
     R3_F_004:
       status: resolved_live_pointer_added
+  execution_source_update:
+    path: current/human-approved-spec.md
+    section: 19 Validation / dry-run 无写入证明与复核 provenance 原则
+    user_decision_recorded: true
   first_wave_open_findings_after_adjudication: []
   remaining_future_decisions_not_closed_by_this_record:
     - regression_candidate_formalization_when_paused_route_is_resumed
-    - optional_execution_source_consolidation_of_no_write_proof_rule
     - substantive_review_of_incomplete_FABLE5_GREENFIELD_001_outputs
 boundaries:
-  execution_source_modified: false
+  execution_source_modified: true
   current_state_files_modified: true
   handoff_files_modified: false
   target_workspace_created: false
