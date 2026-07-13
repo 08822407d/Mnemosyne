@@ -38,7 +38,7 @@ conversation_routing_after_MNEMOSYNE_114:
     status: candidate_guidance_not_execution_source
     immediate_recommendation: ordinary_Chat_for_handoff_receive_and_route_selection
 
-meta_agent_test_route_after_MNEMOSYNE_116:
+meta_agent_test_route_after_MNEMOSYNE_117:
   live_route_status: current/meta-agent-test-route-status.md
   user_memory_verification: confirmed_by_repository_evidence
   original_role_of_Meta_Agent: real_or_semi_real_target_for_Mnemosyne_capability_testing
@@ -51,7 +51,15 @@ meta_agent_test_route_after_MNEMOSYNE_116:
   MNEMOSYNE_115_PR_162:
     merged: true
     merge_commit: bc4b4f098a0bcdd77cae731d59c51c79e5e8333f
-  current_user_decision: continue_test_only_route
+  MNEMOSYNE_116_parallel_PR_reconciliation:
+    PR_163:
+      merged: true
+      merge_commit: 6ded129ec7398bfe293fc8f5c6652ace816fc5f7
+      disposition: retained_as_valid_foundation
+    PR_164:
+      merged: false
+      state: closed
+      disposition: not_reopened_useful_deltas_reconciled_by_MNEMOSYNE_117
   completed_path: formalize_and_definition_validate_first_regression_batch
   formal_regression_index: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md
   formalized_ids:
@@ -61,12 +69,18 @@ meta_agent_test_route_after_MNEMOSYNE_116:
     - REG-META-DRYRUN-005
     - REG-META-DRYRUN-007
   definition_level_static_replay: PASS_all_five
-  current_path: prepare_independent_fresh_session_behavioral_replay
-  replay_package: handoff/meta-agent-regression-fresh-session-replay-package.md
-  replay_startup_prompt: handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md
-  independent_fresh_session_behavioral_replay: package_prepared_not_yet_executed
+  current_path: execute_independent_fresh_session_behavioral_replay_after_MNEMOSYNE_117_merge
+  canonical_replay_package: handoff/meta-agent-regression-fresh-session-replay-package-v2.md
+  canonical_replay_startup_prompt: handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md
+  superseded_replay_package: handoff/meta-agent-regression-fresh-session-replay-package.md
+  recommended_surface: Chat
+  recommended_model: GPT-5.6_Sol_Pro
+  recommended_reasoning: highest_available_in_Chat
+  fallback_model: GPT-5.6_Sol_at_highest_available_reasoning
+  Work_mode_recommended: false
+  independent_fresh_session_behavioral_replay: package_reconciled_not_yet_executed
 
-handoff_guidance_after_MNEMOSYNE_116:
+handoff_guidance_after_MNEMOSYNE_117:
   execution_source_rule: current/human-approved-spec.md#15-交接与续接正确性原则
   mnemosyne_handoff_explicit_guidance_refresh_required: true
   ordered_operations:
@@ -81,10 +95,13 @@ handoff_guidance_after_MNEMOSYNE_116:
   target_project_business_handoff:
     target_project_constraint_loading_required_if_confirmed: true
     additional_Mnemosyne_guidance_loading: undecided
+    required_task_local_value: yes | no | unknown_requires_user_decision
     open_question: current/handoff-guidance-open-question.md
-  execution_source_modified: true
+  execution_source_modified_by_MNEMOSYNE_116: true
   user_decision_recorded: true
-  repository_persistence: pending_MNEMOSYNE_116_PR_merge
+  repository_persistence:
+    PR_163_merged: true
+    merge_commit: 6ded129ec7398bfe293fc8f5c6652ace816fc5f7
 ```
 
 ## Pro adjudication outcomes
@@ -104,19 +121,20 @@ handoff_guidance_after_MNEMOSYNE_116:
 
 - The current long conversation remains available only for continuing and storing `FABLE5-GREENFIELD-001` outputs when Fable access returns.
 - New general Mnemosyne maintenance uses the post-113 handoff package in this fresh ordinary Chat conversation.
-- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the user later explicitly selected Route C and authorized the test-only steps recorded by MNEMOSYNE-115 and MNEMOSYNE-116.
+- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the user later explicitly selected Route C and authorized the test-only steps recorded by MNEMOSYNE-115 through MNEMOSYNE-117.
 - `current/meta-agent-test-route-status.md` is the newest live wayfinding for this resumed route. Its route-status statement supersedes the older MNEMOSYNE-085 interruption wording in large legacy current/handoff views, without changing their historical content.
 - The resumed route is regression hardening and replay validation for Mnemosyne. It is not Meta-Agent product construction.
-- After the MNEMOSYNE-116 PR is merged, Mnemosyne-owned handoff packages must explicitly require a separate guidance-refresh operation after receive. The target-project-business-conversation variant remains partially open under `HO-GUIDANCE-001`.
-- ChatGPT Work is not the default for this route; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
+- PR #163 is the merged MNEMOSYNE-116 foundation. Closed PR #164 is not canonical; its useful stronger fields were reconciled into the MNEMOSYNE-117 v2 package rather than merged wholesale.
+- Mnemosyne-owned handoff packages must explicitly require a separate guidance-refresh operation after receive. The target-project-business-conversation variant remains partially open under `HO-GUIDANCE-001`.
+- The five-regression replay must use ordinary Chat, not Work, with GPT-5.6 Sol Pro and the highest available Chat reasoning when available.
 
 ## Current boundaries and incomplete work
 
 - Five target-specific regression specifications are formalized by MNEMOSYNE-115; none is promoted into the execution source or an automatic global rule.
 - `REG-META-DRYRUN-003` remains conditional on a later explicitly approved material phase.
 - `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
-- The fresh-session behavioral replay package is prepared, but no genuinely fresh conversation has executed it yet.
-- The current maintenance conversation's package preflight is not independent replay evidence.
+- The canonical v2 fresh-session behavioral replay package is prepared, but no genuinely fresh conversation has executed it yet.
+- The current maintenance conversation's package reconciliation is not independent replay evidence.
 - No target workspace has been created.
 - No target material has been ingested.
 - No target repository has been written.
