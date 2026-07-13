@@ -43,6 +43,8 @@ Read or ask the user to provide:
 5. Do not use `current/active-context.md`, `handoff/handoff-current.md`, `current/todo.md`, or `current/open-questions.md` as the receiving conversation's action plan unless the package and user request explicitly make them relevant; they still remain non-execution-source.
 6. State one safe next action within the package boundaries.
 7. Do not modify repository files unless the user separately authorizes repository writes.
+8. For a Mnemosyne-owned handoff, after the receive report and before continuing the transferred task, separately execute `Load Mnemosyne guidance` / `加载 Mnemosyne 指导约束` through `commands/load-mnemosyne-guidance.md`. The refresh must preserve the received task and must not replace it with maintenance live state.
+9. For a target-project business-conversation handoff, load the target project's own confirmed constraints or owner rule when available. Whether to additionally load Mnemosyne guidance remains unresolved under `current/handoff-guidance-open-question.md`; do not infer a universal answer.
 
 ## Required first response after receiving
 
@@ -59,6 +61,9 @@ mnemosyne_handoff_receive:
   current_task_from_package:
   forbidden_actions:
   safe_next_action:
+  required_follow_on_guidance_refresh:
+    operation: Load_Mnemosyne_guidance_or_not_applicable
+    status: pending_or_completed_or_not_applicable
   limitations_or_unknowns:
 ```
 
@@ -69,3 +74,4 @@ mnemosyne_handoff_receive:
 - This command does not approve new design content.
 - This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, automation, MCP, RAG, or auto-writeback.
 - This command does not allow “Load Mnemosyne guidance” to be treated as handoff receive.
+- The required Mnemosyne guidance refresh does not authorize importing unrelated maintenance live state or changing the received local task.

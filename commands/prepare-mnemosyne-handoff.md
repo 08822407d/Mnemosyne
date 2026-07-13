@@ -44,7 +44,18 @@ A package should include:
 - evidence paths;
 - freshness or scope limits;
 - missing or unknown information;
-- instruction for the user to provide the package or authorized package path in the new conversation.
+- instruction for the user to provide the package or authorized package path in the new conversation;
+- explicit receiver-guidance instruction.
+
+For a Mnemosyne-owned handoff, the package must explicitly instruct the new conversation to perform these as separate ordered operations:
+
+1. receive the authorized handoff package through `commands/receive-mnemosyne-handoff.md`;
+2. execute `Load Mnemosyne guidance` / `加载 Mnemosyne 指导约束` through `commands/load-mnemosyne-guidance.md`;
+3. continue the received local task under the refreshed constraints.
+
+Reading `current/human-approved-spec.md` during handoff receive does not remove the requirement to state the guidance-refresh operation explicitly in the package.
+
+For a target-project business-conversation handoff, the package must explicitly require loading the target project's own confirmed constraint guidance or owner rule when one exists. Whether such a business conversation should additionally load Mnemosyne guidance is an unresolved policy question recorded in `current/handoff-guidance-open-question.md`; do not silently present either answer as settled.
 
 ## Required behavior
 
@@ -53,6 +64,8 @@ A package should include:
 3. Keep the package minimally sufficient and high-signal.
 4. Use long-transfer file/chunking guidance when the package is long.
 5. Do not modify repository files unless the user separately authorizes repository writes.
+6. Keep handoff receive and guidance refresh distinct: the package transfers task state; the later guidance command refreshes behavior constraints while preserving that task.
+7. For target-project handoffs, prefer the project's confirmed constraints and explicitly record the unresolved Mnemosyne-guidance question rather than importing Mnemosyne maintenance state by default.
 
 ## Boundaries
 

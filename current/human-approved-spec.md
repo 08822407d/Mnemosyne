@@ -184,6 +184,8 @@
 - 本原则适用于 Mnemosyne 所属对话和任务之间的 handoff、onboarding、replay、跨会话续接、模型 / 工具迁移，以及为目标项目设计或复核交接机制的工作。
 - Handoff package、`handoff-current`、active context、replay output、scorecard、research report 和 task result record 都不是执行源；它们不得覆盖当前执行源、目标项目自己的运行真相源或用户已批准的 task-local authority。
 - Mnemosyne 自身的交接材料必须明确指出 `current/human-approved-spec.md` 是唯一执行源。目标项目交接必须指出该目标项目自己的 execution source 或 owner rule；如果尚未确认，应标记为未知，不得由 Agent 自行设定。
+- Mnemosyne 自身的 handoff package 必须显式要求 receiving conversation 在完成 receive report 之后、继续 transferred task 之前，单独执行 `Load Mnemosyne guidance` / `加载 MNEMOSYNE 约束指导`，并使用 `commands/load-mnemosyne-guidance.md`。接收交接与加载指导是两个不同操作：前者恢复 task-local state，后者刷新行为约束且不得替换已接收任务或导入无关 maintenance live route。
+- 具体目标项目业务对话交接必须优先要求加载该项目已确认的 execution source、owner rule 或约束指导；如果未知，应标记 `unknown_requires_owner_decision`。在完成项目约束加载后是否还应同时加载 Mnemosyne 指导，当前仍是 open question，见 `current/handoff-guidance-open-question.md`；不得把任何一个答案默认呈现为已批准的通用规则。
 - 交接材料必须足以让一个 fresh receiving session 在不依赖未授权旧对话上下文或隐藏平台记忆的情况下，仅凭被授权文件和可访问证据恢复：
   1. 当前 execution source；
   2. 当前 phase / gate 和真实运行状态；
