@@ -9,6 +9,7 @@ created_by_task: MNEMOSYNE-116
 status: open_requires_deliberate_review
 user_decision_recorded: true
 settled_behavior:
+  authority_after_MNEMOSYNE_116_merge: current/human-approved-spec.md#15-交接与续接正确性原则
   mnemosyne_owned_handoff:
     receiving_sequence:
       - receive_authorized_handoff_package
@@ -30,6 +31,8 @@ execution_source: current/human-approved-spec.md
 
 1. Mnemosyne 自身的交接包必须显式要求新对话在接收交接包之后，单独执行“加载 Mnemosyne 指导约束”，然后再继续交接任务。
 2. 如果交接的是具体目标项目中的业务对话，并且该项目已有确认过的约束指导、owner rule 或 execution source，新对话应先加载该项目自己的约束。
+
+第一条以及第二条中“先加载项目自身约束”的部分，已由用户明确批准写入 `current/human-approved-spec.md` §15；本文件不重复承担执行源角色，只记录相邻未决问题。
 
 仍未决定的问题是：
 
