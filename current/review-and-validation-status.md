@@ -38,7 +38,7 @@ conversation_routing_after_MNEMOSYNE_114:
     status: candidate_guidance_not_execution_source
     immediate_recommendation: ordinary_Chat_for_handoff_receive_and_route_selection
 
-meta_agent_test_route_after_MNEMOSYNE_115:
+meta_agent_test_route_after_MNEMOSYNE_116:
   live_route_status: current/meta-agent-test-route-status.md
   user_memory_verification: confirmed_by_repository_evidence
   original_role_of_Meta_Agent: real_or_semi_real_target_for_Mnemosyne_capability_testing
@@ -48,10 +48,11 @@ meta_agent_test_route_after_MNEMOSYNE_115:
     verdict: PASS_WITH_WARNINGS
     score: 89/100
     critical_blockers: []
-  prior_pause: suspended_by_user_inserted_long_work
-  current_user_decision: resume_test_only_route_and_advance_to_next_step
-  selected_next_path: formalize_and_definition_validate_first_regression_batch
-  route_decision_record: notes/first-target-project-intake-records/meta-agent/meta-agent-post-handoff-test-route-resumption-and-next-step-decision.md
+  MNEMOSYNE_115_PR_162:
+    merged: true
+    merge_commit: bc4b4f098a0bcdd77cae731d59c51c79e5e8333f
+  current_user_decision: continue_test_only_route
+  completed_path: formalize_and_definition_validate_first_regression_batch
   formal_regression_index: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md
   formalized_ids:
     - REG-META-DRYRUN-001
@@ -60,8 +61,28 @@ meta_agent_test_route_after_MNEMOSYNE_115:
     - REG-META-DRYRUN-005
     - REG-META-DRYRUN-007
   definition_level_static_replay: PASS_all_five
-  independent_fresh_session_behavioral_replay: not_yet_performed
-  repository_persistence: pending_MNEMOSYNE_115_PR_merge
+  current_path: prepare_independent_fresh_session_behavioral_replay
+  replay_package: handoff/meta-agent-regression-fresh-session-replay-package.md
+  replay_startup_prompt: handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md
+  independent_fresh_session_behavioral_replay: package_prepared_not_yet_executed
+
+handoff_guidance_after_MNEMOSYNE_116:
+  mnemosyne_handoff_explicit_guidance_refresh_required: true
+  ordered_operations:
+    - receive_authorized_handoff
+    - execute_Load_Mnemosyne_guidance
+    - continue_received_task
+  operational_guidance_paths:
+    - commands/prepare-mnemosyne-handoff.md
+    - commands/receive-mnemosyne-handoff.md
+    - commands/load-mnemosyne-guidance.md
+    - handoff/startup-instructions.md
+  target_project_business_handoff:
+    target_project_constraint_loading_required_if_confirmed: true
+    additional_Mnemosyne_guidance_loading: undecided
+    open_question: current/handoff-guidance-open-question.md
+  execution_source_modified: false
+  repository_persistence: pending_MNEMOSYNE_116_PR_merge
 ```
 
 ## Pro adjudication outcomes
@@ -81,9 +102,10 @@ meta_agent_test_route_after_MNEMOSYNE_115:
 
 - The current long conversation remains available only for continuing and storing `FABLE5-GREENFIELD-001` outputs when Fable access returns.
 - New general Mnemosyne maintenance uses the post-113 handoff package in this fresh ordinary Chat conversation.
-- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the current user later explicitly selected Route C and authorized the test-only next step recorded by MNEMOSYNE-115.
+- Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the user later explicitly selected Route C and authorized the test-only steps recorded by MNEMOSYNE-115 and MNEMOSYNE-116.
 - `current/meta-agent-test-route-status.md` is the newest live wayfinding for this resumed route. Its route-status statement supersedes the older MNEMOSYNE-085 interruption wording in large legacy current/handoff views, without changing their historical content.
-- The resumed route is regression hardening for Mnemosyne. It is not Meta-Agent product construction.
+- The resumed route is regression hardening and replay validation for Mnemosyne. It is not Meta-Agent product construction.
+- A Mnemosyne handoff package should now explicitly require a separate guidance-refresh operation after receive. The target-project-business-conversation variant remains partially open under `HO-GUIDANCE-001`.
 - ChatGPT Work is not the default for this route; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
 
 ## Current boundaries and incomplete work
@@ -91,7 +113,8 @@ meta_agent_test_route_after_MNEMOSYNE_115:
 - Five target-specific regression specifications are formalized by MNEMOSYNE-115; none is promoted into the execution source or an automatic global rule.
 - `REG-META-DRYRUN-003` remains conditional on a later explicitly approved material phase.
 - `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
-- No independent fresh-session behavioral replay of the five formal specifications has yet been performed.
+- The fresh-session behavioral replay package is prepared, but no genuinely fresh conversation has executed it yet.
+- The current maintenance conversation's package preflight is not independent replay evidence.
 - No target workspace has been created.
 - No target material has been ingested.
 - No target repository has been written.
