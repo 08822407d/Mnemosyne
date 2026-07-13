@@ -39,6 +39,7 @@ conversation_routing_after_MNEMOSYNE_114:
     immediate_recommendation: ordinary_Chat_for_handoff_receive_and_route_selection
 
 meta_agent_test_route_after_MNEMOSYNE_115:
+  live_route_status: current/meta-agent-test-route-status.md
   user_memory_verification: confirmed_by_repository_evidence
   original_role_of_Meta_Agent: real_or_semi_real_target_for_Mnemosyne_capability_testing
   operational_product_build_intent: false
@@ -81,6 +82,7 @@ meta_agent_test_route_after_MNEMOSYNE_115:
 - The current long conversation remains available only for continuing and storing `FABLE5-GREENFIELD-001` outputs when Fable access returns.
 - New general Mnemosyne maintenance uses the post-113 handoff package in this fresh ordinary Chat conversation.
 - Receiving the package did not automatically resume the paused post-handoff Meta-Agent route; the current user later explicitly selected Route C and authorized the test-only next step recorded by MNEMOSYNE-115.
+- `current/meta-agent-test-route-status.md` is the newest live wayfinding for this resumed route. Its route-status statement supersedes the older MNEMOSYNE-085 interruption wording in large legacy current/handoff views, without changing their historical content.
 - The resumed route is regression hardening for Mnemosyne. It is not Meta-Agent product construction.
 - ChatGPT Work is not the default for this route; it remains a candidate surface for bounded, long, read-only synthesis or cross-app deliverable work.
 
