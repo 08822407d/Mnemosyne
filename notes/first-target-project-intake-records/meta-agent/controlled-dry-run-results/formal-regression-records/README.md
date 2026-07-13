@@ -4,7 +4,7 @@
 created_by_task: MNEMOSYNE-115
 latest_updated_by_task: MNEMOSYNE-117
 record_set_status: first_batch_formalized_definition_replay_completed_and_reconciled_fresh_session_replay_ready
- authority_level: non_execution_source_target_specific_test_assets
+authority_level: non_execution_source_target_specific_test_assets
 source_event: META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001
 execution_source: current/human-approved-spec.md
 global_rule_promotion: false
