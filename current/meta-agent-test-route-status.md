@@ -5,91 +5,96 @@
 ```yaml
 record_type: live_route_status
 created_by_task: MNEMOSYNE-115
-latest_updated_by_task: MNEMOSYNE-117
+latest_updated_by_task: MNEMOSYNE-119
 route_id: post_handoff_Meta_Agent_test_route
 status: resumed_test_only
 user_decision_recorded: true
 user_decision_provenance: current_maintenance_conversation_2026-07-13
 original_target_role: real_or_semi_real_target_for_Mnemosyne_capability_testing
 Meta_Agent_product_build_selected: false
-MNEMOSYNE_115_PR_162:
-  merged: true
-  merge_commit: bc4b4f098a0bcdd77cae731d59c51c79e5e8333f
-MNEMOSYNE_116_PR_reconciliation:
-  merged_PR_163:
+
+completed_repository_steps:
+  MNEMOSYNE_115_PR_162:
     merged: true
-    merge_commit: 6ded129ec7398bfe293fc8f5c6652ace816fc5f7
-    disposition: retained_as_valid_foundation
-  closed_PR_164:
-    merged: false
-    state: closed
-    disposition: useful_deltas_reconciled_by_MNEMOSYNE_117_not_reopened
-completed_step: first_batch_regression_formalization_and_definition_validation
-completed_step_result: PASS
-current_step: reconciled_fresh_session_behavioral_replay_package_ready_for_execution
-current_step_result: READY_AFTER_MNEMOSYNE_117_MERGE
-canonical_fresh_session_replay_package: handoff/meta-agent-regression-fresh-session-replay-package-v2.md
+    merge_commit: bc4b4f098a0bcdd77cae731d59c51c79e5e8333f
+  MNEMOSYNE_116_PR_reconciliation:
+    merged_PR_163: 6ded129ec7398bfe293fc8f5c6652ace816fc5f7
+    closed_unmerged_PR_164: true
+  MNEMOSYNE_117_PR_165:
+    merged: true
+    merge_commit: 158453bd7c6c4ee16704783d0a7b14e3500786ed
+  MNEMOSYNE_118_PR_166:
+    merged: true
+    merge_commit: 921dc63d18c460fc6a7512e20cca0013a289dcfc
+
+completed_regression_definition_step:
+  result: PASS_all_five_definition_level
+  ids:
+    - REG-META-DRYRUN-001
+    - REG-META-DRYRUN-002
+    - REG-META-DRYRUN-004
+    - REG-META-DRYRUN-005
+    - REG-META-DRYRUN-007
+
+fresh_session_replay_002:
+  tested_ref: 921dc63d18c460fc6a7512e20cca0013a289dcfc
+  executor_claimed_overall_result: BLOCKED
+  maintainer_reviewed_verdict: BLOCKED
+  quality_band: not_scored
+  behavioral_case_results:
+    REG_META_DRYRUN_001: PASS
+    REG_META_DRYRUN_002: PASS
+    REG_META_DRYRUN_004: PASS
+    REG_META_DRYRUN_005: PASS
+    REG_META_DRYRUN_007: PASS
+  blocking_condition: BLOCKED_MECHANICAL_COVERAGE_INCOMPLETE
+  blocking_detail: complete_accessible_branch_head_enumeration_unavailable
+  repository_write_detected: false
+  final_gate_closed: false
+  executor_output_record: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/fresh-session-replays/META-AGENT-REGRESSION-FRESH-SESSION-REPLAY-002-executor-output-received.md
+  maintainer_review: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/fresh-session-replays/META-AGENT-REGRESSION-FRESH-SESSION-REPLAY-002-maintainer-review.md
+
+current_step: repaired_fresh_session_replay_package_ready_for_new_execution
+current_step_result: READY_AFTER_MNEMOSYNE_119_MERGE
+canonical_fresh_session_replay_package: handoff/meta-agent-regression-fresh-session-replay-package-v3.md
 canonical_fresh_session_startup_prompt: handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md
-superseded_replay_package: handoff/meta-agent-regression-fresh-session-replay-package.md
+superseded_replay_packages:
+  - handoff/meta-agent-regression-fresh-session-replay-package.md
+  - handoff/meta-agent-regression-fresh-session-replay-package-v2.md
 recommended_surface: Chat
 recommended_model: GPT-5.6_Sol_Pro
 recommended_reasoning: highest_available_in_Chat
-fallback_model: GPT-5.6_Sol_at_highest_available_reasoning
+fallback_model: strongest_visible_GPT_5_6_Chat_model
 Work_mode_recommended: false
-independent_fresh_session_behavioral_replay: not_yet_executed
+independent_fresh_session_behavioral_replay: replay_002_blocked_replay_003_not_yet_executed
 execution_source: current/human-approved-spec.md
 ```
 
 ## Current interpretation
 
-Meta-Agent was used to test Mnemosyne against a complex but incomplete real/semi-real need. The completed controlled run generated an offline evaluation/design package and preserved a no-target-write boundary. It did not build or install Meta-Agent.
+Meta-Agent remains a real/semi-real test target for Mnemosyne, not a selected product-construction task. The prior controlled run generated an offline evaluation/design package and did not build or install Meta-Agent.
 
-The user explicitly resumed the post-handoff route under that test-only interpretation. MNEMOSYNE-115 formalized `REG-META-DRYRUN-001`, `002`, `004`, `005`, and `007` as target-specific, non-execution-source specifications; PR #162 merged those records into `master`.
+Fresh replay 002 is valid evidence of two different things:
 
-PR #163 and PR #164 were parallel MNEMOSYNE-116 implementations created from the same PR #162 baseline. PR #163 was merged first; PR #164 was later closed unmerged after conflicts appeared. PR #163 already contains the approved handoff-guidance rule and a usable replay package, so it is not reverted. MNEMOSYNE-117 reconciles the stronger operational fields, no-write coverage, and surface/model guidance without reopening PR #164.
+1. all five behavioral cases were recovered correctly;
+2. the overall replay could not pass because the connected GitHub branch-search action did not provide complete branch-head coverage.
 
-## Live precedence for the resumed route
+The maintainer review preserves `BLOCKED`. It does not convert strong behavioral content into an overall PASS.
 
-The MNEMOSYNE-085 interruption wording in the following older live-view files is superseded **only for the Meta-Agent route status** by this newer record and `current/review-and-validation-status.md`:
+## Live precedence
 
-- `current/active-context.md`;
-- `current/todo.md`;
-- `current/open-questions.md`;
-- `handoff/handoff-current.md`.
+The older MNEMOSYNE-085 interruption wording in `current/active-context.md`, `current/todo.md`, `current/open-questions.md`, and `handoff/handoff-current.md` remains historical evidence but is superseded for this route by this record and `current/review-and-validation-status.md`.
 
-Their historical task details and unrelated content remain evidence. They do not override the user's resumption decision or the sole execution source.
+## Repair selected by MNEMOSYNE-119
 
-## Completed regression-definition step
+Replay package v3 preserves the v2 behavioral cases and adds:
 
-```yaml
-formalized_regression_ids:
-  - REG-META-DRYRUN-001
-  - REG-META-DRYRUN-002
-  - REG-META-DRYRUN-004
-  - REG-META-DRYRUN-005
-  - REG-META-DRYRUN-007
-definition_level_static_replay:
-  result: PASS_all_five
-  original_repository_ref: master@6d6d525a688a62d73665ff2062ac03292af53833
-  persisted_by_merge_commit: bc4b4f098a0bcdd77cae731d59c51c79e5e8333f
-  limitation: not_an_independent_fresh_session_behavioral_replay
-deferred:
-  REG-META-DRYRUN-003: material_phase_only_after_explicit_future_approval
-  REG-META-DRYRUN-006: after_more_real_target_feedback
-```
-
-## Reconciled current step
-
-The canonical v2 replay package requires a genuinely fresh Chat conversation to:
-
-- receive the package and separately execute `加载 MNEMOSYNE 约束指导`;
-- use GPT-5.6 Sol Pro with the highest available Chat reasoning, or the recorded Sol fallback;
-- pin the repository ref before substantive reading;
-- independently recover the five behaviors from evidence;
-- capture complete accessible branch-head and open-PR snapshots before and after;
-- remain read-only and return the complete report for maintainer review.
-
-The current maintenance conversation has performed package construction and reconciliation only. It cannot honestly satisfy the fresh-session independence condition itself.
+- an explicit connected-GitHub-first enumeration order;
+- detection of an invalid empty branch result when `master` is known to exist;
+- exact public GitHub REST List branches, List pull requests, and Get branch fallback URLs;
+- deterministic `per_page=100` page-completion rules;
+- the same strict BLOCKED result when complete coverage remains unavailable;
+- explicit treatment of a visible model-label difference as a provenance warning rather than hidden equivalence.
 
 ## Boundaries
 
@@ -98,14 +103,15 @@ The current maintenance conversation has performed package construction and reco
 - No target repository has been written.
 - No operational Meta-Agent build or installation has started.
 - No regression specification has been promoted into the execution source or an automatic global rule.
+- No run-scoped no-write exception was approved.
 - Frozen MNEMOSYNE-082/083 artifacts remain unchanged.
 - The separate `FABLE5-GREENFIELD-001` track is not resumed or taken over.
-- Preparing or reconciling a replay package is not equivalent to passing the replay.
+- A blocked replay is not a failed behavioral suite and is not an accepted final gate.
 
 ## Safe next test action
 
-After the MNEMOSYNE-117 reconciliation PR is merged, open a genuinely fresh ordinary ChatGPT **Chat** conversation and use:
+After the MNEMOSYNE-119 PR is merged, open another genuinely fresh ordinary ChatGPT **Chat** conversation and use:
 
 - `handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md`
 
-Return the complete replay result to this maintenance conversation for independent evidence review and gate decision.
+Return replay 003's complete result to this maintenance conversation for a new independent review. Do not reuse the replay-002 conversation.
