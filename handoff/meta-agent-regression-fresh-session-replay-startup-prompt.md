@@ -1,52 +1,44 @@
-# Meta-Agent Regression Fresh-Session Replay — Startup Prompt
+# Meta-Agent Regression Fresh-Session Replay — Startup Status
 
-## 必须采用的启动方式
+> Non-execution-source startup artifact. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
-**不要**在新对话中只发送：
-
-```text
-执行 handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md
+```yaml
+status: paused_after_Replay_004
+latest_reviewed_by_task: MNEMOSYNE-121
+automatic_Replay_005_authorized: false
+current_decision_record: current/meta-agent-replay-mechanical-proof-decision.md
 ```
 
-Replay 003 证明，这种 path-only 启动方式会让仓库文件中的 REST URL 不一定被网页工具识别为用户显式提供的 URL。
+## 当前状态
 
-正确方式是：
+不要再使用本文件、Replay v4 package 或 v4 bootstrap 启动新的普通 Chat replay。
 
-1. PR 合并后打开：
-   - `handoff/meta-agent-regression-fresh-session-replay-bootstrap-v4.txt`
-2. 复制该文件的**全部内容**；
-3. 将全部内容作为一条用户消息粘贴到一段真正全新的 ChatGPT **Chat** 对话中；
-4. 不要在该消息前后附加旧 Mnemosyne 对话、旧 replay 回答或其他任务上下文。
+已完成的 fresh-session 证据是：
 
-## 推荐执行选择
+- Replay 002：五项行为 5/5 PASS，整体因机械覆盖不完整而 `BLOCKED`；
+- Replay 003：五项行为 5/5 PASS，整体因机械覆盖不完整而 `BLOCKED`；
+- Replay 004：literal bootstrap 成功进入用户消息，但 public endpoint 返回不完整且与已合并 PR 状态不一致的数据，因此在五项测试开始前正确 `BLOCKED`。
 
-- Mode：**Chat**，不使用 Work；
-- Preferred model：**GPT-5.6 Sol Pro**；
-- Intelligence/reasoning：Chat 中可用的最高档；
-- Fallback：最强的可见 GPT-5.6 Chat 模型及最高可见推理档位；
-- 必须记录实际可见标签，不推断隐藏模型或隐藏推理等级。
+Replay 004 证明，继续修改 URL、page 参数或 prompt 措辞不足以解决当前 ordinary Chat surface 的机械观测限制。
 
-## Replay 004 的变化
+## 下一步
 
-Canonical package：
+读取：
 
-- `handoff/meta-agent-regression-fresh-session-replay-package-v4.md`
+- `current/meta-agent-replay-mechanical-proof-decision.md`
 
-Literal bootstrap：
+在用户选择后，才能决定：
 
-- `handoff/meta-agent-regression-fresh-session-replay-bootstrap-v4.txt`
+1. 接受两次独立 5/5 行为恢复作为当前测试结果，同时保留机械 no-write gate 为 blocked；或
+2. 设计一个由外部 observer / local Git 环境提供 before/after 证据的最终运行。
 
-V4 保留五项行为测试和严格只读边界，并新增：
+## 禁止事项
 
-- exact endpoint URL 必须直接出现在用户首条消息；
-- 使用 Git matching refs 的 `heads/` 读取全部 branch refs；
-- 使用 all-state pull-request pages，避免新建后又关闭的 PR 从 open-only snapshot 中消失；
-- before/after 必须使用同一套 endpoint；
-- URL body 不可读、分页不完整、状态不一致或归因不明时仍必须 `BLOCKED`；
-- 不批准任何 no-write exception。
+在用户做出该选择前：
 
-## 中文简介
-
-Replay 002 与 Replay 003 都在五项行为判断上得到 5/5 PASS，但整体因机械无写入证明不完整而正确保持 BLOCKED。Replay 004 不是因为行为失败而重做，而是为了让 endpoint 作为用户显式输入进入网页工具，从而尝试完成同一次运行中的机械证明。
-
-完整结果仍必须带回当前 Mnemosyne 维护对话，由维护对话执行最终 Stage-B 复核。
+- 不生成或执行 Replay 005；
+- 不把 Replay 002/003 的 case PASS 提升为 package-level PASS；
+- 不把 Replay 004 解释为行为 FAIL；
+- 不批准 no-write exception；
+- 不修改执行源；
+- 不启动 Meta-Agent 产品构建、target workspace、材料摄入、target write 或 operational installation。
