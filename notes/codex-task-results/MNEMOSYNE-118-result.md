@@ -13,6 +13,7 @@ started_from:
     merged: true
     merge_commit: 158453bd7c6c4ee16704783d0a7b14e3500786ed
 branch: mnemosyne-118-single-active-pr-lineage-guard
+canonical_pr_number: 166
 user_decision_recorded: true
 user_authorization_context:
   - design and add a reasonable effective Mnemosyne guidance rule to prevent the PR-163/PR-164 duplicate-parallel-PR failure mode
@@ -88,7 +89,32 @@ github_write_lineage_recheck:
     matches: []
   parallel_variant_authorized: false
   decision: create_one_canonical_PR
-  canonical_pr_number: pending_creation
+```
+
+## Post-creation uniqueness check
+
+```yaml
+github_write_lineage_post_creation_check:
+  canonical_pr_number: 166
+  canonical_head_branch: mnemosyne-118-single-active-pr-lineage-guard
+  all_accessible_open_prs:
+    - 166
+  exact_task_id_matches:
+    - 166
+  other_related_open_prs: []
+  parallel_variant_authorized: false
+  exactly_one_canonical_open_PR: true
+```
+
+```yaml
+merge_instruction:
+  task_id: MNEMOSYNE-118
+  merge_target_pr: 166
+  merge_target_head_branch: mnemosyne-118-single-active-pr-lineage-guard
+  related_open_prs: []
+  closed_or_superseded_related_prs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
 
 ## Files created
@@ -133,10 +159,10 @@ Verified on `master@158453bd7c6c4ee16704783d0a7b14e3500786ed`:
 - repository and target-project writes remain prohibited;
 - the tested fresh conversation may not close the final gate.
 
-## Verification before result-record creation
+## Verification
 
 ```yaml
-branch_compare:
+branch_compare_before_result_record:
   base: master@158453bd7c6c4ee16704783d0a7b14e3500786ed
   head: mnemosyne-118-single-active-pr-lineage-guard
   ahead_by: 4
@@ -146,9 +172,19 @@ branch_compare:
     - commands/load-mnemosyne-guidance.md
     - current/github-single-active-pr-lineage-guard.md
     - handoff/startup-instructions.md
+
+branch_compare_after_initial_result_record:
+  ahead_by: 5
+  behind_by: 0
+  changed_files:
+    - README.md
+    - commands/load-mnemosyne-guidance.md
+    - current/github-single-active-pr-lineage-guard.md
+    - handoff/startup-instructions.md
+    - notes/codex-task-results/MNEMOSYNE-118-result.md
 ```
 
-A final compare and post-creation related-PR check are required after this result record and canonical PR are created.
+This annotation updates only the result record on the existing canonical PR head branch. A final compare follows before the user-facing merge instruction.
 
 ## Known limitations
 
@@ -159,4 +195,4 @@ A final compare and post-creation related-PR check are required after this resul
 
 ## Boundary
 
-MNEMOSYNE-118 does not authorize parallel PRs, merges, auto-merge, branch deletion, task-number reuse, target-project actions, Meta-Agent construction, automatic replay execution, global regression promotion, FABLE5-GREENFIELD continuation, or any repository write outside this task's branch and documented files.
+MNEMOSYNE-118 does not authorize parallel PRs, merges, auto-merge, branch deletion, task-number reuse, target-project actions, Meta-Agent construction, automatic replay execution, global regression promotion, FABLE5-GREENFIELD continuation, or any repository write outside this task's canonical branch and documented files.
