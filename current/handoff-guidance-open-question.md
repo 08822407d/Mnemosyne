@@ -6,6 +6,7 @@
 open_question_id: HO-GUIDANCE-001
 record_type: live_non_execution_source_open_question
 created_by_task: MNEMOSYNE-116
+latest_updated_by_task: MNEMOSYNE-117
 status: open_requires_deliberate_review
 user_decision_recorded: true
 settled_behavior:
@@ -22,6 +23,8 @@ unsettled_behavior:
   question: should_a_target_project_business_conversation_also_load_Mnemosyne_guidance
   current_answer: undecided
   universal_default_approved: false
+  required_task_local_field: yes | no | unknown_requires_user_decision
+  task_local_choice_is_global_precedent: false
 execution_source: current/human-approved-spec.md
 ```
 
@@ -51,12 +54,22 @@ execution_source: current/human-approved-spec.md
 
 ## 当前处理方式
 
-在该问题正式裁决前：
+在该问题正式裁决前，每一份目标项目业务交接包必须显式记录：
 
-- 目标项目业务交接包必须显式要求加载目标项目自己的确认约束；
-- 对是否额外加载 Mnemosyne 指导，交接包应标记 `unknown_requires_owner_or_policy_decision`，而不是静默假设；
+```yaml
+receiver_guidance_load:
+  project_guidance: required
+  mnemosyne_guidance: yes | no | unknown_requires_user_decision
+```
+
+并遵守：
+
+- `project_guidance` 不能被省略；
+- `mnemosyne_guidance` 不得静默推断；
+- `unknown_requires_user_decision` 表示该次交接在继续前需要明确的 task-local 决定；
+- 一次 `yes` 或 `no` 只适用于该次交接，不构成全局先例；
 - 不得仅因为 Mnemosyne 参与过设计，就把 Mnemosyne maintenance live state 当成目标项目业务对话的行动计划；
-- 若任务同时属于 Mnemosyne 维护或验证工作，可以基于该明确范围另行加载 Mnemosyne 指导。
+- 若任务本身同时属于 Mnemosyne 维护或验证工作，可以基于该明确范围另行加载 Mnemosyne 指导。
 
 ## 后续评估建议
 

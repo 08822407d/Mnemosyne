@@ -2,8 +2,8 @@
 
 ```yaml
 created_by_task: MNEMOSYNE-115
-latest_updated_by_task: MNEMOSYNE-116
-record_set_status: first_batch_formalized_definition_replay_completed_and_fresh_session_replay_prepared
+latest_updated_by_task: MNEMOSYNE-117
+record_set_status: first_batch_formalized_definition_replay_completed_and_reconciled_fresh_session_replay_ready
 authority_level: non_execution_source_target_specific_test_assets
 source_event: META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001
 execution_source: current/human-approved-spec.md
@@ -15,7 +15,7 @@ target_workspace: false
 
 This directory stores formal regression **specifications** derived from the Meta-Agent controlled no-target-write dry run. They are Mnemosyne test assets, not Meta-Agent product files, not a target workspace, and not execution source.
 
-Formalization means that each selected candidate now has a stable input package, expected recovery, forbidden claims, deterministic checks, judge checks, evidence paths, and result semantics. It does not authorize target workspace creation, target material ingestion, target repository write, operational build, automatic execution, or global rule promotion.
+Formalization means that each selected candidate has a stable input package, expected recovery, forbidden claims, deterministic checks, judge checks, evidence paths, and result semantics. It does not authorize target workspace creation, target material ingestion, target repository write, operational build, automatic execution, or global rule promotion.
 
 ## First formalized batch
 
@@ -32,15 +32,18 @@ Formalization means that each selected candidate now has a stable input package,
 - `REG-META-DRYRUN-003` remains conditional on a future explicitly approved material phase.
 - `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
 
-## Fresh-session behavioral replay
+## Canonical fresh-session behavioral replay
 
-MNEMOSYNE-116 prepares, but does not execute, the independent fresh-session behavioral replay:
+MNEMOSYNE-117 reconciles the parallel PR #163 / #164 implementations and designates:
 
-- replay package: `handoff/meta-agent-regression-fresh-session-replay-package.md`;
-- startup prompt: `handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md`.
+- canonical replay package: `handoff/meta-agent-regression-fresh-session-replay-package-v2.md`;
+- startup prompt: `handoff/meta-agent-regression-fresh-session-replay-startup-prompt.md`;
+- superseded package: `handoff/meta-agent-regression-fresh-session-replay-package.md`.
 
-The replay package explicitly requires the new conversation to receive the package, separately execute `加载 MNEMOSYNE 约束指导`, pin repository state, run the five cases using read-only evidence, and return mechanical before/after no-write proof. The tested conversation cannot close its own final gate.
+Use ordinary **Chat**, not Work, for the primary replay. Recommended model: **GPT-5.6 Sol Pro** with the highest available Chat reasoning; fallback to GPT-5.6 Sol with the highest available Chat reasoning. Record the exact visible labels.
+
+The v2 package requires explicit handoff receive, a separate `加载 MNEMOSYNE 约束指导` operation, pinned evidence, complete accessible branch/open-PR snapshots, strict read-only behavior, and return of the result for maintainer review. The tested conversation cannot close its own final gate.
 
 ## Execution note
 
-The recorded `definition_replay_result` validates each specification against repository evidence at `master@6d6d525a688a62d73665ff2062ac03292af53833`. It is not a fresh-session behavioral replay. A later user-approved fresh conversation must execute the prepared package and return the complete result for maintainer review.
+The recorded `definition_replay_result` validates each specification against repository evidence at `master@6d6d525a688a62d73665ff2062ac03292af53833`. It is not a fresh-session behavioral replay. A later fresh Chat conversation must execute the canonical v2 package and return the complete result for maintainer review.
