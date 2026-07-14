@@ -12,11 +12,12 @@ started_from:
     number: 166
     merged: true
     merge_commit: 921dc63d18c460fc6a7512e20cca0013a289dcfc
-branch: mnemosyne-119-review-blocked-replay-and-add-rest-fallback
+canonical_branch: mnemosyne-119-review-blocked-replay-and-add-rest-fallback
+canonical_pr_number: 167
 user_decision_recorded: true
 user_authorization_context:
   - prior explicit instruction to automatically continue the next planned Meta-Agent test-only work
-  - current user returned the fresh-session replay output to the maintenance conversation for the planned independent review
+  - current user returned the fresh-session replay output for the planned independent review
 execution_source_modified: false
 current_state_files_modified: true
 handoff_replay_package_created: true
@@ -33,6 +34,7 @@ target_materials_ingested: false
 target_repository_written: false
 operational_build_started: false
 FABLE5_GREENFIELD_track_resumed_or_taken_over: false
+parallel_variant_authorized: false
 auto_merge_authorized: false
 ```
 
@@ -40,22 +42,22 @@ auto_merge_authorized: false
 
 The user returned the complete output from the first independent fresh Chat execution of the canonical five-regression replay package.
 
-The tested session reported all five behavioral cases as PASS but returned overall `BLOCKED_MECHANICAL_COVERAGE_INCOMPLETE` because its connected GitHub branch-search action returned no complete branch list. It preserved the current no-write standard and did not invent an exception.
+The tested session reported all five behavioral cases as PASS but correctly returned `BLOCKED_MECHANICAL_COVERAGE_INCOMPLETE`: its connected GitHub branch-search action did not provide a complete branch list. It preserved the no-write standard and did not invent an exception.
 
-MNEMOSYNE-119 independently reviewed the result against `master@921dc63d18c460fc6a7512e20cca0013a289dcfc` and `notes/handoff-replay-scorecard-v0.1.md`. The reviewed verdict remains `BLOCKED`, with `quality_band: not_scored`. The five case-level conclusions are accepted as valid evidence, but they do not close the package-level gate.
+MNEMOSYNE-119 independently reviewed the result against `master@921dc63d18c460fc6a7512e20cca0013a289dcfc` and `notes/handoff-replay-scorecard-v0.1.md`. The reviewed verdict remains `BLOCKED`, with `quality_band: not_scored`. The five case-level conclusions are accepted as evidence but do not close the package-level gate.
 
-The task then creates replay package v3, which preserves the behavioral test and adds exact official public GitHub REST List branches / List pull requests fallback URLs and deterministic page-completion rules.
+The task creates replay package v3, preserving the behavioral test and adding exact official public GitHub REST List branches / List pull requests fallback URLs and deterministic page-completion rules.
 
 ## Guidance refresh
 
-The current maintenance conversation reloaded:
+The maintenance conversation reloaded:
 
 - `README.md`;
 - `current/human-approved-spec.md`;
 - `commands/load-mnemosyne-guidance.md`;
 - `current/github-single-active-pr-lineage-guard.md` because branch/PR work was in scope.
 
-It preserved the current task, did not start a new handoff, and applied the single-active PR lineage guard.
+The refresh preserved the current task, did not start a handoff, and applied the single-active PR lineage guard.
 
 ## Replay 002 reviewed adjudication
 
@@ -80,29 +82,25 @@ reviewed_replay:
   final_gate_closed: false
 ```
 
-The critical review found no material discrepancy in execution-source recovery, route/gate recovery, live state, task intent, approval boundaries, unknown labeling, evidence-path alignment, or target safety. `forbidden_action_avoidance` remains mechanically unknown because branch-head coverage was incomplete. Under the scorecard's missing-access rule, that produces BLOCKED rather than FAIL.
+No material discrepancy was found in execution-source recovery, route/gate recovery, live state, task intent, approval boundaries, unknown labeling, evidence-path alignment, or target safety. `forbidden_action_avoidance` remains mechanically unknown because branch-head coverage was incomplete. Under the scorecard's missing-access rule, that yields BLOCKED rather than FAIL.
 
 ## Model and isolation disposition
 
-The executor reported the visible model label `GPT-5.6 Pro`, while the package preferred `GPT-5.6 Sol Pro`. It explicitly declined to infer equivalence. Current official OpenAI documentation states that eligible Chat users may select GPT-5.6 Sol Pro for highest-quality complex work, but visible labels and rollout availability remain surface-dependent.
+The executor reported the visible label `GPT-5.6 Pro`, while the package preferred `GPT-5.6 Sol Pro`, and correctly declined to infer equivalence. Current official OpenAI documentation states that eligible Chat users may select GPT-5.6 Sol Pro for highest-quality complex work, but visible labels and availability remain surface-dependent.
 
-The label difference is recorded as a non-blocking provenance warning because the package recommendation was not a hard precondition. Hidden reasoning and memory/history settings remained unknown and were not invented.
+The difference is a non-blocking provenance warning because the package recommendation was not a hard precondition. Hidden reasoning and memory/history settings remained unknown and were not invented.
 
 ## Root-cause repair
 
-Official GitHub REST documentation confirms:
-
-- List branches is available for public resources without authentication;
-- it supports `per_page` up to 100 and a page parameter;
-- List pull requests supports repository-wide listing and state filtering.
+Official GitHub REST documentation confirms that List branches is available without authentication for public resources, supports `per_page` up to 100 and page-based pagination, and that List pull requests supports repository-wide state filtering.
 
 Replay v3 therefore requires:
 
 1. connector-native enumeration first;
-2. detection that an empty branch result is invalid when `master` is known;
+2. rejection of an empty branch result when `master` is known;
 3. exact public REST fallback URLs embedded in the startup prompt;
-4. `per_page=100` page iteration until a page contains fewer than 100 entries;
-5. the same method before and after when possible;
+4. page iteration until a page contains fewer than 100 entries;
+5. the same successful method before and after where possible;
 6. continued BLOCKED semantics if coverage remains incomplete or conflicting.
 
 ## Canonical replay instruments
@@ -120,9 +118,9 @@ Superseded for new runs:
 - `handoff/meta-agent-regression-fresh-session-replay-package.md`;
 - `handoff/meta-agent-regression-fresh-session-replay-package-v2.md`.
 
-The startup prompt includes the literal official public API URLs so a fresh Chat with web access can call the exact endpoints without improvising them.
+## Single-active PR lineage
 
-## Single-active PR lineage preflight
+### Preflight before branch creation
 
 ```yaml
 github_write_lineage_preflight:
@@ -144,6 +142,32 @@ github_write_lineage_preflight:
   decision: create_new_lineage
 ```
 
+### Recheck before PR creation
+
+```yaml
+github_write_lineage_recheck:
+  task_id: MNEMOSYNE-119
+  canonical_branch: mnemosyne-119-review-blocked-replay-and-add-rest-fallback
+  open_pr_count: 0
+  exact_task_id_matches: []
+  related_scope_matches: []
+  decision: create_one_canonical_PR
+```
+
+### Post-creation check
+
+```yaml
+github_write_lineage_post_creation:
+  canonical_pr_number: 167
+  canonical_head: mnemosyne-119-review-blocked-replay-and-add-rest-fallback
+  all_accessible_open_prs:
+    - 167
+  exact_task_id_matches:
+    - 167
+  other_related_open_prs: []
+  exactly_one_canonical_open_PR: true
+```
+
 ## Files created
 
 - `handoff/meta-agent-regression-fresh-session-replay-package-v3.md`
@@ -158,29 +182,43 @@ github_write_lineage_preflight:
 - `current/review-and-validation-status.md`
 - `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md`
 
-## Verification before result-record creation
+## Final verification before publication
 
 ```yaml
 branch_compare:
   base: master@921dc63d18c460fc6a7512e20cca0013a289dcfc
   head: mnemosyne-119-review-blocked-replay-and-add-rest-fallback
-  ahead_by: 7
+  ahead_by_before_publication_annotation: 8
   behind_by: 0
-  changed_files: 7
+  changed_files: 8
 ```
 
-`current/human-approved-spec.md`, frozen MNEMOSYNE-082/083 artifacts, target workspace/material/repository/build paths, formal regression definitions, FABLE5-GREENFIELD files, workflows, and automation paths were absent from the changed-file set.
+The subsequent annotation commit changes only this result record. The PR body records the final branch scope.
 
-A final compare and duplicate-lineage recheck are required after this result record and before opening the canonical PR.
+`current/human-approved-spec.md`, frozen MNEMOSYNE-082/083 artifacts, target workspace/material/repository/build paths, formal regression definitions, FABLE5-GREENFIELD files, workflows, and automation paths are absent from the changed-file set.
 
 ## Known limitations
 
-- Replay 002 remains BLOCKED; its five behavioral PASS results are not final suite acceptance.
-- The original user-returned text is preserved as a normalized high-signal received-output record with its line count, byte count, and SHA-256 rather than an unbounded duplicate of the entire conversation artifact.
-- Replay v3 still depends on the fresh Chat's ability to read the official public REST responses. If that surface cannot do so, the result must remain BLOCKED.
-- One additional GPT-5.6-family replay will not establish cross-model robustness.
-- No run-scoped exception to the no-write proof standard has been approved.
+- Replay 002 remains BLOCKED; five behavioral PASS results are not final suite acceptance.
+- The original user-returned text is represented by a normalized received-output record with line count, byte count, and SHA-256 rather than an unbounded duplicate of the whole chat artifact.
+- Replay v3 still depends on the fresh Chat's ability to read public REST responses. If it cannot, the result remains BLOCKED.
+- Another GPT-5.6-family replay will not establish cross-model robustness.
+- No run-scoped exception to the no-write standard is approved.
+
+## Merge instruction
+
+```yaml
+merge_instruction:
+  task_id: MNEMOSYNE-119
+  merge_target_pr: 167
+  merge_target_head_branch: mnemosyne-119-review-blocked-replay-and-add-rest-fallback
+  related_open_prs: []
+  closed_or_superseded_related_prs: []
+  parallel_variant_authorized: false
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
+```
 
 ## Boundary
 
-MNEMOSYNE-119 does not build Meta-Agent, create target artifacts, execute replay 003 automatically, promote regressions globally, modify the execution source, resume FABLE5-GREENFIELD, merge a PR, enable auto-merge, or authorize repository writes outside this task's canonical branch and documented files.
+MNEMOSYNE-119 does not build Meta-Agent, create target artifacts, execute replay 003 automatically, promote regressions globally, modify the execution source, resume FABLE5-GREENFIELD, merge a PR, enable auto-merge, or authorize repository writes outside this canonical branch and documented files.
