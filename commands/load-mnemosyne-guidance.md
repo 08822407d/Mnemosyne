@@ -37,6 +37,10 @@ Read or ask the user to provide:
 - `current/human-approved-spec.md`
 - this command file, if available
 
+When the current task may create or update a GitHub branch or pull request, also read:
+
+- `current/github-single-active-pr-lineage-guard.md`
+
 Read additional files only when the current local task independently requires them, for example:
 
 - relevant platform guides when platform/model/tool facts are part of the local task;
@@ -70,7 +74,8 @@ If any of those files are read for a separate explicit task, treat their mainten
 12. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
 13. Do not infer that the user wants handoff merely because this command was invoked.
 14. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
-15. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
+15. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
+16. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
 
@@ -93,6 +98,7 @@ mnemosyne_guidance_refresh:
     - staged_prompt_generation_when_relevant
     - visibility_and_manual_import_safety_when_relevant
     - platform_freshness_check_when_relevant
+    - single_active_pr_lineage_when_repository_write_is_relevant
 ```
 
 Do not report Mnemosyne maintenance current phase, current active task, paused route, or next-route options as the receiving conversation's local task state merely because this command was invoked.
@@ -104,5 +110,6 @@ Do not report Mnemosyne maintenance current phase, current active task, paused r
 - This command does not approve new design content.
 - This command does not authorize edits, automation, MCP, RAG, auto-writeback, or changes outside the user-approved task scope.
 - This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
+- Loading the single-active PR lineage guard does not itself authorize branch creation, PR creation, parallel PRs, merges, or task-number reuse.
 - This command does not authorize importing Mnemosyne maintenance live route into the current conversation.
 - This command does not start handoff. No handoff exists unless the user explicitly provides or requests an artifact-mediated handoff through the separate prepare/receive workflow.
