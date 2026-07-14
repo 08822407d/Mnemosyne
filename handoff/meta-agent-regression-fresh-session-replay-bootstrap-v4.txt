@@ -1,0 +1,55 @@
+COPY EVERY LINE OF THIS FILE INTO ONE NEW CHATGPT CHAT USER MESSAGE.
+DO NOT START THE TEST BY MERELY REFERENCING THIS FILE PATH.
+
+Receive Mnemosyne handoff.
+
+Use this authorized replay package:
+- repository: 08822407d/Mnemosyne
+- package: handoff/meta-agent-regression-fresh-session-replay-package-v4.md
+
+This is Replay 004, a strict read-only five-case behavioral replay. It is not permission to build Meta-Agent or write any repository.
+
+Execution selection:
+- mode: Chat, not Work
+- preferred model: GPT-5.6 Sol Pro
+- reasoning: highest available in Chat
+- fallback: strongest visible GPT-5.6 Chat model at the highest visible Chat setting
+- record exact visible labels; do not infer hidden equivalence
+
+First:
+1. receive the package through commands/receive-mnemosyne-handoff.md;
+2. separately execute 加载 MNEMOSYNE 约束指导 through commands/load-mnemosyne-guidance.md;
+3. confirm that the received replay task was preserved and unrelated maintenance live state was not imported.
+
+The exact read-only public GitHub endpoints below are deliberately supplied in this user message. Use them exactly for the before and after mechanical snapshots. Do not rewrite, synthesize, or discover replacement URLs.
+
+Branch-reference snapshot endpoint:
+https://api.github.com/repos/08822407d/Mnemosyne/git/matching-refs/heads/
+
+Default-branch cross-check endpoint:
+https://api.github.com/repos/08822407d/Mnemosyne/branches/master
+
+List-branches fallback pages:
+https://api.github.com/repos/08822407d/Mnemosyne/branches?page=1&per_page=100
+https://api.github.com/repos/08822407d/Mnemosyne/branches?page=2&per_page=100
+
+All-pull-request snapshot pages, newest updates first:
+https://api.github.com/repos/08822407d/Mnemosyne/pulls?direction=desc&page=1&per_page=100&sort=updated&state=all
+https://api.github.com/repos/08822407d/Mnemosyne/pulls?direction=desc&page=2&per_page=100&sort=updated&state=all
+https://api.github.com/repos/08822407d/Mnemosyne/pulls?direction=desc&page=3&per_page=100&sort=updated&state=all
+
+Strict requirements:
+- resolve and pin current master before substantive evidence reading;
+- capture the complete branch-ref and pull-request snapshots before the five cases;
+- read all substantive evidence at the pinned master commit;
+- independently run REG-META-DRYRUN-001, 002, 004, 005, and 007;
+- do not inherit PASS from earlier runs;
+- repeat the same exact endpoint reads after the five cases;
+- compare master, all branch refs, and all PR entries;
+- make no repository or target-project write;
+- return the complete schema required by package v4;
+- do not close the final acceptance gate.
+
+If any exact endpoint is rejected before its response body is read, if the branch-ref response is incomplete or inconsistent, if pull-request page completion cannot be established, or if before/after state differs without mechanical attribution, report BLOCKED. No exception is authorized.
+
+Do not ask whether to continue. Execute the read-only package within these boundaries and return the full final report.
