@@ -13,6 +13,7 @@ started_from:
     merged: true
     merge_commit: 84583ab80cd56a8215458aecb659194dda1034b1
 branch: mnemosyne-120-review-replay003-and-fix-user-message-bootstrap
+canonical_pr_number: 168
 user_decision_recorded: true
 user_authorization_context:
   - prior explicit instruction to automatically continue the next planned Meta-Agent test-only work
@@ -101,14 +102,14 @@ This materially strengthens the behavioral evidence. It does not authorize gate 
 
 ## Root-cause diagnosis
 
-Replay 003 confirmed two separate instrumentation limitations:
+Replay 003 confirmed two instrumentation limitations:
 
 1. the connected GitHub branch enumeration returned zero entries even though `master` was independently known;
 2. the public REST response bodies could not be read because the URL requests were rejected before response access.
 
 The v3 startup instructions contained the URLs inside a repository file. The actual fresh-session startup invoked that file by path. The next repair therefore places every required endpoint literally in the user's first message.
 
-GitHub's official reference API documents that matching `heads/...` refs returns the matching branch references and can be used without authentication for public resources. V4 uses this endpoint as the primary branch-ref snapshot.
+GitHub's official reference API documents that matching `heads/...` refs returns matching branch references and can be used without authentication for public resources. V4 uses this endpoint as the primary branch-ref snapshot.
 
 ## Replay 004 instruments
 
@@ -136,7 +137,7 @@ V4 requires:
 
 A path-only invocation is explicitly invalid for Replay 004.
 
-## Single-active PR lineage preflight
+## Single-active PR lineage
 
 ```yaml
 github_write_lineage_preflight:
@@ -151,6 +152,23 @@ github_write_lineage_preflight:
   equivalent_scope_matches_before_branch_creation: []
   parallel_variant_authorized: false
   decision: create_new_lineage
+
+github_write_lineage_recheck_before_PR:
+  all_accessible_open_PRs: []
+  exact_task_id_matches: []
+  intended_head_matches: []
+  equivalent_scope_matches: []
+  decision: create_one_canonical_PR
+
+github_write_lineage_post_creation:
+  canonical_pr_number: 168
+  all_accessible_open_PRs:
+    - 168
+  exact_task_id_matches:
+    - 168
+  other_related_open_PRs: []
+  parallel_variant_authorized: false
+  exactly_one_merge_target: true
 ```
 
 ## Files created
@@ -168,21 +186,24 @@ github_write_lineage_preflight:
 - `current/review-and-validation-status.md`
 - `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/formal-regression-records/README.md`
 
-## Verification before final PR creation
+## Verification
 
 - PR #167 was verified merged at `84583ab80cd56a8215458aecb659194dda1034b1`.
 - Current `master` was identical to that merge commit before branch creation.
 - The canonical branch was created from that exact commit.
 - Every write targeted only the canonical MNEMOSYNE-120 branch.
+- Pre-annotation branch compare: `ahead_by: 9`, `behind_by: 0`, `changed_files: 9`.
+- Canonical PR #168 was created from the documented head/base pair.
+- Post-creation enumeration returned only PR #168 as open, and exact task-ID search returned only PR #168.
 - `current/human-approved-spec.md` is intentionally unchanged.
 - Formal regression definition files are intentionally unchanged.
 - Frozen MNEMOSYNE-082/083 artifacts, target workspace/material/repository/build paths, FABLE5-GREENFIELD files, workflows, and automation paths are outside the changed scope.
-- A final branch comparison and duplicate-lineage recheck are required after this result record and before opening the canonical PR.
+- This final annotation modifies only this result record; the PR body records the final post-annotation branch comparison.
 
 ## Known limitations
 
 - Replay 003 remains package-level `BLOCKED`; 5/5 behavioral evidence is not final acceptance.
-- Replay 004 still depends on the fresh Chat surface being able to read the exact URLs supplied directly by the user. If not, it must remain `BLOCKED`.
+- Replay 004 still depends on the fresh Chat surface being able to read exact URLs supplied directly by the user. If not, it must remain `BLOCKED`.
 - Two GPT-5.6-family fresh runs do not establish heterogeneous-model robustness.
 - No run-scoped no-write exception is approved.
 
