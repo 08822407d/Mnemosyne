@@ -10,4 +10,6 @@ Mnemosyne 是一个用于设计、演化和交付 AI Agent 外部持久记忆系
 
 当前 review / validation wayfinding：`current/review-and-validation-status.md`。该文件不是执行源；`current/human-approved-spec.md` 仍是唯一执行源。
 
+GitHub repository-writing 单任务单活跃 PR 谱系防护：`current/github-single-active-pr-lineage-guard.md`。该文件是用户批准的行为防护与操作指南，不是独立执行源。
+
 Post-MNEMOSYNE-113 新维护对话交接入口：`handoff/mnemosyne-post-113-maintenance-options-handoff-package.md`。配套 startup prompt：`handoff/mnemosyne-post-113-maintenance-next-conversation-startup-prompt.md`。两者均不是执行源。
