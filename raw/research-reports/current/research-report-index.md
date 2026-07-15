@@ -1,8 +1,8 @@
 # Current Research Report Index / 当前研究报告索引（派生视图）
 
 > 说明：本文件是 current 派生视图，不是原件存储位置。  
-> 当前激活轮次来源：`RC-2026Q2-initial`；补充当前证据轮次：`RC-2026Q2-memory-testing`。  
-> 原件保存在 `raw/research-reports/cycles/2026Q2-initial/originals/`。
+> 当前激活轮次来源：`RC-2026Q2-initial`；补充当前证据轮次：`RC-2026Q2-memory-testing`、`RC-2026Q2-handoff-strategy`、`RC-2026Q2-user-input-governance`、`RC-2026Q2-first-target-dry-run-evaluation`、`RC-2026Q3-platform-context-apps-delta`。  
+> 原件保存在各 cycle 的 `originals/` 目录。
 
 ## 当前激活轮次
 
@@ -14,6 +14,21 @@
 - status: supplemental_current_evidence_cycle
 - total_reports: 1
 
+- cycle_id: RC-2026Q2-handoff-strategy
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
+
+- cycle_id: RC-2026Q2-user-input-governance
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
+
+- cycle_id: RC-2026Q2-first-target-dry-run-evaluation
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
+
+- cycle_id: RC-2026Q3-platform-context-apps-delta
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
 
 ## 研究动机入口
 
@@ -24,8 +39,9 @@
 - current prompts: `raw/research-reports/current/current-research-prompts.md`
 - prompt index: `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`
 - report-topic map: `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
+- latest platform-delta motivation: `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/research-cycle-origin-and-motivation.md`
 
-这些文件属于 research prompt / topic mapping 层，不是执行源，也不是研究报告结果。Prompt 是研究输入；report / summary / evidence map 是研究结果或派生证据。缺失的轻度研究 prompt 不得编造。
+这些文件属于 research prompt / topic mapping 层，不是执行源，也不是研究报告结果。Prompt 是研究输入；report / summary / evidence map 是研究结果或派生证据。缺失的 prompt 不得编造。
 
 ## 报告索引
 
@@ -39,7 +55,6 @@
 | RPT-2026Q2-0006 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 5：外部持久记忆的理论与工程依据.pdf | light | 外部持久记忆理论与工程依据 | 支撑“外部文件/Git 作为长期真相源”的理论与工程正当性 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
 | RPT-2026Q2-0007 | raw/research-reports/cycles/2026Q2-initial/originals/轻度研究子课题 6：开发场景的持久记忆经验能否迁移到普通长期对话和学习场景.pdf | light | 开发场景经验向普通长期对话/学习迁移 | 约束“跨场景迁移”策略、可复用程度与必要改造项 | yes | PDF：文本可能可读，图表/图片/版式信息需人工复核 |
 
-
 ## Supplemental current evidence cycle: RC-2026Q2-memory-testing
 
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
@@ -48,21 +63,11 @@
 
 ## Supplemental current evidence cycle — RC-2026Q2-handoff-strategy
 
-- cycle_id: RC-2026Q2-handoff-strategy
-- status: supplemental_current_evidence_cycle
-- total_reports: 1
-- positioning: research evidence only; not execution source
-
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
-| RPT-2026Q2-HO-0001 | raw/research-reports/cycles/2026Q2-handoff-strategy/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_report.md | deep_research | Mnemosyne handoff package strategy and quantitative evaluation | Evidence for correct handoff definition, quantitative handoff scoring, handoff package tiering, replay/test protocol, model/tool provenance, and pre-first-target-dry-run handoff readiness | yes | Markdown report original; summary available at raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md. Research evidence only, not execution source. |
+| RPT-2026Q2-HO-0001 | raw/research-reports/cycles/2026Q2-handoff-strategy/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_report.md | deep_research | Mnemosyne handoff package strategy and quantitative evaluation | Evidence for correct handoff definition, quantitative handoff scoring, handoff package tiering, replay/test protocol, model/tool provenance, and pre-first-target-dry-run handoff readiness | yes | Markdown report original; summary available at `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md`. Research evidence only, not execution source. |
 
 ## Supplemental current evidence cycle: RC-2026Q2-user-input-governance
-
-- cycle_id: RC-2026Q2-user-input-governance
-- status: supplemental_current_evidence_cycle
-- total_reports: 1
-- positioning: research evidence only; not execution source
 
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
@@ -77,3 +82,9 @@
 - summary_path: `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/report-summaries/DR5_first_real_target_dry_run_evaluation_framework_summary.md`
 - execution_source_status: not_execution_source
 - use: supplemental evidence for first real target-project dry-run evaluation, scorecard, postmortem, and regression test design.
+
+## Supplemental current evidence — RC-2026Q3-platform-context-apps-delta
+
+| report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
+|---|---|---|---|---|---|---|
+| RPT-2026Q3-PLATFORM-DELTA-0001 | `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/originals/DR6_2026Q3_platform_memory_apps_capability_delta_report.md` | deep_research | Project memory, apps/plugins, GitHub, Deep Research, Work/Codex/Agent, provenance, no-write and artifact/handoff delta | Current evidence for platform/surface boundaries and staged workflow repair | yes_with_maintainer_corrections | Markdown original; summary and maintainer review available in the same cycle. Opaque Deep Research citation tokens have limited portability; use `source-manifest.md` for load-bearing URLs. |
