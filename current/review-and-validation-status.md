@@ -50,6 +50,7 @@ meta_agent_test_route_after_MNEMOSYNE_122:
     PR_167_merge: 84583ab80cd56a8215458aecb659194dda1034b1
     PR_168_merge: 48901f3407689cf46da62cd789509b753093cb36
     PR_169_merge: 714c54ffdb7e5899ef3cac20084bcd82d4db022c
+    PR_172_merge: 01beb03e1f6c4cafc34cfddbf04178a79a21830c
   formalized_ids:
     - REG-META-DRYRUN-001
     - REG-META-DRYRUN-002
@@ -78,6 +79,35 @@ meta_agent_test_route_after_MNEMOSYNE_122:
   current_path: behavioral_campaign_complete_optional_future_observer_assisted_mechanical_proof
   mechanical_proof_decision: current/meta-agent-replay-mechanical-proof-decision.md
   automatic_additional_ordinary_Chat_replay_authorized: false
+
+platform_context_apps_delta_after_MNEMOSYNE_123:
+  current_status: current/platform-context-apps-delta-status.md
+  cycle_id: RC-2026Q3-platform-context-apps-delta
+  report_id: RPT-2026Q3-PLATFORM-DELTA-0001
+  ingestion_verdict: ACCEPT_WITH_CORRECTIONS
+  evidence_role: supplemental_current_research_evidence
+  execution_source_modified: false
+  key_corrections:
+    issue_170: long_artifact_file_first_delivery
+    issue_171: low_risk_requested_artifact_not_generated_immediately
+    HO_GUIDANCE_001: target_project_business_conversation_additional_Mnemosyne_guidance_scope
+  current_high_signal:
+    - strict_cleanroom_requires_new_Project_only_Project
+    - app_plugin_auth_sync_permission_invocation_and_task_authority_are_distinct
+    - GitHub_auth_and_sync_are_distinct
+    - Deep_Research_connected_app_actions_are_read_only
+    - synced_app_data_can_interact_with_Memory
+    - connector_search_is_not_complete_enumeration
+    - visible_model_label_is_not_complete_runtime_attestation
+    - no_write_evidence_should_be_layered
+  report_limitations:
+    - connected_apps_not_used_by_report
+    - repository_read_manifest_limited_to_README_and_Issues_170_171
+    - opaque_Deep_Research_citation_markers_not_portable
+  next_recommended_task:
+    candidate_id: MNEMOSYNE_124
+    name: artifact_delivery_and_direct_low_risk_generation_repair
+    requires_explicit_user_approval_for_execution_source_update: true
 
 handoff_guidance_after_MNEMOSYNE_118:
   execution_source_rule: current/human-approved-spec.md#15-交接与续接正确性原则
@@ -119,20 +149,31 @@ open_workflow_issues:
 
 Replays 002–004 remain useful diagnostic records but are no longer described as strict independent cleanroom evidence. The current cleanroom replay supersedes them for behavioral acceptance.
 
+## DR6 platform/context/apps delta outcome
+
+- DR6 was received as a 271-line, 46,635-byte Markdown report with SHA-256 `ea38e5db121d18af55533c8f8671c150ad401b5c9dfa3c3b81bc9b905dde8d06`.
+- It is ingested as current supplemental research evidence, not execution source.
+- Maintainer review independently rechecked the most load-bearing OpenAI facts.
+- The original report is preserved unchanged; summary/current views correct its Issue #171 mapping error.
+- The report's external platform findings are useful; exact repository-state mappings rely on the maintainer review because the report did not use connected apps and listed only README/Issues #170/#171 as repository reads.
+- Candidate repairs remain staged and require separate user approval where execution-source changes are involved.
+
 ## Conversation handoff boundary
 
 - The resumed Meta-Agent route remains regression hardening and replay validation for Mnemosyne, not Meta-Agent product construction.
 - Behavioral and mechanical results remain separate.
 - A future observer-assisted proof run requires a new explicit task; it is not the automatic next step.
+- DR6 does not automatically change the execution source or close workflow issues.
 
 ## Current boundaries and incomplete work
 
 - Five target-specific regression specifications remain formalized; none is promoted into the execution source or an automatic global rule.
-- `REG-META-DRYRUN-003` remains conditional on a later explicitly approved material phase.
-- `REG-META-DRYRUN-006` remains deferred until more real Meta-Agent feedback exists.
 - Cleanroom behavioral validation is complete at 5/5 PASS.
 - Complete mechanical no-write proof remains unavailable.
+- DR6 platform evidence has been ingested with corrections.
+- Issues #170 and #171 remain open pending an explicit repair task.
+- `HO-GUIDANCE-001` remains unresolved and is separate from Issue #171.
 - No target workspace, target material, target repository write, or operational build has occurred.
 - Meta-Agent product-development subroutes remain unselected and unauthorized.
 - FABLE5-GREENFIELD-001 remains separate and incomplete.
-- ChatGPT Work guidance remains candidate guidance, not execution source.
+- ChatGPT Work guidance remains candidate guidance pending DR6-informed refresh.

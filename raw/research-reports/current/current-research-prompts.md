@@ -4,15 +4,14 @@
 
 本文件是 current 派生视图，用于索引当前激活研究轮次的 research prompts / prompt availability。
 
-- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental); RC-2026Q2-user-input-governance (supplemental)
+- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental); RC-2026Q2-handoff-strategy (supplemental); RC-2026Q2-user-input-governance (supplemental); RC-2026Q2-first-target-dry-run-evaluation (supplemental); RC-2026Q3-platform-context-apps-delta (supplemental)
 - 本文件不是执行源；
 - 当前执行源仍是 `current/human-approved-spec.md`；
 - prompt 原文是研究输入，不是研究报告结果；
 - pro prompt 原文当前可用；
 - 6 个用户找回的轻度研究 prompt 原文当前可用；
-- 原始 prompt 文件位于 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/`；
-- prompt index 位于 `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`；
-- report-topic mapping 位于 `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
+- 原始 prompt 文件位于各 cycle 的 `research-prompts/originals/`；
+- prompt index 与 report-topic mapping 位于各 cycle 目录；
 - prompt 是 research input，不是 report conclusion 或 execution source。
 
 ## Current Prompt Index
@@ -32,8 +31,7 @@
 
 - MNEMOSYNE-038 已将 `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007` 从 missing status 更新为 available recovered originals。
 - 如 prompt 与 report / summary / motivation 存在差异，可登记 delta / review note；但 prompt 本身不作为研究结论或执行源。
-
-- MNEMOSYNE-040 normalized and indexed DR1 memory-testing prompt under supplemental cycle `RC-2026Q2-memory-testing`.
+- MNEMOSYNE-040 normalized and indexed DR1 memory-testing prompt under supplemental cycle `RC-2026Q2-memory-testing`。
 
 ## PROMPT-2026Q2-HO-0001 — DR2 handoff strategy / 交接包策略量化研究
 
@@ -62,3 +60,15 @@ note: Research input only; not a report conclusion and not execution source. Thi
 | prompt_id | related_report_id | prompt_status | prompt_file | topic_title | notes |
 |---|---|---|---|---|---|
 | PROMPT-2026Q2-FTDRE-0001 | RPT-2026Q2-FTDRE-0001 | original_available | `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/research-prompts/originals/DR5_v2_first_real_target_dry_run_evaluation_framework_prompt.md` | DR5 first real target-project dry-run evaluation framework | Prompt is research input/provenance, not report evidence or execution source. |
+
+## Supplemental prompt — DR6 2026Q3 platform/context/apps delta
+
+| prompt_id | related_report_id | prompt_status | prompt_file | topic_title | notes |
+|---|---|---|---|---|---|
+| PROMPT-2026Q3-PLATFORM-DELTA-0001 | RPT-2026Q3-PLATFORM-DELTA-0001 | original_available | `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/research-prompts/originals/DR6_2026Q3_platform_memory_apps_capability_delta_prompt.md` | Project memory, apps/plugins, GitHub, Deep Research, Work/Codex/Agent, provenance, no-write and handoff delta | Research input only; report accepted with corrections by MNEMOSYNE-123. |
+
+## DR6 review notes
+
+- DR6 report-level Deep Research citation markers may not resolve in GitHub; use the cycle `source-manifest.md` for load-bearing official URLs.
+- 有依赖关系的后续 Deep Research 应遵守 §17 分阶段生成，不一次性启动全部下游课题。
+- DR6 prompt and report do not close Issues #170/#171, resolve `HO-GUIDANCE-001`, or modify the execution source.
