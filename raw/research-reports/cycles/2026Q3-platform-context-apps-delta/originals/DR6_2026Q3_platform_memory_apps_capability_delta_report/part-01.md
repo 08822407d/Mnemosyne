@@ -1,0 +1,46 @@
+# 2026Q3 AI Agent 平台、项目记忆、Apps、GitHub 与工作模式能力增量研究
+
+## 执行摘要与研究方法
+
+本报告以 **2026 年 7 月 15 日** 可公开核验的信息为准，围绕 ChatGPT Projects、memory、connected apps、GitHub 集成、Deep Research、ChatGPT Work、Codex、Agent mode，以及这些能力对 **Mnemosyne 的外部持久记忆、跨对话交接、cleanroom 测试与可审计工作流** 的影响，做一次面向 2026Q3 的增量梳理。研究优先采用 OpenAI Help Center、OpenAI Developers、GitHub 官方文档、Anthropic/Google/Microsoft/Cursor 官方文档，以及 Mnemosyne 公共仓库材料与 Issue 记录；其中 OpenAI 的关键页面大多在过去数小时到数日内更新，例如 Projects、Deep research、Apps、Work and Codex、Plugins、Developer mode/MCP 等页面都属于近期状态说明。citeturn9view0turn9view2turn15view0turn13view0turn13view2turn15view1turn9view4
+
+先给结论。**对 Mnemosyne 最重要的现实增量，不是某个单独功能，而是“上下文边界、插件/应用授权边界、GitHub 授权边界、以及任务当次 authority”已经被产品层明确拆开了。** 官方文档已经足够支持下面四个高权重判断：其一，**Project-only memory 只能在新建 project 时设置，旧项目不能原地切换**；其二，**同一 project 内的聊天互相可见，但 default memory 与 project-only 在“是否可引用项目外上下文”上差异显著，且这件事还依 plan 而变**；其三，**GitHub repository authorization、是否启用 sync、某个 surface 能否调用 GitHub、以及当前任务是否被授权写入，是四件不同的事**；其四，**Deep Research 当前官方明示只会使用 connected apps 的 read actions，不会在 research 过程中调用 app write actions**。这四点直接推翻或部分推翻了 2026Q2 阶段一些“把 project、app、GitHub 和任务 authority 混在一起”的假设。citeturn10view0turn11view0turn11view2turn32view0turn11view4turn10view5
+
+对 Mnemosyne 来说，最关键的实务结论有五条。第一，**要做 strict fresh-session / cleanroom 测试，默认应该新建 private project，并在创建时直接选 Project-only memory；不要继续沿用旧 default-memory project。** 第二，**长跨对话 transfer artifact 应优先文件化交付**，Issue #170 记录的问题与当前产品行为一起看，已经足以把“默认文件优先”上升为候选修复方向。第三，**Chat / Project Chat / Work / Deep Research / Agent / Codex 应当被当作不同证据级别、不同风险级别的 surface，而不是“同一个 ChatGPT 换个按钮”。** 第四，**“visible model label”与“底层真实模型/回退模型/具体 reasoning effort”并不等价**，因此 provenance 必须记录 UI 观察事实、surface、picker 标签、usage/fallback 条件和工具能力，而不能只记一句“这次是某某模型”。第五，**若要证明“没有写 default branch”或“没有发生任何 branch/PR/object 写入”，单靠模型自述远远不够，必须引入 Git 层、远端 refs 层、GitHub 事件层与平台/app 权限层的组合证据。** citeturn42view0turn8view0turn13view0turn13view1turn9view2turn38view0turn38view1turn17view0turn35view0turn35view1turn35view4turn35view6
+
+本报告的方法是“**官方产品事实 + 仓库现状基线 + 明确区分已证实、推断、未知**”。仓库基线方面，Mnemosyne README 明确把仓库定位为“AI Agent 外部持久记忆系统设计工作仓库”，并重申“**模型负责计算，文件负责记忆**”；同时 README 也明确 `current/human-approved-spec.md` 仍是唯一执行源，其他 current/research/handoff 文件主要起 evidence、status、handoff 作用。Issue #170 记录了“长跨对话 artifact 未默认文件化”的结构破坏风险；Issue #171 则记录了目标项目业务对话中应加载哪一层 Mnemosyne 指导的开放问题。也就是说，仓库自己已经把本次外部研究要回答的问题暴露出来了。citeturn41view2turn42view0turn8view0
+
+**Source manifest 简表**：本次高频使用的主来源包括 OpenAI 的 Projects、Memory FAQ、Deep research、Apps、Apps with sync、Connecting GitHub、Plugins、Work and Codex、ChatGPT agent、GPT-5.6 in ChatGPT、Business Models & Limits、Enterprise/Edu release notes；GitHub 的 GitHub Apps permissions、authorization、installation、branches、pull requests、commits、pagination 文档；Anthropic 的 Projects、memory/chat search、Research、connectors、GitHub integration；Google Gemini 的 Gems、Deep Research、personalization/Connected Apps；GitHub Copilot cloud agent 与 repository custom instructions；Cursor 的 rules/cloud agent/MCP；以及 MCP 规范、A2A 与 Anthropic 的 context engineering 文章。citeturn9view0turn9view1turn9view2turn15view0turn32view0turn9view4turn13view2turn13view0turn13view1turn38view1turn38view0turn40search0turn35view2turn35view6turn35view3turn35view1turn35view4turn35view5turn35view0turn39view0turn39view1turn39view2turn39view3turn39view4turn39view5turn39view6turn39view7turn39view8turn39view9turn39view10turn24search0turn24search1turn24search2turn39view14turn39view15turn39view16
+
+## 当前平台事实与相对 2026Q2 的增量
+
+**RQ1 的关键事实已经足够明确。** OpenAI 当前把 Project memory 分成 **default** 与 **project-only** 两种；**旧 project 维持 default memory，不能原地改成 project-only；project-only 只能在新建 project 时选择。** 在 project-only 下，已保存的 saved memories 不会被引用，同一 project 内聊天可以互相引用，但不能引用 project 外聊天；而 shared project 一旦共享，会自动转成 project-only，且不可再退回 default。Temporary Chat 不能加入 project。Project instructions 只在该 project 内生效，并覆盖全局 custom instructions；project files、saved response、以及 Google Drive/Slack 链接都可以作为 project sources；connected apps 也可以在 project chat 内调用，但 ChatGPT 可能会先要求确认是否允许它到 project 外取数。citeturn10view0turn10view1turn10view2turn28view1turn28view2turn28view3turn28view4
+
+更重要的是，**default memory 与 project-only 在不同 plan 下的隔离强度不一样。** OpenAI 明示：在 Enterprise/Edu 中，即使是 default memory，project chat 也仍然被限定在 project 内，不引用项目外对话；而在非 Enterprise（包括 Business）中，default-memory project chat 可以同时引用项目内与项目外对话，除非对方项目本身就是 project-only。换言之，**“只要进了 project 就天然 cleanroom”这个想法已经不成立；是否跨 project/outside-project 引用，要看 memory mode 与 plan 共同决定。** citeturn11view0
+
+**RQ2 的产品语义在 2026Q3 也比 2026Q2 更清晰。** OpenAI 已把原先的 app directory 迁移为 **Plugin Directory**；plugin 是工作流包装层，可以包含 skills、apps、app templates，而 app 仍然是连到外部系统、数据与动作的那一层。因而现在必须把 **plugin installation / visibility**、**underlying app enablement**、**app connection authentication**、**sync**、**action control**、**approval policy**、**RBAC** 分开理解。官方明确写到：plugin 可见不等于 app 可用；plugin 继承底层 app 的权限、sync、domain restrictions 与 action settings；Business 默认启用 apps，而 Enterprise/Edu 默认禁用 apps，需要管理员显式启用。citeturn31view0turn31view1turn31view2
+
+审批与审计方面，官方现在也给了更细的操作语义。App permissions 可选 **Always ask / Any changes / Important actions / Never ask**；默认是 **Important actions**，也就是**自动读、重要写前询问**。管理员还可以在 action control 中决定允许全部动作、只读动作、或自定义动作集合；对支持 action diff 的 MCP/custom apps，**新动作默认不自动开启，变化后的动作定义会显示 diff**。审计方面，Enterprise/Edu 的 **Compliance API** 已覆盖用户对话；同时 OpenAI 也明确说 **all app calls are logged**。但需要注意，公开帮助页没有给出足以做取证的完整字段级 schema，详细 API 文档仍在登录后文档中。citeturn10view6turn11view1turn10view7turn31view3turn9view8
+
+**RQ3 的 GitHub 边界也已经大幅“拆层化”。** OpenAI 官方 GitHub 连接页明确说：ChatGPT 先在 Settings → Apps 连接 GitHub，再在 GitHub 侧选择允许访问的 repositories；之后 ChatGPT 还可能让你选择常用仓库做 sync，但 **sync selection 与 repository access 是分离的**，即便没选进 sync，只要 GitHub 侧授权了仓库，ChatGPT 仍可访问。页面还明确写出：**GitHub App availability 依 plan 和 experience 而变**，例如 Plus 用户可能在标准 Chat 看不到 GitHub，但在 Deep Research 或 Agent Mode 看得到；新仓库通常约有 **5 分钟** 显示延迟；如果 GitHub 自身搜索索引未收录，ChatGPT connector 搜索也可能看不到，需要在 GitHub 侧触发索引。citeturn11view2turn9view4
+
+Enterprise/Edu release notes 又进一步说明了 surface 的分化：到 2026 年中，OpenAI 已公开宣称 Enterprise/Edu 可在 ChatGPT 中使用 **GitHub synced connector** 与 **chat connector**，并保留 **GitHub deep research connector**；而同步索引的卖点是提供关于 **code、commits、pull requests** 更快、更高质量的答案。与此同时，apps with sync 文档又提醒：sync 是“先索引、后检索”的机制，初始同步可能分阶段进行，早期阶段结果可能缺失；最相关结果会按 query intent 送入模型，因此**不适合把它理解成“完备枚举引擎”**。这对 Mnemosyne 很关键，因为“可以问到 commit/PR 信息”不等于“可以证明 branch/ref/coverage 完整”。citeturn40search0turn32view0
+
+下面这张“重要发现与 Delta 分类表”聚焦最直接影响 Mnemosyne 维护策略的变化：
+
+| 重要发现 | classification | 当前仓库路径 | 外部支持/冲突 | 建议动作 | 是否需批准 | 是否可能影响执行源 | 是否应先做 live test |
+|---|---|---|---|---|---|---|---|
+| 旧 project 不能切换到 project-only；cleanroom 不能建立在旧 default project 上 | `changed_since_2026Q2` `repository_assumption_partially_stale` | `current/meta-agent-test-route-status.md` `current/current-capability-boundaries.md` | OpenAI Projects 明确规定 project-only 只能新建时设置。citeturn10view0turn10view1 | 把 cleanroom 默认配置改成“新建 private project + project-only” | 是 | 是 | 否 |
+| 同一 project 内聊天互相可引用，但 default memory 在非 Enterprise 可跨项目/跨普通 chat 引用 | `confirmed_current_fact` `repository_assumption_stale` | `current/handoff-guidance-open-question.md` | OpenAI 对 Enterprise/Edu 与 Non-Enterprise 给出不同规则。citeturn11view0 | 所有“fresh session”描述都要显式写 plan + memory mode | 是 | 是 | 是 |
+| Plugin ≠ App；app enablement ≠ app auth ≠ sync ≠ approval | `confirmed_current_fact` | `raw/research-reports/current/current-capability-boundaries.md` | Apps/Plugins 文档已分层定义。citeturn31view0turn31view1turn31view2 | 在 Mnemosyne 文档中固定使用四层术语，不再混写“connector available” | 否 | 否 | 否 |
+| GitHub repo authorization 与 sync 是分离的；surface availability 又是第三层变量 | `confirmed_current_fact` `repository_assumption_partially_stale` | `notes/chatgpt-work-mode-assessment-2026-07.md` | GitHub 连接页明确说明。citeturn11view2turn9view4 | 所有 GitHub 测试报告需单列 auth scope、sync state、surface | 否 | 否 | 否 |
+| Deep Research 当前仅用 connected apps 的 read actions | `confirmed_current_fact` | `raw/research-reports/current/current-research-prompts.md` | Deep research 帮助页明示。citeturn10view5turn11view4 | 研究性 run 优先放到 Deep Research | 否 | 否 | 否 |
+| Synced app data 可能进入 memory；断开 app 不会清除既有对话中的数据 | `changed_since_2026Q2` `repository_assumption_partially_stale` | `current/human-approved-spec.md` | Apps with sync 文档明示 synced data 可能被 memory 使用，disconnect 也不删除已用过的数据。citeturn32view0turn29search11 | 把“memory contamination”从聊天层扩展到 connected apps 层 | 是 | 可能 | 否 |
+| 可见 model picker label 不能证明底层真实模型；存在回退模型与自动路由 | `confirmed_current_fact` `candidate_guidance_only` | `raw/research-reports/current/current-evidence-map.md` | Business models/limits 与 GPT-5.6 文档都明示 picker label 与底层模型可分离、存在 fallback。citeturn38view0turn38view1turn17view0 | 增加 provenance schema | 否 | 否 | 否 |
+| 长 transfer artifact 直接铺在正文存在结构损坏风险，Issue #170 已记录 | `repository_assumption_still_valid` `candidate_guidance_only` | `handoff/...` `Issue #170` | 仓库 issue 与 Work/Projects 能力一起支持“文件优先”方案。citeturn42view0turn13view0turn28view1 | 形成 file-first handoff 候选规范 | 是 | 是 | 否 |
+
+## 上下文隔离、Apps 权限与 GitHub 能力矩阵
+
+先给出 **“上下文与隔离矩阵”**。这张表是 Mnemosyne 做 cleanroom、memory hygiene、跨对话交接时最该反复引用的一张表。
+
+| 场景 | 个人 saved memory | 同 project 其他聊天 | project 外聊天 | custom instructions / project instructions | 适合 strict cleanroom 吗 | 说明 |
