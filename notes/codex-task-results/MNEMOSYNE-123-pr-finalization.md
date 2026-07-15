@@ -45,7 +45,7 @@ github_write_lineage_post_creation:
   decision: retain_PR_173_as_only_canonical_merge_target
 ```
 
-## Pre-finalization comparison
+## Initial pre-finalization comparison
 
 ```yaml
 branch_compare:
@@ -73,6 +73,30 @@ DR6_report:
   local_ordered_concatenation_matches_source_bytes: true
 ```
 
+## Post-PR index-preservation review
+
+After PR creation, the current research indexes were compared again against `master`. The first branch versions had compressed detailed DR2/DR4/DR5 sections into shorter rows. Although the underlying evidence files were not deleted, that would have reduced current-index readability and provenance detail.
+
+The canonical branch was therefore repaired in place, without creating another branch or PR:
+
+```yaml
+index_preservation_repair:
+  parallel_branch_or_PR_created: false
+  files_repaired:
+    - raw/research-reports/current/current-report-summaries.md
+    - raw/research-reports/current/current-research-prompts.md
+    - raw/research-reports/current/research-report-index.md
+  preservation_rule:
+    - retain_all_preexisting_detailed_sections
+    - append_DR6_without_replacing_historical_wayfinding
+  compare_after_repair_before_this_addendum_update:
+    ahead_by: 29
+    behind_by: 0
+    changed_files: 25
+```
+
+This repair is within the same MNEMOSYNE-123 canonical lineage and reduces unintended deletions.
+
 ## Merge instruction
 
 ```yaml
@@ -87,6 +111,6 @@ merge_instruction:
   duplicate_preflight_completed: true
 ```
 
-A final compare after this addendum is recorded in the PR body and user-facing result.
+A final compare after this updated addendum is recorded in the PR body and user-facing result.
 
 This addendum does not authorize merge, auto-merge, execution-source changes, issue closure, `HO-GUIDANCE-001` resolution, target-project actions, another replay, observer-assisted proof, or FABLE5-GREENFIELD continuation.
