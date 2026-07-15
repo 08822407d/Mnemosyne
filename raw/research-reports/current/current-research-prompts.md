@@ -4,16 +4,12 @@
 
 本文件是 current 派生视图，用于索引当前激活研究轮次的 research prompts / prompt availability。
 
-- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental); RC-2026Q2-user-input-governance (supplemental)
+- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing; RC-2026Q2-handoff-strategy; RC-2026Q2-user-input-governance; RC-2026Q2-first-target-dry-run-evaluation; RC-2026Q3-platform-context-apps-delta
 - 本文件不是执行源；
 - 当前执行源仍是 `current/human-approved-spec.md`；
 - prompt 原文是研究输入，不是研究报告结果；
-- pro prompt 原文当前可用；
-- 6 个用户找回的轻度研究 prompt 原文当前可用；
-- 原始 prompt 文件位于 `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/`；
-- prompt index 位于 `raw/research-reports/cycles/2026Q2-initial/research-prompts/research-prompt-index.md`；
-- report-topic mapping 位于 `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`；
-- prompt 是 research input，不是 report conclusion 或 execution source。
+- prompt index 与 report-topic mapping 位于各自 cycle 目录；
+- 不得把 prompt 当作 report conclusion、task authority 或 execution source。
 
 ## Current Prompt Index
 
@@ -27,38 +23,13 @@
 | PROMPT-2026Q2-0006 | RPT-2026Q2-0006 | available_original_prompt | `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/05_theory_engineering_basis_external_memory.md` | 外部持久记忆的理论与工程依据 | recovered user-provided light-research prompt original; prompt is input, not report conclusion or execution source. |
 | PROMPT-2026Q2-MT-0001 | RPT-2026Q2-MT-0001 | available_original_prompt | `raw/research-reports/cycles/2026Q2-memory-testing/research-prompts/originals/DR1_memory_testing_debugging_evidence_review_prompt.md` | AI Agent external persistent memory system testing/debugging/evaluation/failure diagnosis | DR1 prompt; research input only, not report conclusion or execution source. |
 | PROMPT-2026Q2-0007 | RPT-2026Q2-0007 | available_original_prompt | `raw/research-reports/cycles/2026Q2-initial/research-prompts/originals/06_transfer_dev_memory_to_general_dialogue.md` | 开发场景的持久记忆经验能否迁移到普通长期对话和学习场景 | recovered user-provided light-research prompt original; prompt is input, not report conclusion or execution source. |
+| PROMPT-2026Q2-HO-0001 | RPT-2026Q2-HO-0001 | original_available | `raw/research-reports/cycles/2026Q2-handoff-strategy/research-prompts/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_prompt.md` | Mnemosyne handoff package strategy and quantitative evaluation | Research input only; not execution source. |
+| PROMPT-2026Q2-UIG-0001 | RPT-2026Q2-UIG-0001 | original_available | `raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md` | User originals / requirements / redaction governance | Corrected Deep Research prompt; full report body required. |
+| PROMPT-2026Q2-FTDRE-0001 | RPT-2026Q2-FTDRE-0001 | original_available | `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/research-prompts/originals/DR5_v2_first_real_target_dry_run_evaluation_framework_prompt.md` | First real target-project dry-run evaluation framework | Research input only; not execution source. |
+| PROMPT-2026Q3-PLATFORM-DELTA-0001 | RPT-2026Q3-PLATFORM-DELTA-0001 | original_available | `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/research-prompts/originals/DR6_2026Q3_platform_memory_apps_capability_delta_prompt.md` | Project memory, apps/plugins, GitHub, Deep Research, Work/Codex/Agent, provenance, no-write and handoff delta | Research input only; report accepted with corrections by MNEMOSYNE-123. |
 
 ## Review Notes
 
-- MNEMOSYNE-038 已将 `PROMPT-2026Q2-0002` through `PROMPT-2026Q2-0007` 从 missing status 更新为 available recovered originals。
-- 如 prompt 与 report / summary / motivation 存在差异，可登记 delta / review note；但 prompt 本身不作为研究结论或执行源。
-
-- MNEMOSYNE-040 normalized and indexed DR1 memory-testing prompt under supplemental cycle `RC-2026Q2-memory-testing`.
-
-## PROMPT-2026Q2-HO-0001 — DR2 handoff strategy / 交接包策略量化研究
-
-- prompt_id: PROMPT-2026Q2-HO-0001
-- cycle_id: RC-2026Q2-handoff-strategy
-- file_path: `raw/research-reports/cycles/2026Q2-handoff-strategy/research-prompts/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_prompt.md`
-- topic: Mnemosyne handoff package strategy and quantitative evaluation
-- prompt_type: deep_research_prompt
-- status: original_available
-- note: Research input only; not a report conclusion and not execution source.
-
-## DR4 user-input governance prompt status
-
-```yaml
-prompt_id: PROMPT-2026Q2-UIG-0001
-report_id: RPT-2026Q2-UIG-0001
-cycle_id: RC-2026Q2-user-input-governance
-status: original_available
-prompt_path: raw/research-reports/cycles/2026Q2-user-input-governance/research-prompts/originals/DR4_user_originals_requirements_redaction_governance_prompt.md
-prompt_type: corrected_deep_research_prompt
-note: Research input only; not a report conclusion and not execution source. This corrected prompt requires the full Deep Research report body in the final answer and forbids summary+download-only report delivery.
-```
-
-## Supplemental prompt — DR5 first real target-project dry-run evaluation
-
-| prompt_id | related_report_id | prompt_status | prompt_file | topic_title | notes |
-|---|---|---|---|---|---|
-| PROMPT-2026Q2-FTDRE-0001 | RPT-2026Q2-FTDRE-0001 | original_available | `raw/research-reports/cycles/2026Q2-first-target-dry-run-evaluation/research-prompts/originals/DR5_v2_first_real_target_dry_run_evaluation_framework_prompt.md` | DR5 first real target-project dry-run evaluation framework | Prompt is research input/provenance, not report evidence or execution source. |
+- Prompt 是研究输入，不是研究结论或执行源。
+- DR6 的 report-level citation markers 可能无法在 GitHub 中直接解析；见该 cycle 的 `source-manifest.md`。
+- 有依赖关系的后续 Deep Research 应遵守 §17 分阶段生成，不一次性启动全部下游课题。
