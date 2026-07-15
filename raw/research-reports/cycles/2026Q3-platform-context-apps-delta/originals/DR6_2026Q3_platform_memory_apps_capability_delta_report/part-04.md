@@ -43,3 +43,4 @@
 基于以上事实，我建议把 Mnemosyne 后续工作拆成四个 **staged work packages**，全部都先作为候选工作包，不自动改执行源：
 
 **Work package A：Project/Memory/GitHub live test pack。** 目标是把当前仍属未知的边界做成实验：旧 project 是否还能通过任何移动/分享路径接近 project-only；GitHub 在 Project Chat 中是否有 sync 语义还是仅 search/fetch；Library 自动引用与 project-only 的交互；同一 account 在 Chat / Project / Deep Research / Agent 中 GitHub availability 的实际差异。这里属于 `unknown_requires_live_test`。citeturn10view1turn30view0turn11view2
+
