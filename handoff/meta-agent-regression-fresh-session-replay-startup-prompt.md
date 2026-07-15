@@ -3,42 +3,66 @@
 > Non-execution-source startup artifact. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status: paused_after_Replay_004
-latest_reviewed_by_task: MNEMOSYNE-121
-automatic_Replay_005_authorized: false
+status: archived_after_cleanroom_replay_review
+latest_reviewed_by_task: MNEMOSYNE-122
+automatic_additional_ordinary_Chat_replay_authorized: false
 current_decision_record: current/meta-agent-replay-mechanical-proof-decision.md
+current_cleanroom_replay: META-AGENT-CONSOLIDATED-CLEANROOM-REPLAY-001-v2
 ```
 
 ## 当前状态
 
-不要再使用本文件、Replay v4 package 或 v4 bootstrap 启动新的普通 Chat replay。
+不要再使用本文件、Replay v2/v3/v4 packages 或旧 bootstrap 启动新的普通 Chat replay。
 
-已完成的 fresh-session 证据是：
+Replays 002–004 已重新分类为历史诊断记录，因为用户后来确认：
 
-- Replay 002：五项行为 5/5 PASS，整体因机械覆盖不完整而 `BLOCKED`；
-- Replay 003：五项行为 5/5 PASS，整体因机械覆盖不完整而 `BLOCKED`；
-- Replay 004：literal bootstrap 成功进入用户消息，但 public endpoint 返回不完整且与已合并 PR 状态不一致的数据，因此在五项测试开始前正确 `BLOCKED`。
+- 它们在现有 Default-memory Mnemosyne Project 中执行；
+- 没有显式通过 `+` 选择 GitHub。
 
-Replay 004 证明，继续修改 URL、page 参数或 prompt 措辞不足以解决当前 ordinary Chat surface 的机械观测限制。
+当前接受的行为测试证据来自 consolidated cleanroom replay：
 
-## 下一步
+```yaml
+replay_id: META-AGENT-CONSOLIDATED-CLEANROOM-REPLAY-001-v2
+tested_ref: 714c54ffdb7e5899ef3cac20084bcd82d4db022c
+environment_qualification: PASS
+behavioral_cases: PASS_5_of_5
+mechanical_no_write_subgate: BLOCKED
+combined_package_gate: BLOCKED
+```
 
-读取：
+## 解释
 
-- `current/meta-agent-replay-mechanical-proof-decision.md`
+Cleanroom replay 使用了用户声明的：
 
-在用户选择后，才能决定：
+- 新建 Project-only Project；
+- 零 prior chats；
+- 未加入旧 Mnemosyne chats/files；
+- 全局 GitHub repository access；
+- 当前 Chat 中通过 `+` 选择 GitHub；
+- GitHub chip 可见。
 
-1. 接受两次独立 5/5 行为恢复作为当前测试结果，同时保留机械 no-write gate 为 blocked；或
-2. 设计一个由外部 observer / local Git 环境提供 before/after 证据的最终运行。
+它成功读取固定 commit 上的仓库证据并完成五项正式行为测试。
+
+完整 branch/ref 与 repository-wide PR 覆盖仍不可用，因此 mechanical no-write 和 combined package gate 保持 `BLOCKED`。不得把这项限制改写成行为失败，也不得把行为 PASS 改写成 package-level PASS。
+
+## 模型 provenance 限制
+
+执行提示词中的可见模型和推理标签占位符没有被替换。因此 exact visible labels 记录为 unknown；不得推断隐藏模型等价关系，也不要求仅为补齐该字段而重复整个 replay。
+
+## 后续
+
+当前 test-only 行为目标已经完成，不需要自动运行新的 ordinary-Chat replay。
+
+只有在用户以后明确要求高保证 combined gate 时，才能新建 observer-assisted proof task，由可靠 external/local Git 环境提供完整 before/after mechanical evidence。
 
 ## 禁止事项
 
-在用户做出该选择前：
-
-- 不生成或执行 Replay 005；
-- 不把 Replay 002/003 的 case PASS 提升为 package-level PASS；
-- 不把 Replay 004 解释为行为 FAIL；
+- 不自动生成或执行 Replay 005 或其他 ordinary-Chat 变体；
 - 不批准 no-write exception；
 - 不修改执行源；
-- 不启动 Meta-Agent 产品构建、target workspace、材料摄入、target write 或 operational installation。
+- 不启动 Meta-Agent 产品构建；
+- 不创建 target workspace；
+- 不摄入 target materials；
+- 不访问或写 target repository；
+- 不启动 operational installation；
+- 不恢复或接管 FABLE5-GREENFIELD-001。
