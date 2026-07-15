@@ -1,13 +1,13 @@
 # Current Evidence Map / 当前证据映射（派生视图）
 
 > 说明：本文件是 current 派生视图，不是原始研究报告。  
-> 当前来源轮次：`RC-2026Q2-initial`；补充当前证据轮次：`RC-2026Q2-memory-testing`。  
-> 详细映射见：`raw/research-reports/cycles/2026Q2-initial/evidence-map.md`。
+> 当前来源轮次：`RC-2026Q2-initial`；补充当前证据轮次：`RC-2026Q2-memory-testing`、`RC-2026Q2-handoff-strategy`、`RC-2026Q2-user-input-governance`、`RC-2026Q2-first-target-dry-run-evaluation`、`RC-2026Q3-platform-context-apps-delta`。  
+> 详细映射见各 cycle 的 evidence / summary / review 文件。
 
 ## 当前采用的研究证据视图
 
-- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing (supplemental)
-- report_count: 8
+- active_cycles: RC-2026Q2-initial; RC-2026Q2-memory-testing; RC-2026Q2-handoff-strategy; RC-2026Q2-user-input-governance; RC-2026Q2-first-target-dry-run-evaluation; RC-2026Q3-platform-context-apps-delta
+- report_count: 12
 - use: 约束 Mnemosyne 的能力边界判断、机制设计与平台适配假设。
 
 ## 当前重点结论（摘要）
@@ -17,17 +17,19 @@
 - 普通对话窗口默认半自动，不假设自动写回。
 - 本地开发 Agent / 云端工作流能力需分层声明，不可混同。
 - 研究报告属于高权重证据层，不是执行源。
+- Project memory、platform memory、connected apps、sync、repository authorization、surface capability 和 task authority 必须分层记录。
+- Search/sync connector 适合相关性检索，不默认构成完整枚举或 mechanical proof。
 
 ## 需要人工复核
 
 - RPT-2026Q2-0002 ~ RPT-2026Q2-0007（PDF）中的图表、图片与版式相关证据。
 - 若未来设计决策依赖上述图表结论，必须先完成人工复核。
+- DR6 原始报告中的 Deep Research citation markers 具有可移植性限制；关键 operational claims 应使用 portable source manifest 或重新查验官方来源。
 
 ## 演化说明
 
 - future_refresh: 本文件会随新 cycle 的 evidence map 更新 current 视图。
 - history_policy: 旧 cycle 不覆盖、不删除，保留可追溯历史。
-
 
 ## Memory-system testing/debugging DR1 evidence
 
@@ -149,3 +151,85 @@
   claim_or_implication: Dry-run findings should flow to postmortem/regression/candidate layers, not directly to execution source.
   not_execution_source: true
 ```
+
+## DR6 platform / context / apps delta evidence — RC-2026Q3-platform-context-apps-delta
+
+```yaml
+- evidence_id: EVID-2026Q3-PCAD-0001
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Project-only memory is selected only when creating a new Project; existing default-memory Projects cannot be converted in place.
+  confidence_or_status: official_fact_independently_rechecked
+  mnemosyne_use: cleanroom setup candidate
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0002
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Project-only blocks outside-Project chat references but allows references to other chats inside the same Project; non-Enterprise default-memory Projects may reference outside-Project conversations.
+  confidence_or_status: official_fact_independently_rechecked
+  mnemosyne_use: fresh-session and isolation provenance
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0003
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Plugin visibility/installation, app enablement, app authentication, sync, source permission, action control, approval policy, per-chat invocation and task authority are distinct.
+  confidence_or_status: official_fact_independently_rechecked
+  mnemosyne_use: terminology and permission-mapping candidate
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0004
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: GitHub repository authorization is separate from sync selection; plan/surface availability and search indexing can differ.
+  confidence_or_status: official_fact_independently_rechecked
+  mnemosyne_use: GitHub test preflight and provenance
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0005
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Deep Research uses connected-app read actions only during research.
+  confidence_or_status: official_fact_independently_rechecked
+  mnemosyne_use: preferred surface for read-only research cycles
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0006
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Synced app data may be saved or reused through ChatGPT Memory; disconnecting the app does not erase prior conversations that used the data.
+  confidence_or_status: official_fact_independently_rechecked
+  mnemosyne_use: connected-app contamination and retention risk
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0007
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Visible model/reasoning labels are operator-observed provenance but not complete runtime attestation.
+  confidence_or_status: candidate_guidance_supported_by_current_product_behavior
+  mnemosyne_use: provenance schema
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0008
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Search, sync and connector results are relevance-oriented and should not be assumed to be complete branch/ref/PR enumerations.
+  confidence_or_status: official_and_live_evidence_consistent
+  mnemosyne_use: no-write evidence taxonomy
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0009
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Long cross-conversation artifacts should be delivered file-first; requested low-risk artifacts should be generated immediately when no further authorization is required.
+  confidence_or_status: candidate_workflow_guidance
+  mnemosyne_use: Issues #170/#171 repair
+  not_execution_source: true
+
+- evidence_id: EVID-2026Q3-PCAD-0010
+  source_report: RPT-2026Q3-PLATFORM-DELTA-0001
+  claim_or_implication: Target-project business guidance loading should be reviewed separately from Issues #170/#171 and may use project-local guidance plus a trimmed Mnemosyne operator appendix.
+  confidence_or_status: candidate_guidance; HO-GUIDANCE-001 remains open
+  mnemosyne_use: future handoff-guidance adjudication
+  not_execution_source: true
+```
+
+## DR6 corrections and limitations
+
+- Issue #171 is the immediate low-risk artifact-generation issue, not `HO-GUIDANCE-001`.
+- The original report says connected apps were not used in its execution environment.
+- Its repository read manifest lists only README and Issues #170/#171; exact repository path mappings were maintainer-reviewed separately.
+- Original Deep Research `turn...` citation markers may not be portable in GitHub; see the cycle `source-manifest.md`.
+- No DR6 recommendation is automatically approved as an execution-source rule.
