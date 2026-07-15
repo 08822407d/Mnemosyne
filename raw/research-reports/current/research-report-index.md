@@ -14,22 +14,6 @@
 - status: supplemental_current_evidence_cycle
 - total_reports: 1
 
-- cycle_id: RC-2026Q2-handoff-strategy
-- status: supplemental_current_evidence_cycle
-- total_reports: 1
-
-- cycle_id: RC-2026Q2-user-input-governance
-- status: supplemental_current_evidence_cycle
-- total_reports: 1
-
-- cycle_id: RC-2026Q2-first-target-dry-run-evaluation
-- status: supplemental_current_evidence_cycle
-- total_reports: 1
-
-- cycle_id: RC-2026Q3-platform-context-apps-delta
-- status: supplemental_current_evidence_cycle
-- total_reports: 1
-
 ## 研究动机入口
 
 - motivation_file: `raw/research-reports/cycles/2026Q2-initial/research-cycle-origin-and-motivation.md`
@@ -41,7 +25,7 @@
 - report-topic map: `raw/research-reports/cycles/2026Q2-initial/report-topic-and-prompt-map.md`
 - latest platform-delta motivation: `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/research-cycle-origin-and-motivation.md`
 
-这些文件属于 research prompt / topic mapping 层，不是执行源，也不是研究报告结果。Prompt 是研究输入；report / summary / evidence map 是研究结果或派生证据。缺失的 prompt 不得编造。
+这些文件属于 research prompt / topic mapping 层，不是执行源，也不是研究报告结果。Prompt 是研究输入；report / summary / evidence map 是研究结果或派生证据。缺失的轻度研究 prompt 不得编造。
 
 ## 报告索引
 
@@ -63,11 +47,21 @@
 
 ## Supplemental current evidence cycle — RC-2026Q2-handoff-strategy
 
+- cycle_id: RC-2026Q2-handoff-strategy
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
+- positioning: research evidence only; not execution source
+
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
-| RPT-2026Q2-HO-0001 | raw/research-reports/cycles/2026Q2-handoff-strategy/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_report.md | deep_research | Mnemosyne handoff package strategy and quantitative evaluation | Evidence for correct handoff definition, quantitative handoff scoring, handoff package tiering, replay/test protocol, model/tool provenance, and pre-first-target-dry-run handoff readiness | yes | Markdown report original; summary available at `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md`. Research evidence only, not execution source. |
+| RPT-2026Q2-HO-0001 | raw/research-reports/cycles/2026Q2-handoff-strategy/originals/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_report.md | deep_research | Mnemosyne handoff package strategy and quantitative evaluation | Evidence for correct handoff definition, quantitative handoff scoring, handoff package tiering, replay/test protocol, model/tool provenance, and pre-first-target-dry-run handoff readiness | yes | Markdown report original; summary available at raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md. Research evidence only, not execution source. |
 
 ## Supplemental current evidence cycle: RC-2026Q2-user-input-governance
+
+- cycle_id: RC-2026Q2-user-input-governance
+- status: supplemental_current_evidence_cycle
+- total_reports: 1
+- positioning: research evidence only; not execution source
 
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
@@ -85,6 +79,14 @@
 
 ## Supplemental current evidence — RC-2026Q3-platform-context-apps-delta
 
+- cycle_id: RC-2026Q3-platform-context-apps-delta
+- status: supplemental_current_evidence_cycle
+- report_id: RPT-2026Q3-PLATFORM-DELTA-0001
+- prompt_id: PROMPT-2026Q3-PLATFORM-DELTA-0001
+- summary_path: `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/report-summaries/DR6_2026Q3_platform_memory_apps_capability_delta_summary.md`
+- maintainer_review: `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/review-records/MNEMOSYNE-123-DR6-maintainer-evidence-review.md`
+- execution_source_status: not_execution_source
+
 | report_id | file_path | report_type | 主题 | 在 Mnemosyne 设计中的作用 | active_evidence | 可读性与复核说明 |
 |---|---|---|---|---|---|---|
-| RPT-2026Q3-PLATFORM-DELTA-0001 | `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/originals/DR6_2026Q3_platform_memory_apps_capability_delta_report.md` | deep_research | Project memory, apps/plugins, GitHub, Deep Research, Work/Codex/Agent, provenance, no-write and artifact/handoff delta | Current evidence for platform/surface boundaries and staged workflow repair | yes_with_maintainer_corrections | Markdown original; summary and maintainer review available in the same cycle. Opaque Deep Research citation tokens have limited portability; use `source-manifest.md` for load-bearing URLs. |
+| RPT-2026Q3-PLATFORM-DELTA-0001 | `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/originals/DR6_2026Q3_platform_memory_apps_capability_delta_report.md` | deep_research | Project memory, apps/plugins, GitHub, Deep Research, Work/Codex/Agent, provenance, no-write and artifact/handoff delta | Current evidence for platform/surface boundaries and staged workflow repair | yes_with_maintainer_corrections | Markdown original preserved as ordered chunks; read the summary and maintainer review first. Opaque Deep Research citation tokens have limited portability; use `source-manifest.md` for load-bearing official URLs. |
