@@ -1,0 +1,175 @@
+- final_signal_or_GF2D_boundary_ids
+- remaining_dependency
+- safe_for_STEP3_use:
+    yes |
+    yes_with_qualification |
+    no
+
+Use STEP1E as the identifier/title authority.
+
+Do not silently invent missing titles from the candidate STEP2C shorthand.
+
+────────────────────────────────────
+12. Exact Q-01 through Q-15 table
+────────────────────────────────────
+
+Create exactly fifteen rows.
+
+For every question include:
+
+- question_id
+- current_status
+- current_question
+- question_type:
+    user_preference |
+    authority_decision |
+    method_selection |
+    policy_selection |
+    current_fact_refresh |
+    evidence_gap
+- related_need_ids
+- evidence_side_complete:
+    yes |
+    no |
+    partial
+- blocks_GF_STEP_2:
+    yes |
+    no
+- blocks_all_of_STEP3:
+    yes |
+    no
+- blocks_only_specific_design_choice
+- temporary_handling
+
+Preserve:
+
+- Q-07-final;
+- Q-08-final;
+- Q-09-final;
+- Q-13-updated;
+- Q-14;
+- Q-15;
+- Q-12 as unresolved unless STEP1E/B6 evidence directly changes it.
+
+Do not answer user-held decisions.
+
+────────────────────────────────────
+13. Unsupported-assumption register
+────────────────────────────────────
+
+Create at most 16 rows.
+
+Each row must include:
+
+- assumption_id
+- prohibited_assumption
+- evidence_ids
+- consequence_if_assumed
+- required_safe_handling
+
+Cover all load-bearing assumptions found in the candidate baseline, including:
+
+- platform memory as complete project truth;
+- portable/auditable conversation history by default;
+- app presence implying auth, sync, write, or task authority;
+- file access equaling reliable memory;
+- instruction files guaranteeing compliance;
+- local built-in memory being portable/synced;
+- agent completion claims equaling repository evidence;
+- repository evidence proving semantic correctness;
+- private Git being safe for originals;
+- redaction guaranteeing anonymity;
+- externalization alone solving memory quality;
+- vector retrieval alone supplying structured state;
+- unchanged transfer of development workflows;
+- a single score/judge closing a gate;
+- dry-run PASS escalating authority;
+- current product behavior still matching 2026Q2.
+
+────────────────────────────────────
+14. GF-STEP-2 closure decision
+────────────────────────────────────
+
+Choose exactly one:
+
+- GF_STEP_2_complete_with_dated_fact_and_text_only_visual_caveats
+- GF_STEP_2_complete_with_explicit_refresh_and_user_decision_gates
+- GF_STEP_2_incomplete_targeted_current_fact_refresh_required
+- GF_STEP_2_incomplete_visual_review_required
+- GF_STEP_2_incomplete_source_integrity_or_access_failure
+- GF_STEP_2_incomplete_other_specific_gap
+
+Closure requires:
+
+- eight exact SHA matches;
+- eight complete canonical reads;
+- verified S-01 through S-05;
+- all 27 candidate CB statements audited;
+- 16–24 final stable GF2D boundaries;
+- exact RD-01 through RD-11 table;
+- exact freshness queue;
+- exact six-PDF visual gate;
+- exact 21-need table;
+- exact Q-01 through Q-15 table;
+- unsupported assumptions explicit;
+- no load-bearing capability gap hidden by candidate methods or user choices.
+
+If incomplete:
+
+- identify the exact blocker;
+- propose one narrowly bounded GF-STEP-2E only;
+- do not execute it.
+
+If complete:
+
+- state whether STEP2C plus this STEP2D addendum jointly constitute the final
+  GF-STEP-2 baseline;
+- provide the bounded GF-STEP-3A input contract specified below;
+- do not begin architecture design.
+
+────────────────────────────────────
+15. Bounded GF-STEP-3A input contract
+────────────────────────────────────
+
+Only if GF-STEP-2 closes, provide an input contract for:
+
+GF-STEP-3A:
+  independent_information_architecture_and_authority_model
+
+The contract must contain:
+
+- required input 1:
+  GF-STEP-1E final need model
+- required input 2:
+  GF-STEP-2C candidate baseline
+- required input 3:
+  GF-STEP-2D verification and closure addendum
+- precedence between STEP2C and STEP2D corrections;
+- open questions that may remain explicit design parameters;
+- questions that block only specific architecture branches;
+- exact refreshes triggered only by selected design choices;
+- prohibited design assumptions;
+- expected STEP3A deliverable;
+- boundary between STEP3A information/authority architecture and later
+  lifecycle/operations design.
+
+Do not include architecture content.
+
+────────────────────────────────────
+16. Hard workload limits
+────────────────────────────────────
+
+- repository paths: exactly 8
+- repository retrieval batteries: maximum 8
+- attachments used: exactly 1
+- original research reports read: 0
+- external searches: 0
+- candidate signals verified: exactly 5
+- candidate boundaries audited: exactly 27
+- final stable boundaries: 16–24
+- RD rows: exactly 11
+- freshness rows: maximum 12
+- PDF visual rows: exactly 6
+- need rows: exactly 21
+- question rows: exactly 15
+- unsupported-assumption rows: maximum 16
