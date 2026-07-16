@@ -1,0 +1,101 @@
+step_id: GF-STEP-2B5
+track_id: FABLE5-GREENFIELD-001
+record_type: theory_nondevelopment_practice_and_transfer_batch_review
+status: GF_STEP_2B5_complete_batch2_text_review_ready_for_supplemental_batch
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-126
+storage_actor: ChatGPT_GitHub_app
+storage_model_context:
+  user_reported_reasoning_tier: thinking_not_pro
+  substantive_review_performed: false
+research_mode: false
+prior_step: GF-STEP-2B4B
+files:
+  prompt:
+    path: 00-prompt-as-sent.md
+    preservation_status: exact_prompt_body_stored_from_current_conversation_context
+    git_blob_sha: c3a8b778bed408dcc8c3368e6f46d382b59121c9
+  chat_summary:
+    path: 01-fable-chat-summary.md
+    preservation_status: user_pasted_summary_stored
+    git_blob_sha: d12bd86a548f32e89c993890386887a8105f62bf
+  downloadable_output:
+    path: 02-theory-nondev-transfer-evidence.md
+    uploaded_filename: FABLE5-GREENFIELD-001-STEP2B5-theory-nondev-transfer-evidence.md
+    size_bytes: 27959
+    sha256: 99946be1f8cc5c4909553bf8fb51410636d9e89b62753eef8b6aa309e135dc5f
+    git_blob_sha: f81d2303fc23330b144d9fd1ff4eb546b176c757
+    encoding: utf-8
+    line_endings: lf
+    final_lf_preserved: true
+    normalization: none
+    verbatim_status: byte_faithful_utf8_lf_copy
+source_reports:
+  - report_id: RPT-2026Q2-0006
+    expected_blob_sha: 406246cd4b172d490849830b4e8f1d674c513c4f
+    reported_sha_match: true
+    reported_pages: 4
+    reported_text_size: approximately_7900_chars
+  - report_id: RPT-2026Q2-0002
+    expected_blob_sha: a5c38087536d49459ee4d7d36a93a04c4bdc3c94
+    reported_sha_match: true
+    reported_pages: 5
+    reported_text_size: approximately_11400_chars
+  - report_id: RPT-2026Q2-0007
+    expected_blob_sha: c4e0b43647da84411a52cc3a70ee046217a0b7e3
+    reported_sha_match: true
+    reported_pages: 4
+    reported_text_size: approximately_7600_chars
+structural_validation:
+  required_sections_expected: 17
+  required_sections_found: 17
+  evidence_records:
+    theory:
+      count: 7
+      ids: F2B5-T01_through_F2B5-T07
+    nondevelopment:
+      count: 5
+      ids: F2B5-ND01_through_F2B5-ND05
+    transfer:
+      count: 6
+      ids: F2B5-TR01_through_F2B5-TR06
+    total: 18
+  S01_disposition: batch_reports_refine
+  integrated_matrix_rows: 10
+  nondevelopment_boundary_statements: 6
+  STEP1_linkage_entries: 7
+  uncertainty_items: 8
+  execution_modes: all_three_full_text_mode
+  visual_review_performed: false
+  OCR_performed: false
+  artifact_control_or_tool_status_leakage_detected: false
+word_count:
+  fable_reported_approximate: 3447
+  local_whitespace_delimited: 3527
+  local_english_word_pattern: 2859
+  soft_target: 2800_to_4000
+  hard_cap: 4800
+  note: count_method_variation_only; all reported/local methods remain within hard cap
+provider_status:
+  prior_incident: FABLE5-GREENFIELD-001-INCIDENT-002
+  prior_pause_reason: user_reported_weekly_quota_exhaustion
+  current_observation: quota_became_available_and_GF_STEP_2B5_completed
+  incident_resolution_status: resolved_by_provider_quota_availability_and_successful_step_completion
+continuation:
+  next_proposed_step: GF-STEP-2B6
+  scope: integrated_review_of_MT_HO_UIG_FTDRE_supplemental_markdown_reports
+  executed_here: false
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: true
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  auto_merge_authorized: false
+  paused_post_handoff_route_resumed_or_closed: false
+  substantive_greenfield_acceptance_performed: false
