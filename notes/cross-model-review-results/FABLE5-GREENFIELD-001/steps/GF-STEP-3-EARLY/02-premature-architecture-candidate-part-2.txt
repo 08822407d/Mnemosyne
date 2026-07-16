@@ -1,0 +1,44 @@
+
+## 6. Layer model overview
+
+Eight layers, each a directory family with one authority role: L0 governance (operative), L1 originals (evidentiary), L2 interpretations (interpretive), L3 working state (current-truth-of-record, non-operative), L4 relay (handoff), L5 evidence (dated, graded, non-operative), L6 candidates (proposed futures), L7 adapters (generated per-tool surfaces). Cross-cutting: provenance metadata on every artifact; disclosure variants only ever derived from L1/L5 through governed redaction [candidate-informed: five-authority model, Q-07-final pending].
+
+## 7. Layer specifications and directory schema
+
+```
+project-memory/
+  L0-governance/
+    approved-spec.md          # sole operative file; human-approved diffs only [N07]
+    decision-log/DEC-*.md     # approved decisions; IDs; back-links [N08]
+    authority-map.md          # who/what may change which layer [N07; DP-02]
+  L1-originals/
+    pointers/PTR-*.yaml       # controlled references; default mode [DP-07, DP-14]
+    inrepo/ORIG-*.md          # only if user relaxes placement [DP-07]
+  L2-interpretations/
+    INT-*.md                  # restatements/digests; mandatory origin back-links;
+                              # never operative; rejected ones retained as rejected [N06,N08]
+  L3-state/
+    active-context.md         # phase, gate, constraints in force
+    task-ledger.md            # done / pending / forbidden
+    open-questions.md         # live unknowns; no silent assumptions [N02]
+  L4-relay/
+    latest-relay.md           # current handoff artifact, tiered [N12; DP-13]
+    archive/RLY-*.md          # immutable past relays; historical only
+  L5-evidence/
+    research/  runs/  postmortems/  regressions/
+                              # dated, graded, evidence-pathed; reserved slots for
+                              # adopted instruments [N13,N19,N21; Q-08/Q-09 pending]
+  L6-candidates/
+    CAND-*.md                 # proposed spec/policy changes awaiting approval [N04,N11]
+  L7-adapters/
+    <tool>-rules.md           # short, generated from L0+L3; regenerable; never edited
+                              # as truth [N10; CB-07,08,22]
+```
+
+Append-only rules: L1, L4-archive, L5, and decision-log are never rewritten; corrections travel as new records with change notes [N13,N14; DP-11].
+
+## 8. Authority and promotion model
+
+Three operative facts only: approved-spec content, decision-log entries, and authority-map grants. Promotion path: anything → L6 candidate → explicit human approval event (a DEC record naming the candidate, the diff, and the approver) → L0 change. Demotion/rejection: candidates and interpretations marked rejected are retained, never deleted [N08; candidate-informed rejected-artifact rule]. Evidence and relays never promote by inclusion; citing a file confers no authority [GF1B-N18]. A validation PASS of any kind confers no promotion [N21; CB-13]. Approval granularity (per-diff, per-file, per-batch) is DP-02.
+
+## 9. Surface-specific write paths
