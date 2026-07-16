@@ -1,0 +1,175 @@
+- boundary_type:
+    affordance |
+    non_guarantee |
+    authority_limit |
+    evidence_limit |
+    freshness_limit |
+    transfer_limit |
+    governance_limit
+- RD_ids
+- supporting_evidence_ids
+- confidence:
+    high |
+    medium |
+    low
+- low_drift_or_dated
+- implication_for_STEP3:
+    hard_constraint |
+    design_consideration |
+    candidate_only |
+    user_decision_gate
+- prohibited_overclaim
+
+This register repairs D5 without erasing the historical STEP2C IDs.
+
+────────────────────────────────────
+7. Exact RD-01 through RD-11 table
+────────────────────────────────────
+
+Create exactly eleven rows.
+
+For each include:
+
+- domain_id
+- domain_title
+- verified_boundary_statement
+- positive_affordances
+- non_guarantees_and_limits
+- final_GF2D_boundary_ids
+- supporting_evidence_ids
+- related_STEP1_need_ids
+- source_strength
+- freshness_class:
+    low_drift |
+    mixed |
+    dated
+- method_or_policy_candidates_separate
+- user_decisions_separate
+- prohibited_inference
+
+Do not place RD-07 through RD-10 only in an instrument inventory; each must
+receive a design-neutral capability/evidence boundary row.
+
+────────────────────────────────────
+8. Low-drift, dated-fact, method, and policy registers
+────────────────────────────────────
+
+Create four separate compact registers:
+
+A. low_drift_principles
+B. dated_facts
+C. method_candidates
+D. policy_candidates
+
+For every item include:
+
+- item_id
+- concise_content
+- source_evidence_ids
+- classification
+- may_constrain_STEP3_now:
+    yes |
+    yes_with_qualification |
+    no
+- needs_user_adoption:
+    yes |
+    no |
+    uncertain
+- needs_current_refresh:
+    yes |
+    no |
+    only_if_design_depends
+- notes
+
+Candidate instruments from STEP2B6 must remain candidates.
+
+Do not represent current product behavior as low-drift.
+
+────────────────────────────────────
+9. Exact freshness queue
+────────────────────────────────────
+
+Create at most 12 rows.
+
+For each include:
+
+- refresh_id
+- exact_claim_or_claim_family
+- affected_signal_or_RD_ids
+- evidence_period
+- why_drift_is_plausible
+- design_dependency:
+    none |
+    optional |
+    load_bearing
+- refresh_timing:
+    before_STEP3 |
+    during_STEP3_if_selected |
+    before_STEP5_comparison |
+    not_required_use_date_caveat
+- acceptable_temporary_handling
+- exact_future_check_question
+- external_check_performed_now: false
+
+A refresh is required before STEP3 only when a specific architecture branch
+cannot be bounded safely without it.
+
+Do not turn every dated fact into an immediate research task.
+
+────────────────────────────────────
+10. Exact six-PDF visual-review gate
+────────────────────────────────────
+
+Create exactly six rows for:
+
+- RPT-2026Q2-0002
+- RPT-2026Q2-0003
+- RPT-2026Q2-0004
+- RPT-2026Q2-0005
+- RPT-2026Q2-0006
+- RPT-2026Q2-0007
+
+For each include:
+
+- report_id
+- text_review_status: complete
+- visual_review_status: not_performed
+- known_visual_dependent_claim_in_track_outputs:
+    yes |
+    no |
+    uncertain
+- affected_evidence_ids
+- could_unreviewed_visual_change_a_load_bearing_boundary:
+    yes |
+    no |
+    uncertain
+- required_handling:
+    visual_review_before_STEP3 |
+    visual_review_only_if_specific_claim_selected |
+    carry_text_only_caveat |
+    block_GF_STEP_2
+- rationale
+
+Do not claim that visuals contain nothing important.
+
+────────────────────────────────────
+11. Exact 21-need coverage table
+────────────────────────────────────
+
+Create one row for every active need ID:
+
+- GF1A-N01 through GF1A-N12
+- GF1B-N13 through GF1B-N18
+- GF1C-N19 through GF1C-N21
+
+For each include:
+
+- need_id
+- short_title
+- capability_domains
+- evidence_coverage:
+    strong |
+    partial |
+    boundary_only |
+    user_decision_not_evidence |
+    method_or_policy_candidate_only
