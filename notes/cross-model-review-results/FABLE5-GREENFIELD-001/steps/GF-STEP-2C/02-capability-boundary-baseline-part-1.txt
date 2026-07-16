@@ -1,0 +1,35 @@
+# FABLE5-GREENFIELD-001 — GF-STEP-2C Independent Capability-Boundary Baseline
+
+## 1. Metadata
+
+```yaml
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-2C
+step_name: independent_capability_boundary_baseline
+record_type: capability_boundary_baseline_synthesis
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_step: GF-STEP-2B6
+GF_STEP_1_status: complete_with_explicit_open_questions
+research_mode: false
+date: 2026-07-16
+synthesis_inputs: this track's own deliverables only (STEP1A–STEP1E need model; STEP2A source map; STEP2B1–STEP2B6 evidence registers)
+new_repository_reads: none
+retrieval_batteries_used: 0
+step_status: GF_STEP_2_complete_capability_boundary_baseline_established
+```
+
+## 2. Scope and hard limits
+
+Synthesis substep closing GF-STEP-2: consolidate the five signal dispositions, the load-bearing evidence of all six reading substeps, and the limitation registers into one independent capability-boundary baseline for the STEP-1 need model. Limits observed: repository paths 0; retrieval batteries 0; no report, prompt, summary, index, or web reads; no model/vendor evaluation; no design, architecture, comparison, or repair work; no instrument adoption; Research mode off; no automatic continuation into GF-STEP-3.
+
+## 3. Allowed sources and anti-contamination policy
+
+Inputs are exactly this track's own thirteen deliverables (verified present on disk before synthesis; no external source touched). Every statement below is traceable to a prior register ID; nothing new is asserted about tools, platforms, or reports beyond what those registers already carry. Other-track design state referenced inside sources remains framing, never imported. Prior-exposure disclosure carries forward: independence by derivation and disclosure. Q-10's residue stands: the seven initial-cycle prompt originals remain unread (their reports were read; the prompts stay excluded under the anti-expansion rule).
+
+## 4. Synthesis inputs and integrity note
+
+Need model: GF1A-N01…N12 (N12 delta), GF1B-N13…N18, GF1C-N19…N21 — closed in STEP1E with explicit open questions. Evidence layer: F2B1-E01…E14 (foundational txt report); F2B2A-E01…E06 (plain-dialogue PDF text); F2B3-E01…E05 (local workflows PDF text); F2B4-E01…E05 (hosted workflows PDF text, superseding F2B4A-P01…P03); F2B5-T01…T07, ND01…ND05, TR01…TR06 (theory, non-development practice, transfer); F2B6-MT/HO/UG/FT-01…06 (method and policy instruments). All 11 active reports read at full-text level; all source SHAs matched at read time; the six initial-cycle PDFs carry the standing visual-review limitation.
+
+## 5. Evidence-class and grading rules
+
