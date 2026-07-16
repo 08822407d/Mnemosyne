@@ -19,11 +19,13 @@ first_wave_fable_review:
 
 greenfield_track:
   track_id: FABLE5-GREENFIELD-001
-  latest_completed_substep: GF-STEP-2B4B
-  next_planned_substep: GF-STEP-2B5
-  provider_status: paused_user_reported_Fable_weekly_quota_exhausted
-  incident_record: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-002-weekly-quota-exhaustion.md
-  note: quota exhaustion is an operational pause, not a task failure or substantive review result
+  latest_completed_substep: GF-STEP-2B5
+  current_record: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B5/02-theory-nondev-transfer-evidence.md
+  next_planned_substep: GF-STEP-2B6
+  next_planned_scope: integrated_review_of_MT_HO_UIG_FTDRE_supplemental_markdown_reports
+  provider_status: resumed_for_GF_STEP_2B5_completion_future_availability_not_asserted
+  former_quota_incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-002-weekly-quota-exhaustion.md
+  substantive_maintainer_acceptance: not_performed_by_MNEMOSYNE_126_thinking_tier_storage_task
 
 conversation_routing_after_MNEMOSYNE_114:
   current_long_conversation:
@@ -175,5 +177,5 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - `HO-GUIDANCE-001` remains unresolved and is separate from Issue #171.
 - No target workspace, target material, target repository write, or operational build has occurred.
 - Meta-Agent product-development subroutes remain unselected and unauthorized.
-- FABLE5-GREENFIELD-001 remains separate and incomplete.
+- FABLE5-GREENFIELD-001 remains separate and incomplete; GF-STEP-2B5 is stored and GF-STEP-2B6 is next.
 - ChatGPT Work guidance remains candidate guidance pending DR6-informed refresh.

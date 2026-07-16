@@ -2,10 +2,10 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_canonical_copies_stored_track_paused_at_GF_STEP_2B5
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_2B5_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-112
-last_status_task: MNEMOSYNE-113
+last_storage_task: MNEMOSYNE-126
+last_status_task: MNEMOSYNE-126
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -90,13 +90,19 @@ step_records:
     stored_by_task: MNEMOSYNE-112
     substantive_review_performed: false
     next_proposed_step: GF-STEP-2B5
+  - step_id: GF-STEP-2B5
+    path: steps/GF-STEP-2B5/
+    status: GF_STEP_2B5_complete_batch2_text_review_ready_for_supplemental_batch
+    stored_by_task: MNEMOSYNE-126
+    substantive_review_performed: false
+    next_proposed_step: GF-STEP-2B6
 track_progress:
   GF_STEP_1:
     status: complete_with_explicit_open_questions_as_Fable_advisory_result
     completion_record: steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
     substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete_and_outside_MNEMOSYNE_113_first_wave_scope
   GF_STEP_2:
-    status: in_progress_paused_by_provider_quota
+    status: in_progress_ready_for_supplemental_batch
     completed_substeps:
       - GF-STEP-2A
       - GF-STEP-2B1
@@ -104,8 +110,11 @@ track_progress:
       - GF-STEP-2B3
       - GF-STEP-2B4A
       - GF-STEP-2B4B
-    current_record: steps/GF-STEP-2B4B/02-hosted-workflow-final-text-evidence.md
-    next_planned_substep: GF-STEP-2B5
+      - GF-STEP-2B5
+    current_record: steps/GF-STEP-2B5/02-theory-nondev-transfer-evidence.md
+    next_planned_substep: GF-STEP-2B6
+    next_planned_scope: integrated_review_of_MT_HO_UIG_FTDRE_supplemental_markdown_reports
+    provider_quota_status: resumed_for_GF_STEP_2B5_completion_future_availability_not_asserted
     substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete
 provider_incidents:
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
@@ -115,8 +124,8 @@ provider_incidents:
     exact_provider_trigger: unknown
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-002
     path: incidents/INC-002-weekly-quota-exhaustion.md
-    affected_step: GF-STEP-2B5_not_started
-    status: operational_pause_user_reported_weekly_quota_exhausted
+    affected_step: GF-STEP-2B5_before_execution
+    status: resolved_after_provider_quota_became_available_and_GF_STEP_2B5_completed
     task_failure: false
 raw_preservation_rule:
   - preserve_each_step_prompt_verbatim

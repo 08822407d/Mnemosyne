@@ -34,8 +34,9 @@ Findings and design proposals become actionable only after maintainer/user valid
   - `steps/GF-STEP-2B3/` — bounded full-text-layer review of the local project-file workflow PDF. Five text-only evidence records and the S-04 refinement are stored; no OCR or visual inspection was performed.
   - `steps/GF-STEP-2B4A/` — strictly usage-bounded core-text probe of the hosted-repository workflow PDF. Three provisional records were created and later superseded by STEP2B4B.
   - `steps/GF-STEP-2B4B/` — completion of the hosted-repository workflow PDF text-layer review. Five final evidence records replace the provisional records and S-05 is refined. No OCR or visual inspection was performed.
+  - `steps/GF-STEP-2B5/` — integrated full-text-layer review of the theory/engineering, non-development-practice, and development-to-non-development transfer reports. The exact prompt, user-pasted Fable summary, byte-faithful downloadable output, integrity metadata, 18 evidence records, S-01 refinement, theory–practice–transfer matrix, non-development boundaries, and GF-STEP-2B6 continuation are stored. No OCR or visual inspection was performed; no substantive maintainer acceptance was conducted by the Thinking-tier storage task.
   - `incidents/INC-001-step2a-safety-routing.md` — operational record of the first STEP2A attempt being visibly routed from Fable 5 to Opus 4.8, with trigger uncertainty preserved and a later successful revised run.
-  - `incidents/INC-002-weekly-quota-exhaustion.md` — user-reported Fable weekly-quota exhaustion. The greenfield track is operationally paused after GF-STEP-2B4B with GF-STEP-2B5 next; this is not a task failure or substantive finding.
+  - `incidents/INC-002-weekly-quota-exhaustion.md` — user-reported Fable weekly-quota exhaustion, now resolved after quota became available and GF-STEP-2B5 completed. The former pause was not a task failure or substantive finding.
 
 ## Follow-up triage records
 
@@ -62,10 +63,11 @@ status_values:
   step_output_canonical_copy_stored: a bounded step prompt, response summary, and downloadable output have been stored with integrity and continuation metadata
   provider_routing_incident_stored: a provider model-routing or safety-routing observation is stored separately from the canonical task result, with trigger uncertainty preserved
   provider_quota_operational_pause_stored: a provider quota exhaustion observation is stored as an operational pause, not a substantive finding or task failure
+  provider_quota_operational_pause_resolved: a former provider quota pause has ended and the previously blocked next step has completed
   read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
   review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
   substantive_adjudication_completed: a maintainer decision record has evaluated advisory findings and recorded scoped repair decisions
-  transfer_prompt_prepared: a copyable prompt is prepared for later execution in another conversation
+  transfer_prompt_prepared: a copyable prompt/package is prepared for later execution in another conversation
   triaged: maintainer triage record exists
   repair_candidates_routed: accepted repair candidates have been routed to user-approved tasks or explicitly deferred
 ```
