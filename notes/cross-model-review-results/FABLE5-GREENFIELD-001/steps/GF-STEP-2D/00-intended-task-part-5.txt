@@ -1,0 +1,175 @@
+- no new evidence records
+- no architecture mechanisms
+- no existing-design comparison
+- no automatic continuation
+
+Word-budget policy:
+
+- soft target: 3,800–5,200 words
+- hard cap: 6,200 words
+- the soft target is advisory
+- a complete first draft within the hard cap is acceptable
+- at most one light compression pass, only if the hard cap is exceeded
+- use compact tables
+- remove repeated candidate prose before verification, gate, and decision rows
+- never omit an eight-source row, candidate CB audit row, RD row, PDF row,
+  need row, or question row
+- perform no more than one approximate word-count check
+- do not repeat counting or compression because methods differ
+
+────────────────────────────────────
+17. Required downloadable file
+────────────────────────────────────
+
+Create exactly:
+
+FABLE5-GREENFIELD-001-STEP2D-source-contract-verification-and-closure-addendum.md
+
+If downloadable artifact creation is unavailable, provide the exact complete
+Markdown body in one fenced block.
+
+Required sections:
+
+1. Metadata
+2. Scope and hard limits
+3. Allowed inputs and anti-contamination policy
+4. Eight-source integrity and access table
+5. Candidate STEP2C receipt
+6. Deviation classification matrix
+7. Evidence and precedence rules
+8. S-01 through S-05 verification
+9. CB-01 through CB-27 audit
+10. Final GF2D stable-boundary register
+11. RD-01 through RD-11 table
+12. Low-drift principle register
+13. Dated-fact register
+14. Method-candidate register
+15. Policy-candidate register
+16. Freshness refresh queue
+17. Six-PDF visual-review gate
+18. Twenty-one-need coverage table
+19. Q-01 through Q-15 register
+20. Unsupported-assumption register
+21. Coverage and limitation ledger
+22. GF-STEP-2 closure determination
+23. GF-STEP-2E proposal only if blocked, otherwise bounded GF-STEP-3A input contract
+24. Boundary statement
+
+Metadata must include:
+
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-2D
+record_type: source_contract_verification_and_capability_baseline_closure_addendum
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_step: GF-STEP-2C
+research_mode: false
+candidate_attachment:
+  filename: FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
+  expected_size_bytes: 25385
+  expected_sha256: 1e814613d1122b040f7d207c30a1dc0887ebc1394354aeb0c580cef3330aab2b
+required_repository_sources: 8
+new_research_sources_read: false
+existing_GPT_design_read: false
+
+The coverage ledger must state:
+
+- expected/observed SHA and complete-read status for all eight sources;
+- retrieval batteries used;
+- attachment integrity visibility;
+- deviation classifications D1–D10;
+- S-01 through S-05 verification results;
+- CB audit count and final GF2D boundary count;
+- RD row count;
+- freshness row count;
+- six-PDF gate outcome;
+- need and question row counts;
+- unsupported-assumption count;
+- exact GF-STEP-2 status;
+- exact blocker if incomplete;
+- proposed next step.
+
+────────────────────────────────────
+18. File-content discipline
+────────────────────────────────────
+
+Preserve:
+
+- exact source paths and SHAs;
+- exact evidence identifiers;
+- corrections with traceable reasons;
+- distinction among facts, principles, methods, policies, and decisions;
+- date and visual qualifications;
+- explicit user gates;
+- strict closure reasoning.
+
+Do not include:
+
+- hidden chain-of-thought;
+- long connector narration;
+- raw tool logs;
+- copied original-report passages;
+- new external facts;
+- architecture design;
+- current-design comparison;
+- repository repair advice;
+- execution-source proposals;
+- artifact-control messages;
+- duplicated file-presentation text.
+
+Before presenting the file:
+
+- perform one structural check;
+- perform no more than one approximate word-count check;
+- confirm all 24 required sections exist;
+- confirm the eight source rows, five signals, 27 candidate audits, 11 RD rows,
+  six PDF rows, 21 need rows, and 15 question rows are present;
+- confirm the ending is clean;
+- do not perform another compression cycle when within the hard cap.
+
+────────────────────────────────────
+19. Chat response
+────────────────────────────────────
+
+After presenting the file, provide only a brief summary stating:
+
+- completion within limits;
+- SHA and complete-read result for all eight repository sources;
+- attachment identity/integrity visibility;
+- D1–D10 classification totals;
+- S-01 through S-05 verification results;
+- candidate-CB audit count;
+- final GF2D boundary count;
+- RD row count;
+- freshness row count;
+- PDF visual-gate outcome;
+- need and question row counts;
+- retrieval batteries used;
+- approximate word count;
+- GF-STEP-2 closure determination;
+- whether GF-STEP-2E or GF-STEP-3A was proposed;
+- downloadable file creation result.
+
+Do not repeat the file body in chat.
+
+────────────────────────────────────
+20. Boundary
+────────────────────────────────────
+
+Do not:
+
+- write repository files;
+- generate execution tasks;
+- update execution source;
+- read any source outside the eight pinned greenfield files and one attachment;
+- perform web or external research;
+- evaluate or rank models or vendors;
+- compare against or modify the current GPT/Mnemosyne design;
+- adopt any candidate method or policy;
+- begin architecture design or GF-STEP-3;
+- create target-project artifacts;
+- formalize regression;
+- resume or close the paused post-handoff route.
+
+This output is non-execution-source advisory evidence only.
+Stop after the downloadable file and brief summary.
