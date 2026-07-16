@@ -14,24 +14,24 @@ final_lf_present: true
 ordered_parts:
   - path: 00-intended-task-part-1.txt
     size_bytes: 6011
-    sha256: d9638ee949a62baec387bbff42600d89ed5867fbfca13a0c1ce3bc86c66bc8e9
-    git_blob_sha: af0ec3df5a3f475729954f24ac6e1f48baa67a7c
+    sha256: 12e359a729fe429d1002d0cafe9e966a462232f9f054c61834b7d7ee506e6294
+    git_blob_sha: 12644f2b050448ce5187028e234ac90dbb73cdc4
   - path: 00-intended-task-part-2.txt
     size_bytes: 5608
-    sha256: 2dc1605da4d7541c4c33bd40bbeeee41e43619495c661d52ff416220439794f7
-    git_blob_sha: 948790364f4c36e28d03915554fb759a52c3556c
+    sha256: a127a5b4747ea0d8c8e2a7ff3505081df6ea754a1ed2c066987b55e05c1eafd8
+    git_blob_sha: 8170ee21f388a75c8e60b706b178cfe993f66459
   - path: 00-intended-task-part-3.txt
     size_bytes: 4445
-    sha256: 56204adcb2f6bf2b072c345b39dd5683b48795aacb2cb49f91a416ce45c53b2c
-    git_blob_sha: c81aa667d502a16662ead02131fab586e923c8bf
+    sha256: bfc9b6e6abb8a0b9ee9d1ff3e45a443fa6db2a67774b725ba667eca8dc2b4521
+    git_blob_sha: 95d056eadfc6236c065fe8c1c42a3b0dc1302687
   - path: 00-intended-task-part-4.txt
     size_bytes: 5530
-    sha256: bde9df3dfb268104422049bbd354ab5b071559a684cb5b0972369b5182581365
-    git_blob_sha: 12d4975fb2852b5f9070e319032fb6ed09ea80bd
+    sha256: 85bd37fd808998401a49f920e6d894fdf4b60a7c1f5bec38c6fa164c0401270f
+    git_blob_sha: 8df8f486a64c16b40f6703b81fd85d7824fc8f6d
   - path: 00-intended-task-part-5.txt
     size_bytes: 6046
-    sha256: f932de584548980fc0c8d04207a254c9300adf803013c4fa5d084cf0269721fe
-    git_blob_sha: 20a93174aef7ca039865aaf8ba3e3731a4b7ec43
+    sha256: bbc6c370775c9145b0e1d33ec08349a631474b9df330ca2cfc484bd515bbc2b8
+    git_blob_sha: b5a9c15a9dbaad96944b1341b1e4b064ea7768cb
 concatenation_rule: concatenate_in_list_order_with_no_inserted_delimiter
 ```
 
