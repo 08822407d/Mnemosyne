@@ -1,0 +1,40 @@
+task_id: MNEMOSYNE-130
+record_type: greenfield_track_execution_deviation_supplement
+base_track_manifest: ../manifest.yaml
+status: active_supplement_until_future_manifest_consolidation
+latest_event:
+  intended_step: GF-STEP-2D
+  intended_step_status: not_executed
+  returned_step: GF-STEP-3
+  returned_step_status: premature_candidate_received_not_accepted
+  incident: ../incidents/INC-003-step2d-misinterpreted-as-step3.md
+records:
+  intended_task: ../steps/GF-STEP-2D/00-intended-task-as-sent.md
+  chat_summary: ../steps/GF-STEP-2D/01-fable-chat-summary.md
+  step2d_manifest: ../steps/GF-STEP-2D/manifest.yaml
+  premature_candidate: ../steps/GF-STEP-3-EARLY/02-premature-architecture-candidate.md
+  premature_candidate_manifest: ../steps/GF-STEP-3-EARLY/manifest.yaml
+track_progress:
+  GF_STEP_1: complete_with_explicit_open_questions_as_Fable_advisory_result
+  GF_STEP_2:
+    reading_phase: complete_as_Fable_advisory_evidence
+    STEP2C_candidate: stored_with_source_contract_and_schema_deviations
+    closure_verification: not_completed
+    accepted_complete: false
+  GF_STEP_3:
+    Fable_claim: complete
+    canonical_status: not_started_under_a_dedicated_contract
+    early_candidate_storage: complete
+    early_candidate_acceptance: false
+  comparison_phase_authorized: false
+next_safe_action:
+  - execute_GF_STEP_2D_correctly_in_a_fresh_context
+  - or_record_explicit_user_selected_alternative_closure_path
+boundaries:
+  execution_source_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false
