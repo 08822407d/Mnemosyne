@@ -17,7 +17,7 @@ user_authorization:
 base_branch: master
 pinned_base_sha: 7ea6216b45d84c406fa6a897711e80650ff1fab1
 canonical_branch: mnemosyne-128-preserve-fable-step2b6
-canonical_pr_number: pending_at_initial_record
+canonical_pr_number: 179
 execution_source_modified: false
 current_state_files_modified: true
 handoff_files_modified: false
@@ -151,14 +151,38 @@ github_write_lineage_preflight:
   decision: create_new_lineage
 ```
 
-## Verification before PR creation
+## Pre-PR recheck and final verification
+
+```yaml
+pre_PR_duplicate_lineage_recheck:
+  accessible_open_PRs_before_creation: []
+  exact_task_id_matches_before_creation: []
+  intended_head_matches_before_creation: []
+  equivalent_scope_matches_before_creation: []
+  decision: create_ready_PR
+created_PR:
+  number: 179
+  head: mnemosyne-128-preserve-fable-step2b6
+  base: master
+  draft: false
+  auto_merge_enabled: false
+merge_instruction:
+  task_id: MNEMOSYNE-128
+  merge_target_pr: 179
+  merge_target_head_branch: mnemosyne-128-preserve-fable-step2b6
+  related_open_prs: []
+  closed_or_superseded_related_prs: []
+  parallel_variant_authorized: false
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
+```
 
 - The branch was created from current `master@7ea6216b45d84c406fa6a897711e80650ff1fab1` and fetched before writes.
 - Every write explicitly targeted `mnemosyne-128-preserve-fable-step2b6`.
+- The final pre-PR compare was ahead-only with `behind_by: 0` and eight intended changed files before this final result-record update.
 - Changed paths are limited to the GF-STEP-2B6 package, greenfield manifests/indexes, current review wayfinding, and this result record.
 - `current/human-approved-spec.md` is untouched.
 - Handoff files, target paths, regression definitions, build paths, and frozen MNEMOSYNE-082/083 artifacts are untouched.
-- A second duplicate-lineage check and final compare are required immediately before opening the ready PR; the final PR number will then be written back into this record.
 
 ## Boundary
 
