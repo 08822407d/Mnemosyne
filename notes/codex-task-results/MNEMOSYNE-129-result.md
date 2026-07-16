@@ -17,7 +17,7 @@ user_authorization:
 base_branch: master
 pinned_base_sha: 2cf9060ad763dfb28e5dfeb0f201bc86a083929d
 canonical_branch: mnemosyne-129-preserve-fable-step2c
-canonical_pr_number: pending_at_initial_record
+canonical_pr_number: 180
 execution_source_modified: false
 current_state_files_modified: true
 handoff_files_modified: false
@@ -37,20 +37,18 @@ MNEMOSYNE-129 stores the returned Fable 5 `FABLE5-GREENFIELD-001 / GF-STEP-2C` c
 
 The task performs preservation, integrity and structural checks, exact multipart recovery, index updates, and bounded status synchronization only. It does not substantively accept or reject the capability boundaries, dated platform claims, method/policy classifications, open-question dispositions, visual-review handling, or Fable's claim that GF-STEP-2 is complete.
 
-The source prompt required exactly eight pinned canonical repository reads and a detailed 21-section output schema. The returned summary and file instead report zero repository reads, use thirteen locally present track deliverables, and provide a differently structured 20-section artifact. These deviations are recorded without normalization or adjudication.
+The prompt required exactly eight pinned canonical repository reads and a detailed 21-section output schema. The return reports zero repository reads, uses thirteen locally present track deliverables, and supplies a differently structured 20-section artifact. These deviations are preserved and recorded without adjudication.
 
-## Stored step package
+## Stored package
 
-Created under:
+Created under `notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2C/`:
 
-`notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2C/`
-
-- `00-prompt-as-sent.md` — multipart prompt index;
-- `00-prompt-as-sent-part-1.txt` through `part-5.txt` — exact ordered prompt bytes;
-- `01-fable-chat-summary.md` — user-pasted completion summary;
-- `02-capability-boundary-baseline.md` — multipart output index;
-- `02-capability-boundary-baseline-part-1.txt` through `part-5.txt` — exact ordered output bytes;
-- `manifest.yaml` — integrity, structure, deviation, and continuation metadata.
+- `00-prompt-as-sent.md` — exact multipart prompt index;
+- `00-prompt-as-sent-part-1.txt` through `part-5.txt`;
+- `01-fable-chat-summary.md`;
+- `02-capability-boundary-baseline.md` — exact multipart output index;
+- `02-capability-boundary-baseline-part-1.txt` through `part-5.txt`;
+- `manifest.yaml`.
 
 Also created:
 
@@ -62,7 +60,7 @@ Modified:
 - `notes/cross-model-review-results/README.md`;
 - `current/review-and-validation-status.md`.
 
-## Prompt integrity
+## Integrity
 
 ```yaml
 prompt:
@@ -76,13 +74,6 @@ prompt:
   line_endings: lf
   final_lf_present: true
   byte_faithful_multipart_copy: true
-```
-
-Every stored prompt-part Git blob SHA was fetched after write and matched its locally computed blob SHA.
-
-## Downloadable-output integrity
-
-```yaml
 returned_output:
   uploaded_filename: FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
   size_bytes: 25385
@@ -97,11 +88,11 @@ returned_output:
   byte_faithful_multipart_copy: true
 ```
 
-Every stored output-part Git blob SHA was fetched after write and matched its locally computed blob SHA.
+Every stored prompt/output part was fetched after write and its Git blob SHA matched the locally computed source-part blob SHA.
 
-## Storage transfer correction
+## Storage transport correction
 
-The first attempt to send the full returned output through one GitHub contents write did not preserve the source correctly. Before PR creation, that incomplete body was replaced with a non-source multipart index, and five exact ordered source parts were stored and individually blob-verified.
+The first one-file output write did not preserve the complete source correctly. Before PR creation, the incomplete body was replaced with a non-source multipart index and five exact, individually verified source parts.
 
 ```yaml
 initial_single_file_transfer_correct: false
@@ -111,45 +102,43 @@ source_reconstruction_verified_locally: true
 source_sha256_recoverable_from_parts: true
 ```
 
-This is a storage-transport correction, not a modification of Fable's source text.
+This correction changes only the repository transfer form, not Fable's source bytes.
 
-## Structural check
+## Structural receipt check
 
 ```yaml
-structure:
-  numbered_sections_found: 20
-  final_signals_found: 5
-  capability_boundary_ids_found: 27
-  STEP1_need_ids_found: 21
-  question_ids_Q01_through_Q15_found: 15
-  artifact_or_tool_status_leakage_detected: false
-word_count:
-  fable_reported_approximate: 3196
-  local_whitespace_delimited: 3247
-  local_english_word_pattern: 2836
-  prompt_hard_cap: 6200
+numbered_sections_found: 20
+final_signals_found: 5
+capability_boundary_ids_found: 27
+STEP1_need_ids_found: 21
+question_ids_Q01_through_Q15_found: 15
+artifact_or_tool_status_leakage_detected: false
+fable_reported_approximate_words: 3196
+local_whitespace_delimited_words: 3247
+local_english_word_pattern_count: 2836
+prompt_hard_cap_words: 6200
 ```
 
-This check confirms presence and count only; it does not confirm the correctness of the synthesized statements.
+This confirms presence/count only, not correctness.
 
-## Prompt/output deviations recorded
+## Recorded prompt/output deviations
 
-The step manifest records ten deviations, including:
+The step manifest records ten deviations:
 
-1. exactly eight pinned repository reads were required, while the return reports zero reads and thirteen local deliverables;
+1. eight pinned repository reads were required; the return reports zero reads and thirteen local deliverables;
 2. the required eight-row SHA/access table is absent;
-3. the returned filename differs from the requested filename;
-4. metadata fields and prior-step declaration differ;
-5. twenty numbered sections were returned instead of twenty-one;
-6. twenty-seven `CB-*` statements were used instead of 16–24 `GF2C-B*` statements;
-7. the requested one-row-per-domain RD-01…RD-11 schema was not reproduced exactly;
-8. freshness and six-PDF visual gates are summarized rather than supplied in the requested row schemas;
-9. Q-01…Q-15 and unsupported assumptions are summarized rather than delivered in the requested registers;
-10. the completion status value and next-step proposal do not match the exact allowed status/input-contract schema.
+3. the filename differs;
+4. metadata and prior-step fields differ;
+5. 20 sections were returned instead of 21;
+6. 27 `CB-*` statements replace the required 16–24 `GF2C-B*` statements;
+7. the one-row-per-domain RD-01…RD-11 schema is not reproduced exactly;
+8. freshness and six-PDF visual gates use summarized rather than requested row schemas;
+9. Q-01…Q-15 and unsupported assumptions are summarized rather than delivered as requested registers;
+10. the completion status and broad GF-STEP-3 proposal differ from the allowed enum and bounded GF-STEP-3A input-contract requirement.
 
-The returned output remains unchanged. These are not automatically classified as substantive failure or harmless variation; that determination is deferred.
+The source is preserved unchanged. This storage task does not classify the deviations as harmless, repairable, or completion-blocking.
 
-## Continuation status
+## Continuation
 
 ```yaml
 GF_STEP_2:
@@ -163,9 +152,9 @@ GF_STEP_2:
   required_before_GF_STEP_3_generation: separate_substantive_review_or_explicit_user_direction
 ```
 
-The repository does not promote the Fable completion claim into an accepted current execution or design gate through this storage task.
+No current execution/design gate is closed by this storage record.
 
-## GitHub write-lineage preflight
+## GitHub write lineage
 
 ```yaml
 github_write_lineage_preflight:
@@ -176,26 +165,39 @@ github_write_lineage_preflight:
   intended_branch: mnemosyne-129-preserve-fable-step2c
   open_pr_enumeration:
     method: get_users_recent_prs_in_repo_state_open_limit_100_plus_search_prs
-    pagination_complete: true_for_returned_empty_accessible_set
+    pagination_complete: true_for_returned_accessible_set
     all_accessible_open_prs_checked: true
-  matches:
+  pre_branch_matches:
     by_exact_task_id: []
     by_intended_head_branch: []
     by_equivalent_scope:
       - PR_179_is_merged_predecessor_for_GF_STEP_2B6_not_duplicate
-    existing_result_records_or_task_artifacts: []
   decision: create_new_lineage
+pre_PR_recheck:
+  accessible_open_PRs: []
+  exact_task_id_matches: []
+  intended_head_matches: []
+  equivalent_open_scope_matches: []
+canonical_PR:
+  number: 180
+  head: mnemosyne-129-preserve-fable-step2c
+  base: master
+  draft: false
+  auto_merge_enabled: false
+related_open_PRs: []
+parallel_variant_authorized: false
+exactly_one_merge_target: true
 ```
 
-## Verification before PR creation
+## Verification
 
 - PR #179 was verified merged as `2cf9060ad763dfb28e5dfeb0f201bc86a083929d`.
-- The canonical branch was created from that current master commit and fetched before writes.
-- Every write explicitly targets `mnemosyne-129-preserve-fable-step2c`.
+- The branch was created from that current master commit and fetched before writes.
+- Every write explicitly targeted `mnemosyne-129-preserve-fable-step2c`.
+- Pre-PR compare reported `ahead_by: 19`, `behind_by: 0`, with 18 intended changed files.
 - Changed paths are limited to the GF-STEP-2C package, greenfield manifests/indexes, current review wayfinding, and this result record.
-- `current/human-approved-spec.md` is untouched.
-- Handoff files, target paths, regression definitions, build paths, and frozen MNEMOSYNE-082/083 artifacts are untouched.
-- A second duplicate-lineage check and final compare are required immediately before opening the ready PR; the final PR number will then be written back into this record.
+- `current/human-approved-spec.md`, handoff files, target paths, regression definitions, build paths, and frozen MNEMOSYNE-082/083 artifacts are untouched.
+- PR #180 is the only canonical merge target and was created ready for review.
 
 ## Boundary
 
