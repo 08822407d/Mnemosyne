@@ -35,6 +35,7 @@ Read or ask the user to provide:
 
 - `README.md`
 - `current/human-approved-spec.md`
+- `current/artifact-delivery-and-direct-generation-guard.md`
 - this command file, if available
 
 When the current task may create or update a GitHub branch or pull request, also read:
@@ -65,17 +66,20 @@ If any of those files are read for a separate explicit task, treat their mainten
 3. Apply the objective neutral engineering stance from `current/human-approved-spec.md`.
 4. Apply the operation/conclusion separation principle from `current/human-approved-spec.md`.
 5. Apply the handoff/continuation correctness principle from `current/human-approved-spec.md` when handoff artifacts or continuation claims are actually part of the local task.
-6. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md` when producing long content for the user to manually forward.
-7. Apply the Deep Research output exception from `current/human-approved-spec.md` when designing Deep Research prompts.
-8. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts.
-9. Treat repository visibility as operator-controlled and stage-dependent; verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
-10. Treat platform/model/tool behavior as time-sensitive when relevant and verify current facts when possible.
-11. Preserve the current conversation's local task mainline.
-12. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
-13. Do not infer that the user wants handoff merely because this command was invoked.
-14. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
-15. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
-16. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
+6. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md` and `current/artifact-delivery-and-direct-generation-guard.md` when producing content for transfer, backup, archival, or later machine/operator reuse.
+7. When the user explicitly requests a low-risk downloadable artifact and no additional content decision or external-action authorization is required, create the local artifact in the same response when an available tool can do so safely; do not merely promise later generation.
+8. Before claiming delivery, verify that file creation succeeded and provide a real artifact link or available transfer pointer. Never invent a path or attachment.
+9. Keep safe local artifact generation separate from any independently gated repository write, upload, email, forwarding, or other external action.
+10. Apply the Deep Research output exception from `current/human-approved-spec.md`: the final Deep Research report body remains in the final report/answer, while prompts and other transfer artifacts remain file-first when applicable.
+11. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts.
+12. Treat repository visibility as operator-controlled and stage-dependent; verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
+13. Treat platform/model/tool behavior as time-sensitive when relevant and verify current facts when possible.
+14. Preserve the current conversation's local task mainline.
+15. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
+16. Do not infer that the user wants handoff merely because this command was invoked.
+17. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
+18. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
+19. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
 
@@ -94,7 +98,10 @@ mnemosyne_guidance_refresh:
     - objective_neutral_engineering_style
     - operation_conclusion_explanation_separation
     - handoff_correctness_when_handoff_is_explicitly_in_scope
-    - long_transfer_guidance_when_relevant
+    - artifact_file_first_delivery_when_relevant
+    - same_response_low_risk_artifact_generation_when_relevant
+    - verified_artifact_link_and_no_invented_path
+    - Deep_Research_full_report_body_exception
     - staged_prompt_generation_when_relevant
     - visibility_and_manual_import_safety_when_relevant
     - platform_freshness_check_when_relevant
@@ -108,6 +115,7 @@ Do not report Mnemosyne maintenance current phase, current active task, paused r
 - This command is a shortcut for refreshing existing behavior guidance in the current conversation.
 - This command is not an execution source.
 - This command does not approve new design content.
+- Loading the artifact-delivery guard does not authorize repository writes, uploads, email, forwarding, or other external actions.
 - This command does not authorize edits, automation, MCP, RAG, auto-writeback, or changes outside the user-approved task scope.
 - This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
 - Loading the single-active PR lineage guard does not itself authorize branch creation, PR creation, parallel PRs, merges, or task-number reuse.
