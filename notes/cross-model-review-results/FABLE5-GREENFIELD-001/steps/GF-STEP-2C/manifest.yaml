@@ -1,0 +1,177 @@
+step_id: GF-STEP-2C
+track_id: FABLE5-GREENFIELD-001
+record_type: independent_capability_boundary_baseline_synthesis_storage_manifest
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-129
+storage_status: canonical_multipart_copies_stored_with_execution_contract_and_schema_deviations
+substantive_review_performed: false
+substantive_acceptance_status: pending_separate_higher_reasoning_maintainer_review
+fable_reported_status: GF_STEP_2_complete_capability_boundary_baseline_established
+maintainer_storage_interpretation: fable_advisory_completion_claim_preserved_not_yet_accepted
+next_proposed_step_in_source: GF-STEP-3_independent_architecture_derivation
+next_step_executed: false
+
+prompt:
+  source_filename: FABLE5-GREENFIELD-001-GF-STEP-2C-task.md
+  canonical_index: 00-prompt-as-sent.md
+  ordered_parts:
+    - 00-prompt-as-sent-part-1.txt
+    - 00-prompt-as-sent-part-2.txt
+    - 00-prompt-as-sent-part-3.txt
+    - 00-prompt-as-sent-part-4.txt
+    - 00-prompt-as-sent-part-5.txt
+  concatenation_rule: concatenate_in_listed_order_without_inserted_delimiter
+  size_bytes: 28649
+  sha256: 5eecff2b9a4b421bcd8e4f7929c401cabe8fdf7efcc44aa2b8bc45e962422472
+  expected_whole_file_git_blob_sha: e1b9f6a0dd09ac61514a1a4d2aa3317332e19a31
+  encoding: utf-8
+  line_endings: lf
+  final_lf_present: true
+  normalization: none
+  parts:
+    - file: 00-prompt-as-sent-part-1.txt
+      size_bytes: 6672
+      sha256: 8472beaa5b296d89824304f72b703c8769fc8a4b72d321b5d487da3283da4e17
+      git_blob_sha: c721de6b6496d490cce739668bae463ca98da14f
+    - file: 00-prompt-as-sent-part-2.txt
+      size_bytes: 6068
+      sha256: 924a6bcf9e500eb77f1f0f752593c600009e2d102a75dcf2160f93c7a545c2ad
+      git_blob_sha: 4c7b59b22cfcc6d07e97befe871bdaff616cbec8
+    - file: 00-prompt-as-sent-part-3.txt
+      size_bytes: 4437
+      sha256: 976a052e294481b61b940043bc9a0c85025819f49ba1de868170af35530aabdd
+      git_blob_sha: 50022641fdc3fe7e46c3f401fd4ac7b8313988c7
+    - file: 00-prompt-as-sent-part-4.txt
+      size_bytes: 5794
+      sha256: 437783d61b3abdb922063c1056ed5f5ab6675295d5405348129c43cef91e5f76
+      git_blob_sha: f5620d18b2e886c21f9f837beb98705ddaec0894
+    - file: 00-prompt-as-sent-part-5.txt
+      size_bytes: 5678
+      sha256: 7f269838447636183a905eae3349893c1e5ba047f2002dbdd5fb9960e4593028
+      git_blob_sha: 50d1b4432ad298832a90056f9c57ac39dcbe33f4
+
+chat_summary:
+  canonical_path: 01-fable-chat-summary.md
+  provenance: user_pasted_fable_completion_summary
+  substantive_acceptance: false
+
+returned_output:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
+  canonical_index: 02-capability-boundary-baseline.md
+  ordered_parts:
+    - 02-capability-boundary-baseline-part-1.txt
+    - 02-capability-boundary-baseline-part-2.txt
+    - 02-capability-boundary-baseline-part-3.txt
+    - 02-capability-boundary-baseline-part-4.txt
+    - 02-capability-boundary-baseline-part-5.txt
+  concatenation_rule: concatenate_in_listed_order_without_inserted_delimiter
+  size_bytes: 25385
+  sha256: 1e814613d1122b040f7d207c30a1dc0887ebc1394354aeb0c580cef3330aab2b
+  expected_whole_file_git_blob_sha: 24d98812b51807a5f84ee540ff679cf52ca7386f
+  encoding: utf-8
+  line_endings: lf
+  final_lf_present: true
+  normalization: none
+  byte_faithful_multipart_copy: true
+  parts:
+    - file: 02-capability-boundary-baseline-part-1.txt
+      size_bytes: 2687
+      sha256: 397e9eba58b818a78c1fb68c944c0a3da2d4a69b64f1c47ddf777bd200df59df
+      git_blob_sha: beb6f29fdae3543f42e9ff8e0349cdc56d6b8abb
+    - file: 02-capability-boundary-baseline-part-2.txt
+      size_bytes: 9632
+      sha256: 4444847335a03282aac1a9dbe4ed1baead6bb80bd0be738fc4726be9d7aec948
+      git_blob_sha: 50421215b8e78bf4952b2a9945b18ef6be91c227
+    - file: 02-capability-boundary-baseline-part-3.txt
+      size_bytes: 6075
+      sha256: 1fa051304c2a2d24b96c4a51c2d2c7a882b5662e3151cb0ce8e1e441bed02f06
+      git_blob_sha: b0a00321d066451f6e05c9ab486c0856f25c94cb
+    - file: 02-capability-boundary-baseline-part-4.txt
+      size_bytes: 4152
+      sha256: abeb5d808043d84fdb78306e37d7f5237e82ce440bcb0b09e13f1a003ecd37e8
+      git_blob_sha: 16ad8901055aa382815777a662d64fa51aa214dd
+    - file: 02-capability-boundary-baseline-part-5.txt
+      size_bytes: 2839
+      sha256: adab09f2a9c3a6fe374889a10262686aea7c5c996840433afc17b3a1274d82d4
+      git_blob_sha: 80e0ceb0ad411e15bd9bc8069940c086dd1d691b
+
+storage_transfer_note:
+  initial_single_file_attempt_preserved_source_correctly: false
+  corrective_action: replaced_incomplete_body_with_multipart_index_and_exact_ordered_parts_before_PR_creation
+  incomplete_body_retained: false
+  source_hash_recoverable_from_parts: true
+
+structural_check:
+  numbered_sections_found: 20
+  signal_ids_found: 5
+  capability_boundary_ids_found: 27
+  STEP1_need_ids_found: 21
+  question_ids_Q01_through_Q15_found: 15
+  artifact_or_tool_status_leakage_detected: false
+  fable_reported_approximate_words: 3196
+  local_whitespace_delimited_words: 3247
+  local_english_word_pattern_count: 2836
+  prompt_hard_cap_words: 6200
+
+recorded_prompt_output_deviations:
+  - id: DEV-2C-001
+    prompt_requirement: read_exactly_eight_pinned_canonical_repository_outputs_and_verify_each_SHA
+    returned_behavior: zero_repository_reads_zero_batteries_thirteen_local_track_deliverables_used
+    handling: preserved_without_normalization_pending_substantive_review
+  - id: DEV-2C-002
+    prompt_requirement: eight_row_source_integrity_and_access_table
+    returned_behavior: no_per_file_source_access_or_observed_SHA_table
+    handling: source_contract_compliance_not_confirmed
+  - id: DEV-2C-003
+    prompt_requirement: exact_output_filename_FABLE5-GREENFIELD-001-STEP2C-capability-boundaries.md
+    returned_behavior: FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
+    handling: returned_filename_preserved
+  - id: DEV-2C-004
+    prompt_requirement: exact_metadata_step_name_record_type_prior_steps_and_completion_fields
+    returned_behavior: metadata_uses_different_step_name_record_type_and_single_prior_step
+    handling: returned_metadata_preserved
+  - id: DEV-2C-005
+    prompt_requirement: 21_required_sections
+    returned_behavior: 20_numbered_sections_with_different_grouping
+    handling: structural_deviation_recorded
+  - id: DEV-2C-006
+    prompt_requirement: 16_to_24_stable_boundary_statements_with_GF2C_B_identifiers
+    returned_behavior: 27_CB_identifiers
+    handling: count_and_identifier_deviation_recorded
+  - id: DEV-2C-007
+    prompt_requirement: explicit_RD01_through_RD11_row_table
+    returned_behavior: RD01_to_RD06_and_RD11_boundary_groups_plus_RD07_to_RD10_instrument_inventory
+    handling: exact_domain_schema_not_confirmed
+  - id: DEV-2C-008
+    prompt_requirement: precise_freshness_queue_and_six_row_PDF_visual_gate
+    returned_behavior: carried_summary_registers_without_requested_row_schemas
+    handling: pending_substantive_review
+  - id: DEV-2C-009
+    prompt_requirement: row_level_Q01_through_Q15_register_and_unsupported_assumption_register
+    returned_behavior: prose_question_summary_and_overclaim_summary
+    handling: pending_substantive_review
+  - id: DEV-2C-010
+    prompt_requirement: exact_completion_status_enum_and_bounded_GF_STEP_3A_input_contract_if_complete
+    returned_behavior: different_completion_status_string_and_general_GF_STEP_3_proposal
+    handling: Fable_claim_preserved_not_promoted_to_accepted_track_gate
+
+continuation:
+  GF_STEP_2_reading_phase_status: complete_as_Fable_advisory_evidence
+  GF_STEP_2C_output_status: stored_with_source_contract_and_schema_deviations
+  Fable_claimed_GF_STEP_2_status: complete
+  maintainer_accepted_GF_STEP_2_status: not_yet_decided
+  next_proposed_step_from_Fable: GF-STEP-3
+  next_step_generation_or_execution_authorized_by_this_record: false
+
+boundaries:
+  execution_source_modified: false
+  current_state_files_modified: true
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  codex_task_generated: false
+  paused_post_handoff_route_resumed_or_closed: false
