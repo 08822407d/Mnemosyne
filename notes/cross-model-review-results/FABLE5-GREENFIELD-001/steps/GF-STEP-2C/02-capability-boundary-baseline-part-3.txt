@@ -1,0 +1,40 @@
+| CB-17 | the externalized-memory pattern (rules/state/tasks/handoff/raw/eval in versioned files, model reads, reviewed write-back) is engineering-feasible and variously validated as a cross-tool workflow/governance architecture — not a native chat feature | report_author_synthesis | F2B1-E01; F2B5-T01 | cross-surface | principle low-drift; instances dated | feasible pattern ≠ equal automation everywhere |
+| CB-18 | long context cannot substitute external memory: quadratic cost, positional degradation, latency, no cross-session persistence via the window | cited research | F2B1-E14; F2B5-T02 | model architecture | low drift | never "long context is useless" |
+| CB-19 | on-demand retrieval over full-history loading is the supported read-path principle; retrieval quality is a separate, unguaranteed property | cited research | F2B1-E07; F2B5-T03; F2B5-TR04 | cross-surface | low drift | availability ≠ relevance |
+| CB-20 | immutable event logs with projections support rebuild and audit; snapshots equal compaction; full archiving trades replay/compliance value against privacy/legal exposure | mixed | F2B5-T06 | engineering principle + legal environment | principle low-drift; legal dated | one legal case ≠ settled law |
+| CB-21 | Git/GitHub is the strongest-evidenced audit substrate; audits cover file change, not memory quality — human review, citations, sensitive-info scanning still needed | low_drift_engineering_principle | F2B1-E10 | hosted repositories | low drift | Git audit ⇒ traceability only |
+| CB-22 | a model-agnostic external core (Markdown/Git/refs/index) with short per-tool adapters is the supported portability route; hierarchical-memory frameworks remain exploratory; platform memories and rule syntaxes need adapters | mixed | F2B1-E11; F2B5-T05; F2B3-E04 | cross-surface | adapter specifics dated | no cross-tool auto-sync exists |
+
+## 10. Capability-boundary baseline: non-development scenarios and transfer (RD-02, RD-06)
+
+| boundary_id | statement | evidence_class | supporting_ids | surface_scope | date_or_refresh_caveat | overclaim_guard |
+|---|---|---|---|---|---|---|
+| CB-23 | non-development persistent-memory practice is emerging but immature: platform containers plus education deployments exist; ordinary users still maintain manually; no unified automated external persistence | report_author_synthesis | F2B5-ND01…ND04 | non-development landscape | 2026Q2 | "immature" is dated |
+| CB-24 | only high-level information persists systematically; free-chat detail memory and standardized cross-topic handoff lack solutions in the surveyed landscape | synthesis (absence, survey-bounded) | F2B5-ND05 | ordinary dialogue | 2026Q2 | absence-in-survey bounded |
+| CB-25 | structured-record formats transfer as formats (state docs, decision records, task lists, ledgers, handoff cards, archives); content schemas must be rebuilt per scenario | analogy_or_transfer_hypothesis | F2B5-TR01,TR02 | dev → non-dev | hypothesis | format ≠ workflow transfer |
+| CB-26 | heavyweight development toolchains (branching, PR review, CI gates, enforced merges) are judged non-transferable to learning/dialogue scenarios — substrate weight is scenario-dependent | report_author_synthesis | F2B5-TR03 | non-dev targets | scenario-scoped | not a claim about dev-like targets |
+| CB-27 | no surveyed work proposes a memory-design meta-agent; per-scenario schema design is manual today — the meta-agent goal is novel, not invalidated | report_direct_finding (absence) | F2B5-TR06 | meta-level | 2026Q2 survey | absence ≠ nonexistence |
+
+## 11. Method and policy instrument inventory (RD-07…RD-10)
+
+Delivered candidate instruments — commissioned evidence awaiting user adoption; never capability facts:
+
+| instrument | source_register | adoption_question |
+|---|---|---|
+| operational "working correctly" definition; 10-metric starter set; 15-class maturity-graded failure taxonomy; stage-fitted method map; attribution/routing rules | F2B6-MT-02…06 | Q-08-final |
+| operational correct-handoff definition; three-tier package model with templates and token ranges; 14-metric rubric with 7 blocking gates and verdicts; 8-test self-bootstrap suite; fixed replay prompt; per-test provenance schema; 16-mode failure taxonomy; v0.1 recommendations and deferrals | F2B6-HO-02…06 | Q-08-final, Q-13-updated |
+| five-layer input-governance model with five authority types; nine-item storage decision matrix; visibility-pessimism rule; pointer and redaction-manifest schemas; approval workflow with linked IDs and rejected-artifact retention; five candidate buckets | F2B6-UG-01…06 | Q-07-final, Q-11, Q-14 |
+| five-object dry-run model with claim boundaries; 14 evaluation dimensions with deterministic/LLM-judge/user-confirmation split; ten critical blockers; decoupled scorecard and verdicts; minimum evidence package; postmortem and regression schemas; integration buckets | F2B6-FT-01…06 | Q-09-final |
+| cross-report convergences: gates-before-scores, LLM-judge never sole, evidence-path mandates, staleness first-class, lesson containment, anti-automation v0.1 staging | STEP2B6 §12 matrix | — (method principles) |
+
+## 12. STEP-1 need coverage closure table
+
+| need_id | final_evidence_coverage | key_supporting_registers | open_decision |
+|---|---|---|---|
+| GF1A-N01 | covered_at_baseline_level | CB-01…06,17…19,23 | — |
+| GF1A-N02 | covered: per-surface dated boundaries + maturity-grading practice | CB-02…04,08,15; F2B6-MT-05 | — |
+| GF1A-N03 | covered: scenario differences, adaptation map, meta-agent novelty | CB-23…27 | scenario priorities |
+| GF1A-N04 | covered_at_principle_level: routing/refresh/delta practice | F2B6-MT-06; STEP2A D-registers | — |
+| GF1A-N05 | user_decision_not_research_fact | — | Q-01 |
+| GF1A-N06 | covered with reconciliation: preservation outside Git; derivations never substitute | F2B6-UG-01,02,06; CB-20 | Q-03, Q-07-final, Q-15 |
+| GF1A-N07 | covered: enforceable review gates, check-split, approval workflows | CB-12,13,16; F2B6-FT-03; F2B6-UG-06 | Q-02 |

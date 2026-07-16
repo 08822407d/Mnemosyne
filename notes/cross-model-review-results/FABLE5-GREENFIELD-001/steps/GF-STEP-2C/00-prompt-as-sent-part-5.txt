@@ -1,0 +1,172 @@
+
+Word-budget policy:
+
+- soft target: 3,800–5,200 words
+- hard cap: 6,200 words
+- the soft target is advisory
+- a complete first draft within the hard cap is acceptable
+- at most one light compression pass, only if the hard cap is exceeded
+- remove repeated evidence narration before boundary tables, question gates,
+  freshness handling, or completion reasoning
+- do not omit any RD domain, signal, need ID, question ID, or PDF visual row
+- perform no more than one approximate word-count check
+- do not repeat counting or compression because methods differ
+
+────────────────────────────────────
+17. Required downloadable file
+────────────────────────────────────
+
+Create exactly:
+
+FABLE5-GREENFIELD-001-STEP2C-capability-boundaries.md
+
+This file is the charter-level GF-STEP-2 output.
+
+If downloadable artifact creation is unavailable, provide the exact complete
+Markdown body in one fenced block.
+
+Required sections:
+
+1. Metadata
+2. Scope and hard limits
+3. Allowed inputs and anti-contamination policy
+4. Source integrity and access table
+5. Authority, precedence, and evidence rules
+6. Final S-01 through S-05 signal table
+7. RD-01 through RD-11 capability-boundary baseline
+8. Stable boundary-statement register
+9. Low-drift principle register
+10. Dated fact register
+11. Method-candidate register
+12. Policy-candidate register
+13. Freshness refresh gate
+14. PDF visual-review gate
+15. STEP-1 need-coverage map
+16. Consolidated Q-01 through Q-15 register
+17. Unsupported assumptions and prohibited claims
+18. Coverage and limitation ledger
+19. GF-STEP-2 completion determination
+20. Proposed GF-STEP-2D only if blocked, otherwise GF-STEP-3A input contract
+21. Boundary statement
+
+Metadata must include:
+
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-2C
+charter_step_completed_if_status_allows: GF-STEP-2
+record_type: independent_capability_boundary_baseline_synthesis
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_steps:
+  - GF-STEP-1E
+  - GF-STEP-2A
+  - GF-STEP-2B1
+  - GF-STEP-2B2A
+  - GF-STEP-2B3
+  - GF-STEP-2B4B
+  - GF-STEP-2B5
+  - GF-STEP-2B6
+research_mode: false
+new_research_sources_read: false
+existing_GPT_design_read: false
+
+The coverage ledger must state:
+
+- expected and observed SHA for all eight files;
+- complete-read status for all eight files;
+- retrieval batteries used;
+- S-01 through S-05 completion;
+- RD-01 through RD-11 completion;
+- stable-boundary count;
+- freshness-item count;
+- six-PDF visual-gate result;
+- 21-need coverage result;
+- Q-01 through Q-15 coverage result;
+- unsupported-assumption count;
+- exact GF-STEP-2 status;
+- exact blocker if incomplete;
+- proposed next step.
+
+────────────────────────────────────
+18. File-content discipline
+────────────────────────────────────
+
+Preserve:
+
+- exact evidence identifiers;
+- scope and freshness qualifiers;
+- non-guarantees;
+- distinction among principles, facts, methods, policies, and decisions;
+- visual and current-fact limitations;
+- explicit open questions;
+- completion reasoning;
+- bounded continuation information.
+
+Do not include:
+
+- hidden chain-of-thought;
+- long connector narration;
+- raw tool logs;
+- copied original-report passages;
+- new web facts;
+- architecture mechanisms;
+- current-design comparison;
+- repair advice;
+- execution-source proposals;
+- artifact-control text;
+- duplicated file-presentation messages.
+
+Before presenting the file:
+
+- perform one structural check;
+- perform no more than one approximate word-count check;
+- confirm all 21 required sections exist;
+- confirm all five signals, eleven domains, six PDFs, twenty-one needs, and
+  fifteen questions are represented;
+- confirm the ending is clean;
+- do not run another compression cycle when within the hard cap.
+
+────────────────────────────────────
+19. Chat response
+────────────────────────────────────
+
+After presenting the file, provide only a brief summary stating:
+
+- completion within limits;
+- SHA and complete-read result for all eight inputs;
+- final disposition source for S-01 through S-05;
+- RD-domain completion count;
+- stable-boundary count;
+- freshness-item count;
+- PDF visual-gate outcome;
+- need-map completion count;
+- open-question completion count;
+- retrieval batteries used;
+- approximate word count;
+- GF-STEP-2 completion determination;
+- whether GF-STEP-2D or GF-STEP-3A was proposed;
+- downloadable file creation result.
+
+Do not repeat the file body in chat.
+
+────────────────────────────────────
+20. Boundary
+────────────────────────────────────
+
+Do not:
+
+- write repository files;
+- generate execution tasks;
+- update execution source;
+- read any source outside the eight pinned greenfield outputs;
+- perform web or external research;
+- evaluate or rank models or vendors;
+- compare against or modify the current GPT/Mnemosyne design;
+- adopt any candidate method or policy;
+- begin architecture design or GF-STEP-3;
+- create target-project artifacts;
+- formalize regression;
+- resume or close the paused post-handoff route.
+
+This output is non-execution-source advisory evidence only.
+Stop after the downloadable file and brief summary.

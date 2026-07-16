@@ -1,0 +1,176 @@
+3. `GF-STEP-2B1` supplies foundational evidence and early S-01/S-02/S-03
+   dispositions.
+4. `GF-STEP-2B2A` is the dedicated later disposition source for S-02 and S-03.
+5. `GF-STEP-2B3` is the dedicated disposition source for S-04.
+6. `GF-STEP-2B4B` is the final dedicated disposition source for S-05 and
+   supersedes B4A provisional records.
+7. `GF-STEP-2B5` is the later batch disposition source for S-01.
+8. `GF-STEP-2B6` supplies supplemental method/policy evidence and question
+   updates; its delivered instruments remain candidates unless the evidence
+   supports a lower-level principle independently.
+
+Preserve evidence IDs exactly as stored.
+
+In particular:
+
+- do not rename B6 `F2B6-UG-*` to `UIG`;
+- do not rename B6 `F2B6-FT-*` to `DR`;
+- do not silently normalize the B6 filename, metadata, section grouping, or
+  evidence-ID deviations;
+- do not carry B4A `P01–P03` as active evidence because B4B superseded them.
+
+Where earlier and later wording differs, retain the earlier evidence but use
+the later scoped disposition as the current track wording.
+
+────────────────────────────────────
+4. Evidence interpretation rules
+────────────────────────────────────
+
+Use these classes:
+
+- low_drift_engineering_principle
+- evidence_supported_operational_boundary
+- dated_product_or_workflow_statement
+- dated_research_landscape_statement
+- documented_or_limited_practice
+- report_recommendation
+- method_candidate
+- metric_or_threshold_candidate
+- policy_candidate
+- unresolved_user_decision
+- current_fact_refresh_candidate
+- mixed_or_uncertain
+
+Apply all rules:
+
+1. A report-derived recommendation is not a capability fact.
+2. A candidate policy or method is not an adopted design requirement.
+3. A dated product statement is scoped to its named surface and 2026Q2
+   evidence period.
+4. Absence in a report or survey is not proof of universal impossibility.
+5. File access is not reliable memory.
+6. Persistence is not semantic correctness.
+7. Auditability is not correctness.
+8. A branch, commit, diff, PR, log, or artifact proves an observable event,
+   not that the resulting content is correct.
+9. Long context is not useless, but it is not a durable cross-session truth
+   source by itself.
+10. Platform memory may be useful while remaining auxiliary, partially
+    controlled, non-portable, or insufficiently auditable.
+11. Externalization improves continuity possibilities but does not guarantee
+    retrieval quality, reconciliation, maintenance, privacy, authority, or
+    correct use.
+12. A score, LLM judge, multi-model agreement, or polished artifact cannot
+    automatically close a gate.
+13. A dry-run PASS has no authority outside the tested object and approved
+    scope.
+14. Do not update 2026Q2 facts from your own knowledge.
+15. Do not infer current repository truth from report-embedded repository
+    references.
+16. Do not import the existing GPT/Mnemosyne architecture.
+
+────────────────────────────────────
+5. Consolidate S-01 through S-05
+────────────────────────────────────
+
+Create one final signal table covering exactly S-01 through S-05.
+
+For each signal include:
+
+- signal_id
+- final_track_disposition
+- final_scoped_wording
+- controlling_step
+- supporting_evidence_ids
+- applies_to
+- does_not_guarantee
+- evidence_strength:
+    strong |
+    moderate |
+    bounded
+- low_drift_component
+- dated_component
+- remaining_visual_dependency
+- remaining_current_fact_refresh_dependency
+- prohibited_overclaim
+
+Use:
+
+- B5 as the controlling disposition for S-01;
+- B2A for S-02 and S-03;
+- B3 for S-04;
+- B4B for S-05.
+
+Do not invent S-06 or additional signals in this section.
+
+────────────────────────────────────
+6. RD-01 through RD-11 boundary baseline
+────────────────────────────────────
+
+Produce one row for every STEP2A research domain:
+
+- RD-01 ordinary conversation continuity and platform-provided memory
+- RD-02 non-development long-term dialogue, learning, and research
+- RD-03 local project-file workflows
+- RD-04 hosted repository and review workflows
+- RD-05 external file and version-history engineering basis
+- RD-06 transfer between development and non-development scenarios
+- RD-07 testing, diagnosis, and evaluation
+- RD-08 handoff and continuation
+- RD-09 user-input originals, redaction, visibility, and provenance
+- RD-10 first-target trial evaluation and authority containment
+- RD-11 overall feasibility and scope of an external-memory meta-agent
+
+For each domain record:
+
+- domain_id
+- domain_title
+- boundary_statement
+- positive_affordances
+- non_guarantees_and_limits
+- supporting_evidence_ids
+- related_STEP1_need_ids
+- source_strength
+- freshness_class:
+    low_drift |
+    mixed |
+    dated
+- method_or_policy_candidates_separate
+- user_decisions_separate
+- prohibited_inference
+
+This is the main baseline table. Keep wording design-neutral.
+
+────────────────────────────────────
+7. Stable boundary-statement register
+────────────────────────────────────
+
+Create 16–24 stable boundary statements.
+
+Use IDs:
+
+GF2C-B01 and upward.
+
+Every statement must be phrased in one of these forms:
+
+- can support;
+- provides evidence for;
+- may afford;
+- does not guarantee;
+- must not be assumed;
+- requires explicit qualification;
+- remains dependent on a user decision;
+- remains dependent on current-fact refresh.
+
+For each include:
+
+- boundary_id
+- concise_statement
+- boundary_type:
+    affordance |
+    non_guarantee |
+    authority_limit |
+    evidence_limit |
+    freshness_limit |
+    transfer_limit |
+    governance_limit

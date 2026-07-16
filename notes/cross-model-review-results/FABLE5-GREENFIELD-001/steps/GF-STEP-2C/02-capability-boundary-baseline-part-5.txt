@@ -1,0 +1,25 @@
+
+## 17. Incidental-exposure ledger
+
+None in this step: zero repository accesses; inputs were this track's own files only. Cumulative track record: the sole prohibited-path exposure remains STEP1A's E-1/E-2 (disclosed, unused); every subsequent substep recorded none.
+
+## 18. Coverage and limitation ledger
+
+- Synthesis inputs: 13 deliverables, all present and used; no new reads; batteries 0.
+- Signals: 5 of 5 with final dispositions and wording (§6).
+- Capability-boundary statements: 27 (CB-01…CB-27) across RD-01…RD-06/RD-11, each with class, scope, caveat, and guard.
+- Instrument inventory: 4 report-sourced instrument sets plus cross-report principles (RD-07…RD-10).
+- Need closure: all 21 needs mapped to final coverage states; 2 are user-decision-only by nature (N05, N17).
+- Questions: 15 registered; 0 blocking baseline validity.
+- Limitations: PDF visuals pending; date registers standing; no execution validation; adoption decisions open.
+- GF-STEP-2 can close: yes.
+
+## 19. GF-STEP-2 completion determination and proposed GF-STEP-3
+
+Determination: **GF_STEP_2_complete_capability_boundary_baseline_established**. The reading phase covered all 11 active reports; the five preliminary signals hold final dispositions; the need model is fully mapped to graded capability evidence and delivered candidate instruments; every limitation and open decision is explicit. This baseline is the second input (after the STEP-1 need model) that the charter's independent architecture step requires.
+
+Proposed next bounded step (not executed): **GF-STEP-3 — independent_architecture_derivation**: derive an independent persistent-memory architecture candidate from exactly two inputs — the STEP-1 need model and this STEP-2C baseline — honoring every open question as an explicit design parameter rather than a silent assumption; no repository reads beyond this track's own outputs unless the instruction pins them; no comparison with the existing design (comparison remains a later, separately authorized phase); limits, section list, and word budget pinned in the GF-STEP-3 instruction.
+
+## 20. Boundary statement
+
+This file is non-execution-source advisory evidence only. It authorizes no repository writes, no execution tasks, no execution-source updates, no adoption of any instrument or policy, no reading of any report, prompt, summary, or index, no external research, no model or vendor evaluation, no comparison against or modification of the existing design, no architecture work, and no target-project artifacts; the paused route stays paused. `current/human-approved-spec.md` remains Mnemosyne's only execution source; any conflict between this file and it is resolved in the execution source's favor and reported, never silently reconciled. GF-STEP-2C is complete; GF-STEP-2 is complete; GF-STEP-3 is not started.

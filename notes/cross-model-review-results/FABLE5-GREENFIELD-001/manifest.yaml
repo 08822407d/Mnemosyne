@@ -2,10 +2,10 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_2B5_2B6_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_2B5_2B6_2C_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-128
-last_status_task: MNEMOSYNE-128
+last_storage_task: MNEMOSYNE-129
+last_status_task: MNEMOSYNE-129
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -103,13 +103,22 @@ step_records:
     substantive_review_performed: false
     output_filename_deviation_recorded: true
     next_proposed_step: GF-STEP-2C
+  - step_id: GF-STEP-2C
+    path: steps/GF-STEP-2C/
+    fable_reported_status: GF_STEP_2_complete_capability_boundary_baseline_established
+    storage_status: canonical_multipart_copies_stored_with_execution_contract_and_schema_deviations
+    stored_by_task: MNEMOSYNE-129
+    substantive_review_performed: false
+    source_contract_deviation_recorded: true
+    output_schema_deviation_recorded: true
+    next_proposed_step: GF-STEP-3
 track_progress:
   GF_STEP_1:
     status: complete_with_explicit_open_questions_as_Fable_advisory_result
     completion_record: steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
     substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete_and_outside_MNEMOSYNE_113_first_wave_scope
   GF_STEP_2:
-    status: in_progress_reading_phase_complete_ready_for_baseline_synthesis
+    status: Fable_advisory_completion_claim_stored_pending_substantive_review
     completed_substeps:
       - GF-STEP-2A
       - GF-STEP-2B1
@@ -119,13 +128,16 @@ track_progress:
       - GF-STEP-2B4B
       - GF-STEP-2B5
       - GF-STEP-2B6
-    current_record: steps/GF-STEP-2B6/02-supplemental-method-policy-evidence.md
+      - GF-STEP-2C
+    current_record: steps/GF-STEP-2C/02-capability-boundary-baseline.md
     text_review_status: all_11_active_reports_full_text_reviewed_as_Fable_advisory_evidence
     carried_visual_limitation: six_initial_cycle_PDFs_not_visually_reviewed
-    next_planned_substep: GF-STEP-2C
-    next_planned_scope: independent_capability_boundary_baseline_synthesis_from_track_outputs_no_new_source_reads
-    provider_quota_status: available_for_GF_STEP_2B6_completion_future_availability_not_asserted
-    substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete
+    baseline_synthesis_status: stored_with_source_contract_and_schema_deviations
+    fable_claimed_status: complete
+    substantive_maintainer_acceptance: not_yet_performed
+    next_planned_substep: pending_substantive_review_before_GF_STEP_3_task_generation
+    next_proposed_by_Fable: GF-STEP-3
+    provider_quota_status: available_for_GF_STEP_2C_completion_future_availability_not_asserted
 provider_incidents:
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
     path: incidents/INC-001-step2a-safety-routing.md

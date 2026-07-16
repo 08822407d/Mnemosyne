@@ -1,0 +1,176 @@
+    boundary_only |
+    user_decision_not_evidence |
+    method_or_policy_candidate_only
+- supporting_signals_or_boundary_ids
+- remaining_dependency
+- safe_for_STEP3_use:
+    yes |
+    yes_with_qualification |
+    no
+
+Do not reproduce full need records.
+
+────────────────────────────────────
+12. Consolidated open-question register
+────────────────────────────────────
+
+Use STEP1E and B6 to consolidate Q-01 through Q-15.
+
+For each include:
+
+- question_id
+- current_status
+- current_question
+- question_type:
+    user_preference |
+    authority_decision |
+    method_selection |
+    policy_selection |
+    current_fact_refresh |
+    evidence_gap
+- related_need_ids
+- evidence_side_complete:
+    yes |
+    no |
+    partial
+- blocks_GF_STEP_2:
+    yes |
+    no
+- blocks_all_of_STEP3:
+    yes |
+    no
+- blocks_only_specific_design_choice
+- temporary_handling
+
+Preserve, in particular:
+
+- Q-07-final;
+- Q-08-final;
+- Q-09-final;
+- Q-13-updated;
+- Q-14;
+- Q-15;
+- Q-12 as not silently resolved.
+
+Do not answer user-held decisions by inference.
+
+────────────────────────────────────
+13. Unsupported assumptions and prohibited claims
+────────────────────────────────────
+
+Create a register of at most 16 claims that STEP3 must not assume.
+
+Include, where supported:
+
+- platform memory is a complete project truth source;
+- conversation history is portable or auditable by default;
+- a connected app implies authorization, sync, write access, or task authority;
+- file access equals reliable memory;
+- instruction files guarantee compliance;
+- local built-in memories are portable or synchronized;
+- hosted-agent completion claims equal repository evidence;
+- repository evidence proves semantic correctness;
+- private Git is safe for user originals;
+- redaction guarantees anonymity;
+- externalization alone solves memory quality;
+- vector retrieval alone supplies structured state;
+- development workflows transfer unchanged to non-development scenarios;
+- one score or one judge closes a gate;
+- a dry-run PASS authorizes delivery, write, or global rule changes;
+- all current product facts still match 2026Q2 reports.
+
+For each:
+
+- assumption_id
+- prohibited_assumption
+- evidence_ids
+- consequence_if_assumed
+- required_safe_handling
+
+────────────────────────────────────
+14. GF-STEP-2 completion determination
+────────────────────────────────────
+
+Choose exactly one:
+
+- GF_STEP_2_complete_with_dated_fact_and_text_only_visual_caveats
+- GF_STEP_2_complete_with_explicit_refresh_and_user_decision_gates
+- GF_STEP_2_incomplete_targeted_current_fact_refresh_required
+- GF_STEP_2_incomplete_visual_review_required
+- GF_STEP_2_incomplete_source_integrity_or_access_failure
+- GF_STEP_2_incomplete_other_specific_gap
+
+Do not force closure.
+
+GF-STEP-2 may close when:
+
+- all eight pinned outputs were completely read and SHA-verified;
+- S-01 through S-05 have final scoped wording;
+- RD-01 through RD-11 have evidence-supported boundaries;
+- principles, dated facts, methods, policies, and user decisions remain
+  separate;
+- refresh needs are precise and bounded;
+- visual limitations are explicitly handled;
+- remaining open questions can be carried as gates rather than hidden gaps;
+- the result gives STEP3 enough constraints to avoid unsupported capability
+  assumptions.
+
+GF-STEP-2 must remain incomplete only when a missing current fact, missing
+visual meaning, missing input, or unresolved evidence gap prevents a
+load-bearing boundary from being stated safely.
+
+If incomplete:
+
+- identify the exact blocker;
+- propose one bounded GF-STEP-2D only;
+- do not execute it.
+
+If complete:
+
+- state the closure form;
+- propose the bounded GF-STEP-3A input contract only;
+- do not begin design.
+
+────────────────────────────────────
+15. GF-STEP-3A input contract proposal
+────────────────────────────────────
+
+Only if GF-STEP-2 closes, propose a bounded input contract for:
+
+GF-STEP-3A:
+  independent_information_architecture_and_authority_model
+
+The proposal must state:
+
+- required inputs:
+  - final STEP-1 need model;
+  - final STEP-2 capability-boundary baseline;
+- user questions that may remain open without blocking all design;
+- user decisions that must be answered before a particular design branch;
+- freshness checks triggered only by selected design choices;
+- prohibited design assumptions;
+- expected first architecture deliverable;
+- boundary between STEP3A and later lifecycle/operations work.
+
+Do not provide architecture content in this step.
+
+────────────────────────────────────
+16. Hard workload limits
+────────────────────────────────────
+
+- repository paths: exactly 8
+- retrieval/query batteries: maximum 8
+- original research reports read: 0
+- external searches: 0
+- signals consolidated: exactly 5
+- research domains: exactly 11
+- stable boundary statements: 16–24
+- freshness items: maximum 12
+- visual-gate rows: exactly 6
+- need-map rows: exactly 21
+- open-question rows: Q-01 through Q-15
+- unsupported-assumption rows: maximum 16
+- no new evidence records
+- no design mechanisms
+- no comparison against current GPT design
+- no automatic continuation

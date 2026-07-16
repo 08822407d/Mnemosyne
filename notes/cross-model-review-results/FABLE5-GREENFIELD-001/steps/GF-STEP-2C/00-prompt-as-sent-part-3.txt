@@ -1,0 +1,176 @@
+- applies_to
+- supporting_evidence_ids
+- confidence:
+    high |
+    medium |
+    low
+- low_drift_or_dated
+- implication_for_STEP3:
+    hard_constraint |
+    design_consideration |
+    candidate_only |
+    user_decision_gate
+- prohibited_overclaim
+
+Do not turn the implication field into an architecture proposal.
+
+────────────────────────────────────
+8. Principle / fact / method / policy separation
+────────────────────────────────────
+
+Create four compact registers.
+
+A. Low-drift principles
+
+Examples of eligible topics:
+
+- external durable state versus active context;
+- retrieval-on-demand;
+- versioning, provenance, replay, rollback, event logs;
+- authority/source separation;
+- stale-state detection;
+- deterministic evidence and reviewer provenance;
+- explicit approval and non-escalation of authority.
+
+B. Dated facts
+
+Examples:
+
+- platform-memory features;
+- Projects or equivalent containers;
+- app/connector capabilities;
+- native or conditional repository write paths;
+- local coding-agent memory behavior;
+- hosted-agent workflow details;
+- benchmark landscape and numerical results.
+
+C. Method candidates
+
+Examples:
+
+- metric sets;
+- taxonomies;
+- scorecards;
+- replay protocols;
+- testing layers;
+- postmortem schemas;
+- regression-candidate schemas.
+
+D. Policy candidates
+
+Examples:
+
+- originals outside Git;
+- pointer and redaction governance;
+- handoff package tiers;
+- safe-input and dry-run gate sets.
+
+For every item include:
+
+- item_id
+- concise_content
+- source_evidence_ids
+- classification
+- may_constrain_STEP3_now:
+    yes |
+    yes_with_qualification |
+    no
+- needs_user_adoption:
+    yes |
+    no |
+    uncertain
+- needs_current_refresh:
+    yes |
+    no |
+    only_if_design_depends
+- notes
+
+Never merge a method or policy candidate into a low-drift principle.
+
+────────────────────────────────────
+9. Freshness refresh gate
+────────────────────────────────────
+
+Create a precise refresh queue for dated claims.
+
+Maximum items: 12.
+
+For each item:
+
+- refresh_id
+- exact_claim_or_claim_family
+- affected_signal_or_domain
+- evidence_period
+- why_drift_is_plausible
+- design_dependency:
+    none |
+    optional |
+    load_bearing
+- refresh_timing:
+    before_STEP3 |
+    during_STEP3_if_selected |
+    before_STEP5_comparison |
+    not_required_use_date_caveat
+- acceptable_temporary_handling
+- exact_future_check_question
+- external_check_performed_now: false
+
+Do not request a refresh merely because a product exists.
+
+A refresh is `before_STEP3` only if a specific architecture choice cannot be
+bounded safely without knowing the current fact.
+
+Generic completeness anxiety is insufficient.
+
+────────────────────────────────────
+10. PDF visual-review gate
+────────────────────────────────────
+
+The six initial-cycle PDFs were reviewed only through embedded text.
+
+Assess the standing limitation without opening any PDF.
+
+Create one row per PDF report:
+
+- report_id
+- text_review_status
+- visual_review_status: not_performed
+- known_visual_dependent_claim_in_track_outputs:
+    yes |
+    no |
+    uncertain
+- affected_evidence_ids
+- could_unreviewed_visual_change_a_load_bearing_boundary:
+    yes |
+    no |
+    uncertain
+- required_handling:
+    visual_review_before_STEP3 |
+    visual_review_only_if_specific_claim_selected |
+    carry_text_only_caveat |
+    block_GF_STEP_2
+- rationale
+
+Do not say that visuals contain nothing important.
+
+GF-STEP-2 may close with a text-only caveat when no load-bearing boundary in the
+track outputs relies on unreviewed visual meaning.
+
+────────────────────────────────────
+11. STEP-1 need-coverage map
+────────────────────────────────────
+
+Create a compact final map for all active need IDs:
+
+- GF1A-N01 through GF1A-N12
+- GF1B-N13 through GF1B-N18
+- GF1C-N19 through GF1C-N21
+
+For each include:
+
+- need_id
+- short_title
+- capability_domains
+- evidence_coverage:
+    strong |
+    partial |
