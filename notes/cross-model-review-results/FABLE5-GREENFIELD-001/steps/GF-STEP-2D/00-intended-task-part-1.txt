@@ -1,0 +1,175 @@
+Run the next corrective closure substep of FABLE5-GREENFIELD-001.
+
+step_id: GF-STEP-2D
+step_name: source_contract_verification_and_capability_baseline_closure_addendum
+relationship_to_charter:
+  corrective verification after GF-STEP-2C;
+  resolves STEP2C source-contract and output-schema deviations;
+  may close GF-STEP-2 only if the verified evidence supports closure;
+  not architecture design and not GF-STEP-3
+
+Execution setting:
+- Research mode must remain OFF.
+- Run in a fresh Fable 5 conversation.
+- Attach exactly:
+  FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
+- Expected attachment identity:
+  size_bytes: 25385
+  sha256: 1e814613d1122b040f7d207c30a1dc0887ebc1394354aeb0c580cef3330aab2b
+- Do not use prior conversation history, local cached track files, Project
+  knowledge, or unstated attachments as evidence.
+- The attached STEP2C file is the candidate baseline to audit, not an
+  authoritative or execution-source input.
+- This prompt is self-contained.
+
+Purpose:
+GF-STEP-2C produced a substantial candidate capability-boundary baseline, but
+it did not follow the pinned source-access contract or several required output
+schemas.
+
+This substep must verify the candidate baseline against the exact eight
+canonical greenfield outputs, determine which deviations are harmless and
+which are substantive, supply the missing structured registers, and make a
+strict GF-STEP-2 closure determination.
+
+Prefer a compact verification-and-closure addendum over rewriting the entire
+STEP2C baseline.
+
+Do not silently accept the STEP2C completion claim merely because its prose is
+plausible.
+
+This is evidence verification and contract repair only. It is not:
+- new research;
+- architecture design;
+- current-product refresh;
+- comparison with the existing GPT/Mnemosyne design;
+- adoption of any method or policy;
+- repository repair.
+
+────────────────────────────────────
+1. Allowed inputs
+────────────────────────────────────
+
+Allowed attachment:
+
+- FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
+
+Allowed repository sources — exactly these eight canonical files on `master`:
+
+A. Final STEP-1 need assembly
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
+- expected blob SHA:
+  af62ffb564fd7c227f3b651a6c666201f8102fce
+
+B. STEP-2 source/domain map
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2A/02-research-source-map.md
+- expected blob SHA:
+  1c03aa480f90e45dc65542ab3f6c1cad9688e7e3
+
+C. Foundational report evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B1/02-foundational-report-evidence.md
+- expected blob SHA:
+  fd1fa397bc1baee5e115eeefde75287cf546eb9f
+
+D. Plain-dialogue dedicated evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B2A/02-plain-dialogue-core-text-evidence.md
+- expected blob SHA:
+  0704c05a244d94c9a629c6150009c77cecf192d4
+
+E. Local project-file dedicated evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B3/02-local-project-file-text-evidence.md
+- expected blob SHA:
+  cb336839cad396ec67a72e98568787386ceb590e
+
+F. Hosted-repository dedicated evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B4B/02-hosted-workflow-final-text-evidence.md
+- expected blob SHA:
+  14c1cc47f7ff357221f85c314ebf2e1861581a79
+
+G. Theory / non-development / transfer batch
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B5/02-theory-nondev-transfer-evidence.md
+- expected blob SHA:
+  f81d2303fc23330b144d9fd1ff4eb546b176c757
+
+H. Supplemental testing / handoff / governance / dry-run batch
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B6/02-supplemental-method-policy-evidence.md
+- expected blob SHA:
+  85886e36dbe491545dcde2c239dd13cd2ec7eba6
+
+Read no other repository path.
+
+Explicitly excluded:
+
+- STEP2C repository storage files, indexes, multipart pieces, manifests, result
+  records, and chat summaries;
+- original research reports, prompts, summaries, indexes, and motivation files;
+- GF-STEP-2B4A provisional output;
+- `current/**`;
+- `handoff/**`;
+- all other `notes/**`;
+- `raw/**`;
+- `commands/**`;
+- existing GPT-produced design or execution-source material;
+- external websites and web search.
+
+If an allowed source mentions another path, treat it as embedded provenance or
+framing only. Do not open it.
+
+────────────────────────────────────
+2. Mandatory source-access contract
+────────────────────────────────────
+
+Read all eight canonical repository files directly in this execution.
+
+Create an eight-row source-access table containing:
+
+- source_id: A through H
+- source_step
+- repository_path
+- expected_blob_sha
+- observed_blob_sha
+- sha_match: true | false
+- complete_file_inspected: true | false
+- approximate_line_count
+- retrieval_battery
+- access_or_truncation_note
+
+Maximum retrieval/query batteries: 8 — one per source.
+
+Local copies, prior-conversation copies, Project knowledge, or attachment
+duplicates must not substitute for these reads.
+
+If a file is long:
+
+- retrieve it in bounded line ranges from the same exact path;
+- count the entire source as one retrieval battery when the interface presents
+  the ranged reads as one planned source retrieval;
+- record all ranges used;
+- do not claim complete inspection unless all ranges were read.
+
+If any SHA differs:
+
+- do not use that file;
+- do not search for another version;
+- continue only with verified files;
+- select an integrity-failure final status.
+
+If any file cannot be read completely after one bounded retry:
+
+- do not infer its missing content;
