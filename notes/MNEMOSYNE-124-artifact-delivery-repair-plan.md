@@ -1,5 +1,7 @@
 # MNEMOSYNE-124 Artifact Delivery and Direct Low-Risk Generation Repair Plan
 
+> Historical suspect-period planning record. This file was created after PR #173 during a user-reported reasoning-quality incident. It is retained for audit only and is superseded by `current/artifact-delivery-and-direct-generation-guard.md` and `notes/codex-task-results/MNEMOSYNE-127-result.md`. It is not current guidance or execution source.
+
 ## Purpose
 
 Repair workflow failures recorded by Issue #170 and Issue #171.
@@ -61,3 +63,7 @@ Before modifying `current/human-approved-spec.md`, review:
 - interaction with existing Section 12 operation/conclusion separation;
 - interaction with Section 13 file-first rules;
 - whether a separate operator appendix is preferable to expanding execution-source rules.
+
+## Historical disposition
+
+MNEMOSYNE-127 selected the separate user-approved behavior-guard pattern, matching the repository's existing single-active PR guard architecture. The earlier proposal's useful intent was re-evaluated and rewritten; its ambiguous conditions and fragmented PR lineage were not adopted as the active implementation.
