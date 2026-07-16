@@ -1,0 +1,35 @@
+step_id: GF-STEP-3-EARLY
+declared_by_fable_as: GF-STEP-3
+record_type: premature_independent_architecture_candidate
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-130
+execution_origin:
+  intended_task: GF-STEP-2D
+  dedicated_GF_STEP_3_task_sent: false
+  source_contract_verification_completed_before_generation: false
+  incident_path: ../../incidents/INC-003-step2d-misinterpreted-as-step3.md
+returned_output:
+  index_path: 02-premature-architecture-candidate.md
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP3-independent-architecture-candidate.md
+  size_bytes: 17349
+  sha256: 88a617d5190f50131be2ca3460484464434ec106328e0471970ba9f867d9e026
+  expected_whole_git_blob_sha: 50b5cef68641c7ad6419f267dc9194e70d1e6fe7
+  exact_ordered_parts: 4
+  byte_faithful_multipart_copy: true
+structure:
+  numbered_sections: 21
+  architecture_principles: 10
+  layers: 8
+  design_parameters: 15
+  fable_reported_approximate_words: 2261
+status:
+  storage: canonical_raw_copy_stored
+  Fable_claim: GF_STEP_3_complete_independent_architecture_candidate_delivered
+  repository_interpretation: premature_candidate_received_not_accepted
+  substantive_review_performed: false
+  usable_as_final_GF_STEP_3: undecided
+boundaries:
+  GF_STEP_2D_completed: false
+  GF_STEP_2_closed: false
+  GF_STEP_3_authorized_by_dedicated_contract: false
+  comparison_authorized: false
