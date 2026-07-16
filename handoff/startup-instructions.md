@@ -23,6 +23,7 @@ For behavior-guidance refresh, read or ask the user to provide:
 
 - `README.md`
 - `current/human-approved-spec.md`
+- `current/artifact-delivery-and-direct-generation-guard.md`
 - `commands/load-mnemosyne-guidance.md`, if available
 
 If the current task may create or update GitHub branches or pull requests, also read:
@@ -83,6 +84,7 @@ Read additional files only when the task needs them:
 - Research current views for tool/capability/new mechanism/target-project design.
 - Target-project template files for target-project work.
 - Manual-import docs for import tasks.
+- `current/artifact-delivery-and-direct-generation-guard.md` whenever a response may create, package, preserve, back up, or transfer a file artifact.
 - `current/github-single-active-pr-lineage-guard.md` before any branch/PR creation or when reconciling duplicate/parallel PRs.
 - For first target-project dry-run preparation or execution, read `handoff/first-target-project-dry-run-onboarding-package.md` first, then the minimal profile/checklist/review instruments listed there.
 - `notes/MNEMOSYNE-031-D01-D07-execution-source-coverage-map.md` for MNEMOSYNE-031 authority/promotion questions.
@@ -99,8 +101,11 @@ Visibility is operator-controlled and may change. Do not treat public/private st
 
 - Do not rely on old conversation context or model memory.
 - State the current execution source and non-execution-source boundaries before making execution claims.
-- Apply objective neutral engineering style, user-action-first response structure, and long-transfer guidance from `current/human-approved-spec.md`.
+- Apply objective neutral engineering style, user-action-first response structure, and artifact-delivery guidance from `current/human-approved-spec.md` and `current/artifact-delivery-and-direct-generation-guard.md`.
+- When a safe low-risk file is explicitly requested and no further content decision or external-action authorization is required, generate it in the same response when a suitable tool is available; verify the file and provide a real link.
+- Do not duplicate a long transfer artifact in the chat body merely because a file was also created.
+- Preserve the Deep Research final-report-body exception.
 - For guidance refresh, report that the current conversation task is preserved and no handoff was started.
 - For repository-writing tasks, apply the single-active PR lineage guard before branch creation, before PR creation, and before issuing a merge instruction.
 - For handoff receive, report package identity, non-execution-source status, `receiver_guidance_load`, evidence paths checked or missing, and one safe next action.
-- If required files for the selected explicit workflow are missing, say so; do not invent repository state.
+- If required files for the selected explicit workflow are missing, say so; do not invent repository state or artifact links.
