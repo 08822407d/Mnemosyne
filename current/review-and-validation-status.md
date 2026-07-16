@@ -19,14 +19,16 @@ first_wave_fable_review:
 
 greenfield_track:
   track_id: FABLE5-GREENFIELD-001
-  latest_completed_substep: GF-STEP-2B6
-  current_record: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B6/02-supplemental-method-policy-evidence.md
+  latest_completed_substep: GF-STEP-2C
+  current_record: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2C/02-capability-boundary-baseline.md
   reading_phase_status: all_11_active_reports_full_text_reviewed_as_Fable_advisory_evidence
-  next_planned_substep: GF-STEP-2C
-  next_planned_scope: independent_capability_boundary_baseline_synthesis_from_track_outputs_no_new_source_reads
-  provider_status: available_for_GF_STEP_2B6_completion_future_availability_not_asserted
+  baseline_synthesis_status: Fable_claimed_complete_stored_with_source_contract_and_schema_deviations
+  fable_claimed_GF_STEP_2_status: complete
+  substantive_maintainer_acceptance: not_performed_by_MNEMOSYNE_129_storage_task
+  next_planned_substep: pending_substantive_review_before_GF_STEP_3_task_generation
+  next_proposed_by_Fable: GF-STEP-3
+  provider_status: available_for_GF_STEP_2C_completion_future_availability_not_asserted
   former_quota_incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-002-weekly-quota-exhaustion.md
-  substantive_maintainer_acceptance: not_performed_by_MNEMOSYNE_128_storage_task
 
 conversation_routing_after_MNEMOSYNE_114:
   current_long_conversation:
@@ -178,5 +180,5 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - `HO-GUIDANCE-001` remains unresolved and is separate from Issue #171.
 - No target workspace, target material, target repository write, or operational build has occurred.
 - Meta-Agent product-development subroutes remain unselected and unauthorized.
-- FABLE5-GREENFIELD-001 remains separate and incomplete; GF-STEP-2B6 is stored, the 11-report reading phase is complete as Fable advisory evidence, and GF-STEP-2C is next.
+- FABLE5-GREENFIELD-001 remains separate and incomplete at the maintainer-acceptance level; the GF-STEP-2C output is stored, Fable claims GF-STEP-2 completion, and substantive review is required before generating or executing GF-STEP-3.
 - ChatGPT Work guidance remains candidate guidance pending DR6-informed refresh.
