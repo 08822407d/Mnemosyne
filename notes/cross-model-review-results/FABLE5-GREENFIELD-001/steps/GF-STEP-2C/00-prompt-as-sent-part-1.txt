@@ -1,0 +1,176 @@
+Run the next bounded synthesis substep of FABLE5-GREENFIELD-001.
+
+step_id: GF-STEP-2C
+step_name: independent_capability_boundary_baseline_synthesis
+relationship_to_charter:
+  final synthesis substep of GF-STEP-2 independent_capability_boundary_baseline;
+  continuation of GF-STEP-2B6;
+  no new research-source reading;
+  not architecture design and not GF-STEP-3
+
+Execution setting:
+- Research mode must remain OFF.
+- Run in a fresh Fable 5 conversation.
+- No attachment is required if the eight pinned repository files below are
+  retrievable. If repository retrieval is unavailable, stop and ask the user
+  for those exact eight files rather than substituting other materials.
+- Do not retrieve the charter from conversation history or from another path.
+- This prompt is self-contained and governs this substep.
+
+Purpose:
+Assemble the final independent GF-STEP-2 capability-boundary baseline from
+Fable's own already-produced track outputs.
+
+The report-reading phase is complete. This step must not read original research
+reports again and must not add new external evidence.
+
+The output must state, in a design-neutral form:
+
+- what external persistent-memory workflows can reasonably rely on;
+- what conversation-only or platform-provided memory must not be assumed to
+  guarantee;
+- what local project-file access affords and does not guarantee;
+- what hosted repository workflows make observable and what they do not prove;
+- what low-drift engineering principles are supported;
+- which product/workflow statements remain dated 2026Q2 evidence;
+- which testing, handoff, input-governance, and dry-run instruments are
+  candidates rather than settled capability facts;
+- which user decisions and current-fact refreshes remain open;
+- whether the six initial-cycle PDF visual-review limitations block closure;
+- whether GF-STEP-2 can now close and hand a bounded constraint set to
+  GF-STEP-3.
+
+This is evidence synthesis and boundary consolidation. It is not design,
+implementation, comparison, repair, policy adoption, or current-product
+research.
+
+────────────────────────────────────
+1. Allowed inputs — exactly eight canonical track outputs
+────────────────────────────────────
+
+Read exactly these eight files from `master`.
+
+A. Final STEP-1 need assembly
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
+- expected blob SHA:
+  af62ffb564fd7c227f3b651a6c666201f8102fce
+
+B. STEP-2 source/domain map
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2A/02-research-source-map.md
+- expected blob SHA:
+  1c03aa480f90e45dc65542ab3f6c1cad9688e7e3
+
+C. Foundational report evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B1/02-foundational-report-evidence.md
+- expected blob SHA:
+  fd1fa397bc1baee5e115eeefde75287cf546eb9f
+
+D. Plain-dialogue dedicated evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B2A/02-plain-dialogue-core-text-evidence.md
+- expected blob SHA:
+  0704c05a244d94c9a629c6150009c77cecf192d4
+
+E. Local project-file dedicated evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B3/02-local-project-file-text-evidence.md
+- expected blob SHA:
+  cb336839cad396ec67a72e98568787386ceb590e
+
+F. Hosted-repository dedicated evidence
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B4B/02-hosted-workflow-final-text-evidence.md
+- expected blob SHA:
+  14c1cc47f7ff357221f85c314ebf2e1861581a79
+
+G. Theory / non-development / transfer batch
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B5/02-theory-nondev-transfer-evidence.md
+- expected blob SHA:
+  f81d2303fc23330b144d9fd1ff4eb546b176c757
+
+H. Supplemental testing / handoff / governance / dry-run batch
+
+- path:
+  notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2B6/02-supplemental-method-policy-evidence.md
+- expected blob SHA:
+  85886e36dbe491545dcde2c239dd13cd2ec7eba6
+
+Read no other repository path.
+
+Explicitly excluded:
+
+- every original research report, PDF, TXT, Markdown research original, summary,
+  prompt, index, or motivation file;
+- GF-STEP-2B4A, whose provisional P-records were superseded by GF-STEP-2B4B;
+- manifests, chat summaries, prompt-as-sent files, result records, incident
+  records, or review indexes;
+- `current/**`;
+- `handoff/**`;
+- other `notes/**`;
+- `raw/**`;
+- `commands/**`;
+- existing GPT-produced design or execution-source material;
+- FABLE5 review/triage material outside this greenfield track;
+- external websites and web-search results.
+
+If an allowed output names another path, report, current-state file, product
+document, task ID, or design artifact, treat it as embedded provenance or
+framing only. Do not open it.
+
+────────────────────────────────────
+2. Source integrity and access
+────────────────────────────────────
+
+Create a source-access table with one row per allowed file.
+
+For each row record:
+
+- source_step
+- repository_path
+- expected_blob_sha
+- observed_blob_sha
+- sha_match: true | false
+- complete_file_inspected: true | false
+- approximate_line_count
+- retrieval_battery
+- access_or_truncation_note
+
+Maximum retrieval/query batteries: 8 — one per file.
+
+If any SHA differs:
+
+- do not use the changed file;
+- do not search for another version;
+- do not infer missing content from another step;
+- continue only with verified files;
+- make the final status reflect the missing verified input.
+
+If a file is truncated or cannot be completely read:
+
+- retry only once using bounded line ranges on the same exact path;
+- do not retrieve a substitute;
+- if complete reading remains unavailable, mark the synthesis incomplete.
+
+────────────────────────────────────
+3. Authority, precedence, and identifier rules
+────────────────────────────────────
+
+All eight inputs are non-execution-source advisory outputs.
+
+Apply this precedence only for assembling the Fable track's own current
+statement. It does not create repository authority.
+
+1. `GF-STEP-1E` is the final STEP-1 need assembly and question baseline.
+2. `GF-STEP-2A` supplies RD-01 through RD-11 and the original preliminary
+   signal/domain plan.
