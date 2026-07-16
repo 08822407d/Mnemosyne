@@ -17,7 +17,8 @@ user_authorization:
 base_branch: master
 pinned_base_sha: 0bc4a90edaba3cf73be8b649b104281d54ae3644
 canonical_branch: mnemosyne-126-preserve-fable-step2b5
-canonical_pr_number: pending_at_initial_record
+canonical_pr_number: 177
+canonical_pr_state_at_record_finalization: open_ready
 execution_source_modified: false
 current_state_files_modified: true
 handoff_files_modified: false
@@ -121,13 +122,55 @@ github_write_lineage_preflight:
 
 Before loading the newer single-active-PR guard and discovering that the repository had already advanced through MNEMOSYNE-125, the conversation created `mnemosyne-115-step2b5`. No file write or PR was made on that branch. It is not canonical, must not be merged or used as a continuation base, and the canonical lineage is MNEMOSYNE-126 only.
 
-## Verification before PR creation
+## Pre-PR duplicate-lineage recheck
 
-- Branch compare against `master`: ahead only, `behind_by: 0`.
+Immediately before PR creation:
+
+```yaml
+pre_PR_recheck:
+  accessible_open_PRs: []
+  exact_task_id_matches: []
+  intended_head_matches: []
+  equivalent_open_GF_STEP_2B5_scope_matches: []
+  canonical_head: mnemosyne-126-preserve-fable-step2b5
+  canonical_base: master
+  decision: create_ready_PR
+```
+
+## Final comparison and PR
+
+```yaml
+final_compare_before_PR:
+  base: master
+  head: mnemosyne-126-preserve-fable-step2b5
+  base_sha: 0bc4a90edaba3cf73be8b649b104281d54ae3644
+  status: ahead
+  behind_by: 0
+  changed_files: 9
+canonical_PR:
+  number: 177
+  state: open
+  draft: false
+  auto_merge_enabled: false
+merge_instruction:
+  task_id: MNEMOSYNE-126
+  merge_target_pr: 177
+  merge_target_head_branch: mnemosyne-126-preserve-fable-step2b5
+  related_open_prs: []
+  related_noncanonical_branches:
+    - mnemosyne-115-step2b5_empty_abandoned_no_writes_no_PR
+  closed_or_superseded_related_prs: []
+  parallel_variant_authorized: false
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
+```
+
+Verification:
+
 - Changed files are limited to the GF-STEP-2B5 package, greenfield manifests/indexes, the resolved quota incident, current review wayfinding, and this result record.
 - `current/human-approved-spec.md` is untouched.
 - Handoff files, target paths, regression definitions, build paths, and frozen MNEMOSYNE-082/083 artifacts are untouched.
-- A second duplicate-lineage check and final compare are required immediately before opening the ready PR; the final PR number will then be written back into this record.
+- No second PR or parallel implementation was created.
 
 ## Boundary
 
