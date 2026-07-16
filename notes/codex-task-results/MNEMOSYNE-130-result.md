@@ -17,7 +17,7 @@ user_authorization:
 base_branch: master
 pinned_base_sha: b57c072ab770e2dbbc01736002a4086177df9511
 canonical_branch: mnemosyne-130-preserve-fable-premature-step3
-canonical_pr_number: pending_at_initial_record
+canonical_pr_number: 181
 execution_source_modified: false
 current_state_files_modified: true
 handoff_files_modified: false
@@ -56,7 +56,7 @@ returned_GF_STEP_3_artifact:
   design_parameters: 15
 ```
 
-All parts are stored in source order with no inserted delimiter. Each part must be fetched after write and its Git blob SHA checked against the locally computed source-part blob SHA before PR creation.
+All nine source parts were fetched after write. Every returned Git blob SHA matched the locally computed source-part blob SHA. Ordered concatenation uses no inserted delimiter and preserves final LF.
 
 ## Status decision
 
@@ -87,14 +87,37 @@ github_write_lineage_preflight:
   intended_branch: mnemosyne-130-preserve-fable-premature-step3
   open_pr_enumeration:
     method: get_users_recent_prs_in_repo_state_open_limit_100_plus_search_prs
-    pagination_complete: true_for_returned_empty_accessible_set
+    pagination_complete: true_for_returned_accessible_set
     all_accessible_open_prs_checked: true
-  matches:
+  pre_branch_matches:
     by_exact_task_id: []
     by_intended_head_branch: []
     by_equivalent_scope: []
   decision: create_new_lineage
+pre_PR_recheck:
+  accessible_open_PRs: []
+  exact_task_id_matches: []
+  intended_head_matches: []
+  equivalent_open_scope_matches: []
+canonical_PR:
+  number: 181
+  head: mnemosyne-130-preserve-fable-premature-step3
+  base: master
+  draft: false
+  auto_merge_enabled: false
+related_open_PRs: []
+parallel_variant_authorized: false
+exactly_one_merge_target: true
 ```
+
+## Verification
+
+- The branch was created from merged PR #180 / `master@b57c072ab770e2dbbc01736002a4086177df9511`.
+- Every write explicitly targeted `mnemosyne-130-preserve-fable-premature-step3`.
+- Final pre-PR compare was ahead only, `behind_by: 0`.
+- Twenty intended files changed.
+- `current/human-approved-spec.md`, existing handoff files, frozen MNEMOSYNE-082/083 artifacts, target paths, regression definitions, and build paths are untouched.
+- PR #181 is the sole canonical merge target and was created ready for review.
 
 ## Boundaries
 
