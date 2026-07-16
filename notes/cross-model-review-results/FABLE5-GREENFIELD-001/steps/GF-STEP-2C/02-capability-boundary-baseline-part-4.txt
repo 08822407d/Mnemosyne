@@ -1,0 +1,30 @@
+| GF1A-N08 | partially covered: change notes + rejected-artifact retention as correction path | F2B6-UG-06 | Q-02, Q-11 |
+| GF1A-N09 | covered: architectural grounding + surface facts | CB-17…20; CB-05,09 | — |
+| GF1A-N10 | covered: model-agnostic core + adapters; partial import/export | CB-22; F2B5-ND02 | Q-03 |
+| GF1A-N11 | covered: staged, reviewed, anti-automation discipline across all instruments | CB-11,16; STEP2B6 §12 | — |
+| GF1A-N12 | covered at method level: definition, tiers, protocol, taxonomy | F2B6-HO-01…06; CB-06,10 | Q-13-updated |
+| GF1B-N13 | covered: trails, packages, postmortems, regression records | CB-13,20,21; F2B6-FT-05 | Q-03 |
+| GF1B-N14 | covered: redaction as separate governed artifacts, never silent replacement | F2B6-UG-05 | Q-07-final |
+| GF1B-N15 | covered: substrate mechanics, placements, token scopes, scenario-dependent weight | CB-07,12,14,21,26 | Q-04, Q-14 |
+| GF1B-N16 | thinly covered: capture remains manual in surveyed practice | CB-24; F2B5-ND02 | Q-05 |
+| GF1B-N17 | user_decision_not_research_fact | — | Q-06 |
+| GF1B-N18 | covered: precedence and containment reaffirmed by every instrument | F2B6-FT-02; STEP2B6 §12 | — |
+| GF1C-N19 | covered at instrument level | F2B6-MT-01…06; F2B6-HO-04,05 | Q-08-final |
+| GF1C-N20 | covered at policy-candidate level | F2B6-UG-01…06; CB-15,20 | Q-07-final, Q-11, Q-12, Q-14 |
+| GF1C-N21 | covered at framework-candidate level | F2B6-FT-01…06 | Q-09-final; target identity |
+
+## 13. Open-question register final state
+
+Carried, user-held: Q-01 (placement acceptance), Q-02 (approval granularity), Q-03 (raw/digest sufficiency and retention depth), Q-04 (substrate hard requirements vs GitHub), Q-05 (buffer activation), Q-06 (language-migration trigger). Evidence-completed, adoption open: Q-07-final, Q-08-final, Q-09-final (per STEP2B6). Q-10: second tier resolved; initial-cycle prompt originals remain a low-priority non-blocking note. Q-11 (correction/deletion vs history immutability): partial report input (change notes, rejected-artifact retention, prevention-first history rule); user decision open. Q-12 (governance scope extension to the workspace's own raw layer): untouched by evidence; open. Q-13-updated (initiation trigger): open. Q-14 (external storage + retention for originals layer): open. Q-15 (minimal must-preserve state-class set): open. Total: 15 registered questions, none blocking baseline validity; all blocking only adoption and design steps downstream.
+
+## 14. Date-sensitivity and refresh register (carried forward)
+
+STEP2A items D-01…D-09 stand unchanged: use_with_date_note for platform chat/memory features (D-01), local-agent mechanics (D-02), hosted workflow behavior (D-03), service limits (D-04), evaluation-practice maturity (D-07), handoff tooling (D-08), visibility mechanics (D-09); stable_enough for external-memory theory (D-05) and Git-history exposure persistence (D-06). No external check has been performed at any point in this track; all dated statements above carry cycle 2026Q2 (RPT-0001 layer: 2026-05-23). Whether the final adopted baseline triggers a delta refresh is a user decision.
+
+## 15. Visual-review limitation register (carried forward)
+
+The six initial-cycle PDFs (0002…0007) remain pending_manual_review; every PDF-derived item in this baseline is text_only; no chart/table/image/layout-dependent conclusion exists anywhere in this track. The repository's figure-review tracking file remains unopened metadata.
+
+## 16. Uncertainty and overclaim guard summary
+
+Standing guards across the baseline: dated product statements never generalize across surfaces or time; absence claims are survey-bounded; recommendations and delivered instruments are candidates, not facts or validated designs; benchmark figures are preprint-stage; judge-type evaluation is auxiliary only; platform mechanics are vendor-specific; no instrument has been executed; the composite architecture remains unvalidated as a whole; report citations were never independently verified; other-track state references remain framing. Every capability statement above embeds its own overclaim guard column.
