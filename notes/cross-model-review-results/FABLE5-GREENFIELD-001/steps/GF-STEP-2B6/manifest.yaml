@@ -1,0 +1,100 @@
+step_id: GF-STEP-2B6
+track_id: FABLE5-GREENFIELD-001
+record_type: fable_greenfield_step_storage_manifest
+author_model: Fable 5
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-128
+storage_scope: prompt_summary_output_integrity_and_continuation_only
+substantive_review_performed: false
+research_mode: false
+status: GF_STEP_2B6_complete_supplemental_batch_reviewed_all_reports_read
+prior_step: GF-STEP-2B5
+next_proposed_step: GF-STEP-2C
+
+files:
+  prompt:
+    path: 00-prompt-as-sent.md
+    provenance: copied_from_prior_assistant_task_message
+  chat_summary:
+    path: 01-fable-chat-summary.md
+    provenance: user_pasted_Fable_completion_summary
+  downloadable_output:
+    uploaded_filename: FABLE5-GREENFIELD-001-STEP2B6-supplemental-method-policy-evidence.md
+    canonical_path: 02-supplemental-method-policy-evidence.md
+    requested_filename_in_prompt: FABLE5-GREENFIELD-001-STEP2B6-supplemental-operational-evidence.md
+    filename_deviation_recorded: true
+    size_bytes: 38703
+    sha256: 437fec63766dbe48b278befdc9286871f6a0a619799944b2bd4cf136598ab827
+    git_blob_sha: 85886e36dbe491545dcde2c239dd13cd2ec7eba6
+    encoding: utf-8
+    line_endings: lf
+    final_lf_preserved: true
+    normalization: none
+    byte_faithful_copy: true
+
+structural_check:
+  numbered_sections_found: 19
+  required_conceptual_areas_present:
+    - metadata
+    - scope_and_limits
+    - source_firewall
+    - source_integrity
+    - four_report_evidence_registers
+    - Q07_Q08_Q09_Q13_reassessment
+    - integrated_matrix
+    - STEP1_linkage
+    - classification
+    - uncertainty
+    - all_report_coverage
+    - limitations
+    - status_and_continuation
+    - boundary
+  exact_prompt_schema_conformance_claimed: false
+  recorded_deviations:
+    - returned_filename_differs_from_exact_requested_filename
+    - metadata_step_name_differs_from_prompt_step_name
+    - metadata_record_type_differs_from_prompt_record_type
+    - evidence_ID_prefixes_use_MT_HO_UG_FT_hyphenated_forms_instead_of_requested_MT_HO_UIG_DR_forms
+    - numbered_section_titles_and_grouping_differ_from_requested_19_section_list
+  artifact_or_tool_status_leakage_detected: false
+
+reported_content_counts:
+  reports_read: 4
+  report_SHA_matches: 4
+  evidence_records:
+    MT: 6
+    HO: 6
+    UIG_returned_as_UG: 6
+    FTDRE_returned_as_FT: 6
+    total: 24
+  question_reassessments: 4
+  new_questions: 2
+  integrated_matrix_rows: 12
+  STEP1_linkage_entries: 9
+  uncertainty_items: 10
+  all_active_reports_in_ledger: 11
+  visual_review_dependency_for_this_markdown_batch: false
+  carried_PDF_visual_review_limitation: true
+
+word_count:
+  fable_reported_approximate: 4779
+  local_whitespace_delimited: 4843
+  local_english_word_pattern: 4284
+  hard_cap: 6000
+
+continuation:
+  GF_STEP_2_reading_phase_status: complete_as_Fable_advisory_result
+  GF_STEP_2_status: incomplete
+  next_step: GF-STEP-2C
+  next_step_scope: independent_capability_boundary_baseline_synthesis_from_track_outputs
+  next_step_executed: false
+
+boundaries:
+  execution_source_modified: false
+  handoff_files_modified: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false
