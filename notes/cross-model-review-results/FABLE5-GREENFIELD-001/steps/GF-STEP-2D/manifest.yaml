@@ -1,0 +1,22 @@
+step_id: GF-STEP-2D
+record_type: intended_corrective_closure_task_not_executed
+authority_level: non_execution_source_advisory_evidence
+stored_by_task: MNEMOSYNE-130
+intended_task:
+  index_path: 00-intended-task-as-sent.md
+  size_bytes: 27640
+  sha256: 7e189fb0667d41d2d72b79d1f9dc8752c3a014e753714a9842ee730c8ffde158
+  expected_whole_git_blob_sha: a6b8f5ce47687ff32417ffbded4ddffdcf00a752
+  exact_ordered_parts: 5
+  byte_faithful_multipart_copy: true
+execution_result:
+  status: not_executed_misinterpreted_as_GF_STEP_3
+  chat_summary_path: 01-fable-chat-summary.md
+  incident_path: ../../incidents/INC-003-step2d-misinterpreted-as-step3.md
+returned_artifact:
+  actual_step_id: GF-STEP-3
+  canonical_storage_path: ../GF-STEP-3-EARLY/02-premature-architecture-candidate.md
+boundaries:
+  GF_STEP_2_closed: false
+  GF_STEP_3_accepted: false
+  substantive_review_performed: false
