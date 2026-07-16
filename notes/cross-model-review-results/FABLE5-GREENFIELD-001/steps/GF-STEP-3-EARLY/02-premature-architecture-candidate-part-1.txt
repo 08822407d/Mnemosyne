@@ -1,0 +1,44 @@
+# FABLE5-GREENFIELD-001 — GF-STEP-3 Independent Architecture Candidate
+
+## 1. Metadata
+
+```yaml
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-3
+step_name: independent_architecture_derivation
+record_type: independent_persistent_memory_architecture_candidate
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_step: GF-STEP-2C
+inputs: STEP-1 need model (GF1A-N01…N12+delta, GF1B-N13…N18, GF1C-N19…N21) and STEP-2C capability-boundary baseline (S-01…S-05, CB-01…CB-27, instrument inventory, Q-01…Q-15)
+new_repository_reads: none
+retrieval_batteries_used: 0
+research_mode: false
+date: 2026-07-16
+step_status: GF_STEP_3_complete_independent_architecture_candidate_delivered
+```
+
+## 2. Scope and hard limits
+
+Derive one independent persistent-memory architecture candidate from exactly two inputs — the need model and the capability baseline. Limits observed: repository paths 0; batteries 0; no report, prompt, summary, index, or web reads; no comparison with the existing design (a later, separately authorized phase); no instrument adoption on the user's behalf; no execution-source effect; no target-project artifacts; Research mode off; no automatic continuation.
+
+## 3. Allowed inputs and anti-contamination policy
+
+Inputs are this track's own deliverables only. The four supplemental reports' delivered instruments are used strictly as *candidate-informed* references, marked wherever they shaped a choice; other-track design state seen as framing inside sources (file names, gate IDs, task IDs) is not imported — all layer, file, and mechanism names below are derived independently, and any naming or structural convergence with the existing design is expected from shared needs and is disclosed in §18 rather than denied. Prior-exposure disclosure carries forward: independence by derivation and disclosure.
+
+## 4. Derivation method and traceability rules
+
+Every architectural element carries bracketed traceability to needs and evidence, e.g. [N07; CB-12,S-05]. Rules: no element may rest on a capability the baseline grades as absent for its surface; every open question becomes a named design parameter (DP-xx) with a conservative default, never a silent assumption; delivered instruments enter only as reserved slots pending adoption; nothing below is validated, operative, or comparative.
+
+## 5. Architecture principles
+
+- **P1 External truth.** Versioned external files are the only durable substrate; model context and platform memory are caches, never truth [N01,N09; S-01,S-03; CB-17…21].
+- **P2 Single operative authority.** Exactly one human-approved specification per project is operative; all else is evidence, interpretation, or candidate [N07; GF1B-N18].
+- **P3 Layered authority separation.** Evidentiary, interpretive, operative, working, disclosure, and provenance roles never share a file [N05,N06,N08].
+- **P4 Weakest-surface viability.** The core must run on plain dialogue via manual/semi-manual flows, and only exploit stronger surfaces additively [N02,N03; CB-01…06; S-02].
+- **P5 Human-gated staging.** Every state mutation passes a human gate in v0.1; automation is deferred, never assumed [N11; CB-11,16; S-04,S-05].
+- **P6 Model replaceability.** Tool-agnostic Markdown/Git core with thin generated adapters; no vendor syntax in the core [N09,N10; CB-22].
+- **P7 Preservation without exposure.** Verbatim preservation is mandatory; in-repo storage is not — placement is a governed parameter, derivations never substitute originals [N06; GF1B-N14; CB-15,20; DP-07].
+- **P8 Designed-in evaluability.** State is observable, claims carry evidence paths, staleness is markable, provenance is recorded [N19; CB-13].
+- **P9 Handoff as artifact.** Continuity is carried by explicit relay artifacts, never by platform session memory [N12+delta; CB-06,10].
+- **P10 Self-application.** The meta-agent workspace runs on this same architecture; its own history is the first test bed [N12; instrument-informed].
