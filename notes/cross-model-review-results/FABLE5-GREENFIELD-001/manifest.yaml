@@ -2,10 +2,10 @@ track_id: FABLE5-GREENFIELD-001
 record_type: independent_greenfield_reconstruction_track
 author_model: Fable 5
 authority_level: non_execution_source_advisory_evidence
-status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_2B5_canonical_copies_stored
+status: charter_and_GF_STEP_1A_1B_1C_1D_1E_2A_2B1_2B2A_2B3_2B4A_2B4B_2B5_2B6_canonical_copies_stored
 created_by_task: MNEMOSYNE-101
-last_storage_task: MNEMOSYNE-126
-last_status_task: MNEMOSYNE-126
+last_storage_task: MNEMOSYNE-128
+last_status_task: MNEMOSYNE-128
 relationship_to_existing_design: contrastive_reference_track_not_review_not_replacement
 source_attachment:
   uploaded_filename: FABLE5-independent-greenfield-reconstruction-task-charter.md
@@ -96,13 +96,20 @@ step_records:
     stored_by_task: MNEMOSYNE-126
     substantive_review_performed: false
     next_proposed_step: GF-STEP-2B6
+  - step_id: GF-STEP-2B6
+    path: steps/GF-STEP-2B6/
+    status: GF_STEP_2B6_complete_supplemental_batch_reviewed_all_reports_read
+    stored_by_task: MNEMOSYNE-128
+    substantive_review_performed: false
+    output_filename_deviation_recorded: true
+    next_proposed_step: GF-STEP-2C
 track_progress:
   GF_STEP_1:
     status: complete_with_explicit_open_questions_as_Fable_advisory_result
     completion_record: steps/GF-STEP-1E/02-second-tier-prompts-and-final-closure.md
     substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete_and_outside_MNEMOSYNE_113_first_wave_scope
   GF_STEP_2:
-    status: in_progress_ready_for_supplemental_batch
+    status: in_progress_reading_phase_complete_ready_for_baseline_synthesis
     completed_substeps:
       - GF-STEP-2A
       - GF-STEP-2B1
@@ -111,10 +118,13 @@ track_progress:
       - GF-STEP-2B4A
       - GF-STEP-2B4B
       - GF-STEP-2B5
-    current_record: steps/GF-STEP-2B5/02-theory-nondev-transfer-evidence.md
-    next_planned_substep: GF-STEP-2B6
-    next_planned_scope: integrated_review_of_MT_HO_UIG_FTDRE_supplemental_markdown_reports
-    provider_quota_status: resumed_for_GF_STEP_2B5_completion_future_availability_not_asserted
+      - GF-STEP-2B6
+    current_record: steps/GF-STEP-2B6/02-supplemental-method-policy-evidence.md
+    text_review_status: all_11_active_reports_full_text_reviewed_as_Fable_advisory_evidence
+    carried_visual_limitation: six_initial_cycle_PDFs_not_visually_reviewed
+    next_planned_substep: GF-STEP-2C
+    next_planned_scope: independent_capability_boundary_baseline_synthesis_from_track_outputs_no_new_source_reads
+    provider_quota_status: available_for_GF_STEP_2B6_completion_future_availability_not_asserted
     substantive_maintainer_acceptance: not_yet_performed_greenfield_track_incomplete
 provider_incidents:
   - incident_id: FABLE5-GREENFIELD-001-INCIDENT-001
