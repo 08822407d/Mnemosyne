@@ -1,0 +1,40 @@
+{
+  "package_id": "MNEMOSYNE-FABLE5-GREENFIELD-FINAL-PHASE-HANDOFF-001",
+  "files": [
+    {
+      "filename": "MNEMOSYNE-FABLE5-GREENFIELD-FINAL-PHASE-HANDOFF.md",
+      "size_bytes": 10109,
+      "sha256": "f8fcdabc04306ac35165f5ab2628a96f91a6c993cbfda9ea3fe5d4c6d0e7b9d9"
+    },
+    {
+      "filename": "MNEMOSYNE-FABLE5-GREENFIELD-FINAL-PHASE-STARTUP-PROMPT.md",
+      "size_bytes": 2280,
+      "sha256": "1b3f053af89776c8c9e7c1385cba65b690b86fa4f36e9f2f305a7e946cf1e424"
+    },
+    {
+      "filename": "MNEMOSYNE-FABLE5-GREENFIELD-FINAL-PHASE-OPERATOR-CHECKLIST.md",
+      "size_bytes": 2387,
+      "sha256": "9f272302c29f31b2718005b5e47de290941563b93664095ecce1e540e5155ae5"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-GF-STEP-4-task.md",
+      "size_bytes": 27489,
+      "sha256": "a0afeb6f13e62346f789be05e958b1365e8a90ced0e94379d34ab6230facd973"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-GF-STEP-4-inputs-manifest.json",
+      "size_bytes": 1065,
+      "sha256": "b9fdedd72303b960e5bcb21f7d17dedfcddf2908ca28235c99ab983e8281d7f4"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-GF-STEP-4-complete-input-package.zip",
+      "size_bytes": 85839,
+      "sha256": "6c8f244bf3da36e2ed4b3e8d30a5a7b36e41a041e1c69eb432780965744134f2"
+    }
+  ],
+  "complete_handoff_zip": {
+    "filename": "MNEMOSYNE-FABLE5-GREENFIELD-FINAL-PHASE-COMPLETE-HANDOFF.zip",
+    "size_bytes": 103700,
+    "sha256": "c13652ef301d6f25abca64c7567a838edb74a41a6316f8bc55b71ee6641542e3"
+  }
+}

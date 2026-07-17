@@ -1,0 +1,226 @@
+Execute the next bounded canonical substep of FABLE5-GREENFIELD-001.
+
+step_id: GF-STEP-4
+step_name: self_critique_and_assumption_register
+relationship_to_charter:
+  adversarial self-review of the independent architecture candidate;
+  inputs are the final need model, verified capability boundaries, GF-STEP-3A,
+  and GF-STEP-3B;
+  must occur before any comparison against the existing GPT/Mnemosyne design;
+  does not execute GF-STEP-5
+
+Literal execution instruction:
+- Execute GF-STEP-4 only.
+- Critique the joint GF-STEP-3A + GF-STEP-3B candidate adversarially.
+- Do not repair or rewrite the architecture in this step.
+- Do not execute GF-STEP-5.
+- Do not read, retrieve, summarize, or compare against the existing
+  GPT/Mnemosyne design.
+- Do not read or reuse the premature GF-STEP-3 candidate.
+- Research mode must remain OFF.
+
+Execution setting:
+- Run in a genuinely fresh Fable 5 conversation.
+- Attach exactly these four files:
+  1. FABLE5-GREENFIELD-001-STEP1E-second-tier-prompts-and-final-closure.md
+  2. FABLE5-GREENFIELD-001-STEP2D-source-contract-verification-and-closure-addendum.md
+  3. FABLE5-GREENFIELD-001-STEP3A-information-authority-architecture.md
+  4. FABLE5-GREENFIELD-001-STEP3B-lifecycle-operations-architecture.md
+- Use no Project knowledge, past-chat retrieval, local cached track files,
+  repository files, web sources, or unstated attachments.
+- Repository paths read: 0.
+- Retrieval batteries: 0.
+- This prompt is self-contained.
+
+Expected attachment identities:
+
+A. STEP1E final need model
+- expected size_bytes: 32577
+- expected SHA-256:
+  60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0
+- canonical Git blob SHA:
+  af62ffb564fd7c227f3b651a6c666201f8102fce
+
+B. STEP2D verified capability-boundary addendum
+- expected size_bytes: 68834
+- expected SHA-256:
+  ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac
+
+C. STEP3A information/authority architecture
+- expected size_bytes: 47324
+- expected SHA-256:
+  3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1
+
+D. STEP3B lifecycle/operations architecture
+- expected size_bytes: 68033
+- expected SHA-256:
+  af4dd4c2d9658319462a28cc13c469f24823be06cc003f33858b348a68fb6685
+
+If an attachment is missing, unreadable, or has a mismatching exposed identity:
+- do not substitute conversation memory, Project knowledge, repository copies,
+  STEP2C, or the premature architecture candidate;
+- produce a short input-integrity failure artifact and stop.
+
+If the interface does not expose an independently computable attachment hash:
+- state that limitation;
+- verify filename, metadata, section identity, and internal content markers;
+- do not claim independent cryptographic verification.
+
+────────────────────────────────────
+1. Purpose
+────────────────────────────────────
+
+Perform an adversarial self-critique of the independent architecture candidate
+formed jointly by GF-STEP-3A and GF-STEP-3B.
+
+The critique must identify:
+
+- unsupported or weakly supported assumptions;
+- capability-boundary violations or near-violations;
+- contradictions between STEP3A and STEP3B;
+- single points of failure;
+- authority or governance loopholes;
+- privacy, exposure, correction, withdrawal, and custody risks;
+- staleness, handoff, migration, and adapter-drift risks;
+- automation and human-review failure modes;
+- excessive complexity, maintenance burden, and review fatigue;
+- places where a lightweight scenario is over-engineered;
+- places where a high-risk scenario is under-protected;
+- circular or non-falsifiable validation claims;
+- design choices most sensitive to Q-01 through Q-15;
+- irreversible or costly-to-reverse choices;
+- design elements whose evidence is dated, text-only, indirect, or candidate-
+  instrument dependent;
+- conditions under which the candidate should be repaired before comparison.
+
+This step must critique the greenfield design on its own terms. It must not
+compare it with, infer from, or recommend changes to the current GPT/Mnemosyne
+design.
+
+────────────────────────────────────
+2. Anti-contamination and excluded material
+────────────────────────────────────
+
+Use only the four attachments.
+
+Explicitly prohibited:
+
+- any prior Fable conversation;
+- Project knowledge or past-chat search;
+- any repository path;
+- `current/**`, `handoff/**`, `raw/**`, `notes/**`, or `commands/**`;
+- `current/human-approved-spec.md`;
+- any existing GPT/Mnemosyne design material;
+- anything under `GF-STEP-3-EARLY`;
+- FABLE5-GREENFIELD-001-STEP3-independent-architecture-candidate.md;
+- STEP2C as a separate input;
+- external websites or web search.
+
+Standing disclosure:
+- independence is by derivation and disclosure, not claimed amnesia;
+- incidental prohibited exposure must be logged and unused;
+- do not intentionally retrieve prohibited material to complete the ledger.
+
+────────────────────────────────────
+3. Input precedence and critique discipline
+────────────────────────────────────
+
+Precedence:
+
+1. STEP1E controls need identities and user-held questions.
+2. STEP2D controls verified boundaries, freshness gates, PDF caveats, and
+   prohibited assumptions.
+3. STEP3A controls information architecture and authority semantics.
+4. STEP3B controls lifecycle and operations, except it may not silently
+   redefine STEP3A.
+5. Any contradiction is a critique finding, not something to reconcile
+   silently.
+
+Preserve exact identifiers where available:
+
+- GF1A-N01 through GF1C-N21;
+- GF2D-B01 through GF2D-B24;
+- UA-01 through UA-16;
+- FR-01 through FR-10;
+- GF3A-A01 through GF3A-A18;
+- GF3A-DP01 through GF3A-DP15;
+- R1 through R7;
+- AC1 through AC12;
+- GF3B-S01 through GF3B-S17;
+- GF3B-F01 through GF3B-F14;
+- GF3B-FAIL01 through GF3B-FAIL16;
+- GF3B-AUTO0 through GF3B-AUTO5;
+- the six GF3B surface-profile IDs.
+
+Rules:
+
+- challenge a claim even when it is well-written or fully traceable;
+- traceability is not proof of correctness;
+- internal consistency is not empirical validation;
+- complete table coverage is not proof of practical usability;
+- a conservative default can still create de facto policy pressure;
+- a human gate can still fail through fatigue, ambiguity, or rubber-stamping;
+- a deterministic check can still validate the wrong invariant;
+- a failure taxonomy can still omit important failure modes;
+- do not treat absence of observed contradiction as proof that none exists;
+- do not answer user-held questions to make the design easier to critique.
+
+────────────────────────────────────
+4. Severity and disposition model
+────────────────────────────────────
+
+Use these severities:
+
+- critical — core authority, safety, privacy, or truth-source failure that makes
+  the candidate unsafe to carry into comparison without repair;
+- blocking — a coherent architecture claim cannot be sustained until repaired
+  or a user decision is obtained;
+- major — substantial failure risk or cost, but comparison can proceed if the
+  limitation is explicit;
+- moderate — meaningful weakness, complexity, or evidence gap;
+- minor — presentational, local, or low-impact issue.
+
+Use these dispositions:
+
+- architecture_repair_required_before_STEP5
+- user_decision_required_before_specific_branch
+- evidence_or_refresh_required_if_branch_selected
+- carry_as_explicit_comparison_caveat
+- implementation_validation_required_later
+- no_action_beyond_documentation
+- uncertain_needs_further_adversarial_check
+
+Do not create an automatic repair task merely because a finding exists.
+
+────────────────────────────────────
+5. Architecture-wide critique dimensions
+────────────────────────────────────
+
+Evaluate at least these dimensions:
+
+A. Need coverage honesty
+- Are any of the 21 needs merely renamed rather than satisfied?
+- Do parameterized or interface-only rows overstate coverage?
+- Are any user preferences treated as architecture requirements?
+
+B. Capability-boundary compliance
+- Does any flow/profile quietly assume more than GF2D-B01…B24 allow?
+- Are FR refresh triggers activated too late?
+- Do text-only PDF caveats affect a load-bearing decision?
+
+C. Authority and governance
+- Can AC6/AC7, namespace, pinning, or promotion semantics be bypassed?
+- Can human review become a ritual rather than a real gate?
+- Is there ambiguity over owner identity, delegation, revocation, or emergency
+  action?
+
+D. Information model
+- Are seven roles and twelve classes minimal, complete, and distinguishable?
+- Are there ambiguous or overlapping classes?
+- Can mutable projections contaminate operative state?
+- Can journal or provenance records themselves be wrong?
+
+E. Lifecycle and operations
+- Are 17 states and 14 flows coherent and usable?
+- Are transitions missing, duplicated, or impossible to recover?
+- Are staleness and conflict rules sufficiently operational?
