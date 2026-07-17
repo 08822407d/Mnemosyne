@@ -1,0 +1,66 @@
+# FABLE5-GREENFIELD-001 — GF-STEP-4 Self-Critique and Assumption Register
+
+## 1. Metadata
+
+```yaml
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-4
+step_name: self_critique_and_assumption_register
+record_type: self_critique_and_assumption_register
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_step: GF-STEP-3B
+research_mode: false
+date: 2026-07-18
+repository_paths_read: 0
+retrieval_batteries_used: 0
+existing_GPT_design_read: false
+premature_GF_STEP_3_candidate_read: false
+inputs:
+  - GF-STEP-1E final need model
+  - GF-STEP-2D verified capability-boundary addendum
+  - GF-STEP-3A information/authority architecture
+  - GF-STEP-3B lifecycle/operations architecture
+step_status: GF_STEP_4_complete_with_ARCHITECTURE_REPAIR_GATE
+```
+
+## 2. Scope and hard limits
+
+Adversarial self-review of the joint GF-STEP-3A + GF-STEP-3B candidate on its own terms; no comparison with, inference from, or recommendation about the existing GPT/Mnemosyne design; no repair executed; no GF-STEP-5 work. Limits observed: attachments 4/4; repository paths 0; retrieval batteries 0; web/external searches 0; premature-candidate reads 0; existing-design reads 0; critique findings 19 (within 12–24); new unsupported assumptions 14 (within 8–16); single-point failures 9 (within 6–12); maintenance hotspots 9 (within 6–12); design choices 12 (within 8–14); design parameters exactly 15; stress-test profiles exactly 6; GF3A elements audited exactly 18; GF3B states exactly 17; flows exactly 14; failure classes exactly 16; automation stages exactly 6; GF2D boundaries exactly 24; original UA guards exactly 16. No user-held question is answered anywhere in this file. Word budget: the first draft exceeded the 7,000-word hard cap under the pipe-excluded approximate measure (7,904; raw wc 9,525 with table syntax and IDs counted); the single permitted light compression pass removed narration and connective wording only — no required row, field, or ID coverage was omitted; one approximate word-count check performed; no recount after compression.
+
+## 3. Input identity and access result
+
+| input | expected (task) | observed (independent sandbox check) | result |
+|---|---|---|---|
+| A. STEP1E need model | 32,577 B; SHA-256 60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0; canonical git blob af62ffb564fd7c227f3b651a6c666201f8102fce | identical byte count; identical SHA-256; identical git blob | exact match; complete read (262 lines) |
+| B. STEP2D addendum | 68,834 B; SHA-256 ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac | identical | exact match; complete read (396 lines) |
+| C. STEP3A architecture | 47,324 B; SHA-256 3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1 | identical | exact match; complete read (302 lines) |
+| D. STEP3B architecture | 68,033 B; SHA-256 af4dd4c2d9658319462a28cc13c469f24823be06cc003f33858b348a68fb6685 | identical | exact match; complete read (404 lines) |
+
+The interface exposes independently computable attachment hashes; independent cryptographic verification is claimed for all four inputs, plus canonical-blob identity for A. No mismatch; no input-integrity failure artifact required. The GF-STEP-4 task file itself was read as the governing instruction, not as evidence.
+
+## 4. Anti-contamination and prior-exposure statement
+
+Only the four attachments were used as evidence. Not used, retrieved, or opened: prior Fable conversations, Project knowledge, past-chat search, any repository path, `current/**`, `handoff/**`, `raw/**`, `notes/**`, `commands/**`, the existing GPT/Mnemosyne design, `current/human-approved-spec.md`, anything under `GF-STEP-3-EARLY`, FABLE5-GREENFIELD-001-STEP3-independent-architecture-candidate.md or any summary of it, STEP2C as a separate input, and any external website or search. Standing disclosure: independence by derivation and disclosure, not claimed amnesia; ambient session context summarizing this track exists but was not used as evidence, and no retrieval was performed. Incidental prohibited exposure this step: none. File names inside the attachments were treated as embedded provenance, never opened.
+
+## 5. Critique method and severity model
+
+Method: every claim was challenged even where well-written and traceable; traceability ≠ correctness; internal consistency ≠ empirical validation; table coverage ≠ usability. Conservative defaults were probed for de facto policy pressure, human gates for fatigue, deterministic checks for wrong-invariant risk, the failure taxonomy for omissions; absence of observed contradiction was not treated as proof of none. Steelmen were built before severity assignment and disclosed where material. Severities: critical | blocking | major | moderate | minor, per the task definitions. Dispositions: architecture_repair_required_before_STEP5 | user_decision_required_before_specific_branch | evidence_or_refresh_required_if_branch_selected | carry_as_explicit_comparison_caveat | implementation_validation_required_later | no_action_beyond_documentation | uncertain_needs_further_adversarial_check. No automatic repair task is created merely because a finding exists.
+
+## 6. Executive critique
+
+The joint candidate is disciplined, conservative, and unusually traceable. Its authority spine — AC6-only authority, PASS non-escalation, namespace containment with lineage-gated promotion, claims-never-evidence — survives adversarial reading intact. No capability-boundary violation was found; the candidate is, if anything, over-conservative. Weaknesses cluster in four places. First, completeness claims outrun the model: GF-STEP-3B's operations mint record kinds — adapters above all, plus conflict artifacts, migration manifests, evidence packages, and tooling outputs — holding no class, role, or governance under STEP3A's "smallest safe set", "exactly one role", and "only allowed edges" claims (GF4-F01, blocking); the adapter case leaves operationally binding content ungoverned. Second, the failure register omits failure modes the design itself names: pointer rot, synthetic-as-real evidence, stale-answer application (GF4-F02). Third, the safety story is silently stage- and profile-dependent: journaling and most detection presuppose tooling absent at AUTO0 and in the two lightest profiles, so manual paths risk being nominal (GF4-F05, GF4-F06). Fourth, human-gate realism: unbounded review load and structurally unauthenticated decision records concentrate on one non-delegable owner with no continuity model (GF4-F03, GF4-F07, GF4-F08), while conservative defaults quietly operate a retain-everything policy the user has not approved (GF4-F09). One blocking finding gates comparison behind a small, bounded, information-model-level repair; no critical finding exists.
+
+## 7. Finding register
+
+Field key per finding: sev = severity; dim = critique dimension; 3A / 3B = affected STEP3A elements / STEP3B states-flows-profiles; needs; B/UA = affected GF2D boundary or UA IDs; chal = exact claim or design choice challenged; scen = failure scenario; basis = evidence or reasoning basis; conf = confidence; rev = reversibility; disp = disposition; b5 = blocks_GF_STEP_5; rep = repair_direction_candidate; UD = user_decision_dependency; nover = prohibited_overreaction.
+
+**GF4-F01 — unclassed operational artifacts breach class-model completeness.** sev: blocking. dim: D. 3A: A01, A12, A17, A18 (AC1–AC12 set). 3B: S08, S17; F09, F11, F13, F14; all profiles (AD role); FAIL13, FAIL15. needs: N02, N08, N15. B/UA: B11, B20; UA-03, UA-07. chal: "smallest safe set: 12 classes" (STEP3A §10); "every artifact carries exactly one role" (A01); A18 as "the only allowed inter-artifact edges"; STEP3B §19 "no role, class … silently redefined". scen: an adapter mis-states a write affordance; holding no class, no approval, mutability, or provenance rule applies, yet the claim binds profile behavior (FAIL13) without crossing a gate. The conflict artifact (A12/FAIL15's central output), migration manifest (F13), evidence package (F11 lists it beside AC3), sweep reports/check logs/no-write proofs/echo records (T outputs used as `ev`), and staleness flags (F14) likewise hold no class: as artifacts they breach the one-role rule; as non-artifacts, A13/B11-grade evidence rests on non-artifacts. basis: STEP3A §10–§11 against STEP3B §10, F11/F13/F14 `cr`/`ev` fields, §16–§17. Steelman: conflict artifacts and T logs as AC3/AC11 — nowhere stated, AC3's creator legend omits T, and it fails outright for adapters (AC4 cannot bind; AC7 would require an unmandated AC6). conf: high. rev: easy. disp: architecture_repair_required_before_STEP5. b5: yes. rep: concise — assign classes/roles to the named operational record kinds (or add one bounded class) and state adapter governance (creator, approval, mutability, provenance), or else scope the completeness claims explicitly. UD: none. nover: do not build a universal ontology or dissolve the 12-class discipline.
+
+**GF4-F02 — failure register omits design-named failure modes.** sev: major. dim: E/G. 3A: A02, A08, A11. 3B: S03, S10, S11; F07, F09, F11; the FAIL01–16 register as a set. needs: N12, N20, N21. B/UA: B13, B18; UA-09, UA-10, UA-15. chal: §14's adequacy as the containment/regression-routing register. scen: a synthetic evidence package is mis-marked real during V3→V4 preparation; no FAIL class exists, so containment and regression routing are undefined for the failure N21 names verbatim; likewise pointer rot (named in S03/F07 fail columns, unclassed) and a stale authorized answer applied under no-re-asking (only the mirror error, FAIL07, exists). basis: direct cross-check of §14 against S03/F07/F11/§12/§13 text and STEP1E N21/N12-delta wording. conf: high. rev: easy. disp: architecture_repair_required_before_STEP5. b5: yes. rep: concise — add or explicitly map three classes (synthetic-as-real evidence; pointer/custody integrity loss; stale-answer application), merging within the 12–18 cap if needed. UD: Q-11/Q-14 adjacent, not required for the repair. nover: do not inflate the register with speculative classes.
+
+**GF4-F03 — AC6/journal authenticity is conventional, not contractual.** sev: major. dim: C/G. 3A: A06, A13, A16. 3B: §10 actor model; F04; FAIL01, FAIL02. needs: N07, N18. B/UA: B11, B19; UA-07, UA-08. chal: "operative authority is created only by an AC6 human decision" as a verifiable property. scen: at AUTO1+, M drafts artifacts and AC11 entries; a fabricated AC6-plus-journal pair is internally consistent and passes T's journal-diff audit; A16 requires append-only zones and change-audit evidence but no author authentication for AC6/AC11 zones, so H-origin is unverifiable except by H memory or hosted review trails. basis: A16 requirement list; STEP3A UA-07 residual ("fabricated artifacts still need human review") concedes but under-weights the gap. conf: high. rev: moderate. disp: carry_as_explicit_comparison_caveat. b5: no. rep: concise — add an AC6/AC11 authenticity property (H-controlled append path or signature) to the A16 contract as a parameterized requirement. UD: Q-04 adjacent. nover: do not mandate a specific cryptographic scheme or vendor.
+
+**GF4-F04 — the no-re-asking rule silently outranks stale-resistance.** sev: major. dim: F. 3A: A08. 3B: §12 consumption step 8; S10; F09; FAIL07. needs: N12 (delta clauses b and d). B/UA: B05; UA-02. chal: "an authorized answer that exists is used, not re-asked", with no context-validity check on index hits. scen: an answer authorized months earlier under since-superseded context is index-hit and applied; staleness stamps cover projected sources (step 3) but not index answers; the only related failure class punishes re-asking, training operation toward the wrong error. basis: §12 text; the N12 delta names both stale-import resistance (b) and no-re-asking (d), and the design resolves their collision silently in favor of (d). conf: high. rev: easy. disp: carry_as_explicit_comparison_caveat (the register repair sits in GF4-F02). b5: no. rep: concise — require a currency check of every index hit against the current AC6/AC7 chain before use. UD: Q-13-updated adjacent. nover: do not abandon the no-re-asking rule; it answers a stated need.
+
+**GF4-F05 — journaling invariant versus light-profile realism.** sev: major. dim: I/L. 3A: A13. 3B: PLAIN-DIALOGUE and DIALOGUE-LEARNING profiles; F01, F09; FAIL01. needs: N01, N03, N09. B/UA: B21, B23; UA-04. chal: "state changes are valid only if journaled" as universal, against PLAIN's "transcript capture as AC1 + user-side journal" and LEARNING's "minimal append-only notes". scen: months of plain dialogue accrue many small transitions; the human is the only journal writer; entries lapse; every subsequent state is formally invalid and FAIL01 undetectable — no T on the surface. basis: §16 against A13; §10 assigns journal-append mechanics to T; "minimal notes" versus "every transition" is an unreconciled tension, not a stated waiver. conf: high. rev: moderate. disp: carry_as_explicit_comparison_caveat. b5: no. rep: concise — define a per-profile minimum journaling grain (e.g., per-session batch entries) as an explicit parameter rather than an implied waiver. UD: none. nover: do not drop journaling; grain, not existence, is the issue.
