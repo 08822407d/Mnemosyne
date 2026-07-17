@@ -144,7 +144,7 @@ GF_STEP_4_task:
 GF_STEP_4_input_package:
   filename: FABLE5-GREENFIELD-001-GF-STEP-4-complete-input-package.zip
   size_bytes: 85839
-  sha256: ced674a2da30035176dfc5a9f2760dbe95c234dadb9ef9d0b7464e4d59730726
+  sha256: 6c8f244bf3da36e2ed4b3e8d30a5a7b36e41a041e1c69eb432780965744134f2
 ```
 
 The task uses exactly:
@@ -241,7 +241,7 @@ safe_next_action:
 - GF-STEP-4 may produce either a repair gate, a user-decision gate, or readiness for STEP5.
 - STEP5 is a large comparison phase and requires a separate explicit user authorization because it opens the existing-design read firewall.
 - The exact next Mnemosyne task ID must be resolved fresh from current `master`; do not assume it from this package.
-- Repository visibility is public; no private user material, secrets, credentials, or sensitive originals may be placed into this repository.
+- Repository visibility is public；no private user material, secrets, credentials, or sensitive originals may be placed into this repository.
 
 ## 14. Handoff completion condition
 
