@@ -1,0 +1,265 @@
+Execute the next bounded canonical substep of FABLE5-GREENFIELD-001.
+
+step_id: GF-STEP-3B
+step_name: lifecycle_and_operations_design_for_the_information_architecture
+relationship_to_charter:
+  second bounded design substep of GF-STEP-3 independent_architecture_design;
+  operationalizes the interfaces deferred by GF-STEP-3A;
+  may complete GF-STEP-3 only if the combined 3A+3B architecture is coherent;
+  does not begin GF-STEP-4 self-critique or GF-STEP-5 comparison
+
+Literal execution instruction:
+- Execute GF-STEP-3B only.
+- Do not redesign GF-STEP-3A from scratch.
+- Do not execute GF-STEP-4 or GF-STEP-5.
+- Do not read, reuse, critique, summarize, or compare against the previously
+  generated premature GF-STEP-3 candidate.
+- Research mode must remain OFF.
+
+Execution setting:
+- Run in a genuinely fresh Fable 5 conversation.
+- Attach exactly these four files:
+  1. FABLE5-GREENFIELD-001-STEP1E-second-tier-prompts-and-final-closure.md
+  2. FABLE5-GREENFIELD-001-STEP2C-capability-boundary-baseline.md
+  3. FABLE5-GREENFIELD-001-STEP2D-source-contract-verification-and-closure-addendum.md
+  4. FABLE5-GREENFIELD-001-STEP3A-information-authority-architecture.md
+- Use no Project knowledge, past-chat retrieval, local cached track files,
+  repository files, web sources, or unstated attachments.
+- Repository paths read: 0.
+- Retrieval batteries: 0.
+- This prompt is self-contained.
+
+Expected attachment identities:
+
+A. STEP1E final need model
+- expected size_bytes: 32577
+- expected SHA-256:
+  60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b
+- canonical Git blob SHA:
+  af62ffb564fd7c227f3b651a6c666201f8102fce
+
+B. STEP2C candidate baseline
+- expected size_bytes: 25385
+- expected SHA-256:
+  1e814613d1122b040f7d207c30a1dc0887ebc1394354aeb0c580cef3330aab2b
+
+C. STEP2D verification and closure addendum
+- expected size_bytes: 68834
+- expected SHA-256:
+  ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac
+
+D. STEP3A information/authority architecture
+- expected size_bytes: 47324
+- expected SHA-256:
+  3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1
+
+If an attachment is missing, unreadable, or has a mismatching exposed identity:
+- do not substitute conversation memory, Project knowledge, repository copies,
+  or the premature architecture candidate;
+- produce a short input-integrity failure artifact and stop.
+
+If the interface does not expose an independently computable attachment hash:
+- state that limitation;
+- verify filename, metadata, section identity, and internal content markers;
+- do not claim independent cryptographic verification.
+
+────────────────────────────────────
+1. Purpose
+────────────────────────────────────
+
+Derive the lifecycle and operations design that makes the GF-STEP-3A
+information architecture usable while preserving its authority boundaries.
+
+The output must operationalize, at a design level:
+
+- intake and triage;
+- interpretation and candidate creation;
+- human approval and operative activation;
+- correction, supersession, withdrawal, and disclosure handling;
+- working-state projection and staleness control;
+- handoff generation, consumption, and recovery;
+- evidence capture and verification;
+- validation, testing, postmortem, and regression-candidate routing;
+- automation staging and authority containment;
+- per-surface write paths;
+- model/tool migration and adapter refresh;
+- multi-project and self-memory operations;
+- failure detection and recovery;
+- per-scenario operating profiles.
+
+The result must preserve the GF-STEP-3A information roles, artifact classes,
+authority-source rule, namespace model, provenance rule, substrate abstraction,
+and adapter boundary unless an operational contradiction requires an explicit
+amendment candidate.
+
+This is architecture design only. It is not implementation, execution-source
+change, current-product research, target-project instantiation, or comparison
+with the existing GPT/Mnemosyne design.
+
+────────────────────────────────────
+2. Anti-contamination and excluded material
+────────────────────────────────────
+
+Use only the four attachments.
+
+Explicitly prohibited:
+
+- any prior Fable conversation;
+- Project knowledge or past-chat search;
+- any repository path;
+- `current/**`, `handoff/**`, `raw/**`, `notes/**`, or `commands/**`;
+- the existing GPT/Mnemosyne design;
+- `current/human-approved-spec.md`;
+- every file under a path or folder named `GF-STEP-3-EARLY`;
+- any file named:
+  FABLE5-GREENFIELD-001-STEP3-independent-architecture-candidate.md
+- any summary, description, or memory of that premature candidate;
+- external websites or web search.
+
+Prior-exposure discipline:
+- preserve the standing statement that this track is independent by derivation
+  and disclosure, not by claimed amnesia;
+- if an incidental prohibited source is surfaced, log it and do not use it;
+- do not intentionally retrieve prohibited material to complete the ledger.
+
+────────────────────────────────────
+3. Input precedence and change discipline
+────────────────────────────────────
+
+Precedence:
+
+1. STEP1E controls need IDs, need titles, and open-question origins.
+2. STEP2D controls verified capability boundaries, freshness gates, visual
+   caveats, and prohibited assumptions.
+3. STEP2C remains the readable synthesis where STEP2D does not correct it.
+4. STEP3A controls the information architecture and authority semantics.
+5. On a residual conflict, report it; do not silently reconcile it.
+
+Preserve exact identifiers:
+
+- GF1A-N01 through GF1A-N12;
+- GF1B-N13 through GF1B-N18;
+- GF1C-N19 through GF1C-N21;
+- GF2D-B01 through GF2D-B24;
+- UA-01 through UA-16;
+- FR-01 through FR-10 where relevant;
+- GF3A-A01 through GF3A-A18;
+- GF3A-DP01 through GF3A-DP15;
+- AC1 through AC12;
+- R1 through R7.
+
+STEP3A amendment discipline:
+- do not silently redefine an existing role, class, transition, namespace, or
+  authority rule;
+- when operations reveal a contradiction, create an amendment candidate using
+  IDs GF3B-AMD01 and upward;
+- for every amendment candidate state:
+  - STEP3A element affected;
+  - operational contradiction;
+  - proposed delta;
+  - alternatives;
+  - traceability;
+  - compatibility impact;
+  - whether GF-STEP-3 can close without user adoption;
+- amendment candidates remain non-operative and do not rewrite STEP3A.
+
+────────────────────────────────────
+4. Open-question and candidate discipline
+────────────────────────────────────
+
+Carry GF3A-DP01 through GF3A-DP15.
+
+Do not answer user-held questions.
+
+In particular:
+
+- Q-02 approval granularity remains parameterized;
+- Q-05 capture-buffer activation remains inactive unless explicitly answered;
+- Q-07-final originals/pointer/decision policy remains adoption-gated;
+- Q-08-final evaluation/handoff instruments remain candidate methods;
+- Q-09-final first target and dry-run framework remain user decisions;
+- Q-11 correction/deletion policy remains open beyond the conservative
+  supersession-and-journal abstraction;
+- Q-12 workspace raw-layer governance remains branch-disabled;
+- Q-13-updated handoff initiation trigger remains parameterized;
+- Q-14 originals custodian/retention/checksum remains user-held;
+- Q-15 must-preserve classes remain parameterized.
+
+Method candidates MC-01 through MC-05 and policy candidates PC-01 through PC-06
+may be referenced only as candidate operating profiles or slots.
+
+Do not silently adopt:
+- metric sets;
+- weights;
+- verdict thresholds;
+- package tiers;
+- retention periods;
+- redaction policy;
+- automation policy;
+- target identity;
+- vendor-specific mechanics.
+
+────────────────────────────────────
+5. GF-STEP-3B scope
+────────────────────────────────────
+
+GF-STEP-3B must design:
+
+A. Lifecycle stages and allowed transitions
+
+At minimum:
+- capture;
+- classify;
+- place or pointerize;
+- interpret;
+- propose;
+- review;
+- approve or reject;
+- activate;
+- project working state;
+- hand off;
+- validate;
+- correct or supersede;
+- archive or withdraw;
+- derive disclosure views;
+- extract project lessons;
+- propose global lessons;
+- migrate surfaces/models.
+
+B. Operating responsibilities
+
+Distinguish:
+- human owner;
+- active model/agent;
+- deterministic tooling;
+- repository or storage substrate;
+- optional model-assisted reviewer;
+- surface adapter.
+
+C. Handoff operations
+
+Define:
+- required source order;
+- authority-map recovery;
+- currentness/staleness evidence;
+- unknown handling;
+- no-re-asking rule where an authorized answer already exists;
+- package assembly;
+- package consumption;
+- successful recovery criteria;
+- trigger parameter slot without choosing the trigger;
+- minimum/standard/extended tier slots without adopting the report proposal.
+
+D. Validation and evaluation operations
+
+Define:
+- object under test;
+- claim boundary;
+- evidence package;
+- deterministic/model-assisted/user-confirmed check separation;
+- no-write proof;
+- synthetic/real evidence separation;
+- PASS non-escalation;
+- postmortem creation;
+- regression-candidate routing;
+- target-specific versus global-lesson containment.
