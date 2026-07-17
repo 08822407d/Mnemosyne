@@ -1,0 +1,12 @@
+# FABLE5-GREENFIELD-001 — GF-STEP-4 chat summary
+
+Source: user-pasted Fable 5 completion summary in the authorized final-phase result-receiver conversation.
+
+> GF-STEP-4 is complete within all hard limits: attachments 4/4, repository paths read 0, retrieval batteries 0, web searches 0, premature-candidate reads 0, existing-design reads 0. Input identity: all four attachments passed independent verification — exact byte counts and SHA-256 matches for STEP1E, STEP2D, STEP3A, and STEP3B, with STEP1E additionally matching its pinned canonical git blob (af62ffb5…). No integrity-failure artifact was needed. Incidental prohibited exposure: none. Findings: 19 total — critical 0, blocking 1, major 8, moderate 9, minor 1. The blocking finding (GF4-F01) is that STEP3B's own operations mint record kinds — surface adapters above all, plus conflict artifacts, migration manifests, evidence packages, and tooling outputs — that hold no class, role, or governance under STEP3A's completeness claims. New unsupported assumptions: 14. Single-point failures: 9. Maintenance hotspots: 9. Design choices audited: 12. Highest-impact design parameters: DP02 (approval granularity), DP03 (retention depth), DP04 (substrate), DP07 (custody/disclosure adoption), DP14 (custodian) — none answered. Six-profile stress tests: PLAIN-DIALOGUE too_heavy; LOCAL-AGENT, HOSTED-REPO, DIALOGUE-LEARNING, RESEARCH, and META-SELF all credible_with_caveats. Complete ID-set audits performed: 18/18 GF3A elements, 17/17 states, 14/14 flows, 16/16 failure classes, 6/6 automation stages, 6/6 profiles, 24/24 GF2D boundaries (19 compliant, 5 compliant_with_caveat, 0 violations), 16/16 UA guards (6 strong, 9 partial, 1 weak). Approximate word count: the single pre-compression check read 7,904 pipe-excluded (9,525 raw with table syntax); one light compression pass was applied per the budget policy, with no recount afterward as instructed. Status: GF_STEP_4_complete_with_ARCHITECTURE_REPAIR_GATE. A bounded GF-STEP-3R input contract is proposed (not executed), scoped to only GF4-F01 and GF4-F02; GF-STEP-5 is not proposed. The existing-design firewall remains closed — no current-design file was read or identified. The downloadable file is above.
+
+```yaml
+verbatim_summary_text_size_bytes: 2076
+verbatim_summary_text_sha256: d880dd32bea56cc1d831363557747f2bb6bbaa5f8726cddf43b91f7a2715c30b
+```
+
+This record preserves the user-supplied summary. It is not a substantive maintainer acceptance of the findings, severity assignments, repair gate, or proposed continuation.
