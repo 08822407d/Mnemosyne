@@ -1,0 +1,49 @@
+task_id: MNEMOSYNE-131
+record_type: successful_GF_STEP_2D_rerun_and_advisory_closure_supplement
+base_track_manifest: ../manifest.yaml
+supersedes_for_latest_status:
+  - MNEMOSYNE-130 execution-deviation supplement where it described GF-STEP-2D as not executed
+successful_rerun:
+  step_id: GF-STEP-2D
+  execution_context: fresh_Fable_conversation
+  research_mode: false
+  required_attachment_supplied: true
+  literal_bootstrap_used: true
+  exact_repository_sources_reported: 8
+  exact_SHA_matches_reported: 8
+  complete_reads_reported: 8
+  retrieval_batteries_reported: 8
+  output: ../steps/GF-STEP-2D/03-source-contract-verification-and-closure-addendum.md
+  fable_status: GF_STEP_2_complete_with_dated_fact_and_text_only_visual_caveats
+track_progress:
+  GF_STEP_1:
+    status: complete_with_explicit_open_questions_as_Fable_advisory_result
+  GF_STEP_2:
+    reading_phase: complete_as_Fable_advisory_evidence
+    STEP2C_candidate: stored_with_source_contract_and_schema_deviations
+    STEP2D_verification: complete_as_Fable_advisory_result
+    final_baseline_components:
+      - ../steps/GF-STEP-2C/02-capability-boundary-baseline.md
+      - ../steps/GF-STEP-2D/03-source-contract-verification-and-closure-addendum.md
+    Fable_claimed_status: complete_with_dated_fact_and_text_only_visual_caveats
+    substantive_maintainer_acceptance: not_performed
+  GF_STEP_3:
+    canonical_status: not_started
+    next_proposed_step: GF-STEP-3A
+    early_candidate:
+      path: ../steps/GF-STEP-3-EARLY/02-premature-architecture-candidate.md
+      status: preserved_unaccepted
+      may_be_reused_or_revised: undecided
+  comparison_phase_authorized: false
+incident_resolution:
+  incident: ../incidents/INC-003-step2d-misinterpreted-as-step3.md
+  status: resolved_by_successful_fresh_conversation_rerun
+boundaries:
+  execution_source_modified: false
+  current_GPT_design_read: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false

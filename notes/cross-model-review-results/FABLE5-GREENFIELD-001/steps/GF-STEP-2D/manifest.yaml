@@ -1,7 +1,7 @@
 step_id: GF-STEP-2D
-record_type: intended_corrective_closure_task_not_executed
+record_type: source_contract_verification_and_capability_baseline_closure_addendum
 authority_level: non_execution_source_advisory_evidence
-stored_by_task: MNEMOSYNE-130
+last_stored_by_task: MNEMOSYNE-131
 intended_task:
   index_path: 00-intended-task-as-sent.md
   size_bytes: 27640
@@ -9,14 +9,72 @@ intended_task:
   expected_whole_git_blob_sha: a6b8f5ce47687ff32417ffbded4ddffdcf00a752
   exact_ordered_parts: 5
   byte_faithful_multipart_copy: true
-execution_result:
-  status: not_executed_misinterpreted_as_GF_STEP_3
-  chat_summary_path: 01-fable-chat-summary.md
-  incident_path: ../../incidents/INC-003-step2d-misinterpreted-as-step3.md
-returned_artifact:
-  actual_step_id: GF-STEP-3
-  canonical_storage_path: ../GF-STEP-3-EARLY/02-premature-architecture-candidate.md
+execution_attempts:
+  - attempt_id: GF-STEP-2D-ATTEMPT-001
+    status: not_executed_misinterpreted_as_GF_STEP_3
+    conversation_context: same_conversation_as_STEP2C
+    chat_summary_path: 01-fable-chat-summary.md
+    incident_path: ../../incidents/INC-003-step2d-misinterpreted-as-step3.md
+    returned_artifact:
+      actual_step_id: GF-STEP-3
+      canonical_storage_path: ../GF-STEP-3-EARLY/02-premature-architecture-candidate.md
+      repository_interpretation: premature_candidate_received_not_accepted
+  - attempt_id: GF-STEP-2D-ATTEMPT-002
+    status: completed_in_fresh_conversation
+    research_mode: false
+    required_attachment_supplied: true
+    literal_bootstrap_used: true
+    chat_summary_path: 02-successful-rerun-chat-summary.md
+    output_index_path: 03-source-contract-verification-and-closure-addendum.md
+    fable_reported_status: GF_STEP_2_complete_with_dated_fact_and_text_only_visual_caveats
+successful_output:
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP2D-source-contract-verification-and-closure-addendum.md
+  source_size_bytes: 68834
+  source_sha256: ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac
+  source_encoding: utf-8
+  source_line_endings: lf
+  source_final_lf_present: true
+  archive_format: deterministic_gzip_split_binary
+  archive_size_bytes: 22882
+  archive_sha256: b5694be22019e7e39facd1d344b4fa9c355002d27b68013ef376f06f22be61cd
+  binary_parts: 2
+  reconstruction_round_trip_verified: true
+structure:
+  numbered_sections: 24
+  source_access_rows: 8
+  exact_SHA_matches: 8
+  complete_source_reads: 8
+  deviations_classified: 10
+  signals_verified: 5
+  candidate_CB_rows_audited: 27
+  final_GF2D_boundaries: 24
+  RD_rows: 11
+  freshness_rows: 10
+  PDF_visual_gate_rows: 6
+  need_rows: 21
+  question_rows: 15
+  unsupported_assumption_rows: 16
+  local_whitespace_delimited_words: 8881
+  artifact_or_tool_status_leakage_detected: false
+status:
+  GF_STEP_2D: complete_as_Fable_advisory_result
+  GF_STEP_2:
+    Fable_claim: complete_with_dated_fact_and_text_only_visual_caveats
+    final_baseline_components:
+      - GF-STEP-2C candidate baseline
+      - GF-STEP-2D verification and closure addendum
+    substantive_maintainer_acceptance: not_performed
+  GF_STEP_2E_required_by_Fable: false
+  next_proposed_step: GF-STEP-3A
+  GF_STEP_3A_executed: false
+  early_GF_STEP_3_candidate_acceptance: false
 boundaries:
-  GF_STEP_2_closed: false
-  GF_STEP_3_accepted: false
-  substantive_review_performed: false
+  execution_source_modified: false
+  current_GPT_design_read: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  comparison_authorized: false
+  paused_post_handoff_route_resumed_or_closed: false
