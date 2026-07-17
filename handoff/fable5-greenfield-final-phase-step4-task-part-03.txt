@@ -1,0 +1,258 @@
+- a must_keep register;
+- a simplify_or_defer register;
+- a scenario_optional register;
+- an unresolved_due_to_user_decision register.
+
+For each component include:
+
+- component
+- rationale
+- affected needs/boundaries
+- simplification risk
+- complexity saved qualitatively
+- related findings
+
+Do not produce a replacement architecture.
+
+────────────────────────────────────
+15. Critique disposition and next-step gate
+────────────────────────────────────
+
+Choose exactly one:
+
+- GF_STEP_4_complete_self_critique_ready_for_USER_AUTHORIZED_STEP5
+- GF_STEP_4_complete_with_ARCHITECTURE_REPAIR_GATE
+- GF_STEP_4_complete_with_USER_DECISION_GATE_BEFORE_STEP5
+- GF_STEP_4_incomplete_input_integrity_failure
+- GF_STEP_4_incomplete_other_specific_gap
+
+Decision rules:
+
+A. Ready for user-authorized STEP5
+- no critical/blocking finding requires architecture repair;
+- major limitations can be carried explicitly into comparison;
+- user-held parameters do not prevent comparing alternatives;
+- capability boundaries are not materially violated.
+
+B. Architecture repair gate
+- at least one critical/blocking finding makes the candidate unsafe or
+  incoherent as a comparison baseline;
+- identify a bounded GF-STEP-3R input contract;
+- do not execute repair.
+
+C. User-decision gate
+- architecture is coherent, but one or more user-held decisions must be
+  answered before comparison would be meaningful;
+- list only those decisions;
+- do not answer them.
+
+If STEP5 can proceed:
+- propose a bounded GF-STEP-5 input contract;
+- state that STEP5 requires explicit user authorization to release the
+  existing-design firewall;
+- do not read or identify current-design files in this step;
+- do not execute STEP5.
+
+────────────────────────────────────
+16. Bounded repair or comparison input contract
+────────────────────────────────────
+
+If repair-gated, propose:
+
+GF-STEP-3R:
+  bounded_architecture_repairs_from_self_critique
+
+Required inputs:
+- STEP1E;
+- STEP2D;
+- STEP3A;
+- STEP3B;
+- STEP4 critique.
+
+The proposal must list only the findings that require repair and prohibit
+existing-design comparison.
+
+If ready or user-decision-gated, propose:
+
+GF-STEP-5:
+  contrastive_comparison_against_existing_design
+
+Required greenfield inputs:
+- STEP1E;
+- STEP2D;
+- STEP3A;
+- STEP3B;
+- STEP4.
+
+State explicitly:
+- the existing-design firewall remains closed now;
+- the user must separately authorize the exact current-design paths;
+- STEP5 must remain read-only and advisory;
+- no repository repairs may be performed during comparison.
+
+Do not generate the full STEP5 task yet unless separately asked.
+
+────────────────────────────────────
+17. Hard workload limits
+────────────────────────────────────
+
+- attachments used: exactly 4
+- repository paths: 0
+- retrieval batteries: 0
+- web/external searches: 0
+- premature-candidate reads: 0
+- existing-design reads: 0
+- critique findings: 12–24
+- new unsupported assumptions: 8–16
+- single-point failures: 6–12
+- maintenance hotspots: 6–12
+- design choices: 8–14
+- design parameters: exactly 15
+- stress-test profiles: exactly 6
+- GF3A elements audited: exactly 18
+- GF3B states audited: exactly 17
+- GF3B flows audited: exactly 14
+- GF3B failure classes audited: exactly 16
+- automation stages audited: exactly 6
+- GF2D boundaries rechecked: exactly 24
+- original UA guards rechecked: exactly 16
+- no repair execution
+- no automatic continuation
+
+Word-budget policy:
+
+- soft target: 4,000–5,500 words
+- hard cap: 7,000 words
+- compact tables are preferred
+- a complete first draft within the hard cap is acceptable
+- at most one light compression pass, only if the hard cap is exceeded
+- preserve critical findings, severity, traceability, and gate decisions before
+  narrative
+- never omit required ID coverage to meet the cap
+- perform no more than one approximate word-count check
+- do not recount after a permitted compression pass
+
+────────────────────────────────────
+18. Required downloadable file
+────────────────────────────────────
+
+Create exactly:
+
+FABLE5-GREENFIELD-001-STEP4-self-critique.md
+
+If artifact creation is unavailable, provide the exact complete Markdown body
+in one fenced block.
+
+Required sections:
+
+1. Metadata
+2. Scope and hard limits
+3. Input identity and access result
+4. Anti-contamination and prior-exposure statement
+5. Critique method and severity model
+6. Executive critique
+7. Finding register
+8. Unsupported-assumption and weak-evidence register
+9. Single-point failure register
+10. Maintenance-hotspot register
+11. Design-choice and reversibility register
+12. GF3A-DP01…DP15 impact register
+13. Six-profile stress tests
+14. GF3A-A01…A18 consistency audit
+15. GF3B-S01…S17 consistency audit
+16. GF3B-F01…F14 consistency audit
+17. GF3B-FAIL01…FAIL16 adequacy audit
+18. GF3B-AUTO0…AUTO5 and profile audit
+19. GF2D-B01…B24 compliance recheck
+20. UA-01…UA-16 guard-strength recheck
+21. Complexity and minimum-viable-architecture analysis
+22. Critical/blocking finding gate
+23. GF-STEP-4 status determination
+24. Bounded GF-STEP-3R or GF-STEP-5 input contract
+25. Boundary statement
+
+Metadata must include:
+
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-4
+record_type: self_critique_and_assumption_register
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+research_mode: false
+repository_paths_read: 0
+retrieval_batteries_used: 0
+existing_GPT_design_read: false
+premature_GF_STEP_3_candidate_read: false
+inputs:
+  - GF-STEP-1E final need model
+  - GF-STEP-2D verified capability-boundary addendum
+  - GF-STEP-3A information/authority architecture
+  - GF-STEP-3B lifecycle/operations architecture
+
+The coverage ledger must state:
+
+- identity/access result for all four inputs;
+- finding count by severity;
+- unsupported-assumption count;
+- single-point-failure count;
+- maintenance-hotspot count;
+- design-choice count;
+- 15-parameter impact coverage;
+- six-profile stress-test result;
+- complete ID-set audit counts;
+- GF2D and UA recheck counts;
+- critical/blocking finding count;
+- incidental prohibited exposure, if any;
+- exact GF-STEP-4 status;
+- proposed next step;
+- whether the existing-design firewall remains closed.
+
+────────────────────────────────────
+19. Chat response
+────────────────────────────────────
+
+After presenting the file, provide only a brief summary stating:
+
+- completion within limits;
+- input identity/access result;
+- repository reads and retrieval batteries;
+- finding count by severity;
+- unsupported-assumption count;
+- single-point-failure count;
+- maintenance-hotspot count;
+- design-choice count;
+- highest-impact design parameters;
+- six-profile stress-test statuses;
+- complete ID-audit result;
+- critical/blocking finding count;
+- incidental prohibited exposure, if any;
+- approximate word count;
+- GF-STEP-4 status;
+- whether GF-STEP-3R or GF-STEP-5 was proposed;
+- downloadable-file result.
+
+Do not repeat the file body in chat.
+
+────────────────────────────────────
+20. Boundary
+────────────────────────────────────
+
+Do not:
+
+- write repository files;
+- generate execution tasks;
+- update execution source;
+- use any source outside the four attachments;
+- retrieve prior conversations or Project knowledge;
+- read or reuse the premature GF-STEP-3 candidate;
+- perform web or external research;
+- read, identify, compare against, or modify the existing GPT/Mnemosyne design;
+- adopt a method, policy, parameter default, product, or target;
+- repair or rewrite GF-STEP-3A/3B;
+- execute GF-STEP-3R or GF-STEP-5;
+- create target-project artifacts;
+- formalize regression;
+- resume or close the paused post-handoff route.
+
+This output is non-execution-source advisory evidence only.
+Stop after the downloadable file and brief summary.
