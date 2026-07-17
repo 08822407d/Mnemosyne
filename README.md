@@ -10,6 +10,8 @@ Mnemosyne 是一个用于设计、演化和交付 AI Agent 外部持久记忆系
 
 当前 review / validation wayfinding：`current/review-and-validation-status.md`。该文件不是执行源；`current/human-approved-spec.md` 仍是唯一执行源。
 
+FABLE5-GREENFIELD 最新执行偏差与安全续接入口：`current/fable-greenfield-execution-deviation-status.md`。该文件不是执行源。
+
 GitHub repository-writing 单任务单活跃 PR 谱系防护：`current/github-single-active-pr-lineage-guard.md`。该文件是用户批准的行为防护与操作指南，不是独立执行源。
 
 长 transfer artifact 文件优先交付与低风险 artifact 同回复直接生成防护：`current/artifact-delivery-and-direct-generation-guard.md`。该文件是用户批准的行为防护与操作指南，不是独立执行源。

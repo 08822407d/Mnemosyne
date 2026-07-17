@@ -1,0 +1,44 @@
+
+- **Plain dialogue** [CB-01…06; S-02]: generate → user reviews proposal text → user commits manually (paste/upload/external tool). No connector write is assumed; where per-action-confirmed writes exist they may carry the mechanical step only, never the approval.
+- **Local agent** [CB-07…11; S-04]: patch → diff review → commit; protected paths on L0/L1; instruction files regenerated (L7), never hand-tuned as truth; built-in agent memories treated as caches outside the schema.
+- **Hosted agent** [CB-12…16; S-05]: branch → PR → configured gates (no self-merge; owner review; status checks) → human merge; secrets and unredacted originals never agent-reachable; exclusion settings never trusted as boundaries; cross-repo writes only with explicitly scoped credentials.
+- **Automation ceiling v0.1** [P5]: validation and archiving may automate; state mutation may not.
+
+## 10. Read paths and staleness rules
+
+Startup ritual on any surface: read L0 approved-spec → L3 state → L4 latest-relay; everything else is retrieved on demand, never bulk-loaded [CB-18,19]. Staleness rule: any content outside L0/L3/latest-relay is historical by default and must be re-verified before use; relays and evidence carry as-of stamps; conflicts resolve by authority order L0 > L3 > latest-relay > all else, with conflicts logged to open-questions rather than silently reconciled [N02,N08; HO-informed].
+
+## 11. Lifecycle flows: intake, evolution, correction, migration
+
+- **Intake** [N04,N06; GF1B-N16]: capture (buffer note or original) → L1 placement per DP-07 → optional L2 interpretation with uncertainty marks → user approval → DEC record → L3 update. The capture buffer is a deferred module (DP-05); until activated, intake is manual.
+- **Evolution** [N04,N13]: every change is a delta (new DEC/CAND/INT records); history is never overwritten; periodic state snapshots are compactions over the log, not replacements of it [CB-20].
+- **Correction** [DP-11; Q-11]: errors are corrected by superseding records plus change notes; history exposure is treated as permanent — prevention over cleanup; if sensitive content is misplaced, spread is stopped, risk assessed, and any rewrite is a user-coordinated exception, never routine.
+- **Migration** [N10; CB-22]: the core is tool-agnostic; moving tools regenerates L7 adapters and re-runs the startup ritual; platform memories are export-checked but never required.
+
+## 12. Handoff subsystem
+
+The relay artifact recovers, in order: operative source identity, phase/gate, real status, authorities and forbidden actions, done/pending tasks, one safe next action, and evidence paths for key claims — and marks unknowns instead of inventing [N12+delta]. Tiers (minimum / standard / extended) are reserved as a candidate instrument with scenario mapping; the initiation trigger is DP-13. Old relays and exports are historical samples only; cross-surface and cross-model moves rerun the startup ritual and record per-relay provenance (tool, visible model label, files read, hidden-context expectation) [candidate-informed; Q-08-final pending].
+
+## 13. Evaluation and validation hooks
+
+The schema reserves, without adopting: L5/runs for scored replays of relays; L5/regressions for regression records; L5/postmortems with lesson separation (target-specific vs global candidates routed to L6, never to L0) [N19,N21]. Structural commitments independent of adoption: every key claim carries an evidence path; checks split into deterministic, model-assisted, and user-confirmed classes with the model never sole judge; staged validation objects (synthetic / tabletop / real dry-run / delivery / write) keep their claim boundaries; a PASS authorizes nothing [CB-13; FT-informed]. Metric sets, rubrics, and thresholds await Q-08-final/Q-09-final.
+
+## 14. Per-scenario profile model
+
+The meta-agent instantiates the core schema through profiles [N03; CB-23…27]: **dev-like profile** — full repository workflow, hosted gates available, standard tiers; **dialogue/learning profile** — same layer semantics on lightweight Markdown, manual write paths, simplified L5, no CI-grade gating (heavy toolchains judged non-transferable); **research profile** — emphasis on L1/L2 lineage and open-controversy tracking. Profiles change weights and tooling, never authority semantics. Profile schemas are design work the meta-agent performs per target — no ready-made external solution exists (TR06 novelty), which is this architecture's reason to exist.
+
+## 15. Design-parameter register
+
+| DP | source_question | parameter | conservative_default_in_this_candidate |
+|---|---|---|---|
+| DP-01 | Q-01 | placement of meta-agent design records vs per-target workspaces | dual-layer kept; acceptance pending |
+| DP-02 | Q-02 | approval granularity | per-diff approval for L0; per-record for DEC |
+| DP-03 | Q-03 | raw/digest retention depth | keep originals + digests; prune nothing |
+| DP-04 | Q-04 | substrate product | Git-compatible files; GitHub-specific gates optional |
+| DP-05 | Q-05 | capture-buffer activation | deferred module; manual intake meanwhile |
+| DP-06 | Q-06 | language policy | Chinese-first content, English identifiers |
+| DP-07 | Q-07-final | originals placement per class | pointers-only in repo; external controlled store |
+| DP-08 | Q-08-final | evaluation instrument adoption | slots reserved; none adopted |
+| DP-09 | Q-09-final | first target + framework adoption | no target assumed; gates precede any dry run |
+| DP-10 | Q-10 | initial-cycle prompt originals | remain unread; non-blocking note |
+| DP-11 | Q-11 | correction/deletion vs history | supersede-with-notes; prevention over cleanup |

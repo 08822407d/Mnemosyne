@@ -1,0 +1,175 @@
+- select an access-failure final status.
+
+Do not proceed to a positive GF-STEP-2 closure without eight exact SHA matches
+and eight complete reads.
+
+────────────────────────────────────
+3. Candidate STEP2C receipt and deviation set
+────────────────────────────────────
+
+Treat the attached STEP2C artifact as a candidate synthesis.
+
+Record:
+
+- attachment filename;
+- expected size and SHA-256 from this prompt;
+- whether the interface exposes independently verifiable attachment integrity;
+- numbered-section count;
+- candidate signal count;
+- candidate boundary-ID count;
+- need-ID count;
+- question-ID count.
+
+Audit these previously observed deviations:
+
+D1. The candidate reports zero repository reads and thirteen local deliverables,
+    while the task required eight pinned canonical reads.
+D2. The eight-row source-access/SHA table is absent.
+D3. Filename and metadata differ from the requested STEP2C contract.
+D4. Twenty numbered sections were returned instead of twenty-one.
+D5. Twenty-seven `CB-*` statements were used instead of 16–24 `GF2C-B*`
+    statements.
+D6. RD-01 through RD-11 were not supplied as one exact row per domain.
+D7. The freshness queue was summarized rather than delivered in the requested
+    per-item schema.
+D8. The six-PDF visual-review gate was summarized rather than delivered as six
+    rows.
+D9. Q-01 through Q-15 and unsupported assumptions were summarized rather than
+    supplied in the requested row schemas.
+D10. The completion-status string and next-step proposal did not use the
+     allowed status enum or bounded GF-STEP-3A input contract.
+
+For each deviation classify:
+
+- harmless_presentation_variation
+- repaired_by_this_addendum
+- substantive_content_gap
+- source_integrity_gap
+- completion_claim_blocker
+- mixed
+
+Record:
+
+- deviation_id
+- classification
+- evidence
+- effect_on_candidate_baseline
+- repair_in_this_step
+- residual_issue
+
+Do not treat schema variation as automatically fatal, but do not dismiss a
+missing verification or missing load-bearing distinction as cosmetic.
+
+────────────────────────────────────
+4. Evidence and precedence rules
+────────────────────────────────────
+
+All inputs are non-execution-source advisory artifacts.
+
+Use this precedence inside the greenfield track only:
+
+1. STEP1E controls the final need and question assembly.
+2. STEP2A controls RD-01 through RD-11 and the preliminary evidence plan.
+3. STEP2B1 supplies foundational evidence and early signal dispositions.
+4. STEP2B2A controls final S-02 and S-03 dedicated wording.
+5. STEP2B3 controls final S-04 dedicated wording.
+6. STEP2B4B controls final S-05 wording and supersedes B4A provisional records.
+7. STEP2B5 controls final S-01 batch wording.
+8. STEP2B6 supplies supplemental method/policy evidence and question updates;
+   instruments remain candidates unless an underlying principle is independently
+   supported.
+
+Preserve evidence IDs exactly as stored.
+
+Do not:
+
+- reactivate B4A P-records;
+- rename B6 `F2B6-UG-*` or `F2B6-FT-*`;
+- convert recommendations into facts;
+- convert user decisions into evidence conclusions;
+- update dated facts using your own knowledge;
+- infer current repository state from report framing.
+
+────────────────────────────────────
+5. Verify S-01 through S-05
+────────────────────────────────────
+
+Create one verification row for each signal.
+
+For every signal include:
+
+- signal_id
+- candidate_STEP2C_wording_summary
+- controlling_source_step
+- controlling_evidence_ids
+- verification_result:
+    supported_as_scoped |
+    supported_with_scope_correction |
+    partially_supported |
+    unsupported
+- verified_final_wording
+- applies_to
+- does_not_guarantee
+- low_drift_component
+- dated_component
+- current_fact_refresh_dependency
+- prohibited_overclaim
+
+Use:
+
+- STEP2B5 for S-01;
+- STEP2B2A for S-02 and S-03;
+- STEP2B3 for S-04;
+- STEP2B4B for S-05.
+
+A signal marked `unsupported` or materially `partially_supported` may block
+GF-STEP-2 closure if no safe boundary wording remains.
+
+────────────────────────────────────
+6. Audit the 27 candidate CB statements
+────────────────────────────────────
+
+Audit every candidate ID `CB-01` through `CB-27`.
+
+For each record:
+
+- candidate_boundary_id
+- concise_candidate_topic
+- mapped_RD_ids
+- supporting_evidence_ids_claimed
+- evidence_ids_verified_in_sources:
+    all |
+    partial |
+    none
+- scope_and_date_preserved:
+    yes |
+    no |
+    partial
+- verification_result:
+    retain |
+    retain_with_correction |
+    merge_candidate |
+    downgrade_to_candidate_only |
+    remove_unsupported
+- correction_or_merge_target
+- reason
+
+Do not restate every full candidate sentence.
+
+After the audit, create a final stable-boundary register of 16–24 items using
+IDs:
+
+GF2D-B01 and upward.
+
+The final register may merge overlapping candidate CB statements, but must
+include a mapping from every CB-01…CB-27 item to one of:
+
+- retained_as_GF2D_Bxx
+- merged_into_GF2D_Bxx
+- candidate_only_not_stable_boundary
+- removed_unsupported
+
+For every final boundary include:
+
+- boundary_id
+- concise_statement

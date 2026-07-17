@@ -1,0 +1,43 @@
+| DP-12 | Q-12 | governance scope extension to own raw layer | own layer follows the same L1 rules provisionally |
+| DP-13 | Q-13-updated | handoff initiation trigger | manual trigger at phase boundaries until set |
+| DP-14 | Q-14 | external store + retention for originals | unselected; PTR schema store-agnostic |
+| DP-15 | Q-15 | minimal must-preserve state-class set | superset kept (all L0/L3/L4 classes) until narrowed |
+
+## 16. v0.1 scope and deferred elements
+
+v0.1 minimum viable set: L0, L1-pointers, L2, L3, L4, L6, one L7 adapter per active tool; manual/semi-manual flows throughout; validation/archiving automation only. Deferred: capture buffer (DP-05), retrieval index/RAG layer, adopted evaluation instruments, per-scenario template packs beyond the first target, any write automation, signed approvals, policy-as-code [P5; staging convergence across all instruments].
+
+## 17. Traceability matrix
+
+| element | needs | evidence |
+|---|---|---|
+| P1/L0–L7 substrate | N01,N09,N15 | S-01; CB-17…22 |
+| single operative spec + DEC log | N07,N08,N18 | CB-12,13; instrument convergence |
+| originals pointers + disclosure path | N06,N14,N20 | CB-15,20; UG-informed (pending DP-07) |
+| interpretations never operative | N06,N08 | UG-informed |
+| state + open-questions discipline | N02,N08 | CB-24; HO-informed |
+| relay subsystem | N12+delta | CB-06,10; HO-informed (pending DP-13) |
+| evidence layer + postmortem/regression slots | N13,N19,N21 | CB-13,20,21; MT/FT-informed (pending DP-08/09) |
+| candidates + promotion gates | N04,N11 | CB-11,16; staging convergence |
+| adapters + migration | N10 | CB-22; S-04 |
+| profiles / meta-agent instantiation | N03 | CB-23…27 |
+| weakest-surface write paths | N02 | S-02…S-05; CB-01…16 |
+| language + buffer + placement parameters | N16,N17,N05 | DP-01/05/06 |
+
+All 21 needs are load-bearing somewhere above; none is unaddressed; N05 and N17 enter only as parameters, matching their user-decision nature.
+
+## 18. Convergence disclosure and non-comparison statement
+
+No comparison with the existing design was performed, and none is implied. Convergence is nonetheless expected and honestly disclosed: this candidate's single-approved-spec, layered-authority, candidate-promotion, relay, and pointer concepts converge with vocabulary visible in the commissioned reports' framing of the other track and with the delivered instruments — because both tracks derive from the same needs and the same evidence pool, and because this track read those reports. Independence here means independent derivation with disclosed exposure, not zero exposure: every structural choice above is traceable to needs and baseline evidence, and no element was accepted *because* the other track has it. The comparison phase remains separately authorized future work.
+
+## 19. Limitations and validation status
+
+This candidate is unvalidated: no instantiation, no dry run, no replay test, no target exists; all instrument-shaped slots are empty pending adoption; all fifteen design parameters hold conservative defaults the user may overturn; dated capability statements retain their refresh registers; PDF visual review remains pending; nothing here binds or amends any execution source.
+
+## 20. GF-STEP-3 status determination and proposed next step
+
+Determination: **GF_STEP_3_complete_independent_architecture_candidate_delivered**. With STEP-1 (need model), STEP-2 (capability baseline), and STEP-3 (architecture candidate) complete, the greenfield construction phases of FABLE5-GREENFIELD-001 are finished. The charter's remaining purpose — a structured comparison between this candidate and the current human-approved specification — requires separate, explicit user authorization with its own instruction (allowed paths into the previously prohibited tier, pinned SHAs, comparison method, and output form). No comparison step is proposed in detail here, and none begins without that authorization.
+
+## 21. Boundary statement
+
+This file is non-execution-source advisory evidence only. It authorizes no repository writes, no execution tasks, no execution-source updates, no adoption of any parameter default or instrument, no reading of any report, prompt, summary, or index, no external research, no comparison against or modification of the existing design, and no target-project artifacts; the paused route stays paused. `current/human-approved-spec.md` remains Mnemosyne's only execution source; any conflict between this file and it is resolved in the execution source's favor and reported, never silently reconciled. GF-STEP-3 is complete; the greenfield construction track is complete; the comparison phase is not started.

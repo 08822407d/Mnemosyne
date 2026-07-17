@@ -37,8 +37,11 @@ Findings and design proposals become actionable only after maintainer/user valid
   - `steps/GF-STEP-2B5/` — integrated full-text-layer review of the theory/engineering, non-development-practice, and development-to-non-development transfer reports. The exact prompt, user-pasted Fable summary, byte-faithful downloadable output, integrity metadata, 18 evidence records, S-01 refinement, theory–practice–transfer matrix, non-development boundaries, and GF-STEP-2B6 continuation are stored. No OCR or visual inspection was performed; no substantive maintainer acceptance was conducted by the Thinking-tier storage task.
   - `steps/GF-STEP-2B6/` — integrated complete read of the MT/HO/UIG/FTDRE supplemental Markdown reports. The prompt, user-pasted Fable summary, byte-faithful returned output, integrity metadata, 24 evidence records, four reassessed questions, two new questions, all-11-report coverage ledger, recorded output-schema deviations, and GF-STEP-2C continuation are stored. The reading phase is complete as a Fable advisory result; GF-STEP-2 remains incomplete and no substantive maintainer acceptance was performed.
   - `steps/GF-STEP-2C/` — final Fable capability-boundary synthesis output. The exact prompt and returned output are preserved through ordered multipart indexes with byte-level hashes, together with the user-pasted summary and storage manifest. Fable claims GF-STEP-2 completion and proposes GF-STEP-3; the source-contract and output-schema deviations are recorded, and no substantive maintainer acceptance or GF-STEP-3 authorization is implied.
+  - `steps/GF-STEP-2D/` — exact corrective verification task as sent plus the returned chat summary. Fable did not execute this task; it interpreted the trigger as GF-STEP-3. GF-STEP-2D remains incomplete.
+  - `steps/GF-STEP-3-EARLY/` — byte-faithful premature architecture candidate returned in response to the GF-STEP-2D task. It is preserved but not accepted as the canonical GF-STEP-3 result.
   - `incidents/INC-001-step2a-safety-routing.md` — operational record of the first STEP2A attempt being visibly routed from Fable 5 to Opus 4.8, with trigger uncertainty preserved and a later successful revised run.
   - `incidents/INC-002-weekly-quota-exhaustion.md` — user-reported Fable weekly-quota exhaustion, now resolved after quota became available and GF-STEP-2B5 completed. The former pause was not a task failure or substantive finding.
+  - `incidents/INC-003-step2d-misinterpreted-as-step3.md` — execution-path deviation: the intended GF-STEP-2D source-contract verification was not executed, and a premature GF-STEP-3 candidate was generated instead. Exact cause remains unknown.
 
 ## Follow-up triage records
 
@@ -66,6 +69,7 @@ status_values:
   provider_routing_incident_stored: a provider model-routing or safety-routing observation is stored separately from the canonical task result, with trigger uncertainty preserved
   provider_quota_operational_pause_stored: a provider quota exhaustion observation is stored as an operational pause, not a substantive finding or task failure
   provider_quota_operational_pause_resolved: a former provider quota pause has ended and the previously blocked next step has completed
+  execution_path_deviation_stored: an intended step was not executed and a different step output was returned; both are preserved without silently advancing the canonical gate
   read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
   review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
   substantive_adjudication_completed: a maintainer decision record has evaluated advisory findings and recorded scoped repair decisions
