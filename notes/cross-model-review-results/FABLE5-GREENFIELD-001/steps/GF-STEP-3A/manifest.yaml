@@ -1,0 +1,79 @@
+step_id: GF-STEP-3A
+record_type: independent_information_architecture_and_authority_model
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+stored_by_task: MNEMOSYNE-132
+research_mode: false
+execution_context:
+  fresh_conversation: true
+  repository_paths_read: 0
+  retrieval_batteries_used: 0
+  prior_conversation_retrieval_used: false
+  Project_knowledge_used: false
+  web_or_external_research_used: false
+  premature_GF_STEP_3_candidate_used: false
+inputs_reported:
+  - GF-STEP-1E final need model
+  - GF-STEP-2C candidate capability baseline
+  - GF-STEP-2D verification and closure addendum
+prompt:
+  index_path: 00-task-as-sent.md
+  source_filename: FABLE5-GREENFIELD-001-GF-STEP-3A-task.md
+  source_size_bytes: 23937
+  source_sha256: 991bbf83234822e478cc003ceaec225844564b2094ade2df79352df039a4472a
+  archive_path: 00-task-as-sent-gzip.bin
+  archive_size_bytes: 7492
+  archive_sha256: ea266b71f72a00d3ddcb61fbc92498bd60fd3441cfd58c91c0cf18697cf3f04d
+  archive_git_blob_sha: c7dd0cee22a287baf9312af545ced3705013a12a
+  exact_reconstruction_verified: true
+chat_summary_path: 01-fable-chat-summary.md
+output:
+  index_path: 02-information-authority-architecture.md
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP3A-information-authority-architecture.md
+  source_size_bytes: 47324
+  source_sha256: 3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1
+  source_encoding: utf-8
+  source_line_endings: lf
+  source_final_lf_present: true
+  archive_format: deterministic_gzip_split_binary
+  archive_size_bytes: 17301
+  archive_sha256: 80c384a3b782e8733766be8c877129acc019716ee8e3b4a136a6c77a7ef613a6
+  binary_parts: 2
+  part_git_blob_shas:
+    - 7f3e28b6678bbf7b40baf61ebc9335d179ef0b31
+    - 38bea6928f1556a1b78a7243f4ff0f3642dd7b7f
+  exact_reconstruction_verified: true
+structure:
+  numbered_sections: 24
+  architecture_elements: 18
+  alternative_sets: 6
+  authority_roles_reported: 7
+  artifact_classes_reported: 12
+  state_transitions_reported: 12
+  design_parameter_rows_reported: 15
+  need_rows_reported: 21
+  GF2D_boundary_rows_reported: 24
+  prohibited_assumption_rows_reported: 16
+  artifact_or_tool_status_leakage_detected: false
+status:
+  Fable_claim: GF_STEP_3A_complete_with_explicit_design_parameter_gates
+  repository_storage: canonical_exact_archive_stored
+  substantive_maintainer_acceptance: not_performed
+  GF_STEP_3A_canonical_advisory_result: stored
+  GF_STEP_3B_proposed: true
+  GF_STEP_3B_executed: false
+  GF_STEP_4_started: false
+  GF_STEP_5_started: false
+  premature_GF_STEP_3_candidate:
+    status: preserved_unaccepted
+    used_by_GF_STEP_3A: false
+boundaries:
+  execution_source_modified: false
+  current_GPT_design_read: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  comparison_authorized: false
+  paused_post_handoff_route_resumed_or_closed: false
