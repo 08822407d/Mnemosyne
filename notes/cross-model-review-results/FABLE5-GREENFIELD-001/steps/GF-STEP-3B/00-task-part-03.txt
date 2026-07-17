@@ -1,0 +1,293 @@
+
+- STEP3A unchanged;
+- STEP3A plus unaccepted amendment candidates;
+- core contradiction blocking completion.
+
+────────────────────────────────────
+15. Traceability and coverage
+────────────────────────────────────
+
+Create:
+
+A. Deferred-interface closure table
+
+For every GF3A-A01 through GF3A-A18:
+- element_id
+- GF-STEP-3B operational mechanism
+- flow/state/profile IDs
+- still-deferred implementation choices
+- unresolved parameter
+- coverage:
+    operationalized |
+    interface_only |
+    not_applicable
+
+B. Twenty-one-need operational coverage table
+
+For each need:
+- need_id
+- GF3B state/flow/profile IDs
+- operational coverage:
+    direct |
+    parameterized |
+    deferred_to_user_decision |
+    later_implementation_only
+- residual dependency
+- prohibited overclaim
+
+C. GF2D boundary operations check
+
+For GF2D-B01 through GF2D-B24:
+- boundary_id
+- operational guard
+- affected flow/profile
+- FR dependency
+- residual risk
+
+D. UA-01 through UA-16 operational guard table
+
+For each:
+- assumption_id
+- operational control
+- evidence emitted
+- failure signal
+- residual risk
+
+Use compact tables; do not omit rows.
+
+────────────────────────────────────
+16. GF-STEP-3 completion determination
+────────────────────────────────────
+
+Choose exactly one:
+
+- GF_STEP_3_complete_independent_architecture_candidate_ready_for_SELF_CRITIQUE
+- GF_STEP_3_complete_with_explicit_parameter_and_amendment_gates
+- GF_STEP_3_incomplete_GF_STEP_3B_input_integrity_failure
+- GF_STEP_3_incomplete_core_operational_contradiction
+- GF_STEP_3_incomplete_specific_user_decision_blocks_core_operations
+- GF_STEP_3_incomplete_other_specific_gap
+
+GF-STEP-3 can close only when:
+
+- the four input files pass the declared identity/access checks;
+- no prohibited material is used;
+- GF-STEP-3A information/authority semantics are operationalized or an explicit
+  amendment candidate accounts for every contradiction;
+- lifecycle states and flows are complete;
+- handoff, validation, automation, surface, multi-project, migration, and
+  failure operations are represented;
+- all 18 GF3A elements receive an operational coverage status;
+- all 21 needs are covered;
+- all 24 GF2D boundaries have operational guards;
+- all 16 prohibited assumptions have operational controls;
+- all 15 design parameters remain explicit;
+- no method/policy/user decision is silently adopted;
+- no target is selected or instantiated;
+- no existing-design comparison occurs.
+
+If incomplete:
+- identify the exact blocker;
+- propose one bounded GF-STEP-3B-R1 only;
+- do not execute it.
+
+If complete:
+- state that GF-STEP-3A + GF-STEP-3B jointly form the independent architecture
+  candidate;
+- propose a bounded GF-STEP-4 self-critique input contract;
+- do not execute GF-STEP-4.
+
+────────────────────────────────────
+17. Bounded GF-STEP-4 input contract
+────────────────────────────────────
+
+Only if GF-STEP-3 closes, propose:
+
+GF-STEP-4:
+  self_critique_and_assumption_register
+
+Required inputs:
+- STEP1E need model;
+- STEP2D verified capability boundary addendum;
+- STEP3A information/authority architecture;
+- STEP3B lifecycle/operations architecture.
+
+The proposal must require:
+- adversarial self-review;
+- unsupported assumptions;
+- single-point failures;
+- complexity and maintenance hotspots;
+- weak-evidence design choices;
+- capability-boundary violations;
+- user-held decisions with the greatest architecture impact;
+- reversible versus irreversible choices;
+- scenarios where the design is too heavy or too weak;
+- no comparison with the existing GPT/Mnemosyne design.
+
+Do not perform the critique now.
+
+────────────────────────────────────
+18. Hard workload limits
+────────────────────────────────────
+
+- attachments used: exactly 4
+- repository paths: 0
+- retrieval batteries: 0
+- web/external searches: 0
+- premature-candidate reads: 0
+- existing-design reads: 0
+- lifecycle states: 12–18
+- operational flows: 10–16
+- failure classes: 12–18
+- automation stages: 4–6
+- surface profiles: exactly 6
+- STEP3A elements covered: exactly 18
+- need rows: exactly 21
+- GF2D boundary rows: exactly 24
+- prohibited-assumption rows: exactly 16
+- design-parameter rows: exactly 15
+- no target artifacts
+- no automatic continuation
+
+Word-budget policy:
+
+- soft target: 4,000–5,500 words
+- hard cap: 6,500 words
+- compact tables are preferred
+- a complete first draft within the hard cap is acceptable
+- at most one light compression pass, only if the hard cap is exceeded
+- never remove required traceability rows to meet the cap
+- perform no more than one approximate word-count check
+- do not recount after a permitted compression pass
+
+────────────────────────────────────
+19. Required downloadable file
+────────────────────────────────────
+
+Create exactly:
+
+FABLE5-GREENFIELD-001-STEP3B-lifecycle-operations-architecture.md
+
+If artifact creation is unavailable, provide the exact complete Markdown body
+in one fenced block.
+
+Required sections:
+
+1. Metadata
+2. Scope and hard limits
+3. Input identity and access result
+4. Anti-contamination and prior-exposure statement
+5. Input precedence and STEP3A change discipline
+6. Open-question and candidate discipline
+7. Architecture operational goals and non-goals
+8. Lifecycle state machine
+9. Operational flow register
+10. Roles and responsibilities
+11. Intake and evolution operations
+12. Handoff subsystem design
+13. Validation-stage design
+14. Failure-class register
+15. Automation-stage model
+16. Six surface operating profiles
+17. Multi-project and lesson-promotion operations
+18. Migration and adapter-refresh operations
+19. STEP3A amendment-candidate register
+20. GF3A-A01…A18 deferred-interface closure table
+21. Twenty-one-need operational coverage table
+22. GF2D-B01…B24 operations check
+23. UA-01…UA-16 operational guard table
+24. GF3A-DP01…DP15 carry-forward register
+25. Risks, unresolved tensions, and implementation deferrals
+26. GF-STEP-3 completion determination
+27. Bounded GF-STEP-4 input contract
+28. Boundary statement
+
+Metadata must include:
+
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-3B
+record_type: lifecycle_and_operations_design_for_the_information_architecture
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+research_mode: false
+repository_paths_read: 0
+retrieval_batteries_used: 0
+existing_GPT_design_read: false
+premature_GF_STEP_3_candidate_read: false
+inputs:
+  - GF-STEP-1E final need model
+  - GF-STEP-2C candidate capability baseline
+  - GF-STEP-2D verification and closure addendum
+  - GF-STEP-3A information/authority architecture
+
+The coverage ledger must state:
+
+- identity/access result for all four inputs;
+- lifecycle-state count;
+- operational-flow count;
+- failure-class count;
+- automation-stage count;
+- profile count;
+- amendment-candidate count;
+- GF3A element coverage count;
+- need-row count;
+- GF2D-boundary-row count;
+- UA-row count;
+- design-parameter carry-forward count;
+- active freshness triggers;
+- incidental prohibited exposure, if any;
+- whether premature-candidate content was used;
+- exact GF-STEP-3 status;
+- proposed next step.
+
+────────────────────────────────────
+20. Chat response
+────────────────────────────────────
+
+After presenting the file, provide only a brief summary stating:
+
+- completion within limits;
+- input identity/access result;
+- repository reads and retrieval batteries;
+- lifecycle-state count;
+- operational-flow count;
+- failure-class count;
+- automation-stage count;
+- surface-profile count;
+- amendment-candidate result;
+- 18-element operational coverage result;
+- 21-need coverage result;
+- 24-boundary operations result;
+- 16-assumption guard result;
+- 15-parameter carry-forward result;
+- incidental prohibited exposure, if any;
+- approximate word count;
+- GF-STEP-3 completion status;
+- whether GF-STEP-4 was proposed;
+- downloadable-file result.
+
+Do not repeat the file body in chat.
+
+────────────────────────────────────
+21. Boundary
+────────────────────────────────────
+
+Do not:
+
+- write repository files;
+- generate execution tasks;
+- update execution source;
+- use any source outside the four attachments;
+- retrieve prior conversations or Project knowledge;
+- read or reuse the premature GF-STEP-3 candidate;
+- perform web or external research;
+- compare against or modify the current GPT/Mnemosyne design;
+- adopt a method, policy, parameter default, product, or target;
+- implement or execute the lifecycle;
+- execute GF-STEP-4 or GF-STEP-5;
+- create target-project artifacts;
+- formalize regression;
+- resume or close the paused post-handoff route.
+
+This output is non-execution-source advisory evidence only.
+Stop after the downloadable file and brief summary.
