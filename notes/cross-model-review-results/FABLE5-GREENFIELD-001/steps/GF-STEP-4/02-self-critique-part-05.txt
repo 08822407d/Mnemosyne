@@ -1,0 +1,105 @@
+| AUTO1 assisted drafting | drafts only, no AC6/AC7 writes | consistent — prohibition well-drawn; authenticity still conventional | strong | partly_testable | F03 | caveat |
+| AUTO2 deterministic checks | T enablement | tension — META listed as profile though host-scoped (minor) | strong | partly_testable | — | none |
+| AUTO3 proposal generation | scheduled drafting | tension — volume guard is assertion-only | strong | partly_testable | F07 | caveat |
+| AUTO4 reviewed write-back | gated writes | consistent — FR-03-gated, opt-in framing preserved | strong | partly_testable | — | none |
+| AUTO5 conditional future | placeholder | consistent — honestly empty | strong | unclear | — | none |
+
+Profiles (audited via §13 stress tests): PLAIN too_heavy (act: caveat, tied to F05 grain repair-hint); LOCAL, HOSTED, DIALOGUE-LEARNING, RESEARCH, META-SELF credible_with_caveats (acts: caveat). Profile-set completeness itself is GF4-UA13 (caveat).
+
+## 19. GF2D-B01…B24 compliance recheck
+
+compliance: compliant | compliant_with_caveat | near_violation | violation | unclear. h5 = STEP5 handling. Absence of an observed violation is not proof none exists; the recheck is bounded by the four attachments.
+
+| B | compliance | affected items | rel | h5 |
+|---|---|---|---|---|
+| B01 | compliant | PLAIN profile; F09 | — | none |
+| B02 | compliant | PLAIN AD | — | none |
+| B03 | compliant | PLAIN AD | — | none |
+| B04 | compliant | F09; PLAIN | — | none |
+| B05 | compliant | §12; F09 | — | none |
+| B06 | compliant | LOCAL AD | — | none |
+| B07 | compliant | LOCAL; F06 | — | none |
+| B08 | compliant | LOCAL; F09 | F14 (guard wording only) | carry caveat |
+| B09 | compliant | LOCAL; F06 | — | none |
+| B10 | compliant | AUTO4; HOSTED | — | none |
+| B11 | compliant_with_caveat | F11; §14 — co-fabrication depth limit | F03,F16 | carry caveat |
+| B12 | compliant | HOSTED AD; §18 | — | none |
+| B13 | compliant_with_caveat | F07 — pointer metadata inside core | F10 | carry caveat |
+| B14 | compliant | §15 | — | none |
+| B15 | compliant | whole model | — | none |
+| B16 | compliant | S09; F14 | — | none |
+| B17 | compliant | F09; RESEARCH | — | none |
+| B18 | compliant_with_caveat | S13 — retain-everything default leans against B18's own privacy tension | F09 | carry caveat |
+| B19 | compliant_with_caveat | §10 T; §13 — journal proves events; co-fabrication bound | F16 | carry caveat |
+| B20 | compliant | F13; §18 | — | none |
+| B21 | compliant | DIALOGUE-LEARNING | — | none |
+| B22 | compliant | F04; §16 | — | none |
+| B23 | compliant_with_caveat | §16 min subsets — journaling grain may exceed scenario-fit weight | F05 | carry caveat |
+| B24 | compliant | §13; §26 provisional marking | — | none |
+
+Totals: compliant 19; compliant_with_caveat 5; near_violation 0; violation 0; unclear 0.
+
+## 20. UA-01…UA-16 guard-strength recheck
+
+gs: strong | partial | circular | weak | absent. byp = operational bypass. h5 = STEP5 handling.
+
+| UA | gs | byp | rel | h5 |
+|---|---|---|---|---|
+| UA-01 | strong | informal platform-memory reliance outside the design | — | none |
+| UA-02 | partial | accept-loss stance at boundaries; unprojected context | F14 | carry caveat |
+| UA-03 | strong | none found | — | none |
+| UA-04 | strong | none found at design level | — | none |
+| UA-05 | partial | runtime non-compliance beyond design reach | — | carry caveat |
+| UA-06 | weak | cited "F09 pre-check" does not exist in F09 | F14 | carry caveat (or trivial wording repair) |
+| UA-07 | partial | co-fabricated artifact+journal pairs | F03,F16 | carry caveat |
+| UA-08 | partial | review depth finite; declared, not bounded in practice | F16 | carry caveat |
+| UA-09 | partial | pointer-metadata exposure; custodian unresolved | F10; GF4-UA05 | carry caveat |
+| UA-10 | strong | none found | — | none |
+| UA-11 | partial | sweeps dormant below AUTO2 | F06 | carry caveat |
+| UA-12 | strong | none found | — | none |
+| UA-13 | partial | lineage check procedural; wrong-but-lineaged promotes | — | carry caveat |
+| UA-14 | partial | review-load unbounded; batch branch | F07 | carry caveat |
+| UA-15 | strong | none found — PASS wired to no transition | — | none |
+| UA-16 | partial | adapter ungoverned as artifact; refresh lag | F01 | repair (classing) + caveat |
+
+Totals: strong 6; partial 9; circular 0; weak 1; absent 0. Overall: the original UA guard set is sufficient at the information level, partial at the operational level, and misstated in one row (UA-06).
+
+## 21. Complexity and minimum-viable-architecture analysis
+
+Could a smaller architecture satisfy the same low-drift constraints? Plausibly yes for the light half of the scenario space, without touching the authority spine. No replacement architecture is produced.
+
+**must_keep** — component | rationale | needs/boundaries | simplification risk | rel: AC6-only authority + PASS non-escalation | the containment spine; every need with authority content | N07,N18,N21; B11,B14 | none acceptable | —. Role separation, minimally R1/R3/R4/R6 | evidence/proposal/authority/journal distinction is what prevents silent drift | N06,N07,N13 | authority drift if merged | —. Journaling, grain-parameterized | audit substrate's honest use | N13; B11,B19 | losing rebuild/audit | F05. Single-current + conflict surfacing | contradiction visibility | N08,N18 | silent ambiguity returns | F16. Namespace isolation + lineage-gated promotion | contamination prevention | N03,N18; B21,B22 | cross-project drift | —. Custody split for sensitive originals | LD-07 permanence logic | N06,N20; B13 | irreversible exposure | F10. Adapter quarantine of dated facts | capability honesty | N02,N10; B20 | stale facts in core | F01 (governance, not existence). Handoff manifest core (authority map, staleness, forbidden actions) | N12 delta clauses | N12; B05 | authority minting at boundaries | —.
+
+**simplify_or_defer** — 12→~8 classes: AC10 as an AC8 note-kind; AC3 folded into AC1-plus-citation-fields for light scenarios; AC12 defined only when a disclosure branch opens | risk: role blur at merge seams | complexity saved: material for light use | rel F01 interacts (fewer classes, fewer unclassed gaps). 17→~10 states: S15/S16 as namespace-scoped S05/S06 variants; S11/S17 moved to a process catalog | risk: losing named process anchors | saved: catalog clarity | rel F12. RV role folded into optional M-advisory | risk: none structural | saved: one actor. AUTO5 placeholder and promotion-ledger schema deferred until needed | risk: none | saved: register weight. Tier/trigger slots collapsed to "manual until answered" | risk: none — already the effective state | rel F17.
+
+**scenario_optional** — custody/disclosure machinery (S03,S14,F07,F08) where no sensitive originals exist | needs N20 inapplicable | risk: mis-scoping sensitivity at intake | rel GF4-UA09. AUTO2+ tooling in plain profiles | B23 | risk: detection stays absent (already true) | rel F06. V3 synthetic stage for light targets | N21 staging kept, one stage fewer | risk: weaker pre-real coverage. Hosted gate machinery outside HOSTED | B10 | risk: none.
+
+**unresolved_due_to_user_decision** — retention family (Q-03/Q-15); custody family (Q-07-final/Q-14); capture (Q-05); granularity (Q-02); substrate (Q-04); language (Q-06) | each blocks only its branch | rel F09, DP register.
+
+Verdict: a smaller normal form (~8 classes, ~10 states, same spine) plausibly satisfies the same low-drift constraints for PLAIN/LEARNING-class use; the full set is defensible for HOSTED/META-heavy use. The candidate parameterizes weight but never states the smaller form, so light-scenario fit currently rests on untested minimum subsets (F05, DC09).
+
+## 22. Critical/blocking finding gate
+
+Critical findings: 0. Blocking findings: 1 — GF4-F01. Gate evaluation: GF4-F01 makes a load-bearing STEP3A completeness claim unsustainable against STEP3B's own outputs and leaves adapters — operationally binding artifacts — outside all governance rules; as a comparison baseline this incoherence would systematically flatter the candidate's coverage tables. GF4-F02 (major) attaches to the same gate as an internal-inconsistency repair (failure modes named in the design but absent from the register that routes them). Both repairs are bounded, information-model-level, and need no user decision. No other finding requires repair before comparison; F03–F19 carry as explicit caveats or user-decision flags per their dispositions. Decision rule A fails (a blocking finding exists); decision rule B applies.
+
+## 23. GF-STEP-4 status determination
+
+Determination: **GF_STEP_4_complete_with_ARCHITECTURE_REPAIR_GATE**.
+
+Coverage ledger: input identity/access — four exact independent matches (A additionally canonical-blob-verified); complete reads 262/396/302/404 lines. Findings: 19 total — critical 0; blocking 1; major 8; moderate 9; minor 1. New unsupported assumptions: 14. Single-point failures: 9. Maintenance hotspots: 9. Design choices: 12. Design-parameter impact coverage: 15 of 15, none answered; highest-impact: DP02, DP03, DP04, DP07, DP14. Six-profile stress tests: too_heavy 1 (PLAIN-DIALOGUE); credible_with_caveats 5. ID-set audits complete: GF3A elements 18/18; GF3B states 17/17; flows 14/14; failure classes 16/16; automation stages 6/6; profiles 6/6. GF2D recheck: 24/24 — compliant 19, compliant_with_caveat 5, near_violation 0, violation 0. UA guard recheck: 16/16 — strong 6, partial 9, weak 1, circular 0, absent 0. Critical/blocking count: 1 (blocking). Incidental prohibited exposure: none. Exact status: GF_STEP_4_complete_with_ARCHITECTURE_REPAIR_GATE. Proposed next step: GF-STEP-3R (user-authorized; §24). Existing-design firewall: remains closed; no current-design file was read or identified.
+
+## 24. Bounded GF-STEP-3R input contract
+
+Proposed because the repair gate applies; not executed here.
+
+- step_id / step_name: GF-STEP-3R — bounded_architecture_repairs_from_self_critique.
+- required inputs (identities to be pinned by the user at invocation): the STEP1E need model; the STEP2D verified capability-boundary addendum; the STEP3A architecture; the STEP3B architecture; this STEP4 critique.
+- repairs in scope — only these findings: **GF4-F01** (assign classes/roles to the named operational record kinds — adapters, conflict artifacts, migration manifests, evidence packages, deterministic-tooling outputs, staleness flags — or add one bounded class, and state adapter governance: creator, approval, mutability, provenance; alternatively scope the completeness claims explicitly) and **GF4-F02** (add or explicitly map three failure classes: synthetic-as-real evidence; pointer/custody integrity loss; stale-answer application; merging within the 12–18 cap is permitted).
+- explicitly out of scope: every other finding (carried as caveats or user-decision flags); answering any DP01…DP15; adopting any MC/PC instrument; lifecycle redesign; any repository write; any target work.
+- discipline: no comparison with, inference from, or reading of the existing GPT/Mnemosyne design; no premature-candidate use; repository paths 0 unless the user pins input paths; amendment format per STEP3B §19's change-candidate discipline (explicit, separately listed, never silent).
+- limits, section list, and word budget: pinned in the GF-STEP-3R instruction.
+- After GF-STEP-3R, whether re-verification or a GF-STEP-5 proposal follows is a separate user decision; GF-STEP-5 is not proposed here, and any future STEP5 still requires explicit user authorization to release the existing-design firewall.
+
+## 25. Boundary statement
+
+This file is non-execution-source advisory evidence only. It authorizes no repository writes, no execution tasks, no execution-source updates, no use of any source outside the four attachments, no retrieval of prior conversations or Project knowledge, no reading or reuse of the premature GF-STEP-3 candidate, no web or external research, no reading, identification, comparison against, or modification of the existing GPT/Mnemosyne design, no adoption of any method, policy, parameter default, product, or target, no repair or rewrite of GF-STEP-3A/3B, no execution of GF-STEP-3R or GF-STEP-5, no target-project artifacts, and no formalized regression; the paused post-handoff route stays paused. `current/human-approved-spec.md` remains Mnemosyne's only execution source; any conflict between this file and it is resolved in the execution source's favor and reported, never silently reconciled. GF-STEP-4 is complete with an architecture repair gate; GF-STEP-3R is proposed but not started.
