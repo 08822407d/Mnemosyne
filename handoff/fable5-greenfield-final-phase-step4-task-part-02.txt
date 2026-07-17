@@ -1,0 +1,360 @@
+- Are rollback claims stronger than the substrate contract supports?
+
+F. Handoff
+- Can the no-re-asking rule preserve a stale or contextually invalid answer?
+- Can the one-safe-next-action rule become an oversimplification?
+- Can package tiers and trigger slots remain indefinitely unresolved?
+- Does recovery depend on too many source artifacts?
+
+G. Validation and self-evaluation
+- Is the architecture evaluating itself with its own assumptions?
+- Are no-write proofs, check splits, or PASS non-escalation practically
+  enforceable?
+- Can the evaluation package become another unverified truth source?
+- Is the proposed validation path falsifiable?
+
+H. Privacy and originals
+- Does external custody merely move risk elsewhere?
+- Are pointer rot, deletion, correction, withdrawal, disclosure, and history
+  exposure adequately bounded?
+- Do conservative defaults pressure the user into policy decisions?
+
+I. Automation and surfaces
+- Is AUTO staging coherent across all six profiles?
+- Does AUTO4 or adapter behavior depend on dated facts?
+- Are manual/plain-dialogue paths genuinely usable, or nominal fallbacks?
+- Are local and hosted profiles overgeneralized?
+
+J. Multi-project and global lessons
+- Can namespace metadata or lineage checks prevent semantic contamination?
+- Can project lessons be incorrectly generalized despite formal promotion?
+- Are global-rule rollback and project pinning coherent under change?
+
+K. Migration and portability
+- Are export fidelity, adapter replacement, and rollback assumed rather than
+  demonstrated?
+- What happens when the destination cannot represent a core semantic artifact?
+- Are hidden or platform-owned state losses sufficiently handled?
+
+L. Cost and maintainability
+- What human, computational, storage, and coordination costs dominate?
+- Which mechanisms create the most operational friction?
+- Where might users bypass governance because it is too heavy?
+- Which parts are likely to decay without automation?
+
+────────────────────────────────────
+6. Finding register
+────────────────────────────────────
+
+Create 12–24 findings.
+
+Use IDs:
+
+GF4-F01 and upward.
+
+For every finding include:
+
+- finding_id
+- title
+- severity
+- critique_dimension
+- affected_STEP3A_elements
+- affected_STEP3B_states_flows_profiles
+- affected_need_ids
+- affected_GF2D_boundary_or_UA_ids
+- exact_claim_or_design_choice_challenged
+- failure_scenario
+- evidence_or_reasoning_basis
+- confidence:
+    high |
+    medium |
+    low
+- reversibility:
+    easy |
+    moderate |
+    hard |
+    potentially_irreversible
+- disposition
+- blocks_GF_STEP_5:
+    yes |
+    no
+- repair_direction_candidate:
+    concise_only |
+    none
+- user_decision_dependency
+- prohibited_overreaction
+
+Do not fill the allowance with cosmetic duplicates.
+
+A repair direction is a bounded hint, not a rewritten architecture.
+
+────────────────────────────────────
+7. Unsupported-assumption and weak-evidence register
+────────────────────────────────────
+
+Create 8–16 entries.
+
+Use IDs:
+
+GF4-UA01 and upward.
+
+For each include:
+
+- assumption_id
+- assumption
+- where_it_enters_the_design
+- explicit_or_implicit
+- evidence_strength:
+    strong |
+    moderate |
+    weak |
+    none
+- dated_or_text_only_dependency
+- consequence_if_false
+- detection_or_falsification_method
+- disposition
+- related_findings
+
+Include assumptions introduced by GF-STEP-3A/3B, not merely the already listed
+UA-01…UA-16. State whether the original UA guards are sufficient, partial, or
+circular.
+
+────────────────────────────────────
+8. Single-point failure and maintenance-hotspot registers
+────────────────────────────────────
+
+A. Single-point failures
+
+Create 6–12 rows:
+
+- spf_id
+- component_or_actor
+- failure
+- affected_scope
+- current_mitigation
+- mitigation_limit
+- recovery_dependency
+- related_findings
+
+Consider:
+- human owner availability and quality;
+- authority-map integrity;
+- journal integrity;
+- external-original custody;
+- adapter correctness;
+- staleness sweeps;
+- answered-question index;
+- migration manifest;
+- deterministic tooling.
+
+B. Maintenance hotspots
+
+Create 6–12 rows:
+
+- hotspot_id
+- mechanism
+- recurring_cost
+- likely_decay_mode
+- who_must_maintain_it
+- automation_pressure
+- governance_bypass_risk
+- scenario_sensitivity
+- related_findings
+
+Do not invent numeric costs.
+
+────────────────────────────────────
+9. Design-choice and reversibility register
+────────────────────────────────────
+
+Create 8–14 load-bearing design choices.
+
+Use IDs:
+
+GF4-DC01 and upward.
+
+For each include:
+
+- choice_id
+- selected_choice
+- alternatives_considered_in_STEP3A_or_3B
+- evidence_strength
+- user_decision_dependency
+- reversible:
+    yes |
+    partly |
+    no |
+    unknown
+- reversal_cost:
+    low |
+    medium |
+    high |
+    potentially_irreversible
+- lock_in_path
+- scenario_where_choice_fails
+- critique_disposition
+- related_findings
+
+At minimum cover:
+- layered authority;
+- single-current operative record;
+- journal + projections;
+- external custody + pointers;
+- per-project/meta/global namespaces;
+- neutral core + adapters;
+- 17-state lifecycle;
+- human-only authority;
+- profile-based operating subsets;
+- deterministic-check reliance.
+
+────────────────────────────────────
+10. Design-parameter impact register
+────────────────────────────────────
+
+Audit all GF3A-DP01 through GF3A-DP15.
+
+For every parameter include:
+
+- parameter_id
+- question_id
+- current_handling
+- architecture_elements_and_flows_affected
+- impact_if_answer_changes:
+    local |
+    cross_cutting |
+    architecture_restructuring
+- conservative_default_pressure
+- blocks_comparison:
+    yes |
+    no
+- blocks_only_specific_branch
+- priority_for_user_confirmation:
+    high |
+    medium |
+    low
+- reason
+
+Do not answer any parameter.
+
+Identify the 3–6 parameters with the highest architecture impact.
+
+────────────────────────────────────
+11. Scenario stress tests
+────────────────────────────────────
+
+Stress-test exactly these six profiles conceptually:
+
+- GF3B-PROFILE-PLAIN-DIALOGUE
+- GF3B-PROFILE-LOCAL-AGENT
+- GF3B-PROFILE-HOSTED-REPO
+- GF3B-PROFILE-DIALOGUE-LEARNING
+- GF3B-PROFILE-RESEARCH
+- GF3B-PROFILE-META-SELF
+
+For each profile include:
+
+- profile_id
+- representative_stress_scenario
+- likely_breakpoint
+- over_engineered_mechanisms
+- under_protected_areas
+- human_burden
+- dated_capability_dependency
+- failure_recovery_realism
+- related_findings
+- status:
+    credible_with_caveats |
+    too_heavy |
+    too_weak |
+    evidence_insufficient |
+    internally_inconsistent
+
+No external experiment is performed.
+
+────────────────────────────────────
+12. Structural consistency audit
+────────────────────────────────────
+
+Audit all these sets at a compact level:
+
+- GF3A-A01…A18;
+- GF3B-S01…S17;
+- GF3B-F01…F14;
+- GF3B-FAIL01…FAIL16;
+- GF3B-AUTO0…AUTO5;
+- six profiles.
+
+Create one row per item group member or a compact mapping table that still
+covers every ID.
+
+For each item record:
+
+- item_id
+- role_in_joint_design
+- internal_consistency:
+    consistent |
+    tension |
+    contradiction |
+    incomplete
+- traceability_quality:
+    strong |
+    partial |
+    weak
+- testability:
+    testable |
+    partly_testable |
+    unclear
+- related_findings
+- action_before_STEP5:
+    none |
+    caveat |
+    repair |
+    user_decision
+
+Do not declare the architecture correct merely because every ID is present.
+
+────────────────────────────────────
+13. Capability-boundary and prohibited-assumption recheck
+────────────────────────────────────
+
+A. GF2D boundaries
+
+For every GF2D-B01 through GF2D-B24:
+
+- boundary_id
+- joint_design_compliance:
+    compliant |
+    compliant_with_caveat |
+    near_violation |
+    violation |
+    unclear
+- affected_items
+- related_findings
+- STEP5_handling
+
+B. Original prohibited assumptions
+
+For every UA-01 through UA-16:
+
+- assumption_id
+- guard_strength:
+    strong |
+    partial |
+    circular |
+    weak |
+    absent
+- operational_bypass
+- related_findings
+- STEP5_handling
+
+Use compact tables; do not omit IDs.
+
+────────────────────────────────────
+14. Complexity and minimum viable architecture
+────────────────────────────────────
+
+Evaluate whether a smaller architecture could satisfy the same low-drift
+constraints.
+
+Create:
+
