@@ -1,0 +1,342 @@
+
+E. Automation stages
+
+Define safe capability ceilings for:
+- manual;
+- assisted;
+- validation/archive automation;
+- proposal-generation automation;
+- reviewed write-back;
+- any later conditional automation.
+
+Every stage must state:
+- allowed actions;
+- forbidden actions;
+- required human gate;
+- evidence emitted;
+- rollback or containment;
+- prerequisites;
+- exit criteria.
+
+F. Surface profiles
+
+Define operating profiles for:
+- plain conversation;
+- local file-capable agent;
+- hosted repository agent;
+- non-development dialogue/learning;
+- research/analysis;
+- meta-agent self-memory.
+
+Keep product specifics inside adapter slots with FR tags.
+
+G. Migration operations
+
+Define:
+- source export;
+- artifact and history integrity checks;
+- adapter replacement;
+- authority-map recovery;
+- stale projection invalidation;
+- replay or tabletop verification;
+- rollback;
+- unsupported-feature quarantine.
+
+Do not select a vendor or perform a migration.
+
+────────────────────────────────────
+6. Lifecycle state machine
+────────────────────────────────────
+
+Create a lifecycle state machine with 12–18 named states.
+
+Use IDs:
+
+GF3B-S01 and upward.
+
+For each state include:
+
+- state_id
+- state_name
+- active artifact roles/classes
+- entry conditions
+- allowed transitions
+- forbidden transitions
+- human authority required
+- required evidence/provenance
+- staleness handling
+- open-question dependency
+- failure indicators
+- recovery target
+
+The state machine must:
+- enforce AC6/AC7 authority semantics;
+- preserve source artifacts;
+- keep working projections non-authoritative;
+- prevent project-to-global silent promotion;
+- prevent PASS from changing authority;
+- prevent adapter capabilities from altering core semantics.
+
+Do not turn lifecycle states into implementation tickets.
+
+────────────────────────────────────
+7. Operational flow register
+────────────────────────────────────
+
+Create 10–16 operational flows.
+
+Use IDs:
+
+GF3B-F01 and upward.
+
+Required flows:
+
+1. new user material intake;
+2. idea-buffer intake when enabled;
+3. interpretation/digest creation;
+4. candidate proposal and decision;
+5. rejected candidate retention;
+6. operative correction/supersession;
+7. sensitive-original pointer creation;
+8. disclosure/redaction derivation;
+9. session/tool handoff;
+10. target-project to global lesson proposal;
+11. validation and no-write evidence;
+12. failure/postmortem/regression-candidate routing;
+13. model/tool migration;
+14. stale import or projection recovery.
+
+For every flow include:
+
+- flow_id
+- purpose
+- preconditions
+- ordered information operations
+- responsible actors
+- human gates
+- artifacts read
+- artifacts created
+- artifacts modified or superseded
+- evidence emitted
+- authority effect
+- failure modes
+- containment or rollback
+- related GF3A elements
+- related needs/boundaries/UA guards
+- parameter dependencies
+- deferred implementation choices
+
+Do not silently assume write access.
+
+────────────────────────────────────
+8. Handoff subsystem design
+────────────────────────────────────
+
+Design the operational handoff subsystem around AC9.
+
+Provide:
+
+- handoff input manifest;
+- ordered recovery sequence;
+- required authority and scope fields;
+- current-state and staleness fields;
+- completed/pending/forbidden-action fields;
+- one-safe-next-action rule;
+- unknown and unsupported-assumption fields;
+- evidence-path fields;
+- model/tool/surface provenance;
+- package size/tier parameter;
+- trigger parameter;
+- generation procedure;
+- consumption procedure;
+- recovery-verification procedure;
+- failed-handoff handling;
+- old-package historical status.
+
+Create a handoff correctness checklist that is design-level only.
+
+Do not adopt numeric weights, verdict thresholds, or fixed token ranges from
+candidate instruments.
+
+────────────────────────────────────
+9. Validation and failure-operations design
+────────────────────────────────────
+
+Create a staged validation model covering:
+
+- structural smoke check;
+- tabletop/replay;
+- synthetic scenario;
+- controlled real-target dry run;
+- delivery review;
+- target write, which remains separately authorized and is not performed.
+
+For each stage include:
+
+- tested object;
+- permitted inputs;
+- prohibited inputs;
+- authority boundary;
+- required evidence;
+- deterministic checks;
+- optional model-assisted checks;
+- required user-confirmed checks;
+- no-write evidence;
+- pass semantics;
+- failure routing;
+- what the result cannot authorize.
+
+Create a failure register of 12–18 architecture-level failure classes.
+
+Use IDs:
+
+GF3B-FAIL01 and upward.
+
+For each include:
+
+- failure_id
+- symptom
+- likely layer or flow
+- detection signal
+- minimum evidence
+- containment
+- repair candidate location
+- target-specific or global
+- regression-candidate eligibility
+- authority non-escalation rule
+
+Do not claim a benchmark, metric set, taxonomy, or rubric is adopted.
+
+────────────────────────────────────
+10. Automation-stage model
+────────────────────────────────────
+
+Create 4–6 automation stages.
+
+Use IDs:
+
+GF3B-AUTO0 and upward.
+
+At minimum cover:
+
+- AUTO0 manual;
+- assisted proposal generation;
+- deterministic validation/archive support;
+- reviewed repository write-back where the selected surface supports it;
+- any later higher automation only as a gated future stage.
+
+For each stage include:
+
+- allowed automated actions
+- prohibited automated actions
+- human confirmation points
+- access/write assumptions
+- evidence and logs emitted
+- rollback/containment
+- prerequisites
+- exit criteria
+- affected surface profiles
+- current-fact refresh triggers
+- why authority remains human-controlled
+
+Do not authorize or recommend enabling any stage in Mnemosyne now.
+
+────────────────────────────────────
+11. Surface operating profiles
+────────────────────────────────────
+
+Create exactly six profiles:
+
+- GF3B-PROFILE-PLAIN-DIALOGUE
+- GF3B-PROFILE-LOCAL-AGENT
+- GF3B-PROFILE-HOSTED-REPO
+- GF3B-PROFILE-DIALOGUE-LEARNING
+- GF3B-PROFILE-RESEARCH
+- GF3B-PROFILE-META-SELF
+
+For each include:
+
+- available affordances
+- unavailable or untrusted affordances
+- read path
+- proposal path
+- write path
+- human gate
+- handoff method
+- evidence method
+- adapter responsibilities
+- dated FR dependencies
+- prohibited assumptions
+- minimum viable lifecycle subset
+- optional heavier mechanisms
+
+Do not generalize one profile's affordances to another.
+
+────────────────────────────────────
+12. Multi-project and lesson-promotion operations
+────────────────────────────────────
+
+Operationalize the STEP3A namespace model without creating a target.
+
+Define:
+
+- project namespace creation preconditions;
+- ownership metadata;
+- initial authority map;
+- global-rule pinning;
+- project import records;
+- staleness propagation;
+- project-specific lesson capture;
+- global-candidate promotion;
+- human approval for global activation;
+- rollback and project isolation;
+- duplicate/collision handling;
+- cross-project evidence referencing;
+- prevention of project-specific contamination.
+
+Create a project/global promotion ledger schema as a candidate artifact, not an
+execution-source template.
+
+────────────────────────────────────
+13. Migration and adapter-refresh operations
+────────────────────────────────────
+
+Design a platform-neutral migration sequence:
+
+- freeze and manifest source state;
+- export artifacts/history;
+- verify hashes and provenance;
+- classify unavailable capabilities;
+- generate or select a new adapter;
+- quarantine unsupported assumptions;
+- rebuild working projections;
+- verify authority map;
+- run bounded replay/tabletop checks;
+- declare known losses and unknowns;
+- obtain human continuation approval;
+- preserve rollback path.
+
+Create a dated-capability refresh table for FR-01 through FR-10 stating:
+
+- whether GF-STEP-3B activates it;
+- the precise branch that activates it;
+- temporary safe handling;
+- whether external research is required before implementation;
+- whether the architecture remains valid without the refresh.
+
+No external refresh is performed now.
+
+────────────────────────────────────
+14. STEP3A amendment-candidate register
+────────────────────────────────────
+
+If no operational contradiction requires a STEP3A amendment, state explicitly:
+
+- amendment_candidates: none
+
+If one or more are required, create GF3B-AMD01 and upward as specified in
+Section 3.
+
+No amendment is automatically accepted.
+
+The final GF-STEP-3 status must distinguish:
