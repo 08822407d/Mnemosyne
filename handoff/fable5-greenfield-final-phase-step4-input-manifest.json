@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "filename": "FABLE5-GREENFIELD-001-GF-STEP-4-task.md",
+      "size_bytes": 27489,
+      "sha256": "a0afeb6f13e62346f789be05e958b1365e8a90ced0e94379d34ab6230facd973"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-STEP1E-second-tier-prompts-and-final-closure.md",
+      "size_bytes": 32577,
+      "sha256": "60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-STEP2D-source-contract-verification-and-closure-addendum.md",
+      "size_bytes": 68834,
+      "sha256": "ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-STEP3A-information-authority-architecture.md",
+      "size_bytes": 47324,
+      "sha256": "3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1"
+    },
+    {
+      "filename": "FABLE5-GREENFIELD-001-STEP3B-lifecycle-operations-architecture.md",
+      "size_bytes": 68033,
+      "sha256": "af4dd4c2d9658319462a28cc13c469f24823be06cc003f33858b348a68fb6685"
+    }
+  ]
+}
