@@ -1,0 +1,110 @@
+| GF1C-N19 testability_evaluability_failure_diagnosis | §13,§14; F11,F12 | parameterized | DP08 instrument contents | stage design ≠ evaluation capability |
+| GF1C-N20 user_input_layering_redaction_exposure_governance | F07,F08; S03,S14 | parameterized | DP07/DP11/DP12/DP14 | operations ≠ adopted governance |
+| GF1C-N21 staged_first_target_validation_gated_authority | §13 V1–V6; F11; PASS non-escalation | parameterized | DP09; target identity (user) | stage design ≠ validation performed |
+
+All 21 needs covered; none lost. The 21 need IDs are exactly GF1A-N01…N12, GF1B-N13…N18, GF1C-N19…N21, with STEP1E titles preserved.
+
+## 22. GF2D-B01…B24 operations check
+
+Columns: guard = operational guard; ids = affected flow/profile; FR = FR dependency; risk = residual risk.
+
+| B | guard | ids | FR | risk |
+|---|---|---|---|---|
+| B01 | PLAIN-DIALOGUE assumes no background external read/write; all continuity user-mediated | PLAIN; F09 | FR-01 | user burden |
+| B02 | ChatGPT-surface write limits held in adapter; no connector-write step in any flow | PLAIN AD | FR-01 | feature drift |
+| B03 | Claude-surface equivalents held in adapter | PLAIN AD | FR-01 | feature drift |
+| B04 | platform memory/Projects never a read source for authority-map recovery | F09; PLAIN | FR-01/04 | informal reliance |
+| B05 | AC9 card/package is the typed continuity operation | F09; §12 | — | manual effort |
+| B06 | per-tool loading/commit mechanics confined to LOCAL adapter | LOCAL AD | FR-02 | tool drift |
+| B07 | no flow treats instruction files as enforcement; gates live in H review + T checks | LOCAL; F06 | FR-02 | runtime non-compliance |
+| B08 | portable state only via core artifacts; local memories treated as uncaptured working state | LOCAL; F09 | FR-02 | capture gaps |
+| B09 | diff review, confirmed updates, protected paths as profile gates; mitigations stay candidates (MC-05) | LOCAL; F06 | FR-02 | loose local config |
+| B10 | AUTO4 requires configured opt-in gates; never assumes defaults | §15 AUTO4; HOSTED | FR-03 | misconfiguration |
+| B11 | every completion verified on artifacts (FAIL14 check); trails ≠ correctness — V-stage review supplies depth | F11; §14 | — | finite review depth |
+| B12 | placement/token assumptions parameterized; no token model assumed in flows | HOSTED AD; §18 | FR-03 | credential misscope |
+| B13 | custody path (F07) keeps sensitive originals outside agent reach; exclusion never trusted | F07; HOSTED | FR-03/07 | custody breach (Q-14) |
+| B14 | Actions-class automation capped at AUTO2/AUTO4 with retained human merge | §15 | FR-03 | unattended drift |
+| B15 | whole operating model is cross-tool workflow, no native-feature dependence | all | — | — |
+| B16 | projections bounded and rebuildable; no full-history loading step | S09; F14 | — | rebuild cost |
+| B17 | retrieval used only as reference/projection input; relevance never assumed | F09; RESEARCH | — | relevance gaps |
+| B18 | archive as governed transition with retention parameters; journal+projection ops | S13; F14 | FR-10 (archive branch) | legal drift |
+| B19 | journal proves events; quality via review chain in S06/V5 | §10 T; §13 | — | review depth |
+| B20 | adapter swap is the migration route; no auto-sync step anywhere | F13; §18 | FR-02/06 | adapter lag |
+| B21 | DIALOGUE-LEARNING assumes no platform detail-persistence; light subset | DIALOGUE-LEARNING | FR-01/04 | manual curation |
+| B22 | content schemas enter as AC5 candidates per scenario | F04; §16 | — | schema rebuild cost |
+| B23 | substrate weight per-profile; heavy gates optional | §16 min subsets | — | under-tooling |
+| B24 | whole operating model marked provisional; validation gated and contained | §13; §26 | — | novelty risk |
+
+## 23. UA-01…UA-16 operational guard table
+
+Columns: ctrl = operational control; ev = evidence emitted; sig = failure signal; risk = residual risk.
+
+| UA | ctrl | ev | sig | risk |
+|---|---|---|---|---|
+| UA-01 | authority-map recovery reads only AC7/AC6; platform memory never queried for truth | recovery logs | FAIL02 | informal reliance |
+| UA-02 | continuity only via stamped AC9/AC8; old packages historical | staleness stamps | FAIL03/05 | unprojected context loss |
+| UA-03 | adapter claims FR-tagged; no flow step presumes connector auth/sync/write | adapter FR tags | FAIL13 | refresh lag |
+| UA-04 | file access alone triggers no state change; roles+journal+decision chain required | journal entries | FAIL01 | substrate misconfig |
+| UA-05 | no gate implemented as an instruction file; gates are H acts + T checks | gate logs | FAIL02 | runtime non-compliance |
+| UA-06 | portable state captured into core before boundary crossings (F09 pre-check) | capture entries | FAIL05 | capture gaps |
+| UA-07 | completion accepted only on artifact verification | verification results | FAIL14 | fabricated artifacts need H review |
+| UA-08 | correctness claims bounded by review depth declared in V-stage records | review records | overclaimed PASS | finite depth |
+| UA-09 | F07 custody default; T placement check on intake | placement check logs | FAIL08 | pointer rot; custody breach |
+| UA-10 | AC12-only export path with manifests; views never labeled anonymized originals | manifests | FAIL09 | re-identification |
+| UA-11 | quality handled via review chain + staleness sweeps, never assumed from existence | sweep reports | FAIL03 | rot between reviews |
+| UA-12 | retrieval outputs enter only as references/projection inputs | typed edges | relevance failures | unguaranteed relevance |
+| UA-13 | per-scenario minimum subsets; promotion lineage checks | lineage checks | FAIL11 | transfer unmeasured |
+| UA-14 | RV advisory-only; every stage has required H-confirmed checks | check-split records | RV-sole-judge attempts | rubber-stamping |
+| UA-15 | post-validation authority audit; PASS wired to no transition | audit results | FAIL12 | operational discipline |
+| UA-16 | dated mechanics only in adapters; §18 FR table gates refresh by branch | FR table | FAIL13 | adapter refresh lag |
+
+## 24. GF3A-DP01…DP15 carry-forward register
+
+All 15 parameters remain explicit and unanswered; none is silently adopted. Columns: 3B handling; affected operations; open decision.
+
+| DP | 3B handling | affected ops | open decision |
+|---|---|---|---|
+| GF3A-DP01 | namespace layout as explicit parameter | §17 provisioning | placement acceptance (Q-01) |
+| GF3A-DP02 | granularity slot on every AC6-bearing flow | F04,F06,F10,F14 | batch vs itemized (Q-02) |
+| GF3A-DP03 | retention-depth slot | F03,F05; S13 | sufficiency/depth (Q-03) |
+| GF3A-DP04 | substrate identity parameter | §16 write paths; §18 | hard requirements vs GitHub (Q-04) |
+| GF3A-DP05 | F02 branch-disabled | F02 | activation (Q-05) |
+| GF3A-DP06 | language metadata handled, no migration triggered | F01; §12; §17 | migration trigger (Q-06) |
+| GF3A-DP07 | conservative custody/disclosure defaults, labeled non-approved | F07,F08 | adoption + per-class modifications (Q-07-final) |
+| GF3A-DP08 | instrument slots only in §12/§13 | F09,F11 | MT/HO adoption (Q-08-final) |
+| GF3A-DP09 | V4 target slot empty; no target named | §13 V4 | first target + framework (Q-09-final) |
+| GF3A-DP10 | non-blocking note stands; nothing operational depends on it | — | none |
+| GF3A-DP11 | correction = supersession + journal abstraction only | F06; S12 | deletion policy (Q-11) |
+| GF3A-DP12 | workspace raw-layer branch disabled | F07 scope edge | governance extension (Q-12) |
+| GF3A-DP13 | trigger slot in §12; no value chosen | F09 | initiation trigger (Q-13-updated) |
+| GF3A-DP14 | custodian/retention/checksum parameters in F07 | F07; S03,S13 | storage system + policy (Q-14) |
+| GF3A-DP15 | must-preserve class slot in projections/archive | S09,S13; F09 | class list (Q-15) |
+
+## 25. Risks, unresolved tensions, and implementation deferrals
+
+T1 — 17 states and 14 flows may feel heavy for light scenarios; mitigation: per-profile minimum subsets (B23) make the light instantiation small. T2 — parameter slots (tiers, triggers, cadences) could silently harden into de facto values in practice; mitigation: each slot is labeled and adoption requires an F04 decision. T3 — the no-re-asking rule depends on a usable answered-question index; a poor index degrades to re-asking (FAIL07), a visible not silent failure. T4 — deterministic checks are load-bearing for invariants (single-current, lineage, placement); tooling gaps shift enforcement onto H attention; deferral: check-suite implementation. T5 — the whole operating model is unexecuted; V1–V4 exist precisely to test it, and their outcomes confer no authority. Implementation deferrals (beyond DP parameters): capture/triage/journal/sweep/index/redaction/promotion/migration tooling; per-substrate edit and PR mechanics; adapter authoring; postmortem/regression schema adoption (MC-03); any cadence or threshold value.
+
+## 26. GF-STEP-3 completion determination
+
+Determination: **GF_STEP_3_complete_with_explicit_parameter_and_amendment_gates.**
+
+Criteria verified: the four inputs pass the declared identity/access checks (§3; input A's task-text SHA truncation resolved by exact byte count and exact canonical git-blob match); no prohibited material used (§4); every GF-STEP-3A semantic operationalized with zero amendment candidates — STEP3A unchanged (§19, §20); lifecycle states and flows are complete (§8, §9); handoff (§12), validation (§13), automation (§15), surface (§16), multi-project (§17), migration (§18), and failure (§14) operations are all represented; all 18 GF3A elements hold operational coverage (§20); all 21 needs are covered (§21); all 24 GF2D boundaries have operational guards (§22); all 16 prohibited assumptions have operational controls (§23); all 15 design parameters remain explicit (§24); no method, policy, or user decision is silently adopted (§6); no target is selected or instantiated; no existing-design comparison occurs. The "parameter and amendment gates" qualifier is exact: amendment gates are trivially clear (zero candidates), while fifteen parameter gates remain open by design — core operating values (granularity, triggers, tiers, cadences, custody, retention, target) are expressible only as explicit slots until the user decides.
+
+**Joint-candidate statement: GF-STEP-3A + GF-STEP-3B jointly form the independent architecture candidate**, ready for GF-STEP-4 self-critique.
+
+Coverage ledger: identity/access — A byte-count + canonical-blob exact (SHA-256 prefix-matched against the task's truncated 63-char value, disclosed); B/C/D independent SHA-256 exact; four complete reads. Lifecycle states: 17. Operational flows: 14. Failure classes: 16. Automation stages: 6. Surface profiles: 6. Amendment candidates: 0 (STEP3A unchanged). GF3A element coverage: 18 of 18. Need rows: 21 of 21. GF2D boundary rows: 24 of 24. UA rows: 16 of 16. Design-parameter carry-forward: 15 of 15, none answered. Active freshness triggers: none (no external check performed; §18). Incidental prohibited exposure: none. Premature-candidate content used: none. Exact GF-STEP-3 status: GF_STEP_3_complete_with_explicit_parameter_and_amendment_gates. Proposed next step: GF-STEP-4 (§27), not executed.
+
+## 27. Bounded GF-STEP-4 input contract
+
+Proposed because GF-STEP-3 closes; not executed.
+
+- step_id / step_name: GF-STEP-4 — self_critique_and_assumption_register.
+- required inputs (identities to be pinned by the user at invocation): the STEP1E need model; the STEP2D verified capability-boundary addendum; the STEP3A information/authority architecture; this STEP3B lifecycle/operations architecture.
+- required content: adversarial self-review of the joint 3A+3B candidate; register of unsupported assumptions; single-point failures; complexity and maintenance hotspots; weak-evidence design choices; capability-boundary violations, if any; the user-held decisions with the greatest architecture impact; reversible versus irreversible choices; scenarios where the design is too heavy or too weak; explicitly **no comparison with the existing GPT/Mnemosyne design**.
+- discipline: DP01…DP15 stay unanswered; MC/PC stay candidates; no repository reads beyond pinned inputs; no target work; limits, section list, and word budget pinned in the GF-STEP-4 instruction.
+- The critique is not performed here.
+
+## 28. Boundary statement
+
+This file is non-execution-source advisory evidence only. It authorizes no repository writes, no execution tasks, no execution-source updates, no use of any source outside the four attachments, no retrieval of prior conversations or Project knowledge, no reading or reuse of the premature GF-STEP-3 candidate, no web or external research, no comparison against or modification of the current GPT/Mnemosyne design, no adoption of any method, policy, parameter default, product, or target, no implementation or execution of the lifecycle, no execution of GF-STEP-4 or GF-STEP-5, no target-project artifacts, and no formalized regression; the paused post-handoff route stays paused. `current/human-approved-spec.md` remains Mnemosyne's only execution source; any conflict between this file and it is resolved in the execution source's favor and reported, never silently reconciled. GF-STEP-3B is complete; GF-STEP-3 is complete with explicit parameter and amendment gates; GF-STEP-4 is not started.
+
