@@ -1,0 +1,78 @@
+| GF4-UA04 | subject partitioning stays sane enough for single-current to bind semantics | A12 (T3) | explicit | none | no | semantic-twin contradictions pass | H semantic review | carry_as_explicit_comparison_caveat | F16 |
+| GF4-UA05 | the external custodian remains available and intact over retention horizons | A02; F07 | implicit | none | no | originals layer amputated | periodic resolvability checks | user_decision_required_before_specific_branch (Q-14) | F02,F10 |
+| GF4-UA06 | manifest-complete packages materially improve continuation correctness | §12 | implicit | weak | yes — RD-08 dated, under-quantified | heavy protocol, unmeasured benefit | measurement after Q-08 adoption | evidence_or_refresh_required_if_branch_selected | F17 |
+| GF4-UA07 | the answered-question index can be kept current and unambiguous | §12 step 8; F05 | implicit | none | no | no-re-ask silently degrades or misfires | index audit vs AC6 chain | carry_as_explicit_comparison_caveat | F04 |
+| GF4-UA08 | H review remains a real quality filter at projected volumes | every gate | implicit | none | no | ritual approvals | queue/latency observation | carry_as_explicit_comparison_caveat | F07 |
+| GF4-UA09 | S02 classification is accurate enough without a validation instrument | S02; F01 | implicit | none | no | wrong custody/role at intake (FAIL08 path) | misclassification postmortems | implementation_validation_required_later | F02 |
+| GF4-UA10 | adapter authors can enumerate surface affordances accurately from dated text-only evidence | A17; §16 | implicit | weak | yes — B01–B14 text_only 2026Q2 | phantom paths (FAIL13) | FR refresh on branch selection | evidence_or_refresh_required_if_branch_selected | F01 |
+| GF4-UA11 | export + hash + replay suffices to establish migration equivalence | §18 steps 2–9 | implicit | weak | yes — B20/TR02 hypothesis-grade | silent semantic loss survives V2-class replay | destination-side semantic audit | implementation_validation_required_later | F13 |
+| GF4-UA12 | conservative defaults stay reversible after operational accumulation | §8/§21 reversibility notes | explicit | weak | no | de facto lock-in; permanent history (LD-07) | reversal-cost review at Q answers | user_decision_required_before_specific_branch | F09 |
+| GF4-UA13 | six profiles span the operating space | §16 "exactly six" | implicit | none | partly — profiles mirror the RD framing | hybrid/multi-surface use falls between profiles | unclassifiable-use event | carry_as_explicit_comparison_caveat | F05 |
+| GF4-UA14 | some substrate actually satisfies the full A16 contract | A16 | explicit | moderate for Git-like (B19); none beyond | yes — mechanics dated | contract renegotiation = restructuring risk | substrate evaluation at Q-04 | user_decision_required_before_specific_branch (Q-04) | F03 |
+
+Original UA-01…UA-16 guard sufficiency: mostly sufficient at the information level; operationally, several are partial and one is misstated — see §20. None is judged fully circular, but GF4-UA03 identifies a circularity the original set does not cover (the guards' own evidence stream is agent-co-produced).
+
+## 9. Single-point failure register
+
+| spf | component_or_actor | failure | affected_scope | current_mitigation | mitigation_limit | recovery_dependency | rel |
+|---|---|---|---|---|---|---|---|
+| SPF-01 | H human owner | unavailability, error, fatigue | all authority, containment, custody exceptions | none (non-delegable by design) | absolutized; no degraded mode | none defined | F07,F08 |
+| SPF-02 | AC6 chain integrity/authenticity | fabricated or corrupted decision records | entire authority model | append-only zones; H memory; hosted trails | no authorship binding in A16 | H reconstruction | F03 |
+| SPF-03 | journal (AC11 stream) | gaps or co-fabricated entries | audit, replay validation, restores | T journal-diff where T exists | absent in light profiles; consistency ≠ truth | export/history reconstruction + H confirm | F05,F16 |
+| SPF-04 | answered-question index | stale, wrong, or missing entries | no-re-ask rule; handoff consumption | none built (tooling deferred) | degradation partly silent (stale hit) | rebuild from AC6/AC5 corpus | F04 |
+| SPF-05 | external custodian | loss, breach, unavailability | originals layer; evidence chains | integrity digests; resolvability checks | custodian identity unresolved (Q-14) | none until Q-14 | F02,F10 |
+| SPF-06 | T check suite | wrong invariant, bugs, absence | FAIL detection; gates; no-write proofs | none (unimplemented) | validates proxies (F16) | H manual checking | F06,F16 |
+| SPF-07 | migration manifest + rollback path | manifest error; rollback path released early | whole-core migration | hash/replay verification; H approval | verification inherits SPF-03 trust | source-substrate retention | F13 |
+| SPF-08 | per-surface adapter | phantom or missing affordance claims | one profile's entire operation | FR tags; FAIL13 quarantine | ungoverned artifact (F01); refresh lag | manual path fallback | F01 |
+| SPF-09 | staleness sweep mechanism | dormant (cadence unset) or broken | FAIL03/04 detection; pin hygiene | event flags | manual below AUTO2 | H-initiated sweep | F06,F15 |
+
+## 10. Maintenance-hotspot register
+
+| hs | mechanism | recurring_cost | likely_decay_mode | who | automation_pressure | governance_bypass_risk | scenario_sensitivity | rel |
+|---|---|---|---|---|---|---|---|---|
+| HS-01 | journal upkeep in low-T profiles | per-transition entries, manual | entries lapse; backfill fiction | H | high | high — skip journaling entirely | worst in PLAIN/LEARNING | F05 |
+| HS-02 | answered-question index | continuous indexing of AC6/AC5 | staleness; ambiguity creep | H until tooling | high | consult-memory instead of index | all handoff-heavy use | F04 |
+| HS-03 | staleness sweeps + re-pin queue | periodic sweeps; per-pin AC6 decisions | dormancy; standing waivers | H+T | high | waive-by-default | multi-project use | F15,F06 |
+| HS-04 | adapter refresh (FR-01/02/03/06) | per-surface re-verification on drift | silent staleness between refreshes | H (authoring undefined) | medium | operate on stale claims | any live surface branch | F01 |
+| HS-05 | AC2 pointer integrity cycle | periodic digest/resolvability checks | rot discovered late | H/T | medium | skip checks | originals-heavy use | F10 |
+| HS-06 | AC5 review queue | every candidate through S06 | queue growth; rubber-stamping | H | pressure toward AUTO3+ | batch-approve unread | AUTO3 + batch DP02 | F07 |
+| HS-07 | handoff manifest assembly | ~15 required fields per boundary | field skipping; template rot | H/M | high | informal ad-hoc handoffs | frequent-boundary use | F11,F17 |
+| HS-08 | namespace + pin bookkeeping | per-import records, ownership metadata | unpinned informal reuse | H | medium | copy-paste across namespaces | multi-project growth | — |
+| HS-09 | T check-suite upkeep | maintaining checks as schema evolves | checks drift from invariants | H (builder undefined) | high | disable failing checks | all, once built | F06,F16 |
+
+## 11. Design-choice and reversibility register
+
+Columns: alt = alternatives considered in STEP3A/3B; ev = evidence strength; UD = user-decision dependency; rev = reversible; cost = reversal cost; lock = lock-in path; fails = scenario where the choice fails; disp = critique disposition; rel = related findings.
+
+| dc | selected_choice | alt | ev | UD | rev | cost | lock | fails | disp | rel |
+|---|---|---|---|---|---|---|---|---|---|---|
+| GF4-DC01 | role-layered authority (C1) | flat, location-implied | strong (B11/B19; UA-01/07/14/15) | Q-02, Q-07-final | yes | low | misfiled corpus habits | none found — spine holds | no_action_beyond_documentation | — |
+| GF4-DC02 | single-current per (ns,scope,subject) (C2) | co-equal operative sets | strong | Q-02 | partly (relax lossy per 3A) | medium | subject-key conventions | semantic-twin subjects (lexical key only) | carry_as_explicit_comparison_caveat | F16 |
+| GF4-DC03 | journal + rebuildable projections (C3) | snapshot-primary; full event-sourcing | strong principle (LD-04) | Q-03, Q-15 | partly (degrade easy; upgrade lossy) | medium | unjournaled history unrecoverable | light-profile grain unrealistic | carry_as_explicit_comparison_caveat | F05 |
+| GF4-DC04 | external custody + pointers (C4) | in-core; in-core vault | strong for exposure logic (LD-07) | Q-07-final, Q-12, Q-14 | partly | medium-high | custody arrangements + pointer corpus | custodian loss; pointer-metadata leak | user_decision_required_before_specific_branch | F09,F10; GF4-UA05 |
+| GF4-DC05 | per-project/meta/global namespaces (C5) | one shared workspace | strong (contamination evidence) | Q-01 | yes (merge lossless) | low | promotion friction habits | over-partitioning small use | no_action_beyond_documentation | — |
+| GF4-DC06 | neutral core + thin adapters (C6) | embedded vendor mechanics | strong (LD-06, B20) | Q-04, Q-06 | yes | low-medium | adapter authoring debt | adapters ungoverned as artifacts | architecture_repair_required_before_STEP5 (classing only) | F01 |
+| GF4-DC07 | 17-state lifecycle catalog | fewer states; formal machine | internal only | — | yes | low | tooling keyed to state names | ontology mixing weakens invariant use | no_action_beyond_documentation | F12 |
+| GF4-DC08 | human-only, never-delegable authority | delegable/quorum models (not considered) | strong for containment; none for continuity | new (owner continuity) | partly | medium | none | owner unavailability | carry_as_explicit_comparison_caveat | F08 |
+| GF4-DC09 | six profile-based operating subsets | unified operating mode | moderate (RD-framed, dated) | scenario priorities | yes | low | subset conventions | hybrid/multi-surface use | carry_as_explicit_comparison_caveat | GF4-UA13 |
+| GF4-DC10 | deterministic-check reliance for invariants | H-only checking | none yet (unbuilt) | — | yes | low | check-suite debt | proxy validation; absent below AUTO2 | implementation_validation_required_later | F06,F16 |
+| GF4-DC11 | no-re-asking rule with authorized-answer index | always re-confirm | need-derived (N12 d) | Q-13-updated | yes | low | index debt | stale-answer application | carry_as_explicit_comparison_caveat | F04 |
+| GF4-DC12 | labeled non-approved conservative defaults as the parameter device | no defaults; provisional adoption | internal only | Q-03/05/07/11/15 | partly (history permanent) | medium | operating corpus shaped by defaults | de facto policy despite labels | user_decision_required_before_specific_branch | F09; GF4-UA12 |
+
+## 12. GF3A-DP01…DP15 impact register
+
+Columns: hand = current handling; aff = elements and flows affected; imp = impact if the answer changes (local | cross_cutting | architecture_restructuring); press = conservative-default pressure; bc = blocks_comparison; branch = blocks only this branch; pri = priority for user confirmation.
+
+| DP | Q | hand | aff | imp | press | bc | branch | pri | reason |
+|---|---|---|---|---|---|---|---|---|---|
+| DP01 | Q-01 | explicit parameter | A14; §17 provisioning | local | low | no | placement layout | low | layout metadata over files |
+| DP02 | Q-02 | granularity slot | A06/A11/A12; F04,F06,F10,F14 | cross_cutting | medium — itemized posture implied by examples | no | approval workflow | high | batch branch interacts with F07 fatigue risk |
+| DP03 | Q-03 | retention-depth slot | A03/A04; F03,F05; S13 | cross_cutting | high — retain-everything operates now | no | retention/archive | high | drives F09 exposure posture |
+| DP04 | Q-04 | substrate parameter | A16/A17; §16,§18; F13 | cross_cutting, potentially architecture_restructuring if no substrate meets A16 | low | no | substrate selection | high | GF4-UA14; contract feasibility |
+| DP05 | Q-05 | inactive default | A09; F02 | local | high — need N16 unmet by default | no | capture branch | medium | inactivity is itself a policy |
+| DP06 | Q-06 | language field only | A14; F01/§12/§17 | local as registered; wider per F18 | medium — English-schema drift | no | language migration | medium | field understates daily cost |
+| DP07 | Q-07-final | non-approved custody default | A02/A10/A16; F07,F08; S03,S14 | cross_cutting | high — default operates now | no | disclosure/storage layer | high | load-bearing default; F09/F10 |
+| DP08 | Q-08-final | instrument slots only | §12/§13; F09,F11 | local to evaluation branch | low | no | evaluation content | medium | F17 usability inertness |
+| DP09 | Q-09-final | V4 slot empty | §13 V4 | local | none | no | first-target branch | medium | blocks only V4 |
+| DP10 | Q-10 | non-blocking note | — | local | none | no | none | low | nothing operational depends on it |
+| DP11 | Q-11 | supersession-only abstraction | A13; F06; S12 | cross_cutting | high — no-deletion operates now | no | correction mechanics | medium | pairs with DP03 in F09 |

@@ -1,0 +1,121 @@
+| DP12 | Q-12 | branch disabled | F07 scope edge | local | low | no | workspace raw-layer governance | low | edge scope |
+| DP13 | Q-13-updated | trigger slot | F09; §12 | local | low — manual trigger workable | no | handoff protocol | medium | N12-central; F17 |
+| DP14 | Q-14 | custodian parameters | A02/A16; F07; S03,S13 | cross_cutting | medium | no | originals implementation | high | SPF-05 unresolvable until answered |
+| DP15 | Q-15 | must-preserve slot | S09,S13; F09 | cross_cutting | high — everything preserved meanwhile | no | retention scope | high | pairs with DP03 |
+
+Highest-impact parameters (5): DP02, DP03, DP04, DP07, DP14 (DP15 adjacent to DP03). No parameter blocks comparison as such; none is answered here.
+
+## 13. Six-profile stress tests
+
+Conceptual only; no experiment performed. Fields: scen = representative stress scenario; brk = likely breakpoint; over = over-engineered mechanisms; under = under-protected areas; burden = human burden; dated = dated capability dependency; recov = failure-recovery realism; rel; status.
+
+**GF3B-PROFILE-PLAIN-DIALOGUE.** scen: months of research-assistant dialogue, continuity via pasted AC9 cards. brk: per-transition journaling plus ~15-field manifests exceed sustainable manual effort; entries lapse; FAIL01 endemic and undetectable (no T). over: manifest and journal grain at this weight class. under: no detection machinery; AC6 authenticity rests on H memory. burden: very high. dated: FR-01. recov: fall-back-to-sources works only if the user maintained the sources — circular with the breakpoint. rel: F03,F05,F06. status: **too_heavy**.
+
+**GF3B-PROFILE-LOCAL-AGENT.** scen: multi-week coding project alternating two local agents. brk: machine-local memories lost at boundaries (accept-loss stance, F14 finding); M co-writes artifacts and journal. under: journal authorship; instruction non-compliance (B07) gated only by per-diff review. over: little. burden: moderate. dated: FR-02. recov: local Git history makes restores credible. rel: F03,F14,F16. status: **credible_with_caveats**.
+
+**GF3B-PROFILE-HOSTED-REPO.** scen: sustained AUTO4 operation with configured gates. brk: gate misconfiguration/bypass actors (dated B10 mechanics) plus PR review fatigue. under: review-load governance (F07). over: none for this weight class. burden: moderate, review-concentrated. dated: FR-03. recov: strongest of the six — trails and reverts; the only profile where AC6 authenticity gains structural support. rel: F03,F07. status: **credible_with_caveats**.
+
+**GF3B-PROFILE-DIALOGUE-LEARNING.** scen: months-long language-learning use with light files. brk: journaling grain versus "minimal append-only notes"; the minimum subset omits S03/S06/S11–S14 — review collapses into the S07 act; no archive/retention semantics operate; notes accumulate ungoverned. over: manifest weight if handoffs are frequent. under: detection; retention. burden: high relative to task value. dated: FR-01/FR-04 only if platform features leaned on. recov: plausible at small corpus size. rel: F05,F06,F09. status: **credible_with_caveats** (journaling-grain caveat load-bearing).
+
+**GF3B-PROFILE-RESEARCH.** scen: long literature-review project with AC3 chains. brk: retrieval relevance (UA-12) and citation staleness; per-source AC3 discipline is costly. over: none specific. under: none specific beyond global findings. burden: moderate-high. dated: FR-05 only if instruments adopted. recov: credible — evidence paths resolvable by design. rel: F17. status: **credible_with_caveats**.
+
+**GF3B-PROFILE-META-SELF.** scen: the system governs its own rules in meta:/. brk: self-referential governance — meta AC7s define the checks that police meta changes; H reviews H-adjacent proposals about H's own process, the highest rubber-stamp exposure; genesis undefined (F19). over: none. under: independent challenge of meta rules (RV is optional and advisory). burden: moderate. dated: host surface's. recov: journal-based, inherits SPF-03. rel: F07,F16,F19. status: **credible_with_caveats**.
+
+Profile-status totals: too_heavy 1; credible_with_caveats 5; too_weak 0; evidence_insufficient 0; internally_inconsistent 0.
+
+## 14. GF3A-A01…A18 consistency audit
+
+Columns: role = role in joint design; ic = internal consistency (consistent | tension | contradiction | incomplete); tq = traceability quality; test = testability; rel; act = action before STEP5 (none | caveat | repair | user_decision). Presence of every ID is not treated as proof of correctness.
+
+| id | role | ic | tq | test | rel | act |
+|---|---|---|---|---|---|---|
+| A01 | role taxonomy over all artifacts | tension — unclassed operational record kinds | strong | partly_testable | F01 | repair |
+| A02 | originals custody split default | tension — pointer-metadata exposure; Q-14 open | strong | partly_testable | F09,F10 | caveat |
+| A03 | evidence-record class | consistent | strong | partly_testable | — | none |
+| A04 | interpretation-record class | consistent | strong | partly_testable | — | none |
+| A05 | candidate-record class | consistent | strong | partly_testable | F07 | caveat |
+| A06 | decision-record class | tension — authenticity conventional | strong | partly_testable | F03 | caveat |
+| A07 | operative-record class | consistent | strong | partly_testable | — | none |
+| A08 | projections + handoff class | tension — no-re-ask vs staleness; issuer trust | strong | partly_testable | F04,F11 | caveat |
+| A09 | capture buffer (inactive default) | consistent — honest deferral | strong | testable | F09 | user_decision |
+| A10 | disclosure-view class | consistent | strong | partly_testable | — | none |
+| A11 | authority-source rule | consistent — spine holds | strong | partly_testable | F03 | caveat |
+| A12 | single-current + conflict reporting | tension — conflict artifact unclassed; lexical keys | strong | partly_testable | F01,F16 | repair |
+| A13 | provenance/journal rule | tension — light-profile grain; co-fabrication | strong | partly_testable | F05,F16 | caveat |
+| A14 | namespace + scope model | consistent | strong | partly_testable | F18 | caveat |
+| A15 | contamination + staleness guards | tension — undefined waiver; sweep dormancy | strong | partly_testable | F06,F15 | caveat |
+| A16 | substrate contract | incomplete — no authenticity property | strong | partly_testable | F03; GF4-UA14 | caveat |
+| A17 | core/adapter boundary | incomplete — adapters outside AC taxonomy, ungoverned | strong | unclear | F01 | repair |
+| A18 | typed relation set | tension — edges terminate on unclassed nodes | strong | partly_testable | F01 | repair |
+
+## 15. GF3B-S01…S17 consistency audit
+
+| id | role | ic | tq | test | rel | act |
+|---|---|---|---|---|---|---|
+| S01 captured | intake entry state | consistent | strong | partly_testable | — | none |
+| S02 classified | routing state | tension — classification accuracy unvalidated | strong | partly_testable | GF4-UA09 | caveat |
+| S03 placed_or_pointerized | custody state | tension — pointer rot unclassed; metadata exposure | strong | partly_testable | F02,F10 | repair (via F02) |
+| S04 interpreted | reading state | consistent | strong | partly_testable | — | none |
+| S05 proposed | candidate state | consistent | strong | partly_testable | — | none |
+| S06 under_review | review state | tension — omitted from LEARNING subset; load | strong | partly_testable | F07 | caveat |
+| S07 decided | decision state | tension — authenticity conventional | strong | partly_testable | F03 | caveat |
+| S08 operative | in-force state | tension — conflict artifact unclassed | strong | partly_testable | F01 | repair |
+| S09 projected | projection state | tension — sweep dormancy | strong | partly_testable | F06 | caveat |
+| S10 in_handoff | boundary state | tension — no-re-ask; one-safe-action | strong | partly_testable | F04,F11 | caveat |
+| S11 under_validation | run state (ontology shift) | tension — no-write-proof realism per profile | strong | partly_testable | F12 | caveat |
+| S12 corrected_superseded | supersession state | consistent | strong | partly_testable | — | none |
+| S13 archived_withdrawn | retention state | tension — retain-everything default | strong | partly_testable | F09 | user_decision |
+| S14 disclosure_derived | export state | consistent | strong | partly_testable | — | none |
+| S15 lesson_extracted | project-lesson state | consistent | strong | partly_testable | — | none |
+| S16 promotion_pending | global-candidate state | consistent | strong | partly_testable | — | none |
+| S17 migrating | whole-core state (ontology shift) | tension — continuation approval unmodeled | strong | partly_testable | F12,F13 | caveat |
+
+## 16. GF3B-F01…F14 consistency audit
+
+| id | role | ic | tq | test | rel | act |
+|---|---|---|---|---|---|---|
+| F01 intake | material entry | consistent (pending-zone unstated as a state — minor) | strong | partly_testable | — | none |
+| F02 idea buffer | branch-disabled intake | consistent — honest inactivity | strong | testable | — | user_decision |
+| F03 interpretation | digest creation | consistent | strong | partly_testable | — | none |
+| F04 proposal→decision | authority-creating flow | contradiction — exclusivity list omits F13/F14 acts | strong | partly_testable | F13 | caveat |
+| F05 rejected retention | history keeping + index | consistent — index tooling deferred | strong | partly_testable | GF4-UA07 | caveat |
+| F06 operative supersession | safe change | consistent | strong | partly_testable | — | none |
+| F07 custody/pointer | originals handling | tension — pointer rot unclassed; SPF-05 | strong | partly_testable | F02,F10 | repair (via F02) |
+| F08 disclosure derivation | governed export | consistent | strong | partly_testable | — | none |
+| F09 handoff | boundary continuity | tension — cited pre-check absent; FAIL07 asymmetry; manual burden | strong | partly_testable | F04,F14,F05 | caveat |
+| F10 lesson promotion | two-step global path | tension — procedural gate only; wrong-but-lineaged passes | strong | partly_testable | UA-13 recheck | caveat |
+| F11 validation evidence | contained verdicts | tension — evidence package unclassed; no-write realism | strong | partly_testable | F01,F02 | repair |
+| F12 postmortem routing | contained learning | consistent | strong | partly_testable | — | none |
+| F13 migration | whole-core move | tension — manifest/adapter unclassed; approval act unmodeled | strong | partly_testable | F01,F13 | repair (via F01) |
+| F14 staleness recovery | sweep + re-pin | tension — waive path absent; cadence dormant | strong | partly_testable | F06,F15 | caveat |
+
+## 17. GF3B-FAIL01…FAIL16 adequacy audit
+
+Verdict per class plus register-level omissions. adequacy: adequate | partial.
+
+| id | adequacy | note | rel |
+|---|---|---|---|
+| FAIL01 unjournaled change | partial | detection needs absent T; co-fabricated pairs pass | F05,F06,F16 |
+| FAIL02 obeyed-without-AC6 | adequate | authority-map check is well-defined where run | — |
+| FAIL03 stale projection used | partial | sweep dormancy below AUTO2 | F06 |
+| FAIL04 stale pin applied | partial | same dormancy | F06 |
+| FAIL05 handoff map loss | adequate | echo mismatch is a genuine signal | — |
+| FAIL06 over/under-packaging | partial | detection criteria vague while tiers are slots | F17 |
+| FAIL07 re-asking answered | partial | asymmetric — mirror failure missing | F04 |
+| FAIL08 original committed | adequate | permanence honesty is a strength | — |
+| FAIL09 disclosure leak | adequate | revoke-note discipline consistent with LD-07 | — |
+| FAIL10 silent edit/deletion | adequate | journal-diff where T exists | F06 note |
+| FAIL11 cross-ns contamination | partial | lineage check is procedural, not epistemic | F10 audit row |
+| FAIL12 PASS-as-authority | adequate | post-validation audit well-targeted | — |
+| FAIL13 adapter phantom path | partial | upstream adapter artifact ungoverned | F01 |
+| FAIL14 claim-only completion | adequate | direct B11 operationalization | — |
+| FAIL15 dual-current | partial | exact-key invariant only; conflict artifact unclassed | F01,F16 |
+| FAIL16 migration break | adequate | rollback discipline explicit | — |
+
+Register-level: three design-named failure modes lack classes — synthetic-as-real evidence, pointer/custody integrity loss, stale-answer application (GF4-F02). The register never claims exhaustiveness, but named-elsewhere-unclassed-here is an internal inconsistency, and class membership carries operational consequences (containment, regression eligibility).
+
+## 18. GF3B-AUTO0…AUTO5 and profile audit
+
+| id | role | ic | tq | test | rel | act |
+|---|---|---|---|---|---|---|
+| AUTO0 manual baseline | default posture | tension — most detection machinery absent here | strong | partly_testable | F06 | caveat |
