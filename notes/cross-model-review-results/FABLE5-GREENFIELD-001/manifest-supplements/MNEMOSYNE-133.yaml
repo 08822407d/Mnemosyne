@@ -1,0 +1,50 @@
+task_id: MNEMOSYNE-133
+record_type: GF_STEP_3B_storage_and_track_progress_supplement
+base_track_manifest: ../manifest.yaml
+step:
+  step_id: GF-STEP-3B
+  name: lifecycle_and_operations_design_for_the_information_architecture
+  path: ../steps/GF-STEP-3B/
+  Fable_status: GF_STEP_3_complete_with_explicit_parameter_and_amendment_gates
+  repository_storage: canonical_ordered_text_parts_stored
+  substantive_maintainer_acceptance: not_performed
+execution_context:
+  fresh_conversation: true
+  research_mode: false
+  attachments_used: 4
+  repository_paths_read: 0
+  retrieval_batteries_used: 0
+  web_or_external_research_used: false
+  prior_conversation_or_Project_knowledge_used: false
+  premature_GF_STEP_3_candidate_used: false
+track_progress:
+  GF_STEP_1:
+    status: complete_with_explicit_open_questions_as_Fable_advisory_result
+  GF_STEP_2:
+    Fable_claimed_status: complete_with_dated_fact_and_text_only_visual_caveats
+    substantive_maintainer_acceptance: not_performed
+  GF_STEP_3:
+    Fable_claimed_status: complete_with_explicit_parameter_and_amendment_gates
+    substantive_maintainer_acceptance: not_performed
+    components:
+      - GF-STEP-3A complete_as_Fable_advisory_result
+      - GF-STEP-3B complete_as_Fable_advisory_result
+    early_candidate:
+      path: ../steps/GF-STEP-3-EARLY/02-premature-architecture-candidate.md
+      status: preserved_unaccepted_not_used
+  GF_STEP_4: proposed_not_executed
+  GF_STEP_5: not_started
+  comparison_phase_authorized: false
+next_safe_action:
+  - execute_bounded_GF_STEP_4_self_critique
+  - preserve_result_only_under_current_Thinking_model_context
+  - defer_substantive_acceptance_or_Mnemosyne_improvement_until_Pro_review
+boundaries:
+  execution_source_modified: false
+  existing_GPT_design_read: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false

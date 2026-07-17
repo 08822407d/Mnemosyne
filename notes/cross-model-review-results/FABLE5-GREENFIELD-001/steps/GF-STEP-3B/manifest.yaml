@@ -1,0 +1,73 @@
+step_id: GF-STEP-3B
+record_type: lifecycle_and_operations_design_for_the_information_architecture
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+stored_by_task: MNEMOSYNE-133
+research_mode: false
+execution_context:
+  fresh_conversation: true
+  repository_paths_read: 0
+  retrieval_batteries_used: 0
+  web_or_external_research_used: false
+  prior_conversation_or_Project_knowledge_used: false
+  premature_GF_STEP_3_candidate_used: false
+inputs_reported:
+  - GF-STEP-1E final need model
+  - GF-STEP-2C candidate capability baseline
+  - GF-STEP-2D verification and closure addendum
+  - GF-STEP-3A information/authority architecture
+input_identity_note:
+  STEP1E_task_SHA256_text: missing_final_hexadecimal_0
+  STEP1E_full_expected_SHA256: 60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0
+  Fable_handling: exact_byte_count_and_canonical_git_blob_verified_and_defect_disclosed
+prompt:
+  index_path: 00-task-as-sent.md
+  source_filename: FABLE5-GREENFIELD-001-GF-STEP-3B-task.md
+  source_size_bytes: 29026
+  source_sha256: 3f803aa6cab84056460b7ffd84eb7cc619fcc00d1e400ad9ef58c64332c0b89a
+  exact_ordered_parts: 3
+chat_summary_path: 01-fable-chat-summary.md
+output:
+  index_path: 02-lifecycle-operations-architecture.md
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP3B-lifecycle-operations-architecture.md
+  source_size_bytes: 68033
+  source_sha256: af4dd4c2d9658319462a28cc13c469f24823be06cc003f33858b348a68fb6685
+  source_encoding: utf-8
+  source_line_endings: lf
+  source_final_lf_present: true
+  exact_ordered_parts: 5
+structure:
+  numbered_sections: 28
+  lifecycle_states: 17
+  operational_flows: 14
+  failure_classes: 16
+  automation_stages: 6
+  surface_profiles: 6
+  amendment_candidates_reported: 0
+  GF3A_element_rows: 18
+  need_rows: 21
+  GF2D_boundary_rows: 24
+  prohibited_assumption_rows: 16
+  design_parameter_rows: 15
+  artifact_or_tool_status_leakage_detected: false
+status:
+  Fable_claim: GF_STEP_3_complete_with_explicit_parameter_and_amendment_gates
+  repository_storage: canonical_ordered_text_parts_stored
+  substantive_maintainer_acceptance: not_performed
+  GF_STEP_3A_plus_3B_joint_candidate: stored_as_Fable_advisory_result
+  GF_STEP_4_proposed: true
+  GF_STEP_4_executed: false
+  GF_STEP_5_started: false
+  premature_GF_STEP_3_candidate:
+    status: preserved_unaccepted
+    used_by_GF_STEP_3B: false
+boundaries:
+  execution_source_modified: false
+  current_GPT_design_read: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  comparison_authorized: false
+  paused_post_handoff_route_resumed_or_closed: false

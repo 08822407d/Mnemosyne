@@ -1,0 +1,83 @@
+# FABLE5-GREENFIELD-001 — GF-STEP-3B Lifecycle and Operations Architecture
+
+## 1. Metadata
+
+```yaml
+charter_id: FABLE5-GREENFIELD-001-CHARTER
+step_id: GF-STEP-3B
+step_name: lifecycle_and_operations_design_for_the_information_architecture
+record_type: lifecycle_and_operations_design_for_the_information_architecture
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+prior_step: GF-STEP-3A
+research_mode: false
+date: 2026-07-17
+repository_paths_read: 0
+retrieval_batteries_used: 0
+existing_GPT_design_read: false
+premature_GF_STEP_3_candidate_read: false
+inputs:
+  - GF-STEP-1E final need model
+  - GF-STEP-2C candidate capability baseline
+  - GF-STEP-2D verification and closure addendum
+  - GF-STEP-3A information/authority architecture
+step_status: GF_STEP_3_complete_with_explicit_parameter_and_amendment_gates
+```
+
+## 2. Scope and hard limits
+
+Second bounded design substep of GF-STEP-3: derive the lifecycle and operations design that makes the GF-STEP-3A information architecture usable while preserving its authority boundaries. Limits observed: attachments 4/4; repository paths 0; retrieval batteries 0; web/external searches 0; premature-candidate reads 0; existing-design reads 0; lifecycle states 17 (within 12–18); operational flows 14 (within 10–16); failure classes 16 (within 12–18); automation stages 6 (within 4–6); surface profiles exactly 6; GF3A elements exactly 18; need rows exactly 21; GF2D rows exactly 24; UA rows exactly 16; DP rows exactly 15; no target artifacts; no automatic continuation. Word budget: the first draft exceeded the 6,500 hard cap under the raw wc measure (pipes, table syntax, and IDs counted); the single permitted light compression pass removed narration and connective wording only — no required row or field was removed; one approximate word-count check performed; no recount after compression. This is architecture design only — not implementation, execution-source change, product research, target instantiation, or comparison with the existing GPT/Mnemosyne design.
+
+## 3. Input identity and access result
+
+| input | expected identity (task) | observed (independent sandbox check) | result |
+|---|---|---|---|
+| A. STEP1E final need model | 32,577 B; SHA-256 `60fd…7a3b` (63 hex chars as printed); canonical git blob `af62ffb564fd7c227f3b651a6c666201f8102fce` | 32,577 B; SHA-256 `60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0`; git blob `af62ffb564fd7c227f3b651a6c666201f8102fce` | pass — byte count exact; git blob exact; the task's printed SHA-256 is 63 hex chars (odd-length transcription truncation, not a valid SHA-256); the observed 64-char hash matches it as prefix; complete read (262 lines) |
+| B. STEP2C candidate baseline | 25,385 B; SHA-256 `1e814613d1122b040f7d207c30a1dc0887ebc1394354aeb0c580cef3330aab2b` | identical | exact match; complete read (171 lines) |
+| C. STEP2D closure addendum | 68,834 B; SHA-256 `ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac` | identical | exact match; complete read (396 lines) |
+| D. STEP3A architecture | 47,324 B; SHA-256 `3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1` | identical | exact match; complete read (302 lines) |
+
+The interface exposes independently computable attachment hashes: independent cryptographic verification is claimed for B, C, D; byte-count plus canonical-blob identity for A. No exposed identity mismatches; no integrity-failure artifact is required; nothing was substituted from memory, Project knowledge, repository copies, or the premature candidate.
+
+## 4. Anti-contamination and prior-exposure statement
+
+Only the four attachments were used. Not used, retrieved, or opened: prior Fable conversations, Project knowledge, past-chat search, any repository path, `current/**`, `handoff/**`, `raw/**`, `notes/**`, `commands/**`, the existing GPT/Mnemosyne design, `current/human-approved-spec.md`, anything under `GF-STEP-3-EARLY`, FABLE5-GREENFIELD-001-STEP3-independent-architecture-candidate.md, any summary or memory of that premature candidate, and any external website or search. Incidental prohibited exposure: none. Standing statement preserved: independence by derivation and disclosure, not claimed amnesia. File names inside attachments were embedded provenance, never opened; no prohibited material was retrieved to complete any ledger.
+
+## 5. Input precedence and STEP3A change discipline
+
+Precedence applied: (1) STEP1E controls need IDs, need titles, and open-question origins; (2) STEP2D controls verified capability boundaries (GF2D-B01…B24), freshness gates (FR-01…FR-10), visual caveats, and prohibited assumptions (UA-01…UA-16); (3) STEP2C remains the readable synthesis where STEP2D does not correct it; (4) STEP3A controls the information architecture and authority semantics (roles R1–R7, classes AC1–AC12, elements GF3A-A01…A18, transitions, namespaces, authority-source rule A11, provenance rule A13, substrate abstraction A16, adapter boundary A17); (5) residual conflicts would be reported, never silently reconciled — none arose. Change discipline: no STEP3A role, class, transition, namespace, or authority rule is redefined here; every operational mechanism below implements STEP3A semantics as stated; any contradiction would have produced a GF3B-AMD candidate per §19 — none was required. GF-STEP-3A is not redesigned.
+
+## 6. Open-question and candidate discipline
+
+GF3A-DP01…DP15 are carried unanswered (§24). Specifically: Q-02 approval granularity remains parameterized (DP02); Q-05 capture-buffer activation remains inactive unless explicitly answered (DP05 — flow F02 is defined but branch-disabled); Q-07-final originals/pointer/decision policy remains adoption-gated (DP07 — the external-custody default stays a labeled, non-approved conservative default); Q-08-final evaluation/handoff instruments remain candidate methods (DP08 — MC-01/MC-02/MC-03 referenced only as slots); Q-09-final first target and dry-run framework remain user decisions (DP09 — no target selected); Q-11 correction/deletion policy remains open beyond the conservative supersession-and-journal abstraction (DP11); Q-12 workspace raw-layer governance remains branch-disabled (DP12); Q-13-updated handoff initiation trigger remains parameterized (DP13 — trigger slot only); Q-14 originals custodian/retention/checksum remains user-held (DP14); Q-15 must-preserve classes remain parameterized (DP15). MC-01…MC-05 and PC-01…PC-06 appear only as candidate operating profiles or slots. Nothing below silently adopts metric sets, weights, verdict thresholds, package tiers, retention periods, redaction policy, automation policy, target identity, or vendor-specific mechanics.
+
+## 7. Architecture operational goals and non-goals
+
+Goals: give the STEP3A information architecture a complete operating shape in which (a) every state change occurs through a named lifecycle state and journaled transition (A13, GF2D-B11); (b) human AC6 acts are the only authority-creating events in every flow, stage, and automation level (A11; UA-14/15); (c) each surface operates only within its verified 2026Q2 affordances via adapters (A17; GF2D-B01…B14); (d) handoff is a projection discipline that recovers, never mints, authority (A08/AC9; N12 delta); (e) validation produces contained, tier-bound verdicts with preserved evidence (N19, N21); (f) automation has explicit human-gated ceilings (PC-05 kept candidate); (g) projects, meta-memory, and global knowledge stay namespace-isolated with visible, gated promotion (A14/A15). Non-goals: implementation tickets, tool selection, vendor or target choice, executing any lifecycle, adopting any MC/PC instrument, answering any DP, changing the execution source, or comparing with the existing design.
+
+## 8. Lifecycle state machine
+
+17 states. Columns: roles/classes = active artifact roles/classes; entry; allow / forbid = allowed / forbidden transitions; H = human authority required; evid = required evidence/provenance; stale = staleness handling; Q = open-question dependency; fail = failure indicators; rec = recovery target.
+
+| id | name | roles/classes | entry | allow | forbid | H | evid | stale | Q | fail | rec |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| GF3B-S01 | captured | R1/R5: AC1, AC10 | material or idea received on a surface | →S02 | → any operative effect | none to exist | capture context + AC11 | n/a — capture immutable | Q-05 (AC10 branch) | unjournaled input (FAIL01) | re-capture + journal note |
+| GF3B-S02 | classified | all | S01 artifact present | →S03/S04/S05 | →S08 direct | sensitivity downgrade only | classification AC11 entry | reclassification supersedes | Q-06 language field | misclassification → wrong custody (FAIL08 risk) | reclassify + re-place |
+| GF3B-S03 | placed_or_pointerized | R1: AC1 in custody / AC2 in core | classified R1 | →S04 | sensitive AC1 → history-bearing core (A02) | custody exceptions | AC2 digest + AC11 | pointer integrity check on read | Q-07/12/14 | pointer rot; committed original (FAIL08) | re-point; exposure treated permanent (LD-07) |
+| GF3B-S04 | interpreted | R2: AC4 | ≥1 resolvable R1 source | →S05 | replacing source; binding force | none | source links + AC11 | AC4 supersedable | Q-03 depth | unsourced assertion | supersede with sourced version |
+| GF3B-S05 | proposed | R3: AC5 | motivation links exist | →S06 | self-activation →S08 | none to propose | motivation links + AC11 | candidate age confers nothing | Q-08/09 content | candidate obeyed as rule (FAIL02) | demote to candidate; route to review |
+| GF3B-S06 | under_review | R3 + advisory R2 | proposal queued to H | →S07 | auto-approve on timeout/score | review is H's act; RV advisory only | review notes AC4 + AC11 | base-evidence staleness surfaced first | Q-02 | rubber-stamp; RV sole judge (UA-14) | reopen with fresh restatement |
+| GF3B-S07 | decided | R4-creating: AC6 | explicit H act | approved →S08; rejected → retained (→S13 later) | decision by silence; deleting rejected | required — the act itself | immutable AC6 + AC11 | binds exact candidate version | Q-02 | unpinned target version | new AC6 on pinned version |
+| GF3B-S08 | operative | R4: AC7 current | AC6 approval | →S09/S10/S12/S14 | in-place edit; dual current; cross-namespace force | existence via AC6 only | AC6 ref + chain | currentness stamp; pin flags | Q-02 | drift (FAIL02); dual current (FAIL15) | conflict artifact + H decision |
+| GF3B-S09 | projected | R5: AC8 | rebuild from R1/R4/R6 | →S10; refresh loop | projection as truth (UA-02); edited as record | none | source refs + stamp + AC11 | stamped; sweep flags | Q-15 | stale use (FAIL03) | rebuild from sources (F14) |
+| GF3B-S10 | in_handoff | R5: AC9 | trigger slot (DP13) or H request | consumed → resumed states | minting authority/facts; re-asking answered | authority-affecting continuation | manifest + provenance + AC11 issue/consume | package stamps; old packages historical | Q-13/15 | map loss (FAIL05); imbalance (FAIL06) | fall back to sources; regenerate |
+| GF3B-S11 | under_validation | object + R1 evidence | object, claim boundary, prerequisites (§13) | PASS (no authority change); FAIL →F12 | PASS escalation (UA-15); synthetic as real | user-confirmed checks per stage | evidence package + no-write proof + AC11 | evidence dated | Q-08/09 | FAIL12/14 | postmortem + regression candidate |
+| GF3B-S12 | corrected_superseded | R4 chain; lower-role corrections | H decision (R4) or role-owner correction | new current →S08; vN →S13 | silent overwrite; history rewrite | required for R4 | chain link + correction note + AC11 | superseded flagged; downstream pins flagged | Q-11 | FAIL10 | journal-reconstructed restore |
+| GF3B-S13 | archived_withdrawn | any non-current | retention parameter or withdrawal note | reference-only; journal-based restore | archive-as-deletion; withdrawing current R4 | retention classes H-set | retention class + AC11 | non-current by definition | Q-03/14/15 | silent expiry | restore from custody/export |
+| GF3B-S14 | disclosure_derived | R7: AC12 | policy-gated; conservative default: H per view | delivery to disclosure-target class | passing as original; in-place masking | yes under default (DP07 open) | manifest + source + basis + AC11 | view immutable per issue; source change → new view | Q-07/11/12 | leak (FAIL09) | revoke-note + superseding view; exposure permanent |
+| GF3B-S15 | lesson_extracted | R2: proj AC4 | postmortem/validation/experience in proj ns | →S16 | writing meta:/ or global:/ directly | none to extract | source refs + AC11 | scoped to project state | — | contamination (FAIL11) | retract cross-ns copy; re-scope |
+| GF3B-S16 | promotion_pending | R3: global AC5 with lineage | explicit promote-proposal act | →S06 (global review) | copy-paste without lineage; auto-promotion | global activation needs global AC6 | source_project lineage + AC11 | source-lesson change flags proposal | Q-02 | silent global effect | withdraw proposal |
+| GF3B-S17 | migrating | whole core + adapters | H migration decision | verified resume; rollback | authority changes mid-migration; unverified resume | continuation approval | manifest, hashes, replay results + AC11 | projections invalidated + rebuilt | Q-04 | integrity break (FAIL16) | preserved rollback path |
+
+Machine-level invariants: AC6/AC7 semantics enforced at S06–S08 and S16 (only explicit human acts create or change operative force); source artifacts preserved in every transition (keep=yes inherited from STEP3A §13); working projections (S09/S10) never authoritative; project→global promotion only via S15→S16→S06→S07; PASS in S11 changes no authority; adapter capabilities (profiles, §16) alter no core semantics. States are design-level; none is an implementation ticket.
+
