@@ -1,0 +1,54 @@
+task_id: MNEMOSYNE-135
+track_id: FABLE5-GREENFIELD-001
+stored_step: GF-STEP-4
+action_actor: ChatGPT_GitHub_app
+authority_level: non_execution_source_storage_and_status_record
+user_authorization:
+  source: authorized_final_phase_handoff_startup_prompt_and_current_GF_STEP_4_result_delivery
+  preserve_exact_prompt_summary_output: true
+  update_necessary_non_execution_source_records: true
+  create_one_ready_PR_without_reasking: true
+  merge_or_auto_merge: false
+repository:
+  full_name: 08822407d/Mnemosyne
+  visibility_at_preflight: public
+  default_branch: master
+  pinned_base_sha: c0b74b81326926caf2eaa93683fd9b57efca1784
+canonical_write_lineage:
+  task_id: MNEMOSYNE-135
+  base_branch: master
+  pinned_base_sha: c0b74b81326926caf2eaa93683fd9b57efca1784
+  canonical_branch: mnemosyne-135-preserve-fable-step4
+  canonical_pr_number: pending_at_initial_storage_record
+  scope_summary: preserve_GF_STEP_4_prompt_summary_output_manifest_wayfinding_and_result_record
+storage:
+  prompt_index: steps/GF-STEP-4/00-task-as-sent.md
+  chat_summary: steps/GF-STEP-4/01-fable-chat-summary.md
+  output_index: steps/GF-STEP-4/02-self-critique.md
+  step_manifest: steps/GF-STEP-4/manifest.yaml
+  output_identity:
+    size_bytes: 64639
+    sha256: 6ae4f2a6a0a5fc83e907bbfe441895466bbd87555e909009fc2c55365625ef9e
+    exact_ordered_parts: 5
+    reconstruction_verified: true
+status_sync:
+  GF_STEP_4:
+    Fable_claimed_status: GF_STEP_4_complete_with_ARCHITECTURE_REPAIR_GATE
+    substantive_maintainer_acceptance: not_performed
+    proposed_next_step: GF-STEP-3R
+    GF_STEP_3R_executed: false
+  GF_STEP_5:
+    proposed_by_Fable: false
+    started: false
+  comparison_firewall:
+    authorized: false
+    opened: false
+boundaries:
+  execution_source_modified: false
+  existing_GPT_design_read_or_compared: false
+  premature_candidate_used: false
+  substantive_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  target_project_action_performed: false
+  parallel_PR_created: false
+  merge_or_auto_merge_performed: false
