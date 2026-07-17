@@ -1,0 +1,70 @@
+
+**Input manifest (required fields).** Package identity + issue timestamp + issuing surface; model/tool/surface provenance; scope declaration (namespaces covered); authority map — for each covered (namespace, scope, subject): current AC7 version, creating AC6 ref, pinned imports with versions; currentness/staleness stamps per projected source; current-state projection (from AC8); completed actions; pending actions; forbidden actions (from operative records and standing boundaries); one-safe-next-action; unknowns and unsupported assumptions (explicitly listed, UA-referenced where applicable); answered-question index refs (AC6/AC5 pointers) supporting the no-re-asking rule; evidence-path fields (resolvable refs, never inlined originals); package-tier slot: minimum | standard | extended — content per tier is a slot only, MC-02's tier proposal not adopted; trigger parameter slot recording which DP13 trigger fired — trigger value not chosen here.
+
+**Generation procedure.** Verify source resolvability → assemble fields in manifest order → T field-completeness and pin checks → stamp staleness → journal issue entry → deliver via the profile's handoff method.
+
+**Consumption procedure (ordered recovery sequence).** (1) verify package identity/integrity; (2) recover the authority map and check each entry against AC6 chain refs; (3) recover currentness/staleness stamps — stale entries are flagged, not trusted; (4) load working-state projection as rebuildable convenience; (5) load completed/pending/forbidden actions; (6) register unknowns and unsupported assumptions as open, not resolved; (7) resolve evidence paths on demand; (8) apply the no-re-asking rule — before asking H anything, consult the answered-question index; an authorized answer that exists is used, not re-asked; (9) echo: consumer restates scope, authority map, forbidden actions, and the one safe next action; (10) H confirms any authority-affecting continuation; (11) execute only the one safe next action until confirmation.
+
+**Successful recovery criteria.** Identity verified; authority map complete and AC6-backed; no authority minted; staleness explicit; unknowns preserved; forbidden actions honored; echo matches manifest; no answered question re-asked; H confirmation obtained where required.
+
+**Failed-handoff handling.** Any criterion unmet → halt continuation, journal the failure, fall back to source artifacts, regenerate the package; the failed package is retained, marked failed. **Old-package status.** Prior packages are historical R5 records — examples, never current truth (UA-02); consuming an old package requires fresh staleness resolution.
+
+**Correctness checklist (design-level only).** identity_verified; authority_map_complete_and_decision_backed; no_authority_minted; staleness_stamped; unknowns_explicit; forbidden_actions_listed; one_safe_next_action_present; no_reasked_answered_question; evidence_paths_resolvable; provenance_recorded; tier_and_trigger_slots_populated_as_parameters. No numeric weights, verdict thresholds, or token ranges from candidate instruments are adopted.
+
+## 13. Validation-stage design
+
+General rules: every run names its object under test and claim boundary first; evidence packages separate synthetic from real; checks split into deterministic (T), optional model-assisted (M/RV, advisory), and required user-confirmed (H) — the model is never sole judge; every stage emits a no-write proof (T-verifiable absence of writes beyond its permission); PASS never escalates authority (UA-15) — target writes, production claims, and global-rule updates each need their own AC6; every FAIL routes through F12 to postmortem and regression candidate; lessons stay target-specific unless promoted via F10.
+
+| stage | tested object | inputs+ | inputs− | authority boundary | evidence | T checks | M/RV checks | H checks | no-write | PASS semantics | FAIL routing | cannot authorize |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| V1 structural smoke | artifact/package structure | schemas, links, pins | any target data | none touched | check logs | schema/link/pin/single-current | none | acknowledge report | trivially total | structure well-formed only | F12 | anything |
+| V2 tabletop/replay | flows and handoffs on recorded history | own construction history, synthetic states | live targets | read-only | replay transcript + AC3 | field completeness, echo match | walkthrough critique | scenario realism + outcome | total | flows executable on paper | F12 | real-target readiness |
+| V3 synthetic scenario | end-to-end lifecycle on fabricated case | synthetic corpus (marked) | real user originals | sandbox only | marked-synthetic package | separation markers, journals | scenario coverage critique | verdict confirmation | total | works on synthetic case only | F12 | real validation claims |
+| V4 controlled real-target dry run | lifecycle against a real need, no writes | real target material read-only (target = DP09, user-held) | any target write | read + proposal only | dry-run package + postmortem | no-write proof, evidence paths | draft-quality critique | usefulness + governance compliance | mandatory proof | usable outputs produced without writes | F12 | target writes; global rules |
+| V5 delivery review | deliverable package for H | V4 outputs | uncontained claims | delivery only | review record | manifest completeness | none required | acceptance decision | maintained | H accepts delivery as advisory | F12 | execution-source change |
+| V6 target write | separately authorized write act | H-approved change set | anything unapproved | per explicit AC6 only — **not performed in this track** | would-be trails | gate configuration | none | the AC6 itself | n/a | defined for completeness only | F12 | anything beyond its AC6 |
+
+## 14. Failure-class register
+
+16 classes. Columns: sym = symptom; loc = likely layer/flow; det = detection signal; ev = minimum evidence; cont = containment; rep = repair-candidate location; sc = target-specific/global; rg = regression-candidate eligible; ne = authority non-escalation rule.
+
+| id | sym | loc | det | ev | cont | rep | sc | rg | ne |
+|---|---|---|---|---|---|---|---|---|---|
+| GF3B-FAIL01 | state differs without journal entry | any / A13 | T journal-diff audit | artifact diff vs journal | freeze; reconstruct | journaling mechanics | local | yes | reconstruction needs H confirm |
+| GF3B-FAIL02 | content obeyed without AC6 | F04/F06 | authority-map check | missing AC6 ref | demote to candidate | decision workflow | local | yes | demotion never auto-re-approves |
+| GF3B-FAIL03 | stale projection used as current | F09/F14 | stamp check at use | stamp vs journal head | block use; rebuild | projection ops | local | yes | rebuild grants nothing |
+| GF3B-FAIL04 | stale pinned import applied | F14 | sweep | pin vs upstream chain | flag + block | re-pin flow | project | yes | re-pin needs AC6 |
+| GF3B-FAIL05 | handoff authority-map loss | F09 | echo mismatch; field check | manifest vs recovered map | halt; fall back to sources | handoff protocol | session | yes | recovered map still H-confirmed |
+| GF3B-FAIL06 | package over/under-packaging | F09 | consumption failure (missing constraint / instruction loss) | consumer report + package | regenerate at other tier slot | tier parameterization | session | yes | tier change ≠ policy adoption |
+| GF3B-FAIL07 | re-asking answered question | F09 | H flag; index check | AC6/AC5 index hit | consult index first | no-re-ask lookup ops | session | yes | — |
+| GF3B-FAIL08 | original committed to history-bearing zone | F01/F07 | T placement check | commit history | treat permanently exposed (LD-07); disclose to H; move custody forward | intake routing | global severity, local repair | yes | cleanup claims prohibited |
+| GF3B-FAIL09 | disclosure leak / underscoped view | F08 | manifest audit; recipient scope check | view vs manifest | revoke-note + superseding view; exposure permanent | redaction ops | local | yes | no retroactive cleanliness claims |
+| GF3B-FAIL10 | silent edit/deletion | F05/F06 | journal-diff | missing supersession chain | restore from history/export | correction mechanics (DP11) | local | yes | R4 restoration needs H confirm |
+| GF3B-FAIL11 | cross-namespace contamination | F10 | lineage/non-inheritance check | unlineaged global artifact | retract; re-scope | promotion flow | global-risk | yes | retraction ≠ a rejection decision |
+| GF3B-FAIL12 | PASS treated as authority | F11 | post-validation authority audit | AC7 change without AC6 | revert to prior chain state | validation ops | local | yes | PASS names no transition |
+| GF3B-FAIL13 | adapter capability mismatch (phantom path) | AD layer | operation failure vs adapter claim | failure log + FR tag | quarantine claim; manual path | adapter refresh (FR-01…03,06) | surface | yes | refreshed claim ≠ new default |
+| GF3B-FAIL14 | claim-only completion | any M action | artifact verification (B11) | claim vs missing artifact/diff | treat as not done | verification ops | local | yes | re-done work re-verified |
+| GF3B-FAIL15 | dual-current operative records | F04/F06 | single-current invariant | two AC7 per (ns,scope,subject) | automatic conflict artifact; both flagged | conflict resolution (H) | local | yes | resolution via new AC6 only |
+| GF3B-FAIL16 | migration integrity break | F13 | hash/journal verification | manifest mismatch | rollback | migration procedure | whole-core | yes | partial migration never resumes without H approval |
+
+No benchmark, metric set, external taxonomy, or rubric is adopted by this register; classes are architecture-level.
+
+## 15. Automation-stage model
+
+Six stages. Columns: allow / proh = allowed / prohibited automated actions; Hpt = human confirmation points; acc = access/write assumptions; ev = evidence/logs emitted; rb = rollback/containment; pre = prerequisites; exit = exit criteria; prof = affected profiles; ref = current-fact refresh triggers; why = why authority remains human-controlled.
+
+| id | allow | proh | Hpt | acc | ev | rb | pre | exit | prof | ref | why |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| GF3B-AUTO0 manual | H performs all operations; M answers questions only | any unattended action | everything | none assumed | H/T journal entries | n/a | none | H decision to enable AUTO1 | all | none | baseline: all acts are H acts |
+| GF3B-AUTO1 assisted | on-request M drafting of AC3/4/5/8/9/12 and restatements | unsolicited runs; any AC6/AC7 write; external writes | acceptance of every draft | read-only to permitted core | draft provenance stamps | discard drafts | AUTO0 discipline | stable draft quality + H decision | all | none | proposals are not decisions |
+| GF3B-AUTO2 deterministic validation/archive | T checks (schema/link/pin/single-current/staleness sweep/no-write proof), archive packaging, journal mechanics | content judgment; transitions beyond flagging | acting on flags | read + append-only journal/flags | check logs | flags reversible | check suite defined | reliable checks + H decision | LOCAL, HOSTED, META primarily | FR-03 if hosted CI used | determinism carries no authority |
+| GF3B-AUTO3 proposal-generation | scheduled/triggered candidate and digest drafting (e.g., staleness-triggered re-pin proposals) | self-approval; queue-jumping to AC7; external contact | review of every generated AC5 | read-only + candidate-zone append | generation provenance | withdraw candidates | AUTO2 gating outputs | acceptable proposal precision + H decision | LOCAL, HOSTED, META | none | proposal volume must not erode review |
+| GF3B-AUTO4 reviewed write-back | M-prepared changes submitted through substrate review gates where the surface supports them (opt-in per B10); merge only after H review | self-merge; gate weakening; writes outside designated paths | per-change review + merge | scoped write to review-branch equivalents | full trails (B10/B11) | history-based revert | configured gates + AUTO2 + FR-03 adapter refresh | highest enabled stage; beyond only via AUTO5 gating | HOSTED (LOCAL variant: diff-review commits) | FR-03 | gates are configuration; the human keeps the merge |
+| GF3B-AUTO5 conditional future | none now — placeholder for narrowly scoped, evidence-gated expansions | everything, until separately designed and H-approved via AC6 | the definition itself | none | n/a | n/a | validated AUTO4 history + explicit design step | n/a | to be defined | per selected branch | authority containment precedes convenience |
+
+No stage is authorized or recommended for enablement in Mnemosyne by this file; staging honors PC-05's candidate status without adopting it.
+
+## 16. Six surface operating profiles
+
+**GF3B-PROFILE-PLAIN-DIALOGUE.** affordances: text conversation, paste/upload, per-action-confirmed connector reads. unavailable/untrusted: background cross-session external read/write; connector write-back; platform memory as truth (B01–B04). read path: user-supplied packages/pastes + confirmed connector reads via AD. proposal path: in-chat drafts carried by the user. write path: none direct — user-mediated relay (B05). human gate: every core write is by H by construction. handoff: AC9 as pasted/uploaded card or package. evidence: transcript capture as AC1 + user-side journal. adapter responsibilities: conveyance formatting; capability notes. FR deps: FR-01 (dated 2026Q2). prohibited assumptions: UA-01,02,03. minimum lifecycle subset: S01–S10 via user relay; F09 manual. optional heavier: confirmed connector-assisted reads.
+
