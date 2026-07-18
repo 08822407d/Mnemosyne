@@ -1,0 +1,100 @@
+step_id: GF-STEP-3R
+record_type: bounded_architecture_repair_attempt_input_integrity_failure
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+stored_by_task: MNEMOSYNE-136
+research_mode: false
+execution_context:
+  fresh_conversation: true
+  repository_paths_read: 0
+  retrieval_batteries_used: 0
+  web_or_external_searches: 0
+  premature_GF_STEP_3_candidate_read: false
+  existing_GPT_design_read: false
+  Project_knowledge_used: false
+  past_chat_retrieval_used: false
+prompt:
+  index_path: 00-task-as-sent.md
+  source_filename: FABLE5-GREENFIELD-001-GF-STEP-3R-task.md
+  source_size_bytes: 19101
+  source_sha256: 4a786d24d2004f92eb25cc8c6361eb62333d3c3f8ebbffc60950d3f6fed60d2d
+  source_git_blob_sha: e117dc0d1b5afd76c070907be15c68b50e975430
+  archive_format: deterministic_gzip_mtime_0_level_9_then_base64
+  archive_gzip_size_bytes: 7199
+  archive_gzip_sha256: 6a32023b1fd0798a93e3f0f8e3feefaa26b3d9f4a7f6a7370cc01a742bcff1fe
+  exact_ordered_parts: 3
+  exact_reconstruction_verified: true
+chat_summary:
+  path: 01-fable-chat-summary.md
+  verbatim_text_size_bytes: 1590
+  verbatim_text_sha256: faf19f0a00aa7498d8708c2b986e2fdbc34b4acdc31bdc650169a0d5e74f3d6f
+output:
+  path: 02-input-integrity-failure.md
+  uploaded_filename: FABLE5-GREENFIELD-001-STEP3R-input-integrity-failure.md
+  source_size_bytes: 6664
+  source_sha256: 463a0acdc1d97adc7127e4c6c3c2d4f5e8677044618f0d1a4848433e48dc074b
+  source_git_blob_sha: 84ca1ea9f2333db2455ea3b0a3b1fd858e7b4a2f
+  source_encoding: utf-8
+  source_line_endings: lf
+  source_final_lf_present: true
+  source_lines: 97
+  exact_copy_verified: true
+structure:
+  numbered_sections: 8
+  attachments_required: 5
+  attachments_present_and_verified: 4
+  attachments_absent: 1
+  missing_attachment:
+    filename: FABLE5-GREENFIELD-001-STEP4-self-critique.md
+    size_bytes: 64639
+    sha256: 6ae4f2a6a0a5fc83e907bbfe441895466bbd87555e909009fc2c55365625ef9e
+  verified_inputs:
+    - STEP1E
+    - STEP2D
+    - STEP3A
+    - STEP3B
+  repairs_performed: 0
+  amendments_issued: 0
+  closure_rechecks_performed: false
+  design_parameters_answered: 0
+reported_nonconforming_attachment:
+  filename: FABLE5-GREENFIELD-001-GF-STEP-4-task.md
+  size_bytes: 27489
+  sha256: a0afeb6f13e62346f789be05e958b1365e8a90ced0e94379d34ab6230facd973
+  Fable_content_description: contains_the_GF_STEP_3R_task_prompt
+  storage_receiver_check:
+    canonical_GF_STEP_4_task_identity_matches_reported_filename_size_and_sha256: true
+    actual_preserved_GF_STEP_3R_task_identity:
+      size_bytes: 19101
+      sha256: 4a786d24d2004f92eb25cc8c6361eb62333d3c3f8ebbffc60950d3f6fed60d2d
+    assessment: internally_inconsistent_identity_description_preserved_without_correction
+    consequence: does_not_change_the_independently_sufficient_missing_attachment_E_failure
+status:
+  Fable_claim: GF_STEP_3R_incomplete_input_integrity_failure
+  repository_storage: exact_task_summary_and_failure_artifact_stored
+  GF_STEP_3R_completed: false
+  GF4_F01_repaired: false
+  GF4_F02_repaired: false
+  GF4_F03_through_F19_touched: false
+  GF_STEP_5_generated_or_started: false
+  comparison_firewall_opened: false
+resumption:
+  allowed_next_action: re_issue_same_GF_STEP_3R_task_in_fresh_Fable_conversation
+  task_prompt_delivery: paste_as_chat_message_not_attachment
+  required_attachments_exactly:
+    - STEP1E
+    - STEP2D
+    - STEP3A
+    - STEP3B
+    - STEP4_self_critique
+  additional_attachments_allowed: false
+boundaries:
+  execution_source_modified: false
+  substantive_Fable_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false
