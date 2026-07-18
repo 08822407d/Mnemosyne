@@ -1,0 +1,49 @@
+task_id: MNEMOSYNE-136
+track_id: FABLE5-GREENFIELD-001
+stored_step: GF-STEP-3R_failed_attempt
+action_actor: ChatGPT_GitHub_app
+authority_level: non_execution_source_storage_and_status_record
+user_authorization:
+  source: authorized_final_phase_handoff_and_current_GF_STEP_3R_failure_delivery
+  preserve_exact_prompt_summary_output: true
+  update_necessary_non_execution_source_records: true
+  create_one_ready_PR_without_reasking: true
+  merge_or_auto_merge: false
+repository:
+  full_name: 08822407d/Mnemosyne
+  visibility_at_preflight: public
+  default_branch: master
+  pinned_base_sha: b86c0ea45af19d8526773697330372050d03db74
+canonical_write_lineage:
+  task_id: MNEMOSYNE-136
+  base_branch: master
+  pinned_base_sha: b86c0ea45af19d8526773697330372050d03db74
+  canonical_branch: mnemosyne-136-preserve-step3r-integrity-failure
+  canonical_pr_number: pending_at_initial_storage_record
+  scope_summary: preserve_GF_STEP_3R_task_failure_summary_integrity_artifact_and_status
+storage:
+  prompt_index: steps/GF-STEP-3R/00-task-as-sent.md
+  chat_summary: steps/GF-STEP-3R/01-fable-chat-summary.md
+  failure_artifact: steps/GF-STEP-3R/02-input-integrity-failure.md
+  step_manifest: steps/GF-STEP-3R/manifest.yaml
+status_sync:
+  GF_STEP_3R:
+    Fable_claimed_status: GF_STEP_3R_incomplete_input_integrity_failure
+    completed: false
+    repairs_performed: 0
+    amendments_issued: 0
+    rerun_required: true
+  GF_STEP_5:
+    generated_or_started: false
+  comparison_firewall:
+    authorized: false
+    opened: false
+boundaries:
+  execution_source_modified: false
+  existing_GPT_design_read_or_compared: false
+  premature_candidate_used: false
+  substantive_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  target_project_action_performed: false
+  parallel_PR_created: false
+  merge_or_auto_merge_performed: false
