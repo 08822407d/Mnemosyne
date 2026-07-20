@@ -1,189 +1,82 @@
 # Handoff Current
 
-- MNEMOSYNE-085 recorded a user-approved interruption marker and resume guard: `task_type: current_state_marker_only`, interrupted route `post_084_handoff_validation_and_migration`, status `suspended_by_user_inserted_long_work`; it is not a residue repair and does not modify execution source.
-- MNEMOSYNE-084 remains the latest substantive residue repair; post-084 validation found no current residue requiring a repair task; official MNEMOSYNE-083 handoff artifacts remain the migration baseline.
-- MNEMOSYNE-083 created the official Meta-Agent phase-closure handoff package and next-conversation startup prompt. Use these repository artifacts for migration; do not use local/sandbox handoff drafts.
-- MNEMOSYNE-082 recorded the Meta-Agent phase-closure decision: the PASS_WITH_WARNINGS dry-run result is accepted as current non-execution-source evidence baseline; high-risk follow-ups are deferred until after handoff; baseline-freeze record created; no handoff package yet and no workspace/material/target-write/execution-source change occurred.
-- MNEMOSYNE-081 created a post-079 pre-handoff stabilization roadmap and regression-candidate triage; MNEMOSYNE-082 later recorded phase closure for handoff preparation only and froze the current baseline.
-- MNEMOSYNE-079 ingested the Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence; maintainer review accepted PASS_WITH_WARNINGS with score 89/100 and no critical blockers; no workspace/material/target-write/execution-source change occurred.
+> Non-execution-source high-signal handoff view. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
-## 仓库
+```yaml
+latest_updated_by_task: MNEMOSYNE-139
+handoff_status: post_interruption_live_wayfinding_converged
+repository: 08822407d/Mnemosyne
+pinned_base_for_MNEMOSYNE_139: c7d7a412341b53036db762866c1e21dbb097be6c
+automatic_next_route: none_requires_explicit_user_selection
+FABLE5_work_in_scope: false
+```
 
-Mnemosyne
+## Current route truth
 
-## 定位
+The MNEMOSYNE-085 interruption marker is historical. It recorded a valid pause at that time, but it is no longer the current continuation instruction after the later Meta-Agent test-only campaign.
 
-Mnemosyne 是记忆系统元 Agent 工作仓库，用于设计、演化和交付 AI Agent 外部持久记忆系统。
+The later reviewed state is:
 
-## Immediate current continuation
+```yaml
+Meta_Agent_test_route:
+  live_status: current/meta-agent-test-route-status.md
+  convergence_status: current/post-interruption-live-wayfinding-status.md
+  behavioral_test_only_objective: complete
+  behavioral_cases: PASS_all_five
+  additional_ordinary_Chat_replay_required: false
+  mechanical_no_write_proof: BLOCKED_optional_future
+  observer_assisted_proof_selected: false
+  product_build_selected: false
+  automatic_continuation: false
+```
 
-- Batch A small fixes: PASS after post-047 and post-048 verification.
-- Batch B Pro review: READY_AFTER_SMALL_FIXES.
-- MNEMOSYNE-048 has created the onboarding package and review instruments.
-- MNEMOSYNE-049 synchronizes current state.
-- The pre-050 fresh ordinary replay was user-supplied and verified PASS for the pre-050 package.
-- MNEMOSYNE-050 changes the onboarding/replay/check semantics, so the prior replay does not close the post-050 gate.
-- MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence under `RC-2026Q2-handoff-strategy`; it is not execution source and does not close the post-050 replay gate.
-- MNEMOSYNE-053 adopted a minimal DR2 handoff-correctness principle into execution source, created handoff strategy and scorecard instruments, and updated the first-target replay protocol.
-- MNEMOSYNE-055 synchronized the post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
-- MNEMOSYNE-056 created a non-execution-source proposal for target-project workspace boundaries and layout. It treats target-project content inside the Mnemosyne repo as an intentional workspace pattern, not merely a Codex Cloud workaround.
-- MNEMOSYNE-057 promoted the minimal target-project workspace principle into execution source and updated first dry-run manifest/onboarding materials; the detailed MNEMOSYNE-056 proposal remains non-execution-source reference.
-- MNEMOSYNE-058 processed PRO-01 and DR4, repaired first-dry-run support-instrument drift, added user-input storage governance guidance, fixed Deep Research output-delivery rule, and strengthened manifest/onboarding approval/status fields.
-- MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected at that time, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected at that time, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
-- MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
-- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls.
-- MNEMOSYNE-064 repaired post-063 current-state sync residue.
-- MNEMOSYNE-065 moved B1 PRO-02/PRO-03 follow-up into the current open-questions section.
-- MNEMOSYNE-066 ingested PRO-04 v2 and DR5, created first-target intake/evaluation/scorecard/postmortem/regression support instruments, and preserved no-target/no-dry-run/no-material/no-write boundaries.
-- MNEMOSYNE-067 repaired post-066 active/handoff current-state sync.
-- MNEMOSYNE-068 ingested the Meta-Agent intake draft and draft run-manifest package as non-execution-source pre-workspace intake records, created the target-project intake filling guide, and selected Meta-Agent for draft manifest preparation only; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-069 repaired post-068 temporal current-state contamination: older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; Meta-Agent dry-run route is clarified as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
-- MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard when Meta-Agent requirements analysis was still pending in an external dialogue, and the then-current draft run-manifest package was only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only; requirements analysis remains incomplete; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-072 repaired post-071 current-route residue so the live next route points to v0.2.
-- MNEMOSYNE-073 recorded user approval of Meta-Agent v0.2 as review/preparation baseline only and created the post-v0.2 next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
-- The replay-quality portion of the first-target dry-run gate is satisfied.
-- MNEMOSYNE-074 recorded post-v0.2 gate decisions and created Meta-Agent final run manifest candidate v0.1 for user review only; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-076 recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only and created preparation/evidence/operator prompt package; actual dry-run execution was unapproved at that time; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-077 repaired post-076 current-state live-route residue so the next route consistently points to actual controlled dry-run execution decision.
-- MNEMOSYNE-078 recorded user approval for actual Meta-Agent controlled no-target-write dry-run execution in a separate high-reasoning ChatGPT conversation and created approved execution prompt / return preflight; Codex Cloud execution was not approved and no dry-run was executed by that task.
-- MNEMOSYNE-079 ingested the Meta-Agent controlled no-target-write dry-run result as non-execution-source evidence; maintainer review accepted PASS_WITH_WARNINGS with score 89/100 and no critical blockers; no workspace/material/target-write/execution-source change occurred.
-- MNEMOSYNE-081 created a post-079 pre-handoff stabilization roadmap and regression-candidate triage; MNEMOSYNE-082 later recorded phase closure for handoff preparation only and froze the current baseline.
-- One Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings.
-- No target workspace has been created.
-- No target materials have been uploaded/ingested.
-- No target-project repository has been written.
-
-## Read for first dry-run preparation
-
-- `notes/first-target-project-fresh-replay-protocol.md`
-- `notes/handoff-package-strategy-v0.1.md` for package-author/reviewer handoff tier strategy.
-- `notes/handoff-replay-scorecard-v0.1.md` for maintainer replay review.
-- `handoff/first-target-project-dry-run-onboarding-package.md`
-- `notes/first-target-project-dry-run-manifest-template.md`
-- Instruments listed by the onboarding package.
+No new route begins merely because the inserted long work has ended. The user must explicitly select a new task.
 
 ## Current execution source
 
 - `current/human-approved-spec.md` is the only execution source.
-- If any handoff/current/research/candidate/result file conflicts with the spec, follow the spec and record an open question.
+- Current status, handoff, task-result, review, research, and frozen transfer files are not execution source.
+- When a non-execution-source record conflicts with the execution source, follow the execution source and record the conflict.
 
-## Key prohibitions
+## Authoritative current references
 
-- Do not use non-execution sources as execution source.
-- Do not treat raw records, research reports, candidate requirements, decision logs, active-context, handoff, startup instructions, or task result records as execution source.
-- Do not claim PDF figure/table/image/layout review unless it was actually performed.
-- Do not commit secrets, credentials, private source, customer/confidential material, unapproved personal data, or other sensitive material.
-- Do not treat multi-model review as truth voting, execution source, or automatic writeback authority.
-- Do not create AGENTS.md, CLAUDE.md, GitHub Actions, automation, MCP, RAG, or auto-writeback unless explicitly approved by a current task.
-- Do not use unpromoted MNEMOSYNE-031 R4/R5 material as executable requirements; use the coverage map for promotion status.
-- Do not promote D-01-D-07 candidate wording without separate user approval.
-- Do not claim dry-run/pass/target selection occurred.
-- Do not write target project.
-- Do not use unsafe inputs.
+Read, in this order when resuming non-FABLE maintenance:
 
-## Recent checkpoints
+1. `current/human-approved-spec.md`;
+2. `current/post-interruption-live-wayfinding-status.md`;
+3. `current/meta-agent-test-route-status.md`;
+4. `current/review-and-validation-status.md`;
+5. `current/meta-agent-replay-mechanical-proof-decision.md`, only when mechanical proof is relevant.
 
-- MNEMOSYNE-040: DR1 memory-testing/debugging/evaluation evidence ingested; OP-09 and OP-10 are partially answered, not closed.
-- MNEMOSYNE-041: manual import inbox workflow established.
-- MNEMOSYNE-042: user-action-first reply format added to execution source.
-- MNEMOSYNE-043: manual-import safety gate established.
-- MNEMOSYNE-044: D-01–D-07 execution-source coverage map created.
-- MNEMOSYNE-045: compact current state/startup cleanup completed.
-- MNEMOSYNE-046: minimal dry-run profile, checklist, issue-log template, and result template created as non-execution-source instruments.
-- MNEMOSYNE-047: final Batch A residuals corrected; post-047 ordinary Mnemosyne conversation verification returned PASS.
-- MNEMOSYNE-048: ordinary Mnemosyne conversation verification returned PASS; onboarding package and review instruments created for first target-project dry-run preparation.
-- MNEMOSYNE-049: current state synchronized after 048; fresh ordinary Thinking startup/handoff replay became the next gate.
-- MNEMOSYNE-050: stable manifest/replay protocols and unified result semantics added; post-050 fresh ordinary Thinking replay is now required.
-- MNEMOSYNE-051: DR2 handoff-strategy research ingested as evidence; future sessions should read the DR2 summary when discussing handoff scoring, provenance, replay readiness, or first-dry-run readiness. DR2 is not execution source and does not close the post-050 replay gate.
-- MNEMOSYNE-053: minimal DR2 handoff-correctness principle adopted into execution source; handoff package strategy and replay scorecard created as non-execution-source instruments; first-target replay protocol updated to post-053 scoring/review semantics.
-- MNEMOSYNE-055: post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) synchronized; stale open-questions gate wording repaired.
-- MNEMOSYNE-056: target-project workspace boundary/layout proposal created as non-execution-source candidate design; no target project selected, no target materials ingested, no target repository written, and execution source unchanged.
-- MNEMOSYNE-057: minimal target-project workspace principle promoted into execution source and first dry-run manifest/onboarding updated; no target project selected at that time, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-058: PRO-01 and DR4 processed; Deep Research delivery rule fixed; first dry-run support instruments and user-input governance hardened; no target project selected at that time, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-059 ingested and indexed the corrected DR4 Deep Research prompt original and repaired post-058 compact current-state sync; no target project selected at that time, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-060 repaired the post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target project selected at that time, no target workspace created, no target materials ingested, no target repository written.
-- MNEMOSYNE-061 added staged Pro/Deep Research prompt-generation guidance: high-cost prompt batches must declare execution location, ask for model-strength switch when needed, and avoid downstream prompt generation until upstream results are reviewed when dependency risk exists.
-- MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
-- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; later PRO-04/DR5 ingestion completed in MNEMOSYNE-066.
-- MNEMOSYNE-064 repaired post-063 current-state sync residue.
-- MNEMOSYNE-065 moved B1 follow-up into the current open-questions section.
-- MNEMOSYNE-066 ingested PRO-04 v2 and DR5 and created first-target support instruments.
-- MNEMOSYNE-067 repaired post-066 active/handoff current-state sync and opened first-target intake route.
-- MNEMOSYNE-068 ingested the Meta-Agent intake draft and draft run-manifest package as non-execution-source pre-workspace intake records, created the target-project intake filling guide, and selected Meta-Agent for draft manifest preparation only.
-- MNEMOSYNE-069 repaired post-068 temporal current-state contamination: older checkpoints no longer imply Meta-Agent was selected before MNEMOSYNE-068; Meta-Agent dry-run route is clarified as controlled no-target-write evaluation/design-package generation, not direct operational memory-system installation.
-- MNEMOSYNE-070 added the Meta-Agent analysis-alignment guard: Meta-Agent requirements analysis remains pending in an external dialogue, and the current draft run-manifest package is only a provisional pre-analysis scaffold; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-071 ingested the external Meta-Agent requirements-analysis alignment package and created revised draft manifest package v0.2 for user review only; requirements analysis remains incomplete; no workspace/material/dry-run/target-write occurred.
+The official MNEMOSYNE-082/083 handoff artifacts remain frozen historical transfer evidence. Do not edit or treat their old next-step fields as live instructions.
 
-## Next route
+## Available future routes
 
-1. MNEMOSYNE-085 recorded a user-approved interruption marker for the interrupted route `post_084_handoff_validation_and_migration`; the route is paused because the user is inserting longer work.
-2. Inserted long work may proceed only when specified by the user; do not use this marker to begin that work.
-3. After the inserted long work completes or the user asks to resume, remind the user to continue or choose the paused post-handoff path.
-4. The paused post-handoff path remains: review MNEMOSYNE-084 if needed; use `handoff/meta-agent-next-conversation-startup-prompt.md`; provide or reference `handoff/meta-agent-post-079-phase-closure-handoff-package.md`; choose a post-handoff path only after explicit user decision.
-5. Live-route safety note: the official MNEMOSYNE-083 startup prompt is a frozen MNEMOSYNE-083-era artifact; after MNEMOSYNE-084 and MNEMOSYNE-085, its `completed_through: MNEMOSYNE-083` field and `MNEMOSYNE-084_only_if_post_083_residue_guard` are superseded by live current-state files and this `handoff/handoff-current.md`. Do not re-propose MNEMOSYNE-084 or MNEMOSYNE-085; any future repair requires a new explicit user-approved task number.
-6. Do not propose MNEMOSYNE-080/081/082 again.
-7. This marker does not approve workspace/material/target-write/build/regression-formalization, target repository write, operational memory-system installation, or execution-source update.
+Each option requires a new task ID and explicit user selection:
 
-- Current preparation package:
-  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-preparation-plan-v0.1.md`
-  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-evidence-and-no-write-proof-plan-v0.1.md`
-  - `notes/first-target-project-intake-records/meta-agent/meta-agent-controlled-dry-run-operator-prompt-package-v0.1.md`
-- Historical preparation package is superseded by MNEMOSYNE-079 ingestion of the controlled no-target-write dry-run result as non-execution-source evidence.
-- One Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings.
-- No target workspace has been created.
-- No target materials have been uploaded/ingested.
-- No target repository has been written.
+- a bounded non-FABLE comprehensive Mnemosyne health review;
+- deliberate adjudication of `HO-GUIDANCE-001`;
+- observer-assisted mechanical no-write proof;
+- a separately approved target-project phase;
+- another maintenance route chosen by the user.
 
-## MNEMOSYNE-051 / DR2 handoff-strategy evidence
+No option is selected by this handoff record.
 
-- DR2 handoff-strategy research has been ingested as evidence under `RC-2026Q2-handoff-strategy`.
-- Future sessions should read `raw/research-reports/cycles/2026Q2-handoff-strategy/report-summaries/DR2_mnemosyne_handoff_strategy_quantitative_evaluation_summary.md` when discussing handoff package correctness, quantitative scoring, replay strategy, model/tool provenance, or pre-first-target-dry-run readiness.
-- DR2 is not execution source and does not by itself modify current gates.
-- DR2 changed the current required gate only through user-approved MNEMOSYNE-053: the gate is now post-MNEMOSYNE-053 replay with maintainer scorecard review.
+## Prohibitions and authority boundaries
 
-## MNEMOSYNE-062 / 063 checkpoint
+- Do not automatically resume the old `post_084_handoff_validation_and_migration` wording.
+- Do not repeat ordinary-Chat Meta-Agent replays for the completed behavioral objective.
+- Do not reinterpret behavioral PASS as package-level no-write closure.
+- Do not reinterpret mechanical BLOCKED as behavioral failure.
+- Do not approve a §19 no-write exception.
+- Do not create a target workspace.
+- Do not ingest target materials.
+- Do not access or write a target repository.
+- Do not start an operational Meta-Agent build or installation.
+- Do not promote regression specifications into the execution source or automatic global rules.
+- Do not modify `current/human-approved-spec.md` without separate explicit approval.
+- Do not take over, review, design, or otherwise advance FABLE5 work; it remains in its dedicated conversation.
 
-- MNEMOSYNE-062 blocked because PRO-02/PRO-03 payloads were absent from `manual-import-inbox`; no hardening was applied.
-- MNEMOSYNE-063 ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls; MNEMOSYNE-064 and MNEMOSYNE-065 repaired B1 current-state residue, and MNEMOSYNE-066 later completed PRO-04/DR5 ingestion. Historical downstream prompt-generation guidance from this checkpoint is superseded by the MNEMOSYNE-067 next route.
-- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings; no repository/Codex dry-run occurred.
-- No target materials have been uploaded/ingested.
-- No target project repository has been written.
+## Historical records
 
-## MNEMOSYNE-066 / 067 / 068 / 069 checkpoint and next route
-
-- MNEMOSYNE-066 ingested PRO-04 v2 and DR5, created first-target intake/evaluation/scorecard/postmortem/regression support instruments, and preserved no-target/no-dry-run/no-material/no-write boundaries.
-- MNEMOSYNE-067 repaired post-066 active/handoff current-state sync and opened first-target intake route.
-
-1. Review Meta-Agent revised draft manifest package v0.2.
-2. Ask user to approve v0.2 as revised draft for review-only, request revision, reject current draft, or continue external requirements analysis.
-3. Do not upload raw materials.
-4. Do not create `target-projects/meta-agent/`.
-5. Do not start real dry-run or write target repository before approved run manifest and required approvals.
-
-## MNEMOSYNE-068 references
-
-- `notes/target-project-intake-form-filling-guide-v0.1.md`
-- `notes/first-target-project-intake-records/README.md`
-- `notes/first-target-project-intake-records/meta-agent/meta-agent-first-target-draft-run-manifest-package-v0.2.md`
-- Historical note superseded by MNEMOSYNE-079: one Meta-Agent controlled no-target-write dry-run has now been executed outside Codex and ingested as non-execution-source evidence with warnings; no workspace/material/target-write occurred.
-- No target workspace has been created.
-- No target materials have been uploaded/ingested.
-- No target repository has been written.
-
-
-## MNEMOSYNE-079 next route
-
-1. Review the MNEMOSYNE-079 dry-run ingestion result and maintainer review.
-2. Ask user to choose next Meta-Agent path: accept result as current evidence baseline, continue requirements analysis, request repair run, convert regression candidates, or plan later workspace/material phase.
-3. Do not create `target-projects/meta-agent/` without separate approval.
-4. Do not ingest target materials without separate approval.
-5. Do not write target repository.
-6. Do not treat PASS_WITH_WARNINGS as production-ready, target delivery, or execution-source update approval.
-
-- No target workspace has been created.
-- No target materials have been uploaded/ingested.
-- No target repository has been written.
-- Current Meta-Agent dry-run result: `notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md`.
+Historical detail remains available in Git history and the task/result records for MNEMOSYNE-079 through MNEMOSYNE-122. The former MNEMOSYNE-085 continuation wording in `current/active-context.md`, `current/todo.md`, and `current/open-questions.md` is retained as historical evidence but is superseded for this route by the current references above.

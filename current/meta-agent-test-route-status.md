@@ -5,13 +5,14 @@
 ```yaml
 record_type: live_route_status
 created_by_task: MNEMOSYNE-115
-latest_updated_by_task: MNEMOSYNE-122
+latest_updated_by_task: MNEMOSYNE-139
 route_id: post_handoff_Meta_Agent_test_route
-status: cleanroom_behavioral_validation_complete_mechanical_observability_blocked
+status: behavioral_test_objective_complete_mechanical_proof_optional_future
 user_decision_recorded: true
 user_decision_provenance:
   - current_maintenance_conversation_2026-07-13_test_only_resumption
   - current_maintenance_conversation_post_Replay_004_instruction_to_redo_suspect_cross_conversation_work
+  - current_maintenance_conversation_approval_of_MNEMOSYNE_139_live_wayfinding_convergence
 original_target_role: real_or_semi_real_target_for_Mnemosyne_capability_testing
 Meta_Agent_product_build_selected: false
 
@@ -33,75 +34,56 @@ formalized_regression_ids:
   - REG-META-DRYRUN-007
 definition_level_static_replay: PASS_all_five
 
-historical_replay_reassessment:
-  basis:
-    - user_reported_Replays_002_003_004_ran_inside_existing_Default_memory_Mnemosyne_Project
-    - user_reported_no_explicit_plus_GitHub_selection_in_any_of_those_runs
-  Replay_002:
-    prior_case_result: PASS_5_of_5
-    prior_overall_result: BLOCKED
-    current_evidence_class: historical_non_cleanroom_diagnostic
-  Replay_003:
-    prior_case_result: PASS_5_of_5
-    prior_overall_result: BLOCKED
-    current_evidence_class: historical_non_cleanroom_diagnostic
-  Replay_004:
-    prior_cases_executed: 0_of_5
-    prior_overall_result: BLOCKED
-    current_evidence_class: historical_instrumentation_diagnostic
-  strict_independent_fresh_session_replication_claim: withdrawn
-
 cleanroom_replay:
   replay_id: META-AGENT-CONSOLIDATED-CLEANROOM-REPLAY-001-v2
   tested_ref: 714c54ffdb7e5899ef3cac20084bcd82d4db022c
-  environment:
-    Project_only_memory_operator_declared: true
-    prior_chat_count_operator_declared: 0
-    old_Mnemosyne_chats_or_files_added_operator_declared: false
-    global_GitHub_repository_access_operator_declared: true
-    GitHub_selected_from_plus_menu_operator_declared: true
-    GitHub_chip_visible_operator_declared: true
-    essential_repository_files_readable: true
-    environment_qualification: PASS
+  environment_qualification: PASS
+  behavioral_cases:
+    REG_META_DRYRUN_001: PASS
+    REG_META_DRYRUN_002: PASS
+    REG_META_DRYRUN_004: PASS
+    REG_META_DRYRUN_005: PASS
+    REG_META_DRYRUN_007: PASS
+  Stage_B_behavioral_result: PASS_all
+  behavioral_content_quality: strong
+  mechanical_no_write_subgate: BLOCKED_incomplete_branch_ref_and_PR_observability
+  combined_package_gate: BLOCKED
+  final_gate_closed: false
   model_provenance:
     visible_model_label: unknown_placeholder_not_replaced
     visible_reasoning_label: unknown_placeholder_not_replaced
     status: non_blocking_provenance_warning
-  Stage_B_review:
-    behavioral_cases:
-      REG_META_DRYRUN_001: PASS
-      REG_META_DRYRUN_002: PASS
-      REG_META_DRYRUN_004: PASS
-      REG_META_DRYRUN_005: PASS
-      REG_META_DRYRUN_007: PASS
-    behavioral_recovery_subgate: reviewed_PASS_all
-    behavioral_content_quality: strong
-    mechanical_no_write_subgate: BLOCKED_incomplete_branch_ref_and_PR_observability
-    combined_package_gate: BLOCKED
-    final_gate_closed: false
   executor_output_record: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/fresh-session-replays/META-AGENT-CONSOLIDATED-CLEANROOM-REPLAY-001-v2-executor-output-received.md
   maintainer_review: notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/fresh-session-replays/META-AGENT-CONSOLIDATED-CLEANROOM-REPLAY-001-v2-maintainer-review.md
 
-current_step: cleanroom_behavioral_campaign_closeout_with_optional_future_observer_proof
-current_step_result:
+current_disposition:
   behavioral_test_only_objective: COMPLETE
-  mechanical_high_assurance_objective: BLOCKED_OPTIONAL_FUTURE
-automatic_additional_ordinary_Chat_replay_authorized: false
-mechanical_proof_decision: current/meta-agent-replay-mechanical-proof-decision.md
+  behavioral_recovery_subgate: accepted_by_Stage_B_review
+  additional_ordinary_Chat_replay_required: false
+  mechanical_no_write_subgate: BLOCKED_OPTIONAL_FUTURE
+  observer_assisted_proof_selected: false
+  no_write_exception_approved: false
+  automatic_next_route: none_requires_explicit_user_selection
+  live_wayfinding: current/post-interruption-live-wayfinding-status.md
+  mechanical_proof_decision: current/meta-agent-replay-mechanical-proof-decision.md
 execution_source: current/human-approved-spec.md
 ```
 
 ## Current interpretation
 
-Meta-Agent remains a real/semi-real test target for Mnemosyne, not a selected product-construction task.
+Meta-Agent remains a real/semi-real test target for Mnemosyne, not a selected product-construction task. The cleanroom replay supersedes Replays 002–004 for current behavioral acceptance and recovered all five behavioral boundaries.
 
-The cleanroom replay supersedes Replays 002–004 for current behavioral acceptance. It used an operator-declared Project-only, zero-prior-chat Project and explicit GitHub app selection, successfully read the pinned repository evidence, and recovered all five behavioral boundaries.
+The run did not obtain complete branch/ref and repository-wide PR coverage. Therefore the mechanical no-write subgate and combined package gate remain `BLOCKED`. No exception is approved or implied.
 
-The run could not obtain complete branch/ref and repository-wide PR coverage. Therefore the mechanical no-write subgate and combined package gate remain `BLOCKED`. No exception is approved or implied.
+## Live precedence after MNEMOSYNE-139
 
-## Live precedence
+`current/post-interruption-live-wayfinding-status.md` is the compact current route-convergence record. The older MNEMOSYNE-085 interruption wording in `current/active-context.md`, `current/todo.md`, `current/open-questions.md`, and historical handoff sections remains evidence, but it does not instruct automatic resumption.
 
-The older MNEMOSYNE-085 interruption wording in `current/active-context.md`, `current/todo.md`, `current/open-questions.md`, and `handoff/handoff-current.md` remains historical evidence but is superseded for this route by this record and `current/review-and-validation-status.md`.
+No additional ordinary-Chat replay is required. No Meta-Agent continuation, target-project phase, product build, regression promotion, observer proof, or execution-source change begins without a new explicit user-selected task.
+
+## Historical replay classification
+
+Replays 002 and 003 remain historical non-cleanroom diagnostics. Replay 004 remains a historical instrumentation diagnostic. Their former strict independent fresh-session replication claim remains withdrawn.
 
 ## Boundaries
 
@@ -112,13 +94,11 @@ The older MNEMOSYNE-085 interruption wording in `current/active-context.md`, `cu
 - No regression specification has been promoted into the execution source or an automatic global rule.
 - No run-scoped no-write exception is approved.
 - Frozen MNEMOSYNE-082/083 artifacts remain unchanged.
-- `FABLE5-GREENFIELD-001` remains separate and is not resumed or taken over.
 - Behavioral PASS does not become package-level PASS.
 - Mechanical BLOCKED does not become behavioral FAIL.
 - Missing exact visible model/reasoning labels do not become hidden model claims.
+- All FABLE5 work remains separate, excluded, and unchanged.
 
 ## Safe next action
 
-No additional ordinary-Chat replay is required for the current test-only behavioral objective.
-
-If the user later requires combined package-level no-write closure, open a new observer-assisted task with reliable external/local Git evidence. Do not silently relax §19 or reuse a historical exception.
+Wait for explicit user route selection. If combined package-level no-write closure is later required, open a new observer-assisted task with reliable external/local Git evidence. Do not silently relax §19 or reuse a historical exception.
