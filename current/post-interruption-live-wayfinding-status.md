@@ -3,17 +3,17 @@
 > Non-execution-source live wayfinding record. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-record_type: live_wayfinding_convergence
-task_id: MNEMOSYNE-139
+record_type: live_wayfinding_selection
+created_by_task: MNEMOSYNE-139
+latest_updated_by_task: MNEMOSYNE-140
 route: post_MNEMOSYNE_085_interruption_convergence
-status: converged_no_automatic_Meta_Agent_continuation
-pinned_base: c7d7a412341b53036db762866c1e21dbb097be6c
+status: non_FABLE_comprehensive_health_review_selected_and_handoff_prepared
+prepared_from_master: 3cf6e5116a360c3f131ad4dfd472a819300ba461
 user_decision_recorded: true
-user_authorization:
-  - converge_live_wayfinding_after_MNEMOSYNE_085
-  - record_Meta_Agent_behavioral_test_objective_complete
-  - keep_mechanical_no_write_proof_optional_future_only
-  - exclude_all_FABLE5_work
+selected_next_route: bounded_non_FABLE_comprehensive_Mnemosyne_health_review
+selected_review_id: MNEMOSYNE-NON-FABLE-COMPREHENSIVE-HEALTH-REVIEW-001
+handoff_package: handoff/mnemosyne-non-fable-comprehensive-health-review-handoff-package.md
+startup_prompt: handoff/mnemosyne-non-fable-comprehensive-health-review-startup-prompt.md
 execution_source: current/human-approved-spec.md
 ```
 
@@ -28,37 +28,50 @@ Meta_Agent_test_route:
   additional_ordinary_Chat_replay_required: false
   mechanical_no_write_subgate: BLOCKED_incomplete_observability
   mechanical_no_write_proof: optional_future_only
+  observer_assisted_proof_selected: false
   combined_package_gate: remains_open
-  automatic_next_route: none_requires_explicit_user_selection
+  automatic_continuation: false
+
+selected_non_FABLE_route:
+  task: comprehensive_Mnemosyne_health_review
+  mode: read_only
+  receiver_repository_writes: prohibited
+  execution_source_update: prohibited
+  FABLE5_work: excluded
 ```
 
-The cleanroom behavioral campaign completed its test-only objective. Mechanical no-write proof was not fabricated or waived. A higher-assurance proof may be opened later only as a new, explicitly authorized observer-assisted task with reliable external or local Git evidence.
+The Meta-Agent cleanroom behavioral campaign completed its test-only objective. Mechanical no-write proof was not fabricated or waived and is not the selected next task.
+
+The user has now explicitly selected a bounded non-FABLE comprehensive health review as the next route. That selection is transferred through the repository-backed handoff package; it does not authorize repairs or repository writes.
 
 ## Superseded interruption wording
 
-The MNEMOSYNE-085 wording that described `post_084_handoff_validation_and_migration` as paused by inserted long work is retained as historical evidence. It is not the live next-step instruction after MNEMOSYNE-115 through MNEMOSYNE-122.
+The MNEMOSYNE-085 wording that described `post_084_handoff_validation_and_migration` as paused by inserted long work remains historical evidence. It is not the live next-step instruction after MNEMOSYNE-115 through MNEMOSYNE-122 and MNEMOSYNE-139.
 
-For the Meta-Agent test route, this file and `current/meta-agent-test-route-status.md` take precedence over stale MNEMOSYNE-085 continuation wording in:
+For the current route, this file, `handoff/handoff-current.md`, the paired MNEMOSYNE-140 package, and `current/meta-agent-test-route-status.md` take precedence over stale MNEMOSYNE-085 continuation wording in:
 
 - `current/active-context.md`;
 - `current/todo.md`;
 - `current/open-questions.md`;
-- older sections of `handoff/handoff-current.md`;
 - frozen MNEMOSYNE-082/083 transfer artifacts.
 
-Those records remain non-execution-source evidence and are not rewritten by this task where doing so would mix unrelated routes or touch excluded FABLE5 material.
+Those mixed-route records remain non-execution-source evidence. They are review inputs for backlog hygiene, not automatic action plans.
 
-## Safe route selection
+## Selected handoff
 
-No route starts automatically. A later user may explicitly select one of the following as a new task:
+```yaml
+handoff:
+  package_id: MNEMOSYNE-NON-FABLE-COMPREHENSIVE-HEALTH-REVIEW-HANDOFF-001
+  package_path: handoff/mnemosyne-non-fable-comprehensive-health-review-handoff-package.md
+  startup_prompt_path: handoff/mnemosyne-non-fable-comprehensive-health-review-startup-prompt.md
+  receiver_guidance_load:
+    project_guidance: not_applicable
+    mnemosyne_guidance: required
+    operations_are_separate: true
+  source_conversation_may_retire_after_PR_merge: true
+```
 
-1. bounded non-FABLE comprehensive Mnemosyne health review;
-2. deliberate review of `HO-GUIDANCE-001`;
-3. observer-assisted mechanical no-write proof;
-4. a separately authorized target-project phase;
-5. another maintenance priority selected by the user.
-
-Selecting any route requires a new task ID and current authorization. Historical approval for the test-only Meta-Agent campaign does not authorize product construction, target workspace creation, material ingestion, target-repository access/write, operational build, regression promotion, or execution-source modification.
+The receiving conversation first completes handoff receive and stops. The user then sends `加载 MNEMOSYNE 约束指导` as a separate operation. Only after that refresh may the receiver begin the read-only health review.
 
 ## Boundaries
 
@@ -71,4 +84,5 @@ Selecting any route requires a new task ID and current authorization. Historical
 - No §19 no-write exception is approved.
 - Mechanical `BLOCKED` is not reinterpreted as behavioral failure.
 - Behavioral `PASS` is not reinterpreted as package-level no-write closure.
-- All FABLE5 review, independent-design, Greenfield, and result-storage work is excluded and remains owned by its separate conversation.
+- The selected review is read-only and cannot repair findings without a later explicit authorization and fresh task ID.
+- All FABLE5 review, independent-design, Greenfield, comparison, task-generation, and result-storage work is excluded and remains owned by its separate conversation.
