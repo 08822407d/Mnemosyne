@@ -17,7 +17,7 @@ user_authorization:
 base_branch: master
 pinned_base_sha: 3cf6e5116a360c3f131ad4dfd472a819300ba461
 canonical_branch: mnemosyne-140-non-fable-health-review-handoff
-canonical_pr_number: pending_at_initial_record
+canonical_pr_number: 191
 execution_source_modified: false
 repository_write_authorized_for_receiver_review: false
 target_workspace_created: false
@@ -121,8 +121,25 @@ github_write_lineage_preflight:
   accessible_open_PRs_before_branch_creation: []
   exact_task_PR_matches_before_creation: []
   intended_branch_matches_before_creation: []
+  accessible_open_PRs_immediately_before_PR_creation: []
+  post_creation_canonical_PR: 191
+  related_open_PRs: []
   decision: create_single_new_lineage
   pagination_limitation: connector_did_not_expose_repository_wide_completeness_attestation
+```
+
+## Pull request
+
+```yaml
+canonical_pull_request:
+  number: 191
+  title: MNEMOSYNE-140 prepare non-FABLE comprehensive health review handoff
+  head: mnemosyne-140-non-fable-health-review-handoff
+  base: master
+  draft: false
+  auto_merge: false
+  merge_authorized: false
+  exactly_one_merge_target: true
 ```
 
 ## Boundaries
@@ -145,4 +162,4 @@ MNEMOSYNE-140 does not:
 
 ## Safe next action
 
-Create exactly one ready PR for this handoff package. After that PR merges, the user should start a fresh conversation, explicitly select GitHub, and paste the paired startup prompt. The source conversation may then retire without another post-merge status-only PR.
+Review and merge only PR #191. After merge, start a fresh conversation, explicitly select GitHub, and paste the paired startup prompt from `handoff/mnemosyne-non-fable-comprehensive-health-review-startup-prompt.md`. After the receive report, send `加载 MNEMOSYNE 约束指导` as a separate message. The source conversation may then retire without another post-merge status-only PR.
