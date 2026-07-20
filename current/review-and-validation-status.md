@@ -114,6 +114,30 @@ platform_context_apps_delta_after_MNEMOSYNE_123:
     name: artifact_delivery_and_direct_low_risk_generation_repair
     requires_explicit_user_approval_for_execution_source_update: true
 
+artifact_delivery_after_MNEMOSYNE_137:
+  live_status: current/artifact-delivery-repair-status.md
+  guard: current/artifact-delivery-and-direct-generation-guard.md
+  validation_id: MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001
+  evidence_root: notes/artifact-delivery-validation-results/MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001/
+  tested_guard_blob_sha: 95f9f404e5de0d06b52a9be314b2fb2e76636ac2
+  executor_result: PASS
+  Stage_B_reviewed_result: PASS
+  cases:
+    ARTIFACT_DELIVERY_001: PASS
+    ARTIFACT_DELIVERY_002: PASS
+    ARTIFACT_DELIVERY_003: PASS
+    ARTIFACT_DELIVERY_004: PASS
+    ARTIFACT_DELIVERY_005: NOT_RUN
+  long_artifact_file_first_verified: true
+  same_response_generation_verified: true
+  short_inline_behavior_verified: true
+  Deep_Research_exception_verified: true
+  invented_path_or_false_delivery_detected: false
+  issue_disposition:
+    issue_170: closure_conditions_satisfied_close_on_MNEMOSYNE_137_PR_merge
+    issue_171: closure_conditions_satisfied_close_on_MNEMOSYNE_137_PR_merge
+  execution_source_modified: false
+
 handoff_guidance_after_MNEMOSYNE_118:
   execution_source_rule: current/human-approved-spec.md#15-交接与续接正确性原则
   mnemosyne_handoff_explicit_guidance_refresh_required: true
@@ -127,9 +151,13 @@ handoff_guidance_after_MNEMOSYNE_118:
     status: active_user_approved_behavior_guard
     default_rule: one_task_id_one_canonical_write_branch_at_most_one_open_canonical_PR
 
-open_workflow_issues:
-  long_artifact_file_first_delivery: issue_170
-  direct_low_risk_artifact_generation: issue_171
+workflow_issue_dispositions:
+  issue_170:
+    validation: PASS
+    close_on_MNEMOSYNE_137_PR_merge: true
+  issue_171:
+    validation: PASS
+    close_on_MNEMOSYNE_137_PR_merge: true
 ```
 
 ## Pro adjudication outcomes
@@ -163,12 +191,21 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - The report's external platform findings are useful; exact repository-state mappings rely on the maintainer review because the report did not use connected apps and listed only README/Issues #170/#171 as repository reads.
 - Candidate repairs remain staged and require separate user approval where execution-source changes are involved.
 
+## Artifact-delivery validation outcome
+
+- The fresh Project-only guided conversation completed Cases 001–004 with reviewed `PASS`; conditional Case 005 was `NOT_RUN` because no natural file-generation failure occurred.
+- Three returned synthetic Markdown artifacts were downloaded by the operator, brought back to the maintenance conversation, and mechanically checked against their reported size and SHA-256.
+- Long transfer file-first behavior, same-response low-risk generation, short inline behavior, and the Deep Research final-report-body exception are verified for this run.
+- No invented path, broken returned artifact, false delivery, or future-generation-only response was detected.
+- Issue #170 and Issue #171 closure conditions are satisfied. The user authorized closure through the MNEMOSYNE-137 closeout PR merge.
+- Case 005 remains unvalidated, and this behavior run is not a formal §19 no-write proof.
+
 ## Conversation handoff boundary
 
 - The resumed Meta-Agent route remains regression hardening and replay validation for Mnemosyne, not Meta-Agent product construction.
 - Behavioral and mechanical results remain separate.
 - A future observer-assisted proof run requires a new explicit task; it is not the automatic next step.
-- DR6 does not automatically change the execution source or close workflow issues.
+- DR6 does not automatically change the execution source.
 
 ## Current boundaries and incomplete work
 
@@ -176,7 +213,7 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - Cleanroom behavioral validation is complete at 5/5 PASS.
 - Complete mechanical no-write proof remains unavailable.
 - DR6 platform evidence has been ingested with corrections.
-- Issues #170 and #171 remain open pending an explicit repair task.
+- Artifact-delivery behavior validation is Stage-B reviewed `PASS`; Issues #170 and #171 are authorized to close when the MNEMOSYNE-137 PR merges.
 - `HO-GUIDANCE-001` remains unresolved and is separate from Issue #171.
 - No target workspace, target material, target repository write, or operational build has occurred.
 - Meta-Agent product-development subroutes remain unselected and unauthorized.
