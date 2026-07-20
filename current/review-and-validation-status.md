@@ -109,12 +109,14 @@ platform_context_apps_delta_after_MNEMOSYNE_123:
     - connected_apps_not_used_by_report
     - repository_read_manifest_limited_to_README_and_Issues_170_171
     - opaque_Deep_Research_citation_markers_not_portable
-  next_recommended_task:
-    candidate_id: MNEMOSYNE_124
-    name: artifact_delivery_and_direct_low_risk_generation_repair
-    requires_explicit_user_approval_for_execution_source_update: true
+  artifact_delivery_repair_follow_through:
+    original_candidate_id: MNEMOSYNE_124
+    active_guard_implemented_by: MNEMOSYNE_127
+    validation_and_issue_closeout_completed_by: MNEMOSYNE_137
+    post_merge_status_finalized_by: MNEMOSYNE_138
+    next_recommended_task_for_artifact_delivery_route: none_route_complete
 
-artifact_delivery_after_MNEMOSYNE_137:
+artifact_delivery_after_MNEMOSYNE_138:
   live_status: current/artifact-delivery-repair-status.md
   guard: current/artifact-delivery-and-direct-generation-guard.md
   validation_id: MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001
@@ -133,9 +135,14 @@ artifact_delivery_after_MNEMOSYNE_137:
   short_inline_behavior_verified: true
   Deep_Research_exception_verified: true
   invented_path_or_false_delivery_detected: false
+  PR_188:
+    state: merged
+    merged_at: 2026-07-20T13:34:45Z
+    merge_commit: fd6d4ee28914ef516108241b259a96a2b6f71535
   issue_disposition:
-    issue_170: closure_conditions_satisfied_close_on_MNEMOSYNE_137_PR_merge
-    issue_171: closure_conditions_satisfied_close_on_MNEMOSYNE_137_PR_merge
+    issue_170: closed_completed_via_PR_188
+    issue_171: closed_completed_via_PR_188
+  mainline_status: complete
   execution_source_modified: false
 
 handoff_guidance_after_MNEMOSYNE_118:
@@ -154,10 +161,14 @@ handoff_guidance_after_MNEMOSYNE_118:
 workflow_issue_dispositions:
   issue_170:
     validation: PASS
-    close_on_MNEMOSYNE_137_PR_merge: true
+    state: closed
+    state_reason: completed
+    closed_via: PR_188_merge
   issue_171:
     validation: PASS
-    close_on_MNEMOSYNE_137_PR_merge: true
+    state: closed
+    state_reason: completed
+    closed_via: PR_188_merge
 ```
 
 ## Pro adjudication outcomes
@@ -189,7 +200,7 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - Maintainer review independently rechecked the most load-bearing OpenAI facts.
 - The original report is preserved unchanged; summary/current views correct its Issue #171 mapping error.
 - The report's external platform findings are useful; exact repository-state mappings rely on the maintainer review because the report did not use connected apps and listed only README/Issues #170/#171 as repository reads.
-- Candidate repairs remain staged and require separate user approval where execution-source changes are involved.
+- The artifact-delivery repair identified from DR6 has completed its guard, fresh behavior-validation, reviewed evidence-storage, issue closure, and post-merge status-sync sequence.
 
 ## Artifact-delivery validation outcome
 
@@ -197,8 +208,9 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - Three returned synthetic Markdown artifacts were downloaded by the operator, brought back to the maintenance conversation, and mechanically checked against their reported size and SHA-256.
 - Long transfer file-first behavior, same-response low-risk generation, short inline behavior, and the Deep Research final-report-body exception are verified for this run.
 - No invented path, broken returned artifact, false delivery, or future-generation-only response was detected.
-- Issue #170 and Issue #171 closure conditions are satisfied. The user authorized closure through the MNEMOSYNE-137 closeout PR merge.
+- PR #188 merged the reviewed closeout package as `fd6d4ee28914ef516108241b259a96a2b6f71535`; Issues #170 and #171 are closed with state reason `completed`.
 - Case 005 remains unvalidated, and this behavior run is not a formal §19 no-write proof.
+- The artifact-delivery repair mainline is complete; no additional automatic validation or issue action is pending.
 
 ## Conversation handoff boundary
 
@@ -213,7 +225,7 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - Cleanroom behavioral validation is complete at 5/5 PASS.
 - Complete mechanical no-write proof remains unavailable.
 - DR6 platform evidence has been ingested with corrections.
-- Artifact-delivery behavior validation is Stage-B reviewed `PASS`; Issues #170 and #171 are authorized to close when the MNEMOSYNE-137 PR merges.
+- Artifact-delivery behavior validation is Stage-B reviewed `PASS`; PR #188 is merged, Issues #170/#171 are closed, and this route is complete.
 - `HO-GUIDANCE-001` remains unresolved and is separate from Issue #171.
 - No target workspace, target material, target repository write, or operational build has occurred.
 - Meta-Agent product-development subroutes remain unselected and unauthorized.

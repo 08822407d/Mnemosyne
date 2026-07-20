@@ -5,14 +5,15 @@
 ```yaml
 record_type: live_repair_status
 created_by_task: MNEMOSYNE-127
-latest_updated_by_task: MNEMOSYNE-137
+latest_updated_by_task: MNEMOSYNE-138
 route: post_PR_173_artifact_delivery_reconciliation
-status: behavior_validation_reviewed_PASS_issue_closure_authorized
+status: behavior_validation_closed_complete
 user_decision_recorded: true
 user_decision_provenance:
   - approval_of_MNEMOSYNE_124
   - instruction_to_redo_all_current_conversation_work_after_PR_173
   - approval_of_MNEMOSYNE_137_validation_storage_status_sync_and_issue_closure_on_PR_merge
+  - approval_of_MNEMOSYNE_138_post_merge_final_status_sync
 execution_source: current/human-approved-spec.md
 ```
 
@@ -44,7 +45,7 @@ Their useful intent was re-evaluated from the current execution source, Issues #
 
 PR #177 / MNEMOSYNE-126 was created in another conversation and merged after PR #176. It is unrelated FABLE5-GREENFIELD evidence-storage work and remains preserved.
 
-MNEMOSYNE-127 started from the post-PR-177 `master`; it did not reset or revert the repository to PR #173. MNEMOSYNE-137 starts from the then-current `master` and does not import or alter unrelated conversation work.
+MNEMOSYNE-127 started from the post-PR-177 `master`; it did not reset or revert the repository to PR #173. MNEMOSYNE-137 started from the then-current `master` and did not import or alter unrelated conversation work. MNEMOSYNE-138 only synchronizes the post-merge status of this artifact-delivery route.
 
 ## 3. Reconciliation outcome
 
@@ -111,18 +112,30 @@ Case 005 was conditional and was not run because no natural file-tool failure oc
 ## 6. Issue disposition
 
 ```yaml
-issues:
-  issue_170:
-    closure_conditions_satisfied: true
-    authorized_disposition: close_on_MNEMOSYNE_137_PR_merge
-  issue_171:
-    closure_conditions_satisfied: true
-    authorized_disposition: close_on_MNEMOSYNE_137_PR_merge
+closeout:
+  PR_188:
+    state: merged
+    merged_at: 2026-07-20T13:34:45Z
+    merge_commit: fd6d4ee28914ef516108241b259a96a2b6f71535
+  issues:
+    issue_170:
+      closure_conditions_satisfied: true
+      state: closed
+      state_reason: completed
+      closed_at: 2026-07-20T13:34:47Z
+      closed_via: PR_188_merge
+    issue_171:
+      closure_conditions_satisfied: true
+      state: closed
+      state_reason: completed
+      closed_at: 2026-07-20T13:34:47Z
+      closed_via: PR_188_merge
+  mainline_status: complete
 ```
 
-Issue #170 conditions are satisfied because Cases 001, 003, and 004 passed with no invented path or false delivery. Issue #171 conditions are satisfied because Case 002 passed with no future-generation-only response.
+Issue #170 closed after Cases 001, 003, and 004 passed with no invented path or false delivery. Issue #171 closed after Case 002 passed with no future-generation-only response. PR #188 merged the reviewed evidence package and GitHub applied the closing keywords.
 
-The closeout PR is authorized to use GitHub closing keywords. Neither issue is directly closed before the PR merges.
+No further validation, issue action, or artifact-delivery guard change is required for this route. A future regression or a naturally observed file-generation failure would require a new explicitly authorized task.
 
 ## 7. Boundaries and limitations
 
