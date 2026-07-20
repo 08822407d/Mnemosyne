@@ -5,12 +5,14 @@
 ```yaml
 record_type: live_repair_status
 created_by_task: MNEMOSYNE-127
+latest_updated_by_task: MNEMOSYNE-137
 route: post_PR_173_artifact_delivery_reconciliation
-status: reviewed_guard_prepared_behavior_validation_pending
+status: behavior_validation_reviewed_PASS_issue_closure_authorized
 user_decision_recorded: true
 user_decision_provenance:
   - approval_of_MNEMOSYNE_124
   - instruction_to_redo_all_current_conversation_work_after_PR_173
+  - approval_of_MNEMOSYNE_137_validation_storage_status_sync_and_issue_closure_on_PR_merge
 execution_source: current/human-approved-spec.md
 ```
 
@@ -36,13 +38,13 @@ suspect_period_history:
     current_status: historical_superseded
 ```
 
-Their useful intent was re-evaluated from the current execution source, Issues #170/#171, DR6 evidence, and the user's current correction. Their proposal files are not active guidance.
+Their useful intent was re-evaluated from the current execution source, Issues #170/#171, DR6 evidence, and the user's correction. Their proposal files are not active guidance.
 
 ## 2. Concurrent repository work preserved
 
-PR #177 / MNEMOSYNE-126 was created in another conversation and merged after PR #176. It is unrelated FABLE5-GREENFIELD evidence-storage work and is preserved unchanged.
+PR #177 / MNEMOSYNE-126 was created in another conversation and merged after PR #176. It is unrelated FABLE5-GREENFIELD evidence-storage work and remains preserved.
 
-MNEMOSYNE-127 starts from the post-PR-177 `master`; it does not reset or revert the repository to PR #173.
+MNEMOSYNE-127 started from the post-PR-177 `master`; it did not reset or revert the repository to PR #173. MNEMOSYNE-137 starts from the then-current `master` and does not import or alter unrelated conversation work.
 
 ## 3. Reconciliation outcome
 
@@ -55,7 +57,7 @@ It is loaded through:
 - `commands/load-mnemosyne-guidance.md`
 - `handoff/startup-instructions.md`
 
-Wayfinding is added to:
+Wayfinding is available in:
 
 - `README.md`
 
@@ -80,27 +82,54 @@ historical_audit_record_retained:
 
 The retained notes file has an explicit superseded/historical banner.
 
-## 5. Validation and issue status
+## 5. Fresh behavior validation
 
 ```yaml
 validation:
-  path: notes/artifact-delivery-behavior-validation-v0.1.md
-  status: pending_after_guard_merge
-issues:
-  issue_170:
-    state: open
-    reason: fresh_behavior_validation_not_yet_complete
-  issue_171:
-    state: open
-    reason: fresh_behavior_validation_not_yet_complete
+  validation_id: MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001
+  instrument: notes/artifact-delivery-behavior-validation-v0.1.md
+  evidence_root: notes/artifact-delivery-validation-results/MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001/
+  tested_guard_blob_sha: 95f9f404e5de0d06b52a9be314b2fb2e76636ac2
+  executor_result: PASS
+  Stage_B_reviewed_result: PASS
+  cases:
+    ARTIFACT_DELIVERY_001: PASS
+    ARTIFACT_DELIVERY_002: PASS
+    ARTIFACT_DELIVERY_003: PASS
+    ARTIFACT_DELIVERY_004: PASS
+    ARTIFACT_DELIVERY_005: NOT_RUN
+  long_artifact_file_first_verified: true
+  same_response_generation_verified: true
+  short_inline_behavior_verified: true
+  Deep_Research_exception_verified: true
+  invented_path_or_false_delivery_detected: false
+  future_generation_only_response_detected: false
 ```
 
-Static review or repository merge alone is not sufficient to close either issue.
+Case 005 was conditional and was not run because no natural file-tool failure occurred. No failure-handling conclusion is claimed.
 
-## 6. Boundaries
+## 6. Issue disposition
+
+```yaml
+issues:
+  issue_170:
+    closure_conditions_satisfied: true
+    authorized_disposition: close_on_MNEMOSYNE_137_PR_merge
+  issue_171:
+    closure_conditions_satisfied: true
+    authorized_disposition: close_on_MNEMOSYNE_137_PR_merge
+```
+
+Issue #170 conditions are satisfied because Cases 001, 003, and 004 passed with no invented path or false delivery. Issue #171 conditions are satisfied because Case 002 passed with no future-generation-only response.
+
+The closeout PR is authorized to use GitHub closing keywords. Neither issue is directly closed before the PR merges.
+
+## 7. Boundaries and limitations
 
 - No direct Git rollback was performed.
-- PR #177 content was not removed or overwritten.
+- Unrelated conversation work is preserved.
 - `current/human-approved-spec.md` is unchanged.
 - Meta-Agent authority, §19 no-write policy, `HO-GUIDANCE-001`, target-project state, and FABLE5 substantive conclusions are unchanged.
-- No issue is closed by this record.
+- This validation is behavioral evidence, not a formal no-write proof.
+- Operator-visible Project/model/reasoning facts do not prove hidden backend identity.
+- One successful fresh run is bounded evidence, not a permanent platform guarantee.
