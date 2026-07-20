@@ -3,80 +3,91 @@
 > Non-execution-source high-signal handoff view. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-latest_updated_by_task: MNEMOSYNE-139
-handoff_status: post_interruption_live_wayfinding_converged
+latest_updated_by_task: MNEMOSYNE-140
+handoff_status: non_FABLE_comprehensive_health_review_handoff_prepared
 repository: 08822407d/Mnemosyne
-pinned_base_for_MNEMOSYNE_139: c7d7a412341b53036db762866c1e21dbb097be6c
-automatic_next_route: none_requires_explicit_user_selection
+prepared_from_master: 3cf6e5116a360c3f131ad4dfd472a819300ba461
+selected_next_route: bounded_non_FABLE_comprehensive_Mnemosyne_health_review
+package_id: MNEMOSYNE-NON-FABLE-COMPREHENSIVE-HEALTH-REVIEW-HANDOFF-001
+package_path: handoff/mnemosyne-non-fable-comprehensive-health-review-handoff-package.md
+startup_prompt_path: handoff/mnemosyne-non-fable-comprehensive-health-review-startup-prompt.md
 FABLE5_work_in_scope: false
+repository_write_authorized_for_receiver_review: false
 ```
 
-## Current route truth
+## Selected continuation
 
-The MNEMOSYNE-085 interruption marker is historical. It recorded a valid pause at that time, but it is no longer the current continuation instruction after the later Meta-Agent test-only campaign.
+The user has explicitly selected a previously unfinished large maintenance task: a bounded, read-only, non-FABLE comprehensive Mnemosyne health review.
 
-The later reviewed state is:
+The new conversation must use the repository-backed package and startup prompt above. It must not infer the task from old chat context, Project memory, `current/todo.md`, or historical handoff wording.
+
+## Required receive sequence
 
 ```yaml
-Meta_Agent_test_route:
-  live_status: current/meta-agent-test-route-status.md
-  convergence_status: current/post-interruption-live-wayfinding-status.md
-  behavioral_test_only_objective: complete
-  behavioral_cases: PASS_all_five
-  additional_ordinary_Chat_replay_required: false
-  mechanical_no_write_proof: BLOCKED_optional_future
-  observer_assisted_proof_selected: false
-  product_build_selected: false
-  automatic_continuation: false
+receiver_guidance_load:
+  project_guidance: not_applicable
+  mnemosyne_guidance: required
+  ordered_operations:
+    - receive_authorized_handoff_package
+    - execute_Load_Mnemosyne_guidance_as_separate_operation
+    - continue_received_task_under_refreshed_constraints
 ```
 
-No new route begins merely because the inserted long work has ended. The user must explicitly select a new task.
+The first new-conversation message must receive the package and stop after the `mnemosyne_handoff_receive` report. The user will then send `加载 MNEMOSYNE 约束指导` separately.
+
+## Current completed state
+
+```yaml
+completed_routes:
+  artifact_delivery_repair:
+    validation: PASS
+    issues_170_171: closed_completed
+    mainline: complete
+  Meta_Agent_test_only_route:
+    behavioral_cases: PASS_all_five
+    behavioral_objective: complete
+    additional_ordinary_Chat_replay_required: false
+    mechanical_no_write_proof: BLOCKED_optional_future
+    automatic_continuation: false
+  post_interruption_wayfinding:
+    task: MNEMOSYNE-139
+    PR_190: merged
+    merge_commit: 3cf6e5116a360c3f131ad4dfd472a819300ba461
+```
+
+Do not repeat these completed routes merely because historical records remain available.
 
 ## Current execution source
 
 - `current/human-approved-spec.md` is the only execution source.
-- Current status, handoff, task-result, review, research, and frozen transfer files are not execution source.
+- This handoff view, the package, startup prompt, current status files, task-result records, research, and historical artifacts are non-execution-source evidence.
 - When a non-execution-source record conflicts with the execution source, follow the execution source and record the conflict.
 
-## Authoritative current references
+## Current reference order
 
-Read, in this order when resuming non-FABLE maintenance:
+For this selected handoff, read:
 
-1. `current/human-approved-spec.md`;
-2. `current/post-interruption-live-wayfinding-status.md`;
-3. `current/meta-agent-test-route-status.md`;
-4. `current/review-and-validation-status.md`;
-5. `current/meta-agent-replay-mechanical-proof-decision.md`, only when mechanical proof is relevant.
+1. `commands/receive-mnemosyne-handoff.md`;
+2. `handoff/mnemosyne-non-fable-comprehensive-health-review-handoff-package.md`;
+3. the minimum evidence set defined by the package;
+4. `commands/load-mnemosyne-guidance.md` only in the separate guidance-refresh operation.
 
-The official MNEMOSYNE-082/083 handoff artifacts remain frozen historical transfer evidence. Do not edit or treat their old next-step fields as live instructions.
+The package defines the review scope, exclusions, deliverable, and safe next action.
 
-## Available future routes
+## Review boundaries
 
-Each option requires a new task ID and explicit user selection:
+The receiving review is read-only. It does not authorize:
 
-- a bounded non-FABLE comprehensive Mnemosyne health review;
-- deliberate adjudication of `HO-GUIDANCE-001`;
-- observer-assisted mechanical no-write proof;
-- a separately approved target-project phase;
-- another maintenance route chosen by the user.
+- repository file, branch, commit, PR, Issue, comment, label, workflow, automation, or setting changes;
+- execution-source modification;
+- target workspace creation, material ingestion, target-repository access/write, or operational build;
+- observer-assisted mechanical proof or a §19 exception;
+- regression promotion;
+- rerunning completed Meta-Agent or artifact-delivery campaigns;
+- FABLE5 review, independent design, Greenfield, comparison, task generation, or result storage.
 
-No option is selected by this handoff record.
+FABLE5 remains owned by its separate dedicated conversation.
 
-## Prohibitions and authority boundaries
+## Source-conversation disposition
 
-- Do not automatically resume the old `post_084_handoff_validation_and_migration` wording.
-- Do not repeat ordinary-Chat Meta-Agent replays for the completed behavioral objective.
-- Do not reinterpret behavioral PASS as package-level no-write closure.
-- Do not reinterpret mechanical BLOCKED as behavioral failure.
-- Do not approve a §19 no-write exception.
-- Do not create a target workspace.
-- Do not ingest target materials.
-- Do not access or write a target repository.
-- Do not start an operational Meta-Agent build or installation.
-- Do not promote regression specifications into the execution source or automatic global rules.
-- Do not modify `current/human-approved-spec.md` without separate explicit approval.
-- Do not take over, review, design, or otherwise advance FABLE5 work; it remains in its dedicated conversation.
-
-## Historical records
-
-Historical detail remains available in Git history and the task/result records for MNEMOSYNE-079 through MNEMOSYNE-122. The former MNEMOSYNE-085 continuation wording in `current/active-context.md`, `current/todo.md`, and `current/open-questions.md` is retained as historical evidence but is superseded for this route by the current references above.
+After the MNEMOSYNE-140 handoff PR merges, the source conversation may retire. No post-merge status-only PR is required. The new conversation becomes the owner of the transferred read-only health-review task after successful receive and separate guidance refresh.
