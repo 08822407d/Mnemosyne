@@ -15,7 +15,7 @@ user_authorization:
 base_branch: master
 pinned_base_sha: c7d7a412341b53036db762866c1e21dbb097be6c
 canonical_branch: mnemosyne-139-post-interruption-wayfinding-convergence
-canonical_pr_number: pending_at_initial_record
+canonical_pr_number: 190
 execution_source_modified: false
 Meta_Agent_product_build_selected: false
 target_workspace_created: false
@@ -63,10 +63,27 @@ github_write_lineage_preflight:
   pinned_default_branch_sha: c7d7a412341b53036db762866c1e21dbb097be6c
   intended_branch: mnemosyne-139-post-interruption-wayfinding-convergence
   accessible_open_PRs_before_branch_creation: []
+  accessible_open_PRs_immediately_before_PR_creation: []
   exact_task_PR_matches_before_creation: []
   intended_branch_matches_before_creation: []
   decision: create_single_new_lineage
   pagination_limitation: connector_did_not_expose_repository_wide_completeness_attestation
+```
+
+## Canonical pull request
+
+```yaml
+canonical_pull_request:
+  number: 190
+  title: MNEMOSYNE-139 converge post-interruption live wayfinding
+  base: master
+  pinned_base_sha: c7d7a412341b53036db762866c1e21dbb097be6c
+  head: mnemosyne-139-post-interruption-wayfinding-convergence
+  draft: false
+  auto_merge: false
+  merge_authorized: false
+  related_open_prs: []
+  exactly_one_merge_target: true
 ```
 
 ## Boundaries
@@ -77,4 +94,4 @@ It does not execute observer-assisted proof, approve a no-write exception, enabl
 
 ## Safe next action
 
-Review and merge the single canonical MNEMOSYNE-139 PR. After merge, choose any future non-FABLE maintenance route only through a new explicit user decision.
+Review and merge only PR #190. After merge, choose any future non-FABLE maintenance route only through a new explicit user decision.
