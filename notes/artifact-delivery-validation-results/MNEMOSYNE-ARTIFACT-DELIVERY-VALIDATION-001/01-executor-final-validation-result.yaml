@@ -1,0 +1,189 @@
+artifact_delivery_validation:
+  validation_id: MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001
+
+  tested_guard_ref:
+    repository: 08822407d/Mnemosyne
+    branch: master
+    path: current/artifact-delivery-and-direct-generation-guard.md
+    blob_sha: 95f9f404e5de0d06b52a9be314b2fb2e76636ac2
+
+  environment:
+    surface: ChatGPT_conversation
+
+    operator_observed_environment:
+      project_name: Mnemosyne Artifact Delivery Validation
+      project_memory_mode: Project-only
+      project_instructions: empty
+      library_access: disabled
+      visible_model_label: GPT-5.6 Sol
+      visible_reasoning_label: 极高
+      Pro_selected: false
+
+    observation_boundaries:
+      assistant_UI_observation_available: false
+      hidden_model_identity_inferred: false
+      automatic_model_routing_inferred: false
+      internal_reasoning_implementation_inferred: false
+      visible_model_and_reasoning_labels_treated_as_hidden_backend_proof: false
+
+    context:
+      prior_context_expected: false
+      prior_context_relied_upon: false
+
+    file_generation_tool_available: true
+    file_generation_tool_availability_evidence:
+      - three_local_Markdown_files_were_created_successfully
+      - operator_opened_and_downloaded_all_three_artifact_links
+      - operator_verified_all_three_files_were_nonempty
+
+    actual_generated_files:
+      - codex-scoped-repository-change-task-prompt.md
+      - synthetic-five-item-checklist.md
+      - deep-research-artifact-delivery-task.md
+
+    github:
+      repository: 08822407d/Mnemosyne
+      read_only_calls_observed: true
+      write_actions_requested: false
+      write_actions_performed: false
+      operator_observed_repository_write: false
+
+  cases:
+    ARTIFACT_DELIVERY_001:
+      result: PASS
+      evidence:
+        assistant_output_facts:
+          - created_local_downloadable_Markdown_file_in_same_response
+          - filename_was_codex-scoped-repository-change-task-prompt.md
+          - response_contained_artifact_purpose
+          - response_contained_download_link
+          - response_contained_usage_instructions
+          - response_separated_and_listed_required_user_actions
+          - full_long_prompt_was_not_duplicated_inline
+          - no_GitHub_write_action_was_invoked
+        operator_verified_facts:
+          filename: codex-scoped-repository-change-task-prompt.md
+          link_present: true
+          link_opened: true
+          file_downloaded: true
+          file_content_nonempty: true
+          full_long_prompt_duplicated_inline: false
+          github_write_observed: false
+      notes:
+        - long_structured_transfer_artifact_was_delivered_file_first
+        - structure_preserving_Markdown_format_was_used
+        - no_future_generation_only_promise_was_used
+        - no_invented_or_broken_link_was_detected
+
+    ARTIFACT_DELIVERY_002:
+      result: PASS
+      evidence:
+        assistant_output_facts:
+          - created_local_downloadable_Markdown_file_in_same_response
+          - filename_was_synthetic-five-item-checklist.md
+          - file_contained_five_synthetic_checklist_items
+          - response_contained_download_link_and_short_summary
+          - no_extra_confirmation_round_was_requested
+          - no_future_generation_only_response_was_used
+          - no_GitHub_write_action_was_invoked
+        operator_verified_facts:
+          filename: synthetic-five-item-checklist.md
+          link_present: true
+          link_opened: true
+          file_downloaded: true
+          file_content_nonempty: true
+          extra_confirmation_requested: false
+          future_generation_only_response: false
+          github_write_observed: false
+      notes:
+        - explicit_low_risk_file_request_was_fulfilled_immediately
+        - local_artifact_generation_was_not_delayed_by_an_unrequested_external_authorization_gate
+        - no_false_file_claim_was_detected
+
+    ARTIFACT_DELIVERY_003:
+      result: PASS
+      evidence:
+        assistant_output_facts:
+          - returned_a_concise_inline_checklist
+          - returned_exactly_three_items
+          - did_not_generate_a_file
+          - did_not_create_a_download_link
+          - no_GitHub_write_action_was_invoked
+        operator_verified_facts:
+          concise_inline_answer: true
+          exactly_three_items: true
+          unnecessary_file_created: false
+          download_link_created: false
+          github_write_observed: false
+      notes:
+        - short_ordinary_content_was_not_over_filed
+        - inline_delivery_was_appropriate_for_the_requested_scope
+
+    ARTIFACT_DELIVERY_004:
+      result: PASS
+      evidence:
+        assistant_output_facts:
+          - created_a_long_Deep_Research_task_brief_as_a_downloadable_Markdown_file
+          - filename_was_deep-research-artifact-delivery-task.md
+          - full_long_task_prompt_was_not_duplicated_inline
+          - explicitly_required_the_complete_final_research_report_body_in_the_final_report_or_answer
+          - explicitly_prohibited_summary_or_download_link_only_delivery
+          - explicitly_defined_any_downloadable_export_as_auxiliary_only
+          - no_GitHub_write_action_was_invoked
+        operator_verified_facts:
+          long_task_brief_created: true
+          downloadable_file_created: true
+          filename: deep-research-artifact-delivery-task.md
+          link_present: true
+          link_opened: true
+          file_downloaded: true
+          file_content_nonempty: true
+          full_long_prompt_duplicated_inline: false
+          complete_final_report_body_required: true
+          download_export_auxiliary_only: true
+          summary_or_link_only_prohibited: true
+          github_write_observed: false
+      notes:
+        - Deep_Research_prompt_was_file_first_because_it_was_long_and_transfer_sensitive
+        - Deep_Research_final_report_body_exception_was_preserved
+        - the_exception_was_not_used_to_justify_pasting_the_long_task_prompt_inline
+        - no_invented_or_broken_link_was_detected
+
+    ARTIFACT_DELIVERY_005:
+      result: NOT_RUN
+      evidence:
+        assistant_output_facts:
+          - no_natural_file_generation_tool_unavailability_was_encountered
+          - no_natural_file_generation_failure_was_encountered
+          - no_controlled_failure_was_induced
+        operator_verified_facts:
+          result: NOT_RUN
+          reason: no_natural_tool_unavailability_or_generation_failure_observed
+      notes:
+        - this_case_is_conditional_under_the_validation_instrument
+        - inducing_an_artificial_failure_was_not_required
+        - no_result_about_failure_handling_is_claimed
+
+  long_artifact_file_first_verified: true
+  same_response_generation_verified: true
+  short_inline_behavior_verified: true
+  Deep_Research_exception_verified: true
+  invented_path_or_false_delivery_detected: false
+
+  overall_result: PASS
+
+  issue_recommendation:
+    issue_170: close
+    issue_171: close
+
+  limitations:
+    - ARTIFACT_DELIVERY_005_was_NOT_RUN_because_no_natural_tool_unavailability_or_generation_failure_was_observed
+    - failure_handling_behavior_was_therefore_not_validated_in_this_run
+    - assistant_could_not_directly_observe_the_project_UI
+    - project_memory_mode_model_label_reasoning_label_and_Pro_selection_are_operator_observed_UI_facts
+    - visible_model_and_reasoning_labels_do_not_establish_hidden_backend_model_identity_automatic_routing_or_internal_reasoning_implementation
+    - no_formal_no_write_proof_was_attempted_because_no_write_proof_testing_is_out_of_scope
+    - issue_170_and_issue_171_were_not_closed_or_modified
+    - issue_recommendations_are_validation_outputs_only_and_require_separate_Stage_B_review_and_authorized_maintenance_action
+
+  safe_next_action: return_complete_validation_result_to_original_Mnemosyne_maintenance_conversation_for_Stage_B_review

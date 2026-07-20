@@ -1,0 +1,72 @@
+validation_id: MNEMOSYNE-ARTIFACT-DELIVERY-VALIDATION-001
+record_type: artifact_delivery_behavior_validation_package
+authority_level: non_execution_source_validation_evidence
+stored_by_task: MNEMOSYNE-137
+execution_source: current/human-approved-spec.md
+guard_under_test:
+  path: current/artifact-delivery-and-direct-generation-guard.md
+  tested_branch: master
+  tested_blob_sha: 95f9f404e5de0d06b52a9be314b2fb2e76636ac2
+validation_instrument:
+  path: notes/artifact-delivery-behavior-validation-v0.1.md
+  blob_sha: 2873e5e163bca712fd93719f6503e87075a3e42d
+executor_result:
+  path: 01-executor-final-validation-result.yaml
+  executor_reported_result: PASS
+operator_evidence:
+  path: 02-operator-evidence-record.md
+stage_B_review:
+  path: 03-stage-b-maintainer-review.md
+  reviewed_result: PASS
+cases:
+  ARTIFACT_DELIVERY_001: PASS
+  ARTIFACT_DELIVERY_002: PASS
+  ARTIFACT_DELIVERY_003: PASS
+  ARTIFACT_DELIVERY_004: PASS
+  ARTIFACT_DELIVERY_005: NOT_RUN
+artifacts:
+  - filename: codex-scoped-repository-change-task-prompt.md
+    path: artifacts/codex-scoped-repository-change-task-prompt.md
+    size_bytes: 16355
+    sha256: 3072fb778709243062c5cf5f3253e03e4a401676d86d0a034a670100ba4a8a47
+    repository_blob_sha: b4782dfa9988c809ad7d18bc2a9e658ca6e8ec11
+    role: synthetic_long_structured_transfer_artifact
+  - filename: synthetic-five-item-checklist.md
+    path: artifacts/synthetic-five-item-checklist.md
+    size_bytes: 397
+    sha256: 80775a5246a4115c5cf0d3789d3094aa29e67e174fb9832544c4a5d8cf85ae66
+    repository_blob_sha: f4282d070b3e7e64614212cf26ec477959978b47
+    role: synthetic_explicit_low_risk_downloadable_artifact
+  - filename: deep-research-artifact-delivery-task.md
+    path: artifacts/deep-research-artifact-delivery-task.md
+    size_bytes: 13198
+    sha256: 68c46821ed65b44b265d07df92d4b41b5eae01d2df5c9b1e75e9346c9a9e7fea
+    repository_blob_sha: c490e7d663c2099c04708d3e2012a0978e8e694d
+    role: synthetic_Deep_Research_transfer_artifact
+reviewed_aggregate:
+  long_artifact_file_first_verified: true
+  same_response_generation_verified: true
+  short_inline_behavior_verified: true
+  Deep_Research_exception_verified: true
+  invented_path_or_false_delivery_detected: false
+  future_generation_only_response_detected: false
+  overall_result: PASS
+issue_disposition:
+  issue_170:
+    closure_conditions_satisfied: true
+    close_on_MNEMOSYNE_137_PR_merge: true
+  issue_171:
+    closure_conditions_satisfied: true
+    close_on_MNEMOSYNE_137_PR_merge: true
+limitations:
+  - ARTIFACT_DELIVERY_005_not_run_no_natural_tool_failure
+  - operator_observed_UI_facts_not_hidden_backend_attestation
+  - behavior_validation_not_formal_no_write_proof
+  - one_run_is_bounded_evidence_not_permanent_platform_guarantee
+boundaries:
+  execution_source_modified: false
+  Meta_Agent_modified: false
+  no_write_policy_modified: false
+  HO_GUIDANCE_001_modified: false
+  FABLE5_GREENFIELD_modified: false
+  target_project_state_modified: false
