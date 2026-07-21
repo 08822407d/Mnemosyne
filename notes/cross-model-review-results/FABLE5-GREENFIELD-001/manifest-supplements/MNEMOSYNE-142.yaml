@@ -1,0 +1,53 @@
+task_id: MNEMOSYNE-142
+track_id: FABLE5-GREENFIELD-001
+stored_step: GF-STEP-3RV
+action_actor: ChatGPT_GitHub_app
+authority_level: non_execution_source_storage_and_status_record
+user_authorization:
+  source: authorized_final_phase_handoff_and_current_GF_STEP_3RV_result_delivery
+  preserve_exact_prompt_summary_output: true
+  update_necessary_non_execution_source_records: true
+  create_one_ready_PR_without_reasking: true
+  merge_or_auto_merge: false
+repository:
+  full_name: 08822407d/Mnemosyne
+  visibility_at_preflight: public
+  default_branch: master
+  pinned_base_sha: 27d0b1a4d0fefc558212ac68358d7d31af2a6eb8
+canonical_write_lineage:
+  task_id: MNEMOSYNE-142
+  base_branch: master
+  pinned_base_sha: 27d0b1a4d0fefc558212ac68358d7d31af2a6eb8
+  canonical_branch: mnemosyne-142-preserve-step3rv-result
+  canonical_pr_number: pending_at_initial_storage_record
+  scope_summary: preserve_GF_STEP_3RV_prompt_summary_output_manifest_wayfinding_and_result_record
+storage:
+  prompt: steps/GF-STEP-3RV/00-task-as-sent.md
+  chat_summary: steps/GF-STEP-3RV/01-fable-chat-summary.md
+  output: steps/GF-STEP-3RV/02-bounded-reverification.md
+  step_manifest: steps/GF-STEP-3RV/manifest.yaml
+  output_identity:
+    size_bytes: 46623
+    sha256: e2bcf75d33da2c27639b45284e7e131105409225d8ca7d6577dcde875c7573ca
+    exact_copy_stored: true
+status_sync:
+  GF_STEP_3RV:
+    Fable_claimed_status: GF_STEP_3RV_PASS_BOUNDED_REVERIFICATION_READY_FOR_USER_AUTHORIZED_STEP5_PREPARATION
+    substantive_maintainer_acceptance: not_performed
+    heterogeneous_review: not_performed
+    GF4_F01_closure_claim: closed_with_non_reopening_caveats
+    GF4_F02_closure_claim: closed_with_non_reopening_caveats
+  GF_STEP_5:
+    generated_or_started: false
+  comparison_firewall:
+    authorized: false
+    opened: false
+boundaries:
+  execution_source_modified: false
+  existing_GPT_design_read_or_compared: false
+  premature_candidate_used: false
+  substantive_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  target_project_action_performed: false
+  parallel_PR_created: false
+  merge_or_auto_merge_performed: false

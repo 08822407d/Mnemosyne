@@ -1,0 +1,116 @@
+step_id: GF-STEP-3RV
+record_type: bounded_reverification_report
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+stored_by_task: MNEMOSYNE-142
+research_mode: false
+execution_context:
+  fresh_conversation: true
+  attachments_used: 6
+  repository_paths_read: 0
+  retrieval_batteries_used: 0
+  web_or_external_searches: 0
+  premature_GF_STEP_3_candidate_read: false
+  existing_GPT_design_read: false
+  Project_knowledge_used: false
+  past_chat_retrieval_used: false
+  incidental_prohibited_exposure: none_reported
+prompt:
+  index_path: 00-task-as-sent.md
+  source_filename: FABLE5-GREENFIELD-001-GF-STEP-3RV-task.md
+  source_size_bytes: 22375
+  source_sha256: 9209de4e35dbda892ac57bf1a43a0c04513775763fc0f9a562c98c9f83fc826a
+  source_git_blob_sha: 664e7e32679c9aac01ec1f6fe15a0ad2bdf3651a
+  archive_format: deterministic_gzip_mtime_0_level_9_then_base64
+  archive_gzip_size_bytes: 8513
+  archive_gzip_sha256: 96a68ce583f8cc55630a9108314452d398b77e5b24133ba8c09b5c02da2de214
+  exact_ordered_parts: 2
+  exact_reconstruction_verified: true
+chat_summary:
+  path: 01-fable-chat-summary.md
+  verbatim_text_size_bytes: 2170
+  verbatim_text_sha256: b5875446adaa80fed96ad82f52d01b4cb15d94b7d378622bd712cc3c23c797f9
+output:
+  index_path: 02-bounded-reverification.md
+  source_filename: FABLE5-GREENFIELD-001-STEP3RV-bounded-reverification.md
+  source_size_bytes: 46623
+  source_sha256: e2bcf75d33da2c27639b45284e7e131105409225d8ca7d6577dcde875c7573ca
+  source_git_blob_sha: 1337f4cc18163fbd67db1559c10a5de0a5e84c96
+  source_encoding: utf-8
+  source_line_endings: lf
+  source_final_lf_present: true
+  source_lines: 255
+  archive_format: deterministic_gzip_mtime_0_level_9_then_base64
+  archive_gzip_size_bytes: 17297
+  archive_gzip_sha256: 7fcff8618cefc8b51b9634e338034d6c92e9ad179497be80a5c95b3b1e7df7fd
+  exact_ordered_parts: 3
+  exact_reconstruction_verified: true
+input_identity_reported:
+  attachments_exact: 6
+  pinned_git_blobs_exact: 3
+  complete_read_lines:
+    STEP1E: 261
+    STEP2D: 395
+    STEP3A: 301
+    STEP3B: 403
+    STEP4: 408
+    STEP3R: 554
+structure:
+  numbered_sections: 20
+  verification_scope:
+    - GF4-F01
+    - GF4-F02
+  amendments_verified:
+    total: 6
+    pass:
+      - GF3R-AMEND-01
+      - GF3R-AMEND-03
+    pass_with_caveat:
+      - GF3R-AMEND-02
+      - GF3R-AMEND-04
+      - GF3R-AMEND-05
+      - GF3R-AMEND-06
+    fail: []
+    unclear: []
+  closure_verdicts:
+    GF4_F01: closed_with_non_reopening_caveats
+    GF4_F02: closed_with_non_reopening_caveats
+  record_kind_groups_audited: 9
+  adapter_governance_checks: 8
+  cross_document_ids_checked: 18
+  adversarial_scenarios: 10
+  undefined_routes_or_authority_leaks_reported: 0
+  unchanged_findings_confirmed_unrepaired: 17
+  design_parameter_rows: 15
+  design_parameters_answered: 0
+  MC_PC_instruments_adopted: 0
+  FR_triggers_activated: 0
+word_budget_reported:
+  approximate_pipe_excluded: 5900
+  hard_cap: 7000
+  compression_passes: 0
+status:
+  Fable_claim: GF_STEP_3RV_PASS_BOUNDED_REVERIFICATION_READY_FOR_USER_AUTHORIZED_STEP5_PREPARATION
+  repository_storage: exact_archives_summary_and_manifest_stored
+  substantive_maintainer_acceptance: not_performed
+  heterogeneous_review: not_performed
+  same_model_family_limitation_disclosed: true
+  GF_STEP_5_task_generated: false
+  GF_STEP_5_started: false
+  comparison_firewall_opened: false
+next_gate_reported:
+  user_decision_required: true
+  permitted_future_option:
+    - separately_authorize_GF_STEP_5_task_preparation
+  automatically_selected_option: none
+boundaries:
+  execution_source_modified: false
+  substantive_Fable_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  current_GPT_design_read_or_compared: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false
