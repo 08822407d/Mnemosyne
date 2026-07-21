@@ -78,7 +78,7 @@ status_values:
   provider_quota_operational_pause_resolved: a former provider quota pause has ended and the previously blocked next step has completed
   execution_path_deviation_stored: an intended step was not executed and a different step output was returned; both are preserved without silently advancing the canonical gate
   execution_path_deviation_resolved: a prior execution-path deviation has a successful correctly scoped rerun, while the original deviation remains preserved for provenance
-  read_only_evidence_audit_stored: an evidence table or recheck record has been stored without repair/writeback authority
+  read_only_evidence_audit_stored: an evidence table or recheck record is stored without repair/writeback authority
   review_package_prepared: a non-execution-source prompt/package is prepared for later review but does not itself decide or authorize repair
   substantive_adjudication_completed: a maintainer decision record has evaluated advisory findings and recorded scoped repair decisions
   transfer_prompt_prepared: a copyable prompt/package is prepared for later execution in another conversation
