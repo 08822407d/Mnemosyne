@@ -4,7 +4,7 @@
 
 ```yaml
 track_id: FABLE5-GREENFIELD-001
-last_status_task: MNEMOSYNE-143
+last_status_task: MNEMOSYNE-144
 incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-003-step2d-misinterpreted-as-step3.md
 incident_status: resolved_by_successful_fresh_conversation_GF_STEP_2D_rerun
 GF_STEP_2:
@@ -133,18 +133,33 @@ handoff:
   GF_STEP_3R_success_storage_task: MNEMOSYNE-141
   GF_STEP_3RV_storage_task: MNEMOSYNE-142
   GF_STEP_5_storage_task: MNEMOSYNE-143
+model_quality_restart_checkpoint:
+  record: current/fable-greenfield-maintainer-triage-model-quality-checkpoint.md
+  checkpoint_id: FABLE5-GREENFIELD-001-MODEL-QUALITY-RESTART-001
+  trusted_repository_baseline: master@12f2a00fa746485dcdbb99e2c6569549e894f0c0
+  trusted_scope_through: merged_PR_194
+  user_reported_prebaseline_model_context: gpt5.6sol thinking very high
+  backend_model_identity_independently_verified: false
+  checkpoint_status: recorded_not_triggered
+  trigger_requires_explicit_user_declaration_of_post_switch_model_quality_problem_and_restart_intent: true
+  default_redo_scope_after_trigger:
+    - maintainer_triage_started_after_PR_194
+    - substantive_adjudication_started_after_PR_194
+    - downstream_research_or_repair_route_selection_based_on_affected_adjudication
+  Fable_steps_through_GF_STEP_5_redone_by_default: false
 next_gate:
   user_decision_required: true
   report_ready_for: separate_maintainer_triage
+  intended_near_term_route: switch_current_conversation_to_GPT_Pro_then_begin_user_authorized_maintainer_triage
   permitted_future_routes_require_separate_user_authorization:
     - GPT_Pro_substantive_adjudication
     - targeted_research
     - bounded_repair_task_preparation
   automatically_selected_route: none
 next_safe_action:
-  - merge_the_single_MNEMOSYNE_143_storage_PR
-  - after_merge_await_explicit_user_selection_of_a_maintainer_triage_route
-  - do_not_auto_generate_research_Pro_or_repair_tasks
+  - merge_the_single_MNEMOSYNE_144_checkpoint_PR
+  - after_merge_switch_to_GPT_Pro_and_begin_only_the_user_selected_maintainer_triage_work
+  - if_the_user_later_declares_a_post_switch_model_quality_incident_and_restart_intent_activate_the_checkpoint_and_restart_from_PR_194_baseline
 ```
 
-GF-STEP-5 is stored as a completed Fable same-model-family bounded comparison result. The comparison report is advisory and ready for separate maintainer triage only. It does not substantively accept findings, modify Mnemosyne, authorize repairs, or select a future route. The comparison firewall closed at step end.
+GF-STEP-5 is stored as a completed Fable same-model-family bounded comparison result. The comparison report is advisory and ready for separate maintainer triage only. The user-confirmed model-quality restart checkpoint preserves PR #194's merge commit as the trusted baseline if a later post-Pro-switch model-quality incident is explicitly declared. Neither this status record nor the checkpoint substantively accepts findings, modifies Mnemosyne, or proves backend model identity.
