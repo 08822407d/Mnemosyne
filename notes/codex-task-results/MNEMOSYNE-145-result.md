@@ -7,7 +7,7 @@ task_type: research_evidence_storage_comparative_review_and_non_execution_checkp
 base_branch: master
 pinned_base_sha: abbcc28385767d44a053e6d0d0c01033c3e02193
 canonical_branch: mnemosyne-145-preserve-dr07-comparison-and-checkpoint
-canonical_pr_number: pending
+canonical_pr_number: 196
 user_authorization:
   - perform_necessary_repository_storage_and_recording
   - mark_a_reliable_progress_checkpoint_before_switching_to_Pro
@@ -24,7 +24,7 @@ auto_merge_authorized: false
 
 ## Summary
 
-MNEMOSYNE-145 records only the independent-conversation research pair. It identifies the exact task and report artifacts by byte count and SHA-256, preserves the fixed-rubric comparison, records citation-portability limitations, updates current wayfinding, and creates a reliable progress checkpoint that becomes effective only after the canonical PR is merged by the user.
+MNEMOSYNE-145 records only the independent-conversation research pair. It identifies the exact task and report artifacts by byte count and SHA-256, preserves the fixed-rubric comparison, records citation-portability limitations, updates current wayfinding, and creates a reliable progress checkpoint that becomes effective only after PR #196 is merged by the user.
 
 The earlier Project-internal pair is excluded because it is confounded and unnecessary for the next gate.
 
