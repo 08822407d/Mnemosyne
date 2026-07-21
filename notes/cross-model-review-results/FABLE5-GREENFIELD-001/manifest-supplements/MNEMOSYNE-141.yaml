@@ -1,0 +1,63 @@
+task_id: MNEMOSYNE-141
+track_id: FABLE5-GREENFIELD-001
+stored_step: GF-STEP-3R
+stored_attempt: GF-STEP-3R-ATTEMPT-002
+action_actor: ChatGPT_GitHub_app
+authority_level: non_execution_source_storage_and_status_record
+user_authorization:
+  source: authorized_final_phase_handoff_and_current_successful_GF_STEP_3R_result_delivery
+  preserve_exact_prompt_summary_output: true
+  update_necessary_non_execution_source_records: true
+  create_one_ready_PR_without_reasking: true
+  merge_or_auto_merge: false
+repository:
+  full_name: 08822407d/Mnemosyne
+  visibility_at_preflight: public
+  default_branch: master
+  pinned_base_sha: edae7e5e8659ef7db193be1d46d57664d2e6bd89
+canonical_write_lineage:
+  task_id: MNEMOSYNE-141
+  base_branch: master
+  pinned_base_sha: edae7e5e8659ef7db193be1d46d57664d2e6bd89
+  canonical_branch: mnemosyne-141-preserve-step3r-success
+  canonical_pr_number: pending_at_initial_record
+  scope_summary: preserve_successful_GF_STEP_3R_rerun_output_summary_manifest_wayfinding_and_result_record
+storage:
+  existing_prompt_index: steps/GF-STEP-3R/00-task-as-sent.md
+  prior_failure_attempt:
+    attempt_id: GF-STEP-3R-ATTEMPT-001
+    retained_unchanged: true
+  successful_summary: steps/GF-STEP-3R/03-successful-rerun-chat-summary.md
+  successful_output_index: steps/GF-STEP-3R/04-bounded-architecture-repairs.md
+  successful_manifest: steps/GF-STEP-3R/manifest-attempt-002.yaml
+  output_identity:
+    size_bytes: 58339
+    sha256: 961a8c30897143ed394f1b04a318843850762540a69567daaef2be1392770d76
+    exact_archive_parts: 3
+    reconstruction_verified: true
+status_sync:
+  GF_STEP_3R:
+    Fable_claimed_status: GF_STEP_3R_complete_BOUNDED_REPAIR_ADDENDUM
+    successful_attempt: GF-STEP-3R-ATTEMPT-002
+    substantive_maintainer_acceptance: not_performed
+    amendments_reported: 6
+    GF4_F01_Fable_closure_claim: pass
+    GF4_F02_Fable_closure_claim: pass
+  GF_STEP_5:
+    task_generated: false
+    started: false
+  comparison_firewall:
+    authorized: false
+    opened: false
+next_gate:
+  user_decision_required: true
+  automatically_selected_option: none
+boundaries:
+  execution_source_modified: false
+  existing_GPT_design_read_or_compared: false
+  premature_candidate_used: false
+  substantive_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  target_project_action_performed: false
+  parallel_PR_created: false
+  merge_or_auto_merge_performed: false
