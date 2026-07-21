@@ -4,7 +4,7 @@
 
 ```yaml
 track_id: FABLE5-GREENFIELD-001
-last_status_task: MNEMOSYNE-141
+last_status_task: MNEMOSYNE-142
 incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-003-step2d-misinterpreted-as-step3.md
 incident_status: resolved_by_successful_fresh_conversation_GF_STEP_2D_rerun
 GF_STEP_2:
@@ -65,11 +65,33 @@ GF_STEP_3R:
   completed_as_Fable_advisory_result: true
   successful_attempt: GF-STEP-3R-ATTEMPT-002
   substantive_maintainer_acceptance: not_performed
+GF_STEP_3RV:
+  task_prepared: true
+  executed: true
+  status: GF_STEP_3RV_PASS_BOUNDED_REVERIFICATION_READY_FOR_USER_AUTHORIZED_STEP5_PREPARATION
+  task: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-3RV/00-task-as-sent.md
+  output: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-3RV/02-bounded-reverification.md
+  manifest: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-3RV/manifest.yaml
+  attachments_required: 6
+  attachments_verified: 6
+  amendment_verdicts:
+    pass: 2
+    pass_with_caveat: 4
+    fail: 0
+    unclear: 0
+  Fable_claimed_closure_verdicts:
+    GF4_F01: closed_with_non_reopening_caveats
+    GF4_F02: closed_with_non_reopening_caveats
+  adversarial_scenarios: 10
+  unchanged_findings_confirmed_unrepaired: 17
+  design_parameters_answered: 0
+  same_model_family_reverification: true
+  heterogeneous_review: not_performed
+  substantive_maintainer_acceptance: not_performed
   next_gate:
     user_decision_required: true
-    permitted_future_options:
-      - bounded_reverification_of_GF_STEP_3R
-      - separately_authorized_GF_STEP_5_preparation_after_gate_review
+    permitted_future_option:
+      - separately_authorize_GF_STEP_5_task_preparation
     automatically_selected_option: none
 GF_STEP_5:
   generated_or_started: false
@@ -85,10 +107,11 @@ handoff:
   GF_STEP_4_storage_task: MNEMOSYNE-135
   GF_STEP_3R_failure_storage_task: MNEMOSYNE-136
   GF_STEP_3R_success_storage_task: MNEMOSYNE-141
+  GF_STEP_3RV_storage_task: MNEMOSYNE-142
 next_safe_action:
-  - merge_the_single_MNEMOSYNE_141_storage_PR
-  - after_merge_await_explicit_user_selection_between_bounded_reverification_and_separately_authorized_GF_STEP_5_preparation
-  - keep_GF_STEP_5_and_existing_design_firewall_closed_until_that_selection
+  - merge_the_single_MNEMOSYNE_142_storage_PR
+  - after_merge_await_explicit_user_authorization_before_preparing_GF_STEP_5
+  - keep_GF_STEP_5_and_existing_design_firewall_closed_until_that_authorization
 ```
 
-GF-STEP-3R attempt 002 is stored as a completed Fable bounded-repair advisory result. The six amendments and the two closure verdicts have not received substantive maintainer acceptance. No future route is selected automatically; GF-STEP-5 and the existing-design comparison firewall remain closed pending a separate user decision.
+GF-STEP-3RV is stored as a completed Fable same-model-family bounded re-verification result. Fable reports that both repair findings are closed with non-reopening caveats and that all six amendments pass or pass with caveats. These remain advisory claims without substantive maintainer acceptance or heterogeneous review. GF-STEP-5 and the existing-design comparison firewall remain closed pending a separate user decision.
