@@ -1,0 +1,68 @@
+task_id: MNEMOSYNE-143
+track_id: FABLE5-GREENFIELD-001
+stored_step: GF-STEP-5
+authority_level: non_execution_source_advisory_evidence
+storage_status: step_output_canonical_copy_stored
+repository:
+  full_name: 08822407d/Mnemosyne
+  visibility_at_preflight: public
+  pinned_base_sha: 644bb7d7f864bb23d942520ebb7f206b8805475e
+attempts:
+  - attempt_id: GF-STEP-5-ATTEMPT-001
+    status: GF_STEP_5_INCOMPLETE_INPUT_INTEGRITY_FAILURE
+    file: 01-input-integrity-failure-attempt-001.md
+    missing_attachment: FABLE5-GREENFIELD-001-STEP3B-lifecycle-operations-architecture.md
+    substituted_attachment: FABLE5-GREENFIELD-001-GF-STEP-3RV-task.md
+    repository_paths_read: 0
+    comparison_firewall_exercised: false
+    size_bytes: 5546
+    sha256: 20e40ff046ccb8d3aa4bbcd4305920dfe650856e57fe6a3eec01872ca4091ecf
+  - attempt_id: GF-STEP-5-ATTEMPT-002
+    status: GF_STEP_5_COMPLETE_CONTRASTIVE_COMPARISON_READY_FOR_MAINTAINER_TRIAGE
+    file: 03-contrastive-comparison.md
+    successful: true
+    frozen_current_design_commit: 644bb7d7f864bb23d942520ebb7f206b8805475e
+    attachments_verified: 7
+    repository_paths_read: 7
+    repository_searches: 0
+    web_or_external_research_used: false
+    comparison_firewall_closed_at_step_end: true
+    size_bytes: 76917
+    sha256: 82a5c8ee79a51f7bcfe0f5688e8bde71235cb6438cd87060c92035e009f48bfe
+    git_blob_sha: e6a429bb9a1a1a38e50b59e86abaed6a81b316e1
+    source_lines: 316
+    final_lf_present: true
+prompt:
+  file: 00-task-as-sent.md
+  size_bytes: 24403
+  sha256: 96349148e8b4b6b1292b521fef08c037debb7d03f3d6565e6b0e1eac6c497845
+  git_blob_sha: b6f723c842ea797b79700a349c9b20f39fee8f85
+chat_summary:
+  file: 02-successful-rerun-chat-summary.md
+  size_bytes: 2624
+  sha256: 35d918d8fe710357cf1058624a9e8679bfa8c0e9523e1adaaf1f1761954cf8d1
+structural_receipt:
+  top_level_numbered_sections: 24
+  need_rows: 21
+  architecture_topics: 20
+  convergences: 10
+  divergences: 10
+  current_side_omissions: 4
+  greenfield_side_omissions: 4
+  current_overfitting_candidates: 4
+  current_enhancements: 4
+  greenfield_enhancements: 4
+  research_topics: 2
+  genuinely_new_research_topics: 0
+  triage_items: 10
+  P0_items: 0
+  P1_items: 3
+authority_boundaries:
+  substantive_maintainer_acceptance: not_performed
+  heterogeneous_review: not_performed
+  same_model_family: true
+  execution_source_modified: false
+  repairs_generated: false
+  follow_on_tasks_generated: false
+  target_actions: false
+  automatically_selected_future_route: none
