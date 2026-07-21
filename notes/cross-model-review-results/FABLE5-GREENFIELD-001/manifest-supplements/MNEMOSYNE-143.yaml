@@ -1,0 +1,42 @@
+task_id: MNEMOSYNE-143
+track_id: FABLE5-GREENFIELD-001
+stored_step: GF-STEP-5
+action_actor: ChatGPT_GitHub_app
+authority_level: non_execution_source_storage_and_status_record
+user_authorization:
+  source: authorized_final_phase_handoff_and_current_GF_STEP_5_result_delivery
+  preserve_exact_prompt_attempts_summary_output: true
+  update_necessary_non_execution_source_records: true
+  create_one_ready_PR_without_reasking: true
+  merge_or_auto_merge: false
+repository:
+  full_name: 08822407d/Mnemosyne
+  visibility_at_preflight: public
+  default_branch: master
+  pinned_base_sha: 644bb7d7f864bb23d942520ebb7f206b8805475e
+canonical_write_lineage:
+  task_id: MNEMOSYNE-143
+  base_branch: master
+  pinned_base_sha: 644bb7d7f864bb23d942520ebb7f206b8805475e
+  canonical_branch: mnemosyne-143-preserve-step5-result
+  canonical_pr_number: pending_at_initial_storage_record
+  scope_summary: preserve_GF_STEP_5_task_failure_success_summary_report_manifest_wayfinding_and_result_record
+storage:
+  prompt: steps/GF-STEP-5/00-task-as-sent.md
+  failure_attempt_001: steps/GF-STEP-5/01-input-integrity-failure-attempt-001.md
+  successful_chat_summary: steps/GF-STEP-5/02-successful-rerun-chat-summary.md
+  successful_output: steps/GF-STEP-5/03-contrastive-comparison.md
+  step_manifest: steps/GF-STEP-5/manifest.yaml
+result:
+  Fable_claimed_status: GF_STEP_5_COMPLETE_CONTRASTIVE_COMPARISON_READY_FOR_MAINTAINER_TRIAGE
+  substantive_maintainer_acceptance: not_performed
+  heterogeneous_review: not_performed
+  same_model_family: true
+  comparison_firewall_closed_at_step_end: true
+boundaries:
+  execution_source_modified: false
+  repair_generated: false
+  research_executed: false
+  follow_on_task_generated: false
+  target_action: false
+  auto_merge_authorized: false
