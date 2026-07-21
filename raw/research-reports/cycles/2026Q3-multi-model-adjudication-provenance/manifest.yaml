@@ -1,0 +1,46 @@
+cycle_id: RC-2026Q3-multi-model-adjudication-provenance
+storage_task: MNEMOSYNE-145
+authority_level: non_execution_source_research_evidence_and_wayfinding
+base_commit: abbcc28385767d44a053e6d0d0c01033c3e02193
+canonical_scope:
+  environment: independent_conversations
+  arms:
+    - label: Pro
+      filename_received: DR07-pro_report(1).md
+      bytes: 70441
+      sha256: 22a2c1bf4cf3a02e4b98d9457e0a78957736d2107fdd497324355122742ba9a9
+      repository_access: completed_required_six_paths
+      role: primary_research_candidate
+      maintainer_score: 90
+    - label: 5.6sol_Thinking
+      filename_received: DR07-thinking_report(2).md
+      bytes: 63242
+      sha256: 135a30f39a1b3a5c725bc1014114cb79ae2f2152b2cb6bc0f0951a4a1b4f35f1
+      repository_access: RESEARCH_INCOMPLETE_REPOSITORY_ACCESS
+      role: external_research_control
+      maintainer_score: 83
+research_task:
+  filename_received: GPT-Pro-Deep-Research-multi-model-adjudication-runtime-provenance-v2.md
+  bytes: 21882
+  sha256: e839fe3466c4abdd10e4c3d2784b988875505c2833c2844b7329c3955f6ccad6
+excluded:
+  project_internal_pair:
+    canonical_archive: false
+    reason: confounded_and_not_needed_for_reliable_progress_checkpoint
+comparison:
+  required_determinations_agree: 11
+  required_determinations_total: 12
+  primary_result: independent_labeled_Pro
+  actual_backend_identity_proven: false
+raw_body_storage:
+  embedded: false
+  reason: reliable_large_file_upload_channel_not_available_in_this_storage_task
+  exact_hashes_recorded: true
+source_portability:
+  complete: false
+  opaque_turn_citation_markers_present_in_source_reports: true
+  portable_source_manifest_required_before_load_bearing_external_claim_adoption: true
+substantive_acceptance: not_performed
+execution_source_modified: false
+Fable_findings_adjudicated: false
+repair_authorized: false
