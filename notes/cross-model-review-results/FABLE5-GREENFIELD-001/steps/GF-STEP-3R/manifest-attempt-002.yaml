@@ -1,0 +1,140 @@
+step_id: GF-STEP-3R
+attempt_id: GF-STEP-3R-ATTEMPT-002
+record_type: bounded_architecture_repair_addendum_successful_rerun
+authority_level: non_execution_source_advisory_evidence
+author_model: Fable 5
+stored_by_task: MNEMOSYNE-141
+research_mode: false
+execution_context:
+  fresh_conversation: true
+  attachments_used: 5
+  repository_paths_read: 0
+  retrieval_batteries_used: 0
+  web_or_external_searches: 0
+  premature_GF_STEP_3_candidate_read: false
+  existing_GPT_design_read: false
+  Project_knowledge_used: false
+  past_chat_retrieval_used: false
+  incidental_prohibited_exposure: none_reported
+prompt:
+  index_path: 00-task-as-sent.md
+  source_filename: FABLE5-GREENFIELD-001-GF-STEP-3R-task.md
+  source_size_bytes: 19101
+  source_sha256: 4a786d24d2004f92eb25cc8c6361eb62333d3c3f8ebbffc60950d3f6fed60d2d
+  reused_exact_task_from_attempt_001: true
+inputs_reported:
+  STEP1E:
+    filename: FABLE5-GREENFIELD-001-STEP1E-second-tier-prompts-and-final-closure.md
+    size_bytes: 32577
+    sha256: 60fd4ca8aba48236b947d3852f0666a2eb93c1c624e0833ba6e520b91eb7a3b0
+    canonical_git_blob_sha: af62ffb564fd7c227f3b651a6c666201f8102fce
+    Fable_result: exact_match_complete_read_261_lines
+  STEP2D:
+    filename: FABLE5-GREENFIELD-001-STEP2D-source-contract-verification-and-closure-addendum.md
+    size_bytes: 68834
+    sha256: ebb994bd3d8f4998cbdc7aead17dcc609958a53798f6c8e9d6dd03d8de5893ac
+    Fable_result: exact_match_complete_read_395_lines
+  STEP3A:
+    filename: FABLE5-GREENFIELD-001-STEP3A-information-authority-architecture.md
+    size_bytes: 47324
+    sha256: 3d82a3728ee7ff628be8495469e3e7039a273e28ad9262af4dea88351d8896b1
+    Fable_result: exact_match_complete_read_301_lines
+  STEP3B:
+    filename: FABLE5-GREENFIELD-001-STEP3B-lifecycle-operations-architecture.md
+    size_bytes: 68033
+    sha256: af4dd4c2d9658319462a28cc13c469f24823be06cc003f33858b348a68fb6685
+    Fable_result: exact_match_complete_read_403_lines
+  STEP4:
+    filename: FABLE5-GREENFIELD-001-STEP4-self-critique.md
+    size_bytes: 64639
+    sha256: 6ae4f2a6a0a5fc83e907bbfe441895466bbd87555e909009fc2c55365625ef9e
+    canonical_git_blob_sha: 1270f3e8871cff3d60bca9f4d4e0afa6c3f977fe
+    Fable_result: exact_match_complete_read_408_lines
+chat_summary:
+  path: 03-successful-rerun-chat-summary.md
+  verbatim_text_size_bytes: 2280
+  verbatim_text_sha256: 4bb5d738efa32e7d12bec102909c816a219f0585e791516de041eaf7060dd290
+output:
+  index_path: 04-bounded-architecture-repairs.md
+  source_filename: FABLE5-GREENFIELD-001-STEP3R-bounded-architecture-repairs.md
+  source_size_bytes: 58339
+  source_sha256: 961a8c30897143ed394f1b04a318843850762540a69567daaef2be1392770d76
+  source_git_blob_sha: 5d6b5312b686772404ca6f392a0c5e7adaa5f4e8
+  source_encoding: utf-8
+  source_line_endings: lf
+  source_final_lf_present: true
+  source_lines: 554
+  archive_format: deterministic_gzip_mtime_0_level_9_then_base64
+  archive_gzip_size_bytes: 19631
+  archive_gzip_sha256: c48e3c817a577901f1edc48dad911097520a98e1bb9b05c5d2d8a0157a933caf
+  exact_ordered_parts: 3
+  exact_reconstruction_verified: true
+  remote_part_git_blob_shas_match_local_calculation: true
+structure:
+  numbered_sections: 20
+  repair_findings: 2
+  repair_scope:
+    - GF4-F01
+    - GF4-F02
+  amendments:
+    count: 6
+    ids:
+      - GF3R-AMEND-01
+      - GF3R-AMEND-02
+      - GF3R-AMEND-03
+      - GF3R-AMEND-04
+      - GF3R-AMEND-05
+      - GF3R-AMEND-06
+  GF4_F01_treatment_reported:
+    new_artifact_classes: 0
+    observation_kinds_mapped_to_AC3_R1: 7
+    adapters_mapped_to_global_AC7_under_AC6_gate: true
+    governed_metadata_layer_added: true
+    A18_edges_terminate_only_on_classed_nodes: true
+  GF4_F02_treatment_reported:
+    new_failure_classes:
+      - GF3B-FAIL17
+      - GF3B-FAIL18
+    widened_failure_class: GF3B-FAIL07
+    failure_register_total: 18
+  closure_rechecks:
+    GF4_F01: Fable_claimed_pass
+    GF4_F02: Fable_claimed_pass
+  unchanged_findings_carried_unrepaired: 17
+  design_parameter_rows: 15
+  design_parameters_answered: 0
+  MC_PC_instruments_adopted: 0
+  capability_boundary_violations_introduced_reported: 0
+  FR_triggers_activated: 0
+word_budget_reported:
+  pre_compression_pipe_excluded_approximate: 7396
+  hard_cap: 6500
+  light_compression_passes: 1
+  recount_after_compression: false_as_instructed
+status:
+  Fable_claim: GF_STEP_3R_complete_BOUNDED_REPAIR_ADDENDUM
+  repository_storage: exact_archive_summary_and_manifest_stored
+  substantive_maintainer_acceptance: not_performed
+  GF_STEP_3R_completed_as_Fable_advisory_result: true
+  GF4_F01_substantively_accepted_by_maintainer: false
+  GF4_F02_substantively_accepted_by_maintainer: false
+  GF_STEP_5_task_generated: false
+  GF_STEP_5_started: false
+  comparison_firewall_opened: false
+next_gate_reported:
+  user_decision_required: true
+  permitted_future_options:
+    - bounded_reverification_of_GF_STEP_3R
+    - separately_authorized_GF_STEP_5_preparation_after_gate_review
+  automatically_selected_option: none
+boundaries:
+  execution_source_modified: false
+  substantive_Fable_adjudication_performed: false
+  Mnemosyne_improvement_performed: false
+  current_GPT_design_read_or_compared: false
+  target_workspace_created: false
+  target_materials_ingested: false
+  target_repository_written: false
+  regression_formalized: false
+  operational_build_started: false
+  paused_post_handoff_route_resumed_or_closed: false
