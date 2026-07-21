@@ -7,7 +7,7 @@ checkpoint_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-RELIABLE-PROGRESS-001
 created_by_task: MNEMOSYNE-145
 repository_before_checkpoint_PR: master@abbcc28385767d44a053e6d0d0c01033c3e02193
 effective_when: canonical_MNEMOSYNE_145_PR_is_human_merged
-canonical_PR_number: pending
+canonical_PR_number: 196
 trusted_progress_scope_after_merge:
   - independent_Deep_Research_task_identity_and_hash
   - independent_labeled_Pro_report_identity_and_maintainer_comparison
