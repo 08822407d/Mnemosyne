@@ -1,0 +1,48 @@
+study_id: FABLE5-GOV-001
+storage_task: MNEMOSYNE-146
+authority_level: non_execution_source_research_evidence
+base_commit: 94de7427da56659f472cbc11eb1bf310d5b6116a
+source:
+  provider_surface: Fable_5
+  report_status_claim: FABLE5_GOV_001_COMPLETE_INDEPENDENT_GOVERNANCE_RESEARCH
+  repository_ref_used: 94de7427da56659f472cbc11eb1bf310d5b6116a
+  required_repository_reads_claimed: 4_of_4
+  extra_repository_reads_claimed: 0
+  prior_DR07_full_reports_read_claimed: false
+  comparison_firewall_claimed: closed
+  incidental_exposure_disclosed: true
+task_artifact:
+  filename: FABLE5-GOV-001-independent-evidence-governance-research-task-v2.md
+  size_bytes: 18554
+  sha256: 81368ae96a2e716268583a0f4a36d69c476fed7e50add3b25963f68c8c096e96
+  archive_parts: 2
+  remote_part_git_blob_shas_verified: true
+report_artifact:
+  filename: FABLE5-GOV-001-independent-governance-research-report.md
+  size_bytes: 59630
+  sha256: 6a815c6d3c506d630b226fe53e1141057c9d9c1b69bab62b9586e22e67798ffe
+  newline_characters: 487
+  final_lf_present: true
+  archive_parts: 4
+  remote_part_git_blob_shas_verified: true
+structural_receipt:
+  required_top_level_sections: 17_of_17
+  required_final_determinations: 12_of_12
+  failure_register_entries: 20
+  input_integrity: pass
+initial_maintainer_interpretation:
+  value: high_signal_heterogeneous_corroboration_and_recovery_design_enhancement
+  policy_adoption: not_performed
+  execution_source_change: false
+  GF_STEP_5_substantive_adjudication: not_started
+  actual_backend_model_identity_proven: false
+known_limits:
+  portable_source_manifest_complete: false
+  report_source_ledger_uses_S_references_without_full_URL_mapping: true
+  reported_page_fetches_beyond_search_retrieval: 0
+  complete_blinding: false_due_to_disclosed_incidental_exposure
+next_gate:
+  - human_merge_the_single_MNEMOSYNE_146_storage_PR
+  - produce_portable_source_manifest_for_load_bearing_claims
+  - conduct_bounded_three_way_comparison_and_user_decision_gate
+  - do_not_adopt_policy_or_start_GF_STEP_5_adjudication_automatically
