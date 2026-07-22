@@ -12,8 +12,8 @@ trusted_default_branch_state: master@e895e586fcda6783af567e3513b2c5f03ebd2d1c
 supersedes_for_future_restart_selection:
   - MULTI-MODEL-ADJUDICATION-PROVENANCE-RELIABLE-PROGRESS-001
 previous_checkpoints_retained_as_history: true
-checkpoint_effective_when: MNEMOSYNE_148_PR_is_human_merged
-canonical_PR_number: pending
+checkpoint_effective_when: PR_199_is_human_merged
+canonical_PR_number: 199
 user_designated_trusted_scope:
   - all_repository_history_and_merged_content_through_PR_198
   - FABLE5_GOV_001_stage_storage_through_PR_197
