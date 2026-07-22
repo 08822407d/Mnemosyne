@@ -16,7 +16,8 @@ canonical_DR07_pair:
 heterogeneous_follow_up:
   study_id: FABLE5-GOV-001
   path: raw/research-reports/cycles/2026Q3-multi-model-adjudication-provenance/fable5-governance-001
-  status: complete_received_exactly_archived_pending_human_merge_of_MNEMOSYNE_146_PR
+  storage_PR: 197
+  status: complete_received_exactly_archived_pending_human_merge_of_PR_197
   role: heterogeneous_corroboration_and_recovery_design_enhancement
   prior_DR07_full_reports_read: false
   complete_blinding: false_due_to_disclosed_incidental_exposure
@@ -26,7 +27,7 @@ substantive_recommendation_acceptance: not_performed
 execution_source_modified: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - human_review_and_merge_the_single_MNEMOSYNE_146_storage_PR
+  - human_review_and_merge_PR_197
   - verify_load_bearing_Fable_sources_and_build_a_portable_source_manifest
   - perform_a_bounded_three_way_comparison_of_DR07_and_FABLE5_GOV_001
   - request_user_decisions_before_any_policy_adoption_or_GF_STEP_5_adjudication
