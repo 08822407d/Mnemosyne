@@ -9,7 +9,8 @@ task_type: user_authorized_bounded_behavior_guard_repair
 base_branch: master
 pinned_base_sha: 96244617606f2a7afe3c1f0451438720df9f3307
 canonical_branch: mnemosyne-149-repair-run-context-provenance-v0-2
-canonical_pr_number: not_available_before_PR_creation
+canonical_pr_number: 200
+canonical_pr_draft: true
 user_decision_recorded: true
 execution_source_modified: false
 checkpoint_activated: false
@@ -309,7 +310,19 @@ github_write_lineage_preflight:
   decision: create_new_lineage
 
 pre_PR_recheck:
-  status: pending_before_PR_creation
+  status: completed
+  performed_at: 2026-07-22
+  default_branch_sha: 96244617606f2a7afe3c1f0451438720df9f3307
+  canonical_head_before_PR: 21e8eadd4f5973ae63b890b80feaec7eba10f828
+  accessible_open_PRs_before_creation: []
+  exact_task_id_matches_before_creation: []
+  equivalent_scope_matches_before_creation: []
+  intended_branch_match:
+    - mnemosyne-149-repair-run-context-provenance-v0-2
+  decision: create_PR_on_already_designated_canonical_lineage
+  canonical_PR_created: 200
+  draft: true
+  auto_merge: false
 ```
 
 ## Implemented dispositions
