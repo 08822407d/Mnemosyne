@@ -8,7 +8,7 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: e895e586fcda6783af567e3513b2c5f03ebd2d1c
 canonical_branch: mnemosyne-148-record-pr198-restart-checkpoint
-canonical_pr_number: pending
+canonical_pr_number: 199
 user_decision_recorded: true
 user_decision_evidence: current_maintenance_conversation_instruction_designating_PR_198_as_last_reliable_trustworthy_work_point
 execution_source_modified: false
@@ -32,12 +32,11 @@ Created:
 
 - `current/pr198-pro-switch-model-quality-restart-checkpoint.md`
 - this result record
+- `notes/codex-task-results/MNEMOSYNE-148-pr-finalization.md`
 
 Modified:
 
 - `current/multi-model-adjudication-provenance-research-status.md`
-
-A PR-finalization record will be added after the canonical PR number exists.
 
 ## Trust-boundary decision
 
@@ -94,6 +93,7 @@ run_context:
   artifact_or_commit_refs:
     - master@e895e586fcda6783af567e3513b2c5f03ebd2d1c
     - current/pr198-pro-switch-model-quality-restart-checkpoint.md
+    - PR_199
   output_hashes: []
   reviewer_or_adjudicator: user_designated_checkpoint_recorded_by_current_conversation
   review_independence_class: explicit_human_trust_boundary_decision_with_no_heterogeneous_model_review
@@ -110,17 +110,18 @@ The active run-context guard normally requires heterogeneous review before final
 
 The exception does not weaken the activation trigger, authorize automatic rollback, or establish backend identity.
 
-## Validation plan
+## Validation
 
-Before PR creation:
+Completed before PR creation:
 
-- verify current `master` equals the PR #198 merge commit;
-- enumerate accessible open PRs;
-- search for duplicate MNEMOSYNE-148 lineage;
-- compare the branch with `master`;
-- verify `current/human-approved-spec.md` remains unchanged;
-- create exactly one canonical PR;
-- bind the PR number in the checkpoint, status, result record, and finalization record.
+- verified current `master` equals the PR #198 merge commit;
+- enumerated accessible open PRs;
+- searched for duplicate MNEMOSYNE-148 lineage;
+- compared the branch with `master`;
+- verified `current/human-approved-spec.md` remains unchanged;
+- created exactly one canonical PR: #199.
+
+Final branch comparison, mergeability, and unique-merge-target status are recorded in `notes/codex-task-results/MNEMOSYNE-148-pr-finalization.md`.
 
 ## Boundary
 
