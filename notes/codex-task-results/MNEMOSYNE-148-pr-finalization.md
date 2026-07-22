@@ -2,7 +2,7 @@
 
 ```yaml
 record_type: result_record_PR_finalization
- task_id: MNEMOSYNE-148
+task_id: MNEMOSYNE-148
 canonical_PR_number: 199
 canonical_branch: mnemosyne-148-record-pr198-restart-checkpoint
 base_branch: master
