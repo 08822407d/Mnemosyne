@@ -8,7 +8,7 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: 94de7427da56659f472cbc11eb1bf310d5b6116a
 canonical_branch: mnemosyne-146-preserve-fable5-governance-study
-canonical_pr_number: pending
+canonical_pr_number: 197
 user_authorization:
   - perform_stage_storage_of_the_completed_Fable5_research
 repository_write_requested_via_GitHub_invocation: true
@@ -44,4 +44,4 @@ report:
 
 ## Boundary
 
-This task does not accept the report's candidate policies, modify `current/human-approved-spec.md`, adjudicate GF-STEP-5, prove a backend model identity, authorize repairs or target-project work, merge a PR, or enable auto-merge.
+This task does not accept the report's candidate policies, modify `current/human-approved-spec.md`, adjudicate GF-STEP-5, prove a backend model identity, authorize repairs or target-project work, merge PR #197, or enable auto-merge.
