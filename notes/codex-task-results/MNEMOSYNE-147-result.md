@@ -8,13 +8,14 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: 7434407f34caa5aa576c36bdf70adec84b2205d2
 canonical_branch: mnemosyne-147-adopt-run-context-pr-disclosure
-canonical_pr_number: pending
+canonical_pr_number: 198
+repository_effective_when: PR_198_is_human_merged
 user_decision_recorded: true
 user_decision_evidence: current_Mnemosyne_maintenance_conversation_instruction_to_implement_FABLE5_GOV_001_recommendation_and_record_current_model_context
 execution_source_modified: false
 active_behavior_guard_created: true
 guidance_loader_updated: true
-research_status_updated: pending
+research_status_updated: true
 GF_STEP_5_adjudication_started: false
 target_project_work_started: false
 auto_merge_authorized: false
@@ -31,7 +32,7 @@ Created:
 Modified:
 
 - `commands/load-mnemosyne-guidance.md`
-- `current/multi-model-adjudication-provenance-research-status.md` after PR-number finalization
+- `current/multi-model-adjudication-provenance-research-status.md`
 
 The implementation adopts the minimal FABLE5-GOV-001 recommendation relevant to pull-request and important-task provenance. It does not adopt the report's entire governance framework.
 
@@ -65,6 +66,7 @@ run_context:
     - current/run-context-and-pr-provenance-guard.md
     - notes/run-context-and-pr-provenance-adoption-record.md
     - commands/load-mnemosyne-guidance.md
+    - PR_198
   output_hashes: []
   reviewer_or_adjudicator: user_authorized_no_independent_substantive_review_yet
   review_independence_class: implementation_by_current_conversation_pending_future_stronger_model_review
@@ -104,17 +106,19 @@ Deferred:
 - GF-STEP-5 adjudication;
 - target-project work.
 
-## Validation plan
+## Validation
 
-Before PR creation:
+Completed before PR creation:
 
 - re-read created/modified files from the canonical branch;
-- compare the branch against `master`;
-- verify `current/human-approved-spec.md` is unchanged;
-- repeat duplicate-lineage preflight;
-- create exactly one canonical PR;
-- bind the PR number in this record and a finalization record.
+- compared the branch against `master`;
+- verified `current/human-approved-spec.md` is unchanged;
+- repeated duplicate-lineage preflight;
+- created exactly one canonical PR, PR #198;
+- recorded the official model/reasoning terminology and non-attestation boundary in the PR body.
+
+Final compare, finalization record, open-PR enumeration, and mergeability are verified after the PR-number-binding commits.
 
 ## Boundary
 
-This result record is not execution source. It does not prove the actual backend model, merge the PR, enable auto-merge, start GF-STEP-5 adjudication, or authorize target-project work.
+This result record is not execution source. It does not prove the actual backend model, merge PR #198, enable auto-merge, start GF-STEP-5 adjudication, or authorize target-project work.
