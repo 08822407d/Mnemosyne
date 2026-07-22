@@ -38,10 +38,15 @@ Read or ask the user to provide:
 - `current/artifact-delivery-and-direct-generation-guard.md`
 - this command file, if available
 
+When the current task may perform any GitHub or connected-repository write—including a direct file update, repository comment, branch or pull-request operation—or may create or modify an important record intended for repository publication, also read:
+
+- `current/run-context-and-pr-provenance-guard.md`
+
 When the current task may create or update a GitHub branch or pull request, also read:
 
 - `current/github-single-active-pr-lineage-guard.md`
-- `current/run-context-and-pr-provenance-guard.md`
+
+Purely read-only repository inspection does not trigger these additional reads.
 
 Read additional files only when the current local task independently requires them, for example:
 
@@ -80,7 +85,7 @@ If any of those files are read for a separate explicit task, treat their mainten
 16. Do not infer that the user wants handoff merely because this command was invoked.
 17. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
 18. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
-19. When repository branch or PR creation is in scope, apply `current/run-context-and-pr-provenance-guard.md`: record actual actor/action source, the operator-visible or operator-reported product selection using current official terminology when verifiable, the provider-documented mapping separately, backend identity as unknown unless strongly attested, model/surface switches, reviewer independence, and the later-review boundary.
+19. When any GitHub or connected-repository write, or creation or modification of an important record intended for repository publication, is in scope, apply `current/run-context-and-pr-provenance-guard.md`: record actual actor/action source, the operator-visible or operator-reported product selection verbatim, any provider-documented normalization separately, backend status under the guard's discriminated schema, model/surface switches, component review relations, human adjudication, task-scoped user authorization, and the later-review boundary.
 20. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading

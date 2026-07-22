@@ -95,6 +95,28 @@ later_review:
 
 Later review may amend or supersede this guard through a new reviewed task and PR; it must not erase this original execution context.
 
+## Subsequent bounded review and amendment reference
+
+The completed bounded v0.2 review, task-local user disposition, clause-to-evidence dispositions, and prospective active-guard amendment lineage are recorded in:
+
+- `notes/run-context-and-pr-provenance-v0.2-review-record.md`
+
+```yaml
+subsequent_review:
+  independent_review_task: WORK-ULTRA-PR198-REVIEW-001
+  implementation_task: MNEMOSYNE-149
+  review_record: notes/run-context-and-pr-provenance-v0.2-review-record.md
+  disposition: user_authorized_bounded_v0_2_repair
+  relationship_to_this_record: subsequent_review_cross_reference_only
+  active_guard_relationship: reviews_and_prospectively_amends
+  original_adoption_record_preserved: true
+  historical_v0_1_run_records_rewritten: false
+  execution_source_modified: false
+  checkpoint_activation_effect: none
+```
+
+This cross-reference does not supersede or rewrite this original adoption record. The new review record carries the v0.2 scope, evidence mapping, user disposition, and amendment lineage.
+
 ## Boundary
 
 This decision does not prove backend identity, activate a quality-incident checkpoint, adjudicate Fable GF-STEP-5, authorize target-project work, approve auto-merge, or adopt the deferred research candidates.

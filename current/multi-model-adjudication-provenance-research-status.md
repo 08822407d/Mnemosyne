@@ -3,15 +3,17 @@
 > Non-execution-source live wayfinding. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-004
-last_status_task: MNEMOSYNE-148
+status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-005
+last_status_task: MNEMOSYNE-149
 cycle: raw/research-reports/cycles/2026Q3-multi-model-adjudication-provenance
 latest_reliable_progress_checkpoint:
   record: current/pr198-pro-switch-model-quality-restart-checkpoint.md
   canonical_PR: 199
   trusted_through_PR: 198
   trusted_merge_commit: e895e586fcda6783af567e3513b2c5f03ebd2d1c
-  status: pending_human_merge_of_PR_199
+  record_status: merged
+  record_merge_commit: 96244617606f2a7afe3c1f0451438720df9f3307
+  activation_status: dormant_not_activated
   purpose: restart_boundary_for_next_Pro_selection_trial
   activation_requires:
     - explicit_user_declaration_of_post_switch_model_quality_or_intelligence_problem
@@ -40,6 +42,30 @@ recommendation_adoption:
   canonical_PR: 198
   repository_status: merged
   merge_commit: e895e586fcda6783af567e3513b2c5f03ebd2d1c
+  v0_2_review_and_repair:
+    independent_review_task: WORK-ULTRA-PR198-REVIEW-001
+    implementation_task: MNEMOSYNE-149
+    review_record: notes/run-context-and-pr-provenance-v0.2-review-record.md
+    original_adoption_record: notes/run-context-and-pr-provenance-adoption-record.md
+    user_disposition: approved_for_bounded_repair
+    implementation_status: effective_in_any_default_branch_revision_containing_this_block
+    review_context:
+      context_relation: fresh_task_project
+      provider_relation: same_provider
+      model_relation: unknown
+      heterogeneous_provider_review: false
+      mechanical_and_multi_agent_cross_checks: true
+    repair_scope:
+      - canonical_evidence_and_backend_schema
+      - compact_core_conditional_and_auditable_omission_rules
+      - stable_switch_segment_schema
+      - component_based_review_events_and_task_scoped_authorization
+      - all_repository_write_loader_trigger
+      - explicit_review_amend_supersede_lineage
+      - lightweight_nonactivating_checkpoint_cross_reference
+    original_record_preserved: true
+    historical_v0_1_run_records_rewritten: false
+    checkpoint_activation_effect: none
   adopted_scope:
     - compact_run_record_for_important_repository_writes
     - concise_natural_language_disclosure_for_low_risk_work
@@ -48,10 +74,11 @@ recommendation_adoption:
     - model_or_surface_switch_recording
     - reviewer_independence_recording
     - high_impact_execution_source_or_trust_boundary_heterogeneous_review_unless_user_exception
-    - later_reliable_Pro_or_stronger_model_review_marker
+    - capability_neutral_bounded_review_maturity
   active_guard: current/run-context-and-pr-provenance-guard.md
+  active_guard_record_version: v0.2
   guidance_loader_updated: true
-  maturity: provisional_pending_reliable_Pro_or_stronger_model_review
+  maturity: v0_2_bounded_review_completed_and_user_authorized
 checkpoint_creation_context:
   task: MNEMOSYNE-148
   product_surface: standard_ChatGPT_conversation
@@ -60,21 +87,23 @@ checkpoint_creation_context:
   backend_model_identity: UNKNOWN_OR_NOT_ATTESTABLE
   heterogeneous_review_performed: false
   task_local_exception_basis: explicit_user_designation_of_PR_198_as_immediate_trusted_boundary
+  execution_source_modified: false
 actual_backend_model_identity_proven: false
-execution_source_modified_by_MNEMOSYNE_148: false
+execution_source_modified_by_MNEMOSYNE_149: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - human_review_and_merge_PR_199
-  - after_merge_user_may_switch_to_Pro_and_authorize_a_separately_bounded_task
-  - if_user_explicitly_activates_the_checkpoint_reassess_or_redo_affected_post_PR198_judgment_work
+  - user_selects_and_authorizes_the_next_separately_bounded_Mnemosyne_task
+  - apply_guard_v0_2_prospectively_without_rewriting_historical_v0_1_records
+  - keep_PR198_checkpoint_dormant_unless_the_user_explicitly_supplies_both_activation_conditions
+  - if_explicitly_activated_create_a_separate_activation_record_and_reassess_only_the_affected_scope
   - preserve_Git_history_and_mechanical_evidence_during_recovery
-  - do_not_automatically_revert_merged_changes_or_modify_execution_source
+  - require_fresh_task_local_authorization_for_each_future_repository_write_or_execution_source_change
 ```
 
 ## Current interpretation
 
 PR #198 is now the user-designated last reliable and trustworthy work point for the next Pro-selection experiment. The checkpoint is operational rather than attestational: it does not prove which backend model executed any response, and it can be activated by the user's explicit quality-problem plus restart instruction without first proving backend identity.
 
-The focused run-context guard adopted by PR #198 remains active and provisional. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs by default and are not automatically rerun after checkpoint activation.
+The focused run-context guard adopted by PR #198 has now received a bounded fresh-task-project, same-provider review with mechanical and multi-agent cross-checks. MNEMOSYNE-149 implements the user-authorized v0.2 repairs prospectively while preserving the original v0.1 adoption record and all historical run records. The review is not represented as heterogeneous-provider review. The review, repair, and any provenance/checkpoint cross-reference do not activate the checkpoint. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs by default and are not automatically rerun after checkpoint activation.
 
 Post-checkpoint recovery preserves history and mechanical evidence, redoes affected judgment chains, and corrects defective merged changes through new reviewed PRs rather than destructive branch rewrites.

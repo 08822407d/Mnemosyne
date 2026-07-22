@@ -99,3 +99,5 @@ After this checkpoint is merged, the user may switch to `Pro` and authorize a se
 ## Boundary
 
 This record does not prove a backend model identity, declare that a future incident has already occurred, automatically roll back repository state, modify the execution source, adjudicate Fable GF-STEP-5, authorize repairs or target-project work, merge its own PR, or enable auto-merge.
+
+Under `current/run-context-and-pr-provenance-guard.md`, a run record may point to this file through `recovery_refs.checkpoint_ref`. That reference is informational only: it does not constitute an incident assessment or activation record, prove provider failure or model substitution, authorize recovery or repository writes, or satisfy either checkpoint activation condition. Any `incident_assessment_ref` or `activation_record_ref` must identify a separately authorized record that actually exists.
