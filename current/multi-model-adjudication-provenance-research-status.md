@@ -25,7 +25,8 @@ heterogeneous_follow_up:
   portable_source_manifest_complete: false
 recommendation_adoption:
   task: MNEMOSYNE-147
-  canonical_PR: pending
+  canonical_PR: 198
+  repository_status: pending_human_merge_of_PR_198
   adopted_scope:
     - compact_run_record_for_important_repository_writes
     - concise_natural_language_disclosure_for_low_risk_work
@@ -38,6 +39,11 @@ recommendation_adoption:
   active_guard: current/run-context-and-pr-provenance-guard.md
   guidance_loader_updated: true
   maturity: provisional_pending_reliable_Pro_or_stronger_model_review
+  current_task_official_context:
+    product_surface: standard_ChatGPT_conversation
+    operator_selected_option: Extra_High
+    provider_documented_model_mapping: GPT_5_6_Sol
+    backend_model_identity: UNKNOWN_OR_NOT_ATTESTABLE
   deferred:
     - full_T0_T5_global_framework
     - complete_checkpoint_field_expansion
@@ -48,8 +54,8 @@ actual_backend_model_identity_proven: false
 execution_source_modified_by_MNEMOSYNE_147: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - human_review_and_merge_the_single_MNEMOSYNE_147_PR
-  - use_the_new_guard_for_subsequent_important_PRs
+  - human_review_and_merge_PR_198
+  - use_the_new_guard_for_subsequent_important_PRs_after_merge
   - later_review_and_improve_the_guard_with_a_reliably_available_Pro_or_stronger_model
   - separately_decide_source_portability_and_GF_STEP_5_adjudication
   - do_not_treat_UI_or_provider_mapping_as_particular_run_backend_attestation
