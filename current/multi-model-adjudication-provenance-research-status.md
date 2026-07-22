@@ -8,9 +8,10 @@ last_status_task: MNEMOSYNE-148
 cycle: raw/research-reports/cycles/2026Q3-multi-model-adjudication-provenance
 latest_reliable_progress_checkpoint:
   record: current/pr198-pro-switch-model-quality-restart-checkpoint.md
+  canonical_PR: 199
   trusted_through_PR: 198
   trusted_merge_commit: e895e586fcda6783af567e3513b2c5f03ebd2d1c
-  status: pending_human_merge_of_MNEMOSYNE_148_PR
+  status: pending_human_merge_of_PR_199
   purpose: restart_boundary_for_next_Pro_selection_trial
   activation_requires:
     - explicit_user_declaration_of_post_switch_model_quality_or_intelligence_problem
@@ -63,7 +64,7 @@ actual_backend_model_identity_proven: false
 execution_source_modified_by_MNEMOSYNE_148: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - human_review_and_merge_the_single_MNEMOSYNE_148_checkpoint_PR
+  - human_review_and_merge_PR_199
   - after_merge_user_may_switch_to_Pro_and_authorize_a_separately_bounded_task
   - if_user_explicitly_activates_the_checkpoint_reassess_or_redo_affected_post_PR198_judgment_work
   - preserve_Git_history_and_mechanical_evidence_during_recovery
