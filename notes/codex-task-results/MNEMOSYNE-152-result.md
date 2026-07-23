@@ -8,7 +8,7 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: ea40aaefe6a486e710012e10521a73a81890be43
 canonical_branch: mnemosyne-152-preserve-work-ultra-gf5-stage-a
-canonical_pr_number: pending
+canonical_pr_number: 203
 user_decision_recorded: true
 execution_source_modified: false
 GF_STEP_5_read_or_adjudicated: false
@@ -21,7 +21,7 @@ auto_merge_authorized: false
 
 MNEMOSYNE-152 preserves the exact Stage A task contract, complete response, and six frozen artifacts in a deterministic tar/bzip2/Base64 multipart archive; records exact identities, mechanical receipt, and two recoverable storage-boundary reconstruction anomalies; and synchronizes live Fable/provenance wayfinding.
 
-The task does not adjudicate GF-STEP-5 or adopt either architecture. It prepares a separate Stage B taskbook locally after the storage PR exists.
+The task does not adjudicate GF-STEP-5 or adopt either architecture. A separate Stage B taskbook is delivered outside the repository and requires PR #203 to be human-merged before execution.
 
 ## Created paths
 
@@ -31,11 +31,25 @@ The task does not adjudicate GF-STEP-5 or adopt either architecture. It prepares
 - `notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/storage-anomaly-record.md`
 - fifteen ordered Base64 archive parts under `notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/archive-parts/`
 - this result record
+- `notes/codex-task-results/MNEMOSYNE-152-pr-finalization.md`
 
 ## Modified paths
 
 - `current/fable-greenfield-execution-deviation-status.md`
 - `current/multi-model-adjudication-provenance-research-status.md`
+
+## Archive identity
+
+```yaml
+archive:
+  format: deterministic_tar_then_bzip2_then_Base64_15_parts
+  tar_bytes: 358400
+  tar_sha256: 6f214d2df97511ff94e719a85f0e992d293c0f34fbc6e3f292cc8cf3e3ffb630
+  bzip2_bytes: 64386
+  bzip2_sha256: 9231cc8b3f5a42205cf84d7089e6633f9f1781f49ddc94950f6e9d1684732f71
+  base64_characters: 85848
+  ordered_parts: 15
+```
 
 ## Run context
 
@@ -45,11 +59,9 @@ run_context:
     record_version: v0.2
     task_id: MNEMOSYNE-152
     record_id: MNEMOSYNE-152-RESULT-001
-
   date_or_window:
     started_at: 2026-07-23
     completed_or_recorded_at: 2026-07-23
-
   action:
     actor: ChatGPT_GitHub_app
     actor_kind: agent
@@ -62,7 +74,6 @@ run_context:
           observed_or_accessed_at: 2026-07-23
           claim_scope: operator_selection_during_MNEMOSYNE_152
           detail: user_reported_working_with_5_6sol_xhigh
-
   product_surface:
     value: standard_ChatGPT_conversation_with_GitHub_app
     evidence:
@@ -71,7 +82,6 @@ run_context:
         observed_or_accessed_at: 2026-07-23
         claim_scope: product_surface_for_MNEMOSYNE_152
         detail: current_Mnemosyne_project_maintenance_conversation
-
   operator_selection:
     verbatim: 5.6sol xhigh
     evidence:
@@ -80,11 +90,9 @@ run_context:
         observed_or_accessed_at: 2026-07-23
         claim_scope: operator_selected_option_for_MNEMOSYNE_152
         detail: user_reported_current_selection
-
   backend:
     status: unknown_or_not_attestable
     reason: consumer_Chat_selection_does_not_attest_the_particular_backend
-
   artifacts:
     status: recorded
     refs:
@@ -94,7 +102,6 @@ run_context:
           status: not_available_before_merge
           type: git_commit_sha
           value: null
-
   review_events:
     - review_id: MNEMOSYNE-152-MAINTAINER-RECEIPT
       actor: current_maintenance_conversation
@@ -116,7 +123,6 @@ run_context:
         - same_provider_review
         - backend_model_relation_unknown
         - reconstruction_anomaly_steps_are_preserved_from_Work_ledger_not_reexecuted_in_this_storage_task
-
   human_adjudication:
     status: recorded
     actor: user
@@ -127,7 +133,6 @@ run_context:
         observed_or_accessed_at: 2026-07-23
         claim_scope: storage_and_taskbook_sequence
         detail: user_authorized_exact_storage_and_Stage_B_taskbook_preparation
-
   user_authorization:
     status: authorized
     actor: user
@@ -153,28 +158,25 @@ run_context:
         detail: user_requested_storage_then_Stage_B_taskbook
     expires_with_task: true
     not_future_precedent: true
-
   limitations:
     - Stage_A_is_static_document_assessment_not_empirical_implementation_validation
-    - Stage_B_execution_requires_a_separate_explicit_user_start_instruction
-
+    - Stage_B_execution_requires_PR_203_merge_and_a_separate_explicit_user_start_instruction
   omissions:
     - field: provider_normalization
       reason: not_applicable
       detail: no_current_provider_mapping_claim_is_needed
 ```
 
-## Validation plan
+## Validation
 
-Before PR creation:
+- duplicate-lineage preflight and pre-PR recheck completed;
+- exactly one canonical PR created: #203;
+- branch was ahead-only from `master@ea40aaefe6a486e710012e10521a73a81890be43`;
+- changed paths are limited to Stage A storage, result/finalization, and two live non-execution-source statuses;
+- `current/human-approved-spec.md` remains unchanged;
+- no GF-STEP-5 substantive read/adjudication occurred in this storage task.
 
-- enumerate accessible open PRs and exact task/branch matches;
-- verify current `master` and pinned base;
-- compare the canonical branch with `master`;
-- re-read all fifteen remote archive-part blobs and compare their Git blob SHAs with the local precomputed values;
-- verify `current/human-approved-spec.md` is unchanged;
-- create exactly one canonical PR;
-- bind the PR number in live status, this result, manifest/receipt metadata where needed, and a finalization record.
+Final comparison and merge-target information are recorded in `notes/codex-task-results/MNEMOSYNE-152-pr-finalization.md`.
 
 ## Boundary
 
