@@ -103,23 +103,23 @@ FABLE5_GREENFIELD_maintainer_adjudication:
   Stage_A:
     task: WORK-ULTRA-FABLE-GF5-STAGE-A-001
     storage_task: MNEMOSYNE-152
-    storage_PR: pending
-    status: complete_received_pending_human_merge_of_storage_PR
+    storage_PR: 203
+    status: complete_stored_pending_human_merge_of_PR_203
     exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001
     comparison_firewall: passed
     GF_STEP_5_accessed_or_adjudicated: false
     substantive_architecture_adoption: not_performed
   Stage_B:
-    taskbook_status: prepared_for_download_after_storage_PR_creation
+    taskbook_status: prepared_for_download
     execution_status: not_started
-    required_precondition: human_merge_of_MNEMOSYNE_152_storage_PR
+    required_precondition: human_merge_of_PR_203
     repository_mode: read_only
     implementation_authorized: false
 actual_backend_model_identity_proven: false
 execution_source_modified_by_MNEMOSYNE_152: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - human_review_and_merge_the_single_MNEMOSYNE_152_storage_PR
+  - human_review_and_merge_PR_203
   - execute_Stage_B_only_after_explicit_user_start_instruction
   - return_Stage_B_results_for_maintainer_and_user_adjudication
   - do_not_reuse_the_PR_200_write_environment_for_new_repository_writes
@@ -133,4 +133,4 @@ The PR #198 checkpoint was explicitly activated after the user rejected the labe
 
 The checkpoint and its activation remain operational records, not backend attestation. The completed event does not automatically activate the checkpoint for a future incident.
 
-The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is now complete pre-reveal evidence and is being preserved exactly by MNEMOSYNE-152. Fable GF-STEP-5 substantive adjudication has not started; Stage B remains a separate read-only task that requires the storage PR to merge and the user to explicitly start it.
+The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is complete pre-reveal evidence and is preserved by PR #203 pending human merge. Fable GF-STEP-5 substantive adjudication has not started; Stage B remains a separate read-only task that requires PR #203 to merge and the user to explicitly start it.
