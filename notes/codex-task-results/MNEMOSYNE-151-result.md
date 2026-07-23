@@ -8,7 +8,7 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: 59e1a9d560c7717e20b81c8b8282b228b41e47a2
 canonical_branch: mnemosyne-151-sync-post-pr201-live-gate
-canonical_pr_number: pending
+canonical_pr_number: 202
 user_decision_recorded: true
 execution_source_modified: false
 checkpoint_semantics_modified: false
@@ -97,6 +97,12 @@ run_context:
           status: not_available_before_merge
           type: git_blob_sha
           value: null
+      - ref: notes/codex-task-results/MNEMOSYNE-151-pr-finalization.md
+        relation: created
+        immutable_identity:
+          status: not_available_before_merge
+          type: git_blob_sha
+          value: null
 
   user_authorization:
     status: authorized
@@ -134,17 +140,18 @@ run_context:
       detail: no_substantive_architecture_or_research_review_is_performed
 ```
 
-## Validation plan
+## Validation
 
-Before merge instruction:
+Completed:
 
-- verify `master` begins at PR #201 merge commit `59e1a9d560c7717e20b81c8b8282b228b41e47a2`;
-- enumerate accessible open PRs and exact MNEMOSYNE-151 matches;
-- compare the branch with `master`;
-- verify `current/human-approved-spec.md` remains unchanged;
-- verify the live status no longer references merging its own PR as the next gate;
-- create exactly one canonical PR;
-- bind its number in the result/finalization record.
+- verified `master` started at PR #201 merge commit `59e1a9d560c7717e20b81c8b8282b228b41e47a2`;
+- enumerated accessible open PRs and exact MNEMOSYNE-151 matches before branch and PR creation;
+- compared the branch with `master`;
+- verified `current/human-approved-spec.md` remains unchanged;
+- verified the live status no longer references merging its own PR as the next gate;
+- created exactly one canonical PR: #202.
+
+Final comparison and merge-target details are recorded in `notes/codex-task-results/MNEMOSYNE-151-pr-finalization.md`.
 
 ## Boundary
 
