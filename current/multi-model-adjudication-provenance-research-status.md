@@ -3,8 +3,8 @@
 > Non-execution-source live wayfinding. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-007
-last_status_task: MNEMOSYNE-151
+status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-008
+last_status_task: MNEMOSYNE-152
 cycle: raw/research-reports/cycles/2026Q3-multi-model-adjudication-provenance
 latest_reliable_progress_checkpoint:
   record: current/pr198-pro-switch-model-quality-restart-checkpoint.md
@@ -99,13 +99,29 @@ checkpoint_activation_and_recovery:
   recovery_status: completed
   status_sync_PR: 201
   execution_source_modified: false
+FABLE5_GREENFIELD_maintainer_adjudication:
+  Stage_A:
+    task: WORK-ULTRA-FABLE-GF5-STAGE-A-001
+    storage_task: MNEMOSYNE-152
+    storage_PR: 203
+    status: complete_stored_pending_human_merge_of_PR_203
+    exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001
+    comparison_firewall: passed
+    GF_STEP_5_accessed_or_adjudicated: false
+    substantive_architecture_adoption: not_performed
+  Stage_B:
+    taskbook_status: prepared_for_download
+    execution_status: not_started
+    required_precondition: human_merge_of_PR_203
+    repository_mode: read_only
+    implementation_authorized: false
 actual_backend_model_identity_proven: false
-execution_source_modified_by_MNEMOSYNE_151: false
+execution_source_modified_by_MNEMOSYNE_152: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - execute_a_separately_bounded_GF_STEP_5_stage_A_independent_architecture_assessment
-  - return_the_complete_stage_A_report_and_downloadable_artifacts_to_the_Mnemosyne_maintenance_conversation
-  - design_stage_B_only_after_stage_A_maintainer_review
+  - human_review_and_merge_PR_203
+  - execute_Stage_B_only_after_explicit_user_start_instruction
+  - return_Stage_B_results_for_maintainer_and_user_adjudication
   - do_not_reuse_the_PR_200_write_environment_for_new_repository_writes
   - do_not_treat_the_completed_checkpoint_activation_as_automatic_authority_for_a_future_incident
   - require_fresh_task_local_authorization_for_each_future_repository_write_or_execution_source_change
@@ -117,4 +133,4 @@ The PR #198 checkpoint was explicitly activated after the user rejected the labe
 
 The checkpoint and its activation remain operational records, not backend attestation. The completed event does not automatically activate the checkpoint for a future incident.
 
-The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Fable GF-STEP-5 substantive adjudication has not started. The current next action is Stage A independent architecture assessment; Stage B remains deliberately ungenerated until Stage A is returned and reviewed.
+The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is complete pre-reveal evidence and is preserved by PR #203 pending human merge. Fable GF-STEP-5 substantive adjudication has not started; Stage B remains a separate read-only task that requires PR #203 to merge and the user to explicitly start it.

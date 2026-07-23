@@ -4,7 +4,7 @@
 
 ```yaml
 track_id: FABLE5-GREENFIELD-001
-last_status_task: MNEMOSYNE-144
+last_status_task: MNEMOSYNE-152
 incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-003-step2d-misinterpreted-as-step3.md
 incident_status: resolved_by_successful_fresh_conversation_GF_STEP_2D_rerun
 GF_STEP_2:
@@ -147,19 +147,35 @@ model_quality_restart_checkpoint:
     - substantive_adjudication_started_after_PR_194
     - downstream_research_or_repair_route_selection_based_on_affected_adjudication
   Fable_steps_through_GF_STEP_5_redone_by_default: false
+maintainer_adjudication:
+  Stage_A:
+    task: WORK-ULTRA-FABLE-GF5-STAGE-A-001
+    storage_task: MNEMOSYNE-152
+    storage_PR: 203
+    status: complete_stored_pending_human_merge_of_PR_203
+    comparison_firewall: passed
+    GF_STEP_5_accessed: false
+    repository_architecture_ref: 898b20e16f9b4694bb45110a0be036761b511740
+    exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001
+    current_design_verdict: PASS_WITH_WARNINGS
+    repaired_greenfield_verdict: FAIL_as_complete_64_criterion_candidate
+    substantive_architecture_adoption: not_performed
+  Stage_B:
+    taskbook_status: prepared_for_download
+    execution_status: not_started
+    permitted_after:
+      - human_merge_of_PR_203
+      - explicit_user_execution_instruction
+    repository_write_authorized: false
 next_gate:
   user_decision_required: true
-  report_ready_for: separate_maintainer_triage
-  intended_near_term_route: switch_current_conversation_to_GPT_Pro_then_begin_user_authorized_maintainer_triage
-  permitted_future_routes_require_separate_user_authorization:
-    - GPT_Pro_substantive_adjudication
-    - targeted_research
-    - bounded_repair_task_preparation
+  report_ready_for: staged_maintainer_adjudication
+  next_action:
+    - human_review_and_merge_PR_203
+    - then_execute_the_separately_bounded_Stage_B_Work_Ultra_task_if_explicitly_started_by_the_user
+    - return_the_complete_Stage_B_report_and_artifacts_for_maintainer_and_user_adjudication
+    - do_not_implement_architecture_changes_before_that_adjudication
   automatically_selected_route: none
-next_safe_action:
-  - merge_the_single_MNEMOSYNE_144_checkpoint_PR
-  - after_merge_switch_to_GPT_Pro_and_begin_only_the_user_selected_maintainer_triage_work
-  - if_the_user_later_declares_a_post_switch_model_quality_incident_and_restart_intent_activate_the_checkpoint_and_restart_from_PR_194_baseline
 ```
 
-GF-STEP-5 is stored as a completed Fable same-model-family bounded comparison result. The comparison report is advisory and ready for separate maintainer triage only. The user-confirmed model-quality restart checkpoint preserves PR #194's merge commit as the trusted baseline if a later post-Pro-switch model-quality incident is explicitly declared. Neither this status record nor the checkpoint substantively accepts findings, modifies Mnemosyne, or proves backend model identity.
+GF-STEP-5 remains stored as a completed Fable same-model-family advisory comparison. Stage A is complete pre-reveal evidence and does not substantively accept either architecture, reveal or adjudicate GF-STEP-5, modify Mnemosyne, answer user parameters, or authorize repair, target work, merge, or auto-merge.
