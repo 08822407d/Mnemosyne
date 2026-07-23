@@ -1,0 +1,107 @@
+manifest_version: v1
+task_id: WORK-ULTRA-FABLE-GF5-STAGE-A-001
+storage_task: MNEMOSYNE-152
+authority_level: non_execution_source_advisory_evidence
+stage: A
+status_claim: WORK_ULTRA_GF5_STAGE_A_COMPLETE
+precondition:
+  PR: 202
+  merge_commit: ea40aaefe6a486e710012e10521a73a81890be43
+repository_architecture_ref: 898b20e16f9b4694bb45110a0be036761b511740
+artifacts:
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-FABLE-GF5-STAGE-A-001-task.md
+  source_filename: WORK-ULTRA-FABLE-GF5-STAGE-A-001-task.md
+  role: stage_A_task_contract
+  bytes: 18045
+  sha256: c4621988b3bb678057e4e98c1f0a17d4321f9f75217385adef312749eccff5bd
+  git_blob_sha_expected: 2bea4531d03c426d17bc57bcb39869dcbf735f51
+  line_breaks: 506
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-full-response-for-related-chat.md
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-full-response-for-related-chat.md
+  role: complete_Work_response
+  bytes: 47607
+  sha256: 2f0b6f471117da64e592bac7abd2530ad7c7309afd31d5a078641a04db99a0fc
+  git_blob_sha_expected: 1d79d754685eaff56e04eadda17376596860b4af
+  line_breaks: 260
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-N0-independent-needs.md
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-N0-independent-needs.md
+  role: frozen_N0_independent_needs
+  bytes: 46975
+  sha256: a199f5a5c8783654501d9cfe290d32ed598fb90007ba1bd8ebd196f954f26c89
+  git_blob_sha_expected: 949a208a769263c9adb0f8968746d39195f4e706
+  line_breaks: 596
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-N1-assessment-rubric.yaml
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-N1-assessment-rubric.yaml
+  role: frozen_N1_assessment_rubric
+  bytes: 96710
+  sha256: 748553c58d8c7ffa044f52090c41e15c6776cc36e52600d28fd336c37da5673b
+  git_blob_sha_expected: a20cbfb15ca1b6cbfa4ca2f28ada1acbc4c76548
+  line_breaks: 1991
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-current-assessment.md
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-current-assessment.md
+  role: frozen_current_design_assessment
+  bytes: 38139
+  sha256: b1157b152305daada53538134212685ee2384a045c22854077fc5db4d1b6e1aa
+  git_blob_sha_expected: 1d94359b8b3a1573143f0e890a8e5a95e7043928
+  line_breaks: 566
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-greenfield-assessment.md
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-greenfield-assessment.md
+  role: frozen_repaired_greenfield_assessment
+  bytes: 24370
+  sha256: 70be46603f1466b3bf0bb7e0a04f1f4218c8f2a936d487415769dc7198866938
+  git_blob_sha_expected: cf57b945c85e0722cf6e298d8dca9cb12d643c9e
+  line_breaks: 454
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-stage-a-synthesis.md
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-stage-a-synthesis.md
+  role: frozen_stage_A_synthesis
+  bytes: 47607
+  sha256: 2f0b6f471117da64e592bac7abd2530ad7c7309afd31d5a078641a04db99a0fc
+  git_blob_sha_expected: 1d79d754685eaff56e04eadda17376596860b4af
+  line_breaks: 260
+  final_lf: true
+- path: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001/artifacts/WORK-ULTRA-GF5-STAGE-A-001-source-and-exposure-ledger.yaml
+  source_filename: WORK-ULTRA-GF5-STAGE-A-001-source-and-exposure-ledger.yaml
+  role: source_action_reconstruction_and_exposure_ledger
+  bytes: 29287
+  sha256: 15aba7dcf3523678318a4d727715d3fe36535f6e14b0c51e1105af8e4e5f4f1c
+  git_blob_sha_expected: 358162911e816ba76116b226e319fb40c17b7332
+  line_breaks: 770
+  final_lf: true
+identity_relations:
+  full_response_equals_stage_a_synthesis: true
+  shared_sha256: 2f0b6f471117da64e592bac7abd2530ad7c7309afd31d5a078641a04db99a0fc
+  shared_git_blob_sha: 1d79d754685eaff56e04eadda17376596860b4af
+mechanical_receipt:
+  N1_unique_criteria: 64
+  current_findings: 17
+  greenfield_findings: 15
+  greenfield_overlay_items: 25
+  final_status_line: WORK_ULTRA_GF5_STAGE_A_COMPLETE
+  GitHub_write_actions_reported: 0
+  external_web_reported: 0
+reconstruction_anomalies:
+- anomaly_id: RA-001
+  source_id: SRC-011
+  recoverable: true
+  storage_boundary_only: true
+  description: The first of two indexed binary parts had one extra final byte equal to the first byte of part 2. Direct concatenation produced 22883 bytes and failed gzip integrity. Removing only that one-byte overlap produced the index-declared 22882-byte archive and exact declared source identity.
+  semantic_content_inferred_or_rewritten: false
+  disclosed: true
+- anomaly_id: RA-002
+  source_id: SRC-026
+  recoverable: true
+  storage_boundary_only: true
+  description: Five indexed UTF-8 parts totaled 68037 bytes while the declared source was 68033 bytes. Removing only three leading boundary LFs from parts 2-4 and one trailing LF from part 5 produced the exact declared size and SHA-256.
+  semantic_content_inferred_or_rewritten: false
+  disclosed: true
+boundaries:
+  GF_STEP_5_read_or_adjudicated: false
+  implementation_performed: false
+  execution_source_modified: false
+  target_project_work: false
