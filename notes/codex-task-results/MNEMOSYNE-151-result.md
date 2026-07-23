@@ -3,18 +3,18 @@
 ```yaml
 task_id: MNEMOSYNE-151
 task_name: Remove stale self-merge gate after PR #201
- task_type: post_merge_live_status_sync
- action_actor: ChatGPT_GitHub_app
- base_branch: master
- pinned_base_sha: 59e1a9d560c7717e20b81c8b8282b228b41e47a2
- canonical_branch: mnemosyne-151-sync-post-pr201-live-gate
- canonical_pr_number: pending
- user_decision_recorded: true
- execution_source_modified: false
- checkpoint_semantics_modified: false
- GF_STEP_5_adjudication_started: false
- target_project_work_started: false
- auto_merge_authorized: false
+task_type: post_merge_live_status_sync
+action_actor: ChatGPT_GitHub_app
+base_branch: master
+pinned_base_sha: 59e1a9d560c7717e20b81c8b8282b228b41e47a2
+canonical_branch: mnemosyne-151-sync-post-pr201-live-gate
+canonical_pr_number: pending
+user_decision_recorded: true
+execution_source_modified: false
+checkpoint_semantics_modified: false
+GF_STEP_5_adjudication_started: false
+target_project_work_started: false
+auto_merge_authorized: false
 ```
 
 ## Summary
