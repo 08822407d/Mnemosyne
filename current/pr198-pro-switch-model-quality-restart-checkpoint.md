@@ -1,6 +1,6 @@
 # PR #198 Reliable-Progress and Pro-Switch Model-Quality Restart Checkpoint
 
-> Non-execution-source operational checkpoint. It records the user-designated trustworthy work boundary for a later Pro-selection trial. It is not backend-model attestation and does not replace `current/human-approved-spec.md`.
+> Non-execution-source operational checkpoint. It records the user-designated trustworthy work boundary and its completed first activation/recovery cycle. It is not backend-model attestation and does not replace `current/human-approved-spec.md`.
 
 ```yaml
 checkpoint_id: MNEMOSYNE-PR198-RELIABLE-PROGRESS-RESTART-001
@@ -14,6 +14,14 @@ supersedes_for_future_restart_selection:
 previous_checkpoints_retained_as_history: true
 checkpoint_effective_when: PR_199_is_human_merged
 canonical_PR_number: 199
+checkpoint_current_status: activated_and_recovery_completed
+latest_activation:
+  activation_record: current/pr198-pro-switch-model-quality-activation-and-recovery.md
+  activation_record_id: MNEMOSYNE-PR198-MODEL-QUALITY-ACTIVATION-RECOVERY-001
+  recorded_by_task: MNEMOSYNE-150
+  affected_repository_writes: none
+  recovery_completed_by_PR: 200
+  recovery_merge_commit: 898b20e16f9b4694bb45110a0be036761b511740
 user_designated_trusted_scope:
   - all_repository_history_and_merged_content_through_PR_198
   - FABLE5_GOV_001_stage_storage_through_PR_197
@@ -22,16 +30,17 @@ user_designated_trusted_scope:
   - no_GF_STEP_5_substantive_adjudication_has_started
 not_claimed:
   - actual_backend_model_identity_of_any_consumer_chat_run
-  - that_Pro_is_currently_operating_correctly
-  - correctness_of_future_post_checkpoint_judgment_work
+  - that_Pro_was_or_is_operating_correctly
   - automatic_acceptance_of_any_research_or_Fable_finding
 ```
 
 ## Purpose
 
-The user intends to switch the current standard ChatGPT conversation from the presently reported `Extra High` option to `Pro` and try a new period of substantive Mnemosyne work.
+The checkpoint was created before a trial in which the user switched the current standard ChatGPT conversation from the reported `Extra High` option to `Pro` and attempted substantive Mnemosyne review work.
 
-This checkpoint makes merged PR #198 the last user-confirmed trustworthy work point for that trial. It replaces PR #196 as the latest default restart selection without deleting or rewriting the earlier checkpoint record.
+Merged PR #198 was the last user-confirmed trustworthy work point for that trial. It replaced PR #196 as the latest default restart selection without deleting or rewriting the earlier checkpoint record.
+
+The trial later met both activation conditions. The incident and completed recovery are recorded in `current/pr198-pro-switch-model-quality-activation-and-recovery.md`.
 
 ## Activation trigger
 
@@ -92,12 +101,31 @@ run_context:
   later_stronger_model_review: permitted_but_not_required_for_checkpoint_activation
 ```
 
+## Completed activation and recovery
+
+```yaml
+activation_history:
+  - activation_id: MNEMOSYNE-PR198-MODEL-QUALITY-ACTIVATION-RECOVERY-001
+    status: activated_and_recovery_completed
+    activation_evidence: explicit_user_quality_problem_report_and_restart_instruction
+    affected_artifacts:
+      - failed_labeled_Pro_PR198_review_response
+    affected_repository_writes: none
+    recovery_review_task: WORK-ULTRA-PR198-REVIEW-001
+    recovery_implementation_task: MNEMOSYNE-149
+    recovery_PR: 200
+    recovery_merge_commit: 898b20e16f9b4694bb45110a0be036761b511740
+    detailed_record: current/pr198-pro-switch-model-quality-activation-and-recovery.md
+```
+
+The activation is a completed historical event. It does not remain continuously active and does not automatically govern a future incident. A future event needs a separately recorded user instruction, incident scope, and recovery decision.
+
 ## Next permitted work
 
-After this checkpoint is merged, the user may switch to `Pro` and authorize a separately bounded Mnemosyne task. This checkpoint does not itself select or start that task.
+After completed recovery, the next substantive Mnemosyne task requires separate user selection and authorization. GF-STEP-5 substantive adjudication remains not started.
 
 ## Boundary
 
-This record does not prove a backend model identity, declare that a future incident has already occurred, automatically roll back repository state, modify the execution source, adjudicate Fable GF-STEP-5, authorize repairs or target-project work, merge its own PR, or enable auto-merge.
+This record does not prove a backend model identity, accuse a provider, automatically activate for a future event, rewrite repository history, modify the execution source, adjudicate Fable GF-STEP-5, authorize repairs or target-project work, merge a pull request, or enable auto-merge.
 
-Under `current/run-context-and-pr-provenance-guard.md`, a run record may point to this file through `recovery_refs.checkpoint_ref`. That reference is informational only: it does not constitute an incident assessment or activation record, prove provider failure or model substitution, authorize recovery or repository writes, or satisfy either checkpoint activation condition. Any `incident_assessment_ref` or `activation_record_ref` must identify a separately authorized record that actually exists.
+Under `current/run-context-and-pr-provenance-guard.md`, a run record may point to this file through `recovery_refs.checkpoint_ref`. That reference is informational only: it does not constitute an incident assessment or activation record, prove provider failure or model substitution, authorize recovery or repository writes, or satisfy either checkpoint activation condition. The completed incident and activation record is `current/pr198-pro-switch-model-quality-activation-and-recovery.md`; future `incident_assessment_ref` or `activation_record_ref` values must identify separately authorized records that actually exist.
