@@ -151,8 +151,8 @@ maintainer_adjudication:
   Stage_A:
     task: WORK-ULTRA-FABLE-GF5-STAGE-A-001
     storage_task: MNEMOSYNE-152
-    storage_PR: pending
-    status: complete_received_pending_human_merge_of_storage_PR
+    storage_PR: 203
+    status: complete_stored_pending_human_merge_of_PR_203
     comparison_firewall: passed
     GF_STEP_5_accessed: false
     repository_architecture_ref: 898b20e16f9b4694bb45110a0be036761b511740
@@ -161,17 +161,17 @@ maintainer_adjudication:
     repaired_greenfield_verdict: FAIL_as_complete_64_criterion_candidate
     substantive_architecture_adoption: not_performed
   Stage_B:
-    taskbook_status: prepared_for_download_after_storage_PR_creation
+    taskbook_status: prepared_for_download
     execution_status: not_started
     permitted_after:
-      - human_merge_of_MNEMOSYNE_152_storage_PR
+      - human_merge_of_PR_203
       - explicit_user_execution_instruction
     repository_write_authorized: false
 next_gate:
   user_decision_required: true
   report_ready_for: staged_maintainer_adjudication
   next_action:
-    - human_review_and_merge_the_single_MNEMOSYNE_152_storage_PR
+    - human_review_and_merge_PR_203
     - then_execute_the_separately_bounded_Stage_B_Work_Ultra_task_if_explicitly_started_by_the_user
     - return_the_complete_Stage_B_report_and_artifacts_for_maintainer_and_user_adjudication
     - do_not_implement_architecture_changes_before_that_adjudication
