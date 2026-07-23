@@ -3,8 +3,8 @@
 > Non-execution-source live wayfinding. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-006
-last_status_task: MNEMOSYNE-150
+status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-007
+last_status_task: MNEMOSYNE-151
 cycle: raw/research-reports/cycles/2026Q3-multi-model-adjudication-provenance
 latest_reliable_progress_checkpoint:
   record: current/pr198-pro-switch-model-quality-restart-checkpoint.md
@@ -16,6 +16,8 @@ latest_reliable_progress_checkpoint:
   activation_status: activated_and_recovery_completed
   activation_and_recovery_record: current/pr198-pro-switch-model-quality-activation-and-recovery.md
   activation_record_id: MNEMOSYNE-PR198-MODEL-QUALITY-ACTIVATION-RECOVERY-001
+  activation_status_record_PR: 201
+  activation_status_record_merge_commit: 59e1a9d560c7717e20b81c8b8282b228b41e47a2
   affected_repository_writes: none
   recovery_completed_by_PR: 200
   recovery_merge_commit: 898b20e16f9b4694bb45110a0be036761b511740
@@ -95,13 +97,15 @@ checkpoint_activation_and_recovery:
   recovery_implementation_task: MNEMOSYNE-149
   recovery_PR: 200
   recovery_status: completed
+  status_sync_PR: 201
   execution_source_modified: false
 actual_backend_model_identity_proven: false
-execution_source_modified_by_MNEMOSYNE_150: false
+execution_source_modified_by_MNEMOSYNE_151: false
 GF_STEP_5_substantive_adjudication: not_started
 next_gate:
-  - human_review_and_merge_PR_201
-  - after_merge_execute_a_separately_bounded_GF_STEP_5_stage_A_independent_architecture_assessment
+  - execute_a_separately_bounded_GF_STEP_5_stage_A_independent_architecture_assessment
+  - return_the_complete_stage_A_report_and_downloadable_artifacts_to_the_Mnemosyne_maintenance_conversation
+  - design_stage_B_only_after_stage_A_maintainer_review
   - do_not_reuse_the_PR_200_write_environment_for_new_repository_writes
   - do_not_treat_the_completed_checkpoint_activation_as_automatic_authority_for_a_future_incident
   - require_fresh_task_local_authorization_for_each_future_repository_write_or_execution_source_change
@@ -109,8 +113,8 @@ next_gate:
 
 ## Current interpretation
 
-The PR #198 checkpoint was explicitly activated after the user rejected the labeled-Pro review run and requested restart from the trusted boundary. The affected run created no repository write. Recovery is complete: the failed review was discarded, a fresh Work Ultra task independently reviewed the full evidence, the user adjudicated C-01 through C-08, and PR #200 merged the bounded v0.2 repair.
+The PR #198 checkpoint was explicitly activated after the user rejected the labeled-Pro review run and requested restart from the trusted boundary. The affected run created no repository write. Recovery is complete: the failed review was discarded, a fresh Work Ultra task independently reviewed the full evidence, the user adjudicated C-01 through C-08, and PR #200 merged the bounded v0.2 repair. PR #201 then recorded the separate activation/recovery event and synchronized the checkpoint history.
 
 The checkpoint and its activation remain operational records, not backend attestation. The completed event does not automatically activate the checkpoint for a future incident.
 
-The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Fable GF-STEP-5 substantive adjudication has not started and requires a separately bounded task.
+The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Fable GF-STEP-5 substantive adjudication has not started. The current next action is Stage A independent architecture assessment; Stage B remains deliberately ungenerated until Stage A is returned and reviewed.
