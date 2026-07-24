@@ -164,8 +164,8 @@ maintainer_adjudication:
   Stage_B:
     task: WORK-ULTRA-FABLE-GF5-STAGE-B-001
     storage_task: MNEMOSYNE-153
-    storage_PR: pending
-    status: complete_received_and_stored_pending_human_merge_of_storage_PR
+    storage_PR: 204
+    status: complete_stored_pending_human_merge_of_PR_204
     exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001
     PR_203_precondition: passed
     GF_STEP_5_exact_report_verified: true
@@ -205,7 +205,7 @@ next_gate:
   user_decision_required: true
   report_ready_for: human_merge_then_user_disposition
   next_action:
-    - human_review_and_merge_the_single_MNEMOSYNE_153_storage_PR
+    - human_review_and_merge_PR_204
     - after_merge_present_PRO_SLICE_01_and_adjacent_options_for_explicit_user_accept_reject_or_defer
     - create_a_new_task_ID_for_any_approved_design_or_implementation_slice
     - do_not_implement_architecture_changes_before_explicit_user_disposition
