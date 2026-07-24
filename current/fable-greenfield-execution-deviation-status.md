@@ -4,7 +4,7 @@
 
 ```yaml
 track_id: FABLE5-GREENFIELD-001
-last_status_task: MNEMOSYNE-153
+last_status_task: MNEMOSYNE-154
 incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-003-step2d-misinterpreted-as-step3.md
 incident_status: resolved_by_successful_fresh_conversation_GF_STEP_2D_rerun
 GF_STEP_2:
@@ -136,7 +136,7 @@ handoff:
 model_quality_restart_checkpoint:
   record: current/fable-greenfield-maintainer-triage-model-quality-checkpoint.md
   checkpoint_id: FABLE5-GREENFIELD-001-MODEL-QUALITY-RESTART-001
-  trusted_repository_baseline: master@12f2a00fa746485dcdbb99e2c6569549e894f0c0
+  trusted_repository_baseline: master@12f2a00fa746485dcdb99e2c6569549e894f0c0
   trusted_scope_through: merged_PR_194
   user_reported_prebaseline_model_context: gpt5.6sol thinking very high
   backend_model_identity_independently_verified: false
@@ -165,7 +165,9 @@ maintainer_adjudication:
     task: WORK-ULTRA-FABLE-GF5-STAGE-B-001
     storage_task: MNEMOSYNE-153
     storage_PR: 204
-    status: complete_stored_pending_human_merge_of_PR_204
+    storage_merge_commit: 1481eaac9e5842364bb8017e1268bbfc797ffe5d
+    post_merge_sync_task: MNEMOSYNE-154
+    status: complete_stored_merged
     exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001
     PR_203_precondition: passed
     GF_STEP_5_exact_report_verified: true
@@ -203,13 +205,12 @@ maintainer_adjudication:
     substantive_user_disposition: pending
 next_gate:
   user_decision_required: true
-  report_ready_for: human_merge_then_user_disposition
+  report_ready_for: explicit_user_disposition
   next_action:
-    - human_review_and_merge_PR_204
-    - after_merge_present_PRO_SLICE_01_and_adjacent_options_for_explicit_user_accept_reject_or_defer
+    - present_PRO_SLICE_01_and_adjacent_options_for_explicit_user_accept_reject_or_defer
     - create_a_new_task_ID_for_any_approved_design_or_implementation_slice
     - do_not_implement_architecture_changes_before_explicit_user_disposition
   automatically_selected_route: none
 ```
 
-GF-STEP-5, Stage A, Stage B, and the Pro maintainer adjudication are preserved advisory evidence. No architecture component or implementation slice is accepted by this status record, and `current/human-approved-spec.md` remains unchanged.
+GF-STEP-5, Stage A, Stage B, and the Pro maintainer adjudication are preserved advisory evidence. PR #204 is merged. No architecture component or implementation slice is accepted by this status record, and `current/human-approved-spec.md` remains unchanged.
