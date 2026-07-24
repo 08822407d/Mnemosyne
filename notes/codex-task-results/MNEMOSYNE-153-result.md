@@ -8,7 +8,7 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: 1b6de175be54a4f6a6949b2b0dcdf775eba8ea78
 canonical_branch: mnemosyne-153-preserve-work-ultra-gf5-stage-b
-canonical_pr_number: pending
+canonical_pr_number: 204
 user_decision_recorded: true
 execution_source_modified: false
 Stage_B_stored: true
@@ -38,13 +38,12 @@ The Pro adjudication accepts Stage B as high-value evidence with methodological 
 - `notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001/pro-maintainer-adjudication/decision-matrix.yaml`
 - `notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001/pro-maintainer-adjudication/maintainer-adjudication.md`
 - this result record
+- `notes/codex-task-results/MNEMOSYNE-153-pr-finalization.md`
 
 ## Modified paths
 
 - `current/fable-greenfield-execution-deviation-status.md`
 - `current/multi-model-adjudication-provenance-research-status.md`
-
-A PR-finalization record will be added after the canonical PR number exists.
 
 ## Stage B exact archive
 
@@ -222,6 +221,12 @@ run_context:
           status: not_available_before_merge
           type: git_commit_sha
           value: null
+      - ref: PR_204
+        relation: produced
+        immutable_identity:
+          status: recorded
+          type: other
+          value: 204
 
   review_events:
     - review_id: WORK-ULTRA-FABLE-GF5-STAGE-B-001
@@ -343,11 +348,14 @@ run_context:
 - verified current `master` at `1b6de175be54a4f6a6949b2b0dcdf775eba8ea78`;
 - continued the existing canonical branch rather than creating a parallel lineage;
 - enumerated accessible open PRs and found none;
-- exact searches found no open `MNEMOSYNE-153` PR;
+- exact searches found no prior `MNEMOSYNE-153` PR;
 - verified all ten remote archive-part Git blob SHAs against `manifest.yaml`;
 - verified the two stored Pro result blobs against the locally precomputed values;
 - compared the branch with `master`;
-- verified `current/human-approved-spec.md` remains unchanged.
+- verified `current/human-approved-spec.md` remains unchanged;
+- created exactly one canonical PR: #204.
+
+Final branch comparison, mergeability, and unique-merge-target status are recorded in `notes/codex-task-results/MNEMOSYNE-153-pr-finalization.md`.
 
 ## Boundary
 
