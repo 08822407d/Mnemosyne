@@ -1,0 +1,178 @@
+manifest_version: v1
+task_id: WORK-ULTRA-FABLE-GF5-STAGE-B-001
+storage_task: MNEMOSYNE-153
+authority_level: non_execution_source_advisory_evidence
+stage: B
+status_claim: WORK_ULTRA_GF5_STAGE_B_COMPLETE
+precondition:
+  PR: 203
+  merge_commit: 1b6de175be54a4f6a6949b2b0dcdf775eba8ea78
+exact_archive:
+  format: deterministic_tar_mtime_0_uid_gid_0_then_bzip2_level_9_then_base64_parts
+  tar_bytes: 276480
+  tar_sha256: 2430ff422371230097dbaf9395b283b82327760c540c783eba90ea1738565216
+  bzip2_bytes: 41047
+  bzip2_sha256: e116698ff2f852c987aca3828d6659a8c05d52ca7d7f74819b396d86d1a15301
+  base64_characters: 54732
+  ordered_parts: 10
+  members:
+  - filename: WORK-ULTRA-FABLE-GF5-STAGE-B-001-task.md
+    bytes: 17672
+    sha256: aed9095baee2b7dce469b6eaab0859b9caed76e2e7a24123bb5ba0015b6ade1d
+    git_blob_sha_if_single_file: 87cd7d1382414df228efde2ac148447a84d1b555
+    line_breaks: 568
+    final_lf: true
+    role: stage_B_task_contract
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-complete-chat-response.md
+    bytes: 27766
+    sha256: 46c1d447404fa80ecd60180de70806987394eb9675a6048f51968af41e808f4d
+    git_blob_sha_if_single_file: d92fb16a2e8d5ad1382ea7fa4397e2368e7cbb72
+    line_breaks: 322
+    final_lf: true
+    role: complete_Work_chat_response
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-gf5-inventory.yaml
+    bytes: 16122
+    sha256: 62b11384ad6fd5495561637007437564afc9407624172d6a026745e206dbb99e
+    git_blob_sha_if_single_file: 262ba9cfa8972a78a0f02a736df71fcc18356fa8
+    line_breaks: 487
+    final_lf: true
+    role: GF_STEP_5_inventory
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-stage-a-gf5-crosswalk.yaml
+    bytes: 79296
+    sha256: e3a81e2896a7b0713533e402f587eb670b1184f5900b45412dcc7521eed8f2d5
+    git_blob_sha_if_single_file: bc46184a0847f470b0af666c0a8a5afb95134218
+    line_breaks: 2097
+    final_lf: true
+    role: Stage_A_GF_STEP_5_crosswalk
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-triage-ledger.md
+    bytes: 32567
+    sha256: 2403576098acb46bd63375131df5ed4d84c919b9f146dc077bc0a2485440e4ff
+    git_blob_sha_if_single_file: fd45520255ddc4a7253a0827a3a5cf3f2cd90f40
+    line_breaks: 468
+    final_lf: true
+    role: triage_ledger
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-component-disposition.md
+    bytes: 27027
+    sha256: c8164965461b6281f3364bfd164e539b2ad1754d4326fbd6616d86959fd471d6
+    git_blob_sha_if_single_file: a0c4cbe3402570a8f0cc4428a65484b1d801bb35
+    line_breaks: 525
+    final_lf: true
+    role: component_disposition
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-user-and-research-decision-package.md
+    bytes: 18395
+    sha256: 7ee8a75e13234fc1c06d4004a659637de45ce0c57595190323b025ff3c1768b5
+    git_blob_sha_if_single_file: 23b922b6379d0ca6ce7c999873396ba5837c3b43
+    line_breaks: 313
+    final_lf: true
+    role: user_and_research_decision_package
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-stage-b-synthesis.md
+    bytes: 39031
+    sha256: 8c63cde3ceeae209af0f123fd6b271db79c47bf804beef11b13ba776a859493e
+    git_blob_sha_if_single_file: 0c18d06a26a84615123e6616eaff4e24b224218c
+    line_breaks: 265
+    final_lf: true
+    role: complete_Stage_B_synthesis
+  - filename: WORK-ULTRA-GF5-STAGE-B-001-source-and-exposure-ledger.yaml
+    bytes: 8178
+    sha256: 35e342c0d377ecbe0170fc25cce9d20f77310e3d8024403bbd2e634e0d2c119b
+    git_blob_sha_if_single_file: dc1d6880f7c92aa7282314864a9b4b5126279e10
+    line_breaks: 215
+    final_lf: true
+    role: source_and_exposure_ledger
+  parts:
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0001.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: ad8f873daa239775ce26e6580055a44b98d5281dbb90425295a518733ca7cc85
+    git_blob_sha_expected: d33a0ba800df9991835943f6962604a6b510f4f0
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0002.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: d266acb449e24765ed26ecb21c903e77b4221058862242b083ae1529c99499bd
+    git_blob_sha_expected: 41d19978f4d7344f0c5738b6033e3a2d5a4f33db
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0003.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: 63e8be047f82c215380e914e5f0fe5fcee726e17a5134304991a9842ba6d46a2
+    git_blob_sha_expected: d938408ea9ebb3df8c08d7090129fc732f9f27e7
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0004.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: 44fbba88664d9b0302edeed80f02296623a65488739fcb85c26075539d4082fe
+    git_blob_sha_expected: 3cd5b1452fad64a2ed5b276357da2ddb36cb1cb4
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0005.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: 9a269de434abc68c48d873ec960114758ddc05567dd58146a663b6cc18b57210
+    git_blob_sha_expected: 7e129274d416827e465ec24f1747b6d477d6352e
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0006.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: 5e50a9f8b064ce44871c6ec8a9d12d6f3f846c1133428daffbd7d6a0aed34c79
+    git_blob_sha_expected: f311921fd9fce632ce9faa1c581c13d7a52d2262
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0007.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: 7caf2468e97590a8e37ed0b3a98c20e9c5f678fdfdc64b1bd6fd5886d6530bc1
+    git_blob_sha_expected: 76357427f677f546a62570815e309dc30b37949a
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0008.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: dbd7fb426867818dfc5a2a68aa4a89cd67b4fc35612f459578f865e4b790db96
+    git_blob_sha_expected: 7c33d0ab38b910296f2a01e74d3c3b958778466c
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0009.txt
+    base64_characters: 6000
+    file_bytes: 6001
+    sha256: 694f6d5c8758edf1b90cbc1cbeefdaad08e43a902fb1a854f643e40d8bb92d37
+    git_blob_sha_expected: 885e0fa154e9b4ecdf472916089b6592db2d954b
+    final_lf: true
+  - path: archive-parts/WORK-ULTRA-FABLE-GF5-STAGE-B-001.tar.bz2.base64.part-0010.txt
+    base64_characters: 732
+    file_bytes: 733
+    sha256: 6ed8149727574d06b6605b862e07b7753bf546805f4793d2a637420784c59aa5
+    git_blob_sha_expected: 3e5a609a6a9b4674d46b3f982408bbd42aba3693
+    final_lf: true
+identity_relations:
+  complete_chat_response_equals_stage_b_synthesis: false
+  complete_chat_response_bytes: 27766
+  stage_b_synthesis_bytes: 39031
+  difference_bytes: 11265
+mechanical_receipt:
+  GF_STEP_5_inventory_items: 52
+  GF_STEP_5_original_IDs_unique: 52
+  Stage_B_crosswalk_IDs_unique: 52
+  relation_counts:
+    INDEPENDENTLY_CORROBORATED: 31
+    PARTIALLY_CORROBORATED: 17
+    FABLE_ONLY_SUPPORTED: 4
+  Stage_A_current_findings_rechecked: 17
+  Stage_A_greenfield_findings_rechecked: 15
+  original_triage_items: 10
+  consolidated_new_candidates: 7
+  component_dispositions: 14
+  research_candidates: 6
+  blocking_user_decisions: 5
+  final_status_line: WORK_ULTRA_GF5_STAGE_B_COMPLETE
+  GitHub_write_actions_reported: 0
+  external_web_reported: 0
+closeout_deviations:
+- id: CD-001
+  description: The final chat response used all required headings but did not reproduce the complete Stage B synthesis byte-for-byte. The complete synthesis was delivered as a separate exact file.
+  substantive_result_invalidated: false
+- id: CD-002
+  description: A prior execution/helper could not be physically recovered across PID namespaces. A fresh noninteractive verifier rechecked all critical gates and did not import prior partial output; total historical read-action count is not fully attestable.
+  substantive_result_invalidated: false
+boundaries:
+  architecture_adoption_performed: false
+  implementation_performed: false
+  execution_source_modified: false
+  user_parameters_answered: false
+  target_project_work: false
