@@ -1,0 +1,141 @@
+schema_version: v1
+task_id: PRO-FABLE-GF5-MAINTAINER-ADJUDICATION-001
+parent_storage_task: MNEMOSYNE-153
+authority_level: non_execution_source_advisory_evidence
+operator_selection_verbatim: pro模型
+backend_model_identity: UNKNOWN_OR_NOT_ATTESTABLE
+stage_B_methodology:
+  integrity: ACCEPT
+  methodology: ACCEPT_WITH_MODIFICATION
+  implementation_readiness: REJECT
+  relation_label_rule:
+    replace_in_future_usage: INDEPENDENTLY_CORROBORATED
+    with: PRE_REVEAL_CORROBORATED
+    reason: Stage_A_was_frozen_before_reveal_but_sources_and_frames_are_not_fully_disjoint
+  maintainer_relation_counts:
+    PRE_REVEAL_DIRECT_SUPPORT: 27
+    PRE_REVEAL_PARTIAL_SUPPORT: 21
+    FABLE_ONLY_SUPPORTED: 4
+  downgraded_from_direct_to_partial:
+  - B-CUR-ENH-002
+  - B-GF-ENH-004
+  - B-TRIAGE-008
+  - B-TRIAGE-010
+  triage_numeric_status: structured_qualitative_prompts_not_calibrated_metrics
+original_triage:
+- id: GF5-TRIAGE-001
+  verdict: ACCEPT_STAGE_B_CHANGE
+  route: DEFER_RESEARCH
+- id: GF5-TRIAGE-002
+  verdict: ACCEPT_SPLIT
+  route: P1_CURRENT_REPAIR_PLUS_DEFERRED_USER_DECISION
+- id: GF5-TRIAGE-003
+  verdict: ACCEPT_CANCELLATION
+  route: NO_BLANKET_PARAMETER_ROUND
+- id: GF5-TRIAGE-004
+  verdict: ACCEPT_PROMOTION
+  route: P1_HARD_CONTRACT_PROPAGATION
+- id: GF5-TRIAGE-005
+  verdict: ACCEPT_PROMOTION
+  route: P1_HARD_CONTRACT_PROPAGATION
+- id: GF5-TRIAGE-006
+  verdict: ACCEPT_DEMOTION
+  route: P3_PORTABILITY_CANDIDATE
+- id: GF5-TRIAGE-007
+  verdict: ACCEPT_NO_ACTION
+  route: NO_ACTION
+- id: GF5-TRIAGE-008
+  verdict: ACCEPT_ISSUE_MODIFY_ROUTE
+  route: RESEARCH_VOLATILE_FACTS_KEEP_STABLE_PRINCIPLES
+- id: GF5-TRIAGE-009
+  verdict: ACCEPT_LOW_PRIORITY_WATCH
+  route: P3_WATCH
+- id: GF5-TRIAGE-010
+  verdict: ACCEPT_BUNDLE_SPLIT
+  route: LANGUAGE_CLOSED_AUTOMATION_FENCED_PLATFORM_RESEARCH
+stage_A_new_candidates:
+- id: B-NEW-001
+  verdict: ACCEPT_WITH_MODIFICATION
+  priority: P1_DESIGN
+- id: B-NEW-002
+  verdict: ACCEPT
+  priority: P1_IMMEDIATE_REPAIR
+- id: B-NEW-003
+  verdict: ACCEPT_WITH_SCOPE_SPLIT
+  priority: P1_CONTRACT_PROPAGATION_P2_LIFECYCLE_DESIGN
+- id: B-NEW-004
+  verdict: ACCEPT_WITH_SPLIT
+  priority: P1_STABLE_CONTRACT_RESEARCH_GATED_LIVE_MECHANICS
+- id: B-NEW-005
+  verdict: ACCEPT
+  priority: P2
+- id: B-NEW-006
+  verdict: ACCEPT_WITH_MODIFICATION
+  priority: P2
+- id: B-NEW-007
+  verdict: ACCEPT
+  priority: P2_EVIDENCE_HYGIENE
+components:
+- id: C-01
+  pro_disposition: ACCEPT_BOUNDED_CURRENT_REPAIR
+  defer: execution_source_factoring
+- id: C-02
+  pro_disposition: ACCEPT_MINIMUM_UNIFIED_SCHEMA
+  defer: universal_migration
+- id: C-03
+  pro_disposition: ACCEPT_CURRENT_WORKFLOW_REPAIR
+  defer: retention_and_threshold_defaults
+- id: C-04
+  pro_disposition: ACCEPT_IMMEDIATE_PROPAGATION
+- id: C-05
+  pro_disposition: ACCEPT_SPLIT_IMMEDIATE_GATES_LATER_LIFECYCLE
+- id: C-06
+  pro_disposition: ACCEPT_IMMEDIATE_PREVENTION_FIRST_REPAIR
+- id: C-07
+  pro_disposition: ACCEPT_IMMEDIATE_NO_WRITE_REPAIR
+- id: C-08
+  pro_disposition: SPLIT_STABLE_CONTRACT_NOW_LIVE_MECHANICS_RESEARCH
+- id: C-09
+  pro_disposition: ACCEPT_CONCEPTUAL_TAXONOMY_WITH_EVIDENCE_BINDING
+- id: C-10
+  pro_disposition: REPAIR_CURRENT_CONTAINMENT_DEFER_FORMAL_NAMESPACE
+- id: C-11
+  pro_disposition: REJECT_UNIVERSAL_DEFAULT_DEFER_TARGETED_USE
+- id: C-12
+  pro_disposition: REPAIR_MIGRATION_AUTHORITY_DEFER_LIVE_ADAPTER
+- id: C-13
+  pro_disposition: ACCEPT_P2_PROPAGATION_REPAIR
+- id: C-14
+  pro_disposition: ACCEPT_NON_EXECUTION_REGISTRY_AFTER_AUTHORITY_DESIGN
+research:
+- id: R-EVID-06
+  decision: PRIORITIZE_BEFORE_READINESS_CLAIMS
+  blocks_first_repair: false
+- id: R-PLAT-01
+  decision: DEFER_UNTIL_LIVE_ADAPTER_BRANCH
+- id: R-CONN-02
+  decision: DEFER_UNTIL_CONNECTOR_PROOF_BRANCH
+- id: R-CLEAN-03
+  decision: DEFER_UNTIL_STRONG_INDEPENDENCE_CLAIM
+- id: R-JOURNAL-05
+  decision: DO_NOT_RUN_UNLESS_TARGETED_JOURNAL_REMAINS_LIVE
+- id: R-VAL-04
+  decision: DO_NOT_RUN_NOW
+recommended_first_slice:
+  id: PRO-SLICE-01
+  name: existing_hard_contract_propagation
+  scope:
+  - prevention_first_safety_intake
+  - mechanical_no_write_evidence_and_fail_closed_status
+  - receive_report_then_separate_guidance_refresh
+  - platform_permission_vs_task_authority_and_action_risk_fields
+  execution_source_change: false
+  external_platform_research_required: false
+  user_parameter_answers_required: false
+  implementation_authorized: false
+boundaries:
+  architecture_component_adopted: false
+  repository_patch_accepted: false
+  implementation_started: false
+  research_started: false
+  user_parameters_answered: false

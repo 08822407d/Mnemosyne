@@ -4,7 +4,7 @@
 
 ```yaml
 track_id: FABLE5-GREENFIELD-001
-last_status_task: MNEMOSYNE-152
+last_status_task: MNEMOSYNE-153
 incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-003-step2d-misinterpreted-as-step3.md
 incident_status: resolved_by_successful_fresh_conversation_GF_STEP_2D_rerun
 GF_STEP_2:
@@ -152,7 +152,8 @@ maintainer_adjudication:
     task: WORK-ULTRA-FABLE-GF5-STAGE-A-001
     storage_task: MNEMOSYNE-152
     storage_PR: 203
-    status: complete_stored_pending_human_merge_of_PR_203
+    storage_merge_commit: 1b6de175be54a4f6a6949b2b0dcdf775eba8ea78
+    status: complete_stored_merged
     comparison_firewall: passed
     GF_STEP_5_accessed: false
     repository_architecture_ref: 898b20e16f9b4694bb45110a0be036761b511740
@@ -161,21 +162,54 @@ maintainer_adjudication:
     repaired_greenfield_verdict: FAIL_as_complete_64_criterion_candidate
     substantive_architecture_adoption: not_performed
   Stage_B:
-    taskbook_status: prepared_for_download
-    execution_status: not_started
-    permitted_after:
-      - human_merge_of_PR_203
-      - explicit_user_execution_instruction
+    task: WORK-ULTRA-FABLE-GF5-STAGE-B-001
+    storage_task: MNEMOSYNE-153
+    storage_PR: 204
+    status: complete_stored_pending_human_merge_of_PR_204
+    exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001
+    PR_203_precondition: passed
+    GF_STEP_5_exact_report_verified: true
+    GF_STEP_5_inventory_items: 52
+    Stage_A_current_findings_rechecked: 17
+    Stage_A_greenfield_findings_rechecked: 15
+    original_triage_items: 10
+    consolidated_new_candidates: 7
+    component_dispositions: 14
+    closeout_deviations: 2
+    execution_continuity: resumed_with_fresh_verifier
     repository_write_authorized: false
+    substantive_architecture_adoption: not_performed
+  Pro_maintainer_adjudication:
+    task: PRO-FABLE-GF5-MAINTAINER-ADJUDICATION-001
+    record_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001/pro-maintainer-adjudication
+    status: complete_advisory_pending_user_disposition
+    operator_selection_verbatim: pro模型
+    backend_model_identity: UNKNOWN_OR_NOT_ATTESTABLE
+    Stage_B_integrity: ACCEPT
+    Stage_B_methodology: ACCEPT_WITH_MODIFICATION
+    implementation_readiness: REJECT
+    future_relation_term: PRE_REVEAL_CORROBORATED
+    maintainer_working_counts:
+      PRE_REVEAL_DIRECT_SUPPORT: 27
+      PRE_REVEAL_PARTIAL_SUPPORT: 21
+      FABLE_ONLY_SUPPORTED: 4
+    recommended_first_slice:
+      id: PRO-SLICE-01
+      name: existing_hard_contract_propagation
+      execution_source_change: false
+      external_platform_research_required: false
+      user_parameter_answers_required: false
+      implementation_authorized: false
+    substantive_user_disposition: pending
 next_gate:
   user_decision_required: true
-  report_ready_for: staged_maintainer_adjudication
+  report_ready_for: human_merge_then_user_disposition
   next_action:
-    - human_review_and_merge_PR_203
-    - then_execute_the_separately_bounded_Stage_B_Work_Ultra_task_if_explicitly_started_by_the_user
-    - return_the_complete_Stage_B_report_and_artifacts_for_maintainer_and_user_adjudication
-    - do_not_implement_architecture_changes_before_that_adjudication
+    - human_review_and_merge_PR_204
+    - after_merge_present_PRO_SLICE_01_and_adjacent_options_for_explicit_user_accept_reject_or_defer
+    - create_a_new_task_ID_for_any_approved_design_or_implementation_slice
+    - do_not_implement_architecture_changes_before_explicit_user_disposition
   automatically_selected_route: none
 ```
 
-GF-STEP-5 remains stored as a completed Fable same-model-family advisory comparison. Stage A is complete pre-reveal evidence and does not substantively accept either architecture, reveal or adjudicate GF-STEP-5, modify Mnemosyne, answer user parameters, or authorize repair, target work, merge, or auto-merge.
+GF-STEP-5, Stage A, Stage B, and the Pro maintainer adjudication are preserved advisory evidence. No architecture component or implementation slice is accepted by this status record, and `current/human-approved-spec.md` remains unchanged.

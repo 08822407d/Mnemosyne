@@ -3,8 +3,8 @@
 > Non-execution-source live wayfinding. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-008
-last_status_task: MNEMOSYNE-152
+status_id: MULTI-MODEL-ADJUDICATION-PROVENANCE-STATUS-009
+last_status_task: MNEMOSYNE-153
 cycle: raw/research-reports/cycles/2026Q3-multi-model-adjudication-provenance
 latest_reliable_progress_checkpoint:
   record: current/pr198-pro-switch-model-quality-restart-checkpoint.md
@@ -104,27 +104,52 @@ FABLE5_GREENFIELD_maintainer_adjudication:
     task: WORK-ULTRA-FABLE-GF5-STAGE-A-001
     storage_task: MNEMOSYNE-152
     storage_PR: 203
-    status: complete_stored_pending_human_merge_of_PR_203
+    storage_merge_commit: 1b6de175be54a4f6a6949b2b0dcdf775eba8ea78
+    status: complete_stored_merged
     exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-A-001
     comparison_firewall: passed
     GF_STEP_5_accessed_or_adjudicated: false
     substantive_architecture_adoption: not_performed
   Stage_B:
-    taskbook_status: prepared_for_download
-    execution_status: not_started
-    required_precondition: human_merge_of_PR_203
-    repository_mode: read_only
+    task: WORK-ULTRA-FABLE-GF5-STAGE-B-001
+    storage_task: MNEMOSYNE-153
+    storage_PR: 204
+    status: complete_stored_pending_human_merge_of_PR_204
+    exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001
+    GF_STEP_5_exact_report_verified: true
+    GF_STEP_5_inventory_verified: true
+    GF_STEP_5_inventory_items: 52
+    execution_continuity: resumed_with_fresh_verifier
+    closeout_deviations: 2
+    repository_mode: read_only_for_source_Work_run
     implementation_authorized: false
+  Pro_maintainer_adjudication:
+    task: PRO-FABLE-GF5-MAINTAINER-ADJUDICATION-001
+    status: complete_advisory_pending_user_disposition
+    record_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001/pro-maintainer-adjudication
+    product_surface: standard_ChatGPT_conversation
+    operator_selection_verbatim: pro模型
+    backend_model_identity: UNKNOWN_OR_NOT_ATTESTABLE
+    relation_term_correction: PRE_REVEAL_CORROBORATED
+    maintainer_working_counts:
+      PRE_REVEAL_DIRECT_SUPPORT: 27
+      PRE_REVEAL_PARTIAL_SUPPORT: 21
+      FABLE_ONLY_SUPPORTED: 4
+    triage_numeric_fields_calibrated: false
+    implementation_readiness: rejected
+    recommended_first_slice:
+      id: PRO-SLICE-01
+      name: existing_hard_contract_propagation
+      implementation_authorized: false
 actual_backend_model_identity_proven: false
-execution_source_modified_by_MNEMOSYNE_152: false
-GF_STEP_5_substantive_adjudication: not_started
+execution_source_modified_by_MNEMOSYNE_153: false
+GF_STEP_5_substantive_adjudication: completed_as_advisory_pending_user_disposition
 next_gate:
-  - human_review_and_merge_PR_203
-  - execute_Stage_B_only_after_explicit_user_start_instruction
-  - return_Stage_B_results_for_maintainer_and_user_adjudication
-  - do_not_reuse_the_PR_200_write_environment_for_new_repository_writes
-  - do_not_treat_the_completed_checkpoint_activation_as_automatic_authority_for_a_future_incident
-  - require_fresh_task_local_authorization_for_each_future_repository_write_or_execution_source_change
+  - human_review_and_merge_PR_204
+  - after_merge_obtain_explicit_user_accept_reject_or_defer_disposition_for_PRO_SLICE_01_and_adjacent_options
+  - create_a_fresh_task_ID_and_single_PR_lineage_for_any_approved_follow_up
+  - do_not_start_implementation_research_or_execution_source_changes_without_separate_authorization
+  - do_not_treat_operator_selected_Pro_as_backend_attestation
 ```
 
 ## Current interpretation
@@ -133,4 +158,4 @@ The PR #198 checkpoint was explicitly activated after the user rejected the labe
 
 The checkpoint and its activation remain operational records, not backend attestation. The completed event does not automatically activate the checkpoint for a future incident.
 
-The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is complete pre-reveal evidence and is preserved by PR #203 pending human merge. Fable GF-STEP-5 substantive adjudication has not started; Stage B remains a separate read-only task that requires PR #203 to merge and the user to explicitly start it.
+The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is merged pre-reveal evidence. Stage B is complete and exactly preserved by PR #204 pending human merge, followed by a read-only Pro-selected maintainer adjudication. Neither Stage B nor the Pro adjudication adopts an architecture component. The next substantive gate is explicit user disposition after PR #204 merges.
