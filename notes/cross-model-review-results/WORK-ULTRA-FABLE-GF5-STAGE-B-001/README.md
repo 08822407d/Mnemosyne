@@ -5,6 +5,8 @@
 ```yaml
 task_id: WORK-ULTRA-FABLE-GF5-STAGE-B-001
 storage_task: MNEMOSYNE-153
+storage_PR: 204
+storage_status: pending_human_merge
 stage: B
 status_claim: WORK_ULTRA_GF5_STAGE_B_COMPLETE
 maintainer_receipt: RECEIVED_COMPLETE_HIGH_SIGNAL
