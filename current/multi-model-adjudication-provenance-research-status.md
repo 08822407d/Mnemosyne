@@ -113,8 +113,8 @@ FABLE5_GREENFIELD_maintainer_adjudication:
   Stage_B:
     task: WORK-ULTRA-FABLE-GF5-STAGE-B-001
     storage_task: MNEMOSYNE-153
-    storage_PR: pending
-    status: complete_received_and_stored_pending_human_merge_of_storage_PR
+    storage_PR: 204
+    status: complete_stored_pending_human_merge_of_PR_204
     exact_artifact_root: notes/cross-model-review-results/WORK-ULTRA-FABLE-GF5-STAGE-B-001
     GF_STEP_5_exact_report_verified: true
     GF_STEP_5_inventory_verified: true
@@ -145,7 +145,7 @@ actual_backend_model_identity_proven: false
 execution_source_modified_by_MNEMOSYNE_153: false
 GF_STEP_5_substantive_adjudication: completed_as_advisory_pending_user_disposition
 next_gate:
-  - human_review_and_merge_the_single_MNEMOSYNE_153_storage_PR
+  - human_review_and_merge_PR_204
   - after_merge_obtain_explicit_user_accept_reject_or_defer_disposition_for_PRO_SLICE_01_and_adjacent_options
   - create_a_fresh_task_ID_and_single_PR_lineage_for_any_approved_follow_up
   - do_not_start_implementation_research_or_execution_source_changes_without_separate_authorization
@@ -158,4 +158,4 @@ The PR #198 checkpoint was explicitly activated after the user rejected the labe
 
 The checkpoint and its activation remain operational records, not backend attestation. The completed event does not automatically activate the checkpoint for a future incident.
 
-The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is merged pre-reveal evidence. Stage B is complete, exactly preserved on the MNEMOSYNE-153 branch, and followed by a read-only Pro-selected maintainer adjudication. Neither Stage B nor the Pro adjudication adopts an architecture component. The next substantive gate is explicit user disposition after the single storage PR is merged.
+The v0.2 run-context guard is effective prospectively. DR07, FABLE5-GOV-001, their exact storage records, and Fable GF-STEP-1 through GF-STEP-5 remain trusted inputs. Stage A is merged pre-reveal evidence. Stage B is complete and exactly preserved by PR #204 pending human merge, followed by a read-only Pro-selected maintainer adjudication. Neither Stage B nor the Pro adjudication adopts an architecture component. The next substantive gate is explicit user disposition after PR #204 merges.
