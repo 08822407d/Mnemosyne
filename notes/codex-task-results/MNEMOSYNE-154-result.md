@@ -8,7 +8,7 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: 1481eaac9e5842364bb8017e1268bbfc797ffe5d
 canonical_branch: mnemosyne-154-sync-post-pr204-live-gate
-canonical_pr_number: pending
+canonical_pr_number: 205
 user_decision_recorded: true
 execution_source_modified: false
 Stage_B_storage_merge_verified: true
@@ -40,6 +40,9 @@ master_comparison:
 open_PRs_before_branch_creation: []
 related_MNEMOSYNE_154_PRs_before_branch_creation: []
 related_MNEMOSYNE_154_branches_before_branch_creation: []
+open_PRs_before_PR_creation: []
+related_MNEMOSYNE_154_PRs_before_PR_creation: []
+canonical_PR_created: 205
 ```
 
 ## Files
@@ -52,7 +55,7 @@ Modified:
 Created:
 
 - this result record
-- `notes/codex-task-results/MNEMOSYNE-154-pr-finalization.md` after PR creation
+- `notes/codex-task-results/MNEMOSYNE-154-pr-finalization.md`
 
 ## Live-state correction
 
@@ -147,6 +150,18 @@ run_context:
           status: not_available_before_merge
           type: git_commit_sha
           value: null
+      - ref: notes/codex-task-results/MNEMOSYNE-154-pr-finalization.md
+        relation: created
+        immutable_identity:
+          status: not_available_before_merge
+          type: git_commit_sha
+          value: null
+      - ref: PR_205
+        relation: produced
+        immutable_identity:
+          status: not_available_before_merge
+          type: git_commit_sha
+          value: null
 
   review_events:
     - review_id: MNEMOSYNE-154-POST-MERGE-VERIFICATION
@@ -227,17 +242,18 @@ run_context:
       - PRO_FABLE_GF5_MAINTAINER_ADJUDICATION_001
 ```
 
-## Validation plan
+## Validation
 
-Before PR creation:
+Completed:
 
-- repeat open-PR enumeration and exact MNEMOSYNE-154 lineage search;
-- compare the branch with current `master`;
-- verify only the two live status files plus result/finalization records change;
-- verify `current/human-approved-spec.md` remains unchanged;
-- create exactly one canonical PR;
-- bind its number in this record and the finalization record;
-- do not add the new PR merge as another live next gate.
+- repeated open-PR enumeration and exact MNEMOSYNE-154 lineage search;
+- compared the branch with current `master`;
+- verified only the two live status files plus result/finalization records change;
+- verified `current/human-approved-spec.md` remains unchanged;
+- created exactly one canonical PR: #205;
+- avoided adding PR #205 merge as another live next gate.
+
+Final branch comparison and merge-target state are recorded in `notes/codex-task-results/MNEMOSYNE-154-pr-finalization.md`.
 
 ## Boundary
 
