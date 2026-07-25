@@ -1,0 +1,183 @@
+manifest_version: v1
+storage_task: MNEMOSYNE-155
+artifact_lineage: PRO-SLICE-01-PATCH-SPEC-001_to_002
+authority_level: non_execution_source_advisory_and_candidate_patch_evidence
+repository_baseline: master@1e1334ad4dce36c2c47ffcfef3e90c9fd843815c
+exact_archive:
+  format: deterministic_tar_mtime_0_uid_gid_0_then_bzip2_level_9_then_Base64_parts
+  tar_bytes: 440320
+  tar_sha256: e7fa17560ba5b4e5787d41edb0c8d9261d02df5e084a00c5f2bbae6f06498d4d
+  bzip2_bytes: 60046
+  bzip2_sha256: 0189d64d479f17264dda8d502f6068370941c9f741bd2fce71276b6a59fbb381
+  base64_characters: 80064
+  ordered_parts: 7
+  members:
+  - filename: PRO-SLICE-01-PATCH-SPEC-001-task.md
+    role: v1_task_contract
+    bytes: 17485
+    sha256: f33987133d3d01c82ad563fc2ba172e5f0b45a677e33623a4d79acc8afc53f53
+    git_blob_sha_if_single_file: 1ad296bfeffacb103132b8d43fdc1051830ee168
+    line_breaks: 498
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-001-complete-response.md
+    role: v1_complete_response
+    bytes: 23246
+    sha256: d4fcf6bf8945a4d8a03b6eead8c46cfd0a0255e338537adf0d89b3b527086a22
+    git_blob_sha_if_single_file: 51488c110fa17171bc5764d768ea44be61539364
+    line_breaks: 504
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-001-patch-specification.md
+    role: v1_patch_specification
+    bytes: 82445
+    sha256: 746ecd11554c72654fa8c8551356838c61b62696e6e09c4d5688f14ddea5b0c1
+    git_blob_sha_if_single_file: 8c26b7195e31155f8d307400db0aa98cd408d7bb
+    line_breaks: 1757
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-001-file-and-contract-matrix.yaml
+    role: v1_file_and_contract_matrix
+    bytes: 19179
+    sha256: 1b2b6abb8a2dd6ce009da950f948e590dff8cb2b9454fdc1a800c6d528b3c9ce
+    git_blob_sha_if_single_file: 0984c00bbca866488082bdef7e95cf075366b315
+    line_breaks: 436
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-001-validation-plan.md
+    role: v1_validation_plan
+    bytes: 11709
+    sha256: 6097617f43dcbbaec70240fe833b5b836f5a6bef365760056dc047033070a697
+    git_blob_sha_if_single_file: 488ea4b4c2a4e9781716c5589619a31a5d726368
+    line_breaks: 281
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-001-source-and-overlap-ledger.yaml
+    role: v1_source_and_overlap_ledger
+    bytes: 12358
+    sha256: ae6b3386a5307c92e1b2ba085f3b6456e0f3d9ecae3edb1e60cc1f4fd52c6986
+    git_blob_sha_if_single_file: cb5951694cccbee1d1d4965bb9da370707a7e4b7
+    line_breaks: 301
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-revision-task.md
+    role: v2_revision_task_contract
+    bytes: 13135
+    sha256: 6d0db9e136a7a66a38a1abdf1f55ad3fb05d878155ae95eb5e2dadfeee04c565
+    git_blob_sha_if_single_file: 4e3861bf3a41f14677ffab0a579d31e746dc4142
+    line_breaks: 396
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-complete-response.md
+    role: v2_complete_response
+    bytes: 10817
+    sha256: 2dbb9d6f9e18f849bcc2cd3c85a3b99c123678e48871f1832139fb735fc32386
+    git_blob_sha_if_single_file: d43581d671fa3799aa51d30d9a9a72b4bb12c5aa
+    line_breaks: 234
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-patch-specification.md
+    role: v2_patch_specification
+    bytes: 93084
+    sha256: a209fd7aa14bb9751290280454dc7243a6547b6aecb7c4554f00a712cdc151f9
+    git_blob_sha_if_single_file: 41bd073886b47b6df91388b256a40b6cbb978e3d
+    line_breaks: 1917
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-file-and-contract-matrix.yaml
+    role: v2_file_and_contract_matrix
+    bytes: 108937
+    sha256: 88f8ae0b80d909af7165402c4f75b8afd33b474f4397cd073b2a5bcbb708adad
+    git_blob_sha_if_single_file: 08ae6bbd1a9ce3bbc2c5ffa739b9c4c6d797582c
+    line_breaks: 2199
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-validation-plan.md
+    role: v2_validation_plan
+    bytes: 10210
+    sha256: bf13527195b9f0763ffe1510c630247856251bfc01973a1b4bc5dfe4e7afd3b2
+    git_blob_sha_if_single_file: 5ce0f603b13131b388c5ff93755f4578fac7be60
+    line_breaks: 232
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-source-and-overlap-ledger.yaml
+    role: v2_source_and_overlap_ledger
+    bytes: 11503
+    sha256: ba179ffbc477821f7a990411c34cd683889be220501ad732f4442c977942251a
+    git_blob_sha_if_single_file: f919af3c01233f10a1a7a474b5d8eb24d04664aa
+    line_breaks: 292
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-002-revision-delta.yaml
+    role: v2_revision_delta
+    bytes: 6915
+    sha256: 74f95a93c120bf32fec96aeb58b6ca9f2f3de4f130372595be5ef0d207060c8c
+    git_blob_sha_if_single_file: 81ab6b662d68e87e31546e7e89169499fe380da3
+    line_breaks: 199
+    final_lf: true
+  parts:
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0001.txt
+    base64_characters: 12000
+    file_bytes: 12001
+    sha256: b411250572786f76fa499732b4b5a12ecb43d27275ea3c3d85708670d331b67d
+    git_blob_sha_expected: 9185920496786a59b10f11212759e92c216dd208
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0002.txt
+    base64_characters: 12000
+    file_bytes: 12001
+    sha256: 8d6d098e639ef09877c30b1d92c40fa684b8e18f05a1caa0076d2dfb543cd6f7
+    git_blob_sha_expected: a91c65250780c3f1058539850b8f5de3773161d8
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0003.txt
+    base64_characters: 12000
+    file_bytes: 12001
+    sha256: 01544b5906465609eb053937e946c28c5ff102874e9c0b48b0e02cbf3c4acb07
+    git_blob_sha_expected: 075211682dfeb68bd01556355d63df4feb407674
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0004.txt
+    base64_characters: 12000
+    file_bytes: 12001
+    sha256: 5d70fae452a51b6f9a50e9036ae09940e3e61f33d908762e8a7eb0819fe10873
+    git_blob_sha_expected: f6b124ecf90d038f67b04e10bc4fa09b57d6d65d
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0005.txt
+    base64_characters: 12000
+    file_bytes: 12001
+    sha256: ffbc3af6f634ffd54228e87433e1dfd083f4309d7a4acede83fa9cc86d42561f
+    git_blob_sha_expected: 7fefb42c3b0042723226695bf65cbdf9a1a210e0
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0006.txt
+    base64_characters: 12000
+    file_bytes: 12001
+    sha256: 6e4e616af2f70a4d820c9963a935a0ad5279eda8a7583ad15b017b00d0beb630
+    git_blob_sha_expected: e2025f14c3372151166aa660e122df7cfaf3ca90
+    final_lf: true
+  - filename: PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0007.txt
+    base64_characters: 8064
+    file_bytes: 8065
+    sha256: 6397e0f201aa590113de63a68edc0d41185321034b56883ff280e7baab4787d0
+    git_blob_sha_expected: 47e3f8a7d7f23f5c3db94be7f2ae242468eb27e0
+    final_lf: true
+mechanical_receipt:
+  v1_yaml_parse: pass
+  v2_yaml_parse: pass
+  v1_contract_rows: 12
+  v1_file_dispositions: 11
+  v1_patch_ids_unique: 29
+  v2_revision_items_repaired: 10
+  v2_revision_items_partial: 0
+  v2_revision_items_rejected: 0
+  v2_revision_items_blocked: 0
+  v2_patch_records: 29
+  v2_patch_ids_unique: 29
+  v2_phase_A_patch_ids: 11
+  v2_phase_B_patch_ids: 18
+  v2_proposed_changed_files: 9
+  v2_proposed_no_change_files: 2
+  v2_all_old_new_byte_counts_match_declared: true
+  v2_all_old_new_sha256_match_declared: true
+  v2_all_operations_replace_exact_once: true
+  v2_all_match_count_required_one: true
+  v2_all_fail_if_anchor_mismatch: true
+  current_master_identical_to_v2_baseline_at_receipt: true
+  accessible_open_PRs_at_receipt: 0
+maintainer_disposition:
+  v1: accepted_as_historical_input_superseded_for_implementation_by_v2
+  v2: accepted_for_user_patch_scope_and_phase_A_authorization_decision
+  direct_implementation: not_authorized
+  phase_A: task_generation_ready_after_explicit_user_scope_approval_and_storage_PR_merge
+  phase_B: blocked_until_phase_A_merge_stop_gate_and_fresh_authorization
+boundaries:
+  execution_source_modified: false
+  implementation_performed: false
+  target_project_work: false
+  external_research: false
+  historical_records_rewritten: false
