@@ -18,7 +18,7 @@ execution_source_modified: false
 
 - `manifest.yaml` — exact identities, structural receipt, and disposition.
 - `maintainer-receipt.md` — mechanical and bounded substantive review.
-- `archive-parts/PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0001.txt` through `part-0007.txt` — exact deterministic archive containing the two taskbooks, both complete-response files, and all v1/v2 named artifacts.
+- `archive-parts/PRO-SLICE-01-PATCH-SPEC-v1-v2.tar.bz2.base64.part-0001.txt` through `part-0019.txt` — exact deterministic archive containing the two taskbooks, both complete-response files, and all v1/v2 named artifacts.
 
 ## Reconstruction
 
@@ -45,7 +45,7 @@ bzip2_before_Base64:
   bytes: 60046
   sha256: 0189d64d479f17264dda8d502f6068370941c9f741bd2fce71276b6a59fbb381
 base64_characters: 80064
-ordered_parts: 7
+ordered_parts: 19
 members: 13
 ```
 
