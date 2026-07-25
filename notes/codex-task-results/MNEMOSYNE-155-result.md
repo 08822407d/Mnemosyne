@@ -32,7 +32,7 @@ MNEMOSYNE-155 performs three bounded operations:
 - `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/README.md`
 - `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/manifest.yaml`
 - `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/maintainer-receipt.md`
-- seven ordered exact archive parts under `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/archive-parts/`
+- nineteen ordered exact archive parts under `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/archive-parts/`
 - this result record
 
 A PR-finalization record will be added after the canonical PR number exists.
