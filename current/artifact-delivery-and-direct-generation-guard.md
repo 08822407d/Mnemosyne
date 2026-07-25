@@ -5,7 +5,8 @@
 ```yaml
 guard_id: MNEMOSYNE-ARTIFACT-DELIVERY-001
 created_by_task: MNEMOSYNE-127
-status: active_after_MNEMOSYNE_127_merge
+amended_by_task: MNEMOSYNE-155
+status: active_after_MNEMOSYNE_155_merge
 applies_to:
   - Mnemosyne_related_ChatGPT_conversations
   - Codex_tasks
@@ -14,6 +15,7 @@ execution_source: current/human-approved-spec.md
 user_decision_provenance:
   - current_maintenance_conversation_approval_of_MNEMOSYNE_124
   - current_maintenance_conversation_instruction_to_redo_all_post_PR_173_work
+  - current_maintenance_conversation_2026_07_25_complete_response_file_requirement
 tracked_issues:
   - 170
   - 171
@@ -21,10 +23,11 @@ tracked_issues:
 
 ## 1. Purpose
 
-Prevent two recurring workflow failures:
+Prevent three recurring workflow failures:
 
 1. long, structured transfer content is pasted into chat and loses Markdown/YAML/code-block integrity or degrades browser performance;
-2. a user-requested low-risk downloadable artifact is promised for a later response instead of being created immediately.
+2. a user-requested low-risk downloadable artifact is promised for a later response instead of being created immediately;
+3. a task requires the operator to return another conversation or Work task's complete final response, but the taskbook requests only named result artifacts, forcing the operator to send an extra message solely to obtain a downloadable complete-response copy.
 
 ## 2. Definitions
 
@@ -41,6 +44,12 @@ Examples include:
 - prompt packs;
 - multi-part structured instructions;
 - long Markdown/YAML/code artifacts whose structure must survive transfer.
+
+### Complete-response transfer file
+
+A downloadable file containing the task executor's complete final user-visible response for return to a maintainer conversation, archival, review, or evidence comparison.
+
+It is distinct from named substantive artifacts such as a synthesis, ledger, matrix, report, or patch specification. The complete response may summarize, wrap, link to, or differ from those artifacts and therefore requires its own explicit identity and role when the task asks the operator to return it.
 
 ### Low-risk downloadable artifact
 
@@ -67,6 +76,32 @@ When file-first delivery applies, the user-facing response should contain only t
 - material limitations or warnings.
 
 Do not duplicate the complete long artifact in the chat body unless the user explicitly requests inline duplication or a higher-priority exception requires it.
+
+## 3A. Complete-response transfer-file rule
+
+When a Mnemosyne task prompt, taskbook, handoff, review package, or execution instruction requires the operator to return or preserve the executor's **complete final response**, the task designer must explicitly require a separate downloadable complete-response transfer file.
+
+The taskbook must specify:
+
+```yaml
+complete_response_transfer_file:
+  required: true
+  suggested_filename: <TASK_ID>-complete-response.md
+  content_scope: complete_final_user_visible_response
+  create_in_same_final_response: true
+  role: auxiliary_transfer_and_archival_copy
+```
+
+Rules:
+
+1. The complete-response file must be generated automatically in the same final response as the named task artifacts. The operator must not need to send a second prompt solely to ask the executor to export its already-issued response.
+2. The file must preserve the complete user-visible final response as faithfully as the surface permits, including headings, lists, tables, YAML/code blocks, status metadata, warnings, file links or transfer pointers, and final status lines.
+3. The taskbook's required-output list and closeout checklist must name this file explicitly. A general request such as “return the complete response” is insufficient when the operator is expected to transfer it as a file.
+4. Named substantive artifacts do not substitute for the complete-response file. If the complete response and a synthesis/report differ, preserve both and record their separate byte/hash identities and roles. If they are byte-identical, the task may disclose the identity relation, but the required complete-response filename must still be delivered unless the operator explicitly waives it.
+5. Do not require a complete-response file when the maintainer needs only the named artifacts and does not require the full reply. This rule is conditional, not a requirement to export every answer.
+6. If the surface cannot generate or preserve the file, the original final response must disclose the limitation and identify the single minimal operator action needed. It must not claim that the file exists.
+7. For Deep Research, the canonical full report remains in the final report/answer under the §13 exception. When cross-conversation return of the full response is required, the taskbook should additionally require a downloadable complete-response copy as an auxiliary transfer artifact; it may not replace the inline canonical report.
+8. Creating the local complete-response file does not authorize repository write, upload, email, forwarding, or another connected-service action.
 
 ## 4. Same-response generation rule
 
@@ -95,7 +130,8 @@ Before stating that a file was created or delivered, verify as far as the availa
 - the expected filename and format are correct;
 - the file exists at the returned location;
 - the response contains a working artifact link or the exact available transfer pointer;
-- the full long body was not unnecessarily duplicated in chat.
+- the full long body was not unnecessarily duplicated in chat;
+- when the complete-response transfer-file rule applies, the required complete-response file was actually created and is distinguishable from the named substantive artifacts.
 
 Never invent a sandbox path, repository path, attachment, or successful file creation.
 
