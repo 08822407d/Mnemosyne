@@ -14,6 +14,46 @@ Non-execution-source support instrument derived from DR5. It guides evaluation o
 | target delivery | User-facing delivery package | yes | approved | separate |
 | target repository write | Persistent target write/commit/PR | yes | approved | explicit separate approval |
 
+## Surface-specific no-write evidence contract
+
+A real target-project dry-run defaults to no persistent write on the target repository and target runtime store. It does not automatically claim that every repository, local sandbox, or Mnemosyne evidence surface was unchanged.
+
+The result must reference the reusable `no_write_evidence` and, when used, `no_write_evidence_exception` objects in `notes/object-templates-and-id-rules.md`.
+
+Required evidence semantics:
+
+```yaml
+required_no_write_evidence:
+  root_fields:
+    - checked_at
+    - proof_actor_or_process
+  per_claim_surface_fields:
+    - surface
+    - repository_or_target
+    - prohibited_write_scope
+    - allowed_nonpersistent_outputs
+    - pinned_pre_ref
+    - pinned_post_ref
+    - mechanical_method
+    - mechanical_evidence_refs_or_commands_API_results
+    - changed_paths
+    - scope_match
+    - result
+    - limitations
+  accepted_results:
+    - pass
+    - pass_with_approved_exception
+```
+
+Acceptance rules:
+
+- prose self-report, tool-intent narration, `target_write: false`, or a method label without bound mechanical evidence is insufficient;
+- `pass` requires exact scope match and mechanical evidence tied to pinned refs;
+- `pass_with_approved_exception` requires a complete approved exception containing approval reference/time, approver, exact run/scope, unavailable-proof reason, substitute evidence refs, confidence, independent-verification status, and `not_future_precedent: true`;
+- a complete approved exception is not blocked merely because the default proof was unavailable; missing, unapproved, incomplete, or scope-mismatched exception data remains fail-closed;
+- `no_write_evidence_scope_mismatch` is a critical blocker;
+- synthetic smoke test, tabletop exercise, real no-write run, target delivery, target repository write, and any separately authorized Mnemosyne evidence write remain separate actions and claims.
+
 ## Evaluation dimensions
 
 | Dimension | Weight | Primary evaluator |
@@ -35,7 +75,7 @@ Non-execution-source support instrument derived from DR5. It guides evaluation o
 
 ## Evidence requirements
 
-Require target selection record, approved run manifest, authority/source map, truth-source declaration, safe input ledger, storage policy, redaction manifest, external pointer review, no-target-write proof, memory schema, handoff package, delivery package inventory, assumption/conflict log, scorecard, user confirmation, postmortem, and regression candidates.
+Require target selection record, approved run manifest, authority/source map, truth-source declaration, safe input ledger, storage policy, redaction manifest, external pointer review, surface-specific no-write evidence conforming to the reusable mechanical contract, memory schema, handoff package, delivery package inventory, assumption/conflict log, scorecard, user confirmation, postmortem, and regression candidates.
 
 ## PASS limitations
 
