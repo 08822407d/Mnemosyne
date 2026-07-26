@@ -8,7 +8,11 @@ action_actor: ChatGPT_GitHub_app
 base_branch: master
 pinned_base_sha: 1e1334ad4dce36c2c47ffcfef3e90c9fd843815c
 canonical_branch: mnemosyne-155-archive-pro-slice-specs-and-complete-response-guard
-canonical_pr_number: pending
+canonical_pr_number: 206
+canonical_pr_url: https://github.com/08822407d/Mnemosyne/pull/206
+canonical_pr_state: open_pending_human_review_and_merge
+head_sha_at_pr_creation: 9e5af919cd9fe030452cb2c5d04d4184276a532e
+latest_known_head_before_this_result_binding: 9474c9b4c07536fbf47145126f24177d384b61bb
 user_decision_recorded: true
 execution_source_modified: false
 PRO_SLICE_01_implementation_started: false
@@ -25,6 +29,8 @@ MNEMOSYNE-155 performs three bounded operations:
 2. exactly preserves the v1 and v2 `PRO-SLICE-01` patch-specification lineage, including both complete-response files;
 3. records a maintainer receipt that accepts v2 for explicit user Phase A scope/write disposition while leaving implementation unauthorized.
 
+The unique canonical PR is #206. No parallel branch or PR is authorized or required.
+
 ## Files created
 
 - `current/pro-slice-01-patch-specification-status.md`
@@ -34,8 +40,7 @@ MNEMOSYNE-155 performs three bounded operations:
 - `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/maintainer-receipt.md`
 - nineteen ordered exact archive parts under `notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/archive-parts/`
 - this result record
-
-A PR-finalization record will be added after the canonical PR number exists.
+- `notes/codex-task-results/MNEMOSYNE-155-pr-finalization.md` after PR binding
 
 ## Files modified
 
@@ -49,6 +54,8 @@ The active guard now requires taskbooks to request a complete-response file in a
 The requirement is conditional and does not apply when only named artifacts are needed. It preserves the Deep Research inline canonical-report exception and does not authorize external actions.
 
 After the guard and loader were updated on the canonical branch, the current conversation re-read the required guidance sources and applied the amended behavior constraint without starting a handoff or importing maintenance live state as a separate action plan.
+
+The rule becomes active on the default branch only after PR #206 is human-merged.
 
 ## Patch-specification receipt
 
@@ -71,6 +78,30 @@ implementation:
   phase_B_started: false
 ```
 
+## Exact archive and remote-part validation
+
+```yaml
+exact_archive:
+  members: 13
+  tar_bytes: 440320
+  tar_sha256: e7fa17560ba5b4e5787d41edb0c8d9261d02df5e084a00c5f2bbae6f06498d4d
+  bzip2_bytes: 60046
+  bzip2_sha256: 0189d64d479f17264dda8d502f6068370941c9f741bd2fce71276b6a59fbb381
+  base64_characters: 80064
+  ordered_parts: 19
+validation:
+  local_deterministic_archive_rebuilt: true
+  local_tar_and_bzip2_hashes_match_manifest: true
+  local_member_hashes_match_manifest: true
+  all_remote_part_blob_SHAs_match_locally_precomputed_expected_blobs: true
+  remote_part_count: 19
+  archive_identity_by_exact_part_equivalence: pass
+```
+
+The deterministic archive was independently rebuilt from the thirteen received transfer originals using USTAR-compatible deterministic metadata (`mtime=0`, `uid=gid=0`, mode `0644`) and bzip2 level 9. The resulting tar and bzip2 identities match the manifest exactly.
+
+All nineteen GitHub archive-part blobs were read after final repair and matched the locally precomputed blob identities. Parts 5–7 were explicitly repaired after a final audit detected line-wrapped representations whose blob identities did not match the manifest; the corrected one-line-plus-LF files now match the exact expected blobs.
+
 ## Run context
 
 ```yaml
@@ -82,7 +113,7 @@ run_context:
 
   date_or_window:
     started_at: 2026-07-25
-    completed_or_recorded_at: 2026-07-25
+    completed_or_recorded_at: 2026-07-26
 
   action:
     actor: ChatGPT_GitHub_app
@@ -123,7 +154,7 @@ run_context:
     status: recorded
     refs:
       - ref: current/artifact-delivery-and-direct-generation-guard.md
-        relation: modified
+        relation: modified_pending_PR_206_merge
         immutable_identity:
           status: not_available_before_merge
           type: git_commit_sha
@@ -148,14 +179,13 @@ run_context:
       evidence:
         - class: mechanically_verified_repository_evidence
           ref: notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/manifest.yaml
-          observed_or_accessed_at: 2026-07-25
-          claim_scope: exact_artifact_and_internal_patch_record_integrity
-          detail: local_byte_SHA256_YAML_parse_patch_hash_and_phase_partition_checks
+          observed_or_accessed_at: 2026-07-26
+          claim_scope: exact_artifact_archive_and_internal_patch_record_integrity
+          detail: local_byte_SHA256_YAML_parse_patch_hash_phase_partition_archive_rebuild_and_remote_blob_checks
       result_ref: notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/maintainer-receipt.md
       limitations:
         - same_provider_review
         - backend_model_relation_unknown
-        - all_29_replacements_not_replayed_in_a_local_git_checkout_due_network_DNS_unavailability
         - future_implementation_must_repeat_exact_anchor_checks_on_its_pinned_base
 
   human_adjudication:
@@ -182,6 +212,7 @@ run_context:
       - create_maintainer_receipt_and_adoption_record
       - synchronize_non_execution_source_live_status
       - create_one_canonical_branch_and_PR
+      - complete_PR_binding_and_finalization_records
     excluded_actions:
       - modify_current/human-approved-spec.md
       - implement_PHASE_A_or_PHASE_B_patch_blocks
@@ -191,15 +222,12 @@ run_context:
       - rewrite_historical_records
     evidence:
       - class: direct_user_instruction
-        ref: current_Mnemosyne_maintenance_conversation_2026_07_25
-        observed_or_accessed_at: 2026-07-25
+        ref: current_Mnemosyne_maintenance_conversation_2026_07_25_to_2026_07_26
+        observed_or_accessed_at: 2026-07-26
         claim_scope: MNEMOSYNE_155_task_local_authorization
-        detail: explicit_request_to_add_behavior_constraint_load_guidance_and_complete_v2_result_related_work
+        detail: explicit_request_to_continue_unfinished_work_and_handoff_at_an_appropriate_transition_point
     expires_with_task: true
     not_future_precedent: true
-
-  assessment_refs:
-    - notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC/maintainer-receipt.md
 
   lineage:
     review_disposition: amend
@@ -216,28 +244,33 @@ run_context:
       - historical_repository_records
 
   limitations:
-    - merge_commit_and_PR_number_are_not_available_until_PR_creation_and_merge
+    - merge_commit_is_not_available_until_PR_206_is_merged
     - Phase_A_requires_new_explicit_user_scope_and_repository_write_authorization
     - Phase_B_remains_blocked_by_the_post_Phase_A_stop_gate
-
-  omissions:
-    - field: provider_normalization
-      reason: not_available
-      detail: no_current_provider_documentation_refresh_was_required_for_this_task
+    - new_conversation_handoff_is_planned_after_PR_206_merge_and_post_merge_verification
 ```
 
-## Validation plan
+## PR binding and pre-merge validation
 
-Before PR creation:
-
-- repeat all accessible open-PR enumeration and exact task/branch searches;
-- compare the branch with current `master`;
-- verify the archive reconstructs and every member hash matches;
-- verify both updated guidance files contain the complete-response rule;
-- confirm `current/human-approved-spec.md` remains unchanged;
-- create exactly one canonical PR;
-- bind the PR number in result/status/finalization records.
+```yaml
+PR:
+  number: 206
+  URL: https://github.com/08822407d/Mnemosyne/pull/206
+  state: open
+  draft: false
+  base: master
+  base_sha: 1e1334ad4dce36c2c47ffcfef3e90c9fd843815c
+  head_branch: mnemosyne-155-archive-pro-slice-specs-and-complete-response-guard
+  head_sha_at_creation: 9e5af919cd9fe030452cb2c5d04d4184276a532e
+  auto_merge: false
+pre_PR_duplicate_lineage_check:
+  accessible_open_related_PRs: []
+  exactly_one_canonical_PR_created: true
+execution_source_check:
+  human_approved_spec_blob: 01f64a8223677829320c66dd46d3f172cc9155cc
+  modified: false
+```
 
 ## Boundary
 
-This record does not approve Phase A, execute any v2 patch block, modify the execution source, start Phase B, perform target-project work, run external research, merge a PR, or enable auto-merge.
+This record does not approve Phase A, execute any v2 patch block, modify the execution source, start Phase B, perform target-project work, run external research, merge PR #206, enable auto-merge, or treat the planned conversation handoff as implementation authorization.
