@@ -31,7 +31,7 @@ Positioning: these three entries are non-execution-source research/design TODOs.
 ## Recently completed
 
 - MNEMOSYNE-085: recorded user-approved interruption marker and resume guard; no residue repair, no execution-source change, no workspace/material/target-write/build/regression-formalization occurred.
-- MNEMOSYNE-084: repaired post-083 handoff current-state residue; post-084 validation found no current residue requiring a repair task; no handoff artifacts, dry-run evidence, target workspace/material/target-write/execution-source change occurred.
+- MNEMOSYNE-084: repaired post-083 handoff current-state residue; post-084 validation found no current residue requiring a repair task; no handoff artifacts, dry-run evidence, target workspace/material/target-write, or execution-source change occurred.
 - MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
 
 
@@ -43,8 +43,8 @@ Positioning: these three entries are non-execution-source research/design TODOs.
 - MNEMOSYNE-077: repaired post-076 current-state live-route residue.
 - MNEMOSYNE-076: recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only; created preparation/evidence/operator prompt package; actual dry-run execution was unapproved at that time; MNEMOSYNE-078 later approved manual high-reasoning ChatGPT execution only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/target-write occurred.
-- MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/target-write occurred.
+- MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; requirements analysis remains pending external dialogue handoff and the draft package is provisional.
 - MNEMOSYNE-065: moved B1 follow-up into current open-questions section.
 - MNEMOSYNE-066: ingested PRO-04 v2 and DR5; created first-target intake/evaluation/scorecard/postmortem/regression support instruments.
@@ -301,5 +301,5 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 
 ### Recently completed
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
-- [x] MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were not present from `manual-import-inbox`; no hardening applied.
+- [x] MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were not present in `manual-import-inbox`; no hardening applied.
 - [x] MNEMOSYNE-063: ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls.
