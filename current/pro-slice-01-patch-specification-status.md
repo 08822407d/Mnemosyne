@@ -140,7 +140,8 @@ implementation:
     execution_result: notes/codex-task-results/MNEMOSYNE-160-result.md
     finalization_task: MNEMOSYNE-161
     finalization_record: notes/codex-task-results/MNEMOSYNE-160-pr-finalization.md
-    finalization_PR: pending
+    finalization_PR: 212
+    finalization_URL: https://github.com/08822407d/Mnemosyne/pull/212
     status: merged_and_post_merge_verified_pending_closeout_PR_merge
 
 Phase_B_post_merge_verification:
@@ -175,7 +176,8 @@ provenance_closeout:
   Phase_A_task: MNEMOSYNE-159
   Phase_A_closeout_PR: 210
   Phase_B_task: MNEMOSYNE-161
-  Phase_B_closeout_PR: pending
+  Phase_B_closeout_PR: 212
+  Phase_B_closeout_URL: https://github.com/08822407d/Mnemosyne/pull/212
   Phase_B_finalization: notes/codex-task-results/MNEMOSYNE-160-pr-finalization.md
   historical_MNEMOSYNE_160_result_rewritten: false
   PR_211_execution_context_body_amendment: performed_by_MNEMOSYNE_161
@@ -188,7 +190,7 @@ route_completion:
   implemented_patch_records: 29_of_29
   changed_design_files: 9_of_9
   execution_source_modified: false
-  route_status: COMPLETE_PENDING_MNEMOSYNE_161_CLOSEOUT_PR_MERGE
+  route_status: COMPLETE_PENDING_MNEMOSYNE_161_CLOSEOUT_PR_212_MERGE
   automatic_next_route: none
 
 adjacent_user_research_TODO:
@@ -207,7 +209,7 @@ boundaries:
   automatic_inference_or_training_implementation_approved: false
 
 next_gate:
-  - human_review_and_merge_the_single_MNEMOSYNE_161_closeout_PR
+  - human_review_and_merge_the_single_MNEMOSYNE_161_closeout_PR_212
   - verify_closeout_merge_on_latest_master
   - then_choose_a_new_route_explicitly_if_more_Mnemosyne_work_is_desired
 ```
@@ -216,4 +218,4 @@ next_gate:
 
 Both sequential parts of `PRO-SLICE-01` are now merged and substantively verified: Phase A contributed 11 exact patches across five foundation files, and Phase B contributed 18 exact patches across four downstream handoff/delivery/target-project files. `MNEMOSYNE-161` performs the final additive GitHub-lineage/provenance closeout and live-status synchronization without changing the execution source or any Phase A/Phase B substantive file.
 
-After the single MNEMOSYNE-161 closeout PR is human-merged and its merge is verified, the current propagation route is complete. No other architecture, target-project, research, or implementation route is automatically selected.
+After the single MNEMOSYNE-161 closeout PR #212 is human-merged and its merge is verified, the current propagation route is complete. No other architecture, target-project, research, or implementation route is automatically selected.
