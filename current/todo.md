@@ -31,7 +31,7 @@ Positioning: these three entries are non-execution-source research/design TODOs.
 ## Recently completed
 
 - MNEMOSYNE-085: recorded user-approved interruption marker and resume guard; no residue repair, no execution-source change, no workspace/material/target-write/build/regression-formalization occurred.
-- MNEMOSYNE-084: repaired post-083 handoff current-state residue; post-084 validation found no current residue requiring a repair task; no handoff artifacts, dry-run evidence, target workspace/material/target-write, or execution-source change occurred.
+- MNEMOSYNE-084: repaired post-083 handoff current-state residue; post-084 validation found no current residue requiring a repair task; no handoff artifacts, dry-run evidence, target workspace/material/target-write/execution-source change occurred.
 - MNEMOSYNE-083: created official Meta-Agent phase-closure handoff package and next-conversation startup prompt; no target workspace/material/target-write/execution-source change occurred.
 
 
@@ -43,8 +43,8 @@ Positioning: these three entries are non-execution-source research/design TODOs.
 - MNEMOSYNE-077: repaired post-076 current-state live-route residue.
 - MNEMOSYNE-076: recorded user approval of Meta-Agent final manifest candidate v0.1 for controlled no-target-write dry-run preparation only; created preparation/evidence/operator prompt package; actual dry-run execution was unapproved at that time; MNEMOSYNE-078 later approved manual high-reasoning ChatGPT execution only; no workspace/material/dry-run/target-write occurred.
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/dry-run/target-write occurred.
-- MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/dry-run/target-write occurred.
+- MNEMOSYNE-073: recorded Meta-Agent v0.2 review/preparation baseline approval only and created next approval-gates checklist; no workspace/material/target-write occurred.
+- MNEMOSYNE-071: external Meta-Agent requirements-analysis handoff/intake alignment package ingested; Meta-Agent draft manifest revised to v0.2 as revised draft for user review only; no workspace/material/target-write occurred.
 - MNEMOSYNE-070: added Meta-Agent analysis-alignment guard; requirements analysis remains pending external dialogue handoff and the draft package is provisional.
 - MNEMOSYNE-065: moved B1 follow-up into current open-questions section.
 - MNEMOSYNE-066: ingested PRO-04 v2 and DR5; created first-target intake/evaluation/scorecard/postmortem/regression support instruments.
@@ -62,7 +62,7 @@ Positioning: these three entries are non-execution-source research/design TODOs.
 - MNEMOSYNE-055: synchronized post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
 - MNEMOSYNE-056: created target-project workspace boundary/layout proposal as non-execution-source candidate design; no target selected, no target materials ingested, no target repository written, and execution source unchanged.
 - MNEMOSYNE-057: promoted minimal target-project workspace principle and user-input storage policy into execution source; updated first dry-run manifest/onboarding for target-scoped workspace decisions; no target workspace created, no target selected, no target materials ingested, and no target repository written.
-- MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first-dry-run support instruments and user-input governance.
+- MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first dry-run support instruments and user-input governance.
 - MNEMOSYNE-059: ingested DR4 corrected Deep Research prompt original and repaired post-058 current-state sync.
 - MNEMOSYNE-060: repaired post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target selected/materials ingested/target repo written.
 - MNEMOSYNE-061: added staged Pro/Deep Research prompt-generation guidance.
@@ -150,11 +150,11 @@ The material below is retained for history and may contain superseded pending/co
 - [x] MNEMOSYNE-030F：research prompt mapping 硬同步与 030E 结果纠偏；
 - [x] MNEMOSYNE-031A：复核协议修正与用户设计构想重述准备
 - [x] 记录“研究报告主要供元 Agent 使用，不要求用户通读掌握全部报告”的复核前提
-- [x] 记录 MNEMOSYNE-031 增加用户构想重述流程
+- [x] 记录 MNEMOSYNE-031 增加用户设计构想重述流程
 - [x] MNEMOSYNE-031 Round 1：research motivation review
 - [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review
 - [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review
-- [x] MNEMOSYNE-031 Round 4A：AI 整理用户构想待重述清单
+- [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
 - [x] MNEMOSYNE-031 Round 4B：用户按清单口语化重述 / user restatement records
 - [x] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果 / R4C synthesis
 - [x] MNEMOSYNE-031 Round 5：D-01 to D-07 user decision review and checkpoint records
@@ -301,5 +301,5 @@ Status boundary: final D-01 to D-07 decisions are authoritative checkpoint recor
 
 ### Recently completed
 - MNEMOSYNE-074: post-v0.2 gate decisions recorded and Meta-Agent final run manifest candidate v0.1 created for user review only; no workspace/material/dry-run/target-write occurred.
-- [x] MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were not present in `manual-import-inbox`; no hardening applied.
+- [x] MNEMOSYNE-062: blocked B1 ingestion because PRO-02/PRO-03 payloads were not present from `manual-import-inbox`; no hardening applied.
 - [x] MNEMOSYNE-063: ingested PRO-02/PRO-03 B1 results and hardened pre-target dry-run controls.
