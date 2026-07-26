@@ -12,6 +12,13 @@
 - Choose or specify the inserted long work.
 - After inserted long work, choose whether to resume migration using the official MNEMOSYNE-083 artifacts or choose another post-handoff path.
 
+## User-requested product-design research TODOs
+
+- [ ] **Learning / coaching Agent learner-state, prerequisite, and mastery-evidence design.** Consolidate the earlier learning-system ideas—learner profile, course progress, error records, knowledge/vocabulary mastery, and recurrence rate—into a rigorous model suitable for scientific and engineering knowledge and skills. Research how to construct a learning-goal-specific prerequisite/dependency graph; record the mastery level required for every prerequisite; define observable mastery criteria and evidence; represent confidence, recency/decay, contradictions, and unknowns; and verify how reliably an Agent can infer mastery from ordinary teaching dialogue versus requiring exercises, tests, produced artifacts, repeated transfer/application, or human confirmation. Keep planned curriculum state, observed evidence, model-inferred mastery, and user/teacher-confirmed mastery distinct; conversational fluency alone must not be treated as proof. Existing related material should be extended rather than duplicated: `raw/concept-origin-extract-001.md`, `notes/target-project-memory-system-template-pack.md`, and the learning-system research evidence.
+- [ ] **Cross-Agent reusable learner, user, environment, and domain memory.** Extend the existing “reusable modules plus project specialization” work beyond reusable business-code libraries. Research how multiple learning/practice Agents can reuse a canonical knowledge/skill profile and mastery evidence, and how multiple Agents serving software-development work in the same industry or environment can reuse domain requirements, user preferences, runtime-environment characteristics, development-environment characteristics, and development preferences. Define the boundary between shared canonical memory and Agent/project-local truth; authority and source ownership; privacy, consent, and least-disclosure projections; freshness/versioning and invalidation; conflict reconciliation; scoped read/write permissions; synchronization and promotion rules; and safe fallback when shared memory is stale, unavailable, or contradicted. Project-specific records must not be automatically promoted into global truth. This item consolidates and extends `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R4B-item09-multi-project-reuse-and-specialization.md` rather than creating a parallel duplicate.
+
+Positioning: these two entries are non-execution-source research/design TODOs. They do not approve an implementation, schema, automatic inference method, shared-memory service, or target-project write.
+
 ## Current boundaries
 
 - MNEMOSYNE-085 has been used for a user-approved interruption marker and resume guard, not for residue repair.
@@ -116,7 +123,7 @@ The material below is retained for history and may contain superseded pending/co
 - [ ] 用户 review `notes/self-improvement-workflow.md`；
 - [x] 清理 notes/self-improvement-workflow.md 的 Codex Task Result Record 路径，默认占位符路径为 notes/codex-task-results/TASK_ID-result.md；
 - [ ] 清理 `notes/self-improvement-workflow.md` 的 Markdown 格式；
-- [ ] 为每个后续 Codex 任务写入 task result record（默认路径：`notes/codex-task-results/TASK_ID-result.md`）；
+- [ ] 为每个后续 Codex 任务写入 Codex Task Result Record（默认路径：`notes/codex-task-results/TASK_ID-result.md`）；
 - [ ] 后续阶段按 `notes/overall-target-and-roadmap-snapshot.md` 校验是否偏离长期路线；
 - [x] `MNEMOSYNE-026：self-improvement workflow 模板设计`；
 - [ ] 用户 review `notes/self-improvement-template-pack.md`；
