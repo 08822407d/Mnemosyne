@@ -23,7 +23,8 @@
 - 本模板包只提供设计骨架和检查点。
 - 本模板包不自动创建目标项目文件。
 - 本模板包不默认目标项目有 GitHub、MCP、RAG、GitHub Actions 或自动触发能力。
-- 本模板包不默认普通对话窗口能写回外部持久层。
+- app connection、action availability、approval card 或 persistent permission 不等于当前任务授权；每个 repository / target / runtime-store action 必须引用独立 canonical `repository_action_context`。
+- volatile platform mechanics 需要按时效性 research gate 核验，不得写成稳定模板的永久事实。
 - 本模板包不要求全量读取 raw；高风险、高价值、低置信度内容按需回查。
 - PDF 图表、图片和版式相关证据仍需人工复核后才能作为强证据使用。
 
@@ -58,6 +59,14 @@ memory_system_goal:
 expected_lifespan:
 expected_update_frequency:
 collaboration_pattern:
+repository_capture_safety_preflight_ref:
+repository_capture_safety_preflight_result_summary: pass | blocked | incomplete
+captured_material_storage:
+  mode: repository_original | repository_redacted_excerpt | repository_safe_pointer | outside_git
+  original_content_ref:
+  redacted_excerpt_ref:
+  safe_external_pointer_ref:
+  outside_git_reference:
 privacy_level:
 sensitive_content_types:
 automation_expectation:
@@ -74,7 +83,11 @@ status:
 字段提示：
 
 - `target_project_type` 可先使用第 2 节分类器中的类型，未知时写 `hybrid_or_unknown`。
-- `privacy_level` 可先使用 `public`、`internal`、`private`、`confidential`、`unknown`，后续是否正式化仍待决策。
+- `repository_capture_safety_preflight_ref` 必须在 original target material 进入 Git 前指向完整 canonical preflight；local result summary 必须与 canonical result 一致。
+- `captured_material_storage.mode` 必须且只能选择一个 route；非选中 route 的内容字段必须为空或省略。
+- `repository_original` 仅在 preflight 为 `pass` 时允许 original bytes/text；redacted excerpt 和 safe pointer 只能保存各自经过筛查的内容；`outside_git` 不得在 Intake 中包含 original repository content。
+- `privacy_level` 可先使用 `public`、`internal`、`private`、`confidential`、`unknown`，它只是 target-owner descriptive metadata，不是 storage authorization，也不建立新的全局 privacy taxonomy。
+- public 或 unknown repository visibility 采用 public-risk treatment；credentials / secrets 与未知 safety-critical evidence 必须 fail closed。
 - `automation_expectation` 应区分“用户希望自动化”和“当前工具已验证可自动化”。
 - `research_evidence_required` 可标记是否需要回查 research current 视图或更细报告。
 - `status` 可使用 `draft`、`needs_user_review`、`confirmed`、`superseded`。
@@ -134,6 +147,7 @@ research_evidence_policy:
 model_migration_policy:
 privacy_policy:
 automation_boundary:
+repository_action_context_policy_ref:
 review_workflow:
 drift_review_policy:
 file_layout:
@@ -289,6 +303,17 @@ target_project_name:
 current_stage:
 execution_source:
 recommended_read_order:
+receiver_guidance_load:
+  project_guidance: required
+  mnemosyne_guidance: yes | no | unknown_requires_user_decision
+receiving_operations_contract_ref: notes/object-templates-and-id-rules.md::### 8) Handoff（非执行源）
+receiving_operations:
+  receive_handoff: pending | completed | blocked
+  receive_report: pending | completed | blocked
+  project_guidance_load: pending | completed | blocked
+  mnemosyne_guidance_refresh: pending | completed | blocked | not_applicable
+  substantive_continuation: blocked_pending_prerequisites | ready | started
+receiving_operation_status_record_ref:
 completed_items:
 current_blockers:
 next_recommended_step:
@@ -300,8 +325,10 @@ unsupported_assumptions:
 
 说明：
 
-- Handoff 是交接卡，不是完整历史，也默认不是执行源。
-- `recommended_read_order` 应优先列执行源、active context、handoff 和 open questions。
+- Handoff 是交接卡，不是完整历史，也默认不是执行源；package 创建时不得预先把 receiving operations 标为 completed。
+- `recommended_read_order` 是 evidence/navigation，不能替代 artifact-mediated receive，也不会自动把 active context、handoff 或 open questions 变成 action plan。
+- 顺序固定为 receive → receive report → load target-project execution source / owner rule → 仅在 task-local 值为 `yes` 时单独刷新 Mnemosyne guidance → substantive continuation。
+- `mnemosyne_guidance` 按 `current/handoff-guidance-open-question.md` 记录，不得静默推断；值为 `no` 时 refresh status 必须为 `not_applicable`，不得暗示执行 guidance-load command。
 - `warnings` 应明确能力边界、隐私边界和未验证假设。
 
 ---
@@ -384,6 +411,14 @@ follow_up_tasks:
 13. 创建 handoff。
 14. 记录 delivery result。
 15. 后续 drift review。
+
+Runbook hard gates：
+
+- 第 4 步只有在 evidence-bearing repository-capture safety preflight 为 `pass` 时，才可把 original target material 写入 Git；否则必须使用 outside-Git source 加经过筛查的 redacted excerpt 或 safe pointer；
+- 第 12 步是独立 external action；必须引用对应 surface 的 canonical `repository_action_context`，不得把 app permission 或 persistent approval 当作当前授权；
+- 若该设计过程声称 target repository / target runtime store no-write，必须分别绑定 surface-specific mechanical evidence；单独获批的 Mnemosyne evidence write 或 local output 必须独立记录；
+- 第 13 步必须遵守 receive → receive report → project guidance / owner rule → task-local optional Mnemosyne guidance refresh → substantive continuation；guidance-load command 本身不是 receive；
+- 这些 gates 不因模板存在而授权 target selection、workspace creation、material ingestion、delivery 或 target write。
 
 ---
 

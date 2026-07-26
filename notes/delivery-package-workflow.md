@@ -30,6 +30,17 @@
 7. Monitor
 8. Iterate
 
+## 3.1 S1–S4 hard-contract 前置条件
+
+上述生命周期标签只是描述性流程，不构成授权。使用这些步骤前必须满足：
+
+- 任何可能把 original material 放入 Git 的 `Intake`，都必须先引用 `notes/object-templates-and-id-rules.md` 中具备 evidence fields 的 repository-capture safety preflight；unsafe original 留在 Git 外，只能记录经过筛查的 redacted excerpt、safe pointer 或 outside-Git reference；
+- no-write claim 必须逐项列出 claim surfaces，并绑定 pinned refs、proof actor/process、机械 evidence refs/commands、changed paths、scope-match 与 limitations；boolean 或 prose 不足以证明 no write；
+- target repository / target runtime store 的 no-write 与单独获批的 Mnemosyne evidence write、local nonpersistent output 必须分别记录，不得使用 blanket scope；
+- 任何 repository / target write 都必须引用独立 canonical `repository_action_context`，并遵守 result-record 与 single-active-PR guards；
+- Handoff Package 必须依次完成 receive、receive report、required project guidance / owner rule、task-local 要求下的独立 Mnemosyne guidance refresh，随后才能 substantive continuation；
+- 这些 cross-references 不授权 workspace creation、material ingestion、delivery、activation 或 target write，也不在本 slice 中重设计 lifecycle gates。
+
 ## 4) Delivery Manifest 建议字段（草案）
 
 - `delivery_id`

@@ -29,6 +29,16 @@ handoff_package_common:
   intended_receiver:
   repository_or_project_ref:
   execution_source_or_owner_rule:
+  receiving_operations_contract_ref: notes/object-templates-and-id-rules.md::### 8) Handoff（非执行源）
+  receiver_guidance_requirements:
+    project_guidance: required | not_applicable | unknown_requires_owner_decision
+    mnemosyne_guidance: required | yes | no | unknown_requires_user_decision | not_applicable
+  receiving_operation_statuses:
+    receive_handoff: pending | completed | blocked
+    receive_report: pending | completed | blocked
+    project_guidance_load: pending | completed | blocked | not_applicable
+    mnemosyne_guidance_refresh: pending | completed | blocked | not_applicable
+    substantive_continuation: blocked_pending_prerequisites | ready | started
   current_phase_or_stage:
   current_gate_if_any:
   current_task_intent:
@@ -52,6 +62,29 @@ execution_source_or_owner_rule:
 ```
 
 For a target project, use the target's own confirmed execution source or owner rule. If unknown, record `unknown_requires_owner_decision`.
+
+## 2.1 Receiving operation-state contract
+
+A handoff package records requirements and pending state; it must not pre-assert that the receiver already completed receive, report, guidance loading, or continuation.
+
+Canonical status structure is the Handoff object in `notes/object-templates-and-id-rules.md`. Every receiving record must preserve this order:
+
+```text
+receive_handoff
+then emit_receive_report
+then load required project guidance or owner rule
+then separately refresh Mnemosyne guidance only when the task-local requirement says required or yes
+then substantive continuation
+```
+
+For a Mnemosyne-owned handoff, `project_guidance_load` points to `current/human-approved-spec.md`, and `mnemosyne_guidance_refresh` is required after the receive report. For a target-project business handoff, project guidance is required and `mnemosyne_guidance` remains `yes | no | unknown_requires_user_decision` under `current/handoff-guidance-open-question.md`.
+
+Rules:
+
+- initial operation statuses are `pending`, `blocked`, or justified `not_applicable`, never pre-filled as completed;
+- `commands/load-mnemosyne-guidance.md` is referenced only when the task-local requirement is `required` or `yes`; when it is `no` or `not_applicable`, refresh status and command reference are `not_applicable` / absent;
+- a guidance-load command is not handoff receive;
+- `source_refs`, `read_order`, active context, handoff, todo, or open-question files remain evidence/navigation inputs and do not automatically become the receiver's action plan.
 
 ## 3. Tier selection
 
@@ -83,6 +116,16 @@ minimum_handoff_package_v0.1:
   generated_at:
 
   execution_source_or_owner_rule:
+  receiving_operations_contract_ref: notes/object-templates-and-id-rules.md::### 8) Handoff（非执行源）
+  receiver_guidance_requirements:
+    project_guidance: required | not_applicable | unknown_requires_owner_decision
+    mnemosyne_guidance: required | yes | no | unknown_requires_user_decision | not_applicable
+  receiving_operation_statuses:
+    receive_handoff: pending | completed | blocked
+    receive_report: pending | completed | blocked
+    project_guidance_load: pending | completed | blocked | not_applicable
+    mnemosyne_guidance_refresh: pending | completed | blocked | not_applicable
+    substantive_continuation: blocked_pending_prerequisites | ready | started
   current_phase:
   current_gate:
   live_truths:
@@ -150,6 +193,16 @@ standard_handoff_package_v0.1:
 
   read_order:
   execution_source_or_owner_rule:
+  receiving_operations_contract_ref: notes/object-templates-and-id-rules.md::### 8) Handoff（非执行源）
+  receiver_guidance_requirements:
+    project_guidance: required | not_applicable | unknown_requires_owner_decision
+    mnemosyne_guidance: required | yes | no | unknown_requires_user_decision | not_applicable
+  receiving_operation_statuses:
+    receive_handoff: pending | completed | blocked
+    receive_report: pending | completed | blocked
+    project_guidance_load: pending | completed | blocked | not_applicable
+    mnemosyne_guidance_refresh: pending | completed | blocked | not_applicable
+    substantive_continuation: blocked_pending_prerequisites | ready | started
   current_state:
     current_phase:
     current_gate:
@@ -168,11 +221,12 @@ standard_handoff_package_v0.1:
       who_can_close_it:
 
   authorities_and_permissions:
+    repository_action_context_refs: []
+    capability_evidence_refs: []
+    task_local_authorization_refs: []
     user_must_approve:
-    ordinary_conversation_can:
-    ordinary_conversation_cannot:
-    codex_or_write_agent_can:
-    codex_or_write_agent_cannot:
+    forbidden_actions:
+    limitations:
 
   forbidden_actions:
   stale_or_conflict_items:
