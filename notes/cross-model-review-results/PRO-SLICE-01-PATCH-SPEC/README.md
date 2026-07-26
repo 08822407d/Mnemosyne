@@ -4,6 +4,10 @@
 
 ```yaml
 storage_task: MNEMOSYNE-155
+storage_PR: 206
+storage_PR_URL: https://github.com/08822407d/Mnemosyne/pull/206
+storage_branch: mnemosyne-155-archive-pro-slice-specs-and-complete-response-guard
+storage_status: open_pending_human_review_and_merge
 lineage:
   v1: PRO-SLICE-01-PATCH-SPEC-001
   v2: PRO-SLICE-01-PATCH-SPEC-002
@@ -51,6 +55,8 @@ members: 13
 
 Verify every extracted member against `manifest.yaml`.
 
+A final audit on 2026-07-26 detected and repaired line-wrapped representations in parts 5–7. All nineteen remote Git blob identities now match the manifest's locally precomputed exact-part identities.
+
 ## Lineage interpretation
 
 V1 correctly identified the four authorized hard-contract propagation subjects but required repair before implementation. V2 preserves the same bounded scope and repairs R1–R10, including evidence-bearing safety preflight, one-of storage routes, surface-specific no-write claims, coherent approved-exception semantics, mechanical evidence binding, receiving-operation state, reference-first drift control, Chinese-primary prose, exact literal patch anchors, and two sequential nonparallel implementation phases.
@@ -74,6 +80,8 @@ This archive does not approve either phase. Phase A requires explicit user patch
 
 Both v1 and v2 archives include an explicitly named `*-complete-response.md`. The user's experience obtaining these files motivated the MNEMOSYNE-155 amendment to `current/artifact-delivery-and-direct-generation-guard.md`: future taskbooks that require return of the complete reply must request this file in advance, in the same final response, rather than forcing a separate export request.
 
+The amendment becomes active on the default branch only after PR #206 is human-merged.
+
 ## Boundary
 
 Nothing in this directory:
@@ -83,4 +91,5 @@ Nothing in this directory:
 - performs target-project work;
 - runs external research;
 - rewrites historical records;
-- authorizes Phase B before the Phase A stop gate.
+- authorizes Phase B before the Phase A stop gate;
+- merges PR #206 or enables auto-merge.
