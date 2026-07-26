@@ -21,8 +21,9 @@
 ## 使用边界
 
 - 本模板包只定义交付清单、检查项和记录格式，不自动执行交付。
-- 普通对话窗口不能默认写回目标项目仓库或目录。
-- Codex / Claude Code 等是否能写入目标项目，取决于权限、仓库关联和任务环境。
+- app connection、action availability、approval card 或 persistent permission 只能作为 `platform_permission` evidence，不能构成当前任务授权。
+- 每个 repository / target / runtime-store action 都必须引用独立 canonical `repository_action_context`；不同 action surface 不得捆绑成一个权限结论。
+- 计划、角色、workspace、connector、授权 UI 和 approval mechanics 是时效性事实；需要时通过 research gate 核验，不得写成稳定模板的永久能力。
 - 不默认 GitHub Actions、RAG、MCP、自动查重、自动写回或自动 drift review 已经可用。
 - 目标项目仓库 / 目录中的运行文件才是目标项目运行真相源；Mnemosyne 仓库保留设计档案和交付档案。
 - PDF 图表、图片和版式相关证据仍需人工复核后才能作为强证据使用。
@@ -46,6 +47,8 @@ created_at:
 created_by:
 reviewed_by:
 target_repository_or_storage:
+repository_capture_safety_preflight_refs: []
+repository_action_context_refs: []
 target_memory_root:
 files_to_create:
 files_to_update:
@@ -83,6 +86,8 @@ notes:
 file_path:
 action_type:
 source_template_ref:
+source_material_safety_preflight_ref:
+repository_action_context_ref:
 target_purpose:
 is_execution_source:
 requires_user_review:
@@ -163,6 +168,7 @@ relation_to_mnemosyne_archive:
 step_id:
 step_title:
 actor:
+repository_action_context_ref:
 preconditions:
 action:
 target_file_or_location:
@@ -272,6 +278,17 @@ delivery_manifest_ref:
 current_stage:
 execution_source:
 recommended_read_order:
+receiver_guidance_load:
+  project_guidance: required
+  mnemosyne_guidance: yes | no | unknown_requires_user_decision
+receiving_operations_contract_ref: notes/object-templates-and-id-rules.md::### 8) Handoff（非执行源）
+receiving_operations:
+  receive_handoff: pending | completed | blocked
+  receive_report: pending | completed | blocked
+  project_guidance_load: pending | completed | blocked
+  mnemosyne_guidance_refresh: pending | completed | blocked | not_applicable
+  substantive_continuation: blocked_pending_prerequisites | ready | started
+receiving_operation_status_record_ref:
 completed_setup_steps:
 pending_setup_steps:
 known_risks:
@@ -284,9 +301,11 @@ notes:
 
 说明：
 
-- Handoff Package 是交接材料，默认不是执行源。
-- `recommended_read_order` 应优先列目标项目执行源、active context、handoff、open questions 和 todo。
-- 未完成 setup steps 和 known risks 必须保留到目标项目后续 review。
+- Handoff Package 是交接材料，默认不是执行源；package 创建时不得预先把 receiving operations 标为 completed。
+- `recommended_read_order` 是 evidence/navigation，不能替代 artifact-mediated receive，也不会自动把 active context、handoff、open questions 或 todo 变成 action plan。
+- 接收顺序固定为 receive → receive report → load target-project guidance / owner rule → 仅在 task-local 值为 `yes` 时单独刷新 Mnemosyne guidance → substantive continuation。
+- `mnemosyne_guidance` 不得静默推断，也不构成全局先例；值为 `no` 时 refresh status 必须为 `not_applicable`，不得暗示执行 `commands/load-mnemosyne-guidance.md`。
+- 未完成 setup steps、pending operation 与 known risks 必须保留到目标项目后续 review。
 
 ---
 
@@ -325,6 +344,8 @@ delivery_manifest_ref:
 target_project_ref:
 delivery_date:
 delivered_by:
+repository_action_context_refs: []
+repository_write_result_record_ref:
 files_created:
 files_modified:
 files_skipped:
