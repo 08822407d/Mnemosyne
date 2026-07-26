@@ -21,7 +21,7 @@
 
 ## 1. Raw Input Entry Template
 
-用于保存用户新构想、使用反馈、ChatGPT 阶段总结、Codex 任务结果、研究更新或目标项目反馈的原始输入。
+用于保存用户新构想、使用反馈、ChatGPT 阶段总结、Codex 任务结果、研究更新或目标项目反馈的原始输入。任何 original bytes/text 进入 Git 前，必须先完成 `notes/object-templates-and-id-rules.md` 中的 `repository_capture_safety_preflight`。
 
 ```yaml
 raw_id:
@@ -33,7 +33,15 @@ author_or_origin:
 input_type:
 related_task_id:
 related_project:
-original_text: |
+repository_capture_safety_preflight_ref:
+repository_capture_safety_preflight_result_summary: pass | blocked | incomplete
+content_storage:
+  mode: repository_original | repository_redacted_excerpt | repository_safe_pointer | outside_git
+  original_text: |
+  original_file_ref:
+  redacted_excerpt_ref:
+  safe_external_pointer_ref:
+  outside_git_reference:
 context_notes:
 sensitivity:
 should_extract_candidate:
@@ -45,10 +53,15 @@ status:
 字段提示：
 
 - `source_type` 可为 `user_idea`、`usage_feedback`、`chatgpt_summary`、`codex_task_result`、`research_update`、`target_project_feedback` 等。
-- `sensitivity` 可先使用 `normal`、`private`、`confidential`、`unknown`。
+- `sensitivity` 保留为描述性 metadata，可先使用 `normal`、`private`、`confidential`、`unknown`；它不是 storage authorization，不能替代安全预检。
+- `content_storage.mode` 必须且只能选择一个 route；非选中 route 的内容字段必须为空或省略。
+- `repository_original` 只允许在 canonical preflight 为 `pass` 时填写 `original_text` 或 `original_file_ref`；`repository_redacted_excerpt` 和 `repository_safe_pointer` 只允许填写各自经过筛查的内容。
+- `outside_git` 不得在本 Raw Input 中包含 original repository content，只能保存安全的 outside-Git reference 与必要 local summary。
+- `repository_capture_safety_preflight_result_summary` 必须与 `repository_capture_safety_preflight_ref` 一致；不一致、unknown 或安全关键证据不完整时必须 fail closed。
+- public 或 unknown repository visibility 采用 public-risk treatment；credentials / secrets 绝对阻断；后续删除不能消除 Git 历史暴露。
 - `status` 可为 `captured`、`needs_extract`、`extracted`、`archived`。
 
-说明：Raw Input 不是执行源。
+说明：Raw Input 不是执行源；本模板不新增隐私 taxonomy。
 
 ## 2. Candidate Requirement Template
 
@@ -193,6 +206,28 @@ reviewer_notes:
 - 多文件、高风险、清理 stale text 或入口状态修复任务，优先使用 exact replacement blocks 或 patch script。
 - 任务结果必须比较 intended files 与 actual changed files，不能只保存 Codex prose summary。
 
+## 5A. Repository action context 与 no-write evidence linkage
+
+任何执行 repository action 或提出 no-write claim 的 ChatGPT、Codex 或 future-Agent result record，都应引用 `notes/object-templates-and-id-rules.md` 中的 canonical instances，而不是在本模板重复维护 permission / authority / risk 字段。
+
+```yaml
+repository_action_result_linkage:
+  repository_action_context_refs: []
+  repository_write_performed: true | false
+  no_write_claimed: true | false
+  no_write_evidence_ref:
+  no_write_evidence_exception_refs: []
+  repository_write_result_record_ref:
+```
+
+规则：
+
+- `repository_write_performed: false` 本身不能证明 no write；
+- `no_write_claimed: true` 时，`no_write_evidence_ref` 必须指向完整、surface-specific、与 exact scope 匹配的证据对象；
+- `pass_with_approved_exception` 必须同时引用字段完整、已批准且 exact run / exact scope 匹配的 exception；
+- 发生 write 时，每项不同 surface/action 都应有独立 `repository_action_context_ref`，并在 result record 中记录实际文件与 external action；
+- 本 linkage 只前瞻性适用，不重写历史 result records。
+
 ## 6. ChatGPT Stage Summary Template
 
 用于保存 ChatGPT 对话阶段性总结或 handoff。
@@ -316,6 +351,13 @@ notes:
 - [ ] 是否需要更新 `handoff/startup-instructions.md`；
 - [ ] 是否需要更新 research evidence current 视图；
 - [ ] 是否需要创建 task result record；
+- [ ] 若任务涉及 GitHub / connected-repository / target-store action，是否为每个 action surface 记录独立 `repository_action_context_ref`；
+- [ ] 是否通过 canonical action context 分离 `platform_permission`、当前 task-local `mnemosyne_task_authority` 和 `action_risk`，而不是在本 checklist 重复字段；
+- [ ] 写入前是否明确 repository/target、branch/ref、paths、protected paths、target workspace/material/write boundary 与 action type；
+- [ ] 是否确认 persistent permission、approval card 或 action availability 未被当作未来任务授权；
+- [ ] 若任务声称 no-write，是否列出明确 claim surfaces，并绑定 checked_at、proof actor/process、pinned refs、机械 evidence refs/commands、changed paths、scope-match 与 limitations；
+- [ ] 若使用 run-scoped exception，是否完整记录 approval、exact run/scope、substitute evidence 与 `not_future_precedent: true`；
+- [ ] 若创建 branch / PR，是否完成 single-active-PR lineage preflight 与创建 PR 前复检；
 - [ ] 如果是 Codex 文件修改任务，是否要求 `git status --short`、`git diff HEAD --stat`、`git diff HEAD --name-only`；
 - [ ] 是否要求关键目标文件的 targeted diff；
 - [ ] 是否要求 grep/rg 检查旧文字删除或新文字存在；

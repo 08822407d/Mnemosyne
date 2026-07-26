@@ -61,6 +61,25 @@ user_input_storage_policy:
   redactions_path:
   external_pointer_or_redacted_reference:
 no_target_write_confirmed:
+repository_action_context_refs:
+  target_read_only_action_context_ref:
+  separate_mnemosyne_or_other_persistent_action_context_refs: []
+no_write_evidence_plan:
+  contract_ref: notes/object-templates-and-id-rules.md::#### 机械 no-write 证据
+  default_claim_surface_plans:
+    - surface: target_repository
+      applicability: required | not_applicable_with_reason
+      repository_or_target:
+      prohibited_write_scope: persistent_write_create_update_delete_commit_PR_or_equivalent
+      allowed_nonpersistent_outputs: []
+    - surface: target_runtime_store
+      applicability: required | not_applicable_with_reason
+      repository_or_target:
+      prohibited_write_scope: persistent_runtime_truth_or_memory_store_write
+      allowed_nonpersistent_outputs: []
+  local_nonpersistent_output_plan: []
+  post_run_no_write_evidence_ref:
+  run_scoped_exception_refs: []
 target_materials_uploaded_or_ingested:
 expected_dry_run_outputs:
 user_verification_method:
@@ -82,6 +101,12 @@ stop_conditions_triggered:
 - Any unsafe or ambiguous material stops the run.
 - The manifest must record unsupported assumptions instead of allowing the executor to invent missing target facts.
 - The manifest must confirm `no_target_write_confirmed` before any real dry-run begins.
+- `no_target_write_confirmed` records the authorization boundary; it is not evidence that no write occurred.
+- The default post-run claim surfaces are the target repository and target runtime store. Local/sandbox outputs may be allowed only when listed as nonpersistent outputs; any separately authorized Mnemosyne or other persistent action must use its own action context and its own evidence surface.
+- A completed real no-write run must attach `post_run_no_write_evidence_ref` with checked-at time, proof actor/process, pinned refs, exact mechanical evidence references or command/API results, changed paths, scope-match assessment, result, and limitations for every applicable surface.
+- Accepted evidence results are `pass` and `pass_with_approved_exception`. The latter requires a complete, approved exception matching the exact run and exact scope; missing, unapproved, incomplete, or mismatched exception data remains fail-closed.
+- `no_write_evidence_scope_mismatch`, an unknown scope match, or a prose mechanical method without bound evidence blocks acceptance.
+- `target_read_only_action_context_ref` must classify the target action independently from any separately authorized Mnemosyne or local-artifact action; app connectivity or persistent permission does not change the target no-write boundary.
 - A real target-project dry-run manifest must identify `target_project_workspace.workspace_root` or explicitly justify `workspace_status: not_applicable`.
 - Workspace creation is not authorized unless the user approves the target, authority/source map, safety/privacy boundary, no-target-write boundary, and run manifest.
 - The target workspace is not Mnemosyne execution source.
