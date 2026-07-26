@@ -88,11 +88,13 @@ implementation:
 conversation_transition:
   requested_by_user: true
   preparation_task: MNEMOSYNE-156
+  publication_PR: 207
+  publication_URL: https://github.com/08822407d/Mnemosyne/pull/207
+  publication_branch: mnemosyne-156-post-pr206-handoff-and-live-sync
   package_id: MNEMOSYNE-PRO-SLICE-01-PHASE-A-DECISION-HANDOFF-001
   package: handoff/pro-slice-01-phase-a-decision-handoff-package.md
   startup_prompt: handoff/pro-slice-01-phase-a-decision-next-conversation-startup-prompt.md
-  publication_PR: pending
-  status: prepared_on_canonical_MNEMOSYNE_156_lineage
+  status: prepared_on_single_canonical_publication_lineage
   receiver_sequence:
     - receive_report
     - separate_guidance_refresh
@@ -104,7 +106,7 @@ target_project_work_started: false
 external_research_started: false
 next_gate:
   if_handoff_package_not_yet_on_master:
-    - human_merge_the_single_MNEMOSYNE_156_publication_PR
+    - human_merge_the_single_MNEMOSYNE_156_publication_PR_207
   if_handoff_package_is_on_master:
     - open_new_standard_Pro_conversation_in_existing_Mnemosyne_project
     - receive_the_authorized_package_and_stop_after_receive_report
@@ -121,4 +123,4 @@ next_gate:
 
 PR #206 is merged and the complete-response transfer-file behavior is active on `master`. The v2 specification remains advisory and no patch block has been applied.
 
-The next route is an explicit, artifact-mediated new-conversation handoff for the Phase A disposition gate. The handoff receive, separate guidance refresh, and later Phase A decision remain distinct operations. Neither the handoff nor the guidance refresh authorizes repository writes.
+PR #207 is the single publication lineage for the post-merge status and explicit new-conversation handoff. After the package is on `master`, the receive report, separate guidance refresh, and later Phase A decision remain distinct operations. Neither the handoff nor guidance refresh authorizes repository writes.
