@@ -16,8 +16,9 @@
 
 - [ ] **Learning / coaching Agent learner-state, prerequisite, and mastery-evidence design.** Consolidate the earlier learning-system ideas—learner profile, course progress, error records, knowledge/vocabulary mastery, and recurrence rate—into a rigorous model suitable for scientific and engineering knowledge and skills. Research how to construct a learning-goal-specific prerequisite/dependency graph; record the mastery level required for every prerequisite; define observable mastery criteria and evidence; represent confidence, recency/decay, contradictions, and unknowns; and verify how reliably an Agent can infer mastery from ordinary teaching dialogue versus requiring exercises, tests, produced artifacts, repeated transfer/application, or human confirmation. Keep planned curriculum state, observed evidence, model-inferred mastery, and user/teacher-confirmed mastery distinct; conversational fluency alone must not be treated as proof. Existing related material should be extended rather than duplicated: `raw/concept-origin-extract-001.md`, `notes/target-project-memory-system-template-pack.md`, and the learning-system research evidence.
 - [ ] **Cross-Agent reusable learner, user, environment, and domain memory.** Extend the existing “reusable modules plus project specialization” work beyond reusable business-code libraries. Research how multiple learning/practice Agents can reuse a canonical knowledge/skill profile and mastery evidence, and how multiple Agents serving software-development work in the same industry or environment can reuse domain requirements, user preferences, runtime-environment characteristics, development-environment characteristics, and development preferences. Define the boundary between shared canonical memory and Agent/project-local truth; authority and source ownership; privacy, consent, and least-disclosure projections; freshness/versioning and invalidation; conflict reconciliation; scoped read/write permissions; synchronization and promotion rules; and safe fallback when shared memory is stale, unavailable, or contradicted. Project-specific records must not be automatically promoted into global truth. This item consolidates and extends `raw/research-reports/cycles/2026Q2-initial/review-records/MNEMOSYNE-031-R4B-item09-multi-project-reuse-and-specialization.md` rather than creating a parallel duplicate.
+- [ ] **Problem-solving strategy, metacognitive-pattern evidence, and adaptive methodology coaching.** Extend the learner-state work beyond knowledge/skill mastery to task- and domain-scoped observable problem-solving strategies: problem representation, decomposition, planning, search, verification, debugging, reflection, transfer, and other reasoning habits. Research which structured interactions, solution traces, produced artifacts, counterfactual explanations, and repeated unfamiliar-task performance can support reliable inference; keep observed behavior, model hypotheses, user-confirmed self-description, coach/teacher confirmation, and any cross-task stable profile distinct. Study how to identify possible gaps and strengths without turning sparse dialogue or context-specific behavior into fixed personality or clinical labels; how to extract evidence-backed expert methods while controlling source quality, survivorship/authority bias, cargo-cult imitation, fairness, and domain fit; and how to select compensating or strength-amplifying strategies compatible with the user's goals, prerequisites, cognitive load, preferences, and willingness. Define transparent, consent-based, explainable, correctable, reversible, non-manipulative training; privacy and least-disclosure rules; freshness and context limits; cross-Agent reuse boundaries; and outcome measures such as transfer, retention, error reduction, independence, and user burden. This is adjacent to—but not a duplicate of—the learner mastery and cross-Agent reuse TODOs; see `raw/chatgpt-discussion-057.md`.
 
-Positioning: these two entries are non-execution-source research/design TODOs. They do not approve an implementation, schema, automatic inference method, shared-memory service, or target-project write.
+Positioning: these three entries are non-execution-source research/design TODOs. They do not approve an implementation, schema, automatic inference method, cognitive or psychological diagnosis, manipulation method, shared-memory service, or target-project write.
 
 ## Current boundaries
 
@@ -61,7 +62,7 @@ Positioning: these two entries are non-execution-source research/design TODOs. T
 - MNEMOSYNE-055: synchronized post-MNEMOSYNE-053 fresh replay reviewed PASS (`quality_band: strong`, normalized score 95.9) and repaired stale open-questions gate wording.
 - MNEMOSYNE-056: created target-project workspace boundary/layout proposal as non-execution-source candidate design; no target selected, no target materials ingested, no target repository written, and execution source unchanged.
 - MNEMOSYNE-057: promoted minimal target-project workspace principle and user-input storage policy into execution source; updated first dry-run manifest/onboarding for target-scoped workspace decisions; no target workspace created, no target selected, no target materials ingested, and no target repository written.
-- MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first dry-run support instruments and user-input governance.
+- MNEMOSYNE-058: processed PRO-01 and DR4; fixed Deep Research delivery rule; hardened first-dry-run support instruments and user-input governance.
 - MNEMOSYNE-059: ingested DR4 corrected Deep Research prompt original and repaired post-058 current-state sync.
 - MNEMOSYNE-060: repaired post-059 open-questions follow-up residue for PRO-01/DR4/Deep Research delivery status; no target selected/materials ingested/target repo written.
 - MNEMOSYNE-061: added staged Pro/Deep Research prompt-generation guidance.
@@ -149,11 +150,11 @@ The material below is retained for history and may contain superseded pending/co
 - [x] MNEMOSYNE-030F：research prompt mapping 硬同步与 030E 结果纠偏；
 - [x] MNEMOSYNE-031A：复核协议修正与用户设计构想重述准备
 - [x] 记录“研究报告主要供元 Agent 使用，不要求用户通读掌握全部报告”的复核前提
-- [x] 记录 MNEMOSYNE-031 增加用户设计构想重述流程
+- [x] 记录 MNEMOSYNE-031 增加用户构想重述流程
 - [x] MNEMOSYNE-031 Round 1：research motivation review
 - [x] MNEMOSYNE-031 Round 2：research prompts / report-topic mapping review
 - [x] MNEMOSYNE-031 Round 3：current-report-summaries 与 7 份 summaries review
-- [x] MNEMOSYNE-031 Round 4A：AI 整理用户设计构想待重述清单
+- [x] MNEMOSYNE-031 Round 4A：AI 整理用户构想待重述清单
 - [x] MNEMOSYNE-031 Round 4B：用户按清单口语化重述 / user restatement records
 - [x] MNEMOSYNE-031 Round 4C：AI 整理用户构想重述结果 / R4C synthesis
 - [x] MNEMOSYNE-031 Round 5：D-01 to D-07 user decision review and checkpoint records
