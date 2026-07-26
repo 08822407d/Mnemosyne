@@ -5,7 +5,7 @@
 ```yaml
 task_id: MNEMOSYNE-158
 task_name: merge_learning_state_and_cross_agent_reuse_design_TODOs
-status: COMPLETE_PENDING_PR_MERGE
+status: COMPLETE_PR_209_OPEN
 task_type: bounded_current_TODO_and_raw_capture_update
 repository: 08822407d/Mnemosyne
 base_branch: master
@@ -183,6 +183,27 @@ run_context:
     - the TODOs are research/design work items and do not establish implementation validity
   omissions: []
 ```
+
+
+## PR binding
+
+```yaml
+canonical_pr:
+  number: 209
+  URL: https://github.com/08822407d/Mnemosyne/pull/209
+  state_at_creation: open
+  base: master
+  base_sha: d7295f08f7ce8bc538cda99735575f0462c7373a
+  head: mnemosyne-158-learning-and-cross-agent-reuse-todos
+  head_sha_before_this_binding_update: bc5e7891e8e32433af722c6d4c0085e0b5a8151e
+related_open_prs:
+  - 209
+exactly_one_merge_target: true
+duplicate_preflight_completed_before_branch_and_before_PR: true
+merge_instruction_issued_by_this_task: false
+```
+
+This binding update advances the PR head. Final head SHA, mergeability, changed paths, related-open-PR enumeration, and protected-path state must be reread before any merge instruction is issued.
 
 ## Boundary
 
