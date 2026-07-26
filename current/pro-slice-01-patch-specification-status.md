@@ -99,7 +99,8 @@ implementation:
       notes/first-real-target-dry-run-scorecard-v0.1.md: 7fdfadcbf7fc4004da5638607a996cd073c0a061
     finalization_record: notes/codex-task-results/MNEMOSYNE-157-pr-finalization.md
     finalization_task: MNEMOSYNE-159
-    finalization_PR: pending
+    finalization_PR: 210
+    finalization_URL: https://github.com/08822407d/Mnemosyne/pull/210
 
   stop_gate:
     required_before_phase_B: true
@@ -145,6 +146,8 @@ implementation:
 
 provenance_closeout:
   task: MNEMOSYNE-159
+  PR: 210
+  URL: https://github.com/08822407d/Mnemosyne/pull/210
   result_record: notes/codex-task-results/MNEMOSYNE-159-result.md
   Phase_A_finalization: notes/codex-task-results/MNEMOSYNE-157-pr-finalization.md
   historical_MNEMOSYNE_157_result_rewritten: false
@@ -160,7 +163,7 @@ external_research_started: false
 
 next_gate:
   before_Phase_B:
-    - human_review_and_merge_the_single_MNEMOSYNE_159_closeout_PR
+    - human_review_and_merge_PR_210
     - verify_closeout_merge_on_latest_master
     - create_a_fresh_Phase_B_task_ID_and_single_canonical_branch
     - reconstruct_and_validate_the_archived_v2_specification
@@ -174,6 +177,6 @@ next_gate:
 
 ## Current interpretation
 
-PR #208 successfully implemented the accepted five-file, eleven-patch Phase A foundation and is merged on `master`. The substantive implementation remains unchanged after the independently merged PR #209. MNEMOSYNE-159 adds an auditable final GitHub-lineage/provenance record, repairs the stale live status, and records that the Phase A mechanical stop gate passes for **future Phase B task generation after the MNEMOSYNE-159 closeout PR is merged**.
+PR #208 successfully implemented the accepted five-file, eleven-patch Phase A foundation and is merged on `master`. The substantive implementation remains unchanged after the independently merged PR #209. MNEMOSYNE-159 / PR #210 adds an auditable final GitHub-lineage/provenance record, repairs the stale live status, and records that the Phase A mechanical stop gate passes for **future Phase B task generation after PR #210 is merged**.
 
 The user has selected completion of the current propagation route. Phase B is therefore the selected next phase, but its eighteen patches have not been applied. A fresh Phase B task must still bind its own repository-write authorization, pin the then-current `master`, validate the archived v2 patch records and exact anchors, and use exactly one canonical PR lineage.
