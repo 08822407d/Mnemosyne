@@ -3,9 +3,10 @@
 > Non-execution-source live wayfinding. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: PRO-SLICE-01-HARD-CONTRACT-PROPAGATION-STATUS-004
-last_status_task: MNEMOSYNE-159
+status_id: PRO-SLICE-01-HARD-CONTRACT-PROPAGATION-STATUS-005
+last_status_task: MNEMOSYNE-161
 execution_source: current/human-approved-spec.md
+execution_source_blob_at_closeout_start: 01f64a8223677829320c66dd46d3f172cc9155cc
 
 source_route:
   Stage_A: WORK-ULTRA-FABLE-GF5-STAGE-A-001
@@ -26,7 +27,7 @@ patch_specification:
     maintainer_disposition: ACCEPT_WITH_REQUIRED_REVISION
   v2:
     task: PRO-SLICE-01-PATCH-SPEC-002
-    status: complete_received_maintainer_reviewed
+    status: complete_received_maintainer_reviewed_and_fully_implemented
     R1_through_R10:
       repaired: 10
       partial: 0
@@ -34,33 +35,25 @@ patch_specification:
       blocked: 0
     proposed_changed_files: 9
     proposed_no_change_files: 2
-    patch_records: 29
+    patch_records:
+      total: 29
+      Phase_A: 11
+      Phase_B: 18
+      overlap: 0
     atomicity: TWO_SEQUENTIAL_NONPARALLEL_IMPLEMENTATION_TASKS
-    maintainer_disposition: ACCEPT_FOR_USER_PATCH_SCOPE_APPROVAL
     exact_archive_root: notes/cross-model-review-results/PRO-SLICE-01-PATCH-SPEC
 
-storage_and_behavior_guidance_PR:
+storage_and_behavior_guidance:
   task: MNEMOSYNE-155
   PR: 206
   URL: https://github.com/08822407d/Mnemosyne/pull/206
-  branch: mnemosyne-155-archive-pro-slice-specs-and-complete-response-guard
-  base: master@1e1334ad4dce36c2c47ffcfef3e90c9fd843815c
-  status: merged
   merge_commit: accaa83324418068ed5b1c32390139eb9ffe0d48
-  merged_at: 2026-07-26T02:42:24Z
-  auto_merge: false
+  status: merged
+  complete_response_guard: active_on_master
 
-behavior_guidance_amendment:
-  task: MNEMOSYNE-155
-  guard: current/artifact-delivery-and-direct-generation-guard.md
-  rule: complete_response_transfer_file_when_full_reply_return_is_required
-  status: active_on_master
-
-handoff_and_decision_transition:
+handoff_and_Phase_A_decision:
   preparation_task: MNEMOSYNE-156
   publication_PR: 207
-  publication_URL: https://github.com/08822407d/Mnemosyne/pull/207
-  package_id: MNEMOSYNE-PRO-SLICE-01-PHASE-A-DECISION-HANDOFF-001
   package: handoff/pro-slice-01-phase-a-decision-handoff-package.md
   startup_prompt: handoff/pro-slice-01-phase-a-decision-next-conversation-startup-prompt.md
   receiver_sequence_completed:
@@ -80,7 +73,6 @@ implementation:
       - notes/first-real-target-dry-run-evaluation-framework-v0.1.md
       - notes/first-real-target-dry-run-scorecard-v0.1.md
     patch_count: 11
-    user_disposition: ACCEPT_AS_SPECIFIED
     task: MNEMOSYNE-157
     PR: 208
     URL: https://github.com/08822407d/Mnemosyne/pull/208
@@ -90,40 +82,18 @@ implementation:
     head: dd32c20ef63789150e05a30635e5601b6fb922b2
     merge_commit: d7295f08f7ce8bc538cda99735575f0462c7373a
     merged_at: 2026-07-26T08:58:17Z
-    status: merged_and_post_merge_verified
-    current_blobs_on_master_abcb309:
-      notes/object-templates-and-id-rules.md: b0e350f94b13fb81a19e062ac2c95fd193603f20
-      notes/self-improvement-template-pack.md: 4c75759e96fd267df65547d959234571b9386435
-      notes/first-target-project-dry-run-manifest-template.md: 5d793c23e0e8314465eda2e2b5b575d21dc62c28
-      notes/first-real-target-dry-run-evaluation-framework-v0.1.md: 11c837163fe82b8f25f37b922fa5a9b7850699d9
-      notes/first-real-target-dry-run-scorecard-v0.1.md: 7fdfadcbf7fc4004da5638607a996cd073c0a061
-    finalization_record: notes/codex-task-results/MNEMOSYNE-157-pr-finalization.md
     finalization_task: MNEMOSYNE-159
     finalization_PR: 210
-    finalization_URL: https://github.com/08822407d/Mnemosyne/pull/210
+    finalization_record: notes/codex-task-results/MNEMOSYNE-157-pr-finalization.md
+    status: merged_and_post_merge_verified
 
-  stop_gate:
-    required_before_phase_B: true
-    Phase_A_single_canonical_PR_merged: pass
-    Phase_A_literal_replacements_verified: pass
+  phase_A_stop_gate:
+    canonical_PR_merged: pass
+    literal_replacements_verified: pass_11_of_11
     R1_through_R5_semantics_consistent: pass
     protected_paths_and_historical_records_unchanged: pass
-    fresh_master_and_open_work_overlap_recheck:
-      result: pass
-      master: abcb309f2b82e549c4d5e5c7dd88f4640d9e7dcc
-      accessible_open_PRs_before_MNEMOSYNE_159_branch: []
-      intervening_merged_route:
-        PR: 209
-        changed_paths:
-          - current/todo.md
-          - notes/codex-task-results/MNEMOSYNE-158-result.md
-          - raw/chatgpt-discussion-056.md
-        overlaps_Phase_A_or_Phase_B: false
-    user_route_selection_for_Phase_B:
-      result: pass_for_future_task_generation
-      decision: complete_current_Mnemosyne_PRO_SLICE_01_propagation_route
-      decision_ref: current_conversation_user_instruction_2026-07-26
-    overall_result: PASS_FOR_PHASE_B_TASK_GENERATION_AFTER_MNEMOSYNE_159_CLOSEOUT_PR_MERGES
+    fresh_master_and_overlap_recheck: pass
+    overall_result: pass
 
   phase_B:
     id: PHASE_B_PROPAGATION
@@ -133,50 +103,117 @@ implementation:
       - notes/delivery-manifest-template-pack.md
       - notes/target-project-memory-system-template-pack.md
     patch_count: 18
-    current_blobs_on_master_abcb309:
-      notes/handoff-package-strategy-v0.1.md: e6efc1711b638836de03d0740e2aae7c33a00795
-      notes/delivery-package-workflow.md: 1407a84183bc0f5857e280ff6f29fa8c0293f1fa
-      notes/delivery-manifest-template-pack.md: 9ca26bcb3c051defc0a3271a41c2796b69b23d0f
-      notes/target-project-memory-system-template-pack.md: e494202195d234432991b8f5c9cb28539a9ba4b0
-    route_selected_by_user: true
-    implementation_started: false
-    status: blocked_pending_MNEMOSYNE_159_closeout_merge_then_fresh_task_and_latest_anchor_recheck
-    task_local_repository_write_authorization: not_yet_bound_to_a_new_Phase_B_task_ID
-    parallel_branch_or_PR_authorized: false
+    patch_IDs:
+      - P06-A
+      - P06-B
+      - P06-C
+      - P06-D
+      - P06-E
+      - P07-A
+      - P08-A
+      - P08-B
+      - P08-C
+      - P08-D
+      - P08-E
+      - P08-F
+      - P09-A
+      - P09-B
+      - P09-C
+      - P09-D
+      - P09-E
+      - P09-F
+    task: MNEMOSYNE-160
+    PR: 211
+    URL: https://github.com/08822407d/Mnemosyne/pull/211
+    intended_branch_recorded_by_executor: mnemosyne-160-pro-slice-01-phase-b-propagation
+    actual_GitHub_head_branch: codex/execute-mnemosyne-160-task-as-written
+    base: master@a0a408f841398a996ef944a554d92f7513b69c8f
+    head: 0122108ad08a22090103ed9e7278af38e021cd21
+    merge_commit: 0f9c5aef3ed7d11048c5731b44f038b2c5871396
+    merged_at: 2026-07-26T11:32:56Z
+    changed_path_set_exact: true
+    current_blobs_on_master_0f9c5aef:
+      notes/handoff-package-strategy-v0.1.md: b9e59aa8c2a6a5ea0a5d1b153b6a0e2d67d1f4e2
+      notes/delivery-package-workflow.md: d98ee6d0a1e011cbbee6ad70dacd7e866e5b72bc
+      notes/delivery-manifest-template-pack.md: a02b9ee7827818a3f0b35b437649d5b98d0c233a
+      notes/target-project-memory-system-template-pack.md: d36797a6b454a0fc8d7c613ceffc740fe18a29a6
+    execution_result: notes/codex-task-results/MNEMOSYNE-160-result.md
+    finalization_task: MNEMOSYNE-161
+    finalization_record: notes/codex-task-results/MNEMOSYNE-160-pr-finalization.md
+    finalization_PR: pending
+    status: merged_and_post_merge_verified_pending_closeout_PR_merge
+
+Phase_B_post_merge_verification:
+  current_master: 0f9c5aef3ed7d11048c5731b44f038b2c5871396
+  master_identical_to_PR_211_merge_commit: true
+  accessible_open_PRs_before_MNEMOSYNE_161_branch: []
+  PR_211_changed_paths_exact: pass_5_of_5
+  result_ledger_rows: pass_18_of_18
+  PR_diff_components:
+    handoff_package_strategy: 5
+    delivery_package_workflow: 1
+    delivery_manifest_template_pack: 6
+    target_project_memory_system_template_pack: 6
+    total: 18
+  semantic_consistency:
+    receiving_operation_order_and_states: pass
+    repository_capture_safety_preflight_refs: pass
+    repository_action_context_per_surface: pass
+    platform_permission_vs_task_authority: pass
+    surface_specific_no_write_evidence: pass
+    target_project_guidance_vs_optional_Mnemosyne_refresh: pass
+  protected_paths_unchanged: pass
+  execution_source_modified: false
+  target_project_work_performed: false
+  status_checks_reported: []
+  workflow_runs_reported: []
+  limitation:
+    - MNEMOSYNE_161_did_not_reexecute_the_original_Codex_shell_archive_and_replacement_scripts
+  substantive_verdict: PASS
 
 provenance_closeout:
-  task: MNEMOSYNE-159
-  PR: 210
-  URL: https://github.com/08822407d/Mnemosyne/pull/210
-  result_record: notes/codex-task-results/MNEMOSYNE-159-result.md
-  Phase_A_finalization: notes/codex-task-results/MNEMOSYNE-157-pr-finalization.md
-  historical_MNEMOSYNE_157_result_rewritten: false
-  PR_208_execution_context_body_amendment: performed_by_MNEMOSYNE_159
+  Phase_A_task: MNEMOSYNE-159
+  Phase_A_closeout_PR: 210
+  Phase_B_task: MNEMOSYNE-161
+  Phase_B_closeout_PR: pending
+  Phase_B_finalization: notes/codex-task-results/MNEMOSYNE-160-pr-finalization.md
+  historical_MNEMOSYNE_160_result_rewritten: false
+  PR_211_execution_context_body_amendment: performed_by_MNEMOSYNE_161
   actual_backend_identity: unknown_or_not_attestable
 
-current_master_at_MNEMOSYNE_159_start: abcb309f2b82e549c4d5e5c7dd88f4640d9e7dcc
-execution_source_blob: 01f64a8223677829320c66dd46d3f172cc9155cc
-execution_source_modified: false
-historical_records_rewritten: false
-target_project_work_started: false
-external_research_started: false
+route_completion:
+  user_route_selection: complete_current_Mnemosyne_PRO_SLICE_01_propagation_route
+  Phase_A: complete
+  Phase_B: complete
+  implemented_patch_records: 29_of_29
+  changed_design_files: 9_of_9
+  execution_source_modified: false
+  route_status: COMPLETE_PENDING_MNEMOSYNE_161_CLOSEOUT_PR_MERGE
+  automatic_next_route: none
+
+adjacent_user_research_TODO:
+  raw_record: raw/chatgpt-discussion-057.md
+  TODO_location: current/todo.md#user-requested-product-design-research-todos
+  relation_to_PRO_SLICE_01: separate_nonblocking_product_design_research_input
+  implementation_authorized: false
+
+boundaries:
+  historical_records_rewritten: false
+  target_workspace_created: false
+  target_material_ingested: false
+  target_repository_written: false
+  external_research_started: false
+  cognitive_or_psychological_diagnosis_approved: false
+  automatic_inference_or_training_implementation_approved: false
 
 next_gate:
-  before_Phase_B:
-    - human_review_and_merge_PR_210
-    - verify_closeout_merge_on_latest_master
-    - create_a_fresh_Phase_B_task_ID_and_single_canonical_branch
-    - reconstruct_and_validate_the_archived_v2_specification
-    - recheck_all_four_Phase_B_blobs_exact_anchors_and_open_work_overlap
-    - bind_repository_write_authorization_to_the_fresh_Phase_B_task
-  Phase_B_execution:
-    - apply_exactly_18_Phase_B_patches_only
-    - create_at_most_one_canonical_PR
-    - do_not_merge_or_enable_auto_merge_without_separate_human_action
+  - human_review_and_merge_the_single_MNEMOSYNE_161_closeout_PR
+  - verify_closeout_merge_on_latest_master
+  - then_choose_a_new_route_explicitly_if_more_Mnemosyne_work_is_desired
 ```
 
 ## Current interpretation
 
-PR #208 successfully implemented the accepted five-file, eleven-patch Phase A foundation and is merged on `master`. The substantive implementation remains unchanged after the independently merged PR #209. MNEMOSYNE-159 / PR #210 adds an auditable final GitHub-lineage/provenance record, repairs the stale live status, and records that the Phase A mechanical stop gate passes for **future Phase B task generation after PR #210 is merged**.
+Both sequential parts of `PRO-SLICE-01` are now merged and substantively verified: Phase A contributed 11 exact patches across five foundation files, and Phase B contributed 18 exact patches across four downstream handoff/delivery/target-project files. `MNEMOSYNE-161` performs the final additive GitHub-lineage/provenance closeout and live-status synchronization without changing the execution source or any Phase A/Phase B substantive file.
 
-The user has selected completion of the current propagation route. Phase B is therefore the selected next phase, but its eighteen patches have not been applied. A fresh Phase B task must still bind its own repository-write authorization, pin the then-current `master`, validate the archived v2 patch records and exact anchors, and use exactly one canonical PR lineage.
+After the single MNEMOSYNE-161 closeout PR is human-merged and its merge is verified, the current propagation route is complete. No other architecture, target-project, research, or implementation route is automatically selected.
