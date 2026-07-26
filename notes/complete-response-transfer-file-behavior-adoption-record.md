@@ -7,10 +7,15 @@ decision_id: MNEMOSYNE-COMPLETE-RESPONSE-TRANSFER-FILE-001
 implementation_task: MNEMOSYNE-155
 decision_date: 2026-07-25
 decision_source: current_Mnemosyne_maintenance_conversation
-status: approved_pending_MNEMOSYNE_155_merge
+status: approved_pending_PR_206_merge
+canonical_PR: 206
+canonical_PR_URL: https://github.com/08822407d/Mnemosyne/pull/206
+canonical_branch: mnemosyne-155-archive-pro-slice-specs-and-complete-response-guard
+base_commit: 1e1334ad4dce36c2c47ffcfef3e90c9fd843815c
 active_guard: current/artifact-delivery-and-direct-generation-guard.md
 guidance_loader: commands/load-mnemosyne-guidance.md
 execution_source_modified: false
+auto_merge: false
 ```
 
 ## User-observed failure
@@ -36,11 +41,13 @@ For Deep Research, the canonical full report remains inline. A complete-response
 
 ## Implementation
 
-MNEMOSYNE-155:
+MNEMOSYNE-155, through PR #206:
 
 1. amends `current/artifact-delivery-and-direct-generation-guard.md` with the complete-response transfer-file rule;
 2. updates `commands/load-mnemosyne-guidance.md` so task designers apply the rule during future cross-conversation task generation;
 3. preserves the v1/v2 patch-specification lineage that demonstrated the operator burden and the corrected desired delivery pattern.
+
+The rule becomes active on `master` only after PR #206 is human-merged. PR creation does not activate it on the default branch.
 
 ## Boundary
 
@@ -50,4 +57,6 @@ This decision does not:
 - authorize external writes or forwarding;
 - change the Deep Research inline-report requirement;
 - make a complete-response copy an execution source;
-- authorize background generation or unsupported delivery claims.
+- authorize background generation or unsupported delivery claims;
+- merge PR #206 or enable auto-merge;
+- authorize `PRO-SLICE-01` Phase A or Phase B implementation.
