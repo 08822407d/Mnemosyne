@@ -3,13 +3,40 @@
 > Non-execution-source live research status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MNEMOSYNE-PRO-DR-FOUR-TOPIC-BATCH-STATUS-001
-last_status_task: MNEMOSYNE-165
-recorded_at: 2026-07-27
+status_id: MNEMOSYNE-PRO-DR-FOUR-TOPIC-BATCH-STATUS-002
+last_status_task: MNEMOSYNE-166
+recorded_at: 2026-07-28
 repository: 08822407d/Mnemosyne
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
-status: FOUR_CORRECTLY_BOUND_REPORTS_ACCEPTED_WITH_CORRECTIONS_PENDING_MNEMOSYNE_165_PR_MERGE
+status: FOUR_REPORTS_ACCEPTED_WITH_CORRECTIONS_ARCHIVE_COMPLETE_AND_UPGRADE_CONTRACT_CANDIDATE_PREPARED
+```
+
+## Storage and merge truth
+
+```yaml
+research_storage:
+  task: MNEMOSYNE-165
+  PR: 216
+  state: merged
+  merge_commit: a66d92c572f178de52e3b3b238324decf279b7fb
+  merged_at: 2026-07-28T02:39:37Z
+  current_master_was_verified_identical_after_merge: true
+post_merge_storage_repair:
+  task: MNEMOSYNE-166
+  defect:
+    - exact_archive_logical_part_005_did_not_match_the_manifest_governed_Base64_stream
+    - exact_archive_declared_8_logical_parts_but_PR_216_omitted_parts_7_and_8
+    - cycle_README_pointed_to_nonexistent_cycle_local_review_files
+  repair:
+    - replace_logical_part_005_with_11_individually_blob_verified_segments
+    - restore_exact_logical_parts_7_and_8
+    - verify_manifest_level_tar_tar_bz2_Base64_and_logical_part_identities
+    - point_to_actual_canonical_review_package
+  repaired_storage_layout:
+    logical_parts: 8
+    physical_files: 18
+  repair_record: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md
 ```
 
 ## Current batch truth
@@ -74,24 +101,27 @@ historical_failed_runs:
 
 Invalid outputs do not participate in the unified evidence ledger and cannot be used to support the four research topics.
 
-## Canonical review paths
+## Canonical evidence paths
 
 ```yaml
+research_cycle:
+  root: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning
+  exact_archive_manifest: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/manifest.json
+  exact_archive_logical_parts: complete_8_of_8_on_this_revision
+  exact_archive_physical_files: 18
 review_package:
   reliability_review: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/01-maintainer-reliability-review.md
   evidence_ledger: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/02-unified-evidence-ledger.md
   decision_preparation: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/03-decision-preparation.md
+  storage_integrity_repair: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md
   task_result: notes/codex-task-results/MNEMOSYNE-165-result.md
 ```
-
-The exact prompt/report archive and its reconstruction manifest are stored on the MNEMOSYNE-165 canonical branch. Those artifacts preserve evidence bytes and do not become execution source.
 
 ## Adoption boundary
 
 ```yaml
-adopted_now:
-  - reports_accepted_for_non_execution_source_storage
-  - maintainer_corrections
+adopted_as_research_evidence:
+  - four_topic_reports_with_maintainer_corrections
   - unified_evidence_ledger
   - bounded_decision_preparation
 not_adopted:
@@ -104,6 +134,25 @@ not_adopted:
   - automatic_migration
   - target_project_implementation
 ```
+
+## User-selected next route
+
+The user selected the maintainer-recommended near-term route after the evidence batch:
+
+```yaml
+selected_route:
+  id: FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT
+  selection_ref: current_conversation_user_instruction_2026-07-28
+  current_artifact: notes/first-target-minimum-upgrade-contract-v0.1.md
+  current_status: candidate_prepared_for_user_review
+  candidate_authority: non_execution_source
+  template_pack_modified: false
+  target_project_selected: false
+  target_workspace_or_material_action: false
+  implementation_authorized: false
+```
+
+Preparation of the candidate does not adopt it. Any template-pack update or target-project use requires a fresh explicit disposition and bounded task.
 
 ## Adjacent routes
 
@@ -122,14 +171,25 @@ adjacent_routes:
     ownership: separate_conversation
 ```
 
+## Deep Research conversation retention
+
+```yaml
+original_four_conversations:
+  required_for_routine_selected_route: false
+  product_UI_archive_allowed: true
+  permanent_deletion_recommended_now: false
+  exceptional_future_use:
+    - citation_portability_repair
+    - native_source_panel_or_activity_audit
+    - Deep_Research_execution_incident_review
+```
+
 ## Next gate
 
 ```yaml
 next_gate:
-  before_merge:
-    - review_and_merge_the_single_MNEMOSYNE_165_PR
-  after_merge:
-    - verify_latest_master_contains_the_exact_archive_and_review_package
-    - ask_for_one_explicit_user_disposition_from_the_decision_preparation_options
-  automatic_next_route: none
+  - review_the_first_target_minimum_upgrade_contract_candidate
+  - choose_accept_for_first_target_design_process_accept_as_advisory_pilot_modify_defer_or_reject
+  - create_a_fresh_task_before_any_template_or_target_project_change
+  automatic_implementation: none
 ```
