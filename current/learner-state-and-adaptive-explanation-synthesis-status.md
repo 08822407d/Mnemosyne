@@ -3,24 +3,28 @@
 > Non-execution-source live synthesis status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: LEARNER-STATE-ADAPTIVE-EXPLANATION-SYNTHESIS-STATUS-001
+status_id: LEARNER-STATE-ADAPTIVE-EXPLANATION-SYNTHESIS-STATUS-002
 created_by_task: MNEMOSYNE-168
+last_status_task: MNEMOSYNE-169
 source_raw: raw/chatgpt-discussion-059.md
 synthesis: notes/learner-state-and-adaptive-explanation-synthesis-v0.1.md
 GPT_Live_fact_check: notes/gpt-live-learning-current-product-fact-check-2026-07-28.md
 accepted_research_cycle: RC-2026Q3-target-memory-governance-and-learning
-status: fresh_high_reasoning_reanalysis_complete_pending_user_review
+status: accepted_as_research_design_basis_Stage_A_prompt_ready_not_executed
+disposition: ACCEPT_SYNTHESIS_AS_RESEARCH_DESIGN_BASIS
+Stage_A_status: current/adaptive-explanation-stage-a-research-status.md
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
-Deep_Research_prompts_generated: false
+Deep_Research_prompts_generated: true_one_Stage_A_prompt
+Deep_Research_run_started: false
 controlled_experiment_started: false
 user_profile_created: false
 GPT_Live_configured: false
 ```
 
-## 1. Gate completion
+## 1. Gate completion and user disposition
 
-The fresh re-analysis gate requested in `RAW-0059` has been completed:
+The fresh re-analysis gate requested in `RAW-0059` was completed by MNEMOSYNE-168. After PR #219 merged, the user instructed the conversation to verify the merge and proceed with the next planned work. The immediately preceding recommendation was to accept the synthesis as the basis for Stage A research design.
 
 ```yaml
 reanalysis_gate:
@@ -30,10 +34,25 @@ reanalysis_gate:
   use_accepted_learner_cognitive_coaching_research: complete
   current_official_GPT_Live_fact_check: complete_as_of_2026_07_28
   dependency_and_batch_order_analysis: complete
-  direct_Deep_Research_prompt_generation: not_performed
+
+disposition:
+  value: ACCEPT_SYNTHESIS_AS_RESEARCH_DESIGN_BASIS
+  decision_ref: current_conversation_user_instruction_after_PR_219_merge
+  scope:
+    - accept_the_problem_reconstruction
+    - accept_the_object_separation
+    - accept_the_research_stage_order
+    - prepare_one_bounded_Stage_A_research_task
+  excludes:
+    - approve_a_learner_state_schema
+    - approve_a_teaching_policy
+    - assess_the_current_user
+    - execute_Deep_Research_automatically
+    - configure_GPT_Live
+    - create_persistent_or_cross_Agent_learner_memory
 ```
 
-## 2. Main conclusion
+## 2. Main conclusion retained
 
 The user's problem is best represented as a local closed-loop pedagogical decision problem, not a global “weak foundation” label and not a generic request for simpler wording.
 
@@ -50,7 +69,7 @@ local_loop:
   - update_only_evidence_supported_state
 ```
 
-## 3. Separation of concerns
+## 3. Separation of concerns retained
 
 ```yaml
 separate_objects:
@@ -61,91 +80,78 @@ separate_objects:
   presentation_preference: user_preference_not_capability_proof
 ```
 
-This separation prevents a broad self-description, a single failed explanation or fluent dialogue from becoming a stable learner profile.
+This prevents a broad self-description, a single failed explanation or fluent dialogue from becoming a stable learner profile.
 
-## 4. Relationship to existing research TODOs
+## 4. Stage A prepared
 
 ```yaml
-relationships:
-  learner_state_mastery:
-    relation: prerequisite_input_to_adaptive_explanation
-    not_duplicate: true
-  metacognitive_coaching:
-    relation: adjacent_longer_horizon_strategy_training
-    not_duplicate: true
-  cross_Agent_reuse:
-    relation: future_governed_projection_of_selected_evidence_only
-    local_confusion_hypotheses_shared_by_default: false
-  GPT_Live_learning:
-    relation: dependent_voice_product_surface
-    merged_into_general_adaptive_explanation: false
+Stage_A:
+  id: GENERAL_ADAPTIVE_EXPLANATION_AND_LOCAL_PREREQUISITE_DIAGNOSIS
+  research_id: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001
+  design: notes/adaptive-explanation-stage-a-research-design-v0.1.md
+  prompt: notes/research-prompts/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001.md
+  status: prompt_ready_not_executed
+  scope: foundational_university_mathematics_first_with_transferable_principles
+  output:
+    - evidence_review
+    - candidate_decision_framework
+    - controlled_experiment_design
 ```
 
-## 5. Current GPT Live snapshot
+Stage A explicitly excludes GPT Live product research, persistent learner-memory policy, cross-Agent profile sharing and assessment of the current user.
 
-As of 2026-07-28, official OpenAI sources describe GPT-Live as a full-duplex continuous voice system that can delegate deeper work to GPT-5.5 at launch. GPT-Live-1 supports selectable `Instant`, `Medium` and `High` intelligence levels where available, and can use web search, memory, text and images in the same chat. Connected apps/plugins, video and screen sharing are not initially available in Live; account-specific file, Project and persistent-instruction behavior still requires testing.
-
-This is a time-sensitive product snapshot, not backend attestation or evidence of tutoring effectiveness.
-
-## 6. Recommended research dependency order
+## 5. Research dependency order
 
 ```yaml
 recommended_sequence:
   Stage_A:
     id: GENERAL_ADAPTIVE_EXPLANATION_AND_LOCAL_PREREQUISITE_DIAGNOSIS
-    scope: foundational_university_mathematics_first_with_transferable_principles
-    output: evidence_review_plus_controlled_experiment_design
+    current_state: prompt_ready_not_executed
   Stage_B:
     id: CONTROLLED_TEXT_DIALOGUE_EXPERIMENT
-    prerequisite: Stage_A_user_accepted_research_design
-    persistence: session_local_plus_explicitly_scoped_evidence_only
+    prerequisite: Stage_A_report_review_and_user_acceptance
   Stage_C:
     id: GPT_LIVE_REALTIME_VOICE_LEARNING_SURFACE
-    prerequisite: general_adaptive_policy_defined
-    product_fact_recheck_required: true
+    prerequisite: general_adaptive_policy_candidate_and_fresh_product_fact_check
   Stage_D:
     id: LONGITUDINAL_MEMORY_AND_CROSS_AGENT_INTEGRATION
     prerequisite: behavioral_evidence_and_separate_user_decision
 ```
 
-## 7. User disposition required
-
-Select exactly one after reviewing the synthesis:
+## 6. Relationship to Meta-Agent
 
 ```yaml
-user_disposition_options:
-  ACCEPT_SYNTHESIS_AS_RESEARCH_DESIGN_BASIS:
-    meaning: accept_the_problem_reconstruction_and_recommended_stage_order_for_later_prompt_or_experiment_design
-    next_action: create_a_fresh_bounded_Stage_A_research_design_task
-
-  ACCEPT_WITH_MODIFICATIONS:
-    meaning: revise_named_scope_assumptions_or_stage_order
-    required_input: explicit_modifications
-
-  DEFER:
-    meaning: preserve_the_synthesis_without_generating_research_prompts_or_experiments
-
-  REJECT:
-    meaning: do_not_use_this_synthesis_as_the_basis_for_the_learning_research_route
+Meta_Agent:
+  Stage_A_is_core_build_blocker: false
+  explanation: learning_specific_methodology_can_be_added_later_through_versioned_migration
+  readiness_assessment: notes/meta-agent-upgradeable-build-start-readiness-assessment-v0.1.md
+  earliest_requirements_and_design_work: after_explicit_Meta_Agent_product_build_route_selection
+  earliest_target_file_construction: after_Meta_Agent_M0_and_M1_build_start_gates
 ```
 
-No option is selected by this status file.
+Stage A may run in parallel with Meta-Agent launch preparation. Waiting for its report would not materially improve the core authority, versioning, rollback or migration foundation of Meta-Agent v0.1.
 
-## 8. Boundaries
+## 7. Boundaries
 
 - No actual user mathematics or cognitive assessment has been performed.
 - No learner-state or explanation-policy schema is approved.
-- No Deep Research prompt, Fable 5 task or controlled experiment is generated or executed.
+- One Deep Research prompt is prepared but not executed.
+- No controlled experiment is generated or executed.
 - No GPT Live project, knowledge base, instruction set, memory or voice session is configured.
 - No target project, workspace, material or repository is selected or modified.
 - No cross-Agent sharing or persistent learner profile is authorized.
 - Other conversation-owned routes remain separate.
 
-## 9. Safe next action
+## 8. Safe next actions
 
 ```yaml
-safe_next_action:
-  - publish_and_human_review_the_single_MNEMOSYNE_168_PR
-  - after_merge_record_one_explicit_user_disposition
-  - only_then_create_a_fresh_task_for_Stage_A_prompt_or_experiment_design
+safe_next_actions:
+  adaptive_explanation:
+    - user_may_execute_PRO_DR_ADAPTIVE_EXPLANATION_STAGE_A_001
+    - returned_report_requires_separate_reliability_review
+  Meta_Agent:
+    - user_may_select_META_AGENT_PRODUCT_BUILD_LAUNCH_PREPARATION
+    - complete_M0_requirements_and_authority_closure
+    - complete_M1_workspace_safety_build_manifest_and_upgrade_profile
+    - then_begin_target_specific_v0_1_construction
 ```
