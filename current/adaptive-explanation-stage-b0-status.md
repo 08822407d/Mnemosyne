@@ -3,135 +3,112 @@
 > Non-execution-source live route status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: ADAPTIVE-EXPLANATION-STAGE-B0-STATUS-001
+status_id: ADAPTIVE-EXPLANATION-STAGE-B0-STATUS-002
 created_by_task: MNEMOSYNE-176
+last_status_task: MNEMOSYNE-177
 source_stage_A_research: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001
 source_decision_package: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/03-stage-b-decision-preparation.md
 protocol_package: notes/adaptive-explanation-stage-b0-package/README.md
 execution_task: notes/research-prompts/ADAPTIVE-EXPLANATION-STAGE-B0-SMOKE-EXECUTION-001.md
-status: synthetic_public_protocol_design_complete_pending_MNEMOSYNE_176_merge
-user_disposition: SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN
+preflight_result: notes/adaptive-explanation-stage-b0-package/08-context-isolation-preflight-result.md
+surface_decision_package: notes/adaptive-explanation-stage-b0-package/09-isolated-execution-surface-decision-package.md
+status: smoke_execution_authorized_but_blocked_CONTEXT_ISOLATION_FAILURE_zero_cells
+user_disposition: EXECUTE_STAGE_B0_SMOKE
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 Stage_B0_protocol_designed: true
-Stage_B0_smoke_execution_authorized: false
+Stage_B0_smoke_execution_authorized: true
 Stage_B0_smoke_executed: false
+Stage_B0_smoke_cells_started: 0
+Stage_B0_preflight_status: CONTEXT_ISOLATION_FAILURE
 Stage_B0_core_selected: false
 Stage_B1_selected: false
 current_user_assessed: false
 persistent_or_cross_Agent_memory_authorized: false
 ```
 
-## 1. User selection
-
-After PR #227 merged, the user instructed the maintainer to verify the merge and continue according to the previously designed route. The immediately preceding maintainer recommendation was:
+## 1. PR #228 verification
 
 ```yaml
-recommended_option: SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN
-meaning: design_but_do_not_execute_a_public_or_synthetic_B0_protocol
-```
-
-MNEMOSYNE-176 records that bounded selection. It does not infer smoke execution authorization.
-
-## 2. PR #227 verification
-
-```yaml
-PR_227:
+PR_228:
   state: merged
-  merge_commit: 54b2d507cefe9309dbf00e729305bc504ebff44e
-  merged_at: 2026-07-28T14:26:33Z
-master_identical_to_merge_commit_at_MNEMOSYNE_176_start: true
-accessible_open_PRs_before_branch: []
+  merge_commit: 77b9c01f5ac5b50721f1882f4030da49fbac108a
+  merged_at: 2026-07-28T15:44:14Z
+master_identical_to_merge_commit_at_MNEMOSYNE_177_start: true
+accessible_open_PRs_before_MNEMOSYNE_177_branch: []
 ```
 
-Stage A remains accepted with corrections as non-execution-source evidence. The exact uploaded-file identity and normalized repository-copy boundary remain as recorded by MNEMOSYNE-175.
+The complete B0 protocol package is present on `master`. Stage A remains accepted with corrections as non-execution-source evidence.
 
-## 3. Stage B0 purpose
+## 2. User execution decision
+
+After PR #228 merged, the user selected:
 
 ```yaml
-Stage_B0:
-  type: public_and_synthetic_protocol_prepilot
-  purpose:
-    - test_C0_to_C3_condition_adherence_and_separation
-    - test_local_hypothesis_and_unknown_handling
-    - test_Agent_self_audit_and_explanation_recovery
-    - test_answer_leakage_and_over_assistance
-    - test_fixture_and_rubric_feasibility
-    - estimate_execution_and_review_burden
-  cannot_establish:
-    - real_learning_effect
-    - delayed_retention_in_real_learners
-    - actual_user_burden_or_fairness
-    - persistent_learner_state_validity
-    - model_or_backend_superiority
+user_disposition: EXECUTE_STAGE_B0_SMOKE
+required_precondition:
+  - verify_true_isolated_worker_contexts
+failure_rule:
+  - return_CONTEXT_ISOLATION_FAILURE_if_not_available
+  - do_not_degrade_to_single_context_pseudo_experiment
 ```
 
-## 4. Designed package
+This is task-local authorization to attempt the smoke preflight and, only if isolation passes, execute the 32-cell smoke matrix. It is not authorization to change the protocol, use real participants, or begin Stage B1.
+
+## 3. Isolation preflight result
 
 ```yaml
-package_files:
-  - notes/adaptive-explanation-stage-b0-package/README.md
-  - notes/adaptive-explanation-stage-b0-package/01-protocol-spec-v0.1.md
-  - notes/adaptive-explanation-stage-b0-package/02-condition-contracts-v0.1.md
-  - notes/adaptive-explanation-stage-b0-package/03-synthetic-fixture-set-v0.1.md
-  - notes/adaptive-explanation-stage-b0-package/04-rubric-and-decision-rules-v0.1.md
-  - notes/adaptive-explanation-stage-b0-package/05-execution-taskbook-v0.1.md
-  - notes/adaptive-explanation-stage-b0-package/06-run-manifest-template-v0.1.md
-  - notes/adaptive-explanation-stage-b0-package/07-return-and-review-package-v0.1.md
-  - notes/research-prompts/ADAPTIVE-EXPLANATION-STAGE-B0-SMOKE-EXECUTION-001.md
+preflight:
+  product_surface: standard_ChatGPT_conversation_with_GitHub_app
+  fresh_isolated_Tutor_context_per_cell: unavailable
+  hidden_key_exclusion_by_construction: unavailable
+  independent_Reviewer_context: unavailable
+  provider_API_or_agent_worker_runtime: unavailable_in_current_task
+  exact_request_level_context_identity: unavailable
+  result: CONTEXT_ISOLATION_FAILURE
+  cells_started: 0
 ```
 
-The package includes exact condition contracts, 16 synthetic fixtures, an eight-fixture smoke subset, a 32-cell matrix, critical invariants, scoring, run metadata, context-isolation gates, return format and maintainer review.
+The current conversation cannot spawn 32 fresh Tutor contexts or a separate Reviewer context. The maintainer context can read hidden author keys and scoring rules; it may not then generate Tutor outputs while pretending to forget them.
 
-## 5. Smoke and core split
+No C0–C3 output, score, comparison, repeat, or smoke disposition was manufactured.
+
+## 4. Meaning of the failure
+
+The result establishes only that the current execution surface cannot satisfy the protocol's context-isolation contract.
+
+It does **not** establish:
+
+- that the B0 protocol is invalid;
+- that one condition is superior;
+- that a named model failed;
+- that all Tutor cells require a frontier model;
+- that Stage B1 should begin;
+- that the route should be silently stopped.
+
+The exact backend remains `unknown_or_not_attestable`.
+
+## 5. Protocol package retained
 
 ```yaml
-B0_smoke:
-  fixtures: 8
-  conditions: 4
-  primary_cells: 32
-  current_state: designed_not_authorized_not_executed
-
-B0_core:
-  additional_fixtures: 8
-  additional_primary_cells: 32
-  current_state: not_selected
-  prerequisite:
-    - smoke_executed_and_reviewed
-    - no_unresolved_blocking_violation
-    - fresh_user_disposition
+package:
+  version: 0.1.0
+  conditions:
+    - C0_generic_simple_instruction
+    - C1_fixed_worked_example_and_intuitive_first_policy
+    - C2_adaptive_local_diagnosis
+    - C3_adaptive_plus_recovery
+  fixtures:
+    total: 16
+    smoke: 8
+    core_additional: 8
+  smoke_primary_cells: 32
+  current_state: designed_not_executed
 ```
 
-## 6. Conditions
+No condition is an approved production teaching policy.
 
-```yaml
-C0:
-  name: generic_simple_instruction
-  explicit_local_diagnosis: false
-  explicit_recovery: false
-
-C1:
-  name: fixed_worked_example_and_intuitive_first_policy
-  explicit_local_diagnosis: false
-  fixed_sequence: true
-
-C2:
-  name: adaptive_local_diagnosis
-  competing_hypotheses: bounded
-  unknown_rule: required
-  low_burden_probe: optional_at_most_one
-
-C3:
-  name: adaptive_plus_recovery
-  includes_C2: true
-  tutor_self_audit: required
-  meaningful_repair: required
-  explicit_correction_for_known_error: required
-```
-
-No condition is an approved production policy.
-
-## 7. Material and privacy boundary
+## 6. Material and privacy boundary
 
 ```yaml
 materials:
@@ -144,52 +121,64 @@ materials:
   persistent_learner_state: prohibited
 ```
 
-## 8. Execution capability boundary
+These boundaries remain unchanged.
 
-Frozen tutor cells may later be executed by a validated next-tier model to conserve frontier quota, but only when:
+## 7. Recovery surface classes
 
-- every primary cell uses the same visible execution condition;
-- fresh isolated tutor contexts are available;
-- hidden keys and other conditions are excluded;
-- exact prompts and outputs are preserved;
-- frontier or domain-expert review handles disputed mathematics and high-impact adjudication.
-
-This design does not establish lower-tier adequacy or select a provider/model.
-
-## 9. Blocking invariants
+A future run requires a separately selected and task-authorized surface such as:
 
 ```yaml
-blocking_invariants:
-  - no_stable_trait_or_intelligence_profile
-  - no_private_history_or_persistent_state
-  - no_hidden_key_leakage
-  - no_unresolved_critical_mathematics_error
-  - unknown_respected_on_non_identifiable_cases
-  - no_answer_destroying_diagnostic_probe
-  - no_condition_context_contamination
-  - output_identity_reconstructable
-  - C3_corrects_known_tutor_error
+candidate_surface_classes:
+  - provider_API_harness_with_fresh_request_per_cell_and_separate_reviewer_requests
+  - agent_runtime_with_demonstrable_child_context_isolation
+  - manual_multi_conversation_run_with_high_operator_burden
 ```
 
-## 10. Future smoke dispositions
+Before smoke, the surface must pass a sentinel-based isolation harness test. A natural-language claim that contexts are separate is insufficient when no observable evidence exists.
+
+## 8. Capability estimate
 
 ```yaml
-allowed_after_smoke_review:
-  - PROCEED_TO_B0_CORE_DESIGN_AND_EXECUTION_DECISION
-  - REVISE_AND_REPEAT_SMOKE
-  - ACCEPT_PARTIAL_PROTOCOL_EVIDENCE_AND_DEFER
+capability_plan:
+  surface_and_trust_boundary_selection:
+    next_step_requires_frontier: recommended
+    capability_class: FRONTIER_RECOMMENDED
+  bounded_harness_implementation_after_selection:
+    next_step_requires_frontier: no
+    capability_class: NEXT_TIER_SUFFICIENT_CANDIDATE
+  mechanical_sentinel_isolation_test:
+    next_step_requires_frontier: no
+    capability_class: MECHANICAL_ONLY
+  frozen_Tutor_cells:
+    next_step_requires_frontier: no
+    capability_class: NEXT_TIER_SUFFICIENT_CANDIDATE
+  final_math_and_smoke_adjudication:
+    next_step_requires_frontier: recommended
+    capability_class: FRONTIER_RECOMMENDED
+```
+
+This is a planning estimate, not proof that any named next-tier model is adequate.
+
+## 9. Allowed future route decisions
+
+```yaml
+future_user_options:
+  - PREPARE_PROVIDER_API_HARNESS
+  - PREPARE_AGENT_RUNTIME_HARNESS
+  - PREPARE_MANUAL_MULTI_CONVERSATION_PACKAGE
+  - DEFER_B0_UNTIL_ISOLATED_SURFACE_EXISTS
   - STOP_B0_ROUTE
 ```
 
-None automatically authorizes core or Stage B1.
+No option is selected by MNEMOSYNE-177.
 
-## 11. Relationship to other routes
+## 10. Relationship to other routes
 
 ```yaml
 route_relationships:
   Meta_Agent_product_build:
     owner: dedicated_Meta_Agent_conversation
-    modified_by_MNEMOSYNE_176: false
+    modified_by_MNEMOSYNE_177: false
   non_FABLE_health_review:
     owner: separate_health_review_conversation
     takeover: prohibited
@@ -198,25 +187,26 @@ route_relationships:
   persistent_learner_memory_and_cross_Agent_reuse:
     state: deferred_requires_behavioral_evidence_and_separate_user_decision
   MODEL_CAPABILITY_PLANNING_001:
-    state: ready_but_unselected
+    state: interim_user_facing_estimation_rule_being_adopted_controlled_validation_still_open
 ```
 
-## 12. Exactly one safe next action
+## 11. Exactly one safe next action
 
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_the_single_MNEMOSYNE_176_PR
+    - review_and_merge_the_single_MNEMOSYNE_177_PR
   after_merge:
-    - user_selects_EXECUTE_STAGE_B0_SMOKE_or_DEFER_STAGE_B0_SMOKE
-  no_automatic_execution: true
+    - choose_whether_to_prepare_an_isolated_execution_surface_or_defer_B0
+  automatic_smoke_execution: false
+  automatic_surface_or_provider_selection: false
   no_Stage_B1_preparation: true
 ```
 
-## 13. Boundaries
+## 12. Boundaries
 
-- No experiment has been run.
+- No smoke cell has been run.
 - No real learner or current user has been assessed.
 - No persistent learner model has been created.
 - No teaching policy has been promoted into execution source.
-- No GPT Live or Meta-Agent path has been modified.
+- No API, credentials, external cost, GPT Live, or Meta-Agent path is authorized.

@@ -36,6 +36,7 @@ Read or ask the user to provide:
 - `README.md`
 - `current/human-approved-spec.md`
 - `current/artifact-delivery-and-direct-generation-guard.md`
+- `current/user-operation-next-step-capability-and-intent-guard.md`
 - this command file, if available
 
 When the current task may perform any GitHub or connected-repository write—including a direct file update, repository comment, branch or pull-request operation—or may create or modify an important record intended for repository publication, also read:
@@ -71,23 +72,31 @@ If any of those files are read for a separate explicit task, treat their mainten
 2. Treat `current/human-approved-spec.md` as the only Mnemosyne execution source.
 3. Apply the objective neutral engineering stance from `current/human-approved-spec.md`.
 4. Apply the operation/conclusion separation principle from `current/human-approved-spec.md`.
-5. Apply the handoff/continuation correctness principle from `current/human-approved-spec.md` when handoff artifacts or continuation claims are actually part of the local task.
-6. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md` and `current/artifact-delivery-and-direct-generation-guard.md` when producing content for transfer, backup, archival, or later machine/operator reuse.
-7. When designing a prompt, taskbook, handoff, Work task, Pro task, Deep Research task, Codex task, or future-Agent task whose complete final response must be returned to another conversation or preserved for review, explicitly require a separately downloadable `<TASK_ID>-complete-response.md` or stable equivalent in the same final response. Distinguish it from named substantive artifacts; do not make the operator send a second prompt solely to export the already-issued response.
-8. When the user explicitly requests a low-risk downloadable artifact and no additional content decision or external-action authorization is required, create the local artifact in the same response when an available tool can do so safely; do not merely promise later generation.
-9. Before claiming delivery, verify that file creation succeeded and provide a real artifact link or available transfer pointer. Never invent a path or attachment.
-10. Keep safe local artifact generation separate from any independently gated repository write, upload, email, forwarding, or other external action.
-11. Apply the Deep Research output exception from `current/human-approved-spec.md`: the final Deep Research report body remains in the final report/answer, while prompts and other transfer artifacts remain file-first when applicable. If the full Deep Research response must be transferred, require an auxiliary complete-response file without replacing the inline canonical report.
-12. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts.
-13. Treat repository visibility as operator-controlled and stage-dependent; verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
-14. Treat platform/model/tool behavior as time-sensitive when relevant and verify current facts when possible.
-15. Preserve the current conversation's local task mainline.
-16. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
-17. Do not infer that the user wants handoff merely because this command was invoked.
-18. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
-19. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
-20. When any GitHub or connected-repository write, or creation or modification of an important record intended for repository publication, is in scope, apply `current/run-context-and-pr-provenance-guard.md`: record actual actor/action source, the operator-visible or operator-reported product selection verbatim, any provider-documented normalization separately, backend status under the guard's discriminated schema, model/surface switches, component review relations, human adjudication, task-scoped user authorization, and the later-review boundary.
-21. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
+5. Apply `current/user-operation-next-step-capability-and-intent-guard.md`:
+   - put current user operations in the opening `操作内容（需要你手动执行）` section, or state `无需用户操作`;
+   - put a meaningful follow-on in a closing, visually explicit `下一步` section;
+   - never hide a current mandatory user action only at the end;
+   - explicitly state whether the next stage requires, recommends, or does not require frontier/Pro-class reasoning;
+   - re-estimate model capability after research, failure, safety, or scope changes;
+   - treat user wording as primary evidence but not automatically a complete final specification;
+   - preserve likely intent, alternatives, assumptions, uncertainty, and user correction rights without mind-reading or overriding confirmed decisions.
+6. Apply the handoff/continuation correctness principle from `current/human-approved-spec.md` when handoff artifacts or continuation claims are actually part of the local task.
+7. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md` and `current/artifact-delivery-and-direct-generation-guard.md` when producing content for transfer, backup, archival, or later machine/operator reuse.
+8. When designing a prompt, taskbook, handoff, Work task, Pro task, Deep Research task, Codex task, or future-Agent task whose complete final response must be returned to another conversation or preserved for review, explicitly require a separately downloadable `<TASK_ID>-complete-response.md` or stable equivalent in the same final response. Distinguish it from named substantive artifacts; do not make the operator send a second prompt solely to export the already-issued response.
+9. When the user explicitly requests a low-risk downloadable artifact and no additional content decision or external-action authorization is required, create the local artifact in the same response when an available tool can do so safely; do not merely promise later generation.
+10. Before claiming delivery, verify that file creation succeeded and provide a real artifact link or available transfer pointer. Never invent a path or attachment.
+11. Keep safe local artifact generation separate from any independently gated repository write, upload, email, forwarding, or other external action.
+12. Apply the Deep Research output exception from `current/human-approved-spec.md`: the final Deep Research report body remains in the final report/answer, while prompts and other transfer artifacts remain file-first when applicable. If the full Deep Research response must be transferred, require an auxiliary complete-response file without replacing the inline canonical report.
+13. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts.
+14. Treat repository visibility as operator-controlled and stage-dependent; verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
+15. Treat platform/model/tool behavior as time-sensitive when relevant and verify current facts when possible.
+16. Preserve the current conversation's local task mainline.
+17. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
+18. Do not infer that the user wants handoff merely because this command was invoked.
+19. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
+20. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
+21. When any GitHub or connected-repository write, or creation or modification of an important record intended for repository publication, is in scope, apply `current/run-context-and-pr-provenance-guard.md`: record actual actor/action source, the operator-visible or operator-reported product selection verbatim, any provider-documented normalization separately, backend status under the guard's discriminated schema, model/surface switches, component review relations, human adjudication, task-scoped user authorization, and the later-review boundary.
+22. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
 
@@ -104,7 +113,10 @@ mnemosyne_guidance_refresh:
   applied_constraints:
     - execution_source_boundary
     - objective_neutral_engineering_style
-    - operation_conclusion_explanation_separation
+    - opening_user_operation_or_no_operation_section
+    - closing_next_step_section_when_meaningful
+    - explicit_next_step_model_capability_estimate
+    - human_expression_and_intent_reconstruction_with_user_correction
     - handoff_correctness_when_handoff_is_explicitly_in_scope
     - artifact_file_first_delivery_when_relevant
     - complete_response_transfer_file_when_full_reply_return_is_required
@@ -125,6 +137,7 @@ Do not report Mnemosyne maintenance current phase, current active task, paused r
 - This command is a shortcut for refreshing existing behavior guidance in the current conversation.
 - This command is not an execution source.
 - This command does not approve new design content.
+- Loading the user-operation/capability/intent guard does not authorize model switching, quota use, psychological profiling, repository writes, or changes to a target project's truth source.
 - Loading the artifact-delivery guard does not authorize repository writes, uploads, email, forwarding, or other external actions.
 - This command does not authorize edits, automation, MCP, RAG, auto-writeback, or changes outside the user-approved task scope.
 - This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
