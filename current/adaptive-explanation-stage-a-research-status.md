@@ -3,221 +3,200 @@
 > Non-execution-source live research status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: ADAPTIVE-EXPLANATION-STAGE-A-RESEARCH-STATUS-003
+status_id: ADAPTIVE-EXPLANATION-STAGE-A-RESEARCH-STATUS-004
 created_by_task: MNEMOSYNE-169
-last_status_task: MNEMOSYNE-174
+last_status_task: MNEMOSYNE-175
 research_design: notes/adaptive-explanation-stage-a-research-design-v0.1.md
 research_prompt: notes/research-prompts/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001.md
 execution_and_return_package: notes/adaptive-explanation-stage-a-execution-and-return-package-v0.1.md
 report_review_instrument: notes/adaptive-explanation-stage-a-report-review-and-convergence-v0.1.md
 source_synthesis: notes/learner-state-and-adaptive-explanation-synthesis-v0.1.md
 source_raw: raw/chatgpt-discussion-059.md
-status: current_mainline_execution_and_consolidated_review_package_ready_awaiting_external_run
 research_id: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001
+status: report_accepted_with_corrections_Stage_A_complete_pending_MNEMOSYNE_175_merge
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
-Deep_Research_run_started: false
-report_received: false
-repository_ingestion_authorized: false
-current_conversation_route_owner: true
+Deep_Research_run_completed: true
+report_received: true
+report_ingestion: pending_MNEMOSYNE_175_merge
+report_disposition: ACCEPT_WITH_CORRECTIONS_AND_PREPARE_STAGE_B_DECISION_PACKAGE
+Stage_B_decision_preparation_ready: true
+Stage_B_selected: false
+Stage_B_generated: false
+Stage_B_executed: false
 ```
 
-## 1. Latest route verification
+## 1. Report identity and receipt
 
 ```yaml
-latest_route_verification:
-  PR_225:
-    state: merged
-    merge_commit: 8b603cd9966dddc4bec54b6ae39d0a3cb7302e30
-    merged_at: 2026-07-28T10:42:29Z
-  master_identical_to_PR_225_merge_commit_at_MNEMOSYNE_174_start: true
-  accessible_open_PRs_before_MNEMOSYNE_174_branch: []
-  current_conversation_role: Mnemosyne_self_development_and_maintenance
-  Meta_Agent_product_build_owner: existing_dedicated_Meta_Agent_conversation
-  non_FABLE_health_review_owner: separate_health_review_conversation
+report:
+  stored_path: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
+  received_filename: deep-research-report (5)(1).md
+  bytes: 64304
+  lines: 281
+  words: 7792
+  sha256: a4d38a426cf1ba5a371a7ad19ae7b8fee16ae33dc539f5bb329066bf4edeca6f
+  literal_https_URLs: 39
+  source_table_rows: 39
+  citation_groups: 95
+  unique_opaque_citation_refs: 56
+  exact_research_ID: pass
+  exact_topic: pass
+  input_integrity_receipt: pass
+  substantive_research_completed: pass
+  plan_only_or_substitute_topic: false
 ```
 
-The current substantive mainline remains Stage A adaptive-explanation research. MNEMOSYNE-174 does not select another route.
+A conversation-level attachment preview exposed stale content from an older HO-GUIDANCE plan-only artifact. Direct inspection of the uploaded runtime file established the exact Stage A artifact identity above. The stale preview was not used as evidence.
 
-## 2. Accepted Stage A scope
+## 2. Maintainer review result
 
 ```yaml
-Stage_A:
-  id: GENERAL_ADAPTIVE_EXPLANATION_AND_LOCAL_PREREQUISITE_DIAGNOSIS
-  research_id: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001
-  initial_domain:
-    - calculus
-    - linear_algebra
-    - probability_and_statistics
-  interaction_surface: text_dialogue
-  required_output:
-    - evidence_review
-    - candidate_decision_framework
-    - controlled_experiment_design
-    - minimum_viable_text_dialogue_pilot
-  later_transfer_target:
-    - science
-    - engineering
+maintainer_review:
+  path: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/01-maintainer-reliability-review.md
+  calibration_ledger: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/02-claim-and-evidence-calibration-ledger.md
+  Gate_A_input_binding: pass
+  Gate_B_output_contract: pass_19_of_19_semantically_present
+  Gate_C_conceptual_integrity: pass
+  Gate_D_failure_hypotheses: pass_with_validation_correction
+  Gate_E_prerequisite_representation: pass_candidate_only
+  Gate_F_diagnostic_and_action_policy: pass_candidate_only
+  Gate_G_recovery: pass_candidate_only
+  Gate_H_outcomes_and_experiment: pass_candidate_only
+  Gate_I_sources: pass_with_bounded_manifest_correction
+  Gate_J_evidence_calibration: pass_with_corrections
+  Gate_K_consistency: pass
+  blocking_defects: []
+  final_disposition: ACCEPT_WITH_CORRECTIONS_AND_PREPARE_STAGE_B_DECISION_PACKAGE
+  confidence: moderate_to_high
+  clean_rerun_required: false
 ```
 
-The research asks how an AI tutor can distinguish local prerequisite gaps, retrieval failures, connection gaps, notation barriers, misconception candidates, abstraction jumps, representation mismatch, Agent explanation defects and other confounders; choose explanation actions; repair failed explanations; and evaluate transfer, retention, independence and burden.
-
-## 3. Required object separation
+## 3. Accepted Stage A findings
 
 ```yaml
-objects:
-  learner_state_evidence: what_the_learner_has_demonstrated_with_scope_recency_assistance_and_uncertainty
-  local_explanation_context: what_matters_for_the_current_concept_question_notation_modality_and_session
-  explanation_action: selected_entry_point_representation_sequence_step_size_probe_and_modality
-  explanation_outcome_evidence: comprehension_transfer_retention_calibration_independence_and_burden
-  presentation_preference: preference_not_capability_proof_or_fixed_learning_style
+accepted_findings:
+  - generic_explain_simply_is_not_an_operational_teaching_policy
+  - adaptive_explanation_should_use_local_evidence_and_competing_hypotheses_not_a_global_learner_label
+  - learner_state_evidence_local_context_explanation_action_outcome_evidence_and_preference_must_remain_separate
+  - Agent_explanation_error_and_unknown_are_required_candidate_states
+  - representation_guidance_and_step_size_should_be_contextual_not_fixed_learning_styles
+  - explanation_failure_recovery_should_change_meaningful_dimensions_and_include_self_correction
+  - independent_performance_transfer_retention_burden_and_overreliance_are_required_outcomes
+  - evidence_supports_preparing_a_bounded_controlled_text_dialogue_test
 ```
 
-No Stage A report may assess the current user or infer a stable global learner, thinking, personality or clinical type.
+These findings are non-execution-source research evidence, not an approved teaching policy.
 
-## 4. One-run efficiency preparation
-
-The user requested that non-dependent work be bundled where possible to reduce frontier-model conversation consumption.
+## 4. Required corrections and calibration
 
 ```yaml
-efficiency_plan:
-  external_research_runs: one_Stage_A_run
-  custom_chat_level_approval_turn: none
-  return_messages_to_maintainer: one_complete_bundle_preferred
-  post_return_maintainer_work:
-    - artifact_receipt
-    - input_and_topic_binding_review
-    - output_contract_review
-    - portable_source_check
-    - load_bearing_source_sample_validation
-    - evidence_calibration
-    - experiment_design_review
-    - conflict_review
-    - final_disposition
-    - conditional_single_PR_preparation
+nonblocking_corrections:
+  - the_integrated_local_closed_loop_policy_is_engineering_synthesis_not_a_replicated_intervention
+  - broad_weak_foundations_self_description_as_weak_prior_is_indirectly_supported
+  - ordinary_dialogue_diagnostic_validity_is_limited_and_must_be_tested
+  - the_hybrid_local_prerequisite_schema_is_candidate_only
+  - the_two_week_stratified_between_subject_MVP_is_candidate_only
+  - exact_C0_to_C3_prompts_topics_instruments_and_data_rules_require_Stage_B_design
+  - source_table_is_portable_but_does_not_map_every_opaque_citation_and_omits_some_measurement_sources
+  - mirrors_registries_abstract_records_and_adjacent_domains_require_explicit_downgrading
+  - run_metadata_and_native_plan_were_not_provided_and_must_not_be_reconstructed
 ```
 
-This consolidation does not remove the separation between external research production and maintainer review. It does not pre-generate Stage B before Stage A evidence exists.
+## 5. Evidence boundary
 
-## 5. Execution package
+The report draws on formative assessment, intelligent tutoring, educational measurement, knowledge-space and diagnostic models, cognitive load and expertise reversal, multiple representations, self-explanation, transfer, conceptual change, open learner models and recent LLM-tutoring studies.
 
-The execution package provides:
+The evidence supports component principles and a controlled pilot decision. It does not directly validate the complete integrated framework, every failure-hypothesis distinction, persistent learner memory or a universal explanation algorithm.
 
-- a copyable launch message;
-- quota and visible-selection recording without backend overclaim;
-- a native-plan topic-binding gate;
-- a run-metadata receipt;
-- a final-report operator preflight;
-- a complete return bundle;
-- a copyable instruction authorizing same-turn review and conditional preparation after report return;
-- failure branches for wrong-topic, plan-only, quota/fallback, source-portability and missing-section cases.
+## 6. Stage B decision preparation
 
 ```yaml
-execution_boundary:
-  execute_in: fresh_Pro_Deep_Research_task
-  preferred_input: paste_complete_prompt_body
-  generic_or_substitute_topic: prohibited
-  report_not_accepted_in_advance: true
-  research_repository_write: prohibited
-  exact_backend_attestation: unavailable_unless_provider_metadata_exists
+Stage_B_decision:
+  package: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/03-stage-b-decision-preparation.md
+  recommended_next_option: SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN
+  recommendation_confidence: moderate
+  selected_by_user: false
 ```
 
-## 6. Review and convergence package
-
-The report-review instrument contains blocking and non-blocking gates for:
-
-- exact research ID/topic and substantive completion;
-- all nineteen required output sections;
-- conceptual separation and anti-profiling boundaries;
-- local failure-hypothesis validity;
-- prerequisite-route and mastery representation;
-- diagnostic burden and explanation-action selection;
-- explanation-failure recovery;
-- outcome and C0–C3 experiment design;
-- portable sources and source sampling;
-- evidence support class and maturity;
-- consistency with existing Mnemosyne learner/cognitive research;
-- final acceptance, correction, addendum, rerun or rejection disposition.
+The recommended split is:
 
 ```yaml
-allowed_report_dispositions:
-  - ACCEPT_STAGE_A_AND_PREPARE_STAGE_B_DECISION_PACKAGE
-  - ACCEPT_WITH_CORRECTIONS_AND_PREPARE_STAGE_B_DECISION_PACKAGE
-  - ACCEPT_EVIDENCE_ONLY_DEFER_STAGE_B
-  - BOUNDED_ADDENDUM_REQUIRED
-  - CLEAN_RERUN_REQUIRED
-  - REJECT
+Stage_B0:
+  type: public_or_synthetic_protocol_prepilot
+  may_test:
+    - C0_to_C3_condition_adherence
+    - local_hypothesis_and_unknown_handling
+    - Agent_self_audit_and_recovery
+    - answer_leakage_and_over_assistance
+    - item_rubric_and_measurement_feasibility
+  cannot_establish:
+    - real_learning_effect
+    - delayed_retention_in_real_learners
+    - real_user_burden_or_fairness
+
+Stage_B1:
+  type: real_participant_pilot
+  state: not_selected
+  requires_separate_user_privacy_participant_protocol_and_data_decisions: true
 ```
 
-No disposition makes the report execution source or approves Stage B execution.
-
-## 7. Conditional same-turn convergence after report return
-
-When the user returns the complete report with the execution package's consolidated instruction, one maintainer turn may perform all non-dependent review work.
-
-If the report is accepted or accepted with bounded corrections, and no new owner/authority/privacy/intervention decision is required, the same turn may prepare one bounded PR containing:
-
-- original prompt and report storage or a manifest-governed exact archive;
-- run metadata and artifact receipt;
-- maintainer reliability review;
-- claim/evidence calibration ledger;
-- Stage A status closeout;
-- Stage B decision preparation only;
-- task and PR lineage records.
-
-It may not execute Stage B, assess the user, activate persistent learner memory, configure GPT Live, authorize real participant data or select cross-Agent sharing.
-
-If the report requires a clean rerun, major addendum or new research-scope decision, the turn stops after producing the recovery package.
-
-## 8. Relationship to other routes
+## 7. Relationship to other routes
 
 ```yaml
 route_relationships:
   Meta_Agent_product_build:
     owner: dedicated_Meta_Agent_conversation
-    target_paths_modified_by_MNEMOSYNE_174: false
+    modified_by_MNEMOSYNE_175: false
   non_FABLE_health_review:
     owner: separate_health_review_conversation
     takeover: prohibited
   GPT_Live_learning:
-    prerequisite: general_adaptive_explanation_candidate_and_fresh_product_fact_check
-    current_state: deferred
-  longitudinal_learner_memory_and_cross_Agent_reuse:
-    prerequisite: behavioral_evidence_and_separate_user_decision
-    current_state: deferred
+    current_state: deferred_until_general_text_policy_candidate_and_fresh_product_fact_check
+  persistent_learner_memory_and_cross_Agent_reuse:
+    current_state: deferred_requires_behavioral_evidence_and_separate_user_decision
   MODEL_CAPABILITY_PLANNING_001:
-    prerequisites_met: true
-    selected_as_current_mainline: false
+    ready_for_future_selection: true
+    selected_now: false
+```
+
+## 8. Next user disposition
+
+After MNEMOSYNE-175 merges, select exactly one:
+
+```yaml
+user_disposition_options:
+  SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN:
+    meaning: authorize_one_fresh_task_to_design_but_not_execute_a_public_synthetic_protocol
+    maintainer_recommendation: true
+  PREPARE_NARROWER_STAGE_B0_DECISION_PACKAGE:
+    meaning: narrow_domains_conditions_or_outcomes_before_design
+  ACCEPT_STAGE_A_EVIDENCE_AND_DEFER_STAGE_B:
+    meaning: preserve_the_evidence_without_experiment_design
+  REQUEST_STAGE_A_SOURCE_OR_CLAIM_REPAIR_FIRST:
+    meaning: repair_named_nonblocking_items_before_B0
+  REJECT_STAGE_B_ROUTE:
+    meaning: do_not_continue_to_experiment_design
 ```
 
 ## 9. Exactly one safe next action
 
 ```yaml
 safe_next_action:
-  action: user_executes_PRO_DR_ADAPTIVE_EXPLANATION_STAGE_A_001_using_the_execution_package_and_returns_one_complete_bundle
-  required_return:
-    - complete_final_report
-    - downloaded_copy
-    - run_metadata
-    - native_plan_or_screenshot
-    - source_and_failure_information
-    - consolidated_return_instruction
-  after_return:
-    - perform_the_review_and_convergence_instrument_in_one_maintainer_turn_where_possible
-  prohibited_automatic_continuation:
-    - Stage_B_experiment_execution
-    - GPT_Live_research
-    - learner_profile_or_persistent_memory_design
-    - cross_Agent_sharing
-    - repository_ingestion_without_review
+  current:
+    - review_and_merge_the_single_MNEMOSYNE_175_PR
+  after_merge:
+    - record_one_explicit_Stage_B_disposition
+  no_automatic_experiment_execution: true
+  no_user_assessment_or_profile: true
+  no_persistent_or_cross_Agent_memory_authorization: true
 ```
 
 ## 10. Boundaries
 
-- This status is not execution source or an approved teaching policy.
-- No Deep Research run is started by MNEMOSYNE-174.
-- No report is accepted or archived in advance.
-- No learner-state schema, actual learner assessment or controlled experiment is approved.
-- No Stage B prompt or experiment is generated.
-- No target project or Meta-Agent file is modified.
-- No queued Mnemosyne route is selected automatically.
+- The Stage A report and maintainer records are not execution source.
+- No adaptive tutoring policy is operationally approved.
+- No Stage B protocol is generated or executed by MNEMOSYNE-175.
+- No real participant or current-user data is used.
+- No GPT Live configuration, persistent learner profile or cross-Agent sharing is approved.
+- No Meta-Agent target path or other conversation-owned route is modified.
