@@ -20,22 +20,23 @@ persistent_or_cross_Agent_learner_memory_authorized: false
 
 ## 2. User intent and task authority
 
-The user returned the requested `PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001` artifact and instructed the current Mnemosyne-maintenance conversation to process it and automatically continue the planned route.
+The user returned the requested `PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001` artifact and instructed the current Mnemosyne-maintenance conversation to process it and automatically continue all non-dependent planned work while reducing avoidable Pro conversation turns.
 
-The already merged MNEMOSYNE-174 execution package authorized one consolidated maintainer turn to complete all non-dependent receipt, reliability, source, evidence-calibration and closeout work and, if the report passed, to prepare one bounded PR containing Stage B **decision preparation only**.
+The merged MNEMOSYNE-174 package authorized one consolidated maintainer turn for receipt, reliability review, source sampling, evidence calibration, status closeout, research ingestion and Stage B **decision preparation only**.
 
 ```yaml
 user_authorization:
-  decision_ref: current_conversation_user_instruction_after_Stage_A_report_upload
+  decision_ref: current_conversation_user_instruction_after_Stage_A_report_upload_and_follow_up_continue_instruction
   authorized_actions:
     - verify_PR_226_and_latest_master
     - inspect_the_actual_uploaded_report_file
     - perform_input_binding_and_output_contract_review
     - sample_load_bearing_sources
     - calibrate_claims_and_evidence
-    - preserve_the_original_report
+    - preserve_received_artifact_identity_and_a_readable_report_copy
     - update_the_Stage_A_live_status
     - prepare_Stage_B_decision_material_only
+    - correct_artifact_storage_wording
     - create_one_canonical_branch_and_at_most_one_PR
   excluded_actions:
     - merge_or_auto_merge
@@ -83,10 +84,8 @@ github_write_lineage_preflight:
 
 ## 4. Artifact receipt and preview conflict
 
-Direct inspection of the uploaded file produced:
-
 ```yaml
-artifact:
+received_artifact:
   operator_filename: deep-research-report (5)(1).md
   bytes: 64304
   lines: 281
@@ -98,12 +97,12 @@ artifact:
   source_table_rows: 39
 ```
 
-One conversation-level attachment preview exposed stale `PRO-DR-HO-GUIDANCE-001` plan-only content. The actual uploaded runtime file was the correct complete Stage A report.
+One conversation-level attachment preview exposed stale `PRO-DR-HO-GUIDANCE-001` plan-only content. Direct inspection of the uploaded runtime file was used for review and established the correct complete Stage A identity.
 
 ```yaml
 preview_conflict_resolution:
   stale_preview_used_as_evidence: false
-  exact_uploaded_file_used: true
+  direct_uploaded_runtime_file_used_for_review: true
   resolution_basis:
     - direct_runtime_file_read
     - exact_research_ID_and_topic
@@ -112,7 +111,28 @@ preview_conflict_resolution:
 
 The discrepancy is recorded as an observability/input-preview incident, not as evidence of a model or backend identity.
 
-## 5. Report review verdict
+## 5. Artifact preservation boundary
+
+```yaml
+artifact_preservation:
+  received_file_identity:
+    filename: deep-research-report (5)(1).md
+    bytes: 64304
+    sha256: a4d38a426cf1ba5a371a7ad19ae7b8fee16ae33dc539f5bb329066bf4edeca6f
+  readable_repository_copy:
+    path: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
+    role: normalized_readable_copy
+    exact_byte_for_byte_copy_claimed: false
+  exact_received_file_reconstructable_from_repository: false
+  correction_record: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/04-artifact-preservation-boundary.md
+  failed_Base64_archive_attempt:
+    final_paths_present: false
+    false_reconstruction_claim_retained: false
+```
+
+The report content remains readable in the repository. Exact received-file identity is recorded, but the repository does not claim a byte-for-byte archive.
+
+## 6. Report review verdict
 
 ```yaml
 Stage_A_maintainer_review:
@@ -134,7 +154,7 @@ Stage_A_maintainer_review:
   repository_ingestion_recommended: true
 ```
 
-## 6. Accepted findings
+## 7. Accepted findings
 
 ```yaml
 accepted_findings:
@@ -148,7 +168,7 @@ accepted_findings:
   - evidence_supports_preparing_a_bounded_controlled_text_dialogue_test
 ```
 
-## 7. Maintainer corrections
+## 8. Maintainer corrections
 
 ```yaml
 nonblocking_corrections:
@@ -161,13 +181,14 @@ nonblocking_corrections:
   - portable_source_table_does_not_map_every_opaque_citation_and_omits_some_measurement_sources
   - some_sources_are_mirrors_registries_abstract_records_or_adjacent_domains
   - run_metadata_and_native_plan_not_provided
+  - repository_copy_is_not_claimed_byte_exact
 ```
 
-These corrections are additive. The original report is not silently rewritten.
+These corrections remain additive. The readable report copy is not rewritten with maintainer conclusions.
 
-## 8. Source validation boundary
+## 9. Source validation boundary
 
-At least fifteen load-bearing sources across all major claim clusters were independently sampled, including formative feedback, ITS meta-analysis, mathematics formative assessment, LLM hint generation, guarded versus unguarded AI tutoring, structured AI tutoring, representation meta-analysis, expertise reversal, transfer, open learner models, refutation text, knowledge-space and Q-matrix work, concept inventories, learning-versus-performance, overreliance and OECD guidance.
+At least fifteen load-bearing sources across the major claim clusters were independently sampled, including formative feedback, ITS meta-analysis, mathematics formative assessment, LLM hint generation, guarded versus unguarded AI tutoring, structured AI tutoring, representations, expertise reversal, transfer, open learner models, refutation text, knowledge-space and Q-matrix work, concept inventories, learning-versus-performance, overreliance and OECD guidance.
 
 ```yaml
 source_sample:
@@ -178,7 +199,7 @@ source_sample:
   portability_status: materially_passes_with_bounded_completion_correction
 ```
 
-## 9. Stored and derived artifacts
+## 10. Stored and derived artifacts
 
 ```yaml
 created:
@@ -187,25 +208,29 @@ created:
   - notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/01-maintainer-reliability-review.md
   - notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/02-claim-and-evidence-calibration-ledger.md
   - notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/03-stage-b-decision-preparation.md
+  - notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/04-artifact-preservation-boundary.md
   - notes/codex-task-results/MNEMOSYNE-175-result.md
   - notes/codex-task-results/MNEMOSYNE-175-pr-finalization.md
 modified:
   - current/adaptive-explanation-stage-a-research-status.md
+explicitly_absent_from_final_diff:
+  - raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/exact-archive/
 explicitly_not_modified:
   - current/human-approved-spec.md
   - notes/research-prompts/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001.md
   - notes/adaptive-explanation-stage-a-research-design-v0.1.md
   - target-projects/meta-agent/
   - non_FABLE_health_review_files
-  - MODEL_CAPABILITY_PLANNING_001
+  - current/model-capability-aware-work-planning-open-question.md
 ```
 
 The PR-finalization record is added after the canonical PR number is known.
 
-## 10. Stage B decision preparation
+## 11. Stage B decision preparation
 
 ```yaml
 Stage_B_preparation:
+  package: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/03-stage-b-decision-preparation.md
   recommended_option: SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN
   recommendation_confidence: moderate
   rationale:
@@ -218,9 +243,9 @@ Stage_B_preparation:
   Stage_B1_real_participant_route_selected: false
 ```
 
-The decision package distinguishes a synthetic/public B0 protocol pre-pilot from a later real-participant B1 pilot. B0 can test protocol adherence, condition separation, `unknown`, self-audit, recovery, leakage and rubric feasibility. It cannot establish real learning effects, retention, burden or fairness.
+B0 can test protocol adherence, condition separation, `unknown`, self-audit, recovery, leakage and rubric feasibility. It cannot establish real learning effects, retention, burden or fairness.
 
-## 11. Run context v0.2
+## 12. Run context v0.2
 
 ```yaml
 run_context:
@@ -240,11 +265,6 @@ run_context:
       evidence: []
   product_surface:
     value: standard_ChatGPT_conversation_with_GitHub_app
-    evidence:
-      - class: operator_observed
-        ref: current_conversation_GitHub_app_invocation
-        observed_or_accessed_at: 2026-07-28
-        claim_scope: maintainer_product_surface
   operator_selection:
     verbatim: unknown_not_separately_reported_for_this_maintainer_task
   backend:
@@ -256,16 +276,17 @@ run_context:
   user_authorization:
     status: authorized
     actor: user
-    decision_ref: current_conversation_user_instruction_after_Stage_A_report_upload
+    decision_ref: current_conversation_user_instruction_after_Stage_A_report_upload_and_follow_up_continue_instruction
     expires_with_task: true
     not_future_precedent: true
   limitations:
     - external_Deep_Research_run_metadata_and_native_plan_not_provided
-    - source_validation_is_load_bearing_sample_not_full_39_row_reproduction
+    - source_validation_is_load_bearing_sample_not_full_39_row_replication
     - accepted_framework_components_have_not_been_run_as_an_integrated_experiment
+    - exact_received_report_bytes_are_identified_but_not_reconstructable_from_repository
 ```
 
-## 12. Review lineage and boundary
+## 13. Review lineage and boundary
 
 ```yaml
 review_events:
@@ -283,7 +304,8 @@ review_events:
 lineage:
   review_disposition: accept_with_corrections
   preserves:
-    - exact_original_report
+    - exact_received_artifact_identity
+    - normalized_readable_report_copy
     - current_human_approved_spec
     - Stage_A_prompt_and_design
     - all_other_conversation_route_ownership
@@ -297,7 +319,7 @@ Boundaries:
 - No learner profile, GPT Live configuration or cross-Agent sharing is created.
 - No Meta-Agent target path is modified.
 
-## 13. Safe next action
+## 14. Safe next action
 
 ```yaml
 safe_next_action:
