@@ -7,7 +7,35 @@
   "base64_chars": 75432,
   "base64_sha256": "bdb9292b9626afd3e76aa3a6f79086f92c0296309e4231f623d515fa92000138",
   "part_count": 8,
+  "part_count_semantics": "logical_10000_character_parts_except_final_remainder",
   "part_char_limit": 10000,
+  "physical_part_file_count": 18,
+  "transport_layout": {
+    "reconstruction_glob": "parts/part-*.txt",
+    "strip_CR_LF_before_Base64_decode": true,
+    "logical_parts_001_to_004": "one physical file each",
+    "logical_part_005": {
+      "physical_segment_count": 11,
+      "ordered_names": [
+        "part-005-of-008-segment-001-of-010.txt",
+        "part-005-of-008-segment-002-of-010.txt",
+        "part-005-of-008-segment-003-of-010.txt",
+        "part-005-of-008-segment-004-of-010.txt",
+        "part-005-of-008-segment-005-of-010.txt",
+        "part-005-of-008-segment-006-of-010.txt",
+        "part-005-of-008-segment-007a-of-010.txt",
+        "part-005-of-008-segment-007b-of-010.txt",
+        "part-005-of-008-segment-008-of-010.txt",
+        "part-005-of-008-segment-009-of-010.txt",
+        "part-005-of-008-segment-010-of-010.txt"
+      ],
+      "unwrapped_chars": 10000,
+      "unwrapped_sha256": "6ae53fdae639053fa5893b885da4c76f8cf11e3c66074478fb8ef59043297468"
+    },
+    "logical_parts_006_to_008": "one physical file each",
+    "logical_part_007_unwrapped_sha256": "cf9f696f14cd8fea48f19c8a74e5baa55f7f14b80657187ab33c6baf04cda295",
+    "logical_part_008_unwrapped_sha256": "b5ec7860ddf620b1d91ec47c5924dad1475713cd7ce27761d9e8027709b30b24"
+  },
   "members": [
     {
       "path": "originals/PRO-DR-CROSS-AGENT-SHARED-MEMORY-001-report.md",
