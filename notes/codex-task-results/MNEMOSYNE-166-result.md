@@ -79,7 +79,7 @@ github_write_lineage_preflight:
   decision: create_new_lineage
 ```
 
-## 4. MNEMOSYNE-165 storage verification and defect
+## 4. MNEMOSYNE-165 storage verification and defects
 
 PR #216 merged the four accepted reports, maintainer review, evidence ledger and decision preparation. Its manifest declared an eight-part exact archive:
 
@@ -92,24 +92,33 @@ manifest_declared:
   tar_sha256: b63b62b2a397c31bff6a57aeefec6b0cccdd1a477e93550435bb34b75f2a8168
   base64_chars: 75432
   base64_sha256: bdb9292b9626afd3e76aa3a6f79086f92c0296309e4231f623d515fa92000138
-  part_count: 8
-  member_count: 8
+  logical_part_count: 8
+  archive_member_count: 8
 ```
 
-The merged PR changed-path set contained only parts 1 through 6. Parts 7 and 8 were absent. The cycle README also named five cycle-local review/source files that did not exist; the actual canonical records were stored under `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/`.
+The merged PR changed-path set contained only logical part files 1 through 6. Logical parts 7 and 8 were absent. Deterministic regeneration also established that the merged logical part 5 did not match the manifest-governed Base64 stream.
+
+The cycle README additionally named five cycle-local review/source files that did not exist; the actual canonical records were stored under `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/`.
 
 ```yaml
-post_merge_defect:
+post_merge_defects:
+  logical_part_005:
+    state: content_mismatch
+    expected_unwrapped_sha256: 6ae53fdae639053fa5893b885da4c76f8cf11e3c66074478fb8ef59043297468
+  logical_part_007:
+    state: missing
+    expected_unwrapped_sha256: cf9f696f14cd8fea48f19c8a74e5baa55f7f14b80657187ab33c6baf04cda295
+  logical_part_008:
+    state: missing
+    expected_unwrapped_sha256: b5ec7860ddf620b1d91ec47c5924dad1475713cd7ce27761d9e8027709b30b24
+  cycle_README_canonical_paths: invalid
+  live_batch_status: stale_pending_PR_216_merge
   archive_reconstructable_from_master_before_repair: false
-  missing_parts:
-    - part-007-of-008.txt
-    - part-008-of-008.txt
-  stale_or_invalid_pointers: true
   report_interpretation_changed_by_defect: false
   repair_required: true
 ```
 
-## 5. Exact archive repair and mechanical verification
+## 5. Exact archive regeneration and repair
 
 The archive was independently regenerated from the eight exact local prompt/report inputs identified by `manifest.json`. Deterministic metadata was fixed to PAX tar, member order from the manifest, mode `0644`, uid/gid `0`, empty uname/gname, mtime `0`, and no directory entries.
 
@@ -137,14 +146,38 @@ regeneration_receipt:
       - 5432
 ```
 
-The first six generated parts matched the existing archive payload. The missing final parts were created with line breaks only for transport readability; reconstruction removes CR/LF.
+Logical parts 1–4 and 6 matched their regenerated Git-blob identities. Logical part 5 was replaced with 11 small physical segments so every transport write could be independently checked. Logical parts 7 and 8 were restored.
 
 ```yaml
-new_part_blob_checks:
-  part_007_wrapped_Git_blob_SHA: 0bbad5e3b569e81cfa0a47654130be7b70dda544
-  part_008_wrapped_Git_blob_SHA: a7ca34ee2d38ede17883e208f8f8e5b7ca544c5f
-  unwrapped_part_007_SHA256: cf9f696f14cd8fea48f19c8a74e5baa55f7f14b80657187ab33c6baf04cda295
-  unwrapped_part_008_SHA256: b5ec7860ddf620b1d91ec47c5924dad1475713cd7ce27761d9e8027709b30b24
+logical_part_005:
+  unwrapped_chars: 10000
+  unwrapped_sha256: 6ae53fdae639053fa5893b885da4c76f8cf11e3c66074478fb8ef59043297468
+  physical_segment_count: 11
+  verified_segment_blob_SHAs:
+    segment_001: fa4358b70e4cb9bd82eb1a448bc014e948c6f7ea
+    segment_002: 2c375f16c312256ff313e54b82e907b29b6c4aff
+    segment_003: 3f49b48ed784f9205d6868b602c518b3cc082c4b
+    segment_004: b8471f336bc6905d3b0e22067afce25ff5f5a675
+    segment_005: a5c408e6d51c945f9f21f544c21843e2b188cd61
+    segment_006: 921331ee844405c3bd880b935f4ee6e5d80df8e7
+    segment_007a: f38194a3005bb859cda13ecce9ca5b88a2200375
+    segment_007b: 2f04cb2d11f217d1142720566b964ff33f169bba
+    segment_008: 89291a58403ceb772d94cbed3b9105408c472346
+    segment_009: 02a5ced4bf0cf7515d784eacee80049b866f8739
+    segment_010: 428e0b8103adbf4ecd77bb9a870b6cdaeafce423
+logical_part_007:
+  unwrapped_chars: 10000
+  unwrapped_sha256: cf9f696f14cd8fea48f19c8a74e5baa55f7f14b80657187ab33c6baf04cda295
+  wrapped_Git_blob_SHA: 0bbad5e3b569e81cfa0a47654130be7b70dda544
+logical_part_008:
+  unwrapped_chars: 5432
+  unwrapped_sha256: b5ec7860ddf620b1d91ec47c5924dad1475713cd7ce27761d9e8027709b30b24
+  wrapped_Git_blob_SHA: a7ca34ee2d38ede17883e208f8f8e5b7ca544c5f
+physical_layout:
+  logical_parts: 8
+  physical_files: 18
+  reconstruction_rule: lexical_part_path_order_then_remove_CR_LF
+  manifest_blob_after_layout_update: 771badf79a99376714ac9fbb14b6992b64b92179
 ```
 
 Repair record:
@@ -202,12 +235,23 @@ conversation_disposition:
     - future_Deep_Research_product_incident_review
 ```
 
-The user may archive the four chats after this repair is merged. They do not need to remain in the active conversation list. Keeping the archived chats is prudent until source portability repairs and any product incident review are explicitly waived or complete.
+The user may archive the four chats after this repair is merged. They do not need to remain in the active conversation list. Keeping the archived chats is prudent until source-portability repairs and any product-incident review are explicitly waived or complete.
 
 ## 8. Files
 
 ```yaml
 created:
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-001-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-002-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-003-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-004-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-005-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-006-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-007a-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-007b-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-008-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-009-of-010.txt
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008-segment-010-of-010.txt
   - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-007-of-008.txt
   - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-008-of-008.txt
   - notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md
@@ -215,7 +259,10 @@ created:
   - current/first-target-minimum-upgrade-contract-status.md
   - notes/codex-task-results/MNEMOSYNE-166-result.md
   - notes/codex-task-results/MNEMOSYNE-166-pr-finalization.md
+removed:
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/parts/part-005-of-008.txt
 modified:
+  - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/manifest.json
   - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/README.md
   - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/README.md
   - current/pro-deep-research-four-topic-batch-status.md
@@ -283,11 +330,11 @@ run_context:
           type: git_blob_sha
           value: null
       - ref: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/manifest.json
-        relation: reviewed
+        relation: modified
         immutable_identity:
           status: recorded
           type: git_blob_sha
-          value: 03167dc071c4372adc6a08e7543ddaee86c2b426
+          value: 771badf79a99376714ac9fbb14b6992b64b92179
   user_authorization:
     status: authorized
     actor: user
@@ -312,7 +359,7 @@ run_context:
     not_future_precedent: true
   limitations:
     - exact_served_backend_and_switch_history_are_unknown_or_not_attestable
-    - the_archive_regeneration_used_the_exact_local_report_and_prompt_files_previously_received_in_this_conversation
+    - archive_identity_is_established_by_deterministic_local_regeneration_and_individual_Git_blob_checks_not_by_a_second_remote_shell_checkout
     - no_target_project_pilot_has_yet_validated_the_candidate_contract_burden_or_effectiveness
   omissions:
     - field: provider_normalization
@@ -332,10 +379,11 @@ review_events:
     model_relation_to_producer: not_applicable
     provider_relation_to_producer: not_applicable
     criteria_fixed_before_exposure: true
-    review_scope: tar_tar_bz2_Base64_and_member_identity
+    review_scope: tar_tar_bz2_Base64_logical_part_and_physical_Git_blob_identity
     evidence:
       - raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/manifest.json
       - exact_local_prompt_and_report_files
+      - GitHub_blob_SHAs_for_all_repaired_physical_files
     result_ref: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md
     limitations:
       - verification_does_not_assess_report_truth_or_backend_identity
