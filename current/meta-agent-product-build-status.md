@@ -3,23 +3,25 @@
 > Target-specific, non-execution-source live route status. `current/human-approved-spec.md` remains Mnemosyne's only execution source. The Meta-Agent designated target truth-source file remains inactive until explicit owner acceptance.
 
 ```yaml
-status_id: META-AGENT-PRODUCT-BUILD-STATUS-002
+status_id: META-AGENT-PRODUCT-BUILD-STATUS-003
 created_by_task: MNEMOSYNE-170
-last_status_task: MNEMOSYNE-171
+last_status_task: MNEMOSYNE-172
 recorded_at: 2026-07-28
 route: META_AGENT_PRODUCT_BUILD
-status: M2_V0_1_PACKAGE_BUILT_PENDING_OWNER_ACCEPTANCE
+status: M2_MERGED_RETURN_HANDOFF_TO_DEDICATED_CONVERSATION_EFFECTIVE_ON_MNEMOSYNE_172_MERGE
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 Meta_Agent_product_build_selected: true
 canonical_M2_PR: 222
-target_workspace_created_on_canonical_branch: true
+canonical_M2_merge_commit: b8d75150ea2058f0dc0ca88f5666bd95b4e8592e
+target_workspace_created_on_master: true
 target_substantive_files_created: 7
 target_materials_ingested: false
 operational_use_authorized: false
+owner_acceptance: pending
 ```
 
-## 1. Route history
+## 1. Verified route history
 
 ```yaml
 route_history:
@@ -31,13 +33,36 @@ route_history:
   M2:
     task: MNEMOSYNE-171
     PR: 222
-    branch: mnemosyne-171-meta-agent-v0-1-seven-file-build
-    state: repository_build_complete_pending_human_merge_and_owner_operational_disposition
+    state: merged
+    merge_commit: b8d75150ea2058f0dc0ca88f5666bd95b4e8592e
+    master_identical_at_MNEMOSYNE_172_start: true
+  return_handoff:
+    task: MNEMOSYNE-172
+    package: handoff/meta-agent-product-build-return-to-dedicated-conversation-handoff-package.md
+    startup_prompt: handoff/meta-agent-product-build-return-to-dedicated-conversation-startup-prompt.md
+    transfer_effective: on_human_merge_of_canonical_MNEMOSYNE_172_PR
 ```
 
-M0 and M1 are accepted. M2 is a real target-file construction route, not a continuation of the completed historical behavioral-test route.
+M0/M1/M2 must not be restarted as unfinished work. PR #222 merge created the target package but did not activate operational use.
 
-## 2. Exact M2 target package
+## 2. Route ownership
+
+```yaml
+route_ownership_after_MNEMOSYNE_172_merge:
+  Meta_Agent_product_build:
+    owner_conversation: existing_dedicated_Meta_Agent_construction_conversation
+    immediate_stage: handoff_receive_then_owner_review_and_disposition
+  current_conversation:
+    role: Mnemosyne_self_development_and_maintenance
+    Meta_Agent_product_actions: excluded_unless_explicitly_reassigned_by_user
+  non_FABLE_health_review:
+    owner: separate_existing_conversation
+    takeover: prohibited
+```
+
+The current Mnemosyne-maintenance conversation does not continue Meta-Agent owner acceptance, activation, pilot design or target updates after the handoff merges.
+
+## 3. Exact target package
 
 ```yaml
 M2_target_paths:
@@ -53,21 +78,22 @@ extra_substantive_target_paths: []
 
 No startup file, separate TODO/open-question file, evaluation directory, capability registry, research map, database, RAG/index, MCP or automation path is part of v0.1.
 
-## 3. Target truth status
+## 4. Target truth status
 
 ```yaml
 target_truth:
   designated_path: target-projects/meta-agent/current/approved-spec.md
   designated_as_sole_target_truth_source: true
+  exists_on_master: true
   effective_for_operational_use: false
   owner_acceptance: pending
   entire_workspace_is_truth_source: false
   Mnemosyne_is_second_target_truth_source: false
 ```
 
-The build PR may create the path on `master`, but file creation or merge does not by itself activate operational use.
+The dedicated conversation must verify this inactive state before substantive continuation.
 
-## 4. M2 content state
+## 5. v0.1 content and mechanical state
 
 ```yaml
 v0_1_content:
@@ -84,31 +110,22 @@ v0_1_content:
     schema: 0.1.0
     policy: 0.1.0
     delivery: 0.1.0
-```
 
-## 5. Mechanical validation
-
-```yaml
 validation:
   exact_target_file_set: pass_7_of_7
-  extra_target_paths: none
   remote_blob_identity: pass_7_of_7
-  front_matter_and_artifact_IDs: pass_7_of_7
   designated_truth_source_exactly_one: pass
   other_files_non_truth: pass_6_of_6
-  requirement_method_decision_and_migration_IDs: pass
-  case_feedback_evaluation_ledger_empty: pass
-  version_set: pass
+  stable_ID_and_version_checks: pass
   source_authority_separation: pass
   prohibited_material_scan: pass
   automatic_methodology_promotion: prohibited
-  handoff_and_active_context_safe_next_action: pass
   migration_previous_state_and_rollback: pass
   operational_use_claimed: false
   evidence_record: notes/codex-task-results/MNEMOSYNE-171-result.md
 ```
 
-No GitHub Actions workflow or second remote shell validation is claimed.
+No CI workflow or independent second remote-shell validation is claimed.
 
 ## 6. Upgradeability state
 
@@ -119,73 +136,66 @@ upgradeability:
   pilot_state: design_time_checks_passed_pending_owner_acceptance_and_real_use_evidence
   stable_IDs: enabled
   source_refs_and_authority_roles: enabled
-  versions: enabled
+  compact_versions: enabled
   breaking_change_mapping: required
   preserve_transform_recompute_retire: required
   rollback: recorded
   rebuildable_derived_views: required_where_practical
   event_sourcing_dual_write_shadow_RAG_MCP_required: false
+  real_migration_cost_or_success_tested: false
 ```
 
-The advisory contract is not promoted into a mandatory global template.
+This is sufficient to continue the product route in the dedicated conversation without waiting for all Mnemosyne TODOs. It does not prove future upgrades are automatic or costless.
 
-## 7. Model-capability boundary
+## 7. Old dedicated-conversation context boundary
 
 ```yaml
-execution_split:
-  frontier_and_human:
-    - ambiguous_or_conflicting_core_requirements
-    - purpose_non_goal_truth_authority_privacy_or_trust_change
-    - novel_methodology_or_methodology_promotion
-    - high_impact_failed_validation
-  validated_next_tier:
-    - frozen_bounded_file_construction
-    - bounded_additive_updates
-    - current_state_and_handoff_maintenance
-  mechanical:
-    - paths_headings_IDs_versions_sources_forbidden_material_and_diffs
-  human:
-    - owner_acceptance
-    - operational_use
-    - authority_and_sensitive_material_decisions
+old_conversation_context:
+  role: historical_or_candidate_evidence
+  target_truth: false
+  automatic_import: prohibited
+  required_action:
+    - reanchor_to_latest_repository_package
+    - identify_stale_or_conflicting_assumptions
+    - preserve_uncommitted_ideas_as_candidate_or_unknown
+    - require_user_decision_before_promotion
 ```
-
-No permanent provider/model mapping or hidden-backend claim is made.
 
 ## 8. Separately owned health-review gate
 
 ```yaml
 non_FABLE_health_review:
   owner: separate_conversation
-  canonical_completed_result_found_at_M2_start: false
-  new_applicable_P0_P1_found_at_M2_start: false
-  M2_bootstrap_build_blocked: false
-  required_before_operational_acceptance:
+  canonical_completed_result_found_at_handoff_preparation: false
+  M2_build_blocked: false
+  required_before_operational_acceptance_or_broad_target_write:
     - check_for_canonical_P0_P1_or_equivalent_findings
     - incorporate_or_explicitly_defer_applicable_findings
     - record_residual_risk
-  takeover_by_this_route: prohibited
+  takeover_by_Meta_Agent_or_current_Mnemosyne_route: prohibited
 ```
 
 ## 9. Current boundaries
 
 - The target package is not operationally active.
 - No target material, real case or private original has been ingested.
-- No target repository beyond the approved public bootstrap workspace is used.
 - No RAG, MCP, auto-writeback, shared memory, learner profile or GPT Live module exists.
 - No methodology change may be promoted automatically.
-- No execution source outside the designated target spec path is created.
-- The historical Meta-Agent test-route evidence remains unchanged.
+- No execution source outside the designated target spec path exists.
+- The handoff does not constitute owner acceptance or activation.
+- Current-conversation Meta-Agent product work ends when the handoff PR merges.
 
 ## 10. Exactly one safe next action
 
 ```yaml
 safe_next_action:
-  action: review_and_merge_PR_222_then_record_owner_operational_disposition
-  allowed_owner_dispositions:
-    - ACCEPT_V0_1_FOR_BOUNDED_OPERATIONAL_PILOT
-    - ACCEPT_WITH_LIMITATIONS
-    - REQUEST_REVISION
-    - REJECT_AND_ROLL_BACK
+  current_before_handoff_merge:
+    action: review_and_merge_the_single_MNEMOSYNE_172_handoff_PR
+  after_handoff_merge:
+    action: existing_dedicated_Meta_Agent_conversation_receives_handoff_and_stops
+    next_separate_operations:
+      - task_local_Mnemosyne_guidance_refresh_for_bootstrap_review_if_user_instructs
+      - explicit_user_instruction_to_prepare_owner_review_and_disposition
   no_automatic_operational_activation: true
+  no_Meta_Agent_product_continuation_in_current_conversation: true
 ```
