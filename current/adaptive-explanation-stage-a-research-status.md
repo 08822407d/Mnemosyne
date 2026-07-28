@@ -3,7 +3,7 @@
 > Non-execution-source live research status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: ADAPTIVE-EXPLANATION-STAGE-A-RESEARCH-STATUS-004
+status_id: ADAPTIVE-EXPLANATION-STAGE-A-RESEARCH-STATUS-005
 created_by_task: MNEMOSYNE-169
 last_status_task: MNEMOSYNE-175
 research_design: notes/adaptive-explanation-stage-a-research-design-v0.1.md
@@ -26,12 +26,11 @@ Stage_B_generated: false
 Stage_B_executed: false
 ```
 
-## 1. Report identity and receipt
+## 1. Report receipt and storage boundary
 
 ```yaml
-report:
-  stored_path: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
-  received_filename: deep-research-report (5)(1).md
+received_artifact:
+  operator_filename: deep-research-report (5)(1).md
   bytes: 64304
   lines: 281
   words: 7792
@@ -45,9 +44,18 @@ report:
   input_integrity_receipt: pass
   substantive_research_completed: pass
   plan_only_or_substitute_topic: false
+
+repository_copy:
+  path: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
+  role: normalized_readable_copy
+  exact_byte_for_byte_copy_claimed: false
+  exact_received_file_reconstructable_from_repository: false
+  preservation_boundary: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/04-artifact-preservation-boundary.md
 ```
 
-A conversation-level attachment preview exposed stale content from an older HO-GUIDANCE plan-only artifact. Direct inspection of the uploaded runtime file established the exact Stage A artifact identity above. The stale preview was not used as evidence.
+The exact received-file identity is preserved by filename, size and SHA-256. The repository report is a readable research copy; no incomplete Base64 archive remains in the final branch.
+
+A conversation-level attachment preview exposed stale content from an older HO-GUIDANCE plan-only artifact. Direct inspection of the uploaded runtime file established the Stage A identity above. The stale preview was not used as evidence.
 
 ## 2. Maintainer review result
 
@@ -55,6 +63,7 @@ A conversation-level attachment preview exposed stale content from an older HO-G
 maintainer_review:
   path: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/01-maintainer-reliability-review.md
   calibration_ledger: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/02-claim-and-evidence-calibration-ledger.md
+  preservation_boundary: notes/research-batch-reviews/2026-07-adaptive-explanation-stage-a/04-artifact-preservation-boundary.md
   Gate_A_input_binding: pass
   Gate_B_output_contract: pass_19_of_19_semantically_present
   Gate_C_conceptual_integrity: pass
@@ -86,7 +95,7 @@ accepted_findings:
   - evidence_supports_preparing_a_bounded_controlled_text_dialogue_test
 ```
 
-These findings are non-execution-source research evidence, not an approved teaching policy.
+These findings are research evidence and candidate design constraints, not an approved teaching policy.
 
 ## 4. Required corrections and calibration
 
@@ -101,13 +110,14 @@ nonblocking_corrections:
   - source_table_is_portable_but_does_not_map_every_opaque_citation_and_omits_some_measurement_sources
   - mirrors_registries_abstract_records_and_adjacent_domains_require_explicit_downgrading
   - run_metadata_and_native_plan_were_not_provided_and_must_not_be_reconstructed
+  - repository_copy_is_readable_but_not_claimed_byte_exact
 ```
 
 ## 5. Evidence boundary
 
-The report draws on formative assessment, intelligent tutoring, educational measurement, knowledge-space and diagnostic models, cognitive load and expertise reversal, multiple representations, self-explanation, transfer, conceptual change, open learner models and recent LLM-tutoring studies.
+The report uses formative assessment, intelligent tutoring, educational measurement, prerequisite/diagnostic models, cognitive load and expertise reversal, multiple representations, self-explanation, transfer, conceptual change, open learner models and recent LLM-tutoring studies.
 
-The evidence supports component principles and a controlled pilot decision. It does not directly validate the complete integrated framework, every failure-hypothesis distinction, persistent learner memory or a universal explanation algorithm.
+The evidence supports component principles and a controlled-pilot decision. It does not directly validate the complete integrated framework, every failure-hypothesis distinction, persistent learner memory or a universal explanation algorithm.
 
 ## 6. Stage B decision preparation
 
@@ -118,8 +128,6 @@ Stage_B_decision:
   recommendation_confidence: moderate
   selected_by_user: false
 ```
-
-The recommended split is:
 
 ```yaml
 Stage_B0:
@@ -141,7 +149,26 @@ Stage_B1:
   requires_separate_user_privacy_participant_protocol_and_data_decisions: true
 ```
 
-## 7. Relationship to other routes
+## 7. User disposition after merge
+
+Select exactly one:
+
+```yaml
+user_disposition_options:
+  SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN:
+    meaning: authorize_one_fresh_task_to_design_but_not_execute_a_public_synthetic_B0_protocol
+    maintainer_recommendation: true
+  PREPARE_NARROWER_STAGE_B0_DECISION_PACKAGE:
+    meaning: narrow_domains_conditions_or_outcomes_before_design
+  ACCEPT_STAGE_A_EVIDENCE_AND_DEFER_STAGE_B:
+    meaning: preserve_the_evidence_without_experiment_design
+  REQUEST_STAGE_A_SOURCE_OR_CLAIM_REPAIR_FIRST:
+    meaning: repair_named_nonblocking_items_before_B0
+  REJECT_STAGE_B_ROUTE:
+    meaning: do_not_continue_to_experiment_design
+```
+
+## 8. Relationship to other routes
 
 ```yaml
 route_relationships:
@@ -158,25 +185,6 @@ route_relationships:
   MODEL_CAPABILITY_PLANNING_001:
     ready_for_future_selection: true
     selected_now: false
-```
-
-## 8. Next user disposition
-
-After MNEMOSYNE-175 merges, select exactly one:
-
-```yaml
-user_disposition_options:
-  SELECT_STAGE_B0_SYNTHETIC_PREPILOT_DESIGN:
-    meaning: authorize_one_fresh_task_to_design_but_not_execute_a_public_synthetic_protocol
-    maintainer_recommendation: true
-  PREPARE_NARROWER_STAGE_B0_DECISION_PACKAGE:
-    meaning: narrow_domains_conditions_or_outcomes_before_design
-  ACCEPT_STAGE_A_EVIDENCE_AND_DEFER_STAGE_B:
-    meaning: preserve_the_evidence_without_experiment_design
-  REQUEST_STAGE_A_SOURCE_OR_CLAIM_REPAIR_FIRST:
-    meaning: repair_named_nonblocking_items_before_B0
-  REJECT_STAGE_B_ROUTE:
-    meaning: do_not_continue_to_experiment_design
 ```
 
 ## 9. Exactly one safe next action
