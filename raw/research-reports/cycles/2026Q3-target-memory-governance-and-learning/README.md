@@ -39,14 +39,16 @@ The four exact prompt originals and four accepted report originals are stored by
 - `exact-archive/parts/part-002-of-008.txt`
 - `exact-archive/parts/part-003-of-008.txt`
 - `exact-archive/parts/part-004-of-008.txt`
-- `exact-archive/parts/part-005-of-008.txt`
+- `exact-archive/parts/part-005-of-008-segment-*.txt`
 - `exact-archive/parts/part-006-of-008.txt`
 - `exact-archive/parts/part-007-of-008.txt`
 - `exact-archive/parts/part-008-of-008.txt`
 
+The archive has eight logical parts and 18 physical files. Logical part 5 is split into 11 small, individually SHA-verified physical segments to avoid unreliable single-call transport of a 10,000-character payload. Lexical `part-*` ordering reconstructs the logical byte stream.
+
 The archive decodes to `tar.bz2`; member paths, byte counts, SHA-256 values and final-LF states are fixed in the manifest. The multipart representation avoids silently normalizing the original exported Markdown while keeping exact artifacts reconstructable from repository content.
 
-PR #216 accidentally omitted parts 7 and 8 even though the manifest declared eight parts. MNEMOSYNE-166 independently regenerated the deterministic archive, matched all manifest-level tar, compressed-archive and Base64 identities, and restored the two missing parts. The repair record is:
+PR #216 accidentally stored a mismatched logical part 5 and omitted logical parts 7 and 8 although the manifest declared eight parts. MNEMOSYNE-166 independently regenerated the deterministic archive, matched all manifest-level tar, compressed-archive and Base64 identities, replaced logical part 5 with SHA-verified segments, and restored parts 7 and 8. The repair record is:
 
 - `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md`
 
