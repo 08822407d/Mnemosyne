@@ -6,83 +6,97 @@
 open_question_id: MODEL-CAPABILITY-PLANNING-001
 record_type: live_non_execution_source_open_question
 created_by_task: MNEMOSYNE-163
-status: preparation_only_requires_research_and_controlled_validation
+last_status_task: MNEMOSYNE-173
+status: prerequisite_evidence_available_ready_for_future_bounded_route_selection
 user_decision_recorded: true
 source_raw: raw/chatgpt-discussion-058.md
 execution_source: current/human-approved-spec.md
 formal_mainline_selected: false
 implementation_authorized: false
+controlled_validation_completed: false
 ```
 
-## 1. User constraint now recorded
+## 1. User constraint retained
 
 Mnemosyne and future target-Agent artifacts must not state or imply that the user will always execute work with the most capable available model or highest reasoning tier.
 
-The user's intended operating pattern is:
+The intended operating pattern is:
 
 - concentrate genuinely deep, large-scale, high-impact reasoning into visible stages;
 - notify the user before those stages so the user can choose Pro or another provider's frontier model;
 - use a next-tier model for bounded, lower-difficulty, routine or mechanical work when adequate;
 - preserve scarce frontier-model quota rather than spend it on every small Agent request;
-- design and validate instructions so that a next-tier executor can meet the required contract where the task is classified as suitable.
+- design and validate instructions so that a next-tier executor can meet the required contract where the task is suitable;
+- keep task capability requirements independent of volatile provider/model names.
 
-This is a user resource and workflow constraint, not a permanent mapping from a task type to a named provider model.
+This is a workflow and resource constraint, not a permanent provider routing table.
 
-## 2. Existing coverage and remaining gap
-
-### Already covered
-
-1. `current/run-context-and-pr-provenance-guard.md`
-   - records the actual product surface and operator-visible/reported selection;
-   - separates UI selection, provider mapping and backend attestation;
-   - records review and human adjudication.
-
-2. `current/human-approved-spec.md` §17
-   - stages dependent Pro / Deep Research / cross-conversation prompt batches;
-   - requires an explicit model-strength switch reminder before high-risk prompt generation when needed;
-   - records `execute_in` for cross-conversation prompts.
-
-3. `notes/chatgpt-work-mode-assessment-2026-07.md`
-   - provides candidate Chat / Work / Codex surface-selection guidance;
-   - is not execution source and contains time-sensitive platform assumptions.
-
-4. `notes/idea-capture-buffer.md` / `IDEA-2026-0019`
-   - records that model capability differences and work allocation require dynamic verification.
-
-### Not yet covered
-
-The repository does not yet have an approved answer for:
-
-- how to classify the reasoning/capability demand of a task independently of a provider model name;
-- how to split one Agent-building route into frontier-reasoning and routine-execution components;
-- what evidence permits a next-tier model to be treated as adequate for an instruction set;
-- how taskbooks should expose escalation triggers, verification requirements and fallback behavior;
-- whether key Mnemosyne guidance is understandable and reliably executable by a next-tier model;
-- when the cost of verification makes delegation counterproductive;
-- how the user should be alerted without making every task stop for a model-choice question;
-- how to prevent the model used during Mnemosyne construction from becoming an implicit runtime dependency of its target products.
-
-## 3. Distinction from model provenance
+## 2. Distinction from run provenance
 
 ```yaml
-model_provenance_question:
-  asks: what_surface_selection_actor_and_review_context_were_used
+model_provenance:
+  question: what_actor_surface_visible_selection_review_and_attestable_backend_facts_applied_to_a_run
   current_guard: current/run-context-and-pr-provenance-guard.md
 
-model_capability_planning_question:
-  asks: what_capability_the_task_requires_and_how_to_allocate_or_escalate_work
-  current_status: open
+model_capability_planning:
+  question: what_reasoning_capability_the_task_requires_and_how_work_should_be_split_escalated_and_verified
+  current_status: open_ready_for_bounded_study
 
-lower_tier_executability_question:
-  asks: whether_a_non_frontier_executor_can_reliably_follow_the_artifact_and_meet_acceptance_criteria
-  current_status: requires_controlled_validation
+lower_tier_executability:
+  question: whether_a_non_frontier_executor_can_follow_the_artifact_and_meet_the_acceptance_contract
+  current_status: design_time_examples_exist_controlled_validation_absent
 ```
 
-Recording that a Pro/Fable/frontier model produced an artifact does not prove that the artifact requires such a model to execute. Conversely, a task being mechanically described does not prove that a lower-tier model will preserve all semantic and authority boundaries.
+A frontier model producing an artifact does not prove that the artifact requires a frontier model to execute. A mechanically described task does not prove that a lower-tier model will preserve semantic, authority and safety boundaries.
 
-## 4. Candidate investigation dimensions — not an approved schema
+## 3. Evidence prerequisite now satisfied
 
-Future design may evaluate dimensions such as:
+MNEMOSYNE-163 originally deferred a dedicated study until the four isolated Pro Deep Research reports returned. That prerequisite is now satisfied.
+
+```yaml
+available_evidence:
+  four_topic_Pro_research_batch:
+    state: complete_reviewed_and_ingested_as_non_execution_source_evidence
+    cycle: RC-2026Q3-target-memory-governance-and-learning
+    topics:
+      - HO_GUIDANCE
+      - learner_state_and_cognitive_coaching
+      - cross_Agent_shared_memory
+      - target_memory_migration
+
+  Meta_Agent_first_target_build:
+    M0_M1: merged_PR_221
+    M2: merged_PR_222
+    bootstrap_review: merged_PR_224_PASS_WITH_LIMITATIONS
+    capability_split_used:
+      - frontier_reasoning_and_human_decision
+      - bounded_next_tier_execution
+      - mechanical_verification
+      - owner_acceptance
+    evidence_role: first_design_and_build_example_not_controlled_model_comparison
+
+  Adaptive_Explanation_Stage_A:
+    state: current_mainline_prompt_ready_not_executed
+    relation: future_research_report_may_supply_additional_task_decomposition_and_evaluation_evidence
+```
+
+The Meta-Agent build demonstrates that a task can be structured around frozen inputs, exact paths, stable IDs, acceptance checks, stop conditions and escalation boundaries. It does **not** establish that a specific next-tier model can execute the same task reliably, because no controlled same-input model comparison was performed.
+
+## 4. Remaining questions
+
+The repository still lacks an approved answer for:
+
+- how to classify reasoning/capability demand independently of provider model names;
+- how to split an Agent-building route into frontier-reasoning, bounded execution, mechanical verification and human-decision components;
+- what evidence permits a next-tier model to be treated as adequate for an instruction set;
+- how taskbooks should expose escalation triggers, uncertainty, verification and fallback behavior;
+- whether selected Mnemosyne guidance and target-project artifacts are understandable to a next-tier executor;
+- when verification and rework cost erase the benefit of delegation;
+- how to alert the user before a frontier stage without forcing a model-choice interruption for every task;
+- how to prevent the construction model's capability from becoming an implicit target-product runtime dependency;
+- how capability requirements should change across design, implementation, review, handoff and maintenance.
+
+## 5. Candidate dimensions — not approved schema
 
 ```yaml
 candidate_dimensions:
@@ -93,106 +107,162 @@ candidate_dimensions:
     - multi_source_synthesis
     - architecture_or_policy_adjudication
     - open_ended_research_or_novel_design
+
   decomposition:
     - frontier_reasoning_components
     - next_tier_execution_components
     - mechanical_verification_components
     - human_decision_components
+
   escalation:
     - uncertainty_or_conflict_trigger
     - authority_or_safety_trigger
     - context_scale_trigger
     - novel_architecture_trigger
     - failed_validation_trigger
+    - excessive_rework_or_review_trigger
+
   executor_support:
     - self_contained_inputs
     - explicit_authority_and_forbidden_actions
+    - exact_or_bounded_scope
     - acceptance_criteria
     - deterministic_checks
     - stop_on_ambiguity
     - return_to_frontier_reviewer
+
   fallback:
     - block_and_request_stronger_review
     - narrow_scope
     - produce_candidate_only
     - perform_mechanical_substeps_only
+    - defer_until_user_selects_a_frontier_condition
 ```
 
-These are preparation dimensions only. They are not field names that future taskbooks must use, and they do not define “frontier” or “next tier” by vendor/model.
+These dimensions are analysis aids only. They do not define a mandatory field set, score, threshold or provider mapping.
 
-## 5. Evidence and validation needed before a solution
+## 6. Candidate future study
 
-A future bounded study should combine:
+A future bounded route should combine four layers.
 
-1. **Repository evidence review**
-   - identify representative Mnemosyne tasks performed under different visible product selections and surfaces;
-   - separate task quality from hidden-backend speculation;
-   - classify failures as reasoning, context, instruction, tool, observability, authority or mechanical defects.
+### Layer A — Repository and artifact analysis
 
-2. **Artifact analysis**
-   - examine whether important instructions rely on implicit expert knowledge, long context or unstated judgment;
-   - identify where exact anchors, schemas, checklists or stop conditions can reduce model-capability dependence.
+- select representative Mnemosyne and target-project tasks;
+- identify implicit expert assumptions, long-context dependence and unstated judgment;
+- determine where exact anchors, schemas, checklists, stop conditions and mechanical evidence reduce capability demand;
+- separate failures caused by reasoning, context, instruction, tool access, observability, authority or product orchestration.
 
-3. **Controlled read-only replay**
-   - use the same pinned inputs and acceptance rubric with a user-selected frontier option and next-tier option visible at test time;
-   - do not allow either tested run to judge itself as final;
-   - compare correctness, evidence recovery, boundary adherence, hallucination, escalation behavior, output usability and review burden.
+### Layer B — Controlled read-only replay
 
-4. **Task-decomposition pilot**
-   - compare monolithic frontier execution against frontier planning/adjudication plus next-tier bounded execution and mechanical verification;
-   - measure whether delegation actually saves scarce quota after review/rework cost.
+Use pinned inputs and one acceptance rubric under user-selected visible conditions:
 
-5. **Target-product portability check**
-   - verify that a future Meta-Agent or small business Agent does not silently require the construction model's capability for ordinary runtime use;
-   - mark functions that genuinely require escalation rather than treating the whole Agent as frontier-only.
+```yaml
+comparison_conditions:
+  frontier_condition: selected_by_user_at_test_time
+  next_tier_condition: selected_by_user_at_test_time
+  exact_served_backend: unknown_or_not_attestable_unless_provider_metadata_exists
+```
 
-## 6. Questions requiring later user decision
+Compare:
 
-The user does **not** need to answer these now. A later decision package should ask only after evidence and a concrete test plan exist:
+- task correctness;
+- evidence recovery;
+- authority and prohibited-action adherence;
+- hallucination or invented facts;
+- escalation behavior;
+- output usability;
+- mechanical-check results;
+- reviewer time and rework burden.
 
-- Which currently visible option should be treated as the frontier test condition?
-- Which currently visible option should be treated as the next-tier test condition?
-- What kinds of errors or review burden are acceptable for next-tier execution?
-- Which representative task classes should be included in the first controlled replay?
-- Should the default be “next-tier unless escalated,” “frontier for design and next-tier for execution,” or another policy?
-- Should model-capability hints remain advisory or become required fields for selected high-impact taskbooks?
+Neither tested run may declare itself final.
 
-Exact product labels must be captured at test time and must not be hard-coded here.
+### Layer C — Decomposition pilot
 
-## 7. Relationship to the four isolated Pro Deep Research tasks
+Compare:
 
-The four already prepared research tasks remain separate and may run concurrently:
+1. a monolithic frontier execution;
+2. frontier planning/adjudication plus next-tier bounded execution and mechanical verification.
 
-- `PRO-DR-HO-GUIDANCE-001`;
-- `PRO-DR-LEARNER-COGNITIVE-COACHING-001`;
-- `PRO-DR-CROSS-AGENT-SHARED-MEMORY-001`;
-- `PRO-DR-TARGET-MEMORY-MIGRATION-001`.
+Measure whether the second pattern actually saves frontier quota after verification and rework.
 
-Their results may later inform context cost, target-product portability, migration and governance, but they are not inputs required to create this open question and they do not automatically answer it.
+### Layer D — Target-product portability
 
-No fifth Pro Deep Research task is selected by MNEMOSYNE-163. A dedicated external-research prompt should be generated only after the four reports return or the user separately prioritizes this question.
+Verify that ordinary use of a future Meta-Agent or small business Agent does not silently require the model that designed it. Functions that genuinely need higher capability should be explicit escalation points rather than making the entire product frontier-only.
 
-## 8. Current safe next action
+## 7. Representative task candidates
+
+These are candidates for later user review, not an approved test set:
+
+```yaml
+candidate_task_classes:
+  mechanical:
+    - exact_path_and_ID_validation
+    - status_field_synchronization_from_pinned_facts
+  bounded_execution:
+    - populate_a_frozen_small_target_file_set
+    - apply_an_approved_additive_template_change
+  localized_judgment:
+    - review_a_handoff_for_missing_roles_or_conflicts
+    - classify_one_feedback_item_without_promoting_it
+  frontier_required_candidate:
+    - reconstruct_an_ambiguous_user_problem
+    - adjudicate_owner_truth_privacy_or_methodology_change
+```
+
+Meta-Agent M2 is a useful bounded-execution candidate only if replay inputs are sanitized and repository writes are prohibited during the test.
+
+## 8. Decisions required before controlled validation
+
+A later decision package should ask the user to select:
+
+- the currently visible frontier condition;
+- the currently visible next-tier condition used in real small-task practice;
+- acceptable errors, reviewer burden and rework;
+- representative task classes;
+- whether tests remain synthetic/read-only or include a separate approved low-risk write case;
+- whether the initial policy candidate is:
+  - `next_tier_unless_escalated`;
+  - `frontier_for_design_next_tier_for_execution`;
+  - another explicit policy.
+
+Exact product labels must be captured at test time, not hard-coded into durable guidance.
+
+## 9. Current route relation
+
+```yaml
+route_relation:
+  selected_current_mainline: PRO_DR_ADAPTIVE_EXPLANATION_STAGE_A_001
+  MODEL_CAPABILITY_PLANNING_001:
+    queued: true
+    ready_for_future_selection: true
+    selected_now: false
+  reason_for_not_starting_now:
+    - preserve_single_substantive_mainline
+    - current_Stage_A_prompt_is_already_prepared_and_user_accepted
+    - no_user_selected_frontier_and_next_tier_test_conditions_yet
+```
+
+## 10. Safe next action
 
 ```yaml
 safe_next_action:
-  now:
-    - user_executes_the_four_already_prepared_Pro_Deep_Research_tasks
-    - user_returns_complete_reports_and_visible_execution_labels_if_available
-    - preserve_future_important_run_visible_selection_and_reasoning_labels_verbatim
-  later_after_report_review:
-    - prepare_a_bounded_model_capability_planning_research_or_controlled_replay_package
-    - ask_the_user_to_select_the_two_visible_test_tiers_at_that_time
-    - keep_all_repository_and_target_writes_out_of_the_test_unless_separately_authorized
+  current:
+    - preserve_this_open_question_as_ready_but_unselected
+    - execute_and_review_the_current_Adaptive_Explanation_Stage_A_research
+  when_user_selects_this_route:
+    - prepare_one_bounded_read_only_model_capability_replay_package
+    - present_candidate_task_set_and_acceptance_rubric
+    - ask_user_to_select_visible_frontier_and_next_tier_conditions
+    - prohibit_repository_and_target_writes_unless_separately_authorized
 ```
 
-## 9. Boundaries
+## 11. Boundaries
 
-- This record is not an execution source or approved routing policy.
+- This record is not execution source or approved routing policy.
 - It does not require frontier models for all Mnemosyne, Meta-Agent or target-Agent work.
-- It does not declare a current model hierarchy or attest any backend.
+- It does not declare a current model hierarchy or attest a backend.
 - It does not authorize automatic model selection, switching, quota consumption or provider routing.
-- It does not approve a task-capability schema, threshold, score or mandatory field.
-- It does not claim that a next-tier model is adequate before controlled evidence exists.
-- It does not modify the four current Pro Deep Research prompts.
-- It does not select a target project or authorize target workspace, material ingestion, target write or operational build.
+- It does not approve a capability schema, threshold, score or mandatory field.
+- It does not claim a next-tier model is adequate before controlled evidence exists.
+- It does not modify Meta-Agent target truth or product-route ownership.
+- It does not start the controlled replay or create a new Deep Research task.
