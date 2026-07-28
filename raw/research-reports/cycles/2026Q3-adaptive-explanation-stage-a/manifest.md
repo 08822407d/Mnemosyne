@@ -3,13 +3,13 @@
 > Non-execution-source receipt and identity manifest for the accepted-with-corrections Stage A research report. This file does not attest the hidden serving model, approve a teaching policy, execute Stage B, assess the user, or authorize persistent learner memory.
 
 ```yaml
-manifest_id: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-MANIFEST-001
+manifest_id: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-MANIFEST-002
 created_by_task: MNEMOSYNE-175
 research_id: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001
 repository: 08822407d/Mnemosyne
 source_prompt: notes/research-prompts/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001.md
 source_design: notes/adaptive-explanation-stage-a-research-design-v0.1.md
-stored_report: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
+readable_repository_copy: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
 evidence_role: accepted_with_maintainer_corrections_non_execution_source
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
@@ -35,7 +35,26 @@ received_file:
   final_report_not_plan_only: true
 ```
 
-The repository copy preserves the received report text as the research artifact. Maintainer corrections are stored separately and do not rewrite the original report.
+The values above identify the exact file directly inspected at the active uploaded-file runtime path. They must not be silently re-derived from the repository-readable copy.
+
+## Repository-copy boundary
+
+```yaml
+repository_copy:
+  path: raw/research-reports/cycles/2026Q3-adaptive-explanation-stage-a/PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001-report.md
+  git_blob_sha_at_pre_PR_review: b236b8f6099e9af8f40907dc1503c2cfb2e85311
+  role: normalized_readable_research_copy
+  exact_byte_for_byte_copy_of_received_file: false_not_claimed
+  exact_received_file_reconstructable_from_repository: false
+  substantive_content_reviewed_against_received_file: true
+  maintainer_corrections_embedded_in_copy: false
+```
+
+The repository copy is retained for readable research access. The exact received-file identity is preserved by filename, byte count and SHA-256, but the repository does not claim to contain a byte-for-byte archive from which that exact uploaded file can be reconstructed.
+
+A failed attempt to create an exact Base64 archive was removed completely from the final branch diff after its reconstruction identity could not be proven. No incomplete `exact-archive/` path remains in the final changed-path set.
+
+Maintainer corrections are stored separately and do not silently rewrite either the recorded received-file identity or the readable report copy.
 
 ## Intake anomaly
 
@@ -46,7 +65,7 @@ preview_conflict:
   stale_preview_topic: PRO_DR_HO_GUIDANCE_001
   actual_uploaded_file_topic: PRO_DR_ADAPTIVE_EXPLANATION_STAGE_A_001
   preview_used_as_research_evidence: false
-  artifact_selected_for_ingestion: exact_uploaded_file_bytes
+  reviewed_artifact: direct_uploaded_runtime_file
   resolution_basis:
     - direct_file_read
     - exact_research_ID_and_topic
