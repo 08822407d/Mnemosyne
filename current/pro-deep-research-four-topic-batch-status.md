@@ -25,12 +25,17 @@ research_storage:
 post_merge_storage_repair:
   task: MNEMOSYNE-166
   defect:
-    - exact_archive_declared_8_parts_but_PR_216_merged_only_parts_1_through_6
+    - exact_archive_logical_part_005_did_not_match_the_manifest_governed_Base64_stream
+    - exact_archive_declared_8_logical_parts_but_PR_216_omitted_parts_7_and_8
     - cycle_README_pointed_to_nonexistent_cycle_local_review_files
   repair:
-    - restore_exact_archive_parts_7_and_8
-    - verify_manifest_level_tar_tar_bz2_and_Base64_identities
+    - replace_logical_part_005_with_11_individually_blob_verified_segments
+    - restore_exact_logical_parts_7_and_8
+    - verify_manifest_level_tar_tar_bz2_Base64_and_logical_part_identities
     - point_to_actual_canonical_review_package
+  repaired_storage_layout:
+    logical_parts: 8
+    physical_files: 18
   repair_record: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md
 ```
 
@@ -102,7 +107,8 @@ Invalid outputs do not participate in the unified evidence ledger and cannot be 
 research_cycle:
   root: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning
   exact_archive_manifest: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/manifest.json
-  exact_archive_parts: complete_8_of_8_on_this_revision
+  exact_archive_logical_parts: complete_8_of_8_on_this_revision
+  exact_archive_physical_files: 18
 review_package:
   reliability_review: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/01-maintainer-reliability-review.md
   evidence_ledger: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/02-unified-evidence-ledger.md
