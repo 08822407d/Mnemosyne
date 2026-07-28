@@ -104,7 +104,14 @@ repository_isolation:
     - notes/
     - commands/
     - raw/
-  shared_root_write_rule: separate_explicit_Mnemosyne_integration_task_required
+  shared_root_write_rule:
+    substantive_or_live_route_change: separate_explicit_Mnemosyne_integration_task_required
+    task_scoped_audit_record_exception:
+      allowed_path_prefix: notes/codex-task-results/
+      conditions:
+        - non_authoritative_task_evidence_only
+        - no_Mnemosyne_live_route_or_execution_source_change
+        - exact_task_local_scope_and_provenance
   target_product_task_must_not_modify:
     - current/human-approved-spec.md
     - unrelated_Mnemosyne_maintenance_live_route_files
@@ -117,7 +124,7 @@ repository_isolation:
     - stop_or_rebase_when_base_state_is_stale
 ```
 
-The two routes are logically independent even though they share one Git repository. Ordinary Meta-Agent product work should stay target-local. Any required update to Mnemosyne-global wayfinding or governance files is a separate integration task with separate authorization and review.
+The two routes are logically independent even though they share one Git repository. Ordinary Meta-Agent product work should stay target-local. A substantive update to Mnemosyne-global wayfinding or governance files is a separate integration task with separate authorization and review. A narrowly scoped non-authoritative task result under `notes/codex-task-results/` may accompany a Meta-Agent repository task when it does not modify the Mnemosyne live route.
 
 ## 5. Completed work
 
