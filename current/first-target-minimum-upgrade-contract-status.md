@@ -3,171 +3,159 @@
 > Non-execution-source live candidate status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: FIRST-TARGET-MINIMUM-UPGRADE-CONTRACT-STATUS-002
+status_id: FIRST-TARGET-MINIMUM-UPGRADE-CONTRACT-STATUS-003
 created_by_task: MNEMOSYNE-166
-last_status_task: MNEMOSYNE-167
+last_status_task: MNEMOSYNE-170
 candidate_id: FIRST-TARGET-MINIMUM-UPGRADE-CONTRACT-001
 candidate_path: notes/first-target-minimum-upgrade-contract-v0.1.md
 advisory_pilot_checklist: notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
 source_research_cycle: RC-2026Q3-target-memory-governance-and-learning
-status: accepted_as_advisory_pilot_only
+status: advisory_pilot_instantiated_for_Meta_Agent_pending_M0_M1_PR_merge
 disposition: ACCEPT_AS_ADVISORY_PILOT_ONLY
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
-formal_target_project_selected: false
+formal_target_project_selected: true
+selected_target_project: meta-agent
+target_specific_profile: standard
 template_pack_modified: false
-implementation_authorized: false
+target_files_created: false
+implementation_authorized_in_MNEMOSYNE_170: false
 ```
 
 ## User route selection and disposition
 
-The user instructed the current conversation to continue according to the maintainer-recommended route after the four-topic research batch. The highest-ranked near-term route was `FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT`, and MNEMOSYNE-166 prepared the candidate for review.
+The user first accepted the candidate as an advisory pilot rather than a mandatory global rule. After PR #220 merged, the user explicitly selected:
 
-After PR #217 merged, the user again instructed the conversation to verify the merge and continue the planned work. The immediately preceding maintainer recommendation was to adopt the candidate as an advisory pilot rather than a mandatory global rule. This task records that bounded disposition.
+```text
+META_AGENT_PRODUCT_BUILD_LAUNCH_PREPARATION
+```
+
+and required M0 and M1 to complete before v0.1 target-file construction.
 
 ```yaml
 selected_route:
-  id: FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT
-  objective: test_a_target_tailorable_upgrade_contract_during_the_first_real_target_design
-  original_selection_ref: current_conversation_user_instruction_2026-07-28_continue_recommended_route
+  id: META_AGENT_PRODUCT_BUILD_LAUNCH_PREPARATION
+  target_project: meta-agent
+  decision_ref: current_conversation_user_instruction_after_PR_220_merge
 
 disposition:
   value: ACCEPT_AS_ADVISORY_PILOT_ONLY
-  recorded_by_task: MNEMOSYNE-167
-  decision_ref: current_conversation_user_instruction_after_PR_217_merge
-  interpretation_basis:
-    - user_requested_continuation_of_the_previously_planned_work
-    - immediately_preceding_recommendation_was_ACCEPT_AS_ADVISORY_PILOT_ONLY
-    - prior_user_preference_was_advisory_pilot_not_global_mandate
-  scope:
-    - preserve_the_candidate
-    - include_it_in_a_first_target_review_checklist
-    - evaluate_value_and_burden_in_the_first_real_target_design
-  excludes:
-    - global_template_mandate
-    - execution_source_change
-    - target_project_selection
-    - target_write
-    - automatic_migration
-    - automatic_promotion_after_pilot
+  target_specific_instantiation: META-AGENT-V0.1-UPGRADE-CONTRACT-001
+  profile: standard
+  global_template_mandate: false
+  target_tailoring_required: true
+  global_promotion_requires:
+    - completed_target_specific_pilot
+    - evidence_and_burden_review
+    - explicit_user_disposition
+    - fresh_bounded_repository_task
 ```
 
-## Effect of the disposition
-
-The candidate is accepted only as a testable review instrument for the first real target-project design.
+## Target-specific instantiation
 
 ```yaml
-advisory_pilot_effect:
-  use_during_first_real_target_design: yes_after_explicit_target_and_run_manifest
-  mandatory_for_all_targets: false
-  target_tailoring_required: true
-  target_owner_may_simplify_or_mark_not_applicable_with_rationale: true
-  pilot_result_may_inform_later_candidate_revision: true
-  global_promotion_requires_fresh_user_decision_and_repository_task: true
+Meta_Agent_pilot:
+  M0_ref: notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
+  M1_ref: notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
+  target_runtime_truth_source: target-projects/meta-agent/current/approved-spec.md
+  workspace_root: target-projects/meta-agent/
+  profile: standard
+  initial_versions:
+    design_version: 0.1.0
+    schema_version: 0.1.0
+    policy_version: 0.1.0
+    delivery_version: 0.1.0
+  target_write_now: false
+  M2_after_merge_requires_fresh_authorization: true
 ```
 
-A first-target pilot may use the candidate to check stable identities, source and authority boundaries, versions, migration mapping, validation, rollback and rebuildable derived views. It must also measure whether those controls create excessive burden for a small or temporary Agent.
+The standard profile is selected because Meta-Agent is expected to be long-lived and methodology-bearing. It remains file-based and deliberately excludes unnecessary service architecture.
 
 ## Candidate scope retained
 
-The candidate covers:
+The target-specific pilot covers:
 
 - stable identity for authority-bearing objects;
 - source references and object lineage;
 - design, schema, policy and delivery versions;
 - preserved raw evidence and approved authority;
-- migration manifests and explicit old-to-new mappings;
+- migration manifests and old-to-new mappings for breaking or authority changes;
 - preserve/transform/recompute/retire decisions;
 - validation and acceptance criteria;
 - previous-state and rollback references;
 - rebuildable derived views where practical;
-- target-specific escalation by change class.
+- target-specific escalation by change class;
+- bounded next-tier execution and frontier escalation;
+- burden and value review before any global promotion.
 
-It does **not** make the following universal:
+It does **not** make the following universal or required for Meta-Agent v0.1:
 
 - full event-sourced runtime;
 - dual-write;
 - shadow cutover;
 - bitemporal storage;
 - automated migration service;
-- a six-layer memory architecture.
+- a six-layer memory architecture;
+- RAG, MCP, vector storage or auto-writeback.
 
-## Checklist relationship
+## Checklist activation
 
-The advisory implementation surface is limited to:
+The advisory checklist becomes applicable to the Meta-Agent M2 construction after the canonical MNEMOSYNE-170 PR merges and a fresh M2 task is authorized.
 
-```text
-notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
+```yaml
+activation_gate:
+  target_project_selected: true
+  target_owner_identified: true
+  target_runtime_truth_source_identified: true
+  repository_and_storage_safety_boundary: defined_in_M1
+  target_lifespan_and_change_expectation: long_lived_versioned
+  approved_run_manifest: defined_in_M1_effective_on_merge
+  M2_task_local_write_authorization: still_required
 ```
 
-The checklist:
-
-- activates only after a target project and run manifest are explicitly approved;
-- is non-blocking for the target design by default;
-- may be made target-locally blocking only by an explicit approved run manifest;
-- allows `minimal`, `standard`, `enhanced` or `not_applicable_with_rationale` profiles;
-- tests next-tier model executability and frontier-escalation points;
-- records burden and value before any global promotion decision.
+The checklist remains non-blocking for the target design by default. M1 makes selected identity, authority, version, rollback and proportionality checks part of M2 acceptance for this target only.
 
 ## Existing-template relationship
 
-The current target-project template pack already contains adjacent hooks:
+The target-project template pack already contains adjacent hooks for migration requirement, design version, model migration, drift review, versioning and rollback. MNEMOSYNE-170 does not modify that template pack.
 
-```yaml
-existing_fields:
-  intake:
-    - migration_requirement
-  design_spec:
-    - design_version
-    - model_migration_policy
-    - drift_review_policy
-  execution_source_rule:
-    - versioning_rule
-  delivery:
-    - rollback_or_revision_plan
-```
+The pilot is instantiated through the Meta-Agent-specific M0/M1 artifacts rather than promoted into a mandatory global template. Later evidence may justify a small global patch, simplification or rejection.
 
-MNEMOSYNE-167 does not modify that template pack. The advisory pilot remains a separate review instrument until a real target-project pilot produces evidence and the user later decides whether any small template patch is justified.
-
-## Pilot result options
+## Pilot result options after M2
 
 ```yaml
 pilot_result_options:
   PASS_FOR_TARGET_SPECIFIC_USE:
-    meaning: useful_and_proportionate_for_this_target_only
+    meaning: useful_and_proportionate_for_Meta_Agent_v0_1
   PASS_WITH_SIMPLIFICATION:
     meaning: useful_after_reducing_fields_or_gates
   REVISE_CONTRACT:
     meaning: candidate_structure_requires_revision
   DEFER_UNTIL_REAL_MIGRATION_EVIDENCE:
-    meaning: design_only_evidence_is_insufficient
+    meaning: first_build_evidence_is_insufficient
   REJECT_AS_TOO_BURDENSOME:
-    meaning: process_cost_exceeds_demonstrated_value_for_this_target
+    meaning: process_cost_exceeds_demonstrated_value
 ```
 
-No pilot result automatically changes Mnemosyne or target-project execution sources.
+No pilot result automatically changes Mnemosyne or target-project execution sources or global templates.
 
 ## Boundaries
 
-- No target project, workspace, material or repository is selected or modified.
-- No target runtime truth source is created.
-- No execution-source or target-project template-pack change is authorized.
-- No research TODO or open question is closed.
+- No target workspace, material or target file is created by MNEMOSYNE-170.
+- No target runtime truth source exists until M2 creates and the user accepts it.
+- No execution-source or global template change is authorized.
 - No automatic migration, writeback, model routing, cross-Agent sharing or learner profiling is authorized.
 - The non-FABLE health review and all other conversation-owned routes remain separate.
-- The four original Deep Research conversations may be archived in the product UI but are not recommended for permanent deletion yet.
+- Public Git history limitations apply to any later target write.
 
 ## Safe next action
 
 ```yaml
 safe_next_action:
-  current_task:
-    - publish_and_human_review_the_single_MNEMOSYNE_167_PR
+  current:
+    - review_and_merge_the_single_MNEMOSYNE_170_PR
   after_merge:
-    - verify_latest_master_contains_the_disposition_and_advisory_checklist
-    - continue_the_maintainer_recommended_sequence_with_a_fresh_bounded_task
-  planned_follow_on_route:
-    id: LEARNER_STATE_AND_ADAPTIVE_EXPLANATION_SYNTHESIS
-    reason: next_ranked_research_route_and_MNEMOSYNE_164_requires_fresh_high_reasoning_reanalysis_before_prompt_generation
-    automatic_target_or_research_execution: false
+    - verify_M0_M1_and_standard_profile_on_latest_master
+    - create_one_bounded_M2_target_file_construction_task
+  operational_use: requires_M2_acceptance_and_user_disposition
 ```
