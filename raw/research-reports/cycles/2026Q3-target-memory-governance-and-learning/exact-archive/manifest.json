@@ -1,0 +1,61 @@
+{
+  "archive_format": "tar.bz2",
+  "archive_bytes": 56573,
+  "archive_sha256": "f46cf54b923c00e86d8e539a290f76312ed287742ee9b713f9167db03e3cbd24",
+  "tar_bytes": 235520,
+  "tar_sha256": "b63b62b2a397c31bff6a57aeefec6b0cccdd1a477e93550435bb34b75f2a8168",
+  "base64_chars": 75432,
+  "base64_sha256": "bdb9292b9626afd3e76aa3a6f79086f92c0296309e4231f623d515fa92000138",
+  "part_count": 8,
+  "part_char_limit": 10000,
+  "members": [
+    {
+      "path": "originals/PRO-DR-CROSS-AGENT-SHARED-MEMORY-001-report.md",
+      "bytes": 51018,
+      "sha256": "0bf5d0bfeaf57ecc8f5d1e0b8f09956fb62c84a05539c8189c71d2c3228faac8",
+      "final_lf": false
+    },
+    {
+      "path": "originals/PRO-DR-HO-GUIDANCE-001-report.md",
+      "bytes": 40857,
+      "sha256": "991d510328f80feef804332dd2177f8c20e6f213b2a1b5d2818d94d9ae8af025",
+      "final_lf": false
+    },
+    {
+      "path": "originals/PRO-DR-LEARNER-COGNITIVE-COACHING-001-report.md",
+      "bytes": 43960,
+      "sha256": "d42b01ced354103ed9705caceebcd34cd51530265695924bc2f5c02e0e44e237",
+      "final_lf": false
+    },
+    {
+      "path": "originals/PRO-DR-TARGET-MEMORY-MIGRATION-001-report.md",
+      "bytes": 48309,
+      "sha256": "3471002a61007cf092d58563564f64a3e9665bf5780d406065a1d9910e9a29c6",
+      "final_lf": true
+    },
+    {
+      "path": "research-prompts/originals/PRO-DR-CROSS-AGENT-SHARED-MEMORY-001-AUTO-RERUN-v4.md",
+      "bytes": 8900,
+      "sha256": "413782fb95595344ad1160a6cda94b1b9b0065d0b8c85f9194188d694f45379f",
+      "final_lf": true
+    },
+    {
+      "path": "research-prompts/originals/PRO-DR-HO-GUIDANCE-001-AUTO-RERUN-v4.md",
+      "bytes": 9185,
+      "sha256": "902d030248c5d0399db2b8c17c8bcfa1d4016bd2b685338511da43d569d361ee",
+      "final_lf": true
+    },
+    {
+      "path": "research-prompts/originals/PRO-DR-LEARNER-COGNITIVE-COACHING-001-DIRECT-PASTE-RERUN-v5.md",
+      "bytes": 9955,
+      "sha256": "1bb419462343a2f75ff391ac1295698e1e3e0c2ed34a056e9a8b43d42745dbc0",
+      "final_lf": true
+    },
+    {
+      "path": "research-prompts/originals/PRO-DR-TARGET-MEMORY-MIGRATION-001-AUTO-RERUN-v4.md",
+      "bytes": 9023,
+      "sha256": "d873dd2f15af43d937bceff6b7f975dab99ca94b19441d53850c87bbf91d90e8",
+      "final_lf": true
+    }
+  ]
+}
