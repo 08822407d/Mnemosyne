@@ -5,7 +5,10 @@
 ```yaml
 cycle_id: RC-2026Q3-target-memory-governance-and-learning
 storage_task: MNEMOSYNE-165
-status: four_topic_reports_received_maintainer_reviewed_and_stored_pending_human_merge
+storage_PR: 216
+storage_merge_commit: a66d92c572f178de52e3b3b238324decf279b7fb
+post_merge_storage_repair_task: MNEMOSYNE-166
+status: four_topic_reports_received_maintainer_reviewed_stored_and_exact_archive_complete_on_this_revision
 research_execution_surface_reported_by_user: Pro_Deep_Research
 exact_served_backend: unknown_or_not_attestable
 execution_source_modified: false
@@ -32,17 +35,32 @@ The four exact prompt originals and four accepted report originals are stored by
 
 - `exact-archive/README.md`
 - `exact-archive/manifest.json`
-- `exact-archive/parts/part-001-of-008.txt` through `part-008-of-008.txt`
+- `exact-archive/parts/part-001-of-008.txt`
+- `exact-archive/parts/part-002-of-008.txt`
+- `exact-archive/parts/part-003-of-008.txt`
+- `exact-archive/parts/part-004-of-008.txt`
+- `exact-archive/parts/part-005-of-008.txt`
+- `exact-archive/parts/part-006-of-008.txt`
+- `exact-archive/parts/part-007-of-008.txt`
+- `exact-archive/parts/part-008-of-008.txt`
 
 The archive decodes to `tar.bz2`; member paths, byte counts, SHA-256 values and final-LF states are fixed in the manifest. The multipart representation avoids silently normalizing the original exported Markdown while keeping exact artifacts reconstructable from repository content.
 
+PR #216 accidentally omitted parts 7 and 8 even though the manifest declared eight parts. MNEMOSYNE-166 independently regenerated the deterministic archive, matched all manifest-level tar, compressed-archive and Base64 identities, and restored the two missing parts. The repair record is:
+
+- `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md`
+
 ### Review and synthesis
 
-- `review-records/MNEMOSYNE-165-four-topic-maintainer-review.md`
-- `review-records/MNEMOSYNE-165-deep-research-execution-incident-ledger.md`
-- `source-manifest.md`
-- `evidence-ledger.md`
-- `decision-preparation-v0.1.md`
+The canonical derived records are stored under the repository-wide review package, not duplicated under this raw cycle:
+
+- `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/01-maintainer-reliability-review.md`
+- `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/02-unified-evidence-ledger.md`
+- `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/03-decision-preparation.md`
+- `notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/04-post-merge-storage-integrity-repair.md`
+- `current/pro-deep-research-four-topic-batch-status.md`
+
+The source tables inside exported reports vary in portability. Conversation-local citation tokens remain non-portable outside the originating Deep Research conversations. Stable-source mappings and interpretation limits are recorded in the maintainer reviews; no nonexistent cycle-local `source-manifest.md` is implied.
 
 ## Report disposition
 
@@ -61,6 +79,27 @@ PRO_DR_TARGET_MEMORY_MIGRATION_001:
   automatic_migration_or_universal_event_sourcing_approved: false
 ```
 
+## Selected bounded follow-up
+
+The user selected the maintainer-recommended next route after storage:
+
+```yaml
+selected_route: FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT
+selected_by: current_conversation_user_instruction_2026-07-28
+current_output: notes/first-target-minimum-upgrade-contract-v0.1.md
+current_role: candidate_for_user_review
+execution_source_update: false
+target_project_selected: false
+implementation_authorized: false
+```
+
+This selection authorizes preparation of a bounded candidate only. It does not automatically modify the target-project template pack or start a target-project design/build.
+
 ## Safe next gate
 
-After this storage PR is merged, the next step is human review of `decision-preparation-v0.1.md`. No implementation route is automatically selected.
+```yaml
+safe_next_gate:
+  - review_the_first_target_minimum_upgrade_contract_candidate
+  - record_explicit_user_disposition_before_any_template_or_target_project_change
+  - preserve_other_conversation_owned_routes
+```
