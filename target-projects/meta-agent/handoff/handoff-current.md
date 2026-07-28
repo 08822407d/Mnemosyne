@@ -120,7 +120,14 @@ route_isolation:
   default_Meta_Agent_write_root: target-projects/meta-agent/
   target_truth_path: target-projects/meta-agent/current/approved-spec.md
   Mnemosyne_execution_source_is_target_truth: false
-  root_shared_path_update: requires_separate_explicit_Mnemosyne_integration_task
+  root_shared_path_update:
+    substantive_or_live_route_change: requires_separate_explicit_Mnemosyne_integration_task
+    task_scoped_audit_record_exception:
+      allowed_path_prefix: notes/codex-task-results/
+      conditions:
+        - non_authoritative_task_evidence_only
+        - no_Mnemosyne_live_route_or_execution_source_change
+        - exact_task_local_scope_and_provenance
   concurrency_controls:
     - latest_master_preflight
     - complete_accessible_open_PR_enumeration
@@ -129,7 +136,7 @@ route_isolation:
     - no_stale_branch_continuation
 ```
 
-Meta-Agent product work and Mnemosyne self-development are authority-separated and path-separated by default. Sharing a Git repository does not grant cross-route write authority. A task that must update a root-level Mnemosyne status or handoff file must be separately scoped and must not silently bundle product and maintenance changes.
+Meta-Agent product work and Mnemosyne self-development are authority-separated and path-separated by default. Sharing a Git repository does not grant cross-route write authority. A substantive update to a root-level Mnemosyne status, handoff, governance or research file must be separately scoped and must not silently bundle product and maintenance changes. A narrowly scoped non-authoritative result record may be stored under `notes/codex-task-results/` without becoming a maintenance live-route update.
 
 ## 7. Pending and unproven scope
 
