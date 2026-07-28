@@ -3,37 +3,74 @@
 > Non-execution-source live candidate status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: FIRST-TARGET-MINIMUM-UPGRADE-CONTRACT-STATUS-001
+status_id: FIRST-TARGET-MINIMUM-UPGRADE-CONTRACT-STATUS-002
 created_by_task: MNEMOSYNE-166
+last_status_task: MNEMOSYNE-167
 candidate_id: FIRST-TARGET-MINIMUM-UPGRADE-CONTRACT-001
 candidate_path: notes/first-target-minimum-upgrade-contract-v0.1.md
+advisory_pilot_checklist: notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
 source_research_cycle: RC-2026Q3-target-memory-governance-and-learning
-status: candidate_prepared_pending_user_disposition
+status: accepted_as_advisory_pilot_only
+disposition: ACCEPT_AS_ADVISORY_PILOT_ONLY
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 formal_target_project_selected: false
+template_pack_modified: false
 implementation_authorized: false
 ```
 
-## User route selection
+## User route selection and disposition
 
-The user instructed the current conversation to continue according to the maintainer-recommended route after the four-topic research batch. The highest-ranked near-term route in the merged decision-preparation package was:
+The user instructed the current conversation to continue according to the maintainer-recommended route after the four-topic research batch. The highest-ranked near-term route was `FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT`, and MNEMOSYNE-166 prepared the candidate for review.
+
+After PR #217 merged, the user again instructed the conversation to verify the merge and continue the planned work. The immediately preceding maintainer recommendation was to adopt the candidate as an advisory pilot rather than a mandatory global rule. This task records that bounded disposition.
 
 ```yaml
 selected_route:
   id: FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT
-  objective: prepare_a_candidate_minimum_upgrade_contract_for_user_review
-  selection_ref: current_conversation_user_instruction_2026-07-28
-  selection_scope: candidate_preparation_only
+  objective: test_a_target_tailorable_upgrade_contract_during_the_first_real_target_design
+  original_selection_ref: current_conversation_user_instruction_2026-07-28_continue_recommended_route
+
+disposition:
+  value: ACCEPT_AS_ADVISORY_PILOT_ONLY
+  recorded_by_task: MNEMOSYNE-167
+  decision_ref: current_conversation_user_instruction_after_PR_217_merge
+  interpretation_basis:
+    - user_requested_continuation_of_the_previously_planned_work
+    - immediately_preceding_recommendation_was_ACCEPT_AS_ADVISORY_PILOT_ONLY
+    - prior_user_preference_was_advisory_pilot_not_global_mandate
+  scope:
+    - preserve_the_candidate
+    - include_it_in_a_first_target_review_checklist
+    - evaluate_value_and_burden_in_the_first_real_target_design
+  excludes:
+    - global_template_mandate
+    - execution_source_change
+    - target_project_selection
+    - target_write
+    - automatic_migration
+    - automatic_promotion_after_pilot
 ```
 
-This selection does not mean that the candidate is accepted, that the target-project template pack is changed, or that a target project has been selected.
+## Effect of the disposition
 
-## Candidate scope
+The candidate is accepted only as a testable review instrument for the first real target-project design.
 
-The candidate addresses the user's requirement that Mnemosyne can be used before it is nearly perfect without locking early target-Agent memory systems to the current templates, models, storage implementation or derived artifacts.
+```yaml
+advisory_pilot_effect:
+  use_during_first_real_target_design: yes_after_explicit_target_and_run_manifest
+  mandatory_for_all_targets: false
+  target_tailoring_required: true
+  target_owner_may_simplify_or_mark_not_applicable_with_rationale: true
+  pilot_result_may_inform_later_candidate_revision: true
+  global_promotion_requires_fresh_user_decision_and_repository_task: true
+```
 
-It proposes a bounded minimum covering:
+A first-target pilot may use the candidate to check stable identities, source and authority boundaries, versions, migration mapping, validation, rollback and rebuildable derived views. It must also measure whether those controls create excessive burden for a small or temporary Agent.
+
+## Candidate scope retained
+
+The candidate covers:
 
 - stable identity for authority-bearing objects;
 - source references and object lineage;
@@ -46,7 +83,7 @@ It proposes a bounded minimum covering:
 - rebuildable derived views where practical;
 - target-specific escalation by change class.
 
-It explicitly does **not** make the following universal:
+It does **not** make the following universal:
 
 - full event-sourced runtime;
 - dual-write;
@@ -54,6 +91,23 @@ It explicitly does **not** make the following universal:
 - bitemporal storage;
 - automated migration service;
 - a six-layer memory architecture.
+
+## Checklist relationship
+
+The advisory implementation surface is limited to:
+
+```text
+notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
+```
+
+The checklist:
+
+- activates only after a target project and run manifest are explicitly approved;
+- is non-blocking for the target design by default;
+- may be made target-locally blocking only by an explicit approved run manifest;
+- allows `minimal`, `standard`, `enhanced` or `not_applicable_with_rationale` profiles;
+- tests next-tier model executability and frontier-escalation points;
+- records burden and value before any global promotion decision.
 
 ## Existing-template relationship
 
@@ -73,59 +127,47 @@ existing_fields:
     - rollback_or_revision_plan
 ```
 
-The candidate fills in the missing minimum contract and migration semantics. MNEMOSYNE-166 does not edit the template pack. A later accepted disposition may authorize a small template patch or defer all template changes until the first real target-project pilot.
+MNEMOSYNE-167 does not modify that template pack. The advisory pilot remains a separate review instrument until a real target-project pilot produces evidence and the user later decides whether any small template patch is justified.
 
-## Required user disposition
-
-After the candidate is published and reviewed, select exactly one:
+## Pilot result options
 
 ```yaml
-user_disposition_options:
-  ACCEPT_FOR_FIRST_TARGET_DESIGN_PROCESS:
-    meaning: use_the_candidate_as_a_required_but_target_tailorable_part_of_the_first_real_target_design_process
-    next_action: prepare_a_bounded_template_or_first_target_integration_spec
-
-  ACCEPT_AS_ADVISORY_PILOT_ONLY:
-    meaning: keep_the_candidate_non_mandatory_and_test_it_during_the_first_target_project_before_any_global_template_promotion
-    next_action: preserve_candidate_and_include_it_in_first_target_review_checklist_only
-
-  ACCEPT_WITH_MODIFICATIONS:
-    meaning: revise_named_fields_scope_or_mandatory_vs_conditional_boundaries
-    required_input: explicit_modifications
-
-  DEFER:
-    meaning: preserve_the_candidate_without_using_it_in_the_next_target_project_yet
-
-  REJECT:
-    meaning: do_not_use_this_candidate_as_the_upgrade_contract_baseline
+pilot_result_options:
+  PASS_FOR_TARGET_SPECIFIC_USE:
+    meaning: useful_and_proportionate_for_this_target_only
+  PASS_WITH_SIMPLIFICATION:
+    meaning: useful_after_reducing_fields_or_gates
+  REVISE_CONTRACT:
+    meaning: candidate_structure_requires_revision
+  DEFER_UNTIL_REAL_MIGRATION_EVIDENCE:
+    meaning: design_only_evidence_is_insufficient
+  REJECT_AS_TOO_BURDENSOME:
+    meaning: process_cost_exceeds_demonstrated_value_for_this_target
 ```
 
-No option is selected by this status record.
-
-## Acceptance questions
-
-The later user review should focus on:
-
-1. Is the contract small enough for a temporary or low-risk Agent?
-2. Which fields must apply to all first-target designs, and which should apply only to long-lived or high-risk targets?
-3. Should the target-project template pack be updated before the first target, or should the candidate be tested as a separate pilot instrument first?
-4. What migration rehearsal is proportionate for the first target?
-5. Does the contract remain executable by the intended next-tier model for bounded implementation work, with frontier escalation only where needed?
+No pilot result automatically changes Mnemosyne or target-project execution sources.
 
 ## Boundaries
 
 - No target project, workspace, material or repository is selected or modified.
 - No target runtime truth source is created.
-- No execution-source or template-pack change is authorized.
+- No execution-source or target-project template-pack change is authorized.
 - No research TODO or open question is closed.
-- No automatic migration, writeback or model routing is authorized.
+- No automatic migration, writeback, model routing, cross-Agent sharing or learner profiling is authorized.
 - The non-FABLE health review and all other conversation-owned routes remain separate.
+- The four original Deep Research conversations may be archived in the product UI but are not recommended for permanent deletion yet.
 
 ## Safe next action
 
 ```yaml
 safe_next_action:
-  - publish_and_human_review_the_single_MNEMOSYNE_166_PR
-  - then_record_one_explicit_user_disposition_for_the_candidate
-  - create_a_fresh_task_for_any_accepted_template_or_first_target_integration_work
+  current_task:
+    - publish_and_human_review_the_single_MNEMOSYNE_167_PR
+  after_merge:
+    - verify_latest_master_contains_the_disposition_and_advisory_checklist
+    - continue_the_maintainer_recommended_sequence_with_a_fresh_bounded_task
+  planned_follow_on_route:
+    id: LEARNER_STATE_AND_ADAPTIVE_EXPLANATION_SYNTHESIS
+    reason: next_ranked_research_route_and_MNEMOSYNE_164_requires_fresh_high_reasoning_reanalysis_before_prompt_generation
+    automatic_target_or_research_execution: false
 ```

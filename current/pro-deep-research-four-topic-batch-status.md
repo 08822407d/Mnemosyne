@@ -3,13 +3,13 @@
 > Non-execution-source live research status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MNEMOSYNE-PRO-DR-FOUR-TOPIC-BATCH-STATUS-002
-last_status_task: MNEMOSYNE-166
+status_id: MNEMOSYNE-PRO-DR-FOUR-TOPIC-BATCH-STATUS-003
+last_status_task: MNEMOSYNE-167
 recorded_at: 2026-07-28
 repository: 08822407d/Mnemosyne
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
-status: FOUR_REPORTS_ACCEPTED_WITH_CORRECTIONS_ARCHIVE_COMPLETE_AND_UPGRADE_CONTRACT_CANDIDATE_PREPARED
+status: FOUR_REPORTS_ACCEPTED_ARCHIVE_COMPLETE_AND_FIRST_TARGET_UPGRADE_CONTRACT_ACCEPTED_AS_ADVISORY_PILOT
 ```
 
 ## Storage and merge truth
@@ -24,6 +24,11 @@ research_storage:
   current_master_was_verified_identical_after_merge: true
 post_merge_storage_repair:
   task: MNEMOSYNE-166
+  PR: 217
+  state: merged
+  merge_commit: 5bcbf21293d30a0d41e60853c7e828f09b2a24c9
+  merged_at: 2026-07-28T03:49:13Z
+  current_master_was_verified_identical_after_merge: true
   defect:
     - exact_archive_logical_part_005_did_not_match_the_manifest_governed_Base64_stream
     - exact_archive_declared_8_logical_parts_but_PR_216_omitted_parts_7_and_8
@@ -107,7 +112,7 @@ Invalid outputs do not participate in the unified evidence ledger and cannot be 
 research_cycle:
   root: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning
   exact_archive_manifest: raw/research-reports/cycles/2026Q3-target-memory-governance-and-learning/exact-archive/manifest.json
-  exact_archive_logical_parts: complete_8_of_8_on_this_revision
+  exact_archive_logical_parts: complete_8_of_8
   exact_archive_physical_files: 18
 review_package:
   reliability_review: notes/research-batch-reviews/2026-07-27-four-topic-pro-deep-research/01-maintainer-reliability-review.md
@@ -124,6 +129,8 @@ adopted_as_research_evidence:
   - four_topic_reports_with_maintainer_corrections
   - unified_evidence_ledger
   - bounded_decision_preparation
+adopted_as_advisory_pilot:
+  - FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT_001
 not_adopted:
   - any_execution_source_text
   - universal_HO_GUIDANCE_policy
@@ -132,27 +139,32 @@ not_adopted:
   - six_layer_mandatory_memory_architecture
   - universal_event_sourcing
   - automatic_migration
+  - mandatory_global_upgrade_contract
   - target_project_implementation
 ```
 
-## User-selected next route
+## User-selected route and disposition
 
-The user selected the maintainer-recommended near-term route after the evidence batch:
+The user selected the maintainer-recommended near-term route after the evidence batch and then instructed the conversation to continue the planned work after PR #217 merged. The recorded bounded disposition is:
 
 ```yaml
 selected_route:
   id: FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT
   selection_ref: current_conversation_user_instruction_2026-07-28
-  current_artifact: notes/first-target-minimum-upgrade-contract-v0.1.md
-  current_status: candidate_prepared_for_user_review
+  candidate_artifact: notes/first-target-minimum-upgrade-contract-v0.1.md
+  disposition: ACCEPT_AS_ADVISORY_PILOT_ONLY
+  disposition_record_task: MNEMOSYNE-167
+  advisory_pilot_checklist: notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
   candidate_authority: non_execution_source
+  use_during_first_real_target_design: only_after_explicit_target_and_run_manifest
+  global_template_mandate: false
   template_pack_modified: false
   target_project_selected: false
   target_workspace_or_material_action: false
   implementation_authorized: false
 ```
 
-Preparation of the candidate does not adopt it. Any template-pack update or target-project use requires a fresh explicit disposition and bounded task.
+The candidate is used to evaluate target-specific upgradeability and process burden. A pilot result does not automatically promote it into the target-project template pack or either execution source.
 
 ## Adjacent routes
 
@@ -188,8 +200,10 @@ original_four_conversations:
 
 ```yaml
 next_gate:
-  - review_the_first_target_minimum_upgrade_contract_candidate
-  - choose_accept_for_first_target_design_process_accept_as_advisory_pilot_modify_defer_or_reject
-  - create_a_fresh_task_before_any_template_or_target_project_change
-  automatic_implementation: none
+  current:
+    - review_and_merge_the_single_MNEMOSYNE_167_PR
+  after_merge:
+    - verify_latest_master_contains_the_advisory_pilot_disposition_and_checklist
+    - begin_a_fresh_bounded_LEARNER_STATE_AND_ADAPTIVE_EXPLANATION_SYNTHESIS_task
+  automatic_target_project_or_Deep_Research_execution: none
 ```
