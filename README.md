@@ -16,7 +16,7 @@ GitHub repository-writing 单任务单活跃 PR 谱系防护：`current/github-s
 
 长 transfer artifact 文件优先交付与低风险 artifact 同回复直接生成防护：`current/artifact-delivery-and-direct-generation-guard.md`。该文件是用户批准的行为防护与操作指南，不是独立执行源。
 
-用户操作置顶、下一步收尾、模型能力预估与人类意图重构防护：`current/user-operation-next-step-capability-and-intent-guard.md`。该文件是用户批准的行为防护与操作指南，不是独立执行源；它不自动修改任何目标项目的运行真相源。
+用户操作置顶、下一步收尾、模型能力与 Deep Research 需求预估、上下文化澄清交接和人类意图重构防护：`current/user-operation-next-step-capability-and-intent-guard.md`。配套澄清模板：`notes/templates/frontier-planned-clarification-package-v0.1.md`；研究验证状态：`current/frontier-planning-clarification-handoff-research-status.md`。这些文件不是执行源，也不自动修改任何目标项目的运行真相源。
 
 2026Q3 platform / Project memory / Apps / GitHub / surface delta 当前入口：`current/platform-context-apps-delta-status.md`。研究原件与复核位于 `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/`；均不是执行源。
 

@@ -77,17 +77,24 @@ If any of those files are read for a separate explicit task, treat their mainten
    - put a meaningful follow-on in a closing, visually explicit `下一步` section;
    - never hide a current mandatory user action only at the end;
    - explicitly state whether the next stage requires, recommends, or does not require frontier/Pro-class reasoning;
-   - re-estimate model capability after research, failure, safety, or scope changes;
+   - re-estimate model capability after research, failure, safety, surface-capability, or scope changes;
+   - separately assess whether Pro Deep Research is unnecessary, optional, recommended, required before a high-impact decision, or premature because of an upstream dependency;
+   - separately assess whether an independent Fable-class or other-provider frontier review has a distinct non-duplicative role;
+   - when research is recommended or required and the topic is sufficiently frozen, automatically deliver a complete ready-to-run task and report contract without requiring another frontier turn merely to ask for the prompt;
+   - never fabricate a research report before the designated run exists and never treat task generation as quota or execution authorization;
+   - route owner preferences to user clarification and external evidence gaps to verification/research rather than asking the wrong actor;
    - treat user wording as primary evidence but not automatically a complete final specification;
-   - preserve likely intent, alternatives, assumptions, uncertainty, and user correction rights without mind-reading or overriding confirmed decisions.
+   - preserve likely intent, alternatives, assumptions, uncertainty, and user correction rights without mind-reading or overriding confirmed decisions;
+   - when a next-tier model can conduct interactive clarification, provide a self-contained clarification package with question context, meaning, consequences, options, recommendations, answer formats, stop rules, and escalation triggers;
+   - require the next-tier interviewer to maintain an answer ledger, explain why questions matter, capture corrections, and return high-impact conflicts to frontier review.
 6. Apply the handoff/continuation correctness principle from `current/human-approved-spec.md` when handoff artifacts or continuation claims are actually part of the local task.
 7. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md` and `current/artifact-delivery-and-direct-generation-guard.md` when producing content for transfer, backup, archival, or later machine/operator reuse.
 8. When designing a prompt, taskbook, handoff, Work task, Pro task, Deep Research task, Codex task, or future-Agent task whose complete final response must be returned to another conversation or preserved for review, explicitly require a separately downloadable `<TASK_ID>-complete-response.md` or stable equivalent in the same final response. Distinguish it from named substantive artifacts; do not make the operator send a second prompt solely to export the already-issued response.
 9. When the user explicitly requests a low-risk downloadable artifact and no additional content decision or external-action authorization is required, create the local artifact in the same response when an available tool can do so safely; do not merely promise later generation.
 10. Before claiming delivery, verify that file creation succeeded and provide a real artifact link or available transfer pointer. Never invent a path or attachment.
-11. Keep safe local artifact generation separate from any independently gated repository write, upload, email, forwarding, or other external action.
+11. Keep safe local artifact generation separate from any independently gated repository write, upload, email, forwarding, quota spend, research execution, or other external action.
 12. Apply the Deep Research output exception from `current/human-approved-spec.md`: the final Deep Research report body remains in the final report/answer, while prompts and other transfer artifacts remain file-first when applicable. If the full Deep Research response must be transferred, require an auxiliary complete-response file without replacing the inline canonical report.
-13. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts.
+13. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts. Do not generate downstream tasks that are likely to be invalidated by an upstream report unless the user explicitly accepts that risk.
 14. Treat repository visibility as operator-controlled and stage-dependent; verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
 15. Treat platform/model/tool behavior as time-sensitive when relevant and verify current facts when possible.
 16. Preserve the current conversation's local task mainline.
@@ -116,7 +123,13 @@ mnemosyne_guidance_refresh:
     - opening_user_operation_or_no_operation_section
     - closing_next_step_section_when_meaningful
     - explicit_next_step_model_capability_estimate
+    - explicit_Pro_Deep_Research_need_assessment
+    - parallel_frontier_research_role_assessment
+    - automatic_ready_to_run_research_task_delivery_when_recommended_and_ready
+    - no_fabricated_report_or_automatic_quota_spend
     - human_expression_and_intent_reconstruction_with_user_correction
+    - context_rich_clarification_package_for_next_tier_interaction
+    - cumulative_answer_ledger_and_frontier_escalation
     - handoff_correctness_when_handoff_is_explicitly_in_scope
     - artifact_file_first_delivery_when_relevant
     - complete_response_transfer_file_when_full_reply_return_is_required
@@ -137,7 +150,7 @@ Do not report Mnemosyne maintenance current phase, current active task, paused r
 - This command is a shortcut for refreshing existing behavior guidance in the current conversation.
 - This command is not an execution source.
 - This command does not approve new design content.
-- Loading the user-operation/capability/intent guard does not authorize model switching, quota use, psychological profiling, repository writes, or changes to a target project's truth source.
+- Loading the user-operation/capability/research/clarification/intent guard does not authorize model switching, quota use, research execution, psychological profiling, repository writes, or changes to a target project's truth source.
 - Loading the artifact-delivery guard does not authorize repository writes, uploads, email, forwarding, or other external actions.
 - This command does not authorize edits, automation, MCP, RAG, auto-writeback, or changes outside the user-approved task scope.
 - This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
