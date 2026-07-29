@@ -9,25 +9,14 @@ This file is not an execution source. It defines a user-facing shortcut for refr
 - 加载 MNEMOSYNE 约束指导
 - 加载最新指导
 
-## Invocation examples
-
-- “Load Mnemosyne guidance.”
-- “加载 Mnemosyne 指导约束。”
-- “加载 MNEMOSYNE 约束指导。”
-- “加载最新指导。”
-
 ## Purpose
 
-Use this command when the current conversation should apply the latest Mnemosyne-approved behavior constraints.
+This command refreshes behavior constraints only. It preserves the current conversation's local task mainline and does not start or infer a handoff.
 
-This command means behavior-constraint refresh only. It preserves the current conversation's local task mainline.
-
-It does not start, prepare, receive, infer, or auto-detect a handoff. Work handoff is a separate explicit artifact-mediated workflow handled by:
+Handoff remains a separate explicit workflow:
 
 - `commands/prepare-mnemosyne-handoff.md`
 - `commands/receive-mnemosyne-handoff.md`
-
-A Mnemosyne handoff package may explicitly require the receiving conversation to invoke this command after the package has been received. In that sequence, handoff receive and guidance refresh remain two distinct operations: the receive step establishes the transferred local task, and this command refreshes behavior constraints without replacing that task.
 
 ## Required files
 
@@ -36,78 +25,85 @@ Read or ask the user to provide:
 - `README.md`
 - `current/human-approved-spec.md`
 - `current/artifact-delivery-and-direct-generation-guard.md`
+- `current/deep-research-report-delivery-correction-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
+- `current/frontier-planning-clarification-handoff-adjudication-guard.md`
 - this command file, if available
 
-When the current task may perform any GitHub or connected-repository write—including a direct file update, repository comment, branch or pull-request operation—or may create or modify an important record intended for repository publication, also read:
+For GitHub or connected-repository writes, or important records intended for publication, also read:
 
 - `current/run-context-and-pr-provenance-guard.md`
 
-When the current task may create or update a GitHub branch or pull request, also read:
+For branch or pull-request creation, also read:
 
 - `current/github-single-active-pr-lineage-guard.md`
 
-Purely read-only repository inspection does not trigger these additional reads.
+Read additional files only when the local task independently requires them.
 
-Read additional files only when the current local task independently requires them, for example:
+## Scope precedence
 
-- relevant platform guides when platform/model/tool facts are part of the local task;
-- research current views when capability boundaries, new mechanisms, or target-project memory-system design claims are part of the local task;
-- user-provided or authorized target-project materials when the local task is target-project work.
+```yaml
+precedence:
+  execution_source:
+    - current/human-approved-spec.md
+  general_artifact_delivery:
+    - current/artifact-delivery-and-direct-generation-guard.md
+  Deep_Research_single_report_semantics:
+    - current/deep-research-report-delivery-correction-guard.md
+  general_user_operation_capability_research_and_intent:
+    - current/user-operation-next-step-capability-and-intent-guard.md
+  clarification_architecture_and_research_trigger_adjudication:
+    - current/frontier-planning-clarification-handoff-adjudication-guard.md
+```
+
+The more specific correction/adjudication guard controls only its stated scope. It does not replace unrelated requirements in the broader guards.
 
 ## Files not loaded as action-plan sources by this command
 
-Do not read these files as the current conversation's action plan merely because the user invoked this command:
+Do not read these as the conversation's action plan merely because guidance is loaded:
 
 - `current/active-context.md`
 - `handoff/handoff-current.md`
 - `current/todo.md`
 - `current/open-questions.md`
 
-If any of those files are read for a separate explicit task, treat their maintenance route as non-execution-source background unless the user has separately invoked an explicit handoff receive or Mnemosyne maintenance task.
+If separately required, treat them according to their own authority and freshness rather than as execution source.
 
 ## Required behavior
 
 1. Do not rely on old conversation context or model memory as repository truth.
 2. Treat `current/human-approved-spec.md` as the only Mnemosyne execution source.
-3. Apply the objective neutral engineering stance from `current/human-approved-spec.md`.
-4. Apply the operation/conclusion separation principle from `current/human-approved-spec.md`.
-5. Apply `current/user-operation-next-step-capability-and-intent-guard.md`:
-   - put current user operations in the opening `操作内容（需要你手动执行）` section, or state `无需用户操作`;
-   - put a meaningful follow-on in a closing, visually explicit `下一步` section;
-   - never hide a current mandatory user action only at the end;
-   - explicitly state whether the next stage requires, recommends, or does not require frontier/Pro-class reasoning;
-   - re-estimate model capability after research, failure, safety, surface-capability, or scope changes;
-   - separately assess whether Pro Deep Research is unnecessary, optional, recommended, required before a high-impact decision, or premature because of an upstream dependency;
-   - separately assess whether an independent Fable-class or other-provider frontier review has a distinct non-duplicative role;
-   - when research is recommended or required and the topic is sufficiently frozen, automatically deliver a complete ready-to-run task and report contract without requiring another frontier turn merely to ask for the prompt;
-   - never fabricate a research report before the designated run exists and never treat task generation as quota or execution authorization;
-   - route owner preferences to user clarification and external evidence gaps to verification/research rather than asking the wrong actor;
-   - treat user wording as primary evidence but not automatically a complete final specification;
-   - preserve likely intent, alternatives, assumptions, uncertainty, and user correction rights without mind-reading or overriding confirmed decisions;
-   - when a next-tier model can conduct interactive clarification, provide a self-contained clarification package with question context, meaning, consequences, options, recommendations, answer formats, stop rules, and escalation triggers;
-   - require the next-tier interviewer to maintain an answer ledger, explain why questions matter, capture corrections, and return high-impact conflicts to frontier review.
-6. Apply the handoff/continuation correctness principle from `current/human-approved-spec.md` when handoff artifacts or continuation claims are actually part of the local task.
-7. Apply the long-transfer file/chunking guidance from `current/human-approved-spec.md` and `current/artifact-delivery-and-direct-generation-guard.md` when producing content for transfer, backup, archival, or later machine/operator reuse.
-8. When designing a prompt, taskbook, handoff, Work task, Pro task, Deep Research task, Codex task, or future-Agent task whose complete final response must be returned to another conversation or preserved for review, explicitly require a separately downloadable `<TASK_ID>-complete-response.md` or stable equivalent in the same final response. Distinguish it from named substantive artifacts; do not make the operator send a second prompt solely to export the already-issued response.
-9. When the user explicitly requests a low-risk downloadable artifact and no additional content decision or external-action authorization is required, create the local artifact in the same response when an available tool can do so safely; do not merely promise later generation.
-10. Before claiming delivery, verify that file creation succeeded and provide a real artifact link or available transfer pointer. Never invent a path or attachment.
-11. Keep safe local artifact generation separate from any independently gated repository write, upload, email, forwarding, quota spend, research execution, or other external action.
-12. Apply the Deep Research output exception from `current/human-approved-spec.md`: the final Deep Research report body remains in the final report/answer, while prompts and other transfer artifacts remain file-first when applicable. If the full Deep Research response must be transferred, require an auxiliary complete-response file without replacing the inline canonical report.
-13. Apply dependency-aware staged batch-gating from `current/human-approved-spec.md` when generating multiple Pro / Deep Research / cross-conversation prompts. Do not generate downstream tasks that are likely to be invalidated by an upstream report unless the user explicitly accepts that risk.
-14. Treat repository visibility as operator-controlled and stage-dependent; verify visibility when relevant, especially before imports, and apply the MNEMOSYNE-043 safety gate.
-15. Treat platform/model/tool behavior as time-sensitive when relevant and verify current facts when possible.
-16. Preserve the current conversation's local task mainline.
-17. Do not import the Mnemosyne maintenance live route as the current conversation's next step.
-18. Do not infer that the user wants handoff merely because this command was invoked.
-19. If this command follows an explicit handoff receive, preserve the received package's task intent, boundaries, and safe next action; do not erase or replace them with maintenance live-state files.
-20. When repository branch or PR creation is in scope, apply `current/github-single-active-pr-lineage-guard.md`: perform duplicate-lineage preflight before branch creation and again before PR creation, continue an existing related PR instead of creating an unapproved parallel PR, and present exactly one merge target to the user.
-21. When any GitHub or connected-repository write, or creation or modification of an important record intended for repository publication, is in scope, apply `current/run-context-and-pr-provenance-guard.md`: record actual actor/action source, the operator-visible or operator-reported product selection verbatim, any provider-documented normalization separately, backend status under the guard's discriminated schema, model/surface switches, component review relations, human adjudication, task-scoped user authorization, and the later-review boundary.
-22. If required files for behavior guidance are unavailable, state the limitation and do not invent repository state.
+3. Apply objective, neutral, evidence-bound engineering judgment.
+4. Put every current user operation in an opening `操作内容（需要你手动执行）` section, or state `无需用户操作`.
+5. Put meaningful follow-on work in a visible closing `## 下一步` section; never hide a current mandatory action only at the end.
+6. Explicitly state whether the next stage requires, recommends or does not require frontier/Pro-class reasoning.
+7. Re-estimate capability after research, failure, safety, product-surface or scope changes.
+8. Separately assess Pro Deep Research and independent frontier-review value.
+9. Generate a ready-to-run research task without another frontier turn only when the question is external, decision-relevant, sufficiently frozen and worth the cost; task generation is not execution or quota authorization.
+10. Preserve the human owner's provider/surface, quota and research-execution trigger.
+11. Do not fabricate a report before a real run.
+12. Route owner decisions to contextualized user clarification; route external facts to verification/research; route design conflicts to frontier analysis; stop on missing required artifacts.
+13. Treat user wording as primary evidence but not automatically a complete final specification. Preserve candidate restatements, alternatives, assumptions, uncertainty and correction rights.
+14. Use risk-adaptive clarification routing:
+    - direct frontier for high-impact/low-clarity or authority/privacy/architecture/trust-boundary work;
+    - structured owner package for bounded direct decisions;
+    - next-tier interviewer only as a validation-gated candidate with a frozen self-contained package, visible ledger and semantic escalation;
+    - research-first only for decision-relevant external evidence gaps.
+15. Give every material question sufficient background, meaning, downstream consequence, option interpretation, free-form/reject-premise path, deferral effect and escalation context.
+16. Recommendations must be separated from facts and owner values, remain rejectable and never silently default a high-impact owner decision.
+17. Require a visible or retrievable correction-aware answer ledger when an interaction spans multiple dependent questions. External persistence is conditional, not universal.
+18. For Deep Research, require one complete canonical report. Markdown/Word/PDF downloads are exports of the same report, not second research outputs. Do not require an arbitrary separately generated `complete-response.md` file unless the current surface explicitly supports and confirms it.
+19. For non-Deep-Research tasks, retain the complete-response transfer-file rule when the full final response genuinely differs from named artifacts and the surface can create the file.
+20. Apply long-transfer file-first delivery when relevant, but never claim a file or sandbox path exists without verification.
+21. Keep local artifact generation separate from repository write, upload, forwarding, quota spend and research execution authority.
+22. Apply dependency-aware staged generation for multiple Pro/Deep Research/cross-conversation tasks; do not generate likely-invalidated downstream tasks without explicit user acceptance.
+23. Treat repository visibility and product/model/tool behavior as time-sensitive when relevant.
+24. Preserve the current conversation's task mainline; do not import maintenance live routes or infer a handoff.
+25. Apply the single-active-PR lineage guard before branch creation and again before PR creation.
+26. Apply the run-context and PR provenance guard to important repository-writing work.
+27. If required files are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
-
-Report the refresh as behavior guidance only:
 
 ```yaml
 mnemosyne_guidance_refresh:
@@ -124,37 +120,25 @@ mnemosyne_guidance_refresh:
     - closing_next_step_section_when_meaningful
     - explicit_next_step_model_capability_estimate
     - explicit_Pro_Deep_Research_need_assessment
-    - parallel_frontier_research_role_assessment
-    - automatic_ready_to_run_research_task_delivery_when_recommended_and_ready
-    - no_fabricated_report_or_automatic_quota_spend
-    - human_expression_and_intent_reconstruction_with_user_correction
-    - context_rich_clarification_package_for_next_tier_interaction
-    - cumulative_answer_ledger_and_frontier_escalation
-    - handoff_correctness_when_handoff_is_explicitly_in_scope
-    - artifact_file_first_delivery_when_relevant
-    - complete_response_transfer_file_when_full_reply_return_is_required
-    - same_response_low_risk_artifact_generation_when_relevant
-    - verified_artifact_link_and_no_invented_path
-    - Deep_Research_full_report_body_exception
-    - staged_prompt_generation_when_relevant
-    - visibility_and_manual_import_safety_when_relevant
-    - platform_freshness_check_when_relevant
-    - single_active_pr_lineage_when_repository_write_is_relevant
-    - run_context_and_PR_model_disclosure_when_repository_write_is_relevant
+    - selective_parallel_frontier_review_assessment
+    - risk_adaptive_clarification_routing
+    - context_rich_material_questions
+    - user_correction_and_intent_reconstruction
+    - visible_answer_ledger_and_semantic_escalation
+    - one_canonical_Deep_Research_report_and_supported_export
+    - file_first_delivery_when_relevant
+    - staged_prompt_generation
+    - visibility_and_platform_freshness
+    - single_active_PR_lineage_when_relevant
+    - run_context_and_PR_provenance_when_relevant
 ```
 
-Do not report Mnemosyne maintenance current phase, current active task, paused route, or next-route options as the receiving conversation's local task state merely because this command was invoked.
+Do not report the Mnemosyne maintenance current phase or next-route options as the receiving conversation's local task state merely because this command was invoked.
 
 ## Boundaries
 
-- This command is a shortcut for refreshing existing behavior guidance in the current conversation.
-- This command is not an execution source.
-- This command does not approve new design content.
-- Loading the user-operation/capability/research/clarification/intent guard does not authorize model switching, quota use, research execution, psychological profiling, repository writes, or changes to a target project's truth source.
-- Loading the artifact-delivery guard does not authorize repository writes, uploads, email, forwarding, or other external actions.
-- This command does not authorize edits, automation, MCP, RAG, auto-writeback, or changes outside the user-approved task scope.
-- This command does not authorize target workspace creation, target material ingestion, target repository write, operational build, regression formalization, or execution-source update.
-- Loading the single-active PR lineage guard does not itself authorize branch creation, PR creation, parallel PRs, merges, or task-number reuse.
-- Loading the run-context and PR provenance guard does not attest a backend model, authorize a model switch, or make a model label an execution source.
-- This command does not authorize importing Mnemosyne maintenance live route into the current conversation.
-- This command does not start handoff. No handoff exists unless the user explicitly provides or requests an artifact-mediated handoff through the separate prepare/receive workflow.
+- This command is not an execution source and does not approve new project content.
+- Loading guidance does not authorize model switching, quota use, research execution, repository writes, target-project changes, automation, MCP, RAG or auto-writeback.
+- It does not attest an exact backend.
+- It does not start a handoff.
+- It does not automatically propagate the clarification architecture into Meta-Agent or another target project's truth source.
