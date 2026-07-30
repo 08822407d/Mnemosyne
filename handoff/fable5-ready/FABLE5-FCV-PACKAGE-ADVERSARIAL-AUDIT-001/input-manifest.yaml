@@ -1,0 +1,85 @@
+manifest_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-INPUTS-001
+manifest_version: 0.1.0
+task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+canonical_task: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
+source_package:
+  package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
+  package_version: 0.1.0
+  merge_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
+  current_master_allowed_only_if:
+    - every_required_path_is_readable
+    - package_id_and_version_match
+    - required_files_are_consistent_with_the_manifest
+    - any_commit_attestation_limitation_is_explicit
+repository:
+  full_name: 08822407d/Mnemosyne
+  preferred_branch_for_current_UI: master
+  access: read_only
+  history_PR_or_metadata_access_assumed: false
+preferred_delivery:
+  environment: fresh_standalone_chat_or_new_one_run_Project
+  Project_Files: empty
+  chat_GitHub: plus_Add_from_GitHub
+  Research_during_preflight: false
+  visible_model: Fable_5
+  visible_effort: Max
+selection_groups:
+  - group_id: READY_AND_TASK
+    paths:
+      - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
+      - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+  - group_id: COMPLETE_VALIDATION_PACKAGE_FOLDER
+    select_folder_when_supported: notes/frontier-clarification-validation-package/
+    exact_paths:
+      - notes/frontier-clarification-validation-package/README.md
+      - notes/frontier-clarification-validation-package/00-scope-manifest-v0.1.md
+      - notes/frontier-clarification-validation-package/01-protocol-spec-v0.1.md
+      - notes/frontier-clarification-validation-package/02-condition-contracts-q0-q4-v0.1.md
+      - notes/frontier-clarification-validation-package/03-public-synthetic-scenario-set-v0.1.md
+      - notes/frontier-clarification-validation-package/04-hidden-author-keys-v0.1.md
+      - notes/frontier-clarification-validation-package/05-answer-ledger-and-escalation-tests-v0.1.md
+      - notes/frontier-clarification-validation-package/06-rubric-and-decision-rules-v0.1.md
+      - notes/frontier-clarification-validation-package/07-reviewer-and-adjudication-taskbook-v0.1.md
+      - notes/frontier-clarification-validation-package/08-v0-sentinel-context-isolation-taskbook-v0.1.md
+      - notes/frontier-clarification-validation-package/09-v1-small-smoke-execution-taskbook-v0.1.md
+      - notes/frontier-clarification-validation-package/10-run-manifest-template-v0.1.md
+      - notes/frontier-clarification-validation-package/11-result-return-and-maintainer-review-package-v0.1.md
+      - notes/frontier-clarification-validation-package/12-execution-surface-and-user-decision-package-v0.1.md
+      - notes/frontier-clarification-validation-package/13-package-integrity-checklist-v0.1.md
+  - group_id: EXTERNAL_AUTHORITY_AND_ADJUDICATION
+    paths:
+      - notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md
+      - notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/03-cross-report-consensus-conflict-and-adjudication.md
+      - notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/04-interim-architecture-and-validation-decision.md
+mandatory_audit_inputs_count_excluding_ready_entrypoint: 19
+manual_upload_fallback:
+  upload_count: 19
+  upload:
+    - canonical_task
+    - all_15_package_files
+    - all_3_external_authority_and_adjudication_files
+  do_not_upload:
+    - OPERATOR.md
+    - this_manifest_if_the_transfer_receipt_reproduces_it_exactly
+    - prior_Pro_report
+    - prior_Fable_report
+    - A2_task_or_report
+    - unrelated_repository_files
+  stop_if:
+    - current_chat_limit_or_product_behavior_prevents_complete_set
+    - any_file_is_truncated_or_transformed_without_receipt
+preflight_minimum_paths:
+  - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
+  - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
+  - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+  - notes/frontier-clarification-validation-package/README.md
+contamination_exclusions:
+  - foundational_Pro_report
+  - foundational_Fable_report
+  - A2_task_or_future_report
+  - hidden_material_outside_the_package_under_audit
+  - existing_Project_memory_or_prior_chats
+  - unrelated_Mnemosyne_files
+failure_status: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+return_route: current_Mnemosyne_frontier_clarification_validation_route
