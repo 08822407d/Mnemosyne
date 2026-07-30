@@ -1,0 +1,63 @@
+manifest_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-INPUT-001
+task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+state: ready_not_executed
+repository: 08822407d/Mnemosyne
+pinned_commit: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
+access_mode_preferred: chat_level_GitHub_connector_on_demand
+Project_Files_required: false
+whole_repository_selection: prohibited
+prior_Pro_or_Fable_reports: prohibited
+A1_report_visibility: prohibited_before_both_reports_complete
+repository_write: prohibited
+validation_execution: prohibited
+live_surface_test: prohibited
+
+entrypoint:
+  - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
+canonical_task:
+  - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+manual_surface_candidate:
+  - notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
+execution_source_for_process_and_safety:
+  - current/human-approved-spec.md
+
+mandatory_package_files:
+  - notes/frontier-clarification-validation-package/README.md
+  - notes/frontier-clarification-validation-package/01-protocol-spec-v0.1.md
+  - notes/frontier-clarification-validation-package/02-condition-contracts-q0-q4-v0.1.md
+  - notes/frontier-clarification-validation-package/04-hidden-author-keys-v0.1.md
+  - notes/frontier-clarification-validation-package/07-reviewer-and-adjudication-taskbook-v0.1.md
+  - notes/frontier-clarification-validation-package/08-v0-sentinel-context-isolation-taskbook-v0.1.md
+  - notes/frontier-clarification-validation-package/10-run-manifest-template-v0.1.md
+  - notes/frontier-clarification-validation-package/11-result-return-and-maintainer-review-package-v0.1.md
+  - notes/frontier-clarification-validation-package/12-execution-surface-and-user-decision-package-v0.1.md
+
+explicit_selection_fallback:
+  strategy: select_complete_package_folder_to_reduce_operator_error
+  selections:
+    - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
+    - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+    - notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
+    - notes/frontier-clarification-validation-package/
+    - current/human-approved-spec.md
+  resulting_file_count:
+    ready_entrypoint: 1
+    canonical_task: 1
+    manual_candidate: 1
+    package_files: 15
+    execution_source: 1
+    total: 19
+
+input_gate:
+  require_exact_commit: true
+  require_complete_task: true
+  require_every_mandatory_path: true
+  extra_package_files_from_folder_selection: allowed_as_same_audit_object
+  missing_truncated_or_wrong_ref_result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  analysis_after_failure: prohibited
+
+return_destination: current_Mnemosyne_frontier_clarification_validation_route
+archive_after_acceptance:
+  task: raw/research-reports/cycles/<assigned_cycle>/tasks/
+  report_or_receipt: raw/research-reports/cycles/<assigned_cycle>/reports/
+  remove_ready_directory: true
