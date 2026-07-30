@@ -3,7 +3,7 @@
 ```yaml
 task_id: MNEMOSYNE-184
 record_type: PR_finalization_and_lineage_binding
-status: FINALIZATION_IN_PROGRESS
+status: FINALIZED_READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
@@ -13,10 +13,12 @@ rejected_predecessor_PR: 235
 predecessor_merged: false
 predecessor_adopted: false
 PR_state: open
-PR_draft: true
+PR_draft: false
+PR_mergeable_after_recalculation: true
 PR_merged: false
 merge_performed: false
 auto_merge_enabled: false
+final_head_identity: authoritative_in_current_PR_236_metadata_after_this_record_commit
 ```
 
 ## 1. Lineage gates
@@ -117,48 +119,83 @@ checks:
 
 No live Claude connector test was performed. The operator preflight is the first run-specific evidence gate.
 
-## 6. PR state before final recheck
+## 6. PR lifecycle and mergeability resolution
 
 ```yaml
-PR_snapshot:
+PR_lifecycle:
   PR: 236
-  draft: true
+  created_as_draft: true
+  ready_transition_completed: true
+  state_after_ready_transition: open
   merged: false
-  compact_mergeable_snapshot: false
-  interpretation: pending_GitHub_recalculation_and_full_fetch_recheck
-  head_before_this_record: 3a67ae72d1842ddb4c04b9a2967346f309289f02
-  commits_before_this_record: 19
-  changed_files_before_this_record: 14
+  compact_mergeability_snapshots:
+    before_recalculation: false
+    after_recalculation: true
+  accepted_current_mergeability: true
+  interpretation: GitHub_recalculated_mergeability_after_branch_and_PR_metadata_settled
+  head_before_this_finalization_commit: 148a1582dc3f503e7ba8b48debc60d63ceac8c30
+  commits_before_this_finalization_commit: 21
+  changed_files_before_this_finalization_commit: 15
+  additions_before_this_finalization_commit: 2047
+  deletions_before_this_finalization_commit: 192
 ```
 
-The initial `mergeable: false` snapshot is not treated as a conflict until GitHub recalculates the new head and a full PR fetch is performed.
+The earlier false snapshot is preserved rather than hidden. A later full metadata recheck for the same head reported `mergeable: true`, which is the resolved current value before this record update.
 
-## 7. Checks still required before ready transition
+## 7. Verification evidence
 
 ```yaml
-pending_final_checks:
-  - bind_result_record_to_PR_236
-  - compare_final_head_to_base
-  - confirm_behind_by_zero
-  - enumerate_accessible_open_PRs
-  - recheck_mergeability
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_ready_for_review
+verification:
+  base: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
+  compare_before_this_finalization_commit:
+    status: ahead
+    ahead_by: 21
+    behind_by: 0
+    changed_files: 15
+  accessible_open_PRs:
+    - 236
+  exactly_one_canonical_open_PR: true
+  commit_statuses_before_this_finalization_commit: []
+  workflow_runs_before_this_finalization_commit: []
+  CI_pass_claim: false
+  local_independent_clone_or_parser_check: unavailable
+  verification_class: connector_backed_plus_cross_document_author_review
 ```
 
-## 8. Actions not performed
+No commit status or workflow run was reported. This means no CI evidence was available; it is not a CI-pass claim. The exact final head and final counts after this record commit are recorded in current PR #236 metadata and its final description.
+
+## 8. External actions
+
+```yaml
+external_actions:
+  branch_created: true
+  files_created_or_updated_on_branch: true
+  PR_created: true
+  PR_marked_ready_for_review: true
+  PR_merged: false
+  auto_merge_enabled: false
+  comments_added: false
+  labels_changed: false
+```
+
+## 9. Actions not performed
 
 ```yaml
 not_performed:
-  merge: true
-  auto_merge: true
   Fable5_execution: true
   quota_spend: true
   validation_execution: true
+  V0_or_V1_authorization: true
+  Claude_Project_Files_change: true
+  live_Claude_connector_test: true
   execution_source_change: true
-  target_project_change: true
+  Meta_Agent_target_change: true
+  non_FABLE_route_takeover: true
+  merge_or_auto_merge: true
 ```
 
-Here `true` means the named action was not performed.
+In the block above, `true` means the named action was not performed.
+
+## 10. Safe next action
+
+Human review of PR #236 is the only current repository action. After merge, the user may run zero, one or both ready Fable5 tasks using their separate operator guides. No research, surface selection, V0, V1 or Stage B action follows automatically.
