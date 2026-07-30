@@ -3,172 +3,204 @@
 > Non-execution-source live status. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: FRONTIER-PLANNING-CLARIFICATION-HANDOFF-RESEARCH-STATUS-004
+status_id: FRONTIER-PLANNING-CLARIFICATION-HANDOFF-RESEARCH-STATUS-005
 created_by_task: MNEMOSYNE-178
-last_status_task: MNEMOSYNE-181
+last_status_task: MNEMOSYNE-182
 source_guard: current/user-operation-next-step-capability-and-intent-guard.md
 adjudication_guard: current/frontier-planning-clarification-handoff-adjudication-guard.md
 delivery_correction_guard: current/deep-research-report-delivery-correction-guard.md
 source_cycle: RC-2026Q3-frontier-planning-clarification-handoff
 validation_design: notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md
-scoped_handoff_status: current/frontier-clarification-validation-handoff-status.md
-scoped_handoff_package: handoff/mnemosyne-frontier-clarification-validation-handoff-package.md
-scoped_startup_prompt: handoff/mnemosyne-frontier-clarification-validation-startup-prompt.md
 complete_validation_package: notes/frontier-clarification-validation-package/README.md
-canonical_validation_package_PR: 233
-status: research_complete_adjudicated_handoff_received_and_validation_package_prepared_in_PR_233
+validation_package_merge_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
+post_package_Fable5_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.1.md
+canonical_followup_PR: 234
+status: foundational_research_complete_package_merged_and_two_post_package_Fable5_audits_prepared_not_executed
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
-Pro_research_executed: true
-Fable_research_executed: true
-reports_received: true
-additional_research_recommended: false
+foundational_Pro_research_executed: true
+foundational_Fable_research_executed: true
+foundational_reports_adjudicated: true
+additional_foundational_same_topic_research_recommended: false
+post_package_independent_Fable5_review_recommended: true
+post_package_Fable5_executed: false
 validation_package_prepared: true
+validation_package_merged: true
 controlled_validation_selected: false
 controlled_validation_completed: false
 target_project_propagation_authorized: false
 ```
 
-## 1. Research completion
+## 1. Closed foundational research cycle
 
 ```yaml
-Pro:
-  task: PRO-DR-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001
-  task_original: raw/research-reports/cycles/2026Q3-frontier-planning-clarification-handoff/tasks/PRO-DR-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001-task.md
-  report_receipt: raw/research-reports/cycles/2026Q3-frontier-planning-clarification-handoff/reports/PRO-DR-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001-report-receipt.md
-  disposition: ACCEPT_WITH_CORRECTIONS_AS_PRIMARY_NON_EXECUTION_SOURCE_EVIDENCE
-
-Fable:
-  task: FABLE5-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001
-  task_original: raw/research-reports/cycles/2026Q3-frontier-planning-clarification-handoff/tasks/FABLE5-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001-task.md
-  report_receipt: raw/research-reports/cycles/2026Q3-frontier-planning-clarification-handoff/reports/FABLE5-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001-report-receipt.md
-  disposition: ACCEPT_WITH_CORRECTIONS_AS_INDEPENDENT_ADVERSARIAL_NON_EXECUTION_SOURCE_EVIDENCE
-  rerun_required: false
-
-additional_same_topic_research: not_needed
+foundational_research:
+  Pro:
+    task: PRO-DR-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001
+    disposition: ACCEPT_WITH_CORRECTIONS_AS_PRIMARY_NON_EXECUTION_SOURCE_EVIDENCE
+  Fable:
+    task: FABLE5-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001
+    disposition: ACCEPT_WITH_CORRECTIONS_AS_INDEPENDENT_ADVERSARIAL_NON_EXECUTION_SOURCE_EVIDENCE
+    rerun_required: false
+  cross_report_adjudication: complete
+  additional_broad_architecture_research: not_needed
 ```
 
-The old `notes/research-prompts/` paths are completion redirects and must not be copied as runnable tasks.
+Do not rerun or lightly rephrase the completed foundational questions. The old completion redirects under `notes/research-prompts/` are not runnable tasks.
 
-## 2. Cross-report verdict
+## 2. Adjudicated architecture state
 
 ```yaml
-consensus:
-  - context_rich_material_questions
-  - literal_user_evidence_separate_from_Agent_interpretation
-  - user_correction_rejection_deferral_and_supersession
-  - uncertainty_routing_by_owner_fact_research_design_or_artifact
-  - human_retains_quota_and_research_execution_trigger
-  - selective_independent_frontier_review
-  - controlled_validation_before_durable_propagation
-
 adjudication:
   universal_clarification_default: rejected
-  pure_packet_to_next_tier_default: not_approved
+  direct_frontier: required_for_high_impact_low_clarity
   structured_owner_package: available_route
   next_tier_interviewer: validation_gated_candidate
   gated_mixed_escalation: preferred_validation_candidate_for_mixed_impact
-  direct_frontier: required_for_high_impact_low_clarity
   research_first: decision_relevant_external_fact_gaps_only
+  human_retains_surface_quota_and_execution_authority: true
 ```
 
-## 3. Deep Research delivery correction
+No research report is target truth or execution source.
+
+## 3. New object created after foundational research
+
+PR #233 merged a complete validation package that did not exist when the foundational reports were written:
 
 ```yaml
-canonical_Deep_Research_output: one_complete_report
-Markdown_Word_PDF: exports_of_same_report
-mandatory_second_custom_complete_response_file: false
-operator_export_when_transfer_needed: supported_candidate
+merged_validation_package:
+  package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
+  version: 0.1.0
+  merge_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
+  public_synthetic_scenarios: 14
+  V1_smoke_scenarios: 8
+  Q0_to_Q4_conditions: 5
+  V1_primary_cells: 40
+  V0_materials: prepared_not_authorized_not_executed
+  V1_materials: prepared_not_authorized_not_executed
 ```
 
-The old two-output interpretation is superseded for Deep Research only.
+The remaining foundational evidence gap remains direct controlled workflow validation. A static audit cannot replace it.
 
-## 4. Current behavior state
+## 4. Why two new Fable5 tasks are recommended
 
-The user-requested response structure, model-capability assessment, research-need assessment and contextualized-question requirements remain active. Research and adjudication narrow their implementation:
-
-- use risk-adaptive clarification routing;
-- do not automatically assign all clarification to a next-tier interviewer;
-- do not force every owner decision into a large package;
-- do not overuse Deep Research;
-- do not let a research task or report override owner authority;
-- do not propagate the candidate workflow into target projects without their owner decision.
-
-## 5. Remaining evidence gap and prepared package
+The new tasks review concrete post-research artifacts rather than repeating the original theory question.
 
 ```yaml
-remaining_gap:
-  type: direct_workflow_validation
-  questions:
-    - whether_next_tier_interviewing_preserves_intent
-    - whether_live_interaction_outperforms_structured_owner_package
-    - whether_gated_escalation_reduces_frontier_turns_after_rework
-    - whether_high_impact_escalations_are_reliably_detected
-    - whether_research_trigger_avoids_over_and_premature_research
-  state:
-    conceptual_design: complete
-    complete_execution_and_review_package: prepared_in_PR_233
-    package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
-    package_root: notes/frontier-clarification-validation-package/
-    public_synthetic_scenarios: 14
-    V1_smoke_scenarios: 8
-    conditions: 5
-    V1_primary_cells_defined: 40
-    selected_for_execution: false
-    V0_executed: false
-    V1_executed: false
-    V2_executed: false
-    V3_executed: false
+Stage_A_tasks:
+  - task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+    path: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+    role: independent_construct_validity_protocol_failure_and_falsification_audit
+    decision_it_can_change:
+      - proceed_to_surface_gate
+      - amend_package_before_surface_selection
+      - major_redesign_or_stop
+
+  - task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+    path: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+    role: independent_manual_surface_isolation_provenance_no_write_and_burden_audit
+    decision_it_can_change:
+      - prepare_manual_V0_preflight
+      - revise_manual_candidate
+      - prefer_API_or_runtime
+      - defer_or_stop
 ```
 
-The package contains separated public scenarios and hidden author keys, frozen Q0–Q4 contracts, answer-ledger and semantic-escalation tests, protocol-validity and condition-safety rubrics, reviewer/adjudicator instructions, V0 sentinel and V1 small-smoke taskbooks, a run manifest, return package and execution-surface decision package.
+Both are ready to run only after their task PR is reviewed and merged. They may run in separate fresh Fable5 conversations without seeing one another's report.
 
-## 6. Handoff completion
+## 5. Staged quota discipline
 
 ```yaml
-handoff_state:
-  PR_232: merged
-  package_received_against_master: true
-  Mnemosyne_guidance_refresh_completed: true
-  transferred_task_preserved: PREPARE_READ_ONLY_VALIDATION_PACKAGE
-  package_preparation_completed_by: MNEMOSYNE-181
-  canonical_package_PR: 233
-  validation_execution_performed: false
-  real_or_private_data_used: false
-  Meta_Agent_route_imported: false
-  non_FABLE_health_review_route_imported: false
+Fable5_quota_plan:
+  high_value_tasks_ready_now: 2
+  conditional_topics_reserved: 4
+  simultaneous_generation_of_all_six_tasks: not_recommended
+  automatic_execution: prohibited
+  automatic_quota_spend: prohibited
+  user_retains:
+    - whether_to_run_A1
+    - whether_to_run_A2
+    - order_or_parallel_execution
+    - later_Stage_B_execution
 ```
 
-The package does not replace or modify `handoff/handoff-current.md`, which belongs to another route.
+Conditional Stage B topics:
 
-## 7. Capability and research assessment
+1. reviewer independence and next-tier judge reliability;
+2. V1 inference limits and progression thresholds;
+3. no-write/context-isolation evidence equivalence;
+4. portability and target-project propagation after valid V1 evidence.
+
+They are not ready-to-run because Stage A findings or the surface decision may change or eliminate them.
+
+## 6. Research execution contract
+
+```yaml
+Stage_A_execution:
+  execute_in: two_separate_fresh_Fable5_high_or_xhigh_research_conversations
+  prior_Pro_or_foundational_Fable_reports_supplied: false
+  repository_access: read_only
+  repository_write: prohibited
+  connected_service_write: prohibited
+  validation_execution: prohibited
+  real_or_private_material: prohibited
+  exact_backend_identity: unknown_or_not_attestable_without_run_metadata
+  return_complete_reports_to: current_Mnemosyne_frontier_clarification_validation_route
+```
+
+A report must pass input-integrity, task-binding, source-role and evidence-calibration review before it influences a package amendment or surface decision.
+
+## 7. Current evidence and execution state
+
+```yaml
+current_state:
+  conceptual_design: complete
+  complete_execution_and_review_package: merged
+  independent_post_package_static_audit: prepared_not_run
+  manual_surface_candidate: prepared_not_selected_not_verified
+  selected_execution_surface: none
+  V0_authorized: false
+  V0_executed: false
+  V1_authorized: false
+  V1_executed: false
+  V2_executed: false
+  V3_executed: false
+```
+
+No synthetic validation result, pass rate or model ranking exists.
+
+## 8. Capability and research assessment
 
 ```yaml
 model_capability_estimate:
-  package_design: FRONTIER_RECOMMENDED
-  frozen_population: NEXT_TIER_SUFFICIENT_CANDIDATE
-  integrity_checks: MECHANICAL_ONLY
-  future_execution: UNKNOWN_REASSESS_BEFORE_EXECUTION
+  post_package_audit_task_design: FRONTIER_RECOMMENDED
+  independent_Fable5_review: FRONTIER_RECOMMENDED_INDEPENDENT_ROLE
+  frozen_task_execution_and_source_collection: Fable5_high_or_xhigh_requested
+  deterministic_package_integrity_checks: MECHANICAL_ONLY
+  report_adjudication_and_package_amendment: FRONTIER_RECOMMENDED
 
 research_assessment:
   additional_Pro_Deep_Research: NOT_NEEDED
-  additional_Fable_or_parallel_frontier_research: NOT_NEEDED
-  reason: primary_and_adversarial_reviews_converge_that_direct_workflow_validation_is_the_missing_evidence
+  additional_foundational_Fable_research: NOT_NEEDED
+  Fable5_post_package_Stage_A: RECOMMENDED
+  Stage_B: DEFER_UNTIL_STAGE_A_ADJUDICATION
 ```
 
-## 8. Exactly one safe next action
+## 9. Exactly one safe next action
 
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_PR_233_or_request_changes
+    - review_and_merge_PR_234_or_request_changes
   after_merge:
-    - complete_the_separate_execution_surface_and_user_decision_package
-    - verify_the_selected_surface_against_V0_requirements
-    - authorize_V0_only_or_defer_revise_or_stop
+    - user_may_run_zero_one_or_both_Stage_A_Fable5_tasks
+    - return_any_complete_reports_for_repository_bound_adjudication
+    - keep_surface_and_V0_unselected_until_report_and_owner_decisions
+  automatic_package_amendment: false
+  automatic_surface_selection: false
   automatic_V0_execution: false
   automatic_V1_execution: false
-  additional_Pro_Deep_Research: not_needed
-  additional_Fable_research: not_needed
   target_project_propagation: prohibited_without_separate_owner_decision
 ```
+
+PR #234 does not execute research or validation and does not modify Meta-Agent target files or the non-FABLE health-review route.
