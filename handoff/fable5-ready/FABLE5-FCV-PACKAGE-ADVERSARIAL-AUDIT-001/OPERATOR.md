@@ -19,23 +19,38 @@ The existing project shown in the user's 2026-07-30 screenshots has persistent M
 
 ## Preferred connector-linked steps
 
-1. Open the fresh chat.
-2. Select Fable 5 high/xhigh and enable Research only when ready to submit the task.
-3. In the chat input, click `+` -> `Add from GitHub`.
-4. Select repository `08822407d/Mnemosyne` and branch `master`.
-5. Confirm the repository link appears in the chat.
-6. Send the startup text below.
-7. The run must verify all mandatory paths at commit `67eb96d5317a2bb589236a4a8b2e75be2508d830` before analysis.
-8. If the task returns an input/repository integrity failure, do not ask it to guess or continue; use the explicit selection fallback.
+1. Open the fresh chat with Research still off.
+2. In the chat input, click `+` -> `Add from GitHub`.
+3. Select repository `08822407d/Mnemosyne` and branch `master`.
+4. Confirm the repository link appears in the chat.
+5. Send the connector preflight below. It performs no research and no substantive audit.
+6. Continue only if the same chat returns successful complete-read receipts for both entrypoint and canonical task.
+7. Select Fable 5 high/xhigh and enable Research.
+8. Send the startup instruction below.
+9. The run must verify all mandatory package paths and the source-package identity before analysis.
+10. If the task returns an input/repository integrity failure, do not ask it to guess or continue; use the explicit selection fallback.
+
+## Copyable connector preflight
+
+```text
+Use the GitHub connector read-only. Do not analyze the research topic. Read exactly these two files and return only a receipt with path, complete_read true/false, visible task_id, and any access limitation:
+
+handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
+notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+
+Do not read prior reports or any other research task. Do not write GitHub.
+```
+
+The preflight proves only that the connector is usable in this chat for the two task files. It does not prove that every mandatory evidence file is readable; the full task performs that gate.
 
 ## Copyable startup instruction
 
 ```text
-Use the GitHub connector read-only. First read:
+Use the GitHub connector read-only. First re-read:
 
 handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
 
-Then read and execute exactly the canonical task it identifies. Verify every mandatory repository path at the pinned commit before substantive analysis. Do not use prior Pro/Fable reports, other ready-task directories, Project Memory as evidence, or any GitHub write action. If any required file cannot be read completely at the pinned commit, return only the task-defined input/repository integrity failure.
+Then read and execute exactly the canonical task it identifies. Verify every mandatory repository path and the source-package identity before substantive analysis. The package files and three external evidence files were authored from package commit 67eb96d5317a2bb589236a4a8b2e75be2508d830; if the connector exposes only current master, verify the required paths, versions and manifest consistency and state any commit-attestation limitation explicitly rather than inventing it. Do not use prior Pro/Fable reports, other ready-task directories, Project Memory as evidence, or any GitHub write action. If any required file cannot be read completely or the audit object cannot be bound reliably, return only the task-defined input/repository integrity failure.
 ```
 
 ## Explicit GitHub selection fallback
@@ -57,8 +72,8 @@ The package folder contains 15 files. Including the ready entrypoint, canonical 
 
 If GitHub connector reads fail:
 
-1. download the exact files listed in `input-manifest.yaml` from the pinned commit;
-2. preserve original filenames and paths in a transfer receipt;
+1. download the exact files listed in `input-manifest.yaml` from the source package and current ready queue;
+2. preserve original filenames, paths and source identities in a transfer receipt;
 3. upload no more than the exact set;
 4. do not add the files to a reusable Project shared with A2;
 5. start a new one-run chat/project and submit the same startup instruction, replacing connector reads with the uploaded-file receipt.
