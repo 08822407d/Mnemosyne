@@ -1,0 +1,79 @@
+manifest_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-INPUTS-001
+manifest_version: 0.1.0
+task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+canonical_task: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
+source_candidate:
+  candidate_id: FRONTIER-CLARIFICATION-VALIDATION-MANUAL-SURFACE-CANDIDATE-001
+  candidate_version: 0.1.0
+  merge_commit: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
+  current_master_allowed_only_if:
+    - every_required_path_is_readable
+    - candidate_id_and_version_match
+    - package_id_and_version_match
+    - any_commit_attestation_limitation_is_explicit
+repository:
+  full_name: 08822407d/Mnemosyne
+  preferred_branch_for_current_UI: master
+  access: read_only
+  history_PR_or_metadata_access_assumed: false
+preferred_delivery:
+  environment: fresh_standalone_chat_or_new_one_run_Project_separate_from_A1
+  Project_Files: empty
+  chat_GitHub: plus_Add_from_GitHub
+  Research_during_preflight: false
+  visible_model: Fable_5
+  visible_effort: Max
+selection_groups:
+  - group_id: READY_AND_TASK
+    paths:
+      - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
+      - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+  - group_id: MANUAL_SURFACE_CANDIDATE
+    paths:
+      - notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
+  - group_id: REQUIRED_VALIDATION_PACKAGE_SUBSET
+    paths:
+      - notes/frontier-clarification-validation-package/README.md
+      - notes/frontier-clarification-validation-package/01-protocol-spec-v0.1.md
+      - notes/frontier-clarification-validation-package/02-condition-contracts-q0-q4-v0.1.md
+      - notes/frontier-clarification-validation-package/04-hidden-author-keys-v0.1.md
+      - notes/frontier-clarification-validation-package/07-reviewer-and-adjudication-taskbook-v0.1.md
+      - notes/frontier-clarification-validation-package/08-v0-sentinel-context-isolation-taskbook-v0.1.md
+      - notes/frontier-clarification-validation-package/10-run-manifest-template-v0.1.md
+      - notes/frontier-clarification-validation-package/11-result-return-and-maintainer-review-package-v0.1.md
+      - notes/frontier-clarification-validation-package/12-execution-surface-and-user-decision-package-v0.1.md
+  - group_id: MNEMOSYNE_AUTHORITY_BOUNDARY
+    paths:
+      - current/human-approved-spec.md
+mandatory_audit_inputs_count_excluding_ready_entrypoint: 12
+manual_upload_fallback:
+  upload_count: 12
+  upload:
+    - canonical_task
+    - manual_surface_candidate
+    - all_9_required_package_files
+    - current_human_approved_spec
+  do_not_upload:
+    - OPERATOR.md
+    - this_manifest_if_the_transfer_receipt_reproduces_it_exactly
+    - prior_Pro_report
+    - prior_Fable_report
+    - A1_task_or_report
+    - unrelated_repository_files
+  stop_if:
+    - any_file_is_missing_truncated_or_transformed_without_receipt
+preflight_minimum_paths:
+  - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
+  - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
+  - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+  - notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
+contamination_exclusions:
+  - foundational_Pro_report
+  - foundational_Fable_report
+  - A1_task_or_report
+  - hidden_material_not_named_by_this_task
+  - existing_Project_memory_or_prior_chats
+  - unrelated_Mnemosyne_files
+failure_status: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+return_route: current_Mnemosyne_frontier_clarification_validation_route
