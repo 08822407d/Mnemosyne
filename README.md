@@ -18,6 +18,8 @@ GitHub repository-writing 单任务单活跃 PR 谱系防护：`current/github-s
 
 用户操作置顶、下一步收尾、模型能力与 Deep Research 需求预估、上下文化澄清交接和人类意图重构防护：`current/user-operation-next-step-capability-and-intent-guard.md`。研究后风险分流与架构裁决：`current/frontier-planning-clarification-handoff-adjudication-guard.md`。配套澄清模板：`notes/templates/frontier-planned-clarification-package-v0.1.md`；研究状态：`current/frontier-planning-clarification-handoff-research-status.md`；验证设计：`notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md`。这些文件不是执行源，也不自动修改任何目标项目的运行真相源。
 
+PR #231 后的 frontier clarification validation 专项交接入口：`current/frontier-clarification-validation-handoff-status.md`；handoff package：`handoff/mnemosyne-frontier-clarification-validation-handoff-package.md`；配套 startup prompt：`handoff/mnemosyne-frontier-clarification-validation-startup-prompt.md`。该专项交接不覆盖 `handoff/handoff-current.md`，不接管 Meta-Agent 或 non-FABLE health-review 路线。
+
 完成的 Pro/Fable 课题原文、报告身份和评审记录位于：`raw/research-reports/cycles/2026Q3-frontier-planning-clarification-handoff/`。`notes/research-prompts/` 中同名文件仅为完成态重定向，不应再次执行。
 
 2026Q3 platform / Project memory / Apps / GitHub / surface delta 当前入口：`current/platform-context-apps-delta-status.md`。研究原件与复核位于 `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/`；均不是执行源。
