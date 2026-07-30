@@ -7,6 +7,8 @@ status_id: MNEMOSYNE-FABLE5-RESEARCH-DELIVERY-STATUS-001
 created_by_task: MNEMOSYNE-184
 repository: 08822407d/Mnemosyne
 verified_master_before_task: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
+canonical_PR: 236
+canonical_branch: mnemosyne-184-claude-fable5-delivery-redesign
 rejected_predecessor_PR:
   PR: 235
   merged: false
@@ -14,7 +16,7 @@ rejected_predecessor_PR:
 workflow: notes/research-operations/claude-project-github-and-fable5-delivery-v0.1.md
 ready_queue: handoff/fable5-ready/
 staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.2.md
-status: delivery_workflow_and_two_ready_packets_prepared_in_MNEMOSYNE_184_not_executed
+status: delivery_workflow_and_two_ready_packets_prepared_in_PR_236_pending_review_not_executed
 execution_source_modified: false
 research_executed: false
 validation_executed: false
@@ -132,10 +134,10 @@ Stage_B_topics:
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_MNEMOSYNE_184_PR_or_request_changes
+    - review_and_merge_PR_236_or_request_changes
   after_merge:
     - user_may_run_zero_one_or_both_ready_tasks
-    - use_each_task_OPERTOR_file_in_a_separate_clean_Fable5_Max_chat
+    - use_each_task_OPERATOR_file_in_a_separate_clean_Fable5_Max_chat
     - return_complete_reports_for_adjudication
   automatic_research_execution: false
   automatic_surface_selection: false
