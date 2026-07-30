@@ -3,12 +3,14 @@
 ```yaml
 task_id: MNEMOSYNE-181
 task_type: Mnemosyne_repository_maintenance_and_validation_package_preparation
-status: PACKAGE_PREPARED_PENDING_SINGLE_PR
+status: PR_233_OPEN_FINAL_VERIFICATION_PENDING
 repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 22c1b63b2238aece5d8f9cd3810dcc1a832a9b83
 canonical_branch: mnemosyne-181-frontier-clarification-validation-package
-canonical_PR: pending_creation
+canonical_PR: 233
+PR_state: open
+PR_merged: false
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 validation_package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
@@ -83,34 +85,37 @@ Mnemosyne_guidance_refresh:
   imported_non_FABLE_health_review_route: false
 ```
 
-## 3. GitHub write-lineage preflight
+The earlier conflict was fully resolved by the verified PR #232 merge. No package claim conflicted with the execution source after the repeated receive.
+
+## 3. GitHub write-lineage and PR creation
 
 ```yaml
-github_write_lineage_preflight:
+github_write_lineage:
   task_id: MNEMOSYNE-181
   intended_scope_summary: prepare_complete_public_synthetic_frontier_clarification_validation_package_without_execution
   default_branch: master
   pinned_default_branch_sha: 22c1b63b2238aece5d8f9cd3810dcc1a832a9b83
   intended_branch: mnemosyne-181-frontier-clarification-validation-package
-  open_pr_enumeration:
-    method: GitHub_App_search_prs_is_open
-    pagination_complete: true
-    all_accessible_open_prs_checked: true
-    result: []
-  matches:
-    by_exact_task_id: []
-    by_intended_head_branch: []
-    by_equivalent_scope: []
-    existing_result_records_or_task_artifacts: []
+  pre_branch_open_PRs: []
+  pre_PR_open_PRs: []
+  exact_head_PR_before_creation: []
+  equivalent_open_scope_before_creation: []
   decision: create_new_lineage
   parallel_variants_approved: false
+  canonical_PR: 233
+  PR_head_at_creation: 9f729ca75fa85f4df675ff8327d1eca35425b86c
+  PR_base_sha: 22c1b63b2238aece5d8f9cd3810dcc1a832a9b83
+  PR_created_as_draft: true
+  merge_performed: false
 ```
 
-The branch was created once from the pinned latest `master`.
+The first PR connector call used invalid parameter names and failed schema validation before creating external state. The corrected call created exactly one PR: #233.
+
+The fuzzy task-number search returned historical PR #181/#182 because of their PR numbers/body text; their actual task IDs and scopes are unrelated and they are not open duplicates.
 
 ## 4. Package contents
 
-Created:
+Created 15 package files:
 
 ```text
 notes/frontier-clarification-validation-package/
@@ -139,11 +144,11 @@ current/frontier-clarification-validation-handoff-status.md
 current/frontier-planning-clarification-handoff-research-status.md
 ```
 
-Added task records:
+Task records:
 
 ```text
 notes/codex-task-results/MNEMOSYNE-181-result.md
-notes/codex-task-results/MNEMOSYNE-181-pr-finalization.md  # created after canonical PR binding
+notes/codex-task-results/MNEMOSYNE-181-pr-finalization.md
 ```
 
 ## 5. Frozen validation design
@@ -190,8 +195,6 @@ validation_package:
 ```yaml
 package_integrity_result:
   expected_package_files_present: 15_of_15
-  branch_compare_status: ahead
-  branch_behind_master: 0
   public_scenario_IDs_authored: 14
   hidden_key_IDs_authored: 14
   public_hidden_ID_alignment_author_review: pass
@@ -209,7 +212,7 @@ package_integrity_result:
   status: PASS_WITH_CONNECTOR_ONLY_LIMITATION
 ```
 
-The connector comparison verified the changed-path set. A local checkout/parser was not available in the execution environment, so semantic ID/count checks were performed against the frozen authored inventories and explicit matrix rather than an independently executed local script. Future runs must pin and hash the merged package commit.
+GitHub compare verified the changed-path set and `behind_by: 0` before PR creation. A local checkout/parser was unavailable, so semantic ID/count checks used the frozen authored inventories and explicit matrix rather than an independently executed local script. Future runs must pin and hash the merged package commit.
 
 ## 8. Actions not performed
 
@@ -278,15 +281,18 @@ run_context:
   artifacts:
     status: recorded
     refs:
+      - ref: PR_233
+        relation: canonical_PR
+        immutable_identity: head_at_creation_9f729ca75fa85f4df675ff8327d1eca35425b86c
       - ref: notes/frontier-clarification-validation-package/
         relation: created
-        immutable_identity: bind_to_final_PR_head
+        immutable_identity: canonical_PR_233_head
       - ref: current/frontier-clarification-validation-handoff-status.md
         relation: updates
-        immutable_identity: bind_to_final_PR_head
+        immutable_identity: canonical_PR_233_head
       - ref: current/frontier-planning-clarification-handoff-research-status.md
         relation: updates
-        immutable_identity: bind_to_final_PR_head
+        immutable_identity: canonical_PR_233_head
     preserves:
       - current/human-approved-spec.md
       - target-projects/meta-agent/
@@ -316,8 +322,8 @@ run_context:
   human_adjudication:
     status: pending
     actor: human_user
-    decision_ref:
-    claim_scope: review_and_merge_or_request_changes_to_MNEMOSYNE_181_PR
+    decision_ref: PR_233_review
+    claim_scope: review_and_merge_or_request_changes
   lineage:
     preserves:
       - PR_231_adjudication_checkpoint
@@ -332,4 +338,4 @@ run_context:
 
 ## 11. Safe next action
 
-Create and expose exactly one canonical draft PR after the mandatory second duplicate-lineage preflight. The PR must remain unmerged for user review. After merge, the next route is the separate execution-surface/user-decision package; no V0/V1 run starts automatically.
+Complete final compare/PR verification, mark PR #233 ready for human review if no blocking defect exists, and stop. Human review of PR #233 is the sole current merge target. After merge, use the separate execution-surface/user-decision package; no V0/V1 run starts automatically.
