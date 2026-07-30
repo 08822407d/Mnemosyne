@@ -11,6 +11,7 @@ canonical_branch: mnemosyne-181-frontier-clarification-validation-package
 canonical_PR: 233
 PR_state: open
 PR_draft: false
+PR_mergeable_after_full_fetch_recheck: true
 PR_merged: false
 PR_head_at_creation: 9f729ca75fa85f4df675ff8327d1eca35425b86c
 PR_head_at_ready_transition: 77681ba1e83b7fae6dc692b9dff45e3494b6e62b
@@ -124,27 +125,32 @@ protected_boundaries:
 
 ```yaml
 final_verification:
-  compare_before_ready_transition:
+  compare_before_final_record_recheck:
     base: 22c1b63b2238aece5d8f9cd3810dcc1a832a9b83
-    head: 77681ba1e83b7fae6dc692b9dff45e3494b6e62b
+    head: 8fab75a7ae0583896db46dea1f4dcf407647e538
     status: ahead
-    ahead_by: 23
+    ahead_by: 25
     behind_by: 0
     changed_files: 20
   open_PR_enumeration_after_creation:
     - 233
   exact_canonical_PR_open: true
-  exact_canonical_PR_draft_after_transition: false
-  combined_commit_statuses_at_ready_transition: []
-  workflow_runs_at_ready_transition: []
+  exact_canonical_PR_draft: false
+  combined_commit_statuses: []
+  workflow_runs: []
   CI_pass_claim: false
+  mergeability_snapshots:
+    compact_get_pr_info: false
+    subsequent_full_fetch_pr: true
+    accepted_current_value: true
+    interpretation: compact_snapshot_was_stale_or_not_recomputed; full_PR_fetch_resolved_mergeability
   protected_path_diff_scan: pass
   package_integrity_status: PASS_WITH_CONNECTOR_ONLY_LIMITATION
 ```
 
-No status check or workflow run was reported for the ready-transition head. This means no CI evidence was available; it is not a CI-pass claim.
+No status check or workflow run was reported. This means no CI evidence was available; it is not a CI-pass claim.
 
-The connector reported `mergeable: false` at the ready transition. Because the branch was `behind_by: 0` and the connector did not expose a conflict explanation, final reporting must preserve that value as an unresolved PR metadata limitation rather than claim mergeability. Human review should inspect GitHub's current merge box before merging.
+The compact PR metadata snapshot initially reported `mergeable: false`, but a subsequent full PR fetch for the same final head reported `mergeable: true`. The full recheck is retained as the resolved current value; the earlier discrepancy remains recorded rather than hidden.
 
 ## 7. External-state actions
 
@@ -182,4 +188,4 @@ not_performed:
 
 ## 9. Safe next action
 
-Human review of PR #233 is the only current merge target. The user may merge it or request changes after checking the current GitHub merge box. After merge, use the separate execution-surface/user-decision package. No validation phase starts automatically.
+Human review of PR #233 is the only current merge target. The user may merge it or request changes. After merge, use the separate execution-surface/user-decision package. No validation phase starts automatically.
