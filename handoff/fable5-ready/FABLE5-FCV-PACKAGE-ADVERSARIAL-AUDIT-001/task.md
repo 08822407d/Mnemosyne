@@ -13,9 +13,11 @@ validation_execution: prohibited
 prior_Pro_or_Fable_reports: prohibited
 preferred_visible_model: Fable_5
 preferred_effort: Max
+execution_setting_precedence: this_ready_packet_supersedes_only_the_canonical_task_older_high_or_xhigh_surface_label
+canonical_research_question_and_output_contract_changed: false
 ```
 
-This file is the human-visible queue entrypoint. The complete research task remains at the canonical task path above.
+This file is the human-visible queue entrypoint. The complete research task remains at the canonical task path above. The ready packet changes only the operator delivery/access workflow and requests the current visible `Fable 5` + `Max` condition; it does not change the research question, evidence gate or report contract.
 
 The run must:
 
