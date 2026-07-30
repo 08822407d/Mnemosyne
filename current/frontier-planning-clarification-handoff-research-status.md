@@ -16,12 +16,13 @@ validation_package_merge_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
 post_package_Fable5_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.2.md
 Fable5_delivery_workflow: notes/research-operations/claude-project-github-and-fable5-delivery-v0.1.md
 Fable5_ready_queue: handoff/fable5-ready/
-canonical_delivery_PR: pending_creation_by_MNEMOSYNE_184
+canonical_delivery_PR: 236
+canonical_delivery_branch: mnemosyne-184-claude-fable5-delivery-redesign
 rejected_predecessor_PR:
   PR: 235
   merged: false
   adopted: false
-status: foundational_research_complete_package_merged_and_Fable5_delivery_redesign_prepared_not_executed
+status: foundational_research_complete_package_merged_and_Fable5_delivery_redesign_prepared_in_PR_236_pending_review_not_executed
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 foundational_Pro_research_executed: true
@@ -200,7 +201,7 @@ They are not ready-to-run until Stage A or a later surface decision supplies the
 current_state:
   conceptual_design: complete
   complete_execution_and_review_package: merged
-  Stage_A_delivery_packets: prepared_pending_PR_review
+  Stage_A_delivery_packets: prepared_in_PR_236_pending_review
   Stage_A_reports: not_run
   manual_surface_candidate: prepared_not_selected_not_verified
   selected_execution_surface: none
@@ -228,7 +229,7 @@ model_capability_estimate:
 research_assessment:
   additional_Pro_Deep_Research: NOT_NEEDED
   additional_foundational_Fable_research: NOT_NEEDED
-  Fable5_post_package_Stage_A: RECOMMENDED_AFTER_DELIVERY_PR_MERGE
+  Fable5_post_package_Stage_A: RECOMMENDED_AFTER_PR_236_MERGE
   Stage_B: DEFER_UNTIL_STAGE_A_ADJUDICATION
 ```
 
@@ -239,7 +240,7 @@ Visible model and effort text do not attest an exact backend.
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_the_MNEMOSYNE_184_delivery_redesign_PR_or_request_changes
+    - review_and_merge_PR_236_or_request_changes
   after_merge:
     - user_may_run_zero_one_or_both_ready_Stage_A_tasks
     - use_separate_clean_Fable5_Max_chats
