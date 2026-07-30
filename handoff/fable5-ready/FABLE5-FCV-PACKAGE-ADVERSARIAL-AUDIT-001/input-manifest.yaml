@@ -1,0 +1,60 @@
+manifest_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-INPUT-001
+task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+state: ready_not_executed
+repository: 08822407d/Mnemosyne
+pinned_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
+access_mode_preferred: chat_level_GitHub_connector_on_demand
+Project_Files_required: false
+whole_repository_selection: prohibited
+prior_Pro_or_Fable_reports: prohibited
+repository_write: prohibited
+validation_execution: prohibited
+
+entrypoint:
+  - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
+canonical_task:
+  - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+
+mandatory_package_folder:
+  path: notes/frontier-clarification-validation-package/
+  expected_files:
+    - README.md
+    - 00-scope-manifest-v0.1.md
+    - 01-protocol-spec-v0.1.md
+    - 02-condition-contracts-q0-q4-v0.1.md
+    - 03-public-synthetic-scenario-set-v0.1.md
+    - 04-hidden-author-keys-v0.1.md
+    - 05-answer-ledger-and-escalation-tests-v0.1.md
+    - 06-rubric-and-decision-rules-v0.1.md
+    - 07-reviewer-and-adjudication-taskbook-v0.1.md
+    - 08-v0-sentinel-context-isolation-taskbook-v0.1.md
+    - 09-v1-small-smoke-execution-taskbook-v0.1.md
+    - 10-run-manifest-template-v0.1.md
+    - 11-result-return-and-maintainer-review-package-v0.1.md
+    - 12-execution-surface-and-user-decision-package-v0.1.md
+    - 13-package-integrity-checklist-v0.1.md
+
+mandatory_external_files:
+  - notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md
+  - notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/03-cross-report-consensus-conflict-and-adjudication.md
+  - notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/04-interim-architecture-and-validation-decision.md
+
+explicit_selection_count:
+  ready_entrypoint: 1
+  canonical_task: 1
+  package_files: 15
+  external_files: 3
+  total: 20
+
+input_gate:
+  require_exact_commit: true
+  require_complete_task: true
+  require_every_mandatory_path: true
+  missing_truncated_or_wrong_ref_result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  analysis_after_failure: prohibited
+
+return_destination: current_Mnemosyne_frontier_clarification_validation_route
+archive_after_acceptance:
+  task: raw/research-reports/cycles/<assigned_cycle>/tasks/
+  report_or_receipt: raw/research-reports/cycles/<assigned_cycle>/reports/
+  remove_ready_directory: true
