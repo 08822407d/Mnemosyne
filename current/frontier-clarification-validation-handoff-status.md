@@ -17,12 +17,13 @@ manual_surface_candidate: notes/validation-designs/frontier-clarification-valida
 Fable5_staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.2.md
 Fable5_delivery_workflow: notes/research-operations/claude-project-github-and-fable5-delivery-v0.1.md
 Fable5_ready_queue: handoff/fable5-ready/
-canonical_delivery_PR: pending_creation_by_MNEMOSYNE_184
+canonical_delivery_PR: 236
+canonical_delivery_branch: mnemosyne-184-claude-fable5-delivery-redesign
 rejected_predecessor_PR:
   PR: 235
   merged: false
   adopted: false
-status: package_merged_and_Fable5_delivery_redesign_prepared_not_executed
+status: package_merged_and_Fable5_delivery_redesign_prepared_in_PR_236_pending_review_not_executed
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 validation_selected: false
@@ -183,7 +184,7 @@ mainline_progress:
   foundational_research_and_adjudication: complete
   complete_validation_package: complete_merged
   next_tier_Meta_Agent_repository_isolation_test_design: recorded_near_term_not_run
-  Stage_A_Fable5_delivery_packets: prepared_pending_PR_review
+  Stage_A_Fable5_delivery_packets: prepared_in_PR_236_pending_review
   Stage_A_Fable5_reports: not_run
   execution_surface_selection: not_decided
   execution_surface_verification: not_run
@@ -199,7 +200,7 @@ Most design and packaging work is complete. Independent audit, surface qualifica
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_the_MNEMOSYNE_184_delivery_redesign_PR_or_request_changes
+    - review_and_merge_PR_236_or_request_changes
   after_merge_user_may_choose:
     - run_A1_in_a_clean_Fable5_Max_chat
     - run_A2_in_a_separate_clean_Fable5_Max_chat
