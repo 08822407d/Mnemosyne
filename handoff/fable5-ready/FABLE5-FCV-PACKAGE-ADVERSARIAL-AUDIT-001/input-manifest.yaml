@@ -2,13 +2,29 @@ manifest_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-INPUT-001
 task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
 state: ready_not_executed
 repository: 08822407d/Mnemosyne
-pinned_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
+source_package_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
 access_mode_preferred: chat_level_GitHub_connector_on_demand
 Project_Files_required: false
 whole_repository_selection: prohibited
 prior_Pro_or_Fable_reports: prohibited
 repository_write: prohibited
 validation_execution: prohibited
+
+source_binding:
+  preferred: direct_read_at_source_package_commit
+  fallback: explicit_file_selection_or_manual_upload_with_source_receipt
+  branch_only_connector:
+    allowed_only_if:
+      - every_required_path_and_version_is_verified
+      - a_maintainer_compare_record_shows_no_mandatory_source_path_changed
+      - commit_attestation_limitation_is_reported
+    otherwise: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  maintainer_compare_record:
+    base: 67eb96d5317a2bb589236a4a8b2e75be2508d830
+    checked_through_master: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
+    mandatory_A1_source_paths_changed: []
+    MNEMOSYNE_183_changed_mandatory_A1_source_paths: []
+    limitation: later_master_changes_require_recheck
 
 entrypoint:
   - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
@@ -47,10 +63,10 @@ explicit_selection_count:
   total: 20
 
 input_gate:
-  require_exact_commit: true
+  require_reliable_source_binding: true
   require_complete_task: true
   require_every_mandatory_path: true
-  missing_truncated_or_wrong_ref_result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  missing_truncated_wrong_ref_or_unbound_result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
   analysis_after_failure: prohibited
 
 return_destination: current_Mnemosyne_frontier_clarification_validation_route
