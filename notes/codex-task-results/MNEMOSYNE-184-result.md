@@ -9,7 +9,7 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
 canonical_branch: mnemosyne-184-claude-fable5-delivery-redesign
-canonical_PR: pending_creation
+canonical_PR: 236
 user_visible_selection_verbatim: Pro
 exact_served_backend: unknown_or_not_attestable
 execution_source_modified: false
@@ -190,6 +190,7 @@ notes/research-operations/claude-project-github-and-fable5-delivery-v0.1.md
 notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.2.md
 notes/research-prompts/README.md
 notes/codex-task-results/MNEMOSYNE-184-result.md
+notes/codex-task-results/MNEMOSYNE-184-pr-finalization.md
 ```
 
 ## 11. Files modified
@@ -220,6 +221,7 @@ The canonical A1/A2 research questions and long report contracts remain unchange
 checks:
   latest_master_and_open_PR_preflight: passed_before_branch_creation
   rejected_PR_235_merged: false
+  canonical_PR_created: 236
   ready_task_directories: 2
   files_per_ready_task: 3
   exact_input_manifests_present: true
@@ -249,28 +251,33 @@ model_capability_estimate:
 research_assessment:
   additional_Pro_Deep_Research: NOT_NEEDED
   additional_foundational_Fable_research: NOT_NEEDED
-  two_post_package_Stage_A_tasks: RECOMMENDED_AFTER_PR_MERGE
+  two_post_package_Stage_A_tasks: RECOMMENDED_AFTER_PR_236_MERGE
   four_Stage_B_topics: DEFER_UNTIL_STAGE_A_ADJUDICATION
 ```
 
-## 15. Actions not performed
+## 15. External and excluded actions
 
 ```yaml
-not_performed:
-  Fable5_run: true
-  quota_spend: true
-  validation_execution: true
-  V0_or_V1_authorization: true
-  Claude_Project_Files_change: true
-  live_connector_test: true
-  GitHub_merge_or_auto_merge: true
-  execution_source_change: true
-  Meta_Agent_target_change: true
-  non_FABLE_route_takeover: true
-```
+external_actions:
+  branch_created: true
+  files_created_or_updated_on_branch: true
+  PR_created: true
+  PR_number: 236
+  PR_merged: false
+  auto_merge_enabled: false
 
-In the block above, `true` means the named action was not performed.
+excluded_actions:
+  Fable5_run_performed: false
+  quota_spent: false
+  validation_executed: false
+  V0_or_V1_authorized: false
+  Claude_Project_Files_changed: false
+  live_connector_test_performed: false
+  execution_source_changed: false
+  Meta_Agent_target_changed: false
+  non_FABLE_route_taken_over: false
+```
 
 ## 16. Safe next action
 
-Human review of the canonical MNEMOSYNE-184 PR is required. After merge, the user may run zero, one or both ready tasks in separate clean Fable5 Max chats and return complete reports for repository-bound adjudication. No surface, V0, V1 or Stage B action follows automatically.
+Human review of PR #236 is required. After merge, the user may run zero, one or both ready tasks in separate clean Fable5 Max chats and return complete reports for repository-bound adjudication. No surface, V0, V1 or Stage B action follows automatically.
