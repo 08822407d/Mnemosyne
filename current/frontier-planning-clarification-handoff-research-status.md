@@ -15,7 +15,8 @@ scoped_handoff_status: current/frontier-clarification-validation-handoff-status.
 scoped_handoff_package: handoff/mnemosyne-frontier-clarification-validation-handoff-package.md
 scoped_startup_prompt: handoff/mnemosyne-frontier-clarification-validation-startup-prompt.md
 complete_validation_package: notes/frontier-clarification-validation-package/README.md
-status: research_complete_adjudicated_handoff_received_and_validation_package_prepared
+canonical_validation_package_PR: 233
+status: research_complete_adjudicated_handoff_received_and_validation_package_prepared_in_PR_233
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 Pro_research_executed: true
@@ -106,7 +107,7 @@ remaining_gap:
     - whether_research_trigger_avoids_over_and_premature_research
   state:
     conceptual_design: complete
-    complete_execution_and_review_package: prepared
+    complete_execution_and_review_package: prepared_in_PR_233
     package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
     package_root: notes/frontier-clarification-validation-package/
     public_synthetic_scenarios: 14
@@ -131,6 +132,7 @@ handoff_state:
   Mnemosyne_guidance_refresh_completed: true
   transferred_task_preserved: PREPARE_READ_ONLY_VALIDATION_PACKAGE
   package_preparation_completed_by: MNEMOSYNE-181
+  canonical_package_PR: 233
   validation_execution_performed: false
   real_or_private_data_used: false
   Meta_Agent_route_imported: false
@@ -159,14 +161,14 @@ research_assessment:
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_the_single_MNEMOSYNE_181_validation_package_PR_after_creation
+    - review_and_merge_PR_233_or_request_changes
   after_merge:
     - complete_the_separate_execution_surface_and_user_decision_package
     - verify_the_selected_surface_against_V0_requirements
     - authorize_V0_only_or_defer_revise_or_stop
   automatic_V0_execution: false
   automatic_V1_execution: false
-  additional_Deep_Research: not_needed
+  additional_Pro_Deep_Research: not_needed
   additional_Fable_research: not_needed
   target_project_propagation: prohibited_without_separate_owner_decision
 ```
