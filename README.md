@@ -20,6 +20,8 @@ GitHub repository-writing 单任务单活跃 PR 谱系防护：`current/github-s
 
 PR #231 后的 frontier clarification validation 专项交接入口：`current/frontier-clarification-validation-handoff-status.md`；handoff package：`handoff/mnemosyne-frontier-clarification-validation-handoff-package.md`；配套 startup prompt：`handoff/mnemosyne-frontier-clarification-validation-startup-prompt.md`。该专项交接不覆盖 `handoff/handoff-current.md`，不接管 Meta-Agent 或 non-FABLE health-review 路线。
 
+该专项的完整 public/synthetic、read-only 验证包入口：`notes/frontier-clarification-validation-package/README.md`。包内包含分离的公开场景与 hidden author keys、Q0–Q4 合同、answer ledger / escalation tests、rubric、V0 sentinel、V1 small-smoke taskbook、manifest、返回复核和执行表面决策包；当前仅为 prepared/not selected/not executed，不授权任何验证运行。
+
 完成的 Pro/Fable 课题原文、报告身份和评审记录位于：`raw/research-reports/cycles/2026Q3-frontier-planning-clarification-handoff/`。`notes/research-prompts/` 中同名文件仅为完成态重定向，不应再次执行。
 
 2026Q3 platform / Project memory / Apps / GitHub / surface delta 当前入口：`current/platform-context-apps-delta-status.md`。研究原件与复核位于 `raw/research-reports/cycles/2026Q3-platform-context-apps-delta/`；均不是执行源。
