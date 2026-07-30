@@ -13,7 +13,8 @@ source_checkpoint:
 handoff_package: handoff/mnemosyne-frontier-clarification-validation-handoff-package.md
 startup_prompt: handoff/mnemosyne-frontier-clarification-validation-startup-prompt.md
 validation_package: notes/frontier-clarification-validation-package/README.md
-status: handoff_received_guidance_refreshed_validation_package_prepared_pending_MNEMOSYNE_181_PR
+canonical_PR: 233
+status: handoff_received_guidance_refreshed_validation_package_prepared_in_PR_233_pending_review
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 validation_package_prepared: true
@@ -70,7 +71,7 @@ transferred_task:
   id: PREPARE_READ_ONLY_VALIDATION_PACKAGE
   owner: current_fresh_Mnemosyne_maintenance_conversation
   preserved_after_guidance_refresh: true
-  status: prepared_pending_review_and_merge
+  status: prepared_in_PR_233_pending_review
   package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
   package_root: notes/frontier-clarification-validation-package/
   package_version: 0.1.0
@@ -132,7 +133,7 @@ No result, pass rate, model ranking or backend identity has been generated.
 ```yaml
 route_separation:
   this_route:
-    owner: current_MNEMOSYNE_181_conversation_until_package_PR_closeout
+    owner: current_MNEMOSYNE_181_conversation_until_PR_233_closeout
     write_root: notes/frontier-clarification-validation-package/
 
   Meta_Agent_product_build:
@@ -170,7 +171,7 @@ research_assessment:
 ```yaml
 safe_next_action:
   current:
-    - review_the_single_MNEMOSYNE_181_validation_package_PR_after_creation
+    - review_and_merge_PR_233_or_request_changes
   after_merge:
     - use_notes/frontier-clarification-validation-package/12-execution-surface-and-user-decision-package-v0.1.md
     - choose_prepare_verify_defer_or_stop_a_surface_route
