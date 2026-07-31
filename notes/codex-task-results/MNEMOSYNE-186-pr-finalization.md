@@ -3,17 +3,19 @@
 ```yaml
 task_id: MNEMOSYNE-186
 record_type: PR_finalization_and_lineage_binding
-status: FINALIZATION_IN_PROGRESS
+status: FINALIZED_READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 7bcddd60e209afe6496fa3091332496e20c3e245
 canonical_branch: mnemosyne-186-fable-repository-surface-repair
 canonical_PR: 239
 PR_state: open
-PR_draft: true
+PR_draft_before_ready_transition: true
+PR_mergeable_after_recalculation: true
 PR_merged: false
 merge_performed: false
 auto_merge_enabled: false
+final_head_identity: authoritative_in_fresh_PR_239_metadata_after_this_record_commit
 ```
 
 ## 1. Lineage gates
@@ -24,59 +26,59 @@ lineage_gates:
   latest_master_immediately_before_PR_creation: 7bcddd60e209afe6496fa3091332496e20c3e245
   accessible_open_PRs_before_branch: []
   accessible_open_PRs_before_PR_creation: []
+  accessible_open_PRs_after_creation:
+    - 239
+  exactly_one_canonical_open_PR: true
   canonical_branch: mnemosyne-186-fable-repository-surface-repair
-  decision: create_one_new_canonical_lineage
 ```
 
-A PR search for literal `MNEMOSYNE-186` returned historical PR #186 because its PR number matched the digits; that PR's actual task ID is MNEMOSYNE-135 and its scope is unrelated. It is not a duplicate lineage.
+A fuzzy PR search for `MNEMOSYNE-186` returned historical PR #186 because its PR number matched the digits. That PR's actual task ID is MNEMOSYNE-135 and its scope is unrelated.
 
-## 2. PR creation receipt
+## 2. PR creation and independent reread
 
 ```yaml
 PR_creation:
   number: 239
-  state: open
-  draft: true
-  merged: false
+  initial_state: open
+  initial_draft: true
+  initial_mergeable_snapshot: false
   base: master
   base_sha: 7bcddd60e209afe6496fa3091332496e20c3e245
   head: mnemosyne-186-fable-repository-surface-repair
   head_sha_before_finalization_record: deb02acf38ae8f8c06ee46a65cfd9385b628350d
-  commits_before_finalization_record: 21
   changed_files_before_finalization_record: 21
-  additions_before_finalization_record: 2311
-  deletions_before_finalization_record: 558
+
+independent_reread_before_this_final_update:
+  number: 239
+  state: open
+  draft: true
+  merged: false
+  mergeable: true
+  head_sha: ad9cf444d2cb9ff5fd7d3a8a7849e609043c428a
+  commits: 22
+  changed_files: 22
+  additions: 2506
+  deletions: 558
 ```
 
-The initial creation snapshot reported `mergeable: false`; this is treated as pending GitHub recalculation until a later full PR reread.
+The initial false mergeability snapshot is treated as GitHub recalculation state. The later full PR reread for the same lineage reported `mergeable: true`.
 
-## 3. Canonical scope
+## 3. Final changed paths
 
 ```yaml
-scope:
-  A1_failure_adjudication:
-    - distinguish_complete_task_read_from_missing_repository_evidence
-    - preserve_fail_closed_result_and_operator_cost_observation
-    - prohibit_using_failed_run_as_substantive_package_audit
-  Stage_A_surface_repair:
-    - ordinary_Fable_5_Max_chat
-    - Advanced_Research_off_for_entire_run
-    - full_same_context_repository_gate
-    - targeted_web_search_only_after_gate_PASS
-    - versioned_A1_and_A2_execution_contracts
-  evidence_storage:
-    - failed_run_cycle_manifest
-    - normalized_operator_preflight_and_launch_receipt
-    - normalized_final_failure_response
-    - maintainer_run_assessment
-  branch_assessment:
-    - inspect_three_historical_failed_branches
-    - retain_without_deletion
+changed_files: 22
+path_classes:
+  - current/Fable_and_frontier_validation_status
+  - handoff/fable5-ready/
+  - notes/research-prompts/
+  - notes/research-operations/
+  - notes/research-plans/
+  - notes/mnemosyne-maintenance-issues/
+  - raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/
+  - notes/codex-task-results/MNEMOSYNE-186-*
 ```
 
-## 4. Changed paths before this record
-
-Twenty-one paths were changed before this finalization record:
+Exact paths:
 
 ```text
 current/fable5-research-delivery-status.md
@@ -100,11 +102,10 @@ raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/fai
 raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/failed-runs/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-run-001/research-final-response-readable-copy.md
 raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/failed-runs/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-run-001/maintainer-run-assessment.md
 notes/codex-task-results/MNEMOSYNE-186-result.md
+notes/codex-task-results/MNEMOSYNE-186-pr-finalization.md
 ```
 
-This file is the twenty-second changed path.
-
-## 5. Protected boundaries
+## 4. Protected boundaries
 
 ```yaml
 protected_boundaries:
@@ -123,7 +124,7 @@ protected_boundaries:
   validation_execution: false
 ```
 
-## 6. Author and connector-backed checks
+## 5. Author and connector-backed checks
 
 ```yaml
 checks:
@@ -143,41 +144,43 @@ checks:
   exact_uploaded_file_archive_claim: false
 ```
 
-## 7. Verification snapshot before this record
+## 6. Verification evidence
 
 ```yaml
-compare:
-  base: 7bcddd60e209afe6496fa3091332496e20c3e245
-  status: ahead
-  ahead_by: 21
-  behind_by: 0
-  changed_files: 21
-accessible_open_PRs_before_record:
-  - 239
-exactly_one_canonical_open_PR: true
+verification_before_this_final_update:
+  compare:
+    status: ahead
+    ahead_by: 22
+    behind_by: 0
+    changed_files: 22
+  accessible_open_PRs:
+    - 239
+  exactly_one_canonical_open_PR: true
+  commit_statuses: []
+  workflow_runs: []
+  CI_pass_claim: false
+  local_independent_clone_or_parser_check: unavailable
+  verification_class: connector_backed_plus_cross_document_author_review
 ```
 
-## 8. Required final checks
+No status check or workflow run was reported. This means no CI evidence was available; it is not a CI-pass claim.
 
-After this record commit:
+The exact final head after this record update, final commit count, and final PR state are recorded by a fresh PR #239 reread and the final PR description. This file does not guess its own containing commit SHA.
+
+## 7. Branch-retention disposition
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_base
-  - confirm_behind_by_zero
-  - confirm_22_changed_paths
-  - independently_reread_PR_239
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+historical_failed_branches:
+  - meta-agent-research-evidence-001
+  - meta-agent-research-evidence-repair-001
+  - meta-agent-research-evidence-repair-002
+current_disposition: RETAIN
+reason: deferred_process_repair_still_benefits_from_real_failure_fixtures_and_no_complete_snapshot_bundle_exists
+branch_deletion_performed: false
+future_deletion_requires: explicit_user_authorization_after_repair_closure_or_verified_snapshot
 ```
 
-The authoritative final head after this record is written will be the fresh PR #239 metadata and final PR description; this record does not guess its own containing commit SHA.
-
-## 9. Actions not performed
+## 8. Actions not performed
 
 ```yaml
 not_performed:
@@ -193,3 +196,7 @@ not_performed:
 ```
 
 Here `true` means the named action was not performed.
+
+## 9. Safe next action
+
+Human review of PR #239 is required. After merge, the user may run the revised A1 same-ordinary-chat gate and audit with Advanced Research off. No A2, surface selection, V0, V1, or branch cleanup follows automatically.
