@@ -2,22 +2,25 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-HANDOFF-001
 artifact_role: fresh_session_handoff
-status: v0_1_handoff_received_bootstrap_review_completed_pending_owner_disposition
+status: v0_1_owner_accepted_with_limitations_inactive
 authority_level: non_execution_navigation
 target_runtime_truth_source: false
 created_by_task: MNEMOSYNE-171
-last_updated_by_task: META-AGENT-BOOTSTRAP-REVIEW-001
+last_updated_by_task: META-AGENT-OWNER-DISPOSITION-001
 delivery_version: 0.1.0
 source_refs:
   - handoff/meta-agent-product-build-return-to-dedicated-conversation-handoff-package.md
   - target-projects/meta-agent/current/approved-spec.md
   - target-projects/meta-agent/current/active-context.md
   - target-projects/meta-agent/authority/source-and-owner-map.md
-  - notes/codex-task-results/META-AGENT-BOOTSTRAP-REVIEW-001-result.md
+  - target-projects/meta-agent/history/decision-version-and-migration-log.md
+  - target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
+  - target-projects/meta-agent/research/reviews/MA-DR-01-05-cross-report-synthesis-v0.1.md
+  - notes/codex-task-results/META-AGENT-OWNER-DISPOSITION-001-result.md
 known_limits:
   - handoff_is_not_execution_source
   - verify_latest_repository_ref_before_use
-  - owner_acceptance_and_operational_activation_are_separate
+  - owner_baseline_acceptance_and_operational_activation_are_separate
   - non_FABLE_health_review_remains_separately_owned
 ---
 
@@ -33,68 +36,83 @@ The designated target truth-source path is:
 target-projects/meta-agent/current/approved-spec.md
 ```
 
-That file exists but remains inactive pending explicit owner acceptance.
+The Owner has accepted that file as the v0.1 repository-backed design and governance baseline with limitations. It remains inactive for operational use.
 
 ## 2. Current verified state
 
 ```yaml
 current_state:
   route: META_AGENT_PRODUCT_BUILD
-  milestone: bootstrap_handoff_received_and_dedicated_conversation_audit_completed
-  state: pending_explicit_owner_disposition
-  verified_master_at_receive: 34bd606afe7fbfbac4c2304491ba56bedab69699
+  milestone: owner_disposition_recorded_as_inactive_baseline
+  state: owner_accepted_with_limitations_inactive
   M0: merged_via_PR_221
   M1: merged_via_PR_221
   M2: merged_via_PR_222
   return_handoff: merged_via_PR_223
-  target_files: 7
+  bootstrap_review: merged_via_PR_224
+  research_evidence_and_decision_support: merged_via_PR_237
+  owner_disposition_task: META-AGENT-OWNER-DISPOSITION-001
   target_truth_effective_for_operational_use: false
-  owner_acceptance: pending
+  owner_acceptance: ACCEPT_WITH_LIMITATIONS
+  design_and_governance_baseline_accepted: true
   operational_use_authorized: false
+  activation_authorized: false
+  pilot_authorized: false
   real_cases: 0
   real_feedback_records: 0
   real_evaluation_records: 0
 ```
-
-The dedicated Meta-Agent conversation received and verified the repository-backed handoff. It then compared the M0/M1/M2 package against the confirmed requirements developed in that conversation.
 
 ```yaml
 bootstrap_review:
   verdict: PASS_WITH_LIMITATIONS
   critical_requirement_conflicts: []
   core_concept_materially_preserved: true
-  corrected_navigation_issues:
-    - stale_receive_pending_state
-    - insufficiently_explicit_target_local_vs_Mnemosyne_route_isolation
-  owner_disposition_performed: false
-  operational_activation_performed: false
 ```
 
-## 3. Target identity and accepted scope
+## 3. Owner-accepted scope and limits
 
-- Meta-Agent is a general-purpose Agent-design and methodology system.
-- Software engineering is the dominant early incubation domain, not the whole identity.
-- It may design a single specialized Agent, a bounded workflow, or a multi-Agent/team arrangement; multi-Agent is not the default.
-- Designs may cover roles, workflow, memory, handoff, model/tool routing, evaluation and human-decision boundaries.
-- Project feedback must pass through evidence review, scoped abstraction, candidate improvement and user decision before methodology changes.
-- The user remains owner and final authority.
-- v0.1 is file-based, human-reviewed and deliberately excludes implicit RAG, MCP, auto-indexing, auto-writeback and autonomous methodology changes.
+Accepted as the v0.1 inactive design/governance baseline:
+
+- `MA-REQ-0001` through `MA-REQ-0016`;
+- `MA-METHOD-0001` through `MA-METHOD-0006` as an initial incomplete method library;
+- the sole target-truth path designation;
+- authority, source and memory-role separation;
+- stable IDs, versions, migration and rollback baseline;
+- general-purpose identity with software-engineering-heavy early incubation;
+- single-Agent, workflow and multi-Agent/team design with multi-Agent non-default;
+- user ownership and final decision authority.
+
+Not accepted or authorized:
+
+- production-ready or unrestricted operational Meta-Agent;
+- empirically validated Agent-architecture optimization;
+- secure autonomous self-improvement;
+- a complete provider-neutral Agent compiler or Agent Design IR;
+- private-material capability;
+- RAG, MCP, auto-writeback or shared-memory operation;
+- automatic methodology promotion;
+- a pilot or operational activation.
+
+The target truth remains inactive until a separate explicit Owner activation decision.
 
 ## 4. Required reading order
 
 Read each file separately and preserve its role:
 
-1. `target-projects/meta-agent/current/approved-spec.md` — designated target truth, currently inactive.
+1. `target-projects/meta-agent/current/approved-spec.md` — Owner-accepted inactive design/governance baseline and designated target truth path.
 2. `target-projects/meta-agent/authority/source-and-owner-map.md` — owner, source, material and write authority.
-3. `target-projects/meta-agent/current/active-context.md` — current stage, audit result, blockers and safe next action.
-4. `target-projects/meta-agent/methodology/core-methodology.md` — compact proposed method library.
+3. `target-projects/meta-agent/current/active-context.md` — current stage, blockers and safe next action.
+4. `target-projects/meta-agent/methodology/core-methodology.md` — initial incomplete method library accepted only as referenced by the spec.
 5. `target-projects/meta-agent/history/decision-version-and-migration-log.md` — decisions, versions, migration and rollback.
 6. `target-projects/meta-agent/cases/case-and-feedback-ledger.md` — empty case/feedback evidence ledger.
-7. `notes/codex-task-results/META-AGENT-BOOTSTRAP-REVIEW-001-result.md` — dedicated-conversation bootstrap audit and repository-isolation review.
+7. `target-projects/meta-agent/research/reviews/MA-DR-01-05-cross-report-synthesis-v0.1.md` — non-execution research synthesis.
+8. `target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md` — historical decision support, not authority after the recorded Owner decision.
+9. `notes/codex-task-results/META-AGENT-OWNER-DISPOSITION-001-result.md` — task-scoped recording evidence.
 
 Repository-level Mnemosyne files may be read only when independently required for process or safety. They are not Meta-Agent target truth.
 
-## 5. Old dedicated-conversation context
+## 5. Old conversation and evidence policy
 
 ```yaml
 old_context_policy:
@@ -108,7 +126,7 @@ old_context_policy:
     - never_reconstruct_missing_originals_as_fact
 ```
 
-The earlier conversation remains valuable, but only explicit user-confirmed material or an authorized target change may alter target truth.
+Research reports and their synthesis are evidence, not target truth. Candidate gaps identified by DR-01–05 remain unissued and cannot silently create new requirement or method IDs.
 
 ## 6. Repository and route isolation
 
@@ -136,11 +154,18 @@ route_isolation:
     - no_stale_branch_continuation
 ```
 
-Meta-Agent product work and Mnemosyne self-development are authority-separated and path-separated by default. Sharing a Git repository does not grant cross-route write authority. A substantive update to a root-level Mnemosyne status, handoff, governance or research file must be separately scoped and must not silently bundle product and maintenance changes. A narrowly scoped non-authoritative result record may be stored under `notes/codex-task-results/` without becoming a maintenance live-route update.
+Meta-Agent product work and Mnemosyne self-development are authority-separated and path-separated by default. Sharing a Git repository does not grant cross-route write authority.
 
 ## 7. Pending and unproven scope
 
 Pending requirements remain `MA-PEND-0001` through `MA-PEND-0008`, including product surface, dedicated repository, routing thresholds, mature evaluation, private storage, advanced provider/tool routing, learner/GPT Live/shared-memory modules and automation.
+
+Research-supported but unissued candidate gaps include:
+
+- automated Agentic-system design and robust workflow search;
+- provider-neutral Agent Design IR and backend mapping;
+- Meta-Agent benchmark and ablation protocol;
+- Meta-level security threat model and adversarial evaluation.
 
 Unproven properties include:
 
@@ -151,29 +176,30 @@ Unproven properties include:
 - next-tier executor rework burden;
 - final cost, latency and review tolerance.
 
-## 8. Current blockers
+## 8. Current blockers before activation or pilot
 
 ```yaml
 blockers:
-  - owner_operational_disposition_pending
-  - proposed_target_spec_inactive
+  - target_truth_inactive_separate_activation_decision_not_made
   - applicable_non_FABLE_health_review_P0_P1_equivalent_findings_not_checked_or_explicitly_deferred
   - no_bounded_pilot_manifest_or_case_scope_approved
+  - no_acceptance_stop_and_rollback_criteria_for_an_operational_scope
 ```
 
-No blocker prevents owner-oriented review. This conversation must not take over the separately owned health-review route.
+No blocker prevents research synthesis, design preparation or Owner-reviewed non-operational work. This conversation must not take over the separately owned health-review route.
 
 ## 9. Prohibited actions
 
 A receiving session must not:
 
 - claim Meta-Agent is operational or production-ready;
-- treat PR #222, PR #223 or this handoff as owner acceptance;
+- treat `ACCEPT_WITH_LIMITATIONS` as activation;
 - modify target truth, owner, privacy or trust boundaries without explicit authorization;
 - ingest private/raw target material;
 - add real cases or feedback without evidence and safety review;
-- promote case feedback to methodology automatically;
+- promote case feedback or research candidates to methodology automatically;
 - create RAG, MCP, auto-writeback, shared memory, learner profile or GPT Live modules without an approved route;
+- execute `MA-DR-06` or `MA-DR-07` without user provider/surface/quota authorization;
 - infer backend identity from a visible model label, latency, style or self-report;
 - continue the Mnemosyne maintenance route as Meta-Agent work.
 
@@ -181,14 +207,15 @@ A receiving session must not:
 
 ```yaml
 safe_next_action:
-  id: META-AGENT-SAFE-NEXT-0003
-  action: user_selects_an_explicit_owner_disposition_after_META_AGENT_BOOTSTRAP_REVIEW_001_is_merged
-  allowed_dispositions:
-    - ACCEPT_V0_1_FOR_BOUNDED_OPERATIONAL_PILOT
-    - ACCEPT_WITH_LIMITATIONS
-    - REQUEST_REVISION
-    - REJECT_AND_ROLL_BACK
-  no_automatic_owner_acceptance: true
+  id: META-AGENT-SAFE-NEXT-0004
+  current_action: human_review_and_merge_the_META_AGENT_OWNER_DISPOSITION_001_PR
+  after_merge_action: return_to_the_dedicated_Meta_Agent_conversation_for_separately_gated_post_disposition_planning
+  likely_next_candidate:
+    - prepare_MA_DR_06_and_MA_DR_07_ready_to_run_research_tasks_without_execution
+  prerequisites_before_pilot_or_activation:
+    - applicable_non_FABLE_health_review_findings_checked_or_explicitly_deferred
+    - separate_owner_authorization
   no_automatic_operational_activation: true
   no_automatic_pilot_planning: true
+  no_automatic_research_execution: true
 ```
