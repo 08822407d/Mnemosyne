@@ -1,147 +1,138 @@
 # Fable5 Research Delivery Status
 
-> Non-execution-source live status for delivering repository-bound Fable5 tasks. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
+> Non-execution-source live status for repository-bound Fable5 tasks. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
-status_id: MNEMOSYNE-FABLE5-RESEARCH-DELIVERY-STATUS-002
+status_id: MNEMOSYNE-FABLE5-RESEARCH-DELIVERY-STATUS-003
 created_by_task: MNEMOSYNE-184
-last_updated_by_task: MNEMOSYNE-185
+last_updated_by_task: MNEMOSYNE-186
 repository: 08822407d/Mnemosyne
-verified_master_before_MNEMOSYNE_185: 33c59510002b1e5a97cea4397342fba56bd72d8c
-canonical_usability_PR: 238
-workflow: notes/research-operations/claude-project-github-and-fable5-delivery-v0.1.md
+verified_master_before_MNEMOSYNE_186: 7bcddd60e209afe6496fa3091332496e20c3e245
+workflow: notes/research-operations/claude-fable5-repository-bound-static-audit-v0.2.md
 ready_queue: handoff/fable5-ready/
-staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.2.md
+staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.3.md
+failed_run_cycle: raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/manifest.md
 operator_flow_guard: current/artifact-delivery-and-direct-generation-guard.md
-status: two_ready_tasks_unchanged_inline_operator_flow_amendment_prepared_in_PR_238_pending_review_not_executed
+status: A1_input_binding_failure_recorded_revised_A1_and_A2_prepared_in_MNEMOSYNE_186_pending_review
 execution_source_modified: false
-research_executed: false
 validation_executed: false
 Meta_Agent_target_modified: false
 non_FABLE_health_review_modified: false
 ```
 
-## 1. Claude access interpretation
+## 1. A1 run 001 result
 
 ```yaml
-Claude_access:
-  Project_Files:
-    scope: persistent_shared_Project_knowledge
-    official_GitHub_selection: files_or_folders
-    whole_Mnemosyne_repository_recommended: false
-    file_count_limit: officially_unlimited_as_of_2026_07_30_review
-    practical_limit: content_context_and_RAG_capacity
-  chat_plus_GitHub:
-    scope: current_chat
-    official_description: selected_files_or_folders
-    user_observed_2026_07_30_UI: repository_and_branch_linked_for_on_demand_reads
-    exact_rollout_behavior: verify_in_each_chat
-    visible_link_proves_file_read: false
-  Project_membership_alone_grants_repository_access: false
+A1_run_001:
+  task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+  ordinary_chat_preflight: PASS
+  canonical_task_complete_read: best_supported_true
+  canonical_task_final_heading: "## 17. Delivery and authority boundary"
+  Advanced_Research_final_access:
+    canonical_task: accessible
+    package_and_external_files: inaccessible_18_of_18
+  result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  substantive_analysis_started: false
+  substantive_report_received: false
+  accepted_as_package_audit: false
+  accepted_as_surface_failure_evidence: true
+  operator_reported_cost_USD_approx: 8
+  exact_billing_receipt_available: false
 ```
 
-The workflow supports both documented file/folder selection and the user's observed on-demand repository-link UI. It never requires adding the whole repository to Project Files.
+The executor correctly refused to fabricate unread package contents. The execution workflow failed because the ordinary-chat connector receipt did not qualify the later Advanced Research context.
 
-## 2. Independent-run boundary
+## 2. Did Fable read the research task?
+
+Yes. Two independent statements in the returned material support complete task delivery:
+
+- the ordinary-chat receipt reported 17,081 bytes / 379 lines and sections 1–17;
+- the final failure response stated that the canonical task was the only retrievable mandatory input and that sections 1–17 were read in full.
+
+The repository task ends at `## 17. Delivery and authority boundary`. Therefore the repair preserves the canonical task and changes only the execution surface and full-input gate.
+
+## 3. Revised surface for A1 and A2
 
 ```yaml
-preferred_environment:
-  - fresh_standalone_chat
-  - new_one_run_Project_with_no_prior_chats_and_empty_Project_Files
-existing_Mnemosyne_复合评审_Project:
-  role: continuity_oriented_review_only_by_default
-  independent_Stage_A_use: not_recommended
-  reason:
-    - Project_Memory_present
-    - prior_chats_present
-preferred_visible_model: Fable_5
-preferred_effort: Max
-exact_backend_identity: unknown_or_not_attestable
+revised_surface:
+  environment:
+    - fresh_standalone_chat
+    - new_one_run_Project_with_no_prior_chats_and_empty_Project_Files
+  visible_model: Fable_5
+  visible_effort: Max
+  Advanced_Research: off_for_entire_run
+  chat_level_GitHub: required
+  repository_gate_and_substantive_work_same_ordinary_chat: required
+  sample_only_preflight: prohibited
+  ordinary_web_search:
+    during_repository_gate: off
+    after_gate_PASS: targeted_only
+  exact_backend_identity: unknown_or_not_attestable
 ```
 
-## 3. Current ready tasks
+This is a task-specific repair based on one direct run. It does not establish a universal claim about every Claude Research rollout.
+
+## 4. Current ready tasks
 
 ```yaml
 ready_tasks:
   - task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+    attempts: 1
+    substantive_reports_received: 0
+    state: revised_rerun_ready_after_MNEMOSYNE_186_merge
+    execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.2.md
     operator: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/OPERATOR.md
     manifest: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
-    executed: false
-    report_received: false
+    full_gate_audit_inputs: 19
+
   - task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+    attempts: 0
+    substantive_reports_received: 0
+    state: preventively_repaired_ready_after_MNEMOSYNE_186_merge
+    execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
     operator: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/OPERATOR.md
     manifest: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
-    executed: false
-    report_received: false
+    full_gate_audit_inputs: 12
 ```
 
-A1 needs the complete validation-package folder plus three external source/adjudication files. A2 needs the manual-surface candidate, nine package files and `current/human-approved-spec.md`. Both exact sets remain enumerated in their manifests.
+A2 imports no A1 substantive finding because none exists. It uses only the surface-failure evidence to avoid repeating the same context transition.
 
-## 4. Repository-backed access sequence
+## 5. Result roles
 
 ```yaml
-required_sequence:
-  - create_clean_chat_or_one_run_Project
-  - choose_visible_Fable_5_Max
-  - keep_Research_off
-  - add_or_link_GitHub_in_that_chat
-  - run_exact_path_preflight
-  - continue_only_on_complete_read_receipts
-  - enable_Research
-  - run_canonical_task
-  - return_complete_report
+failed_input_binding_result:
+  may_support:
+    - surface_and_operator_workflow_repair
+    - cost_and_burden_observation
+    - direct_input_probe_design
+  may_not_support:
+    - package_amendment
+    - Q0_Q4_or_scenario_key_finding
+    - manual_surface_selection
+    - V0_or_V1_authorization
 ```
 
-Fallbacks are explicit file/folder selection, task-specific Project Files in a new one-run Project, then exact manual upload. Whole-repository Project Files are prohibited by default.
-
-## 5. User-facing operator-flow rule
-
-Repository files remain the durable, auditable task package. They are no longer the sole place where the operating procedure may appear.
+## 6. Queue and return lifecycle
 
 ```yaml
-operator_flow_delivery:
-  canonical_repository_files_retained: true
-  design_or_launch_response_must_inline_complete_flow: true
-  user_required_to_browse_repository_for_steps: false
-  repository_paths_and_OPERATOR_files:
-    role: supporting_reference_and_backup
-  long_task_body:
-    delivery: verified_downloadable_file_or_repository_file_allowed
-  inline_response_must_include:
-    - activation_or_merge_prerequisite
-    - exact_surface_model_mode_or_effort_when_selected
-    - clean_context_and_independence_requirements
-    - exact_files_links_or_folders
-    - preflight_and_expected_receipt
-    - launch_instruction_or_direct_download_link
-    - return_route
-    - stop_and_fallback_rules
-    - separate_chat_requirements
+ready_queue: handoff/fable5-ready/
+failed_runs: raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/failed-runs/
+completed_substantive_report:
+  - archive_active_execution_contract_and_canonical_specification
+  - archive_report_or_receipt
+  - update_cycle_manifest_and_current_status
+  - remove_completed_ready_directory
 ```
 
-A response that says only “open the `OPERATOR.md` file” or gives only a repository path is non-compliant. The current MNEMOSYNE-185 response directly exercises the correction by restating both Fable5 operating procedures and providing direct task links.
-
-## 6. Queue lifecycle
-
-```yaml
-ready_queue_lifecycle:
-  current_ready_queue: handoff/fable5-ready/
-  completed_task_remains_in_ready_queue: prohibited
-  accepted_completion_archive:
-    tasks: raw/research-reports/cycles/<cycle>/tasks/
-    reports_or_receipts: same_cycle
-    manifest_update: required
-  registry: notes/research-prompts/
-  registry_is_operator_queue: false
-```
+The complete operator flow must also be presented directly in the maintainer response. Repository files remain durable references, not the sole instructions.
 
 ## 7. Current route state
 
 ```yaml
 frontier_clarification_validation:
   package_merged: true
-  Stage_A_Fable5_tasks_ready: true
-  Stage_A_Fable5_executed: false
+  A1_substantive_report_received: false
+  A2_substantive_report_received: false
   surface_selected: false
   V0_authorized: false
   V0_executed: false
@@ -150,11 +141,10 @@ frontier_clarification_validation:
 Stage_B_topics:
   count: 4
   ready_to_run: false
-  generation_gate: Stage_A_report_adjudication
+  generation_gate: valid_Stage_A_report_adjudication
 repository_completion_incident_repair:
   disposition: DEFER_REPAIR_AND_VALIDATION
   repair_started: false
-  ref: notes/mnemosyne-maintenance-issues/META-AGENT-RESEARCH-EVIDENCE-INCIDENT-001-maintainer-disposition.md
 ```
 
 ## 8. Safe next action
@@ -162,12 +152,12 @@ repository_completion_incident_repair:
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_PR_238_or_request_changes
+    - review_and_merge_MNEMOSYNE_186_PR_or_request_changes
   after_merge:
-    - user_may_run_zero_one_or_both_ready_tasks
-    - use_the_complete_inline_flows_delivered_in_the_MNEMOSYNE_185_response
-    - use_each_repository_OPERATOR_file_only_as_reference_or_backup
-    - return_complete_reports_for_adjudication
+    - user_may_run_revised_A1_in_one_fresh_ordinary_Fable_5_Max_chat
+    - keep_Advanced_Research_off
+    - return_full_repository_input_binding_and_complete_report
+    - adjudicate_A1_before_A2_when_practical
   automatic_research_execution: false
   automatic_surface_selection: false
   automatic_V0_or_V1: false
