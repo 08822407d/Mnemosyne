@@ -1,94 +1,113 @@
-# Operator Guide — FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+# Operator Guide — FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001 v0.2
 
-## Purpose
+## Purpose and activation
 
-Run one independent Fable5 threat model of the proposed manual multi-conversation V0 surface. This is a static review only: do not create V0 worker contexts, transfer live packets, modify GitHub or execute validation.
-
-## Recommended Claude environment
+Run one independent static threat model of the proposed manual multi-conversation V0 surface without repeating A1's Advanced Research repository-access failure.
 
 ```yaml
-preferred_surface: fresh_standalone_chat_or_new_one_run_Project
+active_after: MNEMOSYNE_186_merge
+visible_model: Fable_5
+visible_effort: Max
+Advanced_Research: off_for_entire_run
+repository_write: prohibited
+validation_execution: prohibited
+live_surface_test: prohibited
+```
+
+A2 has not yet been executed. This is a preventive surface repair based on A1 run 001.
+
+## Required environment
+
+```yaml
+preferred_surface: fresh_standalone_Claude_chat_or_new_one_run_Project
 must_be_separate_from_A1: true
-existing_Mnemosyne_复合评审_Project: not_recommended_for_this_independent_run
-Project_Files: leave_empty_for_preferred_route
+existing_Mnemosyne_复合评审_Project: do_not_use
+Project_Files: empty
 Project_Instructions: none_task_specific
 prior_task_chats_or_reports: absent
 visible_model: Fable_5
 visible_effort: Max
+Advanced_Research: off
+ordinary_web_search_initially: off
 GitHub_access: chat_level_plus_Add_from_GitHub
-Research_initially: off
 ```
 
-## Preferred connector-linked steps
+## Ordered operator flow
 
-1. Open a new chat or one-run Project that has not been used for A1 or prior Mnemosyne research.
-2. Select visible model `Fable 5` and effort `Max`. Record the exact visible text.
-3. Keep Research off.
-4. Click `+` -> `Add from GitHub` in the chat.
-5. Select or link repository `08822407d/Mnemosyne`, branch `master`.
-6. Confirm the repository link or selection receipt appears, but do not treat it as proof of file access.
-7. Send the connector preflight below.
-8. Continue only if all four files are read completely and the expected task/candidate IDs are visible.
-9. Enable Research and web search.
-10. Send the Research startup instruction.
-11. The task must verify every manifest path before analysis and verify current Claude/platform claims from authoritative current sources.
-12. If integrity fails, stop and use explicit selection or upload in a new clean run. Do not repair the run inside a contaminated Project.
+1. Open a new standalone Claude chat, or a new one-run Project that has never been used for A1 or prior Mnemosyne research.
+2. Select visible `Fable 5` and effort `Max`; record the exact text.
+3. Keep **Advanced Research off**. Keep ordinary web search off during the repository gate.
+4. Click `+ -> Add from GitHub` in the chat.
+5. Link/select `08822407d/Mnemosyne`, branch `master`.
+6. Confirm the repository link/selection receipt appears, but do not treat it as a file-read receipt.
+7. Send the full same-context repository gate below.
+8. Continue only when the result is exactly `PASS`, every required path is complete, and the canonical specification reaches `## 14. Delivery and authority boundary`.
+9. Stay in the same chat with the same model, effort, mode, and GitHub link.
+10. Ordinary web search may now be enabled for current authoritative product facts and targeted support. Advanced Research remains off.
+11. Send the substantive launch message below.
+12. Do not create live V0 worker/reviewer/adjudicator contexts or perform a live connector experiment.
+13. Return the complete threat-model report and input-binding receipt to the current Mnemosyne frontier-clarification validation conversation.
 
-## Copyable connector preflight
+## Copyable full repository gate
 
 ```text
-Use the GitHub integration read-only. Research must remain off. Do not analyze the threat model and do not read prior reports.
+Use the GitHub integration read-only. Keep Advanced Research and ordinary web search off. Do not analyze the threat model yet, do not read prior Pro/Fable reports or A1 material, and do not create any live validation context.
 
-Read exactly these four files:
+First read completely:
 
 1. handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
 2. handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
-3. notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
-4. notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
+3. notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
 
-Return only:
+Then follow input-manifest.yaml and read every path in every selection_group in this same ordinary chat. This means all 3 support paths and all 12 mandatory audit inputs. Read the canonical threat-model specification through its final heading "## 14. Delivery and authority boundary". Do not accept a sample-path check, visible repository link, prior operator claim, or another context's receipt as a substitute.
 
-repository_read_preflight:
-  task_id:
-  repository:
-  selected_branch_or_ref:
-  repository_link_visible:
-  exact_path_receipts:
-    - path:
-      complete_read: true | false
-      visible_artifact_id_or_heading:
-      source_identity_observed:
-      limitation:
-  Project_Files_used: false
-  chat_level_GitHub_used: true
-  Research_enabled_during_preflight: false
-  write_action_performed: false
-  result: PASS | INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+Return only the repository_input_binding object defined in the execution contract. Set result PASS only when:
 
-Expected visible identities include task ID FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001 and candidate ID FRONTIER-CLARIFICATION-VALIDATION-MANUAL-SURFACE-CANDIDATE-001. A visible GitHub hyperlink without complete reads is a failure. Do not write GitHub and do not create any validation context.
+- all 3 support paths are completely readable;
+- the canonical specification is complete through its final heading;
+- all 12 mandatory audit inputs are completely readable;
+- task ID FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001 is visible;
+- candidate ID FRONTIER-CLARIFICATION-VALIDATION-MANUAL-SURFACE-CANDIDATE-001 and package ID MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001 are bound at version 0.1.0;
+- this exact ordinary chat will execute the threat model;
+- Advanced Research is false;
+- ordinary web search was not used during the gate;
+- no live surface/validation context was created;
+- no write action occurred.
+
+If any condition fails, return INPUT_OR_REPOSITORY_INTEGRITY_FAILURE or SURFACE_NOT_SUPPORTED_FOR_REVISED_RUN and stop. Do not start web research or substantive threat modeling.
 ```
 
-## Copyable Research startup instruction
+## Gate acceptance checklist
+
+```yaml
+result: PASS
+support_paths_complete: 3_of_3
+mandatory_audit_inputs_complete: 12_of_12
+canonical_specification_complete: true
+canonical_final_heading: "## 14. Delivery and authority boundary"
+Advanced_Research_enabled: false
+ordinary_web_search_used_during_gate: false
+same_chat_for_future_threat_model: true
+live_surface_or_validation_context_created: false
+write_action_performed: false
+```
+
+## Copyable substantive launch message
 
 ```text
-Research is now authorized for this one read-only static threat-model report. Use the GitHub integration read-only.
+The full same-context repository gate passed. Continue in this exact ordinary Fable 5 Max chat. Do not enable Advanced Research, do not change Project/chat/context, do not create live V0 contexts, and do not write GitHub.
 
-Re-read:
+Re-read as needed:
 
-handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
-handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
+- notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
+- notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+- handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
 
-Then read and execute exactly the canonical task they identify:
+Execute every substantive requirement and all 22 required report sections in the canonical threat-model specification. The execution contract controls the surface and context: Advanced Research remains off for the entire run. Repository artifacts are primary evidence. Ordinary web search is now allowed for current official product facts and targeted external support only; do not target a large source count or perform a live surface experiment.
 
-notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+Do not use prior Pro/Fable reports, A1 material, Project Memory, unrelated repository files, or any GitHub write action. If repository access is lost, return RUN_INVALIDATED_BY_REPOSITORY_ACCESS_LOSS and do not issue a final disposition. If a time-sensitive product fact cannot be verified, mark the exact claim unknown and narrow the conclusion instead of switching to Advanced Research.
 
-Before substantive analysis, verify every mandatory repository path. Bind the audit object to candidate ID FRONTIER-CLARIFICATION-VALIDATION-MANUAL-SURFACE-CANDIDATE-001 version 0.1.0 and package ID MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001 version 0.1.0. The candidate was merged at 5e556c2a6dacb41d68bf6209dbf8156b92b79e72. If the current Claude UI exposes only branch-level access, verify exact paths, IDs, versions and consistency and state any remaining commit-attestation limitation explicitly.
-
-Do not use Project Memory as evidence, prior Pro/Fable reports, A1 materials, other ready-task directories or any GitHub write action. Do not create fresh worker/reviewer contexts or execute a live connector experiment; this task is a static threat model. Verify time-sensitive product facts from current authoritative sources and distinguish them from the user's 2026-07-30 UI observations.
-
-If any mandatory file is missing, unreadable, truncated or mismatched, return only the canonical task's INPUT_OR_REPOSITORY_INTEGRITY_FAILURE object.
-
-The final response must contain the complete report body. Record the exact visible model and effort text and any UI fallback or quota warning, but do not infer the exact served backend.
+The complete report body must appear in the final response. Include the repository_input_binding receipt, exact visible model/effort text, Advanced_Research_enabled: false, current-fact sources and limitations, any quota/fallback warning, confirmation that no live V0 context was created, and exactly one allowed surface disposition. The exact served backend remains unknown or not attestable unless exact-request provider metadata exists.
 ```
 
 ## Explicit file/folder selection fallback
@@ -98,6 +117,7 @@ Select only:
 ```text
 handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
 handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
+notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
 notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
 notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
 notes/frontier-clarification-validation-package/README.md
@@ -112,28 +132,43 @@ notes/frontier-clarification-validation-package/12-execution-surface-and-user-de
 current/human-approved-spec.md
 ```
 
-Do not add the whole repository. If persistent selection is unavoidable, use a new one-run Project separate from A1 and the existing continuity Project.
+Do not add the whole repository. Do not use the existing continuity Project.
 
 ## Manual upload fallback
 
-The minimum upload set is 12 files: the canonical task, manual-surface candidate, nine required package files and `current/human-approved-spec.md`.
+The minimum substantive upload set is 13 files:
 
-1. download them from the recorded source ref;
+```yaml
+execution_contract: 1
+canonical_threat_model_specification: 1
+manual_surface_candidate: 1
+required_package_files: 9
+Mnemosyne_authority_file: 1
+total: 13
+```
+
+If manual upload is necessary:
+
+1. obtain all files from the recorded source refs;
 2. preserve path and filename in a transfer receipt;
-3. upload exactly those files to a new clean chat/project;
-4. replace connector receipts with the transfer receipt;
-5. stop on any missing, transformed or truncated file.
+3. upload exactly the 13 files to a new clean ordinary chat/one-run Project;
+4. keep Advanced Research off;
+5. stop on any missing, transformed, or truncated file.
 
-## Independence controls
+## Stop conditions
 
-Do not expose:
+Stop without substantive threat modeling when:
 
-- the foundational Pro or Fable reports;
-- A1's task or report;
-- previous manual-surface conclusions from another model;
-- unrelated repository files;
-- existing Project Memory or prior Mnemosyne chats.
+- any support or mandatory input is missing or truncated;
+- the canonical specification does not reach its final heading;
+- Advanced Research is enabled or required;
+- the run moves to another context;
+- GitHub access is lost;
+- A1/prior reports/Project Memory contaminate the chat;
+- a live worker/reviewer/adjudicator context is created;
+- a write action is requested or performed;
+- the surface cannot support a same-chat ordinary-mode threat model.
 
 ## Return
 
-Return the complete Fable5 report to the current Mnemosyne frontier-clarification validation conversation. Do not add it to reusable Project Files or reuse this chat/Project for A1.
+Return the complete ordinary-chat threat-model report, repository-input binding receipt, source table, and any supported export to the current Mnemosyne frontier-clarification validation conversation. Do not add the report to reusable Project Files or reuse this chat/Project for A1.
