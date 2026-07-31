@@ -2,49 +2,80 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-APPROVED-SPEC-001
 artifact_role: target_execution_source
-status: proposed_v0_1_pending_owner_acceptance
+status: owner_accepted_v0_1_inactive_design_and_governance_baseline
 authority_level: target_execution_source
 target_runtime_truth_source_designated: true
 target_runtime_truth_source_effective: false
 effective_for_operational_use: false
 created_by_task: MNEMOSYNE-171
+last_updated_by_task: META-AGENT-OWNER-DISPOSITION-001
 design_version: 0.1.0
 schema_version: 0.1.0
 policy_version: 0.1.0
 delivery_version: 0.1.0
 owner: user
+owner_disposition: ACCEPT_WITH_LIMITATIONS
+owner_disposition_recorded_at: 2026-07-31
 source_refs:
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
   - notes/first-target-minimum-upgrade-contract-v0.1.md
   - notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
+  - target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
 known_limits:
-  - operational_use_requires_explicit_post_build_owner_acceptance
+  - accepted_as_inactive_design_and_governance_baseline_only
+  - operational_activation_requires_separate_explicit_owner_decision
+  - applicable_non_FABLE_health_review_findings_remain_pending_before_pilot_or_activation
   - this_file_does_not_authorize_private_material_or_automatic_writeback
   - pending_requirements_remain_pending
 ---
 
-# Meta-Agent v0.1 Approved Spec — Proposed Build
+# Meta-Agent v0.1 Approved Spec — Owner-Accepted Inactive Baseline
 
-## 1. Authority and activation
+## 1. Authority, Owner disposition and activation
 
-This file is the **designated sole Meta-Agent v0.1 runtime truth-source path**. It is not yet effective for operational use.
+This file is the **designated sole Meta-Agent v0.1 runtime truth-source path**. The Owner has accepted its current requirements, initial method references and governance structure as an inactive design and governance baseline. It is **not** effective for operational use.
+
+```yaml
+owner_disposition:
+  decision: ACCEPT_WITH_LIMITATIONS
+  decision_task: META-AGENT-OWNER-DISPOSITION-001
+  recorded_at: 2026-07-31
+  accepted_as:
+    - repository_backed_Meta_Agent_v0_1_design_and_governance_baseline
+    - MA_REQ_0001_through_MA_REQ_0016
+    - MA_METHOD_0001_through_MA_METHOD_0006_as_initial_incomplete_method_library
+    - sole_target_truth_path_designation
+    - authority_source_and_memory_role_separation
+    - stable_ID_version_migration_and_rollback_baseline
+  not_accepted_as:
+    - production_ready_system
+    - unrestricted_operational_Meta_Agent
+    - empirically_validated_Agent_architecture_optimizer
+    - secure_autonomous_self_improving_system
+    - provider_neutral_Agent_compiler_or_complete_design_IR
+    - private_material_capable_system
+    - RAG_MCP_auto_writeback_or_shared_memory_system
+  activation_authorized: false
+```
 
 ```yaml
 activation:
   designated_truth_source_path: target-projects/meta-agent/current/approved-spec.md
   owner: user
-  current_status: proposed_v0_1_pending_owner_acceptance
+  current_status: owner_accepted_v0_1_inactive_design_and_governance_baseline
   effective_for_operational_use: false
+  separate_activation_decision_required: true
   activation_requires:
-    - canonical_MNEMOSYNE_171_PR_merged
-    - owner_explicitly_accepts_or_accepts_with_limitations
+    - explicit_target_scoped_owner_activation_authorization
     - latest_active_context_has_no_undeferred_operational_blocker
     - applicable_health_review_P0_P1_equivalent_findings_checked_or_explicitly_deferred
-  no_implicit_activation_from_file_creation: true
+    - exact_operational_or_bounded_pilot_scope_and_acceptance_stop_rollback_criteria
+  no_implicit_activation_from_owner_baseline_acceptance: true
+  no_implicit_activation_from_file_or_PR_merge: true
 ```
 
-Until activation, this file is a proposed target baseline. Mnemosyne's `current/human-approved-spec.md` governs Mnemosyne process and safety only; it is not Meta-Agent runtime truth.
+The Owner disposition makes this file the accepted repository-backed design and governance baseline within the stated limitations. It does not authorize execution, private material, a pilot, broad writes, advanced automation or a production claim. Mnemosyne's `current/human-approved-spec.md` governs Mnemosyne process and safety only; it is not Meta-Agent runtime truth.
 
 ## 2. Identity, purpose and scope
 
@@ -60,7 +91,7 @@ Software engineering is the dominant early incubation domain, not the whole iden
 
 ## 3. Confirmed v0.1 requirements
 
-The following requirement IDs are authoritative target requirements once this spec is activated. They must not be silently renumbered, reused or semantically changed.
+The following requirement IDs are Owner-accepted target requirements for the current design and governance baseline. They must not be silently renumbered, reused or semantically changed. Operational application remains gated by the inactive status of this target truth source.
 
 | ID | Requirement |
 |---|---|
@@ -81,7 +112,7 @@ The following requirement IDs are authoritative target requirements once this sp
 | `MA-REQ-0015` | A fresh qualified session can resume from target truth, current context and handoff without hidden prior-conversation assumptions. |
 | `MA-REQ-0016` | Important methodology changes require evidence, acceptance criteria, issue/postmortem records where relevant and regression or semantic review proportionate to impact. |
 
-## 4. v0.1 non-goals
+## 4. v0.1 non-goals and accepted limitations
 
 v0.1 does not claim or authorize:
 
@@ -96,20 +127,36 @@ v0.1 does not claim or authorize:
 - private source, secrets, credentials, customer or confidential material in public Git;
 - reconstruction of the lost original Meta-Agent conversation as fact;
 - research reports, Mnemosyne current files, handoff or model inference as target runtime truth;
-- completion of every Mnemosyne TODO before Meta-Agent use.
+- completion of every Mnemosyne TODO before Meta-Agent use;
+- empirical validation of Agent-architecture optimization;
+- complete Meta-level security;
+- a provider-neutral Agent compiler or complete Agent Design IR.
+
+```yaml
+accepted_limitations:
+  - target_truth_remains_inactive_until_separate_activation_decision
+  - no_private_material_ingestion
+  - no_broad_repository_or_external_write
+  - no_automatic_methodology_promotion
+  - no_production_ready_claim
+  - no_claim_of_validated_architecture_optimization
+  - no_claim_of_complete_Meta_level_security
+  - applicable_non_FABLE_health_review_findings_remain_pending_before_pilot_or_activation
+  - MA_DR_06_and_MA_DR_07_recommended_before_broad_tool_bearing_operation
+```
 
 ## 5. Target file roles
 
 ```yaml
 target_file_roles:
   target-projects/meta-agent/current/approved-spec.md:
-    role: sole_target_execution_source_after_activation
+    role: sole_target_execution_source_after_separate_activation
   target-projects/meta-agent/current/active-context.md:
     role: non_execution_current_state_and_safe_next_action
   target-projects/meta-agent/authority/source-and-owner-map.md:
     role: owner_source_priority_material_and_write_authority_support
   target-projects/meta-agent/methodology/core-methodology.md:
-    role: method_library_approved_only_as_referenced_here
+    role: initial_incomplete_method_library_accepted_only_as_referenced_here
   target-projects/meta-agent/cases/case-and-feedback-ledger.md:
     role: evidence_candidate_and_feedback_only
   target-projects/meta-agent/history/decision-version-and-migration-log.md:
@@ -125,7 +172,7 @@ No file acquires authority merely because it is newer, longer, or placed under `
 ```yaml
 conflict_precedence:
   - current_explicit_user_Meta_Agent_decision_recorded_in_an_authorized_change
-  - this_approved_spec_after_activation
+  - this_approved_spec_within_its_owner_accepted_inactive_scope
   - user_approved_target_build_or_change_manifest_within_exact_scope
   - user_approved_target_decision_record
   - methodology_objects_referenced_by_this_spec
@@ -136,7 +183,7 @@ conflict_precedence:
 
 If a current user instruction conflicts with this spec, the Agent must identify the conflict, stop affected execution, and create or request an authorized change record. It must not silently rewrite target truth.
 
-## 7. Initial approved methodology references
+## 7. Initial accepted methodology references
 
 The initial method library consists of:
 
@@ -149,9 +196,10 @@ methodology_refs:
   - MA-METHOD-0005
   - MA-METHOD-0006
 methodology_file: target-projects/meta-agent/methodology/core-methodology.md
+methodology_status: owner_accepted_as_initial_incomplete_library
 ```
 
-Methods are general design aids. They do not override requirements, authority or a target-specific user's decisions.
+Methods are general design aids. They do not override requirements, authority or a target-specific user's decisions. This disposition does not add `MA-METHOD-0007` or later methods.
 
 ## 8. Case, feedback and methodology-promotion rule
 
@@ -229,7 +277,7 @@ capability_split:
     - forbidden_material_scan
     - diff_and_format_checks
   human_only:
-    - operational_acceptance
+    - operational_activation_or_acceptance
     - target_truth_or_authority_change
     - sensitive_material_approval
 ```
@@ -244,6 +292,10 @@ version_set:
   schema_version: 0.1.0
   policy_version: 0.1.0
   delivery_version: 0.1.0
+
+owner_disposition_version_effect:
+  version_change: none
+  rationale: status_and_owner_acceptance_record_only_no_requirement_method_schema_policy_or_delivery_semantics_changed
 
 upgrade_contract:
   contract_id: META-AGENT-V0.1-UPGRADE-CONTRACT-001
@@ -276,23 +328,25 @@ An update to target truth requires:
 
 Stable IDs are never reused. Rename, split, merge, replacement and retirement require explicit lineage mapping.
 
-## 13. Operational acceptance gate
+## 13. Operational activation gate
 
 ```yaml
 operational_acceptance:
-  current_state: pending_owner_acceptance
-  merge_of_build_PR_alone: creates_files_but_does_not_authorize_operation
-  required_owner_disposition:
-    - ACCEPT_V0_1_FOR_BOUNDED_OPERATIONAL_PILOT
-    - ACCEPT_WITH_LIMITATIONS
-    - REQUEST_REVISION
-    - REJECT_AND_ROLL_BACK
-  before_acceptance:
-    - verify_seven_of_seven_target_files_and_no_extra_target_paths
-    - verify_MA_REQ_0001_through_MA_REQ_0016
-    - verify_stable_IDs_versions_sources_authority_and_rollback
-    - check_or_defer_applicable_health_review_P0_P1_equivalent_findings
-    - record_residual_risks
+  baseline_disposition: ACCEPT_WITH_LIMITATIONS
+  baseline_accepted: true
+  target_truth_effective_for_operational_use: false
+  operational_activation_authorized: false
+  merge_of_this_recording_PR_alone: records_owner_decision_but_does_not_authorize_operation
+  next_activation_or_pilot_decision_requires:
+    - separate_explicit_owner_authorization
+    - applicable_non_FABLE_health_review_findings_checked_or_explicitly_deferred
+    - exact_bounded_scope_or_pilot_manifest
+    - acceptance_stop_and_rollback_criteria
+    - latest_context_and_handoff_review
+  prohibited_implicit_transitions:
+    - baseline_acceptance_to_operational_activation
+    - research_recommendation_to_methodology_change
+    - repository_permission_to_task_authority
 ```
 
-Until an owner disposition activates this spec, Meta-Agent must not be represented as operational, production-ready or approved for private material.
+Until a separate Owner decision activates this spec for an exact scope, Meta-Agent must not be represented as operational, production-ready, approved for private material or authorized for a pilot.
