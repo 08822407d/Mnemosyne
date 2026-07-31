@@ -2,27 +2,34 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-DECISION-VERSION-MIGRATION-LOG-001
 artifact_role: reviewed_history_version_lineage_migration_and_rollback
-status: initialized_pending_owner_acceptance
+status: owner_accepted_v0_1_inactive_baseline_recorded
 authority_level: reviewed_history_and_migration_record
 target_runtime_truth_source: false
 created_by_task: MNEMOSYNE-171
+last_updated_by_task: META-AGENT-OWNER-DISPOSITION-001
 design_version: 0.1.0
 schema_version: 0.1.0
 policy_version: 0.1.0
 delivery_version: 0.1.0
 source_refs:
   - https://github.com/08822407d/Mnemosyne/pull/221
+  - https://github.com/08822407d/Mnemosyne/pull/222
+  - https://github.com/08822407d/Mnemosyne/pull/224
+  - https://github.com/08822407d/Mnemosyne/pull/237
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
   - notes/first-target-minimum-upgrade-contract-v0.1.md
+  - target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
+  - notes/codex-task-results/META-AGENT-OWNER-DISPOSITION-001-result.md
 known_limits:
   - public_Git_history_cannot_be_promised_erased
   - no_prior_operational_Meta_Agent_state_existed
+  - owner_baseline_acceptance_does_not_equal_operational_activation
 ---
 
 # Meta-Agent Decision, Version and Migration Log v0.1
 
-## 1. Initial decision records
+## 1. Decision records
 
 ### MA-DEC-0001 — Select product-build launch route
 
@@ -98,7 +105,50 @@ status: authorized
 source_ref: current_conversation_user_instruction_after_PR_221_merge
 ```
 
-## 2. Initial version set
+### MA-DEC-0007 — Accept v0.1 with limitations as an inactive design and governance baseline
+
+```yaml
+id: MA-DEC-0007
+decision: ACCEPT_WITH_LIMITATIONS
+status: accepted_by_owner
+recorded_by_task: META-AGENT-OWNER-DISPOSITION-001
+source_ref: current_dedicated_Meta_Agent_conversation_owner_disposition_2026_07_31
+accepted_as:
+  - repository_backed_Meta_Agent_v0_1_design_and_governance_baseline
+  - MA_REQ_0001_through_MA_REQ_0016
+  - MA_METHOD_0001_through_MA_METHOD_0006_as_initial_incomplete_method_library
+  - sole_target_truth_path_designation
+  - authority_source_and_memory_role_separation
+  - stable_ID_version_migration_and_rollback_baseline
+not_accepted_as:
+  - production_ready_system
+  - unrestricted_operational_Meta_Agent
+  - empirically_validated_Agent_architecture_optimizer
+  - secure_autonomous_self_improving_system
+  - provider_neutral_Agent_compiler_or_complete_design_IR
+  - private_material_capable_system
+  - RAG_MCP_auto_writeback_or_shared_memory_system
+accepted_limitations:
+  - target_truth_remains_inactive_until_separate_activation_decision
+  - no_private_material_ingestion
+  - no_broad_repository_or_external_write
+  - no_automatic_methodology_promotion
+  - no_production_ready_claim
+  - no_claim_of_validated_architecture_optimization
+  - no_claim_of_complete_Meta_level_security
+  - applicable_non_FABLE_health_review_findings_remain_pending_before_pilot_or_activation
+  - MA_DR_06_and_MA_DR_07_recommended_before_broad_tool_bearing_operation
+activation_authorized: false
+effect:
+  - proposed_v0_1_becomes_owner_accepted_inactive_design_and_governance_baseline
+  - designated_target_truth_path_remains_inactive_for_operational_use
+  - no_pilot_or_private_material_or_automation_authority_created
+change_class: Class_3_owner_authority_status_record_without_activation
+version_change: none
+version_change_rationale: no_requirement_method_schema_policy_or_delivery_semantics_changed
+```
+
+## 2. Current version set
 
 ```yaml
 version_set:
@@ -107,7 +157,8 @@ version_set:
   policy_version: 0.1.0
   delivery_version: 0.1.0
   derived_transformation_context: none
-  operational_status: pending_owner_acceptance
+  baseline_status: owner_accepted_with_limitations
+  operational_status: inactive_pending_separate_activation
 ```
 
 Version meanings:
@@ -117,6 +168,8 @@ Version meanings:
 - `policy_version`: authority, update, privacy and promotion rules;
 - `delivery_version`: concrete seven-file package;
 - transformation context: how derived views were produced; none exist in v0.1.
+
+`MA-DEC-0007` records Owner acceptance state and limitations without changing the meaning of any requirement, method, schema, policy or delivery object; therefore the version set remains `0.1.0`.
 
 ## 3. Stable ID rules and issued ranges
 
@@ -131,7 +184,7 @@ ID_rules:
 issued:
   requirements: MA-REQ-0001_through_MA-REQ-0016
   pending_requirements: MA-PEND-0001_through_MA-PEND-0008
-  decisions: MA-DEC-0001_through_MA-DEC-0006
+  decisions: MA-DEC-0001_through_MA-DEC-0007
   methods: MA-METHOD-0001_through_MA-METHOD-0006
   cases: []
   feedback: []
@@ -140,7 +193,7 @@ issued:
     - MA-MIG-0001
 ```
 
-IDs shown as schema examples in the case ledger are not issued entries.
+IDs shown as schema examples in the case ledger are not issued entries. Research-gap candidate labels discussed outside target truth are not issued IDs.
 
 ## 4. Bootstrap transition — MA-MIG-0001
 
@@ -148,7 +201,7 @@ IDs shown as schema examples in the case ledger are not issued entries.
 migration_record:
   migration_id: MA-MIG-0001
   type: bootstrap_initialization
-  status: built_pending_owner_acceptance
+  status: built_and_owner_accepted_with_limitations_but_operationally_inactive
 
   from_state:
     repository_ref: master@8ff567c6cd5020bd05e13034866825fdb6473f4a
@@ -163,7 +216,8 @@ migration_record:
     target_workspace: target-projects/meta-agent/
     target_file_count: 7
     designated_runtime_truth_source: target-projects/meta-agent/current/approved-spec.md
-    operational_effect: pending_owner_acceptance
+    owner_baseline_disposition: ACCEPT_WITH_LIMITATIONS
+    operational_effect: inactive_pending_separate_activation
     design_version: 0.1.0
     schema_version: 0.1.0
     policy_version: 0.1.0
@@ -190,7 +244,8 @@ migration_record:
     - handoff_and_safe_next_action_present
     - rollback_record_present
 
-  owner_disposition: pending
+  owner_disposition: ACCEPT_WITH_LIMITATIONS
+  operational_activation: not_authorized
 ```
 
 No previous target runtime was migrated. The ID exists so the bootstrap transition and its rollback boundary remain traceable.
@@ -241,6 +296,8 @@ change_classes:
     minimum_gate: data_and_authority_mapping_export_recovery_staged_validation_no_dual_truth
 ```
 
+`MA-DEC-0007` is a Class-3 Owner-authority status record because it changes acceptance state, but it does not activate the runtime truth source or alter authority boundaries. Its gate is satisfied by the direct Owner decision, exact path authorization, frontier review context and preserved rollback boundary.
+
 ## 8. Rollback plan for MA-MIG-0001
 
 ```yaml
@@ -253,11 +310,16 @@ rollback_plan:
     action: close_or_replace_the_single_MNEMOSYNE_171_PR
     target_workspace_on_master: absent
 
-  after_M2_merge_before_operational_acceptance:
+  after_M2_merge_before_owner_baseline_disposition:
     action: revert_the_M2_merge_or_supersede_with_reviewed_v0_1_1
-    target_runtime_truth_effective_before_acceptance: false
+    target_runtime_truth_effective: false
 
-  after_operational_acceptance:
+  after_owner_baseline_acceptance_before_operational_activation:
+    action: record_a_new_owner_decision_and_use_a_reviewed_versioned_revision_or_revert
+    target_runtime_truth_effective: false
+    operational_state_to_rollback: none
+
+  after_operational_activation:
     action: use_owner_approved_MA_MIG_change_record_and_versioned_revision
 
   derived_artifacts_to_discard_or_rebuild: []
@@ -266,7 +328,7 @@ rollback_plan:
     - forks_caches_or_external_copies_may_persist
   authority_during_rollback:
     - user_remains_final_authority
-    - no_target_spec_is_operational_until_an_accepted_state_is_declared
+    - no_target_spec_is_operational_until_an_accepted_activation_scope_is_declared
   verification_after_rollback:
     - target_paths_absent_or_marked_superseded
     - no_competing_truth_source
@@ -279,13 +341,16 @@ rollback_plan:
 ## 9. Current acceptance record
 
 ```yaml
-M2_build_acceptance:
-  repository_build: pending_canonical_PR_merge
-  owner_operational_acceptance: pending
-  accepted_for_operation: false
-  next_required_decision:
-    - ACCEPT_V0_1_FOR_BOUNDED_OPERATIONAL_PILOT
-    - ACCEPT_WITH_LIMITATIONS
-    - REQUEST_REVISION
-    - REJECT_AND_ROLL_BACK
+v0_1_acceptance:
+  repository_build: merged
+  owner_design_and_governance_baseline_acceptance: ACCEPT_WITH_LIMITATIONS
+  target_truth_designated: true
+  target_truth_effective_for_operational_use: false
+  operational_activation_authorized: false
+  pilot_authorized: false
+  private_material_authorized: false
+  automatic_methodology_promotion_authorized: false
+  next_required_gate:
+    - human_review_and_merge_META_AGENT_OWNER_DISPOSITION_001_recording_PR
+    - then_separately_select_post_disposition_research_or_activation_preparation
 ```
