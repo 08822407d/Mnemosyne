@@ -95,13 +95,14 @@ If separately required, treat them according to their own authority and freshnes
 18. For Deep Research, require one complete canonical report. Markdown/Word/PDF downloads are exports of the same report, not second research outputs. Do not require an arbitrary separately generated `complete-response.md` file unless the current surface explicitly supports and confirms it.
 19. For non-Deep-Research tasks, retain the complete-response transfer-file rule when the full final response genuinely differs from named artifacts and the surface can create the file.
 20. Apply long-transfer file-first delivery when relevant, but never claim a file or sandbox path exists without verification.
-21. Keep local artifact generation separate from repository write, upload, forwarding, quota spend and research execution authority.
-22. Apply dependency-aware staged generation for multiple Pro/Deep Research/cross-conversation tasks; do not generate likely-invalidated downstream tasks without explicit user acceptance.
-23. Treat repository visibility and product/model/tool behavior as time-sensitive when relevant.
-24. Preserve the current conversation's task mainline; do not import maintenance live routes or infer a handoff.
-25. Apply the single-active-PR lineage guard before branch creation and again before PR creation.
-26. Apply the run-context and PR provenance guard to important repository-writing work.
-27. If required files are unavailable, state the limitation and do not invent repository state.
+21. Whenever a Deep Research, Fable, Codex, new-ChatGPT-conversation, replay, review, validation, handoff, or other cross-conversation task is designed or delivered, mirror the complete user-executable operator flow directly in the same design/launch response. Repository paths, `OPERATOR.md`, taskbooks, manifests, and downloadable files are supporting artifacts, not substitutes for visible operating steps. Include exact surface/model/mode where selected, preparation, files or links, preflight, launch message or downloadable task, return route, stop conditions, and separate-chat requirements.
+22. Keep local artifact generation separate from repository write, upload, forwarding, quota spend and research execution authority.
+23. Apply dependency-aware staged generation for multiple Pro/Deep Research/cross-conversation tasks; do not generate likely-invalidated downstream tasks without explicit user acceptance.
+24. Treat repository visibility and product/model/tool behavior as time-sensitive when relevant.
+25. Preserve the current conversation's task mainline; do not import maintenance live routes or infer a handoff.
+26. Apply the single-active-PR lineage guard before branch creation and again before PR creation.
+27. Apply the run-context and PR provenance guard to important repository-writing work.
+28. If required files are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
 
@@ -127,6 +128,7 @@ mnemosyne_guidance_refresh:
     - visible_answer_ledger_and_semantic_escalation
     - one_canonical_Deep_Research_report_and_supported_export
     - file_first_delivery_when_relevant
+    - same_response_inline_operator_flow_for_cross_conversation_tasks
     - staged_prompt_generation
     - visibility_and_platform_freshness
     - single_active_PR_lineage_when_relevant
