@@ -2,11 +2,12 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-003
 artifact_role: research_evidence_navigation
-status: DR_01_05_and_Batch_A_recorded_or_pending_canonical_merge
+status: DR_01_05_and_Batch_A_recorded_MA_DR_08_ready_not_selected
 authority_level: navigation_and_evidence_support
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
-canonical_recording_PR: 242
+last_updated_by_task: META-AGENT-SUPPORT-METADATA-SYNC-001
+canonical_Batch_A_recording_PR: 242
+canonical_Batch_A_merge_commit: 531aab228836915162ec5f5c45cbbcfc97f1e572
 ---
 
 # Meta-Agent Research Evidence
@@ -43,7 +44,7 @@ The deterministic archive preserves five original prompts and five complete oper
 target-projects/meta-agent/research/batches/2026Q3-batch-a/
 ```
 
-This collection preserves:
+Batch A was recorded on `master` through PR #242. This collection preserves:
 
 - exact `MA-DR-06` and `MA-DR-07` report exports;
 - individual intake reviews;

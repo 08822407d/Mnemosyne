@@ -2,18 +2,21 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-SOURCE-OWNER-MAP-001
 artifact_role: source_and_owner_authority_map
-status: proposed_v0_1_pending_owner_acceptance
-authority_level: user_approved_support_record_when_activated
+status: owner_accepted_v0_1_inactive_support_record
+authority_level: owner_accepted_support_record
 target_runtime_truth_source: false
 created_by_task: MNEMOSYNE-171
+last_updated_by_task: META-AGENT-SUPPORT-METADATA-SYNC-001
 policy_version: 0.1.0
 source_refs:
   - target-projects/meta-agent/current/approved-spec.md
+  - target-projects/meta-agent/history/decision-version-and-migration-log.md
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
 known_limits:
   - does_not_grant_permission_by_itself
   - platform_permission_is_not_task_authorization
+  - target_truth_remains_inactive_for_operational_use
 ---
 
 # Meta-Agent Source and Owner Map v0.1
@@ -39,7 +42,7 @@ No Agent, model, research report, repository path or tool permission can replace
 ```yaml
 runtime_truth:
   designated_path: target-projects/meta-agent/current/approved-spec.md
-  current_effect: pending_owner_acceptance
+  current_effect: owner_accepted_inactive_design_and_governance_baseline_not_effective_for_operational_use
   entire_directory_is_truth_source: false
 
 Mnemosyne:
@@ -52,13 +55,13 @@ Mnemosyne:
   root_execution_source_scope: Mnemosyne_process_and_safety_only
 ```
 
-After activation, the designated spec is the sole Meta-Agent runtime truth source. Other files provide methods, evidence, current state, history or navigation only.
+The designated spec is the sole Meta-Agent runtime truth-source path. The Owner has accepted it as the current design and governance baseline with limitations, but it remains inactive for operational use. Other files provide methods, evidence, current state, history or navigation only.
 
 ## 3. Source classes
 
 | Source class | Examples | Authority and permitted use |
 |---|---|---|
-| `target_truth` | activated `current/approved-spec.md` | Governs Meta-Agent runtime behavior. |
+| `target_truth` | owner-accepted `current/approved-spec.md` | Governs the accepted design/governance baseline now; governs operational behavior only after separate activation. |
 | `current_user_decision` | explicit target-scoped user instruction with authorization record | Highest target authority; must be recorded through an approved change when it changes truth. |
 | `approved_target_decision` | `MA-DEC-*` record accepted by user | Supports and explains target truth. |
 | `approved_method` | `MA-METHOD-*` referenced by target truth | General method library; cannot override requirements or owner decisions. |
@@ -75,7 +78,8 @@ After activation, the designated spec is the sole Meta-Agent runtime truth sourc
 ```yaml
 source_priority:
   - current_explicit_user_decision_with_target_scope
-  - activated_target_approved_spec
+  - owner_accepted_inactive_target_spec_within_design_and_governance_scope
+  - activated_target_approved_spec_for_operational_scope_after_separate_activation
   - approved_target_change_manifest_within_scope
   - approved_MA_DEC_record
   - approved_methodology_referenced_by_spec
@@ -167,7 +171,7 @@ Rules:
 | case/feedback entry | bounded executor or user | evidence/source review; no automatic promotion |
 | methodology promotion | reviewer/Agent candidate | user confirmation and policy/version update |
 | private material use | user | explicit material and storage approval |
-| operational activation | user | explicit owner disposition after M2 validation |
+| operational activation | user | separate explicit Owner activation decision after applicable blockers, exact scope and acceptance/stop/rollback gates are addressed |
 | migration | Agent/user proposal | approved `MA-MIG-*`, validation and rollback |
 
 ## 9. Evidence, support, candidate and inference labeling

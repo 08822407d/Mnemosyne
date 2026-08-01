@@ -2,14 +2,16 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-CORE-METHODOLOGY-001
 artifact_role: approved_method_library_only_as_referenced_by_target_spec
-status: proposed_v0_1_pending_owner_acceptance
+status: owner_accepted_v0_1_initial_incomplete_method_library
 authority_level: method_support
 target_runtime_truth_source: false
 created_by_task: MNEMOSYNE-171
+last_updated_by_task: META-AGENT-SUPPORT-METADATA-SYNC-001
 design_version: 0.1.0
 policy_version: 0.1.0
 source_refs:
   - target-projects/meta-agent/current/approved-spec.md
+  - target-projects/meta-agent/history/decision-version-and-migration-log.md
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
   - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
   - notes/first-target-project-intake-records/meta-agent/controlled-dry-run-results/META-AGENT-CONTROLLED-NO-TARGET-WRITE-DRY-RUN-001-result.md
@@ -17,18 +19,20 @@ known_limits:
   - initial_compact_method_set
   - not_a_complete_agent_engineering_theory
   - target_specific_cases_must_not_be_encoded_as_universal_rules
+  - target_truth_remains_inactive_for_operational_use
 ---
 
 # Meta-Agent Core Methodology v0.1
 
 ## 1. Method-library rule
 
-The six methods below are the compact initial method set referenced by the proposed Meta-Agent v0.1 spec.
+The six methods below are the compact initial method set accepted by the Owner as an incomplete method library and referenced by the inactive Meta-Agent v0.1 target spec.
 
 ```yaml
 method_status_rule:
-  proposed_now: true
-  approved_for_target_only_after_owner_acceptance: true
+  owner_accepted_as_initial_incomplete_library: true
+  accepted_by_decision: MA-DEC-0007
+  target_truth_effective_for_operational_use: false
   execution_source: false
   may_not_override:
     - user_decision
@@ -36,7 +40,7 @@ method_status_rule:
     - target_specific_authority_or_privacy_boundary
 ```
 
-A method change requires a stable ID, source/evidence review, version decision and user acceptance proportionate to impact.
+This status synchronization does not change any method semantics or issue additional methods. A method change requires a stable ID, source/evidence review, version decision and user acceptance proportionate to impact.
 
 ---
 
@@ -51,7 +55,7 @@ source_refs:
   - MA-REQ-0005
   - MA-REQ-0007
   - MA-REQ-0013
-status: proposed_v0_1_method
+status: owner_accepted_v0_1_method_as_referenced_by_inactive_spec
 ```
 
 ### Inputs
@@ -104,7 +108,7 @@ source_refs:
   - MA-REQ-0002
   - MA-REQ-0004
   - MA-REQ-0011
-status: proposed_v0_1_method
+status: owner_accepted_v0_1_method_as_referenced_by_inactive_spec
 ```
 
 ### Default
@@ -167,7 +171,7 @@ source_refs:
   - MA-REQ-0009
   - MA-REQ-0013
   - MA-REQ-0014
-status: proposed_v0_1_method
+status: owner_accepted_v0_1_method_as_referenced_by_inactive_spec
 ```
 
 ### Process
@@ -205,7 +209,7 @@ source_refs:
   - MA-REQ-0011
   - MA-REQ-0016
   - current/model-capability-aware-work-planning-open-question.md
-status: proposed_v0_1_method
+status: owner_accepted_v0_1_method_as_referenced_by_inactive_spec
 ```
 
 ### Task classification
@@ -259,7 +263,7 @@ source_refs:
   - MA-REQ-0006
   - MA-REQ-0012
   - MA-REQ-0016
-status: proposed_v0_1_method
+status: owner_accepted_v0_1_method_as_referenced_by_inactive_spec
 ```
 
 ### Required pipeline
@@ -304,7 +308,7 @@ purpose: allow_a_qualified_fresh_session_to_resume_without_hidden_prior_context
 source_refs:
   - MA-REQ-0015
   - MA-REQ-0016
-status: proposed_v0_1_method
+status: owner_accepted_v0_1_method_as_referenced_by_inactive_spec
 ```
 
 ### Handoff minimum
