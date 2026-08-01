@@ -7,7 +7,7 @@ task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
 repository: 08822407d/Mnemosyne
 pinned_base: master@f690209dfc71e6d235f398589eb7b1aa52b0df71
 canonical_branch: meta-agent-research-batch-a-adjudication-001
-canonical_PR: PENDING
+canonical_PR: 242
 repository_write_performed: true
 target_truth_modified: false
 methodology_modified: false
@@ -47,8 +47,8 @@ portability_limits:
 - current_preprint_claims_require_version_and_freshness_review
 files_excluding_this_manifest:
 - path: README.md
-  bytes: 5191
-  sha256: ccc9c2f81cd9be99d6fa2bdef09184f4a5ceb5037f077865ba6c4fcf1bb77f35
+  bytes: 5187
+  sha256: d9ffa7cd48b4d9ea8f20a15e43b82b999b8fa7b95ddf4fd6b8aafdfb75896920
 - path: candidates/Batch-A-candidate-change-ledger.md
   bytes: 3323
   sha256: 99368abef069f12adaa1e2d89cfd22bb0d6e4dfabaf643476e254cb7a37c7621
@@ -59,8 +59,8 @@ files_excluding_this_manifest:
   bytes: 1381
   sha256: b322bbc7dab1c2303ef56a794f52440ec8af615f1a3cb2a7b383b187311c0cc6
 - path: meta/repository-recording-plan.md
-  bytes: 3349
-  sha256: aa1d954376a9f68cf844287cc17fb12c8e3d7563a4e19106f49e01d220bc1fbb
+  bytes: 3341
+  sha256: c43394af4463400a07c067b7080b8562c8b6efa26ce8c43f99cff2eb7095a15e
 - path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-001-of-006.md
   bytes: 9950
   sha256: b20b89f635c1a17282a5ed210d8dd13bee49203b36f6ea23d0cead9478e6e9bc

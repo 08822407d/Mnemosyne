@@ -54,7 +54,7 @@ current_state:
   real_cases: 0
   real_feedback_records: 0
   real_evaluation_records: 0
-  canonical_Batch_A_recording_PR: PENDING
+  canonical_Batch_A_recording_PR: 242
 ```
 
 ## 3. Required reading order
@@ -177,7 +177,7 @@ route_isolation:
   default_Meta_Agent_write_root: target-projects/meta-agent/
   target_truth_path: target-projects/meta-agent/current/approved-spec.md
   Mnemosyne_execution_source_is_target_truth: false
-  current_task_canonical_PR: PENDING
+  current_task_canonical_PR: 242
   concurrency_controls:
     - latest_master_preflight
     - complete_accessible_open_PR_enumeration

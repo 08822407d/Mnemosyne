@@ -44,7 +44,7 @@ current_stage:
   target_materials_ingested: false
   private_materials_stored: false
   advanced_automation_enabled: false
-  canonical_Batch_A_recording_PR: PENDING
+  canonical_Batch_A_recording_PR: 242
 ```
 
 This file is navigation only. The designated target truth remains:
@@ -177,7 +177,7 @@ repository_isolation:
   target_truth_scope: target-projects/meta-agent/current/approved-spec.md
   default_Meta_Agent_product_write_root: target-projects/meta-agent/
   Mnemosyne_execution_source_is_target_truth: false
-  current_task_canonical_PR: PENDING
+  current_task_canonical_PR: 242
   concurrency_controls:
     - verify_latest_master_before_write
     - enumerate_all_accessible_open_PRs

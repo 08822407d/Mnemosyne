@@ -7,7 +7,7 @@ target_truth_source: false
 created_by_task: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
 prepared_against_master: f690209dfc71e6d235f398589eb7b1aa52b0df71
 canonical_recording_branch: meta-agent-research-batch-a-adjudication-001
-canonical_recording_PR: PENDING
+canonical_recording_PR: 242
 repository_write_performed: true
 operational_activation_performed: false
 pilot_authorized: false

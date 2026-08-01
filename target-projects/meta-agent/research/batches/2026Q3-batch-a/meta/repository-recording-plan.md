@@ -5,7 +5,7 @@ status: executing_in_canonical_lineage_pending_human_merge
 target_project_id: meta-agent
 task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
 canonical_branch: meta-agent-research-batch-a-adjudication-001
-canonical_PR: PENDING
+canonical_PR: 242
 pinned_base: master@f690209dfc71e6d235f398589eb7b1aa52b0df71
 repository_write_authorized_by_this_file: false
 ---
@@ -41,7 +41,7 @@ task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
 base_branch: master
 pinned_base_sha: f690209dfc71e6d235f398589eb7b1aa52b0df71
 canonical_branch: meta-agent-research-batch-a-adjudication-001
-canonical_PR: PENDING
+canonical_PR: 242
 scope_summary: preserve_and_adjudicate_MA_DR_06_07_prepare_DR_08_defer_DR_09_and_sync_navigation
 parallel_variants_approved: false
 ```
