@@ -1,7 +1,7 @@
 ---
 task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
 artifact_role: canonical_PR_binding_and_finalization
-status: canonical_draft_PR_created_independently_reread_pending_human_review
+status: canonical_PR_ready_for_review_pending_human_merge
 repository: 08822407d/Mnemosyne
 canonical_PR: 242
 canonical_branch: meta-agent-research-batch-a-adjudication-001
@@ -25,6 +25,8 @@ canonical_lineage:
   pull_request: 242
   pull_request_url: https://github.com/08822407d/Mnemosyne/pull/242
   pull_request_created_as_draft: true
+  ready_transition_completed_after_verification: true
+  head_before_readiness_status_sync: 948a7829d6fb9f8cbd75d17c44bf07e61615b8a8
   human_review_required: true
   human_merge_required: true
   auto_merge: false
@@ -136,21 +138,35 @@ exactly_one_merge_target_expected: true
 
 The earlier failed research-evidence branches are not part of this Batch-A lineage or merge targets.
 
-## 7. Post-record checks required
+## 7. Post-record checks completed
 
-After this file is committed:
+```yaml
+post_record_verification:
+  PR_metadata_reread: pass
+  complete_changed_file_inventory: pass_33_of_33
+  branch_compare:
+    ahead_by: 16
+    behind_by: 0
+  latest_master_unchanged_from_pinned_base: true
+  accessible_open_PRs:
+    - 242
+  sole_open_canonical_PR: true
+  result_record_remote_reread: pass
+  finalization_record_remote_reread: pass
+  PR_number_writeback:
+    manifest: pass
+    research_navigation: pass
+    active_context: pass
+    handoff: pass
+  workflow_runs: []
+  combined_statuses: []
+  CI_pass_claim: false
+  PR_body_updated_with_final_verification: true
+  independent_updated_PR_reread: pass
+  ready_transition_completed: true
+```
 
-1. reread PR #242 metadata;
-2. reread the complete 33-file inventory;
-3. compare `master` to the branch;
-4. verify latest `master` has not advanced, or explicitly assess advancement;
-5. enumerate all accessible open PRs and confirm #242 is the sole open canonical PR;
-6. fetch the result and finalization records from the remote branch;
-7. reread updated placeholders in manifest/current/handoff;
-8. inspect workflow runs and combined status without claiming CI when none exists;
-9. update the PR body with final head and verification;
-10. independently reread the updated PR;
-11. mark the draft ready only after all checks pass.
+The branch head after this status-sync record is committed must be obtained from a fresh PR reread and kept in the PR body/user closeout; this file does not guess its own containing commit.
 
 ## 8. Boundaries
 
