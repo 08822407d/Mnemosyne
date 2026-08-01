@@ -1,7 +1,7 @@
 ---
 task_id: META-AGENT-SUPPORT-METADATA-SYNC-001
 artifact_role: canonical_PR_binding_and_finalization
-status: canonical_draft_PR_created_independently_reread_pending_final_verification
+status: canonical_PR_ready_for_review_pending_human_merge
 repository: 08822407d/Mnemosyne
 canonical_PR: 243
 canonical_branch: meta-agent-support-metadata-sync-001
@@ -24,16 +24,18 @@ canonical_lineage:
   base: master@531aab228836915162ec5f5c45cbbcfc97f1e572
   head_branch: meta-agent-support-metadata-sync-001
   head_before_task_records: 38e2c462963d622a4a87f42e58ce6db5555fad6e
-  task_result_commit: 92de834b881a380899b16fa65108ecc4881b6b8f
+  task_result_initial_commit: 92de834b881a380899b16fa65108ecc4881b6b8f
+  finalization_initial_commit: c68df96e4c8e5cceabd977905c72d331dafa87e9
+  finalized_result_commit: bc6cc93e9b552e27805d682861041f98695f6215
   pull_request: 243
   pull_request_url: https://github.com/08822407d/Mnemosyne/pull/243
-  pull_request_created_as_draft: true
+  final_head_source: live_PR_metadata_and_final_PR_body_after_this_record_update
   human_review_required: true
   human_merge_required: true
   auto_merge: false
 ```
 
-The final branch head after this file is committed must be obtained through a fresh PR/branch comparison read. This file does not guess its own containing commit SHA.
+The containing commit cannot be embedded as the immutable final head inside its own content without self-reference. The final head is therefore bound by the independently reread PR metadata and final PR body.
 
 ## 2. Pre-branch and pre-PR checks
 
@@ -57,118 +59,98 @@ pre_PR:
   decision: create_canonical_draft_PR
 ```
 
-The PR creation response returned PR #243. A separate metadata call independently confirmed:
+The PR creation response returned PR #243. An independent metadata read confirmed an open draft PR on the exact head/base pair and a separate changed-file read returned the exact five initial target files.
 
-```yaml
-PR_243_initial_reread:
-  state: open
-  draft: true
-  mergeable: true
-  base: master
-  base_sha: 531aab228836915162ec5f5c45cbbcfc97f1e572
-  head: meta-agent-support-metadata-sync-001
-  head_sha: 38e2c462963d622a4a87f42e58ce6db5555fad6e
-  commits: 5
-  changed_files: 5
-```
-
-A separate changed-file inventory returned exactly the five authorized target-local files.
-
-## 3. Final expected changed paths
-
-After the task result and this finalization record are committed, the PR must contain exactly seven files:
+## 3. Final changed paths
 
 ```text
-target-projects/meta-agent/methodology/core-methodology.md
+notes/codex-task-results/META-AGENT-SUPPORT-METADATA-SYNC-001-pr-finalization.md
+notes/codex-task-results/META-AGENT-SUPPORT-METADATA-SYNC-001-result.md
 target-projects/meta-agent/authority/source-and-owner-map.md
-target-projects/meta-agent/research/README.md
 target-projects/meta-agent/current/active-context.md
 target-projects/meta-agent/handoff/handoff-current.md
-notes/codex-task-results/META-AGENT-SUPPORT-METADATA-SYNC-001-result.md
-notes/codex-task-results/META-AGENT-SUPPORT-METADATA-SYNC-001-pr-finalization.md
+target-projects/meta-agent/methodology/core-methodology.md
+target-projects/meta-agent/research/README.md
 ```
 
-Any additional path blocks readiness and requires reconciliation.
+Final expected count: `7`.
 
-## 4. Semantic verification contract
+## 4. Semantic verification
 
-The final PR review must confirm:
+```yaml
+semantic_verification:
+  approved_spec_changed: false
+  requirements_changed: false
+  accepted_method_set: MA_METHOD_0001_through_MA_METHOD_0006
+  method_purpose_process_output_validation_changed: false
+  new_stable_IDs_issued: false
+  Owner_changed: false
+  sole_target_truth_path_changed: false
+  privacy_material_write_or_promotion_boundaries_changed: false
+  target_truth_effective_for_operational_use: false
+  operational_activation_performed: false
+  pilot_authorized: false
+  MA_DR_08: READY_NOT_SELECTED
+  MA_DR_08_quota_authorized: false
+  runnable_MA_DR_09_present: false
+  Mnemosyne_execution_source_changed: false
+  Mnemosyne_maintenance_live_route_changed: false
+```
 
-- `current/approved-spec.md` is unchanged;
-- `MA-REQ-0001` through `MA-REQ-0016` are not modified;
-- the accepted method set remains exactly `MA-METHOD-0001` through `MA-METHOD-0006`;
-- no method purpose, input, process, output, stop condition or validation text changed;
-- no new method, pending-requirement, requirement, migration, schema or runtime-control ID was issued;
-- the Owner and sole target-truth path are unchanged;
-- privacy, material, repository-write and methodology-promotion boundaries are unchanged;
-- target truth remains inactive for operational use;
-- no activation, pilot or private-material authority is created;
-- `MA-DR-08` remains `READY_NOT_SELECTED` with no quota authorization;
-- runnable `MA-DR-09` remains absent;
-- Mnemosyne execution source and maintenance route remain unchanged.
-
-## 5. Patch review result
-
-The initial five-file patch was independently reread.
+## 5. Patch review
 
 ```yaml
 patch_review:
   core_methodology:
+    status: PASS
     changes_limited_to: status_provenance_and_acceptance_explanation
-    method_semantics_changed: false
   source_and_owner_map:
+    status: PASS
     changes_limited_to: accepted_inactive_status_and_current_authority_effect_clarification
-    Owner_changed: false
-    truth_path_changed: false
-    privacy_write_or_promotion_boundary_changed: false
   research_README:
-    changes_limited_to: PR_242_merge_and_current_execution_intent_navigation
+    status: PASS
+    changes_limited_to: merged_PR_242_checkpoint_and_execution_intent_navigation
   active_context_and_handoff:
-    changes_limited_to: resolved_stale_warning_post_merge_checkpoint_and_stable_next_owner_gate
+    status: PASS
+    changes_limited_to: resolved_stale_warning_support_sync_record_and_stable_next_owner_gate
 ```
 
-## 6. Related lineages
+## 6. Final repository checks before ready transition
+
+Completed before this finalized record update:
 
 ```yaml
-related_open_PRs_expected_after_finalization:
+branch_before_final_record_updates:
+  head: c68df96e4c8e5cceabd977905c72d331dafa87e9
+  ahead_by: 7
+  behind_by: 0
+  changed_files: 7
+latest_master_unchanged_from_pinned_base: true
+accessible_open_PRs:
   - 243
-merged_predecessor_PRs:
-  - 242
-parallel_variants_approved: false
-exactly_one_merge_target_expected: true
+exactly_one_canonical_open_PR: true
+remote_result_record_reread: pass
+remote_finalization_record_reread: pass
+workflow_runs_reported: []
+combined_statuses_reported: []
+CI_pass_claim: false
 ```
 
-The historical failed research-evidence branches are unrelated to this task and are not merge targets.
+After this update the actor must re-read PR #243, branch comparison, final seven-file inventory, latest master, open PRs, workflow runs and combined status; then update the PR body with the resulting immutable final head and mark it ready only if all checks pass.
 
 ## 7. Run-context binding
 
-The full v0.2 run-context record is stored in:
+The complete v0.2 run-context record is stored at:
 
 ```text
 notes/codex-task-results/META-AGENT-SUPPORT-METADATA-SYNC-001-result.md
 ```
 
-The last operator-reported visible selection in this conversation was Pro, but it was not reconfirmed in this exact instruction. Exact served backend identity remains unknown or not attestable. Artifact identities establish repository bytes, not backend identity or semantic correctness.
+The last operator-reported visible selection in this conversation was Pro, but it was not reconfirmed in the exact task instruction. Exact served backend identity remains unknown or not attestable.
 
-## 8. Required final verification
+## 8. Boundaries
 
-After this file is committed, the actor must:
-
-1. re-read PR #243 metadata;
-2. re-read the complete changed-file list;
-3. compare `master` to `meta-agent-support-metadata-sync-001`;
-4. verify latest `master` has not advanced or explicitly assess advancement;
-5. enumerate accessible open PRs and confirm PR #243 is the only canonical open PR;
-6. fetch both task records from the remote branch;
-7. check workflow runs and combined commit status without claiming CI success when none exists;
-8. update both task records to their final verified status and final head;
-9. update the PR body with final head, seven-file inventory and final verification;
-10. independently re-read the updated PR;
-11. mark the PR ready only after all gates pass.
-
-## 9. Boundary
-
-This finalization record does not:
+This task and PR do not:
 
 - activate Meta-Agent;
 - authorize a pilot or private material;
@@ -179,3 +161,12 @@ This finalization record does not:
 - change a Mnemosyne maintenance live route;
 - merge the PR;
 - enable auto-merge.
+
+## 9. Final disposition
+
+```yaml
+task_status: CANONICAL_PR_READY_FOR_REVIEW_PENDING_HUMAN_MERGE
+canonical_PR: 243
+ready_transition: pending_final_live_PR_reread
+human_merge_required: true
+```
