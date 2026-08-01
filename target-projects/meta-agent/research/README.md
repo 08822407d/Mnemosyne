@@ -1,103 +1,115 @@
 ---
 target_project_id: meta-agent
-artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-002
+artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-003
 artifact_role: research_evidence_navigation
-status: prepared_for_repository_review
+status: DR_01_05_and_Batch_A_recorded_or_pending_canonical_merge
 authority_level: navigation_and_evidence_support
 target_runtime_truth_source: false
-created_by_task: META-AGENT-RESEARCH-EVIDENCE-REPAIR-003
+last_updated_by_task: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
+canonical_recording_PR: 242
 ---
 
-# Meta-Agent DR-01–05 Research Evidence
+# Meta-Agent Research Evidence
 
 ## 1. Role and authority
 
-This directory preserves the first five Meta-Agent Deep Research task prompts, the corresponding complete operator-exported reports, exact reconstruction metadata, and later review artifacts.
+This directory preserves Meta-Agent research tasks, report originals/exports, evidence identities, intake reviews, cross-report adjudications, candidate ledgers and staged follow-up tasks.
 
-Nothing in this directory is Meta-Agent target truth. Research evidence cannot override:
+Nothing under `research/` is Meta-Agent target truth. Research evidence cannot override:
 
 ```text
 target-projects/meta-agent/current/approved-spec.md
 ```
 
-The proposed target spec remains inactive until an explicit Owner disposition and a separately authorized activation change.
+Research conclusions, task readiness and PR merge state do not authorize operational activation, private material, a pilot, methodology promotion, tool use or external writes.
 
-## 2. Contents
+## 2. Research collections
+
+### DR-01–05 foundational round
 
 ```text
 target-projects/meta-agent/research/
-  README.md
   archive/
-    README.md
-    META-AGENT-DR-01-05-EVIDENCE-002.tar.bz2.base64.chunk-001-of-038.txt
-    ...
-    META-AGENT-DR-01-05-EVIDENCE-002.tar.bz2.base64.chunk-038-of-038.txt
-  meta/
-    manifest.yaml
-  reviews/
-    MA-DR-01-05-cross-report-synthesis-v0.1.md
-    MA-DR-01-05-gap-analysis-v0.1.md
+  meta/manifest.yaml
+  reviews/MA-DR-01-05-cross-report-synthesis-v0.1.md
+  reviews/MA-DR-01-05-gap-analysis-v0.1.md
 ```
 
-The deterministic archive reconstructs ten logical members:
+The deterministic archive preserves five original prompts and five complete operator-exported reports. Its product-native source-panel links were not independently preserved.
 
-- five original Deep Research task prompts;
-- five complete operator-exported reports.
-
-Owner decision support is stored at:
+### Batch A — MA-DR-06 / MA-DR-07
 
 ```text
-target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
+target-projects/meta-agent/research/batches/2026Q3-batch-a/
 ```
 
-The repository-process incident and separate Mnemosyne-maintainer intake are stored under:
+This collection preserves:
 
-```text
-notes/mnemosyne-maintenance-issues/
-```
+- exact `MA-DR-06` and `MA-DR-07` report exports;
+- individual intake reviews;
+- cross-report adjudication;
+- a candidate-change ledger;
+- the Batch-B gate;
+- a prepared `MA-DR-08` task package;
+- a deferred input contract for `MA-DR-09`.
 
-## 3. Preservation model
-
-The ten source files are stored inside one deterministic GNU tar archive (`mtime=0`, uid/gid 0, empty user/group names, mode `0644`), compressed with bzip2 level 9, Base64-encoded, and split into 38 ordered text chunks.
-
-`meta/manifest.yaml` records:
-
-- each logical member's byte count and SHA-256;
-- tar, compressed stream and Base64 identities;
-- every physical chunk's size, SHA-256 and Git blob SHA;
-- reconstruction order and commands;
-- report/task binding and citation-portability limits.
-
-This exact archive is required because the report exports do not all end with a final line feed and must not be silently normalized.
-
-## 4. Evidence roles
-
-- `archive/`: exact source preservation; non-execution-source.
-- `meta/manifest.yaml`: identities, task/report binding, run-context limits and reconstruction contract.
-- `reviews/`: later synthesis and gap analysis; model-generated review evidence/candidates, not report originals and not target truth.
-
-## 5. Citation-portability limitation
-
-The five report exports contain:
+Current evidence disposition:
 
 ```yaml
-opaque_ChatGPT_citation_groups: 283
-direct_HTTP_URLs_inside_report_exports: 0
-source_panel_or_direct_source_manifest: not_preserved
+MA_DR_06: ACCEPT_EVIDENCE_ONLY_TARGET_MAPPING_BLOCKED
+MA_DR_07: ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE
+cross_report: ACCEPT_BATCH_A_AS_NON_EXECUTION_SOURCE_EVIDENCE_WITH_CORRECTIONS
 ```
 
-The complete report bodies are independently recoverable. Their original product-native source-panel navigation is not.
+## 3. Current external-task execution intent
 
-The original Deep Research conversations may be archived. Permanent deletion should wait until source metadata is separately exported or the Owner explicitly accepts the loss of citation-link portability.
+```yaml
+MA_DR_08:
+  execution_disposition: READY_NOT_SELECTED
+  current_execution_requested: false
+  current_execution_required: false
+  quota_authorized: false
 
-## 6. Public-repository safety
+MA_DR_09:
+  execution_disposition: DEFERRED
+  runnable_task_present: false
+```
 
-The repository is treated as public-risk. This package contains public/non-sensitive research prompts and reports only. It contains no credentials, secrets, private source code, raw private chat/voice transcript, customer/confidential material, or invented reconstruction of the lost original Meta-Agent conversation.
+Readiness is not selection. A later response must explicitly use a `RUN_*` disposition and provide a dedicated operator flow before the user is asked to spend quota or launch another conversation.
 
-Future research material still requires task-local visibility, sensitivity and write-authority preflight.
+## 4. Evidence and candidate lifecycle
+
+```text
+research task
+-> canonical report/export
+-> identity/input/completeness review
+-> cross-report adjudication
+-> candidate change ledger
+-> Owner decision
+-> authorized target/method change
+-> validation and rollback/revision record
+```
+
+No research report, review, model inference or candidate becomes target truth by location, recency or length.
+
+## 5. Preservation and portability
+
+- Original report bytes are preserved where the package manifest says exact preservation was performed.
+- Missing images, inaccessible repository inputs, opaque citations, current-document freshness and preprint version limits are recorded in the relevant manifest/review.
+- Research reports must not be silently normalized, rewritten or replaced by summaries.
+- Derived reviews may be superseded, but their historical role and source reports remain traceable.
+
+## 6. Public-repository boundary
+
+Only public/non-sensitive research material, synthetic fixtures, explicitly redacted material or safe pointers may enter this public-risk bootstrap repository after task-local preflight. Secrets, private source, confidential/customer material and unredacted personal/chat/voice records remain prohibited without a separately approved storage route.
 
 ## 7. Update rule
 
-A later report, review or stronger model may add evidence, challenge conclusions, recompute synthesis or propose target changes. It may not silently overwrite originals, change target truth or promote candidate methods.
+A future task may add a report, correct a review, supersede a gate or prepare a later task. It may not silently:
 
-Target changes require Owner authorization, versioning, validation and rollback/revision planning.
+- change the target truth source;
+- expand accepted methodology;
+- activate Meta-Agent;
+- authorize a pilot;
+- select external research execution;
+- import the Mnemosyne maintenance route.
