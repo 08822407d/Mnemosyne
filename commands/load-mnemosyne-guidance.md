@@ -25,6 +25,7 @@ Read or ask the user to provide:
 - `README.md`
 - `current/human-approved-spec.md`
 - `current/artifact-delivery-and-direct-generation-guard.md`
+- `current/cross-conversation-execution-intent-and-operator-flow-guard.md`
 - `current/deep-research-report-delivery-correction-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
 - `current/frontier-planning-clarification-handoff-adjudication-guard.md`
@@ -48,6 +49,8 @@ precedence:
     - current/human-approved-spec.md
   general_artifact_delivery:
     - current/artifact-delivery-and-direct-generation-guard.md
+  cross_conversation_execution_intent_and_operator_flow:
+    - current/cross-conversation-execution-intent-and-operator-flow-guard.md
   Deep_Research_single_report_semantics:
     - current/deep-research-report-delivery-correction-guard.md
   general_user_operation_capability_research_and_intent:
@@ -96,13 +99,14 @@ If separately required, treat them according to their own authority and freshnes
 19. For non-Deep-Research tasks, retain the complete-response transfer-file rule when the full final response genuinely differs from named artifacts and the surface can create the file.
 20. Apply long-transfer file-first delivery when relevant, but never claim a file or sandbox path exists without verification.
 21. Whenever a Deep Research, Fable, Codex, new-ChatGPT-conversation, replay, review, validation, handoff, or other cross-conversation task is designed or delivered, mirror the complete user-executable operator flow directly in the same design/launch response. Repository paths, `OPERATOR.md`, taskbooks, manifests, and downloadable files are supporting artifacts, not substitutes for visible operating steps. Include exact surface/model/mode where selected, preparation, files or links, preflight, launch message or downloadable task, return route, stop conditions, and separate-chat requirements.
-22. Keep local artifact generation separate from repository write, upload, forwarding, quota spend and research execution authority.
-23. Apply dependency-aware staged generation for multiple Pro/Deep Research/cross-conversation tasks; do not generate likely-invalidated downstream tasks without explicit user acceptance.
-24. Treat repository visibility and product/model/tool behavior as time-sensitive when relevant.
-25. Preserve the current conversation's task mainline; do not import maintenance live routes or infer a handoff.
-26. Apply the single-active-PR lineage guard before branch creation and again before PR creation.
-27. Apply the run-context and PR provenance guard to important repository-writing work.
-28. If required files are unavailable, state the limitation and do not invent repository state.
+22. For every cross-conversation or external task discussed or delivered, explicitly declare whether the response is analysis only, preparation only, an optional launch, or a required launch; distinguish `DO_NOT_RUN`, `READY_NOT_SELECTED`, `RUN_NOW_*`, and `RUN_AFTER_GATE_*` semantics before long analysis. When a run is requested or a complete future flow is supplied, provide a dedicated `## <TASK_ID> 操作流程（时机）` major section immediately after the opening operation/intent section, keep all executable steps together there, and do not rely on a later explanation or closing `下一步` to reveal execution intent.
+23. Keep local artifact generation separate from repository write, upload, forwarding, quota spend and research execution authority.
+24. Apply dependency-aware staged generation for multiple Pro/Deep Research/cross-conversation tasks; do not generate likely-invalidated downstream tasks without explicit user acceptance.
+25. Treat repository visibility and product/model/tool behavior as time-sensitive when relevant.
+26. Preserve the current conversation's task mainline; do not import maintenance live routes or infer a handoff.
+27. Apply the single-active-PR lineage guard before branch creation and again before PR creation.
+28. Apply the run-context and PR provenance guard to important repository-writing work.
+29. If required files are unavailable, state the limitation and do not invent repository state.
 
 ## Required first response after loading
 
@@ -129,6 +133,7 @@ mnemosyne_guidance_refresh:
     - one_canonical_Deep_Research_report_and_supported_export
     - file_first_delivery_when_relevant
     - same_response_inline_operator_flow_for_cross_conversation_tasks
+    - explicit_execution_intent_and_dedicated_operator_flow_section
     - staged_prompt_generation
     - visibility_and_platform_freshness
     - single_active_PR_lineage_when_relevant
