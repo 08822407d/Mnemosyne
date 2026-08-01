@@ -2,28 +2,28 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-ACTIVE-CONTEXT-001
 artifact_role: non_execution_current_state
-status: v0_1_owner_accepted_inactive_Batch_A_adjudicated_DR_08_ready_not_selected
+status: v0_1_owner_accepted_inactive_Batch_A_merged_support_metadata_aligned_DR_08_ready_not_selected
 authority_level: operational_support
 target_runtime_truth_source: false
 created_by_task: MNEMOSYNE-171
-last_updated_by_task: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
+last_updated_by_task: META-AGENT-SUPPORT-METADATA-SYNC-001
 design_version: 0.1.0
 last_reviewed_at: 2026-08-01
 source_paths:
   - target-projects/meta-agent/current/approved-spec.md
   - target-projects/meta-agent/authority/source-and-owner-map.md
+  - target-projects/meta-agent/methodology/core-methodology.md
   - target-projects/meta-agent/history/decision-version-and-migration-log.md
   - target-projects/meta-agent/research/batches/2026Q3-batch-a/README.md
   - target-projects/meta-agent/research/batches/2026Q3-batch-a/reviews/MA-DR-06-07-cross-report-adjudication.md
   - target-projects/meta-agent/research/batches/2026Q3-batch-a/decisions/Batch-B-gate-decision.md
-  - notes/codex-task-results/META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001-result.md
+  - notes/codex-task-results/META-AGENT-SUPPORT-METADATA-SYNC-001-result.md
 known_limits:
   - not_execution_source
   - reflects_repository_state_and_may_become_stale
   - target_truth_remains_inactive
   - operational_activation_requires_separate_owner_decision
   - non_FABLE_health_review_remains_separately_owned
-  - support_file_status_metadata_stale_after_owner_disposition
 ---
 
 # Meta-Agent v0.1 Active Context
@@ -33,8 +33,8 @@ known_limits:
 ```yaml
 current_stage:
   route: META_AGENT_PRODUCT_BUILD
-  milestone: owner_accepted_inactive_baseline_and_Batch_A_research_adjudication
-  state: Batch_A_recorded_DR_08_ready_not_selected
+  milestone: owner_accepted_inactive_baseline_Batch_A_merged_and_support_metadata_aligned
+  state: DR_08_ready_not_selected_no_external_run_selected
   owner_acceptance: ACCEPT_WITH_LIMITATIONS
   design_and_governance_baseline_accepted: true
   target_truth_effective_for_operational_use: false
@@ -45,6 +45,8 @@ current_stage:
   private_materials_stored: false
   advanced_automation_enabled: false
   canonical_Batch_A_recording_PR: 242
+  canonical_Batch_A_merge_commit: 531aab228836915162ec5f5c45cbbcfc97f1e572
+  support_metadata_sync_task: META-AGENT-SUPPORT-METADATA-SYNC-001
 ```
 
 This file is navigation only. The designated target truth remains:
@@ -65,6 +67,8 @@ The Owner accepted that v0.1 baseline with limitations, but it remains inactive 
 - DR-01–05 preservation, synthesis and decision support merged through PR #237.
 - Owner disposition `ACCEPT_WITH_LIMITATIONS` recorded through PR #240.
 - `MA-DR-06` and `MA-DR-07` were executed externally and adjudicated as Batch A.
+- Batch-A evidence, adjudication, candidate ledger and staged `MA-DR-08` package merged through PR #242.
+- Method-library and authority-map acceptance metadata were aligned with `MA-DEC-0007` without changing method or authority semantics.
 
 ## 3. Batch-A evidence state
 
@@ -120,13 +124,14 @@ MA_DR_08:
   external_execution_or_quota_authorized: false
   task_path: target-projects/meta-agent/research/batches/2026Q3-batch-a/tasks/MA-DR-08-portable-agent-design-ir-and-multi-backend-mapping.md
   operator_path: target-projects/meta-agent/research/batches/2026Q3-batch-a/tasks/MA-DR-08-OPERATOR.md
+  return_contract: target-projects/meta-agent/research/batches/2026Q3-batch-a/tasks/MA-DR-08-return-and-adjudication-contract.md
 
 MA_DR_09:
   status: DEFERRED_UNTIL_MA_DR_08_ADJUDICATION
   runnable_task_present: false
 ```
 
-The current conversation is recording and reviewing research state. It is not requesting another Deep Research run in this repository-writing step.
+No external research run is currently selected or requested. The existence of the task package does not authorize quota use.
 
 ## 6. Pending requirements and unproven scope
 
@@ -157,19 +162,25 @@ blockers:
 
 These blockers do not prevent research, design preparation or Owner-reviewed non-operational work.
 
-## Supporting-file status inconsistency
+## 8. Support metadata synchronization
 
-`target-projects/meta-agent/methodology/core-methodology.md` and
-`target-projects/meta-agent/authority/source-and-owner-map.md` still carry
-pre-Owner-disposition status wording such as `proposed_v0_1_pending_owner_acceptance`
-or `pending_owner_acceptance`. The Owner-accepted inactive status in
-`current/approved-spec.md` and `MA-DEC-0007` is authoritative within its scope.
+```yaml
+support_metadata_sync:
+  task_id: META-AGENT-SUPPORT-METADATA-SYNC-001
+  files:
+    - target-projects/meta-agent/methodology/core-methodology.md
+    - target-projects/meta-agent/authority/source-and-owner-map.md
+  synchronized_to:
+    owner_decision: MA-DEC-0007
+    baseline_status: owner_accepted_v0_1_inactive_design_and_governance_baseline
+  method_semantics_changed: false
+  authority_boundaries_changed: false
+  version_change: none
+```
 
-This Batch-A recording task does not modify those support files because they
-are outside its authorized path set. A later bounded status-synchronization
-task should correct their metadata without changing method or authority semantics.
+The six methods remain the same initial incomplete method library. The source/owner map continues to support the sole target-truth path and Owner authority. This synchronization only removes pre-Owner-disposition wording.
 
-## 8. Repository and route isolation
+## 9. Repository and route isolation
 
 ```yaml
 repository_isolation:
@@ -177,7 +188,7 @@ repository_isolation:
   target_truth_scope: target-projects/meta-agent/current/approved-spec.md
   default_Meta_Agent_product_write_root: target-projects/meta-agent/
   Mnemosyne_execution_source_is_target_truth: false
-  current_task_canonical_PR: 242
+  last_merged_product_PR: 242
   concurrency_controls:
     - verify_latest_master_before_write
     - enumerate_all_accessible_open_PRs
@@ -186,7 +197,7 @@ repository_isolation:
     - stop_or_rebase_when_base_state_is_stale
 ```
 
-## 9. Current boundaries
+## 10. Current boundaries
 
 - Do not claim Meta-Agent is operational or production-ready.
 - Do not treat research acceptance as target-truth or methodology acceptance.
@@ -196,21 +207,19 @@ repository_isolation:
 - Do not promote candidates automatically.
 - Do not import the Mnemosyne maintenance route.
 
-## 10. Exactly one safe next action
+## 11. Exactly one safe next action
 
 ```yaml
 safe_next_action:
-  id: META-AGENT-SAFE-NEXT-0005
-  current_action: human_review_and_merge_the_Batch_A_recording_PR
-  after_merge_state:
-    - Batch_A_evidence_and_adjudication_available_on_master
-    - MA_DR_08_remains_READY_NOT_SELECTED
-    - no_external_run_is_automatically_requested
-  possible_later_choices:
+  id: META-AGENT-SAFE-NEXT-0006
+  selected_external_execution: none
+  next_owner_gate: explicitly_select_run_revise_or_defer_MA_DR_08
+  available_non_operational_choices:
     - explicitly_select_MA_DR_08_execution
-    - review_candidate_changes_without_promotion
+    - review_Batch_A_candidates_without_promotion
     - wait_for_non_FABLE_health_review_dependency
     - defer
+  default_without_explicit_selection: defer_external_execution
   no_automatic_operational_activation: true
   no_automatic_pilot_planning: true
   no_automatic_research_execution: true
