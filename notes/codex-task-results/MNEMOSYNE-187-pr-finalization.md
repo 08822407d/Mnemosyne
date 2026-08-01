@@ -3,17 +3,19 @@
 ```yaml
 task_id: MNEMOSYNE-187
 record_type: PR_finalization_and_lineage_binding
-status: FINALIZATION_IN_PROGRESS
+status: FINALIZED_READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 4eb4181ee7642aa6992c57802d052a4f39d0147e
 canonical_branch: mnemosyne-187-explicit-execution-intent-and-operator-flow
 canonical_PR: 241
 PR_state: open
-PR_draft: true
+PR_draft: false
+PR_mergeable_after_recalculation: true
 PR_merged: false
 merge_performed: false
 auto_merge_enabled: false
+final_head_identity: authoritative_in_current_PR_241_metadata_after_this_record_commit
 ```
 
 ## 1. Lineage gates
@@ -52,7 +54,7 @@ PR_creation:
   deletions_before_finalization_record: 75
 ```
 
-The initial create response reported `mergeable: false`; this is treated as pending GitHub recalculation until a fresh PR reread is completed.
+The initial create response reported `mergeable: false`. A fresh PR reread after the finalization record and ready transition reported `mergeable: true`; the earlier value is preserved as a pending-calculation snapshot rather than treated as a conflict.
 
 ## 3. Canonical scope
 
@@ -76,7 +78,7 @@ scope:
     - no_current_Fable_run_required
 ```
 
-## 4. Changed paths before this record
+## 4. Final changed paths
 
 ```text
 commands/load-mnemosyne-guidance.md
@@ -84,9 +86,8 @@ current/cross-conversation-execution-intent-and-operator-flow-guard.md
 current/fable5-research-delivery-status.md
 notes/cross-conversation-execution-intent-and-operator-flow-adoption-record.md
 notes/codex-task-results/MNEMOSYNE-187-result.md
+notes/codex-task-results/MNEMOSYNE-187-pr-finalization.md
 ```
-
-This finalization record is the sixth changed path.
 
 ## 5. Protected boundaries
 
@@ -107,43 +108,47 @@ protected_boundaries:
   validation_execution: false
 ```
 
-## 6. Verification snapshot before this record
+## 6. Verification evidence before this record update
 
 ```yaml
-compare:
+verification:
   base: 4eb4181ee7642aa6992c57802d052a4f39d0147e
-  status: ahead
-  ahead_by: 5
-  behind_by: 0
-  changed_files: 5
-accessible_open_PRs_before_record:
-  - 241
-exactly_one_canonical_open_PR: true
+  compare:
+    status: ahead
+    ahead_by: 6
+    behind_by: 0
+    changed_files: 6
+  head_before_this_record_update: dfe167633c637a522d6fd4717a0d2e3ac44e7428
+  commits_before_this_record_update: 6
+  additions_before_this_record_update: 805
+  deletions_before_this_record_update: 75
+  accessible_open_PRs:
+    - 241
+  exactly_one_canonical_open_PR: true
+  PR_ready_transition_completed: true
+  PR_mergeable_after_ready_transition: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
 ```
 
-## 7. Required final checks
+No status check or workflow run was reported. This means no CI evidence was available; it is not a CI-pass claim. The authoritative final head and counts after this record update are recorded in the current PR #241 metadata and final PR description.
 
-After this record commit:
-
-```yaml
-pending_final_checks:
-  - compare_final_head_to_base
-  - confirm_behind_by_zero
-  - confirm_six_changed_paths
-  - independently_reread_PR_241
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
-```
-
-The authoritative final head after this record is written will be obtained from a fresh PR reread; this record does not guess its own containing commit SHA.
-
-## 8. Result-record timing note
+## 7. Result-record timing note
 
 `notes/codex-task-results/MNEMOSYNE-187-result.md` was written before PR creation and therefore contains `canonical_PR: pending_creation`. This finalization record and the final PR metadata bind the task to PR #241 without rewriting the pre-creation chronology.
+
+## 8. External actions
+
+```yaml
+external_actions:
+  branch_created: true
+  files_created_or_updated_on_branch: true
+  PR_created: true
+  PR_marked_ready_for_review: true
+  PR_merged: false
+  auto_merge_enabled: false
+```
 
 ## 9. Actions not performed
 
@@ -158,3 +163,7 @@ not_performed:
 ```
 
 Here `true` means the named action was not performed.
+
+## 10. Safe next action
+
+Human review of PR #241 is the only current repository operation. No Fable research run is requested by MNEMOSYNE-187. A1 remains ready but unselected, and A2 remains deferred pending a valid A1 adjudication.
