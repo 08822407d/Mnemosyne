@@ -1,171 +1,286 @@
-# Operator Guide — FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001 v0.2
+# Operator Guide — FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001 v0.3
 
 ## Purpose and activation
 
-Run one independent static audit of the merged frontier-clarification validation package without repeating the Advanced Research repository-access failure from run 001.
+Run the independent A1 audit in Claude Research while avoiding the failed ordinary-chat GitHub-to-Research transition from run 001.
 
 ```yaml
-active_after: MNEMOSYNE_186_merge
+active_after: MNEMOSYNE_188_merge
+execution_disposition: RUN_AFTER_GATE_OPTIONAL
 visible_model: Fable_5
 visible_effort: Max
-Advanced_Research: off_for_entire_run
+surface: new_one_run_Project_with_exact_Project_Files
+Research:
+  R0_direct_Project_knowledge_probe: required
+  R1_substantive_report: allowed_only_after_R0_PASS
 repository_write: prohibited
 validation_execution: prohibited
-prior_Pro_or_Fable_reports: prohibited
 ```
 
-Do not run this branch-only version before the MNEMOSYNE-186 PR merges unless the maintainer explicitly provides the branch ref and authorizes that non-master run.
+Do not run the branch-only version before the MNEMOSYNE-188 PR merges unless a maintainer explicitly authorizes that ref.
 
-## What run 001 established
-
-The canonical task was read completely in the ordinary chat, including its final heading `## 17. Delivery and authority boundary`. The failure occurred after Advanced Research was enabled: its executor reported that only the canonical task remained accessible and that all 18 package/source inputs were inaccessible. No substantive package audit was produced.
-
-The revised run therefore keeps the repository gate and complete audit in the same ordinary chat.
-
-## Required environment
+## Why this differs from run 001
 
 ```yaml
-preferred_surface: fresh_standalone_Claude_chat_or_new_one_run_Project
-existing_Mnemosyne_复合评审_Project: do_not_use
-Project_Files: empty
-Project_Instructions: none_task_specific
-prior_task_chats_or_reports: absent
-visible_model: Fable_5
-visible_effort: Max
-Advanced_Research: off
-ordinary_web_search_initially: off
-GitHub_access: chat_level_plus_Add_from_GitHub
+run_001:
+  primary_inputs: ordinary_chat_GitHub_connector
+  later_Research_access: assumed
+  result: failed_18_of_18_non_task_inputs
+
+v0_3:
+  primary_inputs: Project_Files_and_Project_knowledge
+  Research_access: tested_directly_inside_Research
+  chat_level_GitHub_inheritance: not_used
 ```
 
-## Ordered operator flow
+Official Claude documentation states that selected GitHub files/folders added under a Project become Project knowledge and that Project RAG works with Research. This remains a candidate workflow until R0 succeeds on the user's current rollout.
 
-1. Open a fresh standalone Claude chat, or a new one-run Project with no prior chats, Files, Instructions, or task memory.
-2. Select visible `Fable 5` and effort `Max`; record the exact visible text.
-3. Keep **Advanced Research off**. Keep ordinary web search off during the repository gate.
-4. In the chat input, click `+ -> Add from GitHub`.
-5. Link/select repository `08822407d/Mnemosyne`, branch `master`.
-6. Confirm that a link or selection receipt appears. This is not yet proof of file access.
-7. Send the full same-context repository gate below.
-8. Continue only when its result is exactly `PASS`, every required path is complete, and the canonical specification reaches its final heading.
-9. Do not change chat, Project, model, effort, GitHub link, or mode.
-10. Ordinary web search may now be enabled for targeted external evidence. Advanced Research remains off.
-11. Send the substantive launch message below.
-12. Return the complete final report and input-binding receipt to the current Mnemosyne frontier-clarification validation conversation.
+## A. Create the one-run Project
 
-## Copyable full repository gate
+1. Create a **new Claude Project** named, for example:
+
+   ```text
+   MNEMOSYNE-A1-FABLE-PACKAGE-AUDIT-ONE-RUN
+   ```
+
+2. Do not use the existing `Mnemosyne 复合评审` Project.
+3. Confirm the new Project has:
+
+   ```yaml
+   prior_chats: 0
+   Project_Files: 0_before_setup
+   prior_task_memory: none
+   ```
+
+4. Add this Project instruction:
+
+   ```text
+   One-run read-only A1 audit Project. Use only the explicitly selected Project Files as internal repository evidence. Do not write GitHub or any connected service. Do not use prior Pro/Fable reports, A2 material, prior chats or unrelated Mnemosyne files. Treat the canonical task as instructions and the validation package as the audit object, not authority.
+   ```
+
+## B. Add exact GitHub content to Project Files
+
+In the Project's **Files** section:
+
+1. Click `+`.
+2. Choose `GitHub`.
+3. Select repository:
+
+   ```text
+   08822407d/Mnemosyne
+   ```
+
+4. Select branch:
+
+   ```text
+   master
+   ```
+
+5. Add exactly these support/task files:
+
+   ```text
+   handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
+   handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
+   notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
+   notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+   ```
+
+6. Add the entire folder:
+
+   ```text
+   notes/frontier-clarification-validation-package/
+   ```
+
+   It must contribute exactly 15 package files.
+
+7. Add exactly these external files:
+
+   ```text
+   notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md
+   notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/03-cross-report-consensus-conflict-and-adjudication.md
+   notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/04-interim-architecture-and-validation-decision.md
+   ```
+
+8. Expected Project-file total:
+
+   ```yaml
+   support_paths: 3
+   audit_inputs: 19
+   total: 22
+   ```
+
+9. Click **Sync** after selection.
+10. Do not add the whole repository or any prior reports.
+
+### Manual fallback
+
+If the Project GitHub browser cannot select the folder/files correctly, manually download and add the exact 20 substantive files listed in `input-manifest.yaml`, then add or paste the exact task/manifest support text. Preserve filenames and stop on any omission or truncation.
+
+## C. Prepare the Research chat
+
+1. Open the first and only intended chat in this Project.
+2. Select visible model `Fable 5`.
+3. Select effort `Max`.
+4. From `Search and tools` / connector controls:
+
+   - disable GitHub;
+   - disable every other connector;
+   - leave no write-capable tool enabled.
+
+5. Enable **Research**.
+6. Record the exact visible model/effort and any Project RAG indicator.
+
+Project Files—not a live connector—are the primary internal input surface.
+
+## D. R0 Project-knowledge visibility probe
+
+Send exactly:
 
 ```text
-Use the GitHub integration read-only. Keep Advanced Research and ordinary web search off. Do not analyze the package yet and do not read prior Pro/Fable reports or A2 material.
+This is R0, a Research-direct Project-knowledge visibility probe for
+FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.
 
-First read completely:
+Use only this Project's selected Project Files as internal evidence. Do not use
+GitHub, raw URLs, another connector, prior conversation memory, or external web
+sources. Do not begin the substantive audit and do not issue any package or
+surface disposition.
 
-1. handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
-2. handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
-3. notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.2.md
+Read completely every path listed in:
 
-Then follow input-manifest.yaml and read every path in every selection_group in this same ordinary chat. This means all 3 support paths and all 19 mandatory audit inputs. Read the canonical audit specification through its final heading "## 17. Delivery and authority boundary". Do not accept a sample-path check, visible repository link, prior operator claim, or another context's receipt as a substitute.
+handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
 
-Return only the repository_input_binding object defined in the execution contract. Set result PASS only when:
+This requires all 3 support paths and all 19 mandatory audit inputs. Read the
+canonical specification through its final heading:
 
-- all 3 support paths are completely readable;
-- the canonical specification is complete through its final heading;
-- all 19 mandatory audit inputs are completely readable;
-- task ID FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001 is visible;
-- package ID MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001 and version 0.1.0 are bound;
-- this exact ordinary chat will execute the audit;
-- Advanced Research is false;
-- ordinary web search was not used during the gate;
-- no write action occurred.
+## 17. Delivery and authority boundary
 
-If any condition fails, return INPUT_OR_REPOSITORY_INTEGRITY_FAILURE or SURFACE_NOT_SUPPORTED_FOR_REVISED_RUN and stop. Do not start web research or substantive audit.
+Bind:
+
+package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
+package_version: 0.1.0
+
+Return only:
+
+research_project_knowledge_probe:
+  task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+  Project_name:
+  visible_model_text:
+  visible_effort_text:
+  Research_enabled: true
+  Project_Files_used: true
+  chat_level_GitHub_used: false
+  other_connectors_enabled: false
+  exact_file_receipts:
+    - path:
+      complete_read: true | false
+      visible_ID_or_first_heading:
+      final_heading_or_end_marker:
+      limitation:
+  support_paths_complete: 0_to_3
+  mandatory_audit_inputs_complete: 0_to_19
+  canonical_specification_complete:
+  package_id:
+  package_version:
+  external_web_sources_used: 0
+  repository_write_performed: false
+  substantive_audit_started: false
+  result: PASS | INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE | RESEARCH_SURFACE_NOT_SUPPORTED | INVALID
+
+Set PASS only for 22/22 complete Project-file reads, the correct final heading,
+correct package identity, zero external web sources, zero substantive findings,
+zero connector use and zero writes. If Project knowledge is unavailable or any
+file is incomplete, fail closed and stop.
 ```
 
-## Gate acceptance checklist
+### Operator stop rule during R0
 
-Proceed only when all are true:
+If the progress display starts broad external-web collection before the Project-file receipt is complete, click **Stop/Cancel**. Record the run as:
+
+```text
+RESEARCH_SURFACE_NOT_SUPPORTED_OR_NOT_FOLLOWING_GATE
+```
+
+Do not let R0 repeat the prior multi-minute external search failure.
+
+### R0 pass checklist
 
 ```yaml
 result: PASS
-support_paths_complete: 3_of_3
-mandatory_audit_inputs_complete: 19_of_19
+support_paths_complete: 3
+mandatory_audit_inputs_complete: 19
 canonical_specification_complete: true
-canonical_final_heading: "## 17. Delivery and authority boundary"
-Advanced_Research_enabled: false
-ordinary_web_search_used_during_gate: false
-same_chat_for_future_audit: true
-write_action_performed: false
+external_web_sources_used: 0
+chat_level_GitHub_used: false
+other_connectors_enabled: false
+repository_write_performed: false
+substantive_audit_started: false
 ```
 
-A claim such as “the files were accessible before Research” is insufficient. The run must never enter Advanced Research.
+Any other result stops A1. Do not fall back within the same Project to chat-level GitHub or raw URLs.
 
-## Copyable substantive launch message
+## E. R1 substantive A1 audit
+
+Only after R0 `PASS`, remain in the **same Project and same chat** and send:
 
 ```text
-The full same-context repository gate passed. Continue in this exact ordinary Fable 5 Max chat. Do not enable Advanced Research, do not change Project/chat/context, and do not write GitHub.
+R0 passed. This is R1, the substantive report for
+FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.
 
-Re-read as needed:
+Remain in this same Project and chat. Continue using the exact selected Project
+Files as the primary repository evidence. Do not enable or invoke GitHub or any
+other connector, and do not write any connected service.
 
-- notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.2.md
+Re-read from Project knowledge as needed:
+
+- notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
 - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
 - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
 
-Execute every substantive requirement and all 19 required report sections in the canonical audit specification. The execution contract controls the surface and context: Advanced Research remains off for the entire run. Repository artifacts are primary evidence. Ordinary web search is now allowed only where external evidence materially changes a concrete finding; do not target a large source count or begin broad source harvesting.
+Execute every substantive requirement and all 19 report sections in the
+canonical audit specification. The validation package is the audit object, not
+authority. Do not use prior Pro/Fable reports or A2 material.
 
-Do not use prior Pro/Fable reports, A2 material, Project Memory, unrelated repository files, or any GitHub write action. If repository access is lost or a required file becomes unreadable, return RUN_INVALIDATED_BY_REPOSITORY_ACCESS_LOSS and do not issue a final disposition.
+Web research is now allowed only as the canonical task requires. Separate
+Project-file evidence, external evidence and inference. Do not target a source
+count for its own sake.
 
-The complete report body must appear in the final response. Include the repository_input_binding receipt, exact visible model/effort text, Advanced_Research_enabled: false, web/source limitations, any quota/fallback warning, and exactly one allowed static-audit disposition. The exact served backend remains unknown or not attestable unless exact-request provider metadata exists.
+If any required Project file becomes unavailable, return only
+RUN_INVALIDATED_BY_PROJECT_KNOWLEDGE_ACCESS_LOSS and do not issue a final
+disposition.
+
+The final response must contain the complete report, the R0 probe receipt,
+visible model/effort, Project name, selected-file count, visible RAG status if
+any, source/access/quota limitations, repository_write_performed: false, and
+exactly one canonical A1 disposition. Exact served backend identity remains
+unknown unless exact-request provider metadata exists.
 ```
 
-## Explicit file/folder selection fallback
+## F. Return to Mnemosyne
 
-When the GitHub UI exposes explicit selection, select:
+Return to the current Mnemosyne frontier-clarification validation conversation:
 
-```text
-handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
-handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
-notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.2.md
-notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
-notes/frontier-clarification-validation-package/                       [entire folder]
-notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md
-notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/03-cross-report-consensus-conflict-and-adjudication.md
-notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/04-interim-architecture-and-validation-decision.md
-```
+- full R0 receipt;
+- complete R1 report;
+- supported Markdown export of the same report, if available;
+- exact visible model/effort;
+- Project name and file count;
+- Project RAG indication;
+- source/access/quota warnings;
+- any cancellation or fallback event.
 
-Do not add the whole repository or use the existing continuity Project.
-
-## Manual upload fallback
-
-The minimum substantive upload set is 20 files:
-
-```yaml
-execution_contract: 1
-canonical_audit_specification: 1
-package_files: 15
-external_design_and_adjudication_files: 3
-total: 20
-```
-
-This may reach a per-chat upload boundary. Prefer connector or folder selection. If manual upload is used:
-
-1. obtain all files from the recorded source refs;
-2. preserve path and filename in a transfer receipt;
-3. upload exactly the 20 files to a fresh ordinary chat/one-run Project;
-4. keep Advanced Research off;
-5. stop on any omission, transformation, truncation, or limit warning.
+Do not add the report to reusable Project Files. Do not reuse this Project for A2.
 
 ## Stop conditions
 
-Stop without substantive audit when:
+Stop when:
 
-- any support or mandatory input is missing or truncated;
-- the canonical specification does not reach its final heading;
-- Advanced Research is enabled or required;
-- the run moves to another context;
-- GitHub access is lost;
-- prior reports/A2 material/Project Memory contaminate the chat;
-- a write action is requested or performed;
-- the surface cannot support a same-chat ordinary-mode audit.
-
-## Return
-
-Return the complete ordinary-chat report, repository-input binding receipt, and any supported export to the current Mnemosyne frontier-clarification validation conversation. Do not add the report to reusable Project Files and do not reuse this chat/Project for A2.
+- Project contains anything beyond the exact task set;
+- file count is not 22;
+- Project sync fails;
+- R0 cannot access all Project files;
+- R0 uses external sources or begins substantive analysis;
+- any connector remains enabled;
+- Research requests GitHub/raw URL access;
+- a write action is proposed or performed;
+- package/canonical-task identity is wrong;
+- R1 loses Project knowledge access.
