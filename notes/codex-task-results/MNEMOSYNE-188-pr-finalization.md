@@ -3,14 +3,14 @@
 ```yaml
 task_id: MNEMOSYNE-188
 record_type: PR_finalization_and_lineage_binding
-status: FINALIZATION_IN_PROGRESS
+status: FINALIZED_PENDING_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 5cc758caa6baf86de0cf67cda2d852724f5edbbb
 canonical_branch: mnemosyne-188-fable-research-project-knowledge-surface
 canonical_PR: 245
 PR_state: open
-PR_draft: true
+PR_draft_before_ready_transition: true
 PR_merged: false
 merge_performed: false
 auto_merge_enabled: false
@@ -40,14 +40,14 @@ PR_creation:
   base: master
   base_sha: 5cc758caa6baf86de0cf67cda2d852724f5edbbb
   head: mnemosyne-188-fable-research-project-knowledge-surface
-  head_sha_before_finalization_record: 1d769467f8944cffc1acab9e761aa889afd85172
-  commits_before_finalization_record: 16
-  changed_files_before_finalization_record: 16
-  additions_before_finalization_record: 2121
-  deletions_before_finalization_record: 745
+  head_sha_before_initial_finalization_record: 1d769467f8944cffc1acab9e761aa889afd85172
+  commits_before_initial_finalization_record: 16
+  changed_files_before_initial_finalization_record: 16
+  additions_before_initial_finalization_record: 2121
+  deletions_before_initial_finalization_record: 745
 ```
 
-The initial create response reported `mergeable: false`; this is treated as pending GitHub recalculation until a fresh PR reread.
+The initial create snapshot reported `mergeable: false`; a fresh PR reread after the initial finalization record reported `mergeable: true`. This is treated as GitHub recalculation, not hidden.
 
 ## 3. Canonical scope
 
@@ -61,18 +61,18 @@ scope:
     - Project_RAG_with_Research
     - connector_and_cost_controls
   Stage_A_surface_repair:
-    - Project_Files_exact_task_sets
+    - exact_Project_Files_task_sets
     - Research_R0_visibility_probe
-    - conditional_R1_report
+    - conditional_R1_substantive_report
     - no_chat_connector_inheritance_assumption
   task_state:
     - A1_READY_NOT_SELECTED_after_merge
     - A2_DEFERRED_PENDING_VALID_A1_ADJUDICATION
 ```
 
-## 4. Changed paths before this record
+## 4. Final changed-path set
 
-Sixteen paths were changed before this finalization record:
+Seventeen paths are in the canonical PR range:
 
 ```text
 current/fable5-research-delivery-status.md
@@ -91,9 +91,8 @@ notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan
 notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
 notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
 notes/codex-task-results/MNEMOSYNE-188-result.md
+notes/codex-task-results/MNEMOSYNE-188-pr-finalization.md
 ```
-
-This record is the seventeenth changed path.
 
 ## 5. Protected boundaries
 
@@ -114,39 +113,45 @@ protected_boundaries:
   quota_spend: false
 ```
 
-## 6. Verification snapshot before this record
+## 6. Final checks before this record update
 
 ```yaml
 compare:
   base: 5cc758caa6baf86de0cf67cda2d852724f5edbbb
+  head_before_this_record_update: 4929a418ebcfae2f4f10886f1ca1b6437f4c93b1
   status: ahead
-  ahead_by: 16
+  ahead_by: 17
   behind_by: 0
-  changed_files: 16
-accessible_open_PRs_before_record:
+  changed_files: 17
+
+PR_reread:
+  number: 245
+  state: open
+  draft: true
+  merged: false
+  mergeable: true
+  base: master
+  head_branch: mnemosyne-188-fable-research-project-knowledge-surface
+  head_sha_before_this_record_update: 4929a418ebcfae2f4f10886f1ca1b6437f4c93b1
+  commits: 17
+  changed_files: 17
+  additions: 2297
+  deletions: 745
+
+accessible_open_PRs:
   - 245
 exactly_one_canonical_open_PR: true
+
+commit_statuses_reported: []
+workflow_runs_reported: []
+CI_pass_claim: false
 ```
 
-## 7. Required final checks
+No status check or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
-After this record commit:
+## 7. Post-record final-head rule
 
-```yaml
-pending_final_checks:
-  - compare_final_head_to_base
-  - confirm_behind_by_zero
-  - confirm_17_changed_paths
-  - independently_reread_PR_245
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
-```
-
-The final head must be obtained from fresh GitHub metadata; this file does not guess its own containing commit SHA.
+This update creates one additional commit without changing the 17-path set. The authoritative final head, final commit count, status/workflow state and ready-for-review state must be obtained from fresh GitHub metadata after this commit and recorded in the final PR body and user-facing result. This file does not guess its own containing commit SHA.
 
 ## 8. Current external-task state
 
