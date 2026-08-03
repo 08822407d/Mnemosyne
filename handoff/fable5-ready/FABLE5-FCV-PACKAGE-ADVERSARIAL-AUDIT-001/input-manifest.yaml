@@ -1,48 +1,55 @@
 manifest_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-INPUTS-001
-manifest_version: 0.2.0
+manifest_version: 0.3.0
 task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
 ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/OPERATOR.md
-active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.2.md
+active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
 canonical_audit_specification: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
 source_package:
   package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
   package_version: 0.1.0
   merge_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
   current_master_allowed_only_if:
-    - every_required_path_is_readable_in_the_same_ordinary_chat
+    - Project_Files_are_synced
+    - every_required_Project_file_is_readable_inside_Research
     - package_id_and_version_match
-    - required_files_are_consistent_with_this_manifest
-    - any_commit_attestation_limitation_is_explicit
+    - any_historical_commit_attestation_limit_is_explicit
 repository:
   full_name: 08822407d/Mnemosyne
-  preferred_branch_for_current_UI: master
+  preferred_branch_for_Project_GitHub_selection: master
   access: read_only
   history_PR_or_metadata_access_assumed: false
 preferred_delivery:
-  environment: fresh_standalone_chat_or_new_one_run_Project
-  Project_Files: empty
-  chat_GitHub: plus_Add_from_GitHub
+  environment: new_one_run_Claude_Project
+  existing_continuity_Project: prohibited
+  Project_prior_chats: 0
+  Project_Files_source: Project_level_GitHub_file_and_folder_selection
+  Project_Files: exact_selection_groups_only
+  Project_sync_after_selection: required
+  whole_repository: prohibited
   visible_model: Fable_5
   visible_effort: Max
-  Advanced_Research_for_entire_run: false
-  ordinary_web_search_during_repository_gate: false
-  ordinary_web_search_after_gate_PASS: targeted_only
-  repository_gate_and_audit_same_chat: required
+  Research_R0_probe: required
+  Research_R1_substantive: only_after_R0_PASS
+  chat_GitHub_during_Research: disabled
+  all_other_connectors_during_Research: disabled
 selection_groups:
   - group_id: READY_SUPPORT
     audit_input: false
+    Project_file_selection: exact_files
     paths:
       - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
       - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
-      - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.2.md
+      - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
   - group_id: CANONICAL_AUDIT_SPECIFICATION
     audit_input: true
+    Project_file_selection: exact_file
     paths:
       - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
   - group_id: COMPLETE_VALIDATION_PACKAGE_FOLDER
     audit_input: true
-    select_folder_when_supported: notes/frontier-clarification-validation-package/
+    Project_file_selection: select_entire_folder_when_supported
+    folder: notes/frontier-clarification-validation-package/
     exact_paths:
       - notes/frontier-clarification-validation-package/README.md
       - notes/frontier-clarification-validation-package/00-scope-manifest-v0.1.md
@@ -61,6 +68,7 @@ selection_groups:
       - notes/frontier-clarification-validation-package/13-package-integrity-checklist-v0.1.md
   - group_id: EXTERNAL_AUTHORITY_AND_ADJUDICATION
     audit_input: true
+    Project_file_selection: exact_files
     paths:
       - notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md
       - notes/research-batch-reviews/2026-07-frontier-planning-clarification-handoff/03-cross-report-consensus-conflict-and-adjudication.md
@@ -68,42 +76,65 @@ selection_groups:
 counts:
   support_paths: 3
   mandatory_audit_inputs: 19
-  total_paths_in_full_repository_gate: 22
+  total_Project_files: 22
 canonical_specification_completeness:
   expected_final_heading: "## 17. Delivery and authority boundary"
   expected_required_report_sections: 19
-  repository_blob_sha_reference: 88a4c11a7cc041814ee4c9ea804957df475b9d12
-full_preflight:
-  scope: every_path_in_selection_groups
-  sample_only_preflight_allowed: false
+  historical_repository_blob_sha_reference: 88a4c11a7cc041814ee4c9ea804957df475b9d12
+Project_setup_receipt:
+  required:
+    - Project_name
+    - Project_created_new
+    - prior_chat_count_zero
+    - selected_path_or_folder_list
+    - selected_file_count_22
+    - Project_sync_completed
+    - GitHub_connector_disabled_for_Research
+    - other_connectors_disabled_for_Research
+R0_research_project_knowledge_probe:
+  substantive_audit_allowed: false
+  external_web_collection_allowed: false
   pass_requires:
     - all_3_support_paths_complete
     - canonical_specification_complete_through_final_heading
     - all_19_audit_inputs_complete
     - expected_task_and_package_IDs_visible
-    - same_ordinary_chat_will_execute_audit
-    - Advanced_Research_false
-    - ordinary_web_search_not_used_during_gate
+    - Project_Files_used
+    - Research_enabled
+    - chat_level_GitHub_not_used
+    - other_connectors_disabled
+    - external_web_sources_used_zero
     - no_write_action
-manual_upload_fallback:
+    - substantive_audit_not_started
+  failure_statuses:
+    - INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
+    - RESEARCH_SURFACE_NOT_SUPPORTED
+    - INVALID
+  operator_cancel_when:
+    - broad_external_web_collection_begins_before_Project_file_gate_completion
+R1_substantive_run:
+  allowed_only_after_R0_PASS: true
+  same_Project_and_chat: required
+  Project_files_primary_evidence: true
+  web_research: permitted_under_canonical_task
+  access_loss_status: RUN_INVALIDATED_BY_PROJECT_KNOWLEDGE_ACCESS_LOSS
+manual_Project_Files_fallback:
   upload_count: 20
   upload:
-    - active_execution_contract
+    - active_execution_contract_v0_3
     - canonical_audit_specification
     - all_15_package_files
     - all_3_external_authority_and_adjudication_files
+  task_and_manifest_delivery:
+    - copy_exact_task_and_manifest_text_or_add_as_Project_files
   do_not_upload:
-    - OPERATOR.md
-    - ready_entrypoint
-    - this_manifest_if_the_transfer_receipt_reproduces_it_exactly
     - prior_Pro_report
     - prior_Fable_report
     - A2_task_or_report
     - unrelated_repository_files
-  warning: this_exact_set_reaches_a_20_file_boundary_on_some_surfaces_prefer_connector_or_folder_selection
   stop_if:
-    - current_chat_limit_or_product_behavior_prevents_complete_set
-    - any_file_is_truncated_or_transformed_without_receipt
+    - any_file_is_missing_truncated_or_transformed_without_receipt
+    - Project_File_limit_or_extraction_behavior_blocks_complete_set
 contamination_exclusions:
   - foundational_Pro_report
   - foundational_Fable_report
@@ -117,5 +148,5 @@ prior_failed_run:
   result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
   may_be_used_as_package_audit_evidence: false
   may_be_used_as_execution_surface_failure_evidence: true
-failure_status: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+failure_status: INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
 return_route: current_Mnemosyne_frontier_clarification_validation_route
