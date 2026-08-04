@@ -1,1 +1,0 @@
-| IETF, **RFC 9449 OAuth 2.0 DPoP**, 2023 | `https://www.rfc-editor.org/rfc/rfc9449.html`, DOI `10.17487/RFC9449` | sender-constrained tokens、降低 token-only replay。citeturn11search0turn11search13 | 不防止同一 compromised execution context 使用 key |
