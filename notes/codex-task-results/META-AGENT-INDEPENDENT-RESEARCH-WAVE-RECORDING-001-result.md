@@ -1,7 +1,7 @@
 ---
 task_id: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001
 artifact_role: non_authoritative_task_result
-status: canonical_draft_PR_created_independently_reread_pending_final_verification
+status: canonical_PR_ready_for_review_pending_human_merge
 repository: 08822407d/Mnemosyne
 canonical_branch: meta-agent-independent-research-wave-recording-001
 canonical_PR: 246
@@ -214,3 +214,29 @@ changing target truth or selecting research execution.
 
 No workflow run or commit status was reported for this documentation-only
 branch at the time of finalization. This is no CI evidence, not a CI-pass claim.
+
+## 9. Final verification snapshot
+
+```yaml
+pre_status_finalization_head: e1037c9e990042470cd0f2ea7cacf5bf0eb69434
+branch_compare:
+  ahead_by: 16
+  behind_by: 0
+  changed_files: 14
+final_changed_file_inventory: pass_14_of_14
+accessible_open_PRs:
+  - 246
+exactly_one_canonical_open_PR: true
+remote_result_record: pass
+remote_finalization_record: pass
+README_PR_binding: pass
+manifest_PR_binding: pass
+protected_paths_changed: false
+workflow_runs_reported: []
+combined_statuses_reported: []
+CI_pass_claim: false
+```
+
+The final branch head after the two status-finalization commits is obtained
+through a fresh PR/branch read and recorded in the final PR body. Marking the
+PR ready does not select or execute any Deep Research task.
