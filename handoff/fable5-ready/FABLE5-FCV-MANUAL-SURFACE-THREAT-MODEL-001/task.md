@@ -1,10 +1,10 @@
 # Ready Task — FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
 
 ```yaml
-queue_status: READY_AFTER_MNEMOSYNE_186_MERGE_NOT_EXECUTED
+queue_status: PREPARED_AFTER_MNEMOSYNE_188_MERGE_DEFERRED_PENDING_A1_ADJUDICATION
 task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
 canonical_threat_model_specification: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
-active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
+active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/OPERATOR.md
 input_manifest: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
 exact_topic: Independent threat model and evidence audit of a manual multi-conversation surface for Mnemosyne frontier-clarification V0
@@ -16,27 +16,45 @@ live_surface_test: prohibited
 prior_Pro_or_Fable_reports: prohibited
 preferred_visible_model: Fable_5
 preferred_effort: Max
-Advanced_Research: prohibited_for_revised_run
-ordinary_web_search: allowed_after_full_repository_gate_PASS_for_current_product_facts
+Research:
+  R0_Project_knowledge_probe: required_after_later_selection
+  R1_substantive_report: allowed_only_after_R0_PASS
+Project_Files: exact_manifest_set_only
+chat_level_GitHub_during_Research: prohibited
 canonical_research_question_and_output_contract_changed: false
 ```
 
-## Preventive repair before first run
+## Dependency and preventive repair
 
-A2 has not been executed. It previously used the same ordinary-chat preflight followed by an Advanced Research context switch that failed during A1 run 001. The active execution contract removes that unqualified transition before A2 spends quota.
+```yaml
+A2:
+  attempts: 0
+  selected_now: false
+  current_disposition: DEFERRED_PENDING_VALID_A1_ADJUDICATION
+  reason:
+    - A1_may_require_package_amendments_that_change_A2_inputs
+    - avoid_spending_quota_on_a_likely_invalidated_surface_audit
+```
 
-## Required run
+A2 originally inherited the same ordinary-chat-to-Research transition that failed A1. v0.3 replaces that unqualified transition before any A2 run:
 
-1. use a fresh standalone Claude chat or a new one-run Project that has never been used for A1;
-2. select visible `Fable 5` and `Max` effort;
-3. keep Advanced Research off for the entire run;
-4. keep Project Files empty and avoid prior Project Memory/chats;
-5. link `08822407d/Mnemosyne`, branch `master`, through chat-level `+ -> Add from GitHub`;
-6. in that same ordinary chat, read this entrypoint, the manifest, the active execution contract, the complete canonical threat-model specification, and all mandatory audit inputs;
-7. return the full repository-input binding receipt defined by the execution contract;
-8. continue only after `PASS`, in the same chat and without changing mode;
-9. use ordinary web search only after the gate, for current authoritative product facts and targeted external support;
-10. do not create any live V0 worker, reviewer, adjudicator, or connector experiment;
-11. return the complete report to the current Mnemosyne frontier-clarification validation route.
+```yaml
+v0_3:
+  primary_inputs: exact_Project_Files_and_Project_knowledge
+  Research_access: direct_R0_probe_inside_Research
+  chat_level_GitHub_inheritance: not_used
+```
 
-A visible repository link or sample-path preflight is insufficient. If the complete repository gate fails, return `INPUT_OR_REPOSITORY_INTEGRITY_FAILURE` and stop before web research or substantive threat modeling.
+## Required run after later explicit selection
+
+1. create a new one-run Project separate from A1;
+2. add exactly the manifest-listed files to Project Files and sync;
+3. select `Fable 5` and `Max`;
+4. disable GitHub and all other connectors;
+5. enable Research and run R0;
+6. cancel if R0 begins broad external collection before binding Project files;
+7. continue to R1 only after 15/15 Project files pass;
+8. do not create live V0 worker, reviewer, adjudicator or connector-test contexts;
+9. return the complete threat-model report and probe receipt.
+
+This file prepares the workflow but does not currently select or authorize A2 execution.

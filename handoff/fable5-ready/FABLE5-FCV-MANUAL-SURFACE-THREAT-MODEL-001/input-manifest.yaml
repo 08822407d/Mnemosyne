@@ -1,41 +1,42 @@
 manifest_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-INPUTS-001
-manifest_version: 0.2.0
+manifest_version: 0.3.0
 task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
 ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/OPERATOR.md
-active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
+active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
 canonical_threat_model_specification: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
 source_candidate:
   candidate_id: FRONTIER-CLARIFICATION-VALIDATION-MANUAL-SURFACE-CANDIDATE-001
   candidate_version: 0.1.0
   merge_commit: 5e556c2a6dacb41d68bf6209dbf8156b92b79e72
-  current_master_allowed_only_if:
-    - every_required_path_is_readable_in_the_same_ordinary_chat
-    - candidate_id_and_version_match
-    - package_id_and_version_match
-    - any_commit_attestation_limitation_is_explicit
+source_package:
+  package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
+  package_version: 0.1.0
 repository:
   full_name: 08822407d/Mnemosyne
-  preferred_branch_for_current_UI: master
+  preferred_branch_for_Project_GitHub_selection: master
   access: read_only
-  history_PR_or_metadata_access_assumed: false
 preferred_delivery:
-  environment: fresh_standalone_chat_or_new_one_run_Project_separate_from_A1
-  Project_Files: empty
-  chat_GitHub: plus_Add_from_GitHub
+  environment: new_one_run_Claude_Project_separate_from_A1
+  existing_continuity_Project: prohibited
+  Project_prior_chats: 0
+  Project_Files_source: Project_level_GitHub_file_selection
+  Project_Files: exact_selection_groups_only
+  Project_sync_after_selection: required
+  whole_repository: prohibited
   visible_model: Fable_5
   visible_effort: Max
-  Advanced_Research_for_entire_run: false
-  ordinary_web_search_during_repository_gate: false
-  ordinary_web_search_after_gate_PASS: current_fact_and_targeted_support_only
-  repository_gate_and_threat_model_same_chat: required
+  Research_R0_probe: required_after_later_A2_selection
+  Research_R1_substantive: only_after_R0_PASS
+  chat_GitHub_during_Research: disabled
+  all_other_connectors_during_Research: disabled
 selection_groups:
   - group_id: READY_SUPPORT
     audit_input: false
     paths:
       - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
       - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
-      - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.2.md
+      - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
   - group_id: CANONICAL_THREAT_MODEL_SPECIFICATION
     audit_input: true
     paths:
@@ -63,36 +64,68 @@ selection_groups:
 counts:
   support_paths: 3
   mandatory_audit_inputs: 12
-  total_paths_in_full_repository_gate: 15
+  total_Project_files: 15
 canonical_specification_completeness:
   expected_final_heading: "## 14. Delivery and authority boundary"
   expected_required_report_sections: 22
-  repository_blob_sha_reference: df9aec6219efba050bad7285da6ecc1c74d2a464
-full_preflight:
-  scope: every_path_in_selection_groups
-  sample_only_preflight_allowed: false
+  historical_repository_blob_sha_reference: df9aec6219efba050bad7285da6ecc1c74d2a464
+selection_gate:
+  A2_selected_now: false
+  prerequisite_before_Project_creation:
+    - valid_A1_report_adjudicated
+    - A2_inputs_confirmed_current
+    - explicit_RUN_disposition
+Project_setup_receipt:
+  required:
+    - Project_name
+    - Project_created_new_and_separate_from_A1
+    - prior_chat_count_zero
+    - selected_path_list
+    - selected_file_count_15
+    - Project_sync_completed
+    - GitHub_connector_disabled_for_Research
+    - other_connectors_disabled_for_Research
+R0_research_project_knowledge_probe:
+  substantive_threat_model_allowed: false
+  external_web_collection_allowed: false
+  live_surface_or_validation_context_allowed: false
   pass_requires:
     - all_3_support_paths_complete
     - canonical_specification_complete_through_final_heading
     - all_12_audit_inputs_complete
     - expected_task_candidate_and_package_IDs_visible
-    - same_ordinary_chat_will_execute_threat_model
-    - Advanced_Research_false
-    - ordinary_web_search_not_used_during_gate
+    - Project_Files_used
+    - Research_enabled
+    - chat_level_GitHub_not_used
+    - other_connectors_disabled
+    - external_web_sources_used_zero
     - no_live_surface_or_validation_context
     - no_write_action
-manual_upload_fallback:
+    - substantive_threat_model_not_started
+  failure_statuses:
+    - INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
+    - RESEARCH_SURFACE_NOT_SUPPORTED
+    - INVALID
+  operator_cancel_when:
+    - broad_external_web_collection_begins_before_Project_file_gate_completion
+R1_substantive_run:
+  allowed_only_after_R0_PASS: true
+  same_Project_and_chat: required
+  Project_files_primary_evidence: true
+  web_research: current_authoritative_product_facts_and_targeted_support
+  live_surface_test: prohibited
+  access_loss_status: RUN_INVALIDATED_BY_PROJECT_KNOWLEDGE_ACCESS_LOSS
+manual_Project_Files_fallback:
   upload_count: 13
   upload:
-    - active_execution_contract
+    - active_execution_contract_v0_3
     - canonical_threat_model_specification
     - manual_surface_candidate
     - all_9_required_package_files
     - current_human_approved_spec
+  task_and_manifest_delivery:
+    - copy_exact_task_and_manifest_text_or_add_as_Project_files
   do_not_upload:
-    - OPERATOR.md
-    - ready_entrypoint
-    - this_manifest_if_the_transfer_receipt_reproduces_it_exactly
     - prior_Pro_report
     - prior_Fable_report
     - A1_task_or_report
@@ -106,9 +139,8 @@ contamination_exclusions:
   - hidden_material_not_named_by_this_task
   - existing_Project_memory_or_prior_chats
   - unrelated_Mnemosyne_files
-A1_surface_failure_dependency:
-  run_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-RUN-001
-  effect: Advanced_Research_prohibited_for_A2_until_a_separate_direct_input_surface_is_validated
+A1_dependency:
+  current_state: DEFERRED_PENDING_VALID_A1_ADJUDICATION
   substantive_A1_findings_imported: false
-failure_status: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+failure_status: INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
 return_route: current_Mnemosyne_frontier_clarification_validation_route
