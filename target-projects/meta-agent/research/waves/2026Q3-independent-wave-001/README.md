@@ -1,13 +1,13 @@
 ---
 package_id: META-AGENT-INDEPENDENT-RESEARCH-WAVE-001
 artifact_role: independent_parallel_research_wave_navigation
-status: ready_not_selected
+status: repository_recording_pending_human_merge
 target_project_id: meta-agent
 target_truth_source: false
 created_by_task: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001
 prepared_against_master: 0865f334177e2ff0d81a3652ea9e3384e55f4259
 canonical_recording_branch: meta-agent-independent-research-wave-recording-001
-canonical_recording_PR: PENDING
+canonical_recording_PR: 246
 repository_write_performed: true
 research_execution_performed: false
 quota_authorized: false
