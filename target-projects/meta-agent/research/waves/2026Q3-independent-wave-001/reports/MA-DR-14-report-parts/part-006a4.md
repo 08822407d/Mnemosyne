@@ -1,5 +1,0 @@
-| NIST, **SP 800-57 Part 1 Rev. 5**, final 2020 | `https://doi.org/10.6028/NIST.SP.800-57pt1r5` | key lifecycle、protection、backup、recovery、compromise。citeturn17search1 | Rev. 6 截至研究日期仍是 draft |
-| NIST, **SP 800-88 Rev. 2 Guidelines for Media Sanitization**, final 2025 | `https://doi.org/10.6028/NIST.SP.800-88r2` | sanitization 是可验证 program，不是单一 delete command。citeturn14search0turn14search4 | 对 cloud replicas 和第三方 copies 仍需 provider evidence |
-| NIST, **SP 800-111 Guide to Storage Encryption**, final 2007 | `https://doi.org/10.6028/NIST.SP.800-111` | full-disk、volume、file/folder encryption 的不同适用边界。citeturn9search2 | 较旧；不覆盖现代 Agent/connector threat |
-| NIST, **Privacy Framework 1.0**, 2020 | `https://doi.org/10.6028/NIST.CSWP.01162020` | privacy risk 与 data processing lifecycle 的治理框架。citeturn2search12 | voluntary framework；PF 1.1 截至研究时仍非最终版 |
-| IETF, **RFC 9700 OAuth 2.0 Security Best Current Practice**, 2025 | `https://www.rfc-editor.org/rfc/rfc9700.html`, DOI `10.17487/RFC9700` | redirect matching、token privilege、flow 和 replay security。citeturn1search3turn1search4 | 实际 connector 仍可能不支持全部 best practices |
