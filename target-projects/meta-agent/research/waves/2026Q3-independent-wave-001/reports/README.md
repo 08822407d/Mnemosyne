@@ -1,7 +1,7 @@
 ---
 artifact_role: exact_research_report_navigation
 status: seven_reports_recorded_and_remote_blob_verified
- target_project_id: meta-agent
+target_project_id: meta-agent
 target_truth_source: false
 task_id: META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001
 ---
@@ -39,7 +39,7 @@ contain no trailing newline.
 
 The original byte counts and SHA-256 values, each transport component's expected
 Git blob SHA-1, and the completed remote verification snapshot are recorded in
-`report-parts-manifest.yaml`.
+`report-parts-manifest.yaml` and `identities/*.yaml`.
 
 ```yaml
 remote_blob_identity_verification: PASS_56_OF_56
