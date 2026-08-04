@@ -1,6 +1,0 @@
-| NIST, **FIPS 199 — Standards for Security Categorization**, 2004 | `https://doi.org/10.6028/NIST.FIPS.199` | 按 confidentiality、integrity、availability 影响分类。citeturn10search1 | 美国联邦标准；本报告仅借用风险框架 |
-| NIST, **SP 800-53 Rev. 5**, Release 5.2.0 noted 2025 | `https://doi.org/10.6028/NIST.SP.800-53r5` | access、audit、identity、incident、media、PII 和 privacy control families。citeturn10search2turn10search3 | 控制目录，不等于自动合规或有效实现 |
-| NIST, **SP 800-63-4 Digital Identity Guidelines**, final 2025 | `https://doi.org/10.6028/NIST.SP.800-63-4` | identity proofing、authentication、federation 分离。citeturn9search0turn9search1 | 面向数字身份服务；具体 assurance level 需风险评估 |
-| NIST, **SP 800-162 Guide to ABAC**, updated final 2019 | `https://doi.org/10.6028/NIST.SP.800-162` | subject/object/operation/environment 属性授权。citeturn9search18 | ABAC policy 复杂度和属性质量需自行管理 |
-| NIST, **SP 800-207 Zero Trust Architecture**, final 2020 | `https://doi.org/10.6028/NIST.SP.800-207` | 不因网络位置产生 implicit trust；保护 resources。citeturn19search2turn19search9 | 抽象架构，不指定单一实现 |
-| NIST, **SP 800-207A**, final 2023 | `https://doi.org/10.6028/NIST.SP.800-207A` | 应同时使用 user、service、application identity 实施细粒度 policy。citeturn19search0 | cloud-native emphasis；并非所有本地原型都需 service mesh |
