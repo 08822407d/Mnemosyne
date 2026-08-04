@@ -1,7 +1,7 @@
 ---
 task_id: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001
 artifact_role: canonical_PR_binding_and_finalization
-status: canonical_draft_PR_created_independently_reread_pending_final_verification
+status: canonical_PR_ready_for_review_pending_human_merge
 repository: 08822407d/Mnemosyne
 canonical_PR: 246
 canonical_branch: meta-agent-independent-research-wave-recording-001
@@ -142,3 +142,29 @@ required:
 ```
 
 If any check fails, the PR remains draft and the discrepancy is reported.
+
+## 7. Completed final verification snapshot
+
+```yaml
+pre_status_finalization_head: e1037c9e990042470cd0f2ea7cacf5bf0eb69434
+branch_compare:
+  ahead_by: 16
+  behind_by: 0
+  changed_files: 14
+final_changed_file_inventory: pass_14_of_14
+accessible_open_PRs:
+  - 246
+exactly_one_canonical_open_PR: true
+remote_result_record: pass
+remote_finalization_record: pass
+README_PR_binding: pass
+manifest_PR_binding: pass
+protected_paths_changed: false
+workflow_runs_reported: []
+combined_statuses_reported: []
+CI_pass_claim: false
+```
+
+The final head after these record-status updates is intentionally not guessed
+inside this self-containing record. A fresh PR read must bind it in the PR
+body before the PR is marked ready.
