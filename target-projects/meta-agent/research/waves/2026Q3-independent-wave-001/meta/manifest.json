@@ -1,0 +1,148 @@
+{
+  "package_id": "META-AGENT-INDEPENDENT-RESEARCH-WAVE-001",
+  "artifact_role": "independent_parallel_research_wave_manifest",
+  "status": "repository_recording_pending_human_merge",
+  "target_project_id": "meta-agent",
+  "target_truth_source": false,
+  "task_id": "META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001",
+  "repository": "08822407d/Mnemosyne",
+  "pinned_base": "master@0865f334177e2ff0d81a3652ea9e3384e55f4259",
+  "canonical_branch": "meta-agent-independent-research-wave-recording-001",
+  "canonical_PR": 246,
+  "repository_write_performed": true,
+  "research_execution_performed": false,
+  "quota_authorized": false,
+  "target_truth_modified": false,
+  "methodology_modified": false,
+  "operational_activation_performed": false,
+  "tasks": [
+    {
+      "research_id": "MA-DR-08",
+      "canonical_path": "target-projects/meta-agent/research/batches/2026Q3-batch-a/tasks/MA-DR-08-portable-agent-design-ir-and-multi-backend-mapping.md",
+      "stored_in_wave": false,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    },
+    {
+      "research_id": "MA-DR-10",
+      "title": "Requirements-to-Agent/Workflow Design Synthesis and Review Methodology",
+      "canonical_path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-10-requirements-to-agent-workflow-design-synthesis-and-review-methodology.md",
+      "stored_in_wave": true,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    },
+    {
+      "research_id": "MA-DR-11",
+      "title": "Methodology Promotion, Evidence Generalization, and Cross-Project Learning Governance",
+      "canonical_path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-11-methodology-promotion-evidence-generalization-and-cross-project-learning-governance.md",
+      "stored_in_wave": true,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    },
+    {
+      "research_id": "MA-DR-12",
+      "title": "Dynamic Delegation, Managed Autonomy, and Human Approval Policy",
+      "canonical_path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-12-dynamic-delegation-managed-autonomy-and-human-approval-policy.md",
+      "stored_in_wave": true,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    },
+    {
+      "research_id": "MA-DR-13",
+      "title": "Long-Term Product Surface, Repository Topology, and Operational Architecture",
+      "canonical_path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-13-long-term-product-surface-repository-topology-and-operational-architecture.md",
+      "stored_in_wave": true,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    },
+    {
+      "research_id": "MA-DR-14",
+      "title": "Private Target Material Storage, Access Control, and Data Governance",
+      "canonical_path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-14-private-target-material-storage-access-control-and-data-governance.md",
+      "stored_in_wave": true,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    },
+    {
+      "research_id": "MA-DR-15",
+      "title": "Capability Matrix, Provider/Tool Routing, Freshness, and Failure/Fallback Governance",
+      "canonical_path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-15-capability-matrix-provider-tool-routing-freshness-and-fallback-governance.md",
+      "stored_in_wave": true,
+      "independent_of_sibling_tasks": true,
+      "execution_disposition": "READY_NOT_SELECTED"
+    }
+  ],
+  "excluded": {
+    "MA-DR-09": "dependent_on_adjudicated_MA-DR-08",
+    "experiment_only_topics": [
+      "exact_single_vs_multi_agent_thresholds",
+      "exact_rubric_weights_and_sample_sizes",
+      "SQLite_or_memory_layer_count",
+      "artifact_burden_and_approval_density",
+      "cross_domain_transfer",
+      "real_cost_latency_and_rework"
+    ],
+    "separate_routes": [
+      "learner_adaptive_explanation_GPT_Live",
+      "non_FABLE_health_review",
+      "Mnemosyne_maintenance_and_repository_concurrency"
+    ]
+  },
+  "files_excluding_manifest": [
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/OPERATOR.md",
+      "bytes": 3929,
+      "sha256": "794661521bdcf7367d6a0863e029e9a1f749b95596a2d8ab05e3e61148dd0853"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/README.md",
+      "bytes": 3272,
+      "sha256": "77e10ca8f8d65d2830b9f585ff7473825e5ccaa075ef9e43dc29f3fc957f3594"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/RETURN-AND-CONVERGENCE-CONTRACT.md",
+      "bytes": 2298,
+      "sha256": "46d8411922c47fa72fcb40b15b5bc2d4683d232a786c875e8ce879605fb52112"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/meta/independence-and-scope-matrix.md",
+      "bytes": 3779,
+      "sha256": "1bde5b724e6262632101def46a2b1462523eb2ccd3002bcd1335dba0aeda616d"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-10-requirements-to-agent-workflow-design-synthesis-and-review-methodology.md",
+      "bytes": 10951,
+      "sha256": "e9f422b70a6a9e3ebf30c9f418b340487414eb99f4dc8d166d72a0d3a5f099a9"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-11-methodology-promotion-evidence-generalization-and-cross-project-learning-governance.md",
+      "bytes": 10522,
+      "sha256": "7744bd8d3e8058305f2f888bf1c4634e9dd3bd8818f5d25b215e38f5801817b3"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-12-dynamic-delegation-managed-autonomy-and-human-approval-policy.md",
+      "bytes": 10285,
+      "sha256": "0603352759558288028b624b920738cb9dc42dd2d08b1b620c943e6b8adb89fc"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-13-long-term-product-surface-repository-topology-and-operational-architecture.md",
+      "bytes": 10461,
+      "sha256": "dc152bc176a0079f9a343d328d24b9bcf147020368917403ac3422310acc7bf7"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-14-private-target-material-storage-access-control-and-data-governance.md",
+      "bytes": 10435,
+      "sha256": "9586d97dbf8047ed923bb3b62738377c779f14524bbd8082520120e227a86b97"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/MA-DR-15-capability-matrix-provider-tool-routing-freshness-and-fallback-governance.md",
+      "bytes": 10503,
+      "sha256": "0f25738c83809556e1644b4e283ffa0d6034cfc1c963e7ceb2d6f2ef8902e705"
+    },
+    {
+      "path": "target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/tasks/README.md",
+      "bytes": 2191,
+      "sha256": "382df8a2a68a8796bffc7fb513a683eb3cc858d3603e5c5abef63e021f0d7dfe"
+    }
+  ]
+}
