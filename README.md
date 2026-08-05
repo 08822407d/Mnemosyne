@@ -16,7 +16,11 @@ GitHub repository-writing 单任务单活跃 PR 谱系防护：`current/github-s
 
 长 transfer artifact 文件优先交付与低风险 artifact 同回复直接生成防护：`current/artifact-delivery-and-direct-generation-guard.md`。Deep Research 单报告交付纠错：`current/deep-research-report-delivery-correction-guard.md`。这些文件不是执行源。
 
+Deep Research、Fable-class research 与一次性外部研究/评审工作使用紧凑 UI 显示名称的行为防护：`current/external-research-display-name-guard.md`。项目缩写与已分配研究别名登记：`notes/registries/project-research-display-name-registry-v0.1.md`。Mnemosyne 采用 `MNE`，Meta-Agent 保留 `MA`；短名称不替代 canonical task ID、报告身份或运行元数据。
+
 用户操作置顶、下一步收尾、模型能力与 Deep Research 需求预估、上下文化澄清交接和人类意图重构防护：`current/user-operation-next-step-capability-and-intent-guard.md`。研究后风险分流与架构裁决：`current/frontier-planning-clarification-handoff-adjudication-guard.md`。配套澄清模板：`notes/templates/frontier-planned-clarification-package-v0.1.md`；研究状态：`current/frontier-planning-clarification-handoff-research-status.md`；验证设计：`notes/validation-designs/frontier-planning-clarification-handoff-read-only-validation-v0.1.md`。这些文件不是执行源，也不自动修改任何目标项目的运行真相源。
+
+目标项目从 Mnemosyne bootstrap workspace 迁入专属仓库的当前设计入口：`notes/migration-designs/meta-agent-dedicated-repository-migration-assessment-v0.1.md`。跨仓库 shadow copy、fresh-session recovery、行为等价、目标仓库 PR 与 rollback/no-dual-writer 验证设计：`notes/validation-designs/target-project-dedicated-repository-migration-and-pr-validation-v0.1.md`；迁移交接模板：`notes/templates/target-project-dedicated-repository-migration-handoff-v0.1.md`。这些材料只准备迁移与验证门，不创建目标仓库、不执行 cutover，也不改变任何目标 truth source。
 
 PR #231 后的 frontier clarification validation 专项交接入口：`current/frontier-clarification-validation-handoff-status.md`；handoff package：`handoff/mnemosyne-frontier-clarification-validation-handoff-package.md`；配套 startup prompt：`handoff/mnemosyne-frontier-clarification-validation-startup-prompt.md`。该专项交接不覆盖 `handoff/handoff-current.md`，不接管 Meta-Agent 或 non-FABLE health-review 路线。
 
