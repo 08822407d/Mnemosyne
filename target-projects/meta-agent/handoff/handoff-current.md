@@ -15,8 +15,8 @@ The sole target truth is `target-projects/meta-agent/current/approved-spec.md`; 
 ```yaml
 route: META_AGENT_PRODUCT_BUILD
 repair_task: META-AGENT-PR248-HANDOFF-REPAIR-001
-repair_PR: PENDING_REPAIR_PR
-handoff_effective: only_after_repair_PR_merge_and_verification
+repair_PR: 249
+handoff_effective: only_after_PR_249_merge_and_verification
 startup_prompt: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md
 compatibility_guard: target-projects/meta-agent/current/meta-agent-mnemosyne-guidance-compatibility-guard.md
 ```
@@ -35,8 +35,8 @@ compatibility_guard: target-projects/meta-agent/current/meta-agent-mnemosyne-gui
 ## Current research and archive state
 
 - MA-DR-08 and MA-DR-10–15 reports are already exact, adjudicated and safe to archive at the chat-surface level.
-- MA-DR-09 may be archived after this repair PR is merged and the canonical transport and handoff paths are verified on `master`.
-- Archiving a ChatGPT conversation is a UI organization action; it must not be treated as deleting the repository evidence.
+- MA-DR-09 may be archived after PR #249 is merged and the canonical transport and handoff paths are verified on `master`.
+- Archiving a conversation is an interface-organization action; it must not be treated as deleting the repository evidence.
 
 ## Next phase
 
