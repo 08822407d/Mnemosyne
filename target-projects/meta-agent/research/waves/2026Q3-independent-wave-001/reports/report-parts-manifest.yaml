@@ -1,17 +1,21 @@
-manifest_id: META-AGENT-INDEPENDENT-WAVE-REPORT-PARTS-MANIFEST-003
+manifest_id: META-AGENT-INDEPENDENT-WAVE-REPORT-PARTS-MANIFEST-004
 artifact_role: exact_report_transport_identity_and_remote_reconstruction_record
-status: MA_DR_09_repair_pending_human_merge
+status: all_eight_reports_recorded_and_verified
 target_project_id: meta-agent
 target_truth_source: false
-last_updated_by_task: META-AGENT-PR248-HANDOFF-REPAIR-001
-repair_PR: PENDING_REPAIR_PR
+last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+repair_PR: 249
+repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
+post_merge_finalization_PR: 251
 reconstruction_readme: reports/README.md
 verification:
   MA_DR_08_10_15_remote_transport_components_verified: 56
   MA_DR_08_10_15_remote_report_reconstruction: PASS_7_OF_7
   MA_DR_09_transport_components_expected: 37
-  MA_DR_09_remote_component_verification: PENDING_FINAL_REMOTE_VERIFICATION
-  MA_DR_09_remote_reconstruction: PENDING_FINAL_REMOTE_VERIFICATION
+  MA_DR_09_pre_merge_remote_component_verification: PASS_37_OF_37
+  MA_DR_09_pre_merge_remote_reconstruction: PASS
+  MA_DR_09_PR_head_to_merge_commit_changed_files: 0
+  MA_DR_09_merge_commit_to_master_changed_files: 0
   normalization_performed: false
 report_identity_files:
   - identities/MA-DR-08.yaml
@@ -22,6 +26,7 @@ report_identity_files:
   - identities/MA-DR-14.yaml
   - identities/MA-DR-15.yaml
   - identities/MA-DR-09.yaml
+  - identities/MA-DR-09-post-merge-verification.yaml
 original_reports:
   - research_id: MA-DR-08
     original_bytes: 91398
@@ -57,8 +62,8 @@ original_reports:
     transport: bzip2_level_9_then_Base64_37_parts
     compressed_bytes: 27382
     compressed_sha256: 3adfc7b750edcf9184ed487574690125158531206fb43d26d1b534d87a1a448a
-    remote_reconstruction_sha256_verified: false_pending_final_verification
+    remote_reconstruction_sha256_verified: true
 historical_failed_transport:
   PR: 248
   path: reports/MA-DR-09-report-parts-base64/
-  disposition: incomplete_noncanonical_removed_by_repair
+  disposition: incomplete_noncanonical_removed_by_PR_249

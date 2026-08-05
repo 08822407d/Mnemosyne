@@ -1,12 +1,14 @@
 ---
 target_project_id: meta-agent
-artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-005
+artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-006
 artifact_role: research_evidence_navigation
-status: MA_DR_09_repair_PR_pending_human_merge
+status: MA_DR_09_recorded_adjudicated_post_merge_finalization_pending
 authority_level: navigation_and_evidence_support
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-PR248-HANDOFF-REPAIR-001
-repair_PR: PENDING_REPAIR_PR
+last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+repair_PR: 249
+repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
+post_merge_finalization_PR: 251
 ---
 
 # Meta-Agent Research Evidence
@@ -20,31 +22,32 @@ Research is evidence, not target truth. The sole target truth is `target-project
 - independent wave MA-DR-08 and MA-DR-10–15;
 - MA-DR-09 benchmark/ablation/conformance/pilot-protocol report.
 
-## MA-DR-09 repair status
+## MA-DR-09 status
 
 ```yaml
-PR_248: merged_scope_incomplete
+PR_248: merged_scope_incomplete_historical_failure
 repair_task: META-AGENT-PR248-HANDOFF-REPAIR-001
-repair_PR: PENDING_REPAIR_PR
-canonical_transport: reports/MA-DR-09-report-bz2-base64/
+repair_PR: 249
+repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
+post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+post_merge_finalization_PR: 251
+canonical_transport: waves/2026Q3-independent-wave-001/reports/MA-DR-09-report-bz2-base64/
 formal_intake: completed
 upstream_binding_addendum: completed
 final_disposition: ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE
 ```
 
-The PR #248 transport is historical failed evidence and is removed from the final repair tree. Handoff is effective only after repair merge and verification.
-
 ## Conversation archive eligibility
 
 ```yaml
 MA_DR_08: archive_now
+MA_DR_09: archive_after_finalization_merge_and_receiving_handoff_readback
 MA_DR_10: archive_now
 MA_DR_11: archive_now
 MA_DR_12: archive_now
 MA_DR_13: archive_now
 MA_DR_14: archive_now
 MA_DR_15: archive_now
-MA_DR_09: archive_after_repair_merge_and_verification
 ```
 
-Archiving does not delete the repository records and does not authorize any downstream action.
+Archiving does not delete repository records and does not authorize downstream action.
