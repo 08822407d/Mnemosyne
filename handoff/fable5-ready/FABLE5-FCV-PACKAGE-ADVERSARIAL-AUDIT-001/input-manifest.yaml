@@ -1,6 +1,8 @@
 manifest_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-INPUTS-001
-manifest_version: 0.3.0
+manifest_version: 0.3.1
 task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+display_name: MNE-DR-001 验证包审计
+display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/OPERATOR.md
 active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
@@ -21,6 +23,7 @@ repository:
   history_PR_or_metadata_access_assumed: false
 preferred_delivery:
   environment: new_one_run_Claude_Project
+  Project_display_name: MNE-DR-001 验证包审计
   existing_continuity_Project: prohibited
   Project_prior_chats: 0
   Project_Files_source: Project_level_GitHub_file_and_folder_selection
@@ -83,7 +86,7 @@ canonical_specification_completeness:
   historical_repository_blob_sha_reference: 88a4c11a7cc041814ee4c9ea804957df475b9d12
 Project_setup_receipt:
   required:
-    - Project_name
+    - Project_name_equals_MNE_DR_001_验证包审计
     - Project_created_new
     - prior_chat_count_zero
     - selected_path_or_folder_list
