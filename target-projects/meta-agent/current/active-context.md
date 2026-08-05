@@ -27,10 +27,10 @@ pilot_authorized: false
 private_material_authorized: false
 operational_activation_authorized: false
 repair_task: META-AGENT-PR248-HANDOFF-REPAIR-001
-repair_PR: PENDING_REPAIR_PR
+repair_PR: 249
 ```
 
-PR #248 merged only 17 incomplete MA-DR-09 transport segments and did not merge the handoff, review, navigation, or result files claimed in its body. This repair preserves that incident, replaces the transport, records adjudication, and prepares a verifiable handoff.
+PR #248 merged only 17 incomplete MA-DR-09 transport segments and did not merge the handoff, review, navigation, or result files claimed in its body. PR #249 preserves that incident, replaces the transport, records adjudication, and prepares a verifiable handoff.
 
 ## Research state
 
@@ -45,7 +45,7 @@ MA_DR_09:
   reviewer_binding_addendum: completed
   final_disposition: ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE
   clean_rerun_required: false
-  source_conversation_archive_eligible: after_repair_PR_merge_and_post_merge_verification
+  source_conversation_archive_eligible: after_PR_249_merge_and_post_merge_verification
 ```
 
 ## Pending work
@@ -64,7 +64,7 @@ MA_DR_09:
 ## Safe next action
 
 ```yaml
-current_action: human_review_and_merge_repair_PR_PENDING_REPAIR_PR
+current_action: human_review_and_merge_repair_PR_249
 after_merge:
   - verify_merge_commit_and_latest_master
   - retry_receive_only_handoff_using_the_dedicated_startup_prompt
