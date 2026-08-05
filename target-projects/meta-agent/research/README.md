@@ -1,14 +1,15 @@
 ---
 target_project_id: meta-agent
-artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-006
+artifact_id: META-AGENT-RESEARCH-EVIDENCE-README-007
 artifact_role: research_evidence_navigation
-status: MA_DR_09_recorded_adjudicated_post_merge_finalization_pending
+status: all_planned_research_recorded_adjudicated_and_archive_eligible
 authority_level: navigation_and_evidence_support
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+last_updated_by_task: META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001
 repair_PR: 249
 repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
 post_merge_finalization_PR: 251
+post_merge_finalization_commit: 7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f
 ---
 
 # Meta-Agent Research Evidence
@@ -31,17 +32,19 @@ repair_PR: 249
 repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
 post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
 post_merge_finalization_PR: 251
+post_merge_finalization_commit: 7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f
 canonical_transport: waves/2026Q3-independent-wave-001/reports/MA-DR-09-report-bz2-base64/
 formal_intake: completed
 upstream_binding_addendum: completed
 final_disposition: ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE
+handoff_evidence_ready: true
 ```
 
 ## Conversation archive eligibility
 
 ```yaml
 MA_DR_08: archive_now
-MA_DR_09: archive_after_finalization_merge_and_receiving_handoff_readback
+MA_DR_09: archive_now
 MA_DR_10: archive_now
 MA_DR_11: archive_now
 MA_DR_12: archive_now
