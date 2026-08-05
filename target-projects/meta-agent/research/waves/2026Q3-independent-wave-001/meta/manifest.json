@@ -1,7 +1,7 @@
 {
   "package_id": "META-AGENT-INDEPENDENT-RESEARCH-WAVE-001",
   "artifact_role": "independent_research_wave_manifest",
-  "status": "all_reports_recorded_and_adjudicated_post_merge_finalization_pending",
+  "status": "all_reports_recorded_adjudicated_and_receive_only_handoff_ready",
   "target_project_id": "meta-agent",
   "target_truth_source": false,
   "repository": "08822407d/Mnemosyne",
@@ -17,8 +17,14 @@
     "task_id": "META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001",
     "branch": "meta-agent-pr249-post-merge-handoff-finalization-001",
     "pull_request": 251,
+    "merge_commit": "7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f",
     "base": "master@a096c3ddc24a574f90bd47a76c10af92f8999680",
-    "human_review_and_merge_required": true
+    "merged": true
+  },
+  "handoff_closure": {
+    "task_id": "META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001",
+    "readiness_model": "ready_when_this_manifest_is_visible_on_latest_master_and_no_related_open_PR_exists",
+    "self_referential_pending_merge_marker": false
   },
   "PR_248_incident": {
     "merged": true,
@@ -37,11 +43,16 @@
   "handoff": {
     "package": "../../../../handoff/meta-agent-post-ma-dr-09-handoff-package.md",
     "startup_prompt": "../../../../handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md",
-    "effective_after_finalization_merge_and_verification": true
+    "status": "READY_FOR_RECEIVE_ONLY_HANDOFF",
+    "runtime_reverification": [
+      "latest_master_contains_ready_status",
+      "no_related_open_PR",
+      "startup_prompt_handoff_and_guard_are_readable"
+    ]
   },
   "conversation_archive_eligibility": {
     "MA_DR_08": "now",
-    "MA_DR_09": "after_finalization_merge_and_receiving_handoff_readback",
+    "MA_DR_09": "now",
     "MA_DR_10": "now",
     "MA_DR_11": "now",
     "MA_DR_12": "now",
