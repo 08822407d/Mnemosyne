@@ -2,15 +2,15 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-ACTIVE-CONTEXT-001
 artifact_role: non_execution_current_state
-status: post_research_handoff_finalization_pending_human_merge
+status: post_research_receive_only_handoff_ready
 authority_level: operational_support
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+last_updated_by_task: META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001
 design_version: 0.1.0
 known_limits:
   - not_execution_source
   - target_truth_remains_inactive
-  - finalization_PR_must_merge_before_handoff_retry
+  - receiving_conversation_must_reverify_latest_master_and_open_PRs
 ---
 
 # Meta-Agent v0.1 Active Context
@@ -35,11 +35,26 @@ PR_249:
   merged: true
   merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
   purpose: repair_PR_248_and_record_MA_DR_09_and_handoff
-post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
-post_merge_finalization_PR: 251
+PR_251:
+  merged: true
+  merge_commit: 7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f
+  purpose: close_post_merge_navigation_and_provenance
 ```
 
-PR #249 placed the dedicated startup prompt, handoff package, compatibility guard, MA-DR-09 review/binding records and canonical report transport on `master`. Its merge occurred before post-merge status fields and task-finalization records were closed, so this bounded finalization task makes the repository state self-consistent before a new handoff attempt.
+## Handoff readiness
+
+```yaml
+status: READY_FOR_RECEIVE_ONLY_HANDOFF
+startup_prompt: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md
+dedicated_handoff: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-handoff-package.md
+compatibility_guard: target-projects/meta-agent/current/meta-agent-mnemosyne-guidance-compatibility-guard.md
+runtime_reverification_required:
+  - latest_master_contains_this_ready_status
+  - no_related_open_PR
+  - startup_prompt_handoff_and_guard_are_readable
+```
+
+This status intentionally does not depend on another repository PR number. When this file is visible on the execution-time latest `master` and the runtime checks above pass, a fresh conversation may perform the receive-only handoff.
 
 ## Research state
 
@@ -59,7 +74,7 @@ MA_DR_09:
   post_merge_tree_identity:
     PR_249_head_to_merge_commit_changed_files: 0
     merge_commit_to_master_changed_files: 0
-  source_conversation_archive_eligible: after_finalization_PR_merge_and_handoff_readback
+  source_conversation_archive_eligible: true
 ```
 
 ## Pending work
@@ -78,10 +93,8 @@ MA_DR_09:
 ## Safe next action
 
 ```yaml
-current_action: human_review_and_merge_post_merge_finalization_PR
-after_merge:
-  - verify_finalization_merge_and_latest_master
-  - verify_no_related_open_PR
-  - retry_receive_only_handoff_using_the_dedicated_startup_prompt
+current_action: start_receive_only_handoff_in_a_fresh_Meta_Agent_Pro_conversation
+required_entrypoint: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md
+first_round_only: handoff_receive_report
 no_automatic_prototype_pilot_or_activation: true
 ```

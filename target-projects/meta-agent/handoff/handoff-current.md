@@ -2,10 +2,10 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-HANDOFF-001
 artifact_role: fresh_session_handoff
-status: post_MA_DR_09_post_merge_finalization_pending_human_merge
+status: receive_only_handoff_ready
 authority_level: non_execution_navigation
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+last_updated_by_task: META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001
 ---
 
 # Meta-Agent Handoff Current v0.1
@@ -17,13 +17,20 @@ route: META_AGENT_PRODUCT_BUILD
 PR_249:
   merged: true
   merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
-post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
-post_merge_finalization_PR: 251
-handoff_effective: only_after_finalization_PR_merge_and_verification
+PR_251:
+  merged: true
+  merge_commit: 7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f
+handoff_status: READY_FOR_RECEIVE_ONLY_HANDOFF
 startup_prompt: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md
 dedicated_handoff: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-handoff-package.md
 compatibility_guard: target-projects/meta-agent/current/meta-agent-mnemosyne-guidance-compatibility-guard.md
+runtime_gate:
+  - this_ready_status_is_visible_on_latest_master
+  - no_related_open_PR
+  - startup_prompt_handoff_and_guard_are_readable
 ```
+
+The handoff is intentionally closed by repository state rather than by another self-referential “pending merge” marker.
 
 ## Recovery order
 
@@ -38,8 +45,7 @@ compatibility_guard: target-projects/meta-agent/current/meta-agent-mnemosyne-gui
 
 ## Current research and archive state
 
-- MA-DR-08 and MA-DR-10–15 reports are exact, adjudicated and safe to archive at the chat-surface level.
-- MA-DR-09 is exact, adjudicated and may be archived after this finalization PR is merged and the fresh receiving conversation confirms the handoff files.
+- MA-DR-08, MA-DR-09 and MA-DR-10–15 reports are exact, adjudicated and safe to archive at the chat-surface level.
 - Archiving a conversation is an interface-organization action; it does not delete repository evidence.
 
 ## Next phase

@@ -1,23 +1,40 @@
 ---
 handoff_id: META-AGENT-POST-MA-DR-09-HANDOFF-001
 artifact_role: dedicated_conversation_handoff_package
-status: effective_after_post_merge_finalization
+status: receive_only_handoff_ready
 target_project_id: meta-agent
 target_truth_source: false
 repair_PR: 249
 repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
 post_merge_finalization_PR: 251
+post_merge_finalization_commit: 7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f
+last_updated_by_task: META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001
 ---
 
 # Meta-Agent Post-MA-DR-09 Handoff Package
 
 ## 1. Handoff purpose
 
-Transfer the Meta-Agent product-build route from the oversized source conversation to a fresh dedicated Pro/frontier-capable conversation after the post-merge finalization PR containing this status update is merged and independently verified.
+Transfer the Meta-Agent product-build route from the oversized source conversation to a fresh dedicated Pro/frontier-capable conversation.
 
 This handoff is navigation, not target truth, activation, implementation, pilot authorization, or repository-write authority.
 
-## 2. Truth and process boundary
+## 2. Runtime readiness rule
+
+The handoff is ready when the receiving conversation verifies all of the following at execution time:
+
+```yaml
+required:
+  - latest_master_contains_active_context_status_post_research_receive_only_handoff_ready
+  - latest_master_contains_handoff_current_status_receive_only_handoff_ready
+  - no_related_open_PR
+  - startup_prompt_handoff_package_and_compatibility_guard_are_readable
+  - PR_249_and_PR_251_are_merged
+```
+
+No future PR number is a prerequisite. This avoids a self-referential “pending merge” loop.
+
+## 3. Truth and process boundary
 
 Meta-Agent sole target truth:
 
@@ -39,7 +56,7 @@ The receiving conversation must also read:
 target-projects/meta-agent/current/meta-agent-mnemosyne-guidance-compatibility-guard.md
 ```
 
-## 3. Completed milestones
+## 4. Completed milestones
 
 - original Meta-Agent concept reconstructed and clarified;
 - DR-01–05 completed, preserved and synthesized;
@@ -53,11 +70,11 @@ target-projects/meta-agent/current/meta-agent-mnemosyne-guidance-compatibility-g
 - MA-DR-09 target binding completed by a separate reviewer addendum without rewriting its original input limitation;
 - PR #248 scope mismatch recorded;
 - PR #249 merged the repair files, canonical transport, handoff and compatibility guard;
-- post-merge finalization makes current navigation and task records consistent;
+- PR #251 merged post-merge navigation and provenance finalization;
 - no research report automatically changed target truth or methodology;
 - no offline prototype, benchmark, pilot, private-data route or operational activation has been authorized.
 
-## 4. Current phase
+## 5. Current phase
 
 ```yaml
 route: META_AGENT_PRODUCT_BUILD
@@ -71,7 +88,7 @@ real_cases: 0
 accepted_new_methods_from_research: 0
 ```
 
-## 5. MA-DR-09 disposition and preservation
+## 6. MA-DR-09 disposition and preservation
 
 ```yaml
 original_run_disposition: ACCEPT_EXTERNAL_LANDSCAPE_TARGET_MAPPING_BLOCKED
@@ -86,9 +103,11 @@ canonical_transport:
   merge_tree_identity_preserved: true
 ```
 
+`reports/identities/MA-DR-09.yaml` contains the original pre-merge transport declaration and may retain historical pending labels. For current status, the receiving conversation must use `reports/identities/MA-DR-09-post-merge-verification.yaml` and `reports/report-parts-manifest.yaml`; those records supersede the pre-merge status labels without rewriting the original identity evidence.
+
 Candidate counts, sample sizes, threshold values, time estimates, baseline applicability and Tier manifests remain calibration/Owner-decision items.
 
-## 6. Required reading order
+## 7. Required reading order
 
 1. `target-projects/meta-agent/current/approved-spec.md`
 2. `target-projects/meta-agent/authority/source-and-owner-map.md`
@@ -98,15 +117,16 @@ Candidate counts, sample sizes, threshold values, time estimates, baseline appli
 6. `target-projects/meta-agent/history/decision-version-and-migration-log.md`
 7. `target-projects/meta-agent/research/README.md`
 8. independent-wave formal adjudication, convergence and candidate ledger
-9. `reports/identities/MA-DR-09.yaml`
-10. `reports/identities/MA-DR-09-post-merge-verification.yaml`
-11. `reviews/MA-DR-09-formal-intake-review.md`
-12. `reviews/MA-DR-09-upstream-binding-addendum.md`
-13. `candidates/MA-DR-09-candidate-impact-ledger.md`
-14. `decisions/MA-DR-09-downstream-and-handoff-gate.md`
-15. `target-projects/meta-agent/handoff/handoff-current.md`
+9. `reports/identities/MA-DR-09.yaml` as historical transport declaration
+10. `reports/identities/MA-DR-09-post-merge-verification.yaml` as current merge/readback status
+11. `reports/report-parts-manifest.yaml`
+12. `reviews/MA-DR-09-formal-intake-review.md`
+13. `reviews/MA-DR-09-upstream-binding-addendum.md`
+14. `candidates/MA-DR-09-candidate-impact-ledger.md`
+15. `decisions/MA-DR-09-downstream-and-handoff-gate.md`
+16. `target-projects/meta-agent/handoff/handoff-current.md`
 
-## 7. Pending work ledger
+## 8. Pending work ledger
 
 ### P0
 - select one minimum public/synthetic offline prototype scope;
@@ -127,13 +147,14 @@ Candidate counts, sample sizes, threshold values, time estimates, baseline appli
 - automatic methodology promotion;
 - operational activation.
 
-## 8. Receive-only first round
+## 9. Receive-only first round
 
 The new conversation's first substantive response must only:
-- verify the finalization PR merge and latest `master`;
+- verify the runtime readiness rule and latest `master`;
 - read this handoff and required target-local files;
 - return `handoff_receive_report`;
 - report missing, stale or conflicting artifacts;
+- treat explicitly superseded pre-merge labels as historical rather than an active conflict;
 - stop without Owner decisions, implementation, pilot planning/execution, private-material ingestion or repository writes.
 
 After the receive report, the user separately sends the augmented Mnemosyne guidance command from the compatibility guard.
