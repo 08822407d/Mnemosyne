@@ -1,9 +1,10 @@
 ---
 guard_id: META-AGENT-MNEMOSYNE-GUIDANCE-COMPATIBILITY-001
 artifact_role: target_local_non_execution_process_compatibility_guard
-status: owner_requested_pending_repository_merge
+status: active_temporary_compatibility_guard
 target_project_id: meta-agent
 target_truth_source: false
+activated_by_merge_PR: 249
 effective_until:
   - Meta_Agent_moves_to_a_dedicated_repository
   - Meta_Agent_adopts_its_own_owner_approved_behavior_guidance
@@ -14,18 +15,13 @@ review_on_migration: required
 
 ## 1. Purpose
 
-Meta-Agent currently resides physically inside the Mnemosyne repository but is
-not the Mnemosyne maintenance project. Until Meta-Agent moves to a dedicated
-repository and adopts its own behavior guidance, Mnemosyne guidance may be used
-only as a temporary process/repository-safety compatibility layer.
+Meta-Agent currently resides physically inside the Mnemosyne repository but is not the Mnemosyne maintenance project. Until Meta-Agent moves to a dedicated repository and adopts its own behavior guidance, Mnemosyne guidance may be used only as a temporary process/repository-safety compatibility layer.
 
-Physical co-location does not merge project identity, target truth, authority,
-current state, handoff route, or maintenance work.
+Physical co-location does not merge project identity, target truth, authority, current state, handoff route, or maintenance work.
 
 ## 2. Canonical augmented load command
 
-Whenever a Meta-Agent conversation is instructed to refresh Mnemosyne guidance,
-use the following form rather than the bare shortcut alone:
+Whenever a Meta-Agent conversation is instructed to refresh Mnemosyne guidance, use the following form rather than the bare shortcut alone:
 
 ```text
 @GitHub 加载 Mnemosyne 指导约束，但只作为 Meta-Agent bootstrap 审阅、
@@ -73,7 +69,6 @@ mnemosyne_guidance_refresh_for_Meta_Agent:
 ## 4. Boundaries
 
 This guard does not:
-
 - modify Meta-Agent target truth;
 - make Mnemosyne an authority over Meta-Agent product decisions;
 - authorize repository writes or external execution;
