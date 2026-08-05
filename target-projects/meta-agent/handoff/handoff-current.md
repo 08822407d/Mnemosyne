@@ -18,7 +18,7 @@ PR_249:
   merged: true
   merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
 post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
-post_merge_finalization_PR: PENDING_FINALIZATION_PR
+post_merge_finalization_PR: 251
 handoff_effective: only_after_finalization_PR_merge_and_verification
 startup_prompt: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md
 dedicated_handoff: target-projects/meta-agent/handoff/meta-agent-post-ma-dr-09-handoff-package.md
