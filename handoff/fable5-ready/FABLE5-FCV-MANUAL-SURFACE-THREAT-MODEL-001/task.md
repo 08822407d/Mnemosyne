@@ -3,6 +3,8 @@
 ```yaml
 queue_status: PREPARED_AFTER_MNEMOSYNE_188_MERGE_DEFERRED_PENDING_A1_ADJUDICATION
 task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+display_name: MNE-DR-002 表面威胁
+display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 canonical_threat_model_specification: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
 active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/OPERATOR.md
@@ -47,7 +49,7 @@ v0_3:
 
 ## Required run after later explicit selection
 
-1. create a new one-run Project separate from A1;
+1. create a new one-run Project named `MNE-DR-002 表面威胁`, separate from A1;
 2. add exactly the manifest-listed files to Project Files and sync;
 3. select `Fable 5` and `Max`;
 4. disable GitHub and all other connectors;
