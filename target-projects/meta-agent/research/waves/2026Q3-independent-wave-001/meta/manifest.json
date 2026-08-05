@@ -16,7 +16,7 @@
   "post_merge_finalization": {
     "task_id": "META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001",
     "branch": "meta-agent-pr249-post-merge-handoff-finalization-001",
-    "pull_request": "PENDING_FINALIZATION_PR",
+    "pull_request": 251,
     "base": "master@a096c3ddc24a574f90bd47a76c10af92f8999680",
     "human_review_and_merge_required": true
   },
