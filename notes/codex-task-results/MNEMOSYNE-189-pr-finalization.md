@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-189
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: ca0926a9d67f10e60d8e97373370daa792c6eacb
 canonical_branch: mnemosyne-189-research-display-names-and-target-repo-migration
 canonical_PR: 253
 PR_state: open
-PR_draft: true
+PR_draft: false
 PR_merged: false
+PR_mergeable_at_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 source_issue: 250
@@ -31,30 +32,39 @@ lineage_gates:
     - 251
     - 252
   canonical_branch: mnemosyne-189-research-display-names-and-target-repo-migration
+  canonical_PR: 253
   decision: create_one_new_canonical_lineage
 ```
 
-Issue #250 and PR #251/#252 were treated as existing GitHub sequence occupants. No PR number was reserved or guessed. GitHub returned PR #253 from the actual create action.
+Issue #250 and PR #251/#252 were treated as existing GitHub sequence occupants. No PR number was reserved or guessed; GitHub returned PR #253 from the actual create action.
 
-## 2. PR creation receipt
+## 2. Final pre-ready verification
 
 ```yaml
-PR_creation:
-  number: 253
-  state: open
-  draft: true
-  merged: false
-  base: master
-  base_sha: ca0926a9d67f10e60d8e97373370daa792c6eacb
-  head: mnemosyne-189-research-display-names-and-target-repo-migration
-  head_sha_before_this_record: a7a837b3a298c046dc10d61a1c72451805e9eca8
-  commits_before_this_record: 15
-  changed_files_before_this_record: 15
-  additions_before_this_record: 1714
-  deletions_before_this_record: 15
+verification:
+  compare_status: ahead
+  ahead_by_before_this_record_update: 16
+  behind_by: 0
+  changed_files: 16
+  PR_reread:
+    state: open
+    draft_before_transition: true
+    mergeable_after_metadata_refresh: true
+  ready_transition:
+    performed: true
+    draft_after_transition: false
+    mergeable_after_transition: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
+  accessible_open_PRs_for_task:
+    - 253
+  exactly_one_canonical_open_PR: true
 ```
 
-The initial create response reported `mergeable: false`; this is treated as pending GitHub recalculation until an independent reread after finalization.
+The PR-create and an early reread reported `mergeable: false`; later metadata refresh and the ready transition reported `mergeable: true`. The discrepancy is retained as GitHub mergeability recalculation behavior rather than hidden.
+
+No status check or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
 ## 3. Canonical scope
 
@@ -92,22 +102,16 @@ protected_boundaries:
   quota_spend: false
 ```
 
-## 5. Pending final checks
-
-After this record commit:
+## 5. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - confirm_final_changed_paths
-  - independently_reread_PR_253
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-189
+  merge_target_PR: 253
+  merge_target_head_branch: mnemosyne-189-research-display-names-and-target-repo-migration
+  related_open_PRs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
 
-The containing commit SHA is not guessed in this file. The final user-facing response must use fresh GitHub metadata.
+Human review and merge remain pending. Merging records the new behavior guard and the migration-preparation package; it does not create a destination repository or execute migration.
