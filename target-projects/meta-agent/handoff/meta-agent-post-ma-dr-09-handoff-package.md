@@ -6,7 +6,7 @@ target_project_id: meta-agent
 target_truth_source: false
 repair_PR: 249
 repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
-post_merge_finalization_PR: PENDING_FINALIZATION_PR
+post_merge_finalization_PR: 251
 ---
 
 # Meta-Agent Post-MA-DR-09 Handoff Package
