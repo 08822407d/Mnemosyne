@@ -1,51 +1,33 @@
 ---
 artifact_role: exact_research_report_navigation
-status: seven_reports_recorded_and_remote_blob_verified
+status: eight_reports_recorded_or_repair_pending
 target_project_id: meta-agent
 target_truth_source: false
-task_id: META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001
+last_updated_by_task: META-AGENT-PR248-HANDOFF-REPAIR-001
+repair_PR: PENDING_REPAIR_PR
 ---
 
 # Independent Research Wave Reports
 
-This directory preserves the exact operator-exported UTF-8 bytes for:
+This directory preserves exact operator-exported report bytes for MA-DR-08, MA-DR-10 through MA-DR-15, including MA-DR-09 after the repair PR is merged.
 
-- `MA-DR-08`;
-- `MA-DR-10`;
-- `MA-DR-11`;
-- `MA-DR-12`;
-- `MA-DR-13`;
-- `MA-DR-14`;
-- `MA-DR-15`.
+## MA-DR-08 and MA-DR-10–15
 
-## Reconstruction
+Use the pre-existing `report-parts-manifest.yaml` entries and `identities/*.yaml`. PR #247 verified 56 transport components and reconstruction for seven reports.
 
-For `MA-DR-08`, `10`, `11`, `12`, `13` and `15`, concatenate the numbered
-Markdown parts in lexical/numeric order without inserting, deleting or
-normalizing bytes.
+## MA-DR-09 canonical transport
 
-`MA-DR-14` uses a mixed exact transport because one source section contains
-product-native private-use citation characters that were unsafe to reproduce
-through a single large text write:
+The canonical repair transport is:
 
 ```text
-part-001.md ... part-005.md
-+ Base64-decode(concatenate part-006-base64/segment-001.txt ... segment-010.txt)
-+ part-007.md
+MA-DR-09 exact UTF-8 bytes
+-> bzip2 level 9
+-> Base64
+-> reports/MA-DR-09-report-bz2-base64/part-001.txt ... part-037.txt
 ```
 
-Do not insert separators between pieces. The Base64 segments are ASCII and
-contain no trailing newline.
+Read `identities/MA-DR-09.yaml` for order and hashes. The merged PR #248 path `MA-DR-09-report-parts-base64/` was an incomplete, noncanonical transport and is removed by this repair.
 
-The original byte counts and SHA-256 values, each transport component's expected
-Git blob SHA-1, and the completed remote verification snapshot are recorded in
-`report-parts-manifest.yaml` and `identities/*.yaml`.
+## Authority boundary
 
-```yaml
-remote_blob_identity_verification: PASS_56_OF_56
-remote_report_reconstruction_identity: PASS_7_OF_7
-```
-
-The reports remain external research evidence. They are not Meta-Agent target
-truth, accepted methodology, runtime configuration, pilot authorization,
-private-material authorization or operational activation.
+Reports are external non-execution evidence. They do not change target truth, methodology, permissions, pilot status, private-material status, or operational activation.
