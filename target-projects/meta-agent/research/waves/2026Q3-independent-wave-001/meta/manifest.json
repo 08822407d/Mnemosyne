@@ -1,21 +1,29 @@
 {
   "package_id": "META-AGENT-INDEPENDENT-RESEARCH-WAVE-001",
   "artifact_role": "independent_research_wave_manifest",
-  "status": "MA_DR_09_repair_PR_pending_human_merge",
+  "status": "all_reports_recorded_and_adjudicated_post_merge_finalization_pending",
   "target_project_id": "meta-agent",
   "target_truth_source": false,
   "repository": "08822407d/Mnemosyne",
   "repair": {
     "task_id": "META-AGENT-PR248-HANDOFF-REPAIR-001",
     "branch": "meta-agent-pr248-handoff-repair-001",
-    "pull_request": "PENDING_REPAIR_PR",
+    "pull_request": 249,
+    "merge_commit": "a096c3ddc24a574f90bd47a76c10af92f8999680",
     "base": "master@a576c7ad3f81c3dcfabe76eda938419eaaf46d80",
+    "merged": true
+  },
+  "post_merge_finalization": {
+    "task_id": "META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001",
+    "branch": "meta-agent-pr249-post-merge-handoff-finalization-001",
+    "pull_request": "PENDING_FINALIZATION_PR",
+    "base": "master@a096c3ddc24a574f90bd47a76c10af92f8999680",
     "human_review_and_merge_required": true
   },
   "PR_248_incident": {
     "merged": true,
     "scope_incomplete": true,
-    "historical_transport": "removed_by_repair",
+    "historical_transport": "removed_by_PR_249",
     "assessment": "decisions/PR248-scope-mismatch-assessment.md"
   },
   "reports": {
@@ -23,22 +31,23 @@
     "MA_DR_09_received": true,
     "MA_DR_09_canonical_transport": "reports/MA-DR-09-report-bz2-base64/",
     "MA_DR_09_identity": "reports/identities/MA-DR-09.yaml",
+    "MA_DR_09_post_merge_verification": "reports/identities/MA-DR-09-post-merge-verification.yaml",
     "MA_DR_09_final_disposition": "ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE"
   },
   "handoff": {
     "package": "../../../../handoff/meta-agent-post-ma-dr-09-handoff-package.md",
     "startup_prompt": "../../../../handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md",
-    "effective_after_repair_merge_and_verification": true
+    "effective_after_finalization_merge_and_verification": true
   },
   "conversation_archive_eligibility": {
     "MA_DR_08": "now",
+    "MA_DR_09": "after_finalization_merge_and_receiving_handoff_readback",
     "MA_DR_10": "now",
     "MA_DR_11": "now",
     "MA_DR_12": "now",
     "MA_DR_13": "now",
     "MA_DR_14": "now",
-    "MA_DR_15": "now",
-    "MA_DR_09": "after_repair_merge_and_verification"
+    "MA_DR_15": "now"
   },
   "boundaries": {
     "target_truth_modified": false,
