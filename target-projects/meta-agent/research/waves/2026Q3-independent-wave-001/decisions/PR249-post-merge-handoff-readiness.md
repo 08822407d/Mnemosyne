@@ -27,7 +27,7 @@ current_issue:
   navigation_and_manifest_statuses_still_say_PR_249_pending
 resolution:
   task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
-  PR: PENDING_FINALIZATION_PR
+  PR: 251
 handoff_ready_after:
   - finalization_PR_merge
   - latest_master_readback
