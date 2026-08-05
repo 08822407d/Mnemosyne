@@ -6,7 +6,7 @@ target_truth_source: false
 last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
 repair_PR: 249
 repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
-post_merge_finalization_PR: PENDING_FINALIZATION_PR
+post_merge_finalization_PR: 251
 reconstruction_readme: reports/README.md
 verification:
   MA_DR_08_10_15_remote_transport_components_verified: 56
