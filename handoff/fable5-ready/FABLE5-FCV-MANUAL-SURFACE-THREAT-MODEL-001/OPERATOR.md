@@ -5,6 +5,8 @@
 Run the independent A2 static threat model in Claude Research only after A1 has returned a valid report and the maintainer confirms that A2's audit object remains current.
 
 ```yaml
+display_name: MNE-DR-002 表面威胁
+canonical_task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
 active_after: MNEMOSYNE_188_merge
 execution_disposition: DEFERRED_PENDING_VALID_A1_ADJUDICATION
 visible_model: Fable_5
@@ -41,10 +43,10 @@ Without that gate, remain deferred.
 
 After later selection:
 
-1. Create a new Claude Project named, for example:
+1. Create a new Claude Project with this exact short display name:
 
    ```text
-   MNEMOSYNE-A2-FABLE-MANUAL-SURFACE-THREAT-MODEL-ONE-RUN
+   MNE-DR-002 表面威胁
    ```
 
 2. It must be separate from A1 and the existing `Mnemosyne 复合评审` Project.
