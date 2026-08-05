@@ -36,7 +36,7 @@ PR_249:
   merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
   purpose: repair_PR_248_and_record_MA_DR_09_and_handoff
 post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
-post_merge_finalization_PR: PENDING_FINALIZATION_PR
+post_merge_finalization_PR: 251
 ```
 
 PR #249 placed the dedicated startup prompt, handoff package, compatibility guard, MA-DR-09 review/binding records and canonical report transport on `master`. Its merge occurred before post-merge status fields and task-finalization records were closed, so this bounded finalization task makes the repository state self-consistent before a new handoff attempt.
