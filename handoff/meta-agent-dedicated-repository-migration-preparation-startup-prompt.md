@@ -1,42 +1,27 @@
-# Meta-Agent Dedicated Repository Migration Preparation — Startup Prompt
+# Meta-Agent Dedicated Repository Migration Preparation — Superseded Startup Prompt
 
-> Use only in the dedicated Meta-Agent construction conversation after the MNEMOSYNE-191 PR containing this file has merged.
+> Historical startup prompt for the combined Pro task. The task was executed once and correctly stopped with `BLOCKED_INCOMPLETE_REPOSITORY_ENUMERATION` because the selected GitHub connector could not prove recursive tree/blob closure. Do not run this prompt again on the same surface.
 
-```text
-@GitHub 请读取并严格执行：
-
-handoff/meta-agent-dedicated-repository-migration-preparation-taskbook.md
-
-执行任务：
-
-META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001
-
-当前对话唯一主线必须保持为 META_AGENT_PRODUCT_BUILD。
-
-本任务应使用 frontier/Pro 级推理，允许在 08822407d/Mnemosyne 中创建一个任务分支和至多一个 PR，但严格禁止写入、初始化或修改 08822407d/Meta-Agent。
-
-必须从执行时最新 Mnemosyne master 开始，并确认 PR #255 merge commit
-9e60fef75c524fc2e8acf227e84eaa820f08bc59
-已包含在最新 master 中。
-
-完成：
-- receive 结果正式绑定与 PR #255 post-merge closeout；
-- 活动 active-context / handoff 的陈旧状态修复；
-- target-projects/meta-agent/ 完整递归 Git tree/blob manifest；
-- artifact role、authority、material、migration disposition 分类；
-- 候选 destination mapping；
-- Meta-Agent-owned behavior guidance adoption matrix；
-- 初始 memory-system candidate alignment；
-- Owner initialization decision package；
-- 单一 Mnemosyne PR。
-
-如果无法机械证明完整递归 tree 和每个 blob identity，必须返回：
-
-BLOCKED_INCOMPLETE_REPOSITORY_ENUMERATION
-
-不得以搜索结果、抽样文件或模型记忆伪装完整清单。
-
-不要初始化目标仓库，不要复制文件，不要进行 shadow PR、cutover、prototype、pilot、private material、RAG、MCP、automation 或 activation。
-
-完成后停止，等待 Owner 审查。
+```yaml
+original_task_id: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001
+execution_result: BLOCKED_INCOMPLETE_REPOSITORY_ENUMERATION
+result_ref: notes/codex-task-results/META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001-blocked-result.md
+adjudication_ref: notes/adjudications/meta-agent-migration-preparation-enumeration-blocker-adjudication-2026-08-06.md
+superseded_by:
+  E0:
+    task_id: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001
+    prompt: handoff/meta-agent-dedicated-repository-mechanical-inventory-codex-startup-prompt.md
+  E1:
+    task_id: META-AGENT-DEDICATED-REPOSITORY-MAPPING-RESUME-001
+    prompt: handoff/meta-agent-dedicated-repository-mapping-resume-startup-prompt.md
 ```
+
+## Current operator route
+
+1. Run E0 on OpenAI Codex Code mode or an equivalent complete local Git checkout.
+2. Human-review and merge the one E0 Mnemosyne PR.
+3. Run E1 in the dedicated Meta-Agent GPT Pro conversation.
+4. E1 must reuse the merged E0 manifest and must not repeat full recursive enumeration unless identity verification fails.
+5. Neither phase may write or initialize `08822407d/Meta-Agent`.
+
+The original combined taskbook remains in Git history and may be consulted for design context, but it is no longer the runnable entrypoint.
