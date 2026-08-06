@@ -1,0 +1,26 @@
+tree_closure:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001
+  source_repository: 08822407d/Mnemosyne
+  source_commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+  source_root: target-projects/meta-agent/
+  root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
+  git_version: git version 2.43.0
+  command: git ls-tree -r -t -l -z 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb -- target-projects/meta-agent/
+  raw_stream_1_sha256: cd59c8ef31d3cbec89454c85e08c657600719543ee4f530a2e72d72964abb41d
+  raw_stream_2_sha256: cd59c8ef31d3cbec89454c85e08c657600719543ee4f530a2e72d72964abb41d
+  raw_streams_identical: true
+  raw_stream_bytes: 44645
+  total_entries: 271
+  tree_count: 45
+  blob_count: 226
+  commit_entry_count: 0
+  duplicate_paths: 0
+  missing_objects: 0
+  paths_outside_root: 0
+  tree_entries_manifest_sha256: 95a3f0172a3098d3ef86317a525c21da57f625c8e9619375a8b84728c95407eb
+  blob_inventory_sha256: 08d3f6899031c7c7ae43ada4e08934cf6c544796ceb719cc0b195077b33a013e
+  preclassification_manifest_sha256: c832341417edb5673ca87a377cac2c663ca72dc6aed4781ebb92b8295ad1b172
+  deterministic_second_generation_match: true
+  recursive_tree_complete: true
+  verifier_relation: manifests_are_a_deterministic_projection_of_two_identical_recursive_git_object_streams
+  limitations: []
