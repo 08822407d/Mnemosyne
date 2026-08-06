@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-191
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 9e60fef75c524fc2e8acf227e84eaa820f08bc59
 canonical_branch: mnemosyne-191-meta-agent-migration-taskbook-and-memory-design
 canonical_PR: 256
 PR_state: open
-PR_draft: true
+PR_draft: false
 PR_merged: false
+PR_mergeable_at_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 destination_repository_written: false
@@ -32,25 +33,40 @@ lineage_gates:
   decision: create_one_new_canonical_lineage
 ```
 
-## 2. PR creation receipt
+## 2. PR creation and final verification
 
 ```yaml
 PR_creation:
   number: 256
   state: open
-  draft: true
+  draft_at_creation: true
   merged: false
   base: master
   base_sha: 9e60fef75c524fc2e8acf227e84eaa820f08bc59
   head: mnemosyne-191-meta-agent-migration-taskbook-and-memory-design
-  head_sha_before_this_record: c82727333311f6e8365c5ef26ce3612866f62b3a
-  commits_before_this_record: 8
-  changed_files_before_this_record: 8
-  additions_before_this_record: 2872
-  deletions_before_this_record: 65
+  head_sha_before_finalization_record: c82727333311f6e8365c5ef26ce3612866f62b3a
+  commits_before_finalization_record: 8
+  changed_files_before_finalization_record: 8
+
+final_checks_before_this_closeout_update:
+  compare_status: ahead
+  ahead_by: 9
+  behind_by: 0
+  changed_files: 9
+  PR_state: open
+  PR_draft_after_transition: false
+  PR_mergeable_after_transition: true
+  accessible_open_PRs:
+    - 256
+  exactly_one_canonical_open_PR: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
 ```
 
-The initial create response reported `mergeable: false`; this is treated as GitHub mergeability recalculation until independent reread after finalization.
+The initial create/reread temporarily reported `mergeable: false`; later refresh and the ready transition reported `mergeable: true`. This is recorded as GitHub mergeability recalculation, not hidden.
+
+No status checks or workflow runs were reported. This is no CI evidence, not a CI-pass claim.
 
 ## 3. Canonical scope
 
@@ -98,20 +114,16 @@ protected_boundaries:
   external_research_or_validation_execution: false
 ```
 
-## 5. Pending final checks
-
-After this record commit:
+## 5. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - confirm_final_changed_paths
-  - independently_reread_PR_256
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-191
+  merge_target_PR: 256
+  merge_target_head_branch: mnemosyne-191-meta-agent-migration-taskbook-and-memory-design
+  related_open_PRs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
+
+Merging records the adjudication, taskbook, candidate memory design and validation plan. It does not authorize the next task, initialize the destination, adopt the memory system or change Meta-Agent truth.
