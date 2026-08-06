@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-190
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: fe09d0b76c9f94dc0c77fd0c2bb412e1d2cc0867
 canonical_branch: mnemosyne-190-meta-agent-pre-migration-readiness-and-handoff
 canonical_PR: 254
 PR_state: open
-PR_draft: true
+PR_draft: false
 PR_merged: false
+PR_mergeable_at_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 destination_repository_written: false
@@ -32,7 +33,7 @@ lineage_gates:
   decision: create_one_new_canonical_lineage
 ```
 
-## 2. PR creation receipt
+## 2. PR creation and ready-transition receipts
 
 ```yaml
 PR_creation:
@@ -48,11 +49,36 @@ PR_creation:
   changed_files_before_this_record: 8
   additions_before_this_record: 1535
   deletions_before_this_record: 0
+
+ready_transition:
+  state: open
+  draft: false
+  merged: false
+  mergeable: true
+  head_before_final_record_update: 44ce4258d65e80b4e3568e86b0a434bbc1bc2865
 ```
 
-The initial create response reported `mergeable: false`; this is treated as GitHub mergeability recalculation until an independent reread after finalization.
+The initial create response and one early reread reported `mergeable: false`; the ready transition reported `mergeable: true`. This is recorded as GitHub mergeability recalculation rather than hidden.
 
-## 3. Canonical scope
+## 3. Final verification before this record update
+
+```yaml
+verification:
+  compare_status: ahead
+  ahead_by: 9
+  behind_by: 0
+  changed_files: 9
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
+  accessible_open_PRs_for_task:
+    - 254
+  exactly_one_canonical_open_PR: true
+```
+
+No status check or workflow run was reported. This is no CI evidence, not a CI-pass claim.
+
+## 4. Canonical scope
 
 ```yaml
 scope:
@@ -73,7 +99,7 @@ scope:
     - prototype_pilot_private_material_or_activation
 ```
 
-## 4. Protected boundaries
+## 5. Protected boundaries
 
 ```yaml
 protected_boundaries:
@@ -89,19 +115,16 @@ protected_boundaries:
   external_research_or_validation_execution: false
 ```
 
-## 5. Pending final checks
-
-After this record commit:
+## 6. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - independently_reread_PR_254
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-190
+  merge_target_PR: 254
+  merge_target_head_branch: mnemosyne-190-meta-agent-pre-migration-readiness-and-handoff
+  related_open_PRs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
+
+Human review and merge remain pending. Merging makes the receive-only package visible on `master`; it does not initialize or write the destination repository.
