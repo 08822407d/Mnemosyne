@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-192
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 5bb586c057c228fbb80e37529ed1245e7366f482
 canonical_branch: mnemosyne-192-split-meta-agent-migration-inventory-and-resume
 canonical_PR: 257
 PR_state: open
-PR_draft: true
+PR_draft: false
 PR_merged: false
+PR_mergeable_at_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 destination_repository_written: false
@@ -38,7 +39,7 @@ lineage_gates:
 PR_creation:
   number: 257
   state: open
-  draft: true
+  draft_at_creation: true
   merged: false
   base: master
   base_sha: 5bb586c057c228fbb80e37529ed1245e7366f482
@@ -50,9 +51,35 @@ PR_creation:
   deletions_before_this_record: 109
 ```
 
-The initial create response reported `mergeable: false`; this is treated as GitHub mergeability recalculation until independent reread after finalization.
+The initial create response reported `mergeable: false`; a later independent PR reread and the ready transition reported `mergeable: true`. This is recorded as GitHub mergeability recalculation, not hidden.
 
-## 3. Canonical scope
+## 3. Final pre-ready verification
+
+```yaml
+verification:
+  compare_status: ahead
+  ahead_by_before_this_record_update: 11
+  behind_by: 0
+  changed_files_before_this_record_update: 11
+  PR_reread:
+    state: open
+    draft_before_transition: true
+    mergeable_after_metadata_refresh: true
+  ready_transition:
+    performed: true
+    draft_after_transition: false
+    mergeable_after_transition: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
+  accessible_open_PRs_for_task:
+    - 257
+  exactly_one_canonical_open_PR: true
+```
+
+No status check or workflow run was reported. This is no CI evidence, not a CI-pass claim.
+
+## 4. Canonical scope
 
 ```yaml
 scope:
@@ -73,7 +100,7 @@ scope:
     - migration_or_cutover
 ```
 
-## 4. Protected boundaries
+## 5. Protected boundaries
 
 ```yaml
 protected_boundaries:
@@ -90,17 +117,16 @@ protected_boundaries:
   E0_or_E1_execution: false
 ```
 
-## 5. Pending final checks
+## 6. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - independently_reread_PR_257
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-192
+  merge_target_PR: 257
+  merge_target_head_branch: mnemosyne-192-split-meta-agent-migration-inventory-and-resume
+  related_open_PRs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
+
+Human merge adopts only the blocked-result record, adjudication, E0/E1 taskbooks, and wayfinding. It does not run Codex, run the Pro continuation, or write the destination.
