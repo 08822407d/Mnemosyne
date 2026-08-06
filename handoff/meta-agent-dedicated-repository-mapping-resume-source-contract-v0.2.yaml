@@ -1,0 +1,114 @@
+contract_id: META-AGENT-DEDICATED-REPOSITORY-MAPPING-RESUME-SOURCE-CONTRACT-002
+contract_version: 0.2.0
+created_by_task: MNEMOSYNE-194
+status: active_after_MNEMOSYNE_194_merge_for_E1_only
+execution_source: false
+owner_route: dedicated_Meta_Agent_construction_conversation
+
+task:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MAPPING-RESUME-001
+  destination_write_authorized: false
+  destination_initialization_authorized: false
+  cutover_authorized: false
+
+payload_plane:
+  repository: 08822407d/Mnemosyne
+  source_commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+  source_root: target-projects/meta-agent/
+  root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
+  tree_count: 45
+  blob_count: 226
+  commit_entry_count: 0
+  total_entries: 271
+  recursive_tree_complete: true
+  duplicate_paths: 0
+  missing_objects: 0
+  paths_outside_root: 0
+
+E0_manifests:
+  closure:
+    path: target-projects/meta-agent/migration/source-inventory/source-tree-closure-v0.1.yaml
+    sha256: 8964c6c0cf5f309e5c0cf1a33f69925f234e085d5391faa3a28435d248dbfd77
+  tree_entries:
+    path: target-projects/meta-agent/migration/source-inventory/source-tree-entries-v0.1.jsonl
+    sha256: 95a3f0172a3098d3ef86317a525c21da57f625c8e9619375a8b84728c95407eb
+  blob_inventory:
+    path: target-projects/meta-agent/migration/source-inventory/source-blob-inventory-v0.1.jsonl
+    sha256: 08d3f6899031c7c7ae43ada4e08934cf6c544796ceb719cc0b195077b33a013e
+  preclassification:
+    path: target-projects/meta-agent/migration/source-inventory/source-artifact-preclassification-v0.1.jsonl
+    sha256: c832341417edb5673ca87a377cac2c663ca72dc6aed4781ebb92b8295ad1b172
+
+control_evidence_plane:
+  repository: 08822407d/Mnemosyne
+  minimum_commit: a443940a2ff2425ebb8fc67e084fce5b7b49de58
+  remote_PR: 258
+  remote_head: fb5ebde7beb0e42bc3b4af33ee205a18d23034ee
+  remote_merge_commit: a443940a2ff2425ebb8fc67e084fce5b7b49de58
+  target_root_paths_added_by_PR_258:
+    - target-projects/meta-agent/migration/source-inventory/README.md
+    - target-projects/meta-agent/migration/source-inventory/generate-source-inventory.py
+    - target-projects/meta-agent/migration/source-inventory/source-artifact-preclassification-v0.1.jsonl
+    - target-projects/meta-agent/migration/source-inventory/source-blob-inventory-v0.1.jsonl
+    - target-projects/meta-agent/migration/source-inventory/source-inventory-verification-v0.1.md
+    - target-projects/meta-agent/migration/source-inventory/source-tree-closure-v0.1.yaml
+    - target-projects/meta-agent/migration/source-inventory/source-tree-entries-v0.1.jsonl
+  outside_target_root_paths_added_by_PR_258:
+    - notes/codex-task-results/META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001-result.md
+    - notes/codex-task-results/META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001-pr-finalization.md
+  default_destination_disposition: retain_in_Mnemosyne_with_immutable_pointer
+  part_of_226_blob_payload: false
+
+pre_E1_drift_gate:
+  compare_base: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+  compare_head: execution_time_latest_master
+  allowed_changes:
+    exact_PR_258_control_paths_only: true
+  block_when:
+    - any_change_under_target-projects/meta-agent_outside_target-projects/meta-agent/migration/source-inventory
+    - any_E0_manifest_content_or_identity_change
+    - target_truth_or_operational_status_change
+    - destination_repository_has_commit_branch_or_PR
+    - overlapping_open_PR_exists
+  result_values:
+    - PASS_EXPECTED_CONTROL_ONLY_DRIFT
+    - BLOCKED_SOURCE_TREE_CHANGED_AFTER_E0
+    - BLOCKED_E0_IDENTITY_MISMATCH
+    - BLOCKED_DESTINATION_STATE_CHANGED
+
+semantic_mapping_universe:
+  records_required: 226
+  omit_any_base_blob: prohibited
+  E0_preclassification_authoritative: false
+  final_frontier_classification_required: true
+
+E1_overlay:
+  purpose: represent_E1_live_navigation_repairs_and_new_candidate_artifacts_without_reenumerating_base_payload
+  required_outputs:
+    - exact_added_modified_deleted_paths
+    - pre_change_blob_or_absence
+    - branch_head_blob_identity
+    - semantic_and_authority_effect
+    - migration_disposition
+    - post_merge_identity_verification_plan
+  may_not_include:
+    - destination_repository_write
+    - target_truth_change
+    - approved_methodology_change
+    - behavior_guidance_activation
+    - memory_system_adoption
+
+composite_candidate:
+  base_payload: E0_226_blob_snapshot_at_8ef1c43b
+  overlay: bounded_E1_delta
+  excluded_control_evidence:
+    - PR_258_source_inventory_directory
+    - E0_Mnemosyne_result_records
+  mechanical_post_merge_overlay_verification: required
+
+supersession:
+  prior_taskbook_version: 0.1
+  prior_naive_gate: whole_current_target_tree_must_equal_E0_tree
+  disposition: superseded_by_two_plane_source_contract
+
+adjudication_ref: notes/adjudications/meta-agent-E0-mechanical-inventory-post-merge-and-snapshot-boundary-adjudication-2026-08-06.md
