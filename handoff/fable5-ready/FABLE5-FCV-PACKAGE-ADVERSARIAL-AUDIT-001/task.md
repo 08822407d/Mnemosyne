@@ -3,6 +3,8 @@
 ```yaml
 queue_status: READY_AFTER_MNEMOSYNE_188_MERGE_RESEARCH_PROJECT_PROBE_REQUIRED
 task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
+display_name: MNE-DR-001 验证包审计
+display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 canonical_audit_specification: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
 active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/OPERATOR.md
@@ -46,7 +48,7 @@ v0_3:
 
 ## Required v0.3 run
 
-1. create a new one-run Claude Project with no prior chats, Files or task memory;
+1. create a new one-run Claude Project named `MNE-DR-001 验证包审计` with no prior chats, Files or task memory;
 2. select visible `Fable 5` and `Max`;
 3. add exactly the manifest-listed task inputs to **Project Files** using the Project-level GitHub file/folder selector, then sync;
 4. do not add the whole repository;

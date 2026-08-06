@@ -1,6 +1,8 @@
 manifest_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-INPUTS-001
-manifest_version: 0.3.0
+manifest_version: 0.3.1
 task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
+display_name: MNE-DR-002 表面威胁
+display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/OPERATOR.md
 active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
@@ -18,6 +20,7 @@ repository:
   access: read_only
 preferred_delivery:
   environment: new_one_run_Claude_Project_separate_from_A1
+  Project_display_name: MNE-DR-002 表面威胁
   existing_continuity_Project: prohibited
   Project_prior_chats: 0
   Project_Files_source: Project_level_GitHub_file_selection
@@ -77,7 +80,7 @@ selection_gate:
     - explicit_RUN_disposition
 Project_setup_receipt:
   required:
-    - Project_name
+    - Project_name_equals_MNE_DR_002_表面威胁
     - Project_created_new_and_separate_from_A1
     - prior_chat_count_zero
     - selected_path_list

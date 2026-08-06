@@ -5,6 +5,8 @@
 Run the independent A1 audit in Claude Research while avoiding the failed ordinary-chat GitHub-to-Research transition from run 001.
 
 ```yaml
+display_name: MNE-DR-001 验证包审计
+canonical_task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
 active_after: MNEMOSYNE_188_merge
 execution_disposition: RUN_AFTER_GATE_OPTIONAL
 visible_model: Fable_5
@@ -37,10 +39,10 @@ Official Claude documentation states that selected GitHub files/folders added un
 
 ## A. Create the one-run Project
 
-1. Create a **new Claude Project** named, for example:
+1. Create a **new Claude Project** with this exact short display name:
 
    ```text
-   MNEMOSYNE-A1-FABLE-PACKAGE-AUDIT-ONE-RUN
+   MNE-DR-001 验证包审计
    ```
 
 2. Do not use the existing `Mnemosyne 复合评审` Project.

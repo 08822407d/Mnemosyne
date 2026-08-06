@@ -26,6 +26,7 @@ Read or ask the user to provide:
 - `current/human-approved-spec.md`
 - `current/artifact-delivery-and-direct-generation-guard.md`
 - `current/cross-conversation-execution-intent-and-operator-flow-guard.md`
+- `current/external-research-display-name-guard.md`
 - `current/deep-research-report-delivery-correction-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
 - `current/frontier-planning-clarification-handoff-adjudication-guard.md`
@@ -51,6 +52,8 @@ precedence:
     - current/artifact-delivery-and-direct-generation-guard.md
   cross_conversation_execution_intent_and_operator_flow:
     - current/cross-conversation-execution-intent-and-operator-flow-guard.md
+  external_research_display_names:
+    - current/external-research-display-name-guard.md
   Deep_Research_single_report_semantics:
     - current/deep-research-report-delivery-correction-guard.md
   general_user_operation_capability_research_and_intent:
@@ -107,6 +110,7 @@ If separately required, treat them according to their own authority and freshnes
 27. Apply the single-active-PR lineage guard before branch creation and again before PR creation.
 28. Apply the run-context and PR provenance guard to important repository-writing work.
 29. If required files are unavailable, state the limitation and do not invent repository state.
+30. Before asking the user to create or name a GPT Deep Research run, Fable-class research, one-run Project, or equivalent external research/review workspace, allocate and display a compact registered UI alias in the form `<PROJECT_ABBR>-DR-<SEQUENCE> <SHORT_TOPIC>`. Keep the canonical task ID separate, preserve established project numbering, expose the alias in the dedicated operator-flow section, and stop with `DISPLAY_NAME_ALLOCATION_BLOCKED` if the registry cannot be verified.
 
 ## Required first response after loading
 
@@ -134,6 +138,7 @@ mnemosyne_guidance_refresh:
     - file_first_delivery_when_relevant
     - same_response_inline_operator_flow_for_cross_conversation_tasks
     - explicit_execution_intent_and_dedicated_operator_flow_section
+    - compact_registered_external_research_display_names
     - staged_prompt_generation
     - visibility_and_platform_freshness
     - single_active_PR_lineage_when_relevant
