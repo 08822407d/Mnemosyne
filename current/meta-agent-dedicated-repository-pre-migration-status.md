@@ -3,13 +3,13 @@
 > Mnemosyne-maintenance wayfinding for repository migration and memory-system delivery support. This file is not an execution source and does not take ownership of the Meta-Agent product-build route. `current/human-approved-spec.md` remains Mnemosyne's only execution source; Meta-Agent target truth remains in its target-local approved spec until a separate Owner cutover.
 
 ```yaml
-status_id: MNEMOSYNE-META-AGENT-DEDICATED-REPOSITORY-PRE-MIGRATION-STATUS-002
+status_id: MNEMOSYNE-META-AGENT-DEDICATED-REPOSITORY-PRE-MIGRATION-STATUS-003
 created_by_task: MNEMOSYNE-190
-last_updated_by_task: MNEMOSYNE-191
+last_updated_by_task: MNEMOSYNE-192
 recorded_at: 2026-08-06
-status: RECEIVE_ACCEPTED_FULL_MAPPING_TASKBOOK_AND_INITIAL_MEMORY_DESIGN_PREPARED
+status: PREPARATION_BLOCKED_ON_CONNECTOR_TREE_ENUMERATION_SPLIT_E0_E1_READY
 source_repository: 08822407d/Mnemosyne
-latest_verified_source_master: 9e60fef75c524fc2e8acf227e84eaa820f08bc59
+latest_verified_source_master: 5bb586c057c228fbb80e37529ed1245e7366f482
 destination_repository: 08822407d/Meta-Agent
 migration_direction_selected: true
 migration_selection_scope: dedicated_repository_direction_only
@@ -19,7 +19,7 @@ cutover_authorized: false
 Meta_Agent_target_truth_modified: false
 ```
 
-## 1. Verified repository and task facts
+## 1. Verified repository facts
 
 ```yaml
 PR_253:
@@ -35,10 +35,18 @@ PR_255:
   merge_commit: 9e60fef75c524fc2e8acf227e84eaa820f08bc59
   purpose: preserve_complete_Meta_Agent_pre_migration_state_and_pending_work
 
+PR_256:
+  merged: true
+  merge_commit: 5bb586c057c228fbb80e37529ed1245e7366f482
+  purpose:
+    - frontier_adjudicate_receive_result
+    - prepare_migration_taskbook
+    - preserve_initial_memory_system_candidate
+
 source_Mnemosyne:
   visibility: public
-  latest_verified_master: 9e60fef75c524fc2e8acf227e84eaa820f08bc59
-  open_PRs_at_MNEMOSYNE_191_preflight: []
+  latest_verified_master: 5bb586c057c228fbb80e37529ed1245e7366f482
+  open_PRs_before_MNEMOSYNE_192: []
 
 new_Meta_Agent_repository:
   full_name: 08822407d/Meta-Agent
@@ -49,16 +57,9 @@ new_Meta_Agent_repository:
   commits: 0
   branches_observed: 0
   open_PRs: []
-  connector_installation_visible: true
-  connector_reported_permissions:
-    admin: true
-    maintain: true
-    pull: true
-    push: true
-    triage: true
 ```
 
-The destination is still an empty Git repository. The configured default branch name is not an actual branch ref.
+The destination remains empty and non-authoritative.
 
 ## 2. Receive-only test disposition
 
@@ -72,17 +73,29 @@ receive_test:
   adjudication_ref: notes/adjudications/meta-agent-pre-migration-receive-result-adjudication-2026-08-06.md
 ```
 
-The receive run correctly recovered:
+The receive test is closed. Do not repeat it unless source/destination authority or repository identity changes.
 
-- latest source and empty destination;
-- sole target truth and inactive operational state;
-- platform permission versus task authorization;
-- migration direction versus initialization/cutover authority;
-- temporary Mnemosyne behavior compatibility;
-- stale post-PR #255 navigation;
-- missing recursive source manifest and destination behavior guidance.
+## 3. Migration-preparation execution result
 
-## 3. Current known stale records
+```yaml
+preparation_run:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001
+  source_commit: 5bb586c057c228fbb80e37529ed1245e7366f482
+  result: BLOCKED_INCOMPLETE_REPOSITORY_ENUMERATION
+  branch_created: false
+  PR_created: false
+  source_write: false
+  destination_write: false
+  fail_closed: true
+  result_ref: notes/codex-task-results/META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001-blocked-result.md
+  adjudication_ref: notes/adjudications/meta-agent-migration-preparation-enumeration-blocker-adjudication-2026-08-06.md
+```
+
+The selected connected GitHub search/file surface could not return a complete recursive Git tree with every tree/blob identity. Search, sampling, compare results and hand-maintained lists were correctly rejected as completeness substitutes.
+
+This run was not a duplicate of the receive test. It repeated only execution-time state preflight and reached a new tool-capability blocker before substantive mapping work.
+
+## 4. Current known stale Meta-Agent navigation
 
 ```yaml
 stale_live_navigation:
@@ -93,17 +106,65 @@ historical_timepoint_not_to_be_silently_rewritten:
   - target-projects/meta-agent/migration/pre-migration-preservation-checkpoint-2026-08-06.md
 ```
 
-The next Meta-Agent-owned Mnemosyne task must update live navigation and add a post-merge closeout/supersession record while preserving the checkpoint's original timepoint.
+Live navigation repair is deferred to the frontier E1 mapping task after valid mechanical inventory. The historical checkpoint must receive a supersession pointer rather than retroactive rewriting.
 
-## 4. Route ownership
+## 5. Revised serial execution architecture
+
+### E0 — mechanical inventory
+
+```yaml
+E0:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001
+  taskbook: handoff/meta-agent-dedicated-repository-mechanical-inventory-codex-task.md
+  startup_prompt: handoff/meta-agent-dedicated-repository-mechanical-inventory-codex-startup-prompt.md
+  preferred_surface:
+    - OpenAI_Codex_Code_mode_with_full_checkout
+    - equivalent_local_git_checkout
+  Pro_required: false
+  writes:
+    Mnemosyne: one_branch_at_most_one_PR_under_exact_inventory_paths
+    Meta_Agent_destination: prohibited
+  output:
+    - complete_tree_and_blob_inventory
+    - content_SHA256
+    - closure_receipt
+    - deterministic_reproducibility
+    - preliminary_path_and_front_matter_classification
+```
+
+### E1 — frontier semantic mapping resume
+
+```yaml
+E1:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MAPPING-RESUME-001
+  taskbook: handoff/meta-agent-dedicated-repository-mapping-resume-taskbook.md
+  startup_prompt: handoff/meta-agent-dedicated-repository-mapping-resume-startup-prompt.md
+  prerequisite: E0_PR_merged_with_PASS_TO_FRONTIER_MAPPING_RESUME
+  preferred_surface: dedicated_Meta_Agent_GPT_Pro_conversation
+  repeat_recursive_enumeration_when_E0_valid: prohibited
+  writes:
+    Mnemosyne: one_branch_at_most_one_PR
+    Meta_Agent_destination: prohibited
+  output:
+    - post_PR255_closeout_and_live_navigation_repair
+    - final_semantic_manifest
+    - destination_mapping_options
+    - history_strategy
+    - behavior_guidance_candidates_and_matrix
+    - memory_alignment
+    - Owner_initialization_decision_package
+```
+
+This split prevents further Pro quota being spent on a missing repository primitive.
+
+## 6. Route ownership
 
 ```yaml
 route_ownership:
   Meta_Agent_product_build_and_actual_migration:
     owner_conversation: dedicated_Meta_Agent_construction_conversation
     responsibilities:
-      - target_specific_recursive_inventory_and_mapping
-      - target_owned_behavior_guidance_adoption
+      - E1_semantic_mapping_and_target_owned_guidance
       - target_state_and_handoff_updates
       - destination_initialization_after_owner_authorization
       - shadow_copy_and_target_PR
@@ -115,8 +176,7 @@ route_ownership:
       - memory_system_architecture_and_delivery_design
       - migration_and_behavior_equivalence_methodology
       - run_specific_taskbooks_and_validation_packages
-      - generic_cross_repository_capability_testing
-      - target_repository_candidate_PR_when_explicitly_authorized
+      - blocker_adjudication_and_surface_routing
       - immutable_design_and_migration_evidence
     prohibited_by_default:
       - silently_take_over_Meta_Agent_product_route
@@ -124,7 +184,9 @@ route_ownership:
       - maintain_a_live_duplicate_truth_tree
 ```
 
-## 5. Current migration gates
+E0 may be executed by Codex/local Git because it is a mechanical repository-object task. E1 returns to the Meta-Agent route for target-specific semantic decisions.
+
+## 7. Current migration gates
 
 ```yaml
 migration_gates:
@@ -134,14 +196,18 @@ migration_gates:
   T1_receive_only_test:
     result: ACCEPTED_NO_RERUN
 
-  T2_post_PR255_closeout_recursive_inventory_and_mapping:
+  T2_original_combined_preparation:
+    result: BLOCKED_INCOMPLETE_REPOSITORY_ENUMERATION
+    rerun_same_surface: prohibited
+
+  T2_E0_mechanical_inventory:
     result: TASKBOOK_PREPARED_NOT_EXECUTED
-    taskbook: handoff/meta-agent-dedicated-repository-migration-preparation-taskbook.md
-    startup_prompt: handoff/meta-agent-dedicated-repository-migration-preparation-startup-prompt.md
-    destination_write: prohibited
+
+  T2_E1_frontier_mapping_resume:
+    result: WAITING_FOR_E0
 
   T3_owner_initialization_decision:
-    result: PENDING_T2_OUTPUT
+    result: PENDING_E1_OUTPUT
 
   T4_destination_initialization:
     result: NOT_AUTHORIZED
@@ -156,54 +222,32 @@ migration_gates:
     result: NOT_SELECTED
 ```
 
-## 6. Initial memory-system design state
+## 8. Initial memory-system design state
 
 ```yaml
 initial_memory_system:
   design_ref: notes/memory-system-designs/meta-agent-initial-memory-system-design-v0.1.md
   validation_ref: notes/validation-designs/meta-agent-initial-memory-system-adoption-and-validation-v0.1.md
   status: candidate_not_adopted_not_implemented
-  existing_Meta_Agent_memory_baseline_recognized: true
-  recommended_migration_split:
-    migration_shadow_PR:
-      - existing_target_package
-      - target_owned_behavior_guidance_candidate
-      - migration_mapping_validation_and_rollback
-    post_migration_memory_PR:
-      - artifact_role_registry
-      - memory_object_envelope
-      - load_profiles
-      - freshness_retention_supersession_policy
-      - deterministic_active_memory_index
-      - validation_scaffolding
+  migration_alignment: waiting_for_E0_then_E1
   RAG_required_now: false
   private_material_authorized: false
   operational_activation_authorized: false
 ```
 
-## 7. Why initialization remains separate
+The memory design remains preserved and will be aligned against the complete source manifest in E1. It is not implemented during E0.
 
-A pull request requires an existing base commit and branch. The destination has neither. Before its first commit, the Meta-Agent route must complete:
-
-- exhaustive recursive source manifest;
-- candidate root mapping;
-- behavior-guidance adoption matrix;
-- initial memory-system alignment;
-- exact initialization files and status semantics;
-- Owner decision on actor/surface and history strategy.
-
-The first destination commit remains a separate external write authorization.
-
-## 8. Safe next action
+## 9. Safe next action
 
 ```yaml
 safe_next_action:
-  action: run_META_AGENT_DEDICATED_REPOSITORY_MIGRATION_PREPARATION_001_in_dedicated_Meta_Agent_Pro_conversation
-  taskbook: handoff/meta-agent-dedicated-repository-migration-preparation-taskbook.md
-  startup_prompt: handoff/meta-agent-dedicated-repository-migration-preparation-startup-prompt.md
-  writes:
-    Mnemosyne: one_branch_at_most_one_PR
-    Meta_Agent_destination: prohibited
+  action: run_META_AGENT_DEDICATED_REPOSITORY_MECHANICAL_INVENTORY_001_in_Codex_or_local_git_surface
+  taskbook: handoff/meta-agent-dedicated-repository-mechanical-inventory-codex-task.md
+  startup_prompt: handoff/meta-agent-dedicated-repository-mechanical-inventory-codex-startup-prompt.md
+  Pro_required: false
+  destination_write: prohibited
+  after_human_merge_of_E0_PR:
+    action: run_META_AGENT_DEDICATED_REPOSITORY_MAPPING_RESUME_001_in_dedicated_Meta_Agent_Pro_conversation
   no_automatic_initialization: true
   no_automatic_cutover: true
 ```
