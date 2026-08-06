@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-194
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: a443940a2ff2425ebb8fc67e084fce5b7b49de58
 canonical_branch: mnemosyne-194-e0-snapshot-boundary-and-e1-resume-v2
 canonical_PR: 260
 PR_state: open
-PR_draft: true
+PR_draft_before_ready_transition: true
 PR_merged: false
+PR_mergeable_before_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 destination_repository_written: false
@@ -37,25 +38,30 @@ lineage_gates:
   decision: create_one_new_corrected_lineage
 ```
 
-## 2. PR creation receipt
+## 2. Final verification before ready transition
 
 ```yaml
-PR_creation:
-  number: 260
-  state: open
-  draft: true
-  merged: false
-  base: master
-  base_sha: a443940a2ff2425ebb8fc67e084fce5b7b49de58
-  head: mnemosyne-194-e0-snapshot-boundary-and-e1-resume-v2
-  head_sha_before_this_record: faf76a2611b559aa62048af7f67827a53b72d7c0
-  commits_before_this_record: 7
-  changed_files_before_this_record: 7
-  additions_before_this_record: 1202
-  deletions_before_this_record: 213
+verification:
+  compare_status: ahead
+  ahead_by_before_this_update: 8
+  behind_by: 0
+  changed_files: 8
+  commits_before_this_update: 8
+  additions_before_this_update: 1317
+  deletions: 213
+  PR_reread:
+    state: open
+    draft: true
+    mergeable: true
+  accessible_open_PRs_for_task:
+    - 260
+  exactly_one_canonical_open_PR: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
 ```
 
-The initial create response reported `mergeable: false`; this is treated as GitHub mergeability recalculation until independent reread after finalization.
+No status check or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
 ## 3. Canonical scope
 
@@ -99,17 +105,16 @@ protected_boundaries:
   migration_or_cutover: false
 ```
 
-## 5. Pending final checks
+## 5. Human merge gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - independently_reread_PR_260
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-194
+  merge_target_PR: 260
+  merge_target_head_branch: mnemosyne-194-e0-snapshot-boundary-and-e1-resume-v2
+  related_open_PRs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
+
+Human review and merge remain pending. Merging activates the revised E1 taskbook/source contract as the next prepared route; it does not execute E1 or authorize a destination write.
