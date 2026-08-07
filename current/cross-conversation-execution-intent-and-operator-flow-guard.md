@@ -5,7 +5,7 @@
 ```yaml
 guard_id: MNEMOSYNE-CROSS-CONVERSATION-EXECUTION-INTENT-001
 created_by_task: MNEMOSYNE-187
-last_amended_by_task: MNEMOSYNE-196
+last_amended_by_task: MNEMOSYNE-197
 status: active_after_MNEMOSYNE_187_merge
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
@@ -25,7 +25,8 @@ scope_relation:
     - execution_intent_declaration
     - current_vs_later_user_action
     - dedicated_operator_flow_placement
-    - visible_PR_merge_and_branch_disposition_when_PR_review_is_requested
+    - prominent_branch_retention_when_PR_review_is_requested
+    - explicit_release_when_a_prior_retention_obligation_ends
 ```
 
 ## 1. Problem addressed
@@ -41,7 +42,7 @@ A response can contain all required facts and even a complete operator procedure
 
 A long explanation followed later by launch steps is especially ambiguous. Merely saying a task is `ready`, that the user `may run` it, or that it is a `safe next action` does not by itself select or request execution.
 
-The same visibility problem applies to PR review: if a response asks the user to merge a PR but hides a required branch-retention instruction later in the reply, the user may reasonably delete the branch after merge. Branch disposition must therefore accompany the opening merge instruction.
+The same visibility problem applies when a PR's branch must be retained after merge. A required retention notice must accompany the opening merge instruction. Ordinary branches require no deletion notice because the Owner default is deletion after merge when no retention instruction appears. When a prior retention instruction later expires, the release must be stated explicitly so the branch does not remain indefinitely.
 
 ## 2. Required execution-intent declaration
 
@@ -115,7 +116,11 @@ The dedicated section must contain all material executable steps in one place, i
 4. When the response is analysis only, do not include imperative launch steps that appear active. A future example must be labelled `prepared example — current execution not requested`.
 5. When the only current required action is PR review or merge, say explicitly that research execution remains false until the stated post-merge selection. Do not make the user infer this from repository state.
 6. For multiple tasks, give each task a separate disposition and separate dedicated operator-flow section. Do not combine independent runs into one ambiguous checklist.
-7. When PR review or merge is a current user operation, place the post-merge branch disposition next to that operation. If retention is required, state the exact branch, reason, and release gate before analysis. If no retention is required, state that deletion is allowed after merge. Apply `current/pr-merge-branch-disposition-guard.md`.
+7. When PR review or merge is a current user operation, apply `current/pr-merge-branch-disposition-guard.md`:
+   - if the branch must be retained, put the exact branch, reason, and release gate next to the opening merge instruction;
+   - if no retention dependency exists, omit a user-facing branch-disposition notice;
+   - if retention state is unknown, block the merge instruction;
+   - when a previously retained branch is released, explicitly say that the earlier retained branch can now be deleted.
 
 ## 5. Required distinction between readiness and selection
 
@@ -144,7 +149,8 @@ response_execution_clarity_check:
   executable_steps_not_scattered: true
   analysis_only_or_launch_role_unambiguous: true
   closing_next_step_not_the_only_execution_signal: true
-  PR_branch_disposition_prominent_when_merge_is_requested: true_or_not_applicable
+  PR_retention_notice_prominent_when_required: true_or_not_applicable
+  prior_retention_release_notice_delivered_when_due: true_or_not_applicable
 ```
 
 If any material field is ambiguous, the operator-flow artifact conflicts with the visible response, or branch retention is unknown for a requested merge, execution or merge instruction must remain blocked until corrected.
@@ -155,7 +161,8 @@ This guard does not:
 
 - authorize research, quota use, model switching, connector activation, repository write, merge, upload, branch retention, branch deletion, or another external action;
 - require every analysis to include a full task workflow;
+- require a deletion notice for ordinary merged branches with no prior retention instruction;
 - require duplication of a long task body when a verified downloadable or repository artifact is supplied;
 - make a task authoritative or executable merely because it is ready;
 - change a target project's truth source or owner rule;
-- replace the separate file-first, artifact-verification, PR-lineage, provenance, branch-disposition, safety, privacy, or human-decision controls.
+- replace the separate file-first, artifact-verification, PR-lineage, provenance, branch-retention, safety, privacy, or human-decision controls.
