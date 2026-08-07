@@ -1,143 +1,136 @@
 # Fable5 Research Delivery Status
 
-> Non-execution-source live status for the Mnemosyne frontier-clarification Stage-A Fable5 tasks. `current/human-approved-spec.md` remains the only Mnemosyne execution source.
+> Non-execution-source live status for the Mnemosyne frontier-clarification Stage-A tasks. `current/human-approved-spec.md` remains the only Mnemosyne execution source.
 
 ```yaml
-status_id: MNEMOSYNE-FABLE5-RESEARCH-DELIVERY-STATUS-005
+status_id: MNEMOSYNE-FABLE5-RESEARCH-DELIVERY-STATUS-006
 created_by_task: MNEMOSYNE-184
-last_updated_by_task: MNEMOSYNE-188
+last_updated_by_task: MNEMOSYNE-195
 repository: 08822407d/Mnemosyne
-verified_master_before_MNEMOSYNE_188: 5cc758caa6baf86de0cf67cda2d852724f5edbbb
-workflow: notes/research-operations/claude-fable5-project-knowledge-research-v0.3.md
+workflow: notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md
 ready_queue: handoff/fable5-ready/
-staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.4.md
-failed_run_cycle: raw/research-reports/cycles/2026Q3-frontier-clarification-validation-stage-a/manifest.md
-operator_flow_guard: current/artifact-delivery-and-direct-generation-guard.md
-execution_intent_guard: current/cross-conversation-execution-intent-and-operator-flow-guard.md
-status: A1_Project_knowledge_Research_candidate_ready_after_merge_A2_deferred
+staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.5.md
+A1_probe_adjudication: notes/adjudications/fable5-A1-R0-project-knowledge-search-mode-adjudication-2026-08-07.md
+status: A1_PAUSED_SINGLE_INVOCATION_V0_4_PREPARED_A2_DEFERRED
 execution_source_modified: false
 validation_executed: false
-Meta_Agent_target_modified: false
-non_FABLE_health_review_modified: false
+Meta_Agent_route_imported: false
+non_FABLE_health_review_imported: false
 ```
 
-## 1. Work since A1 run 001
+## 1. Run history
 
 ```yaml
 A1_run_001:
-  ordinary_chat_preflight: PASS
-  canonical_task_complete_read: best_supported_true
-  later_Research_non_task_inputs_accessible: 0_of_18
+  surface: ordinary_chat_GitHub_then_Research
   result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  Research_non_task_inputs_accessible: 0_of_18
   substantive_report_received: false
   operator_reported_cost_USD_approx: 8
 
-MNEMOSYNE_186:
-  preserved_failed_run: true
-  v0_2_surface: ordinary_Fable_chat_Research_off
-  role: conservative_fallback
-  executed: false
-
-MNEMOSYNE_187:
-  execution_intent_guard_added: true
-  A1_state: READY_NOT_SELECTED
-  A2_state: DEFERRED_PENDING_A1_ADJUDICATION
-  research_run_selected: false
-
-MNEMOSYNE_188:
-  current_change:
-    - verify_current_official_Project_GitHub_Project_RAG_and_Research_facts
-    - prepare_direct_Project_knowledge_Research_surface
-    - add_R0_visibility_probe_before_R1_report
-    - keep_A2_deferred_until_A1_adjudication
+A1_Project_knowledge_probe:
+  surface: new_one_run_Project_Files_plus_Research
+  Research_can_search_Project_knowledge: PASS
+  required_manifest_paths_locatable: 22_of_22
+  canonical_specification_final_heading: observed
+  package_identity: PASS
+  Project_Search_mode: true
+  byte_complete_or_exhaustive_read: NOT_ATTESTABLE
+  external_web_sources: 0
+  repository_write_reported: false
+  substantive_audit_started: false
+  operator_reported_cost_USD_approx: 7
+  low_cost_probe_gate: FAIL
+  identical_rerun: prohibited
 ```
 
-Meta-Agent PRs #242/#243 and Issue #244 occurred after the Pro-quota pause but belong to separate routes; they do not change this route's research questions, package or validation state.
+The additional same-task `OPERATOR.md` in the probe Project was an operator file-selection mistake, not a Fable or Search-mode defect. Future O0 setup requires zero extra files.
 
-## 2. Current product-fact basis
+## 2. Product-surface conclusion
 
-As reviewed on 2026-08-03 from official Claude documentation:
+```yaml
+ordinary_chat_connector_inheritance_to_Research:
+  supported: false_for_run_001
 
-- selected GitHub files/folders added under Project Files become Project knowledge and can be synced;
-- Project RAG is documented to work with Research;
-- Research uses web and internal context and may consume quota faster;
-- enabled connector tools may be invoked automatically, so unneeded/write-capable connectors should be disabled;
-- Project files are subject to per-file and total-content limits, but the current exact task sets are small and the whole repository is not selected.
+Project_Files_to_Project_knowledge_in_Research:
+  path_access_supported: true
+  Search_mode_expected_when_content_large: true
+  byte_complete_read_attestable: false
+```
 
-This supports a direct Project-knowledge candidate. It does not prove the user's current rollout will pass R0.
+The original access problem is materially solved by Project knowledge. The v0.3 `complete_read` Boolean and separate paid R0 are retired.
 
 ## 3. Current execution intent
 
 ```yaml
 A1:
   task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
-  state_after_MNEMOSYNE_188_merge: READY_NOT_SELECTED
+  display_name: MNE-DR-001 验证包审计
+  state: PAUSED_QUOTA_READY_NOT_SELECTED
   current_execution_requested: false
   current_execution_required: false
-  future_selection: allowed_by_explicit_RUN_disposition
-  active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
+  active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.4.md
   Project_file_count: 22
-  R0_probe_required: true
-  R1_allowed_only_after_R0_PASS: true
+  separate_paid_visibility_probe: prohibited
+  Research_invocations_after_selection: 1
 
 A2:
   task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
-  state_after_MNEMOSYNE_188_merge: DEFERRED_PENDING_VALID_A1_ADJUDICATION
+  display_name: MNE-DR-002 表面威胁
+  state: DEFERRED_PENDING_VALID_A1_ADJUDICATION
   current_execution_requested: false
   current_execution_required: false
-  active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
+  active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.4.md
   Project_file_count: 15
 
 external_execution_or_quota_authorized_by_readiness_alone: false
 ```
 
-## 4. v0.3 execution surface
+## 4. v0.4 execution architecture
 
 ```yaml
-surface:
-  environment: separate_new_one_run_Project_per_task
-  Project_prior_chats: 0
-  Project_Files: exact_manifest_set_only
-  whole_repository: prohibited
-  Project_sync: required
-  visible_model: Fable_5
-  visible_effort: Max
-  Research:
-    R0: direct_Project_knowledge_visibility_probe
-    R1: substantive_report_only_after_R0_PASS
-  chat_level_GitHub_during_Research: disabled
-  other_connectors_during_Research: disabled
-  repository_write: prohibited
+O0_operator_setup:
+  Research_quota: none
+  verifies:
+    - new_Project_zero_prior_chats
+    - exact_file_set_no_extras
+    - sync
+    - visible_model_and_effort
+    - Search_mode_indicator
+    - connectors_and_write_tools_disabled
+
+single_Research_invocation:
+  G0:
+    role: Project_Search_mode_semantic_coverage
+    external_web_before_PASS: prohibited
+    byte_complete_claim: prohibited
+  G1:
+    role: complete_substantive_report
+    allowed_only_after_G0_PASS_same_invocation: true
 ```
 
-This differs materially from run 001: primary inputs are Project knowledge inside Research, not a prior ordinary-chat connector state.
+G0 reports path resolution, identity markers, terminal markers, required IDs/heading maps, gaps, and retrieval limitations. It does not claim every byte was loaded simultaneously.
 
-## 5. R0/R1 result roles
+## 5. Cost and stop controls
 
 ```yaml
-R0:
-  may_support:
-    - Research_direct_Project_knowledge_access
-    - exact_input_binding
-    - cost_and_surface_observation
-  may_not_support:
-    - package_finding
-    - manual_surface_finding
-    - V0_or_V1_decision
-
-R1:
-  report_role: non_execution_source_research_evidence
-  automatic_authority: false
-  maintainer_adjudication_required: true
+cost_controls:
+  separate_paid_probe: prohibited
+  one_Research_invocation_per_selected_task: true
+  source_count_target: none
+  external_web_before_G0_PASS: prohibited
+  identical_failed_configuration_retry: prohibited
+  automatic_A2: prohibited
 ```
 
-R0 must use zero external web sources. If broad external collection starts before the Project-file gate completes, the operator cancels the probe.
+The operator cancels if broad external-web harvesting begins before G0 completes. Internal Project Search activity is expected.
 
 ## 6. Route state
 
 ```yaml
 frontier_clarification_validation:
   package_merged: true
+  A1_access_surface_empirically_supported: true
   A1_substantive_report_received: false
   A2_substantive_report_received: false
   execution_surface_selected: false
@@ -147,7 +140,7 @@ frontier_clarification_validation:
   V1_executed: false
 
 route_separation:
-  Meta_Agent_product_build: separate_owner_conversation_not_imported
+  Meta_Agent_product_build: dedicated_repository_separate_route
   non_FABLE_health_review: separate_conversation_not_imported
 ```
 
@@ -156,15 +149,14 @@ route_separation:
 ```yaml
 safe_next_action:
   current:
-    - review_and_merge_MNEMOSYNE_188_PR_or_request_changes
-  after_merge_user_choice:
-    - SELECT_A1_R0_AND_CONDITIONAL_R1
-    - DEFER_A1
-  after_valid_A1_report:
-    - frontier_repository_bound_adjudication
-    - decide_whether_A2_remains_current_and_worth_quota
+    - human_review_and_merge_MNEMOSYNE_195_PR_or_request_changes
+  later_after_quota_and_explicit_user_selection:
+    - run_A1_once_under_v0_4
+    - return_complete_G0_ledger_and_G1_report
+    - perform_frontier_repository_bound_adjudication
+  A2:
+    - remain_deferred_until_valid_A1_adjudication
   automatic_research_execution: false
-  automatic_A2_execution: false
   automatic_surface_selection: false
   automatic_V0_or_V1: false
 ```

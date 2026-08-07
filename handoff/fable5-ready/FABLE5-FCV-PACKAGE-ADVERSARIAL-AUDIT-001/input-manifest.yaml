@@ -1,26 +1,21 @@
 manifest_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-INPUTS-001
-manifest_version: 0.3.1
+manifest_version: 0.4.0
 task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
 display_name: MNE-DR-001 验证包审计
 display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/OPERATOR.md
-active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
+active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.4.md
 canonical_audit_specification: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
+workflow: notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md
 source_package:
   package_id: MNEMOSYNE-FRONTIER-CLARIFICATION-VALIDATION-PACKAGE-001
   package_version: 0.1.0
   merge_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
-  current_master_allowed_only_if:
-    - Project_Files_are_synced
-    - every_required_Project_file_is_readable_inside_Research
-    - package_id_and_version_match
-    - any_historical_commit_attestation_limit_is_explicit
 repository:
   full_name: 08822407d/Mnemosyne
   preferred_branch_for_Project_GitHub_selection: master
   access: read_only
-  history_PR_or_metadata_access_assumed: false
 preferred_delivery:
   environment: new_one_run_Claude_Project
   Project_display_name: MNE-DR-001 验证包审计
@@ -30,10 +25,14 @@ preferred_delivery:
   Project_Files: exact_selection_groups_only
   Project_sync_after_selection: required
   whole_repository: prohibited
+  Project_Search_mode: allowed_record_required
   visible_model: Fable_5
   visible_effort: Max
-  Research_R0_probe: required
-  Research_R1_substantive: only_after_R0_PASS
+  operator_setup_gate: required_no_Research_quota
+  Research_invocations_after_future_selection: 1
+  Research_G0_semantic_coverage: first_phase
+  Research_G1_substantive: only_after_G0_PASS_same_invocation
+  separate_paid_visibility_probe: prohibited
   chat_GitHub_during_Research: disabled
   all_other_connectors_during_Research: disabled
 selection_groups:
@@ -43,7 +42,7 @@ selection_groups:
     paths:
       - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/task.md
       - handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
-      - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
+      - notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.4.md
   - group_id: CANONICAL_AUDIT_SPECIFICATION
     audit_input: true
     Project_file_selection: exact_file
@@ -83,61 +82,68 @@ counts:
 canonical_specification_completeness:
   expected_final_heading: "## 17. Delivery and authority boundary"
   expected_required_report_sections: 19
-  historical_repository_blob_sha_reference: 88a4c11a7cc041814ee4c9ea804957df475b9d12
-Project_setup_receipt:
-  required:
-    - Project_name_equals_MNE_DR_001_验证包审计
-    - Project_created_new
-    - prior_chat_count_zero
-    - selected_path_or_folder_list
-    - selected_file_count_22
-    - Project_sync_completed
-    - GitHub_connector_disabled_for_Research
-    - other_connectors_disabled_for_Research
-R0_research_project_knowledge_probe:
-  substantive_audit_allowed: false
+operator_setup_gate:
+  expected_logical_file_count: 22
+  unexpected_Project_files_allowed: 0
+  prior_chat_count: 0
+  sync_required: true
+  connectors_disabled: true
+semantic_coverage_targets:
+  canonical_heading_map:
+    expected_sections: 17
+    final_heading: "## 17. Delivery and authority boundary"
+  scenario_set:
+    expected_count: 14
+    expected_V1_smoke_count: 8
+    expected_V2_reserve_count: 6
+    return_all_IDs: true
+  hidden_author_keys:
+    expected_count: 14
+    return_all_matching_IDs: true
+    reproduce_hidden_answer_content: false
+  condition_contracts:
+    expected_IDs: [Q0, Q1, Q2, Q3, Q4]
+  package_and_taskbooks:
+    require_identity_marker: true
+    require_terminal_marker: true
+    require_heading_map: true
+G0_semantic_coverage_gate:
+  Project_knowledge_only: true
   external_web_collection_allowed: false
+  byte_complete_read_claim_allowed: false
   pass_requires:
-    - all_3_support_paths_complete
-    - canonical_specification_complete_through_final_heading
-    - all_19_audit_inputs_complete
-    - expected_task_and_package_IDs_visible
-    - Project_Files_used
-    - Research_enabled
-    - chat_level_GitHub_not_used
-    - other_connectors_disabled
-    - external_web_sources_used_zero
-    - no_write_action
-    - substantive_audit_not_started
+    - all_22_paths_resolved
+    - canonical_heading_map_complete
+    - package_and_task_identity_bound
+    - all_14_scenario_IDs_accounted_for
+    - all_14_hidden_key_IDs_accounted_for
+    - Q0_through_Q4_accounted_for
+    - required_heading_maps_and_terminal_markers_accounted_for
+    - unresolved_gaps_empty
+    - no_substantive_finding_before_gate
+    - no_connector_or_write_action
   failure_statuses:
-    - INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
-    - RESEARCH_SURFACE_NOT_SUPPORTED
+    - INPUT_OR_PROJECT_KNOWLEDGE_COVERAGE_FAILURE
     - INVALID
-  operator_cancel_when:
-    - broad_external_web_collection_begins_before_Project_file_gate_completion
-R1_substantive_run:
-  allowed_only_after_R0_PASS: true
-  same_Project_and_chat: required
+G1_substantive_run:
+  allowed_only_after_G0_PASS_same_invocation: true
   Project_files_primary_evidence: true
   web_research: permitted_under_canonical_task
   access_loss_status: RUN_INVALIDATED_BY_PROJECT_KNOWLEDGE_ACCESS_LOSS
+operator_cancel_when:
+  - external_web_collection_begins_before_G0_completion
 manual_Project_Files_fallback:
   upload_count: 20
   upload:
-    - active_execution_contract_v0_3
+    - active_execution_contract_v0_4
     - canonical_audit_specification
     - all_15_package_files
     - all_3_external_authority_and_adjudication_files
   task_and_manifest_delivery:
-    - copy_exact_task_and_manifest_text_or_add_as_Project_files
-  do_not_upload:
-    - prior_Pro_report
-    - prior_Fable_report
-    - A2_task_or_report
-    - unrelated_repository_files
+    - add_as_exact_Project_files_or_copy_exact_support_text
   stop_if:
-    - any_file_is_missing_truncated_or_transformed_without_receipt
-    - Project_File_limit_or_extraction_behavior_blocks_complete_set
+    - any_file_missing_or_transformed
+    - Project_file_limit_or_extraction_blocks_required_set
 contamination_exclusions:
   - foundational_Pro_report
   - foundational_Fable_report
@@ -145,11 +151,14 @@ contamination_exclusions:
   - hidden_material_outside_the_package_under_audit
   - existing_Project_memory_or_prior_chats
   - unrelated_Mnemosyne_files
-prior_failed_run:
-  run_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-RUN-001
-  substantive_report: absent
-  result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
-  may_be_used_as_package_audit_evidence: false
-  may_be_used_as_execution_surface_failure_evidence: true
-failure_status: INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
+prior_runs:
+  run_001:
+    result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+    evidence_role: execution_surface_failure_only
+  Project_knowledge_probe:
+    path_access: PASS
+    exhaustive_content_attestation: NOT_ATTESTABLE
+    cost_gate: FAIL
+    may_be_repeated_identically: false
+failure_status: INPUT_OR_PROJECT_KNOWLEDGE_COVERAGE_FAILURE
 return_route: current_Mnemosyne_frontier_clarification_validation_route

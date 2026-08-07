@@ -1,14 +1,15 @@
 # Ready Task — FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
 
 ```yaml
-queue_status: READY_AFTER_MNEMOSYNE_188_MERGE_RESEARCH_PROJECT_PROBE_REQUIRED
+queue_status: PAUSED_QUOTA_READY_NOT_SELECTED_V0_4_SINGLE_RESEARCH_RUN
 task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
 display_name: MNE-DR-001 验证包审计
 display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 canonical_audit_specification: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001.md
-active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.3.md
+active_execution_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.4.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/OPERATOR.md
 input_manifest: handoff/fable5-ready/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001/input-manifest.yaml
+workflow: notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md
 exact_topic: Independent adversarial static audit of the Mnemosyne frontier-clarification validation package before any execution-surface or V0 authorization
 source_package_commit: 67eb96d5317a2bb589236a4a8b2e75be2508d830
 repository_access: read_only
@@ -18,45 +19,56 @@ prior_Pro_or_Fable_reports: prohibited
 preferred_visible_model: Fable_5
 preferred_effort: Max
 Research:
-  R0_Project_knowledge_probe: required
-  R1_substantive_report: allowed_only_after_R0_PASS
+  separate_paid_visibility_probe: prohibited
+  planned_invocations_after_future_selection: 1
+  G0_semantic_coverage: first_phase
+  G1_substantive_report: only_after_G0_PASS_in_same_invocation
 Project_Files: exact_manifest_set_only
+Project_Search_mode: allowed_record_required
 chat_level_GitHub_during_Research: prohibited
 canonical_research_question_and_output_contract_changed: false
 ```
 
-## Prior attempt and repairs
+## Evidence and repair history
 
 ```yaml
 run_001:
-  ordinary_chat_preflight: PASS
-  canonical_specification_complete_read: true
-  Advanced_Research_repository_inputs_accessible: 1_of_19
+  surface: ordinary_chat_GitHub_then_Research
   result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
+  non_task_inputs_accessible_in_Research: 0_of_18
   substantive_audit_started: false
-  accepted_as_surface_failure_evidence_only: true
   operator_reported_cost_USD_approx: 8
 
-v0_2:
-  repair: keep_Research_off_and_complete_in_same_ordinary_chat
-  status: conservative_fallback_not_executed
+Project_knowledge_probe:
+  surface: one_run_Project_Files_plus_Research
+  required_paths_locatable: 22_of_22
+  canonical_and_package_identity: PASS
+  Project_Search_mode: true
+  exhaustive_byte_or_content_read: NOT_ATTESTABLE
+  substantive_audit_started: false
+  operator_reported_cost_USD_approx: 7
+  adjudication: notes/adjudications/fable5-A1-R0-project-knowledge-search-mode-adjudication-2026-08-07.md
 
-v0_3:
-  repair: place_exact_inputs_in_new_one_run_Project_Files_then_probe_Research_direct_Project_knowledge_access
-  status: current_candidate_after_MNEMOSYNE_188_merge
+v0_4:
+  repair:
+    - no_quota_operator_setup_receipt
+    - one_paid_Research_invocation
+    - Search_mode_semantic_coverage_ledger
+    - substantive_audit_only_after_in_run_G0_PASS
+  status: prepared_paused_not_selected
 ```
 
-## Required v0.3 run
+## Future run only after explicit selection
 
-1. create a new one-run Claude Project named `MNE-DR-001 验证包审计` with no prior chats, Files or task memory;
-2. select visible `Fable 5` and `Max`;
-3. add exactly the manifest-listed task inputs to **Project Files** using the Project-level GitHub file/folder selector, then sync;
-4. do not add the whole repository;
-5. disable chat-level GitHub and all other connectors before Research;
-6. enable Research and run the R0 Project-knowledge visibility probe from `OPERATOR.md`;
-7. cancel if R0 begins broad external web collection before completing the Project-file gate;
-8. continue to R1 only after R0 returns `PASS` for 22/22 required files;
-9. keep the same Project/chat/model/effort for R1;
-10. return the complete report and R0 receipt to the current Mnemosyne frontier-clarification validation route.
+1. create a new one-run Claude Project named `MNE-DR-001 验证包审计`;
+2. add exactly the manifest-listed 22 logical files and remove every extra file;
+3. sync and complete the operator setup receipt;
+4. select visible `Fable 5` and `Max`;
+5. disable GitHub, all other connectors, and write-capable tools;
+6. enable Research and send the single combined G0/G1 prompt from `OPERATOR.md`;
+7. allow internal Project Search operations, but cancel if external-web harvesting starts before G0 coverage passes;
+8. if G0 fails, accept only the coverage-failure object and stop;
+9. if G0 passes, the same Research invocation produces the complete 19-section report;
+10. return the full report, semantic-coverage ledger, operator receipt, cost, and limitations to the Mnemosyne frontier-clarification validation route.
 
-A repository hyperlink, ordinary-chat GitHub receipt, raw URL or prior context's read claim is not accepted as Research input proof. A failed R0 stops the run before the substantive audit.
+This task is not currently selected. Readiness does not authorize Fable quota use.
