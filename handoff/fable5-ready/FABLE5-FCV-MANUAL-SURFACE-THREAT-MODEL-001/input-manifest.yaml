@@ -1,12 +1,13 @@
 manifest_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-INPUTS-001
-manifest_version: 0.3.1
+manifest_version: 0.4.0
 task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
 display_name: MNE-DR-002 表面威胁
 display_name_registry: notes/registries/project-research-display-name-registry-v0.1.md
 ready_entrypoint: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
 operator_guide: handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/OPERATOR.md
-active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
+active_execution_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.4.md
 canonical_threat_model_specification: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001.md
+workflow: notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md
 source_candidate:
   candidate_id: FRONTIER-CLARIFICATION-VALIDATION-MANUAL-SURFACE-CANDIDATE-001
   candidate_version: 0.1.0
@@ -27,10 +28,14 @@ preferred_delivery:
   Project_Files: exact_selection_groups_only
   Project_sync_after_selection: required
   whole_repository: prohibited
+  Project_Search_mode: allowed_record_required
   visible_model: Fable_5
   visible_effort: Max
-  Research_R0_probe: required_after_later_A2_selection
-  Research_R1_substantive: only_after_R0_PASS
+  operator_setup_gate: required_no_Research_quota
+  Research_invocations_after_later_selection: 1
+  Research_G0_semantic_coverage: first_phase
+  Research_G1_substantive: only_after_G0_PASS_same_invocation
+  separate_paid_visibility_probe: prohibited
   chat_GitHub_during_Research: disabled
   all_other_connectors_during_Research: disabled
 selection_groups:
@@ -39,7 +44,7 @@ selection_groups:
     paths:
       - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/task.md
       - handoff/fable5-ready/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001/input-manifest.yaml
-      - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.3.md
+      - notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.4.md
   - group_id: CANONICAL_THREAT_MODEL_SPECIFICATION
     audit_input: true
     paths:
@@ -71,70 +76,73 @@ counts:
 canonical_specification_completeness:
   expected_final_heading: "## 14. Delivery and authority boundary"
   expected_required_report_sections: 22
-  historical_repository_blob_sha_reference: df9aec6219efba050bad7285da6ecc1c74d2a464
 selection_gate:
   A2_selected_now: false
   prerequisite_before_Project_creation:
     - valid_A1_report_adjudicated
     - A2_inputs_confirmed_current
     - explicit_RUN_disposition
-Project_setup_receipt:
-  required:
-    - Project_name_equals_MNE_DR_002_表面威胁
-    - Project_created_new_and_separate_from_A1
-    - prior_chat_count_zero
-    - selected_path_list
-    - selected_file_count_15
-    - Project_sync_completed
-    - GitHub_connector_disabled_for_Research
-    - other_connectors_disabled_for_Research
-R0_research_project_knowledge_probe:
-  substantive_threat_model_allowed: false
+    - operator_acceptance_of_quota_use
+operator_setup_gate:
+  expected_logical_file_count: 15
+  unexpected_Project_files_allowed: 0
+  prior_chat_count: 0
+  separate_from_A1: true
+  sync_required: true
+  connectors_disabled: true
+semantic_coverage_targets:
+  canonical_heading_map:
+    expected_sections: 14
+    final_heading: "## 14. Delivery and authority boundary"
+  condition_contracts:
+    expected_IDs: [Q0, Q1, Q2, Q3, Q4]
+  hidden_author_keys:
+    expected_count: 14
+    return_all_matching_IDs: true
+    reproduce_hidden_answer_content: false
+  taskbooks_and_decision_packages:
+    require_identity_marker: true
+    require_terminal_marker: true
+    require_heading_map: true
+G0_semantic_coverage_gate:
+  Project_knowledge_only: true
   external_web_collection_allowed: false
   live_surface_or_validation_context_allowed: false
+  byte_complete_read_claim_allowed: false
   pass_requires:
-    - all_3_support_paths_complete
-    - canonical_specification_complete_through_final_heading
-    - all_12_audit_inputs_complete
-    - expected_task_candidate_and_package_IDs_visible
-    - Project_Files_used
-    - Research_enabled
-    - chat_level_GitHub_not_used
-    - other_connectors_disabled
-    - external_web_sources_used_zero
+    - all_15_paths_resolved
+    - canonical_heading_map_complete
+    - task_candidate_and_package_identity_bound
+    - Q0_through_Q4_accounted_for
+    - all_14_hidden_key_IDs_accounted_for
+    - required_heading_maps_and_terminal_markers_accounted_for
+    - unresolved_gaps_empty
     - no_live_surface_or_validation_context
-    - no_write_action
-    - substantive_threat_model_not_started
+    - no_substantive_finding_before_gate
+    - no_connector_or_write_action
   failure_statuses:
-    - INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
-    - RESEARCH_SURFACE_NOT_SUPPORTED
+    - INPUT_OR_PROJECT_KNOWLEDGE_COVERAGE_FAILURE
     - INVALID
-  operator_cancel_when:
-    - broad_external_web_collection_begins_before_Project_file_gate_completion
-R1_substantive_run:
-  allowed_only_after_R0_PASS: true
-  same_Project_and_chat: required
+G1_substantive_run:
+  allowed_only_after_G0_PASS_same_invocation: true
   Project_files_primary_evidence: true
   web_research: current_authoritative_product_facts_and_targeted_support
   live_surface_test: prohibited
   access_loss_status: RUN_INVALIDATED_BY_PROJECT_KNOWLEDGE_ACCESS_LOSS
+operator_cancel_when:
+  - external_web_collection_begins_before_G0_completion
 manual_Project_Files_fallback:
   upload_count: 13
   upload:
-    - active_execution_contract_v0_3
+    - active_execution_contract_v0_4
     - canonical_threat_model_specification
     - manual_surface_candidate
     - all_9_required_package_files
     - current_human_approved_spec
   task_and_manifest_delivery:
-    - copy_exact_task_and_manifest_text_or_add_as_Project_files
-  do_not_upload:
-    - prior_Pro_report
-    - prior_Fable_report
-    - A1_task_or_report
-    - unrelated_repository_files
+    - add_as_exact_Project_files_or_copy_exact_support_text
   stop_if:
-    - any_file_is_missing_truncated_or_transformed_without_receipt
+    - any_file_missing_or_transformed
 contamination_exclusions:
   - foundational_Pro_report
   - foundational_Fable_report
@@ -145,5 +153,5 @@ contamination_exclusions:
 A1_dependency:
   current_state: DEFERRED_PENDING_VALID_A1_ADJUDICATION
   substantive_A1_findings_imported: false
-failure_status: INPUT_OR_PROJECT_KNOWLEDGE_INTEGRITY_FAILURE
+failure_status: INPUT_OR_PROJECT_KNOWLEDGE_COVERAGE_FAILURE
 return_route: current_Mnemosyne_frontier_clarification_validation_route
