@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-197
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: 7efaf7eb0ed3187648e61a381cfaae8646c80368
 canonical_branch: mnemosyne-197-retention-only-branch-notices
 canonical_PR: 264
 PR_state: open
-PR_draft: true
+PR_draft: false
 PR_merged: false
+PR_mergeable_after_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 ```
@@ -31,25 +32,33 @@ lineage_gates:
   decision: create_one_new_canonical_lineage
 ```
 
-## 2. PR creation receipt
+## 2. Verification before ready transition
 
 ```yaml
-PR_creation:
-  number: 264
-  state: open
-  draft: true
-  merged: false
-  base: master
-  base_sha: 7efaf7eb0ed3187648e61a381cfaae8646c80368
-  head: mnemosyne-197-retention-only-branch-notices
-  head_sha_before_this_record: 3de0bd503eeb1b6cc39333cad984dd7e959f5ea9
-  commits_before_this_record: 7
-  changed_files_before_this_record: 7
-  additions_before_this_record: 450
-  deletions_before_this_record: 145
+verification:
+  compare_status: ahead
+  ahead_by_before_this_record_update: 8
+  behind_by: 0
+  changed_files_before_this_record_update: 8
+  PR_reread:
+    state: open
+    draft_before_transition: true
+    mergeable_after_metadata_refresh: true
+  ready_transition:
+    performed: true
+    draft_after_transition: false
+    mergeable_after_transition: true
+  accessible_open_PRs:
+    - 264
+  exactly_one_canonical_open_PR: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
 ```
 
-The initial PR-create response reported `mergeable: false`; treat this as pending GitHub mergeability recalculation until a later independent reread.
+The PR-create and an early reread reported `mergeable: false`; later open-PR enumeration and the ready transition reported `mergeable: true`. This is retained as GitHub mergeability recalculation behavior.
+
+No commit status or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
 ## 3. Branch-retention preflight
 
@@ -64,9 +73,20 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-Under the new Owner rule, the user-facing merge response does not need a routine branch-deletion statement.
+Under the amended Owner rule, the user-facing merge response does not include a routine branch-deletion statement.
 
-## 4. Protected boundaries
+## 4. Canonical scope
+
+```yaml
+scope:
+  - amend_branch_notice_behavior_to_retention_only
+  - preserve_silent_Owner_default_for_ordinary_merged_branches
+  - require_durable_retention_obligations_when_retention_is_requested
+  - require_explicit_release_notice_when_a_prior_retention_gate_closes
+  - align_PR_lineage_operator_flow_guidance_loader_and_live_wayfinding
+```
+
+## 5. Protected boundaries
 
 ```yaml
 protected:
@@ -77,17 +97,16 @@ protected:
   08822407d/Meta-Agent: no_write
 ```
 
-## 5. Pending final checks
+## 6. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - independently_reread_PR_264
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-197
+  merge_target_pr: 264
+  merge_target_head_branch: mnemosyne-197-retention-only-branch-notices
+  related_open_prs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
+
+Human review and merge remain pending. After merge, no selected substantive, external, or repository work remains in this conversation.
