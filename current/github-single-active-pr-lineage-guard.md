@@ -5,7 +5,7 @@
 ```yaml
 guard_id: MNEMOSYNE-GITHUB-SINGLE-ACTIVE-PR-LINEAGE-001
 created_by_task: MNEMOSYNE-118
-last_amended_by_task: MNEMOSYNE-196
+last_amended_by_task: MNEMOSYNE-197
 status: active_user_approved_behavior_guard
 applies_to:
   - ordinary_ChatGPT_GitHub_app_repository_writes
@@ -162,35 +162,33 @@ merge_instruction:
   closed_or_superseded_related_prs: []
   exactly_one_merge_target: true
   duplicate_preflight_completed: true
-  post_merge_branch_disposition:
-    DELETE_ALLOWED |
-    RETAIN_REQUIRED |
-    RETAIN_UNTIL_GATE |
-    UNKNOWN_BLOCKS_MERGE_INSTRUCTION
-  branch_retention_reason:
-  branch_retention_until:
-  deletion_allowed_after:
+
+  # Include only when the live branch must be retained after merge:
+  branch_retention:
+    obligation_id:
+    branch:
+    reason:
+    retain_until:
 ```
 
-If more than one related open PR remains, `exactly_one_merge_target` is false, or branch disposition is `UNKNOWN_BLOCKS_MERGE_INSTRUCTION`, the assistant must not issue a merge instruction.
+If more than one related open PR remains, `exactly_one_merge_target` is false, or branch retention cannot be established, the assistant must not issue a merge instruction.
 
-### 8.1 Post-merge branch visibility
+### 8.1 Retention-only visibility
 
-The response must apply `current/pr-merge-branch-disposition-guard.md` and state the branch disposition prominently in the opening operation section.
+Apply `current/pr-merge-branch-disposition-guard.md`:
 
-Owner default:
+- when no verified downstream dependency needs the live branch, omit any user-facing branch disposition; the Owner default is that the branch may be deleted after merge;
+- when retention is required, name the exact branch, reason, responsible route, and exact release gate prominently in the opening operation section;
+- do not hide retention in the PR body, result record, closing next step, or an incidental paragraph;
+- do not ask the user to merge if retention state is unknown.
 
-```yaml
-when_no_prominent_retention_instruction_is_given:
-  interpretation: branch_may_be_deleted_after_merge
-```
+Do not add a routine `DELETE_ALLOWED` line to ordinary merge instructions.
 
-Therefore:
+### 8.2 Release of a previously retained branch
 
-- use `DELETE_ALLOWED` when no verified downstream dependency requires the live branch;
-- when retention is required, name the branch, reason, exact release gate, and later deletion condition before long analysis;
-- do not hide branch retention in the PR body, result record, closing next step, or an incidental paragraph;
-- do not ask the user to merge if the branch dependency cannot yet be established.
+When a retained branch reaches its release gate, the responsible response must explicitly say that the previously retained branch can now be deleted. The notice must name the exact branch and close the recorded retention obligation.
+
+This release notice is required because it reverses a prior user-facing instruction; it is not required for ordinary branches that never received a retention instruction.
 
 ## 9. Result-record requirements
 
@@ -205,20 +203,23 @@ Every important repository-writing task result must record:
 - all related PR numbers and states;
 - whether parallel variants were approved;
 - the single user-facing merge target;
-- branch-disposition preflight and user-facing post-merge branch disposition;
-- any branch-retention reason, release gate, and later release-to-delete record;
+- internal branch-retention preflight;
+- any created retention obligation, reason, gate, responsible route, and notice ref;
+- any later explicit release-to-delete record;
 - final comparison against default branch;
 - any enumeration limitations or exceptions.
+
+For an ordinary branch with no retention dependency, the result record may state `SILENT_DEFAULT_DELETE_AFTER_MERGE`; this internal field need not appear in the user-facing response.
 
 ## 10. Mechanical basis
 
 GitHub exposes open/closed PR state and filters for head/base branches, allowing a preflight to identify an existing PR for a candidate head branch. Once a PR is open, further changes can be added to that PR by committing to its head branch; a new PR is not required. Commit/ref comparison can then verify the intended branch range and changed files.
 
-A merged PR's commits remain in repository history after ordinary head-branch deletion, but this does not justify deleting an unmerged branch or a branch with unique unpreserved work. Branch retention must be tied to an explicit dependency rather than assumed from caution.
+A merged PR's commits remain in repository history after ordinary head-branch deletion, but this does not justify deleting an unmerged branch or a branch with unique unpreserved work. Retention must be tied to a verified dependency rather than assumed from caution.
 
 ## 11. Boundaries
 
 - This guard does not authorize repository writes, parallel PRs, merges, auto-merge, branch deletion, branch retention, or task-number reuse.
 - This guard does not introduce GitHub Actions or automatic enforcement.
 - It does not make PR metadata or result records execution source.
-- It does not replace user approval, platform permission, latest-default-branch checks, diff verification, post-merge validation, or the dedicated branch-disposition guard.
+- It does not replace user approval, platform permission, latest-default-branch checks, diff verification, post-merge validation, or the dedicated branch-retention guard.

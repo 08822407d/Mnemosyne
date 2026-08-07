@@ -53,7 +53,7 @@ precedence:
     - current/artifact-delivery-and-direct-generation-guard.md
   cross_conversation_execution_intent_and_operator_flow:
     - current/cross-conversation-execution-intent-and-operator-flow-guard.md
-  PR_merge_and_post_merge_branch_disposition:
+  PR_merge_and_post_merge_branch_retention:
     - current/pr-merge-branch-disposition-guard.md
   external_research_display_names:
     - current/external-research-display-name-guard.md
@@ -114,7 +114,7 @@ If separately required, treat them according to their own authority and freshnes
 28. Apply the run-context and PR provenance guard to important repository-writing work.
 29. If required files are unavailable, state the limitation and do not invent repository state.
 30. Before asking the user to create or name a GPT Deep Research run, Fable-class research, one-run Project, or equivalent external research/review workspace, allocate and display a compact registered UI alias in the form `<PROJECT_ABBR>-DR-<SEQUENCE> <SHORT_TOPIC>`. Keep the canonical task ID separate, preserve established project numbering, expose the alias in the dedicated operator-flow section, and stop with `DISPLAY_NAME_ALLOCATION_BLOCKED` if the registry cannot be verified.
-31. Whenever a response asks the user to review or merge a PR, state the exact post-merge head-branch disposition prominently in the opening operation section. If retention is required, say `合并后请保留分支`, name the exact branch, explain the dependency, and state the release gate. Otherwise say the branch may be deleted after merge. If the response omits a prominent retention instruction, the Owner default is that the branch may be deleted after merge. Apply `current/pr-merge-branch-disposition-guard.md`; unknown branch disposition blocks the merge instruction.
+31. Whenever a response asks the user to review or merge a PR, internally verify whether its head branch has a real post-merge dependency. If retention is required, prominently say `合并后请保留分支`, name the exact branch, explain the dependency, and state the release gate. If no retention dependency exists, do not add a branch-deletion notice; the Owner default is deletion after merge. Unknown retention blocks the merge instruction. When a previously retained branch reaches its release gate, explicitly state that the earlier retained branch can now be deleted, and close the durable retention obligation. Apply `current/pr-merge-branch-disposition-guard.md`.
 
 ## Required first response after loading
 
@@ -142,7 +142,8 @@ mnemosyne_guidance_refresh:
     - file_first_delivery_when_relevant
     - same_response_inline_operator_flow_for_cross_conversation_tasks
     - explicit_execution_intent_and_dedicated_operator_flow_section
-    - prominent_PR_post_merge_branch_disposition
+    - prominent_PR_branch_retention_only_when_required
+    - explicit_release_of_previously_retained_branches
     - compact_registered_external_research_display_names
     - staged_prompt_generation
     - visibility_and_platform_freshness
@@ -158,4 +159,4 @@ Do not report the Mnemosyne maintenance current phase or next-route options as t
 - Loading guidance does not authorize model switching, quota use, research execution, repository writes, target-project changes, merge, branch retention, branch deletion, automation, MCP, RAG or auto-writeback.
 - It does not attest an exact backend.
 - It does not start a handoff.
-- It does not automatically propagate the clarification architecture or branch-disposition guard into Meta-Agent or another target project's truth source.
+- It does not automatically propagate the clarification architecture or branch-retention guard into Meta-Agent or another target project's truth source.
