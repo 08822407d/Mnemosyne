@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-196
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: f43f6c0be64a89583ada1d44968df98aca00e7cb
 canonical_branch: mnemosyne-196-fable-indefinite-pause-and-pr-branch-disposition
 canonical_PR: 263
 PR_state: open
-PR_draft: true
+PR_draft_at_record_update: true
 PR_merged: false
+PR_mergeable_after_metadata_refresh: true
 merge_performed: false
 auto_merge_enabled: false
 external_research_executed: false
@@ -34,25 +35,29 @@ lineage_gates:
   decision: create_one_new_canonical_lineage
 ```
 
-## 2. PR creation receipt
+## 2. Pre-ready verification
 
 ```yaml
-PR_creation:
-  number: 263
-  state: open
-  draft: true
-  merged: false
-  base: master
-  base_sha: f43f6c0be64a89583ada1d44968df98aca00e7cb
-  head: mnemosyne-196-fable-indefinite-pause-and-pr-branch-disposition
-  head_sha_before_this_record: 3529580cf30b46d0c1f8d5adfe6086a3965f89ed
-  commits_before_this_record: 16
-  changed_files_before_this_record: 16
-  additions_before_this_record: 1326
-  deletions_before_this_record: 317
+verification:
+  compare_status: ahead
+  ahead_by_before_this_record_update: 17
+  behind_by: 0
+  changed_files: 17
+  PR_reread:
+    state: open
+    draft: true
+    mergeable_after_metadata_refresh: true
+  accessible_open_PRs:
+    - 263
+  exactly_one_canonical_open_PR: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
 ```
 
-The initial PR-create response reported `mergeable: false`; this is treated as pending GitHub mergeability recalculation until a later independent reread.
+The PR-create and an early reread reported `mergeable: false`; later open-PR enumeration reported `mergeable: true`. The difference is retained as GitHub mergeability recalculation behavior.
+
+No commit status or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
 ## 3. Canonical scope
 
@@ -86,9 +91,10 @@ branch_disposition_preflight:
   immutable_merged_history_available: true
   disposition: DELETE_ALLOWED
   retention_required: false
+  deletion_allowed_after: PR_263_merge
 ```
 
-User-facing instruction after final checks must say prominently:
+Required user-facing wording:
 
 ```text
 合并后可删除分支 `mnemosyne-196-fable-indefinite-pause-and-pr-branch-disposition`；无需保留。
@@ -107,17 +113,19 @@ protected:
   another_route_selected: false
 ```
 
-## 6. Pending final checks
+## 6. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - independently_reread_PR_263
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-196
+  merge_target_pr: 263
+  merge_target_head_branch: mnemosyne-196-fable-indefinite-pause-and-pr-branch-disposition
+  related_open_prs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
+  post_merge_branch_disposition: DELETE_ALLOWED
+  branch_retention_reason: none
+  deletion_allowed_after: PR_263_merge
 ```
+
+Human review and merge remain pending. After merge, no selected substantive work remains in this conversation, and the branch may be deleted.
