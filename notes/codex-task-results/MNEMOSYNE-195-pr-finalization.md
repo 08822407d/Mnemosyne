@@ -3,15 +3,16 @@
 ```yaml
 task_id: MNEMOSYNE-195
 record_type: PR_finalization_and_lineage_binding
-status: final_checks_pending_after_this_record
+status: READY_FOR_HUMAN_REVIEW
 repository: 08822407d/Mnemosyne
 base_branch: master
 base_sha: c85ebba5425da4daf6f3344690778682b9f79d66
 canonical_branch: mnemosyne-195-post-migration-closeout-and-fcv-resume
 canonical_PR: 262
 PR_state: open
-PR_draft: true
+PR_draft: false_after_ready_transition
 PR_merged: false
+PR_mergeable_at_final_reread: true
 merge_performed: false
 auto_merge_enabled: false
 Meta_Agent_repository_written: false
@@ -33,25 +34,41 @@ lineage_gates:
   decision: create_one_new_canonical_lineage
 ```
 
-## 2. PR creation receipt
+## 2. Final verification
 
 ```yaml
-PR_creation:
+compare:
+  status: ahead
+  ahead_by: 21
+  behind_by: 0
+  changed_files: 21
+
+PR_reread:
   number: 262
   state: open
-  draft: true
-  merged: false
+  draft_before_ready_transition: true
+  mergeable_after_metadata_refresh: true
   base: master
   base_sha: c85ebba5425da4daf6f3344690778682b9f79d66
   head: mnemosyne-195-post-migration-closeout-and-fcv-resume
-  head_sha_before_this_record: e7ddbd7a43589d6d0b866c9b7e3ea5ec41737a26
-  commits_before_this_record: 20
-  changed_files_before_this_record: 20
-  additions_before_this_record: 2094
-  deletions_before_this_record: 1344
+  head_sha_before_finalization_update: c9b6f2dd975fad3f96b39a470ccaef1777e3150f
+  commits_before_finalization_update: 21
+  changed_files_before_finalization_update: 21
+  additions_before_finalization_update: 2200
+  deletions_before_finalization_update: 1344
+
+repository_checks:
+  accessible_open_PRs:
+    - 262
+  exactly_one_canonical_open_PR: true
+  commit_statuses_reported: []
+  workflow_runs_reported: []
+  CI_pass_claim: false
 ```
 
-The initial create response reported `mergeable: false`; treat this as GitHub mergeability recalculation until an independent reread after finalization.
+The initial create and an early reread reported `mergeable: false`; a later repository search reported `mergeable: true`. This is retained as GitHub mergeability recalculation behavior.
+
+No commit status or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
 ## 3. Canonical scope
 
@@ -90,17 +107,16 @@ protected:
   operational_activation: false
 ```
 
-## 5. Pending final checks
+## 5. Human gate
 
 ```yaml
-pending_final_checks:
-  - compare_final_head_to_master
-  - confirm_behind_by_zero
-  - independently_reread_PR_262
-  - recheck_mergeability
-  - enumerate_accessible_open_PRs
-  - check_commit_statuses
-  - check_workflow_runs
-  - update_PR_body_to_final_head_and_counts
-  - mark_PR_ready_for_review
+merge_instruction:
+  task_id: MNEMOSYNE-195
+  merge_target_PR: 262
+  merge_target_head_branch: mnemosyne-195-post-migration-closeout-and-fcv-resume
+  related_open_PRs: []
+  exactly_one_merge_target: true
+  duplicate_preflight_completed: true
 ```
+
+Human review and merge remain pending. Merge adopts status cleanup and the v0.4 prepared workflow; it does not execute Fable or validation.
