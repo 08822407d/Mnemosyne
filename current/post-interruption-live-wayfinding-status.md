@@ -4,15 +4,15 @@
 
 ```yaml
 record_type: live_wayfinding_selection
-latest_updated_by_task: MNEMOSYNE-196
+latest_updated_by_task: MNEMOSYNE-197
 recorded_at: 2026-08
 route: no_active_selected_mainline_after_FCV_indefinite_pause
-status: CURRENT_CONVERSATION_ARCHIVE_ELIGIBLE_AFTER_MNEMOSYNE_196_MERGE
+status: CURRENT_CONVERSATION_ARCHIVE_ELIGIBLE_AFTER_MNEMOSYNE_197_MERGE
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 ```
 
-## 1. Completed temporary Meta-Agent diversion
+## 1. Completed Meta-Agent migration support
 
 ```yaml
 Meta_Agent:
@@ -25,15 +25,11 @@ Mnemosyne_source_retirement:
   PR: 261
   merge_commit: c85ebba5425da4daf6f3344690778682b9f79d66
   live_Meta_Agent_writer: false
-  branches_after_hygiene:
-    - master
 ```
 
 Meta-Agent product work no longer runs under `target-projects/meta-agent/` in current Mnemosyne `master`.
 
 ## 2. Frontier-clarification validation route
-
-The route was restored after Meta-Agent migration and then explicitly paused indefinitely by the Owner.
 
 ```yaml
 frontier_clarification_validation:
@@ -59,23 +55,39 @@ A2:
   quota_authorized: false
 ```
 
-Task artifacts remain preserved. They are not selected or runnable during the pause.
+Task artifacts remain preserved but are not selected or runnable during the pause.
 
-## 3. Current conversation closure
+## 3. PR branch-retention behavior amendment
+
+```yaml
+branch_retention_behavior:
+  guard: current/pr-merge-branch-disposition-guard.md
+  ordinary_merged_branch:
+    user_facing_notice_required: false
+    Owner_default_when_no_retention_notice: may_delete_after_merge
+  branch_with_verified_dependency:
+    prominent_retention_notice_required: true
+  prior_retention_dependency_released:
+    explicit_release_notice_required: true
+```
+
+The amendment reduces routine deletion-notice noise while preventing branches previously marked for retention from becoming stale after their dependency ends.
+
+## 4. Current conversation closure
 
 ```yaml
 current_conversation:
   role: Mnemosyne_self_development_and_maintenance
   selected_mainline: none
   selected_substantive_work_remaining: none
-  repository_work_remaining_after_MNEMOSYNE_196_merge: none
+  repository_work_remaining_after_MNEMOSYNE_197_merge: none
   external_work_remaining_here: none
   archive_eligible_after_merge: true
 ```
 
 The absence of an active mainline is intentional. This conversation must not take over another route merely to continue working.
 
-## 4. Other routes not selected here
+## 5. Other routes not selected here
 
 ```yaml
 other_routes:
@@ -93,7 +105,6 @@ other_routes:
     Stage_B0_protocol_design: selected_and_prepared
     Stage_B0_smoke_execution_authorized: false
     selected_here: false
-    status_ref: current/adaptive-explanation-stage-a-research-status.md
 
   MODEL_CAPABILITY_PLANNING_001:
     selected_here: false
@@ -110,24 +121,24 @@ other_routes:
 
 Listing does not authorize or transfer route ownership.
 
-## 5. Work completed by MNEMOSYNE-196
+## 6. Work completed by MNEMOSYNE-197
 
 ```yaml
 completed:
-  - verify_PR262_merge
-  - record_owner_indefinite_Fable_pause
-  - prepare_future_receive_only_resumption_handoff
-  - mark_A1_and_A2_non_runnable_until_explicit_future_resumption
-  - adopt_prominent_PR_post_merge_branch_disposition_guard
-  - determine_current_conversation_has_no_remaining_selected_work
+  - verify_PR263_merge
+  - amend_branch_guard_to_show_user_facing_notice_only_when_retention_is_required
+  - preserve_silent_default_deletion_after_merge
+  - require_explicit_release_notice_when_a_prior_retention_obligation_ends
+  - align_PR_lineage_operator_flow_and_guidance_loader
+  - confirm_current_conversation_has_no_remaining_selected_work
 ```
 
-## 6. Safe next action
+## 7. Safe next action
 
 ```yaml
 safe_next_action:
   current:
-    - human_review_and_merge_MNEMOSYNE_196_PR_or_request_changes
+    - human_review_and_merge_MNEMOSYNE_197_PR_or_request_changes
   after_merge:
     - archive_this_conversation_if_no_new_user_task
   automatic_route_selection: false
