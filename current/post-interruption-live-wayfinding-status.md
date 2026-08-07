@@ -98,14 +98,16 @@ completed:
 
 No Fable run or validation was executed.
 
-## 5. Queued but not selected routes
+## 5. Other prepared or completed routes not selected here
 
 ```yaml
-queued_routes:
-  ADAPTIVE_EXPLANATION_STAGE_A_RESEARCH:
-    prior_status: prompt_ready_not_executed
+other_routes:
+  ADAPTIVE_EXPLANATION:
+    Stage_A: completed_and_accepted_with_corrections
+    Stage_B0_protocol_design: selected_and_prepared
+    Stage_B0_smoke_execution_authorized: false
     selected_now: false
-    note: remains_a_separate_future_route_not_the_current_mainline
+    status_ref: current/adaptive-explanation-stage-a-research-status.md
 
   MODEL_CAPABILITY_PLANNING_001:
     selected_now: false
@@ -120,7 +122,7 @@ queued_routes:
     selected_now: false
 ```
 
-Listing does not authorize execution.
+Listing does not authorize execution or change the current conversation's selected frontier-clarification route.
 
 ## 6. Safe next action
 
