@@ -1,39 +1,50 @@
-# Frontier Clarification Validation — Scoped Route Status
+# Frontier Clarification Validation — Indefinitely Paused Route Status
 
-> Non-execution-source route status. It does not replace `current/human-approved-spec.md` and does not import Meta-Agent or non-FABLE health-review work.
+> Non-execution-source route status. It does not replace `current/human-approved-spec.md`, authorize external work, or import Meta-Agent, Adaptive Explanation, or non-FABLE health-review work.
 
 ```yaml
-status_id: FRONTIER-CLARIFICATION-VALIDATION-HANDOFF-STATUS-007
+status_id: FRONTIER-CLARIFICATION-VALIDATION-HANDOFF-STATUS-008
 created_by_task: MNEMOSYNE-180
-last_status_task: MNEMOSYNE-195
+last_status_task: MNEMOSYNE-196
 repository: 08822407d/Mnemosyne
-status: MAINLINE_RESUMED_AFTER_META_AGENT_MIGRATION_A1_PAUSED_V0_4_PREPARED
+status: INDEFINITELY_PAUSED_BY_OWNER_FUTURE_DEDICATED_CONVERSATION
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
+current_conversation_archive_eligible_after_MNEMOSYNE_196_merge: true
+
 validation_package: notes/frontier-clarification-validation-package/README.md
 manual_surface_candidate: notes/validation-designs/frontier-clarification-validation-manual-surface-preparation-candidate-v0.1.md
-Fable_staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.5.md
-Fable_workflow: notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md
-Fable_ready_queue: handoff/fable5-ready/
+Fable_staged_plan: notes/research-plans/2026Q3-frontier-clarification-validation-fable5-staged-plan-v0.6.md
+Fable_workflow_if_future_resumed: notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md
+pause_record: notes/route-pauses/frontier-clarification-validation-fable5-indefinite-pause-2026-08.md
+resumption_handoff: handoff/mnemosyne-frontier-clarification-validation-fable-resumption-package.md
 validation_selected: false
 validation_executed: false
 real_or_private_data_used: false
 ```
 
-## 1. Route ownership and resumed mainline
+## 1. Route ownership and pause
 
 ```yaml
 current_conversation_route: Mnemosyne_frontier_clarification_validation
+current_route_execution_state: paused_indefinitely
+future_resumption_conversation: separate_dedicated_conversation_selected_by_user
+
 Meta_Agent:
-  current_repository: 08822407d/Meta-Agent
+  repository: 08822407d/Meta-Agent
   Mnemosyne_migration_support: complete_closed
   takeover_by_this_route: prohibited
+
 non_FABLE_health_review:
   owner: separate_conversation
   takeover: prohibited
+
+Adaptive_Explanation:
+  separate_route: true
+  selected_by_this_conversation: false
 ```
 
-The temporary Meta-Agent repository-migration support route is closed on the Mnemosyne side. PR #261 retired the old live-looking target-truth/current/handoff/compatibility paths, and only `master` remains as a branch after repository hygiene. This conversation returns to the frontier-clarification validation mainline.
+The route pause is an explicit Owner decision. No other route becomes selected merely because this route has no current work.
 
 ## 2. Completed design and package work
 
@@ -48,37 +59,20 @@ completed:
   A1_run_001_failure_preserved: true
   A1_Project_knowledge_probe_adjudicated: true
   v0_4_single_invocation_workflow_prepared: true
+  indefinite_pause_and_future_resumption_handoff_prepared: true
 ```
 
-## 3. Validation state
-
-```yaml
-validation_state:
-  public_synthetic_scenarios: 14
-  V1_smoke_scenarios: 8
-  conditions: 5
-  V1_primary_cells_defined: 40
-  execution_surface_selected: false
-  manual_surface_verified: false
-  V0_authorized: false
-  V0_executed: false
-  V1_authorized: false
-  V1_executed: false
-  V2_executed: false
-  V3_executed: false
-```
-
-No validation result, pass rate, model ranking, or exact backend identity exists.
-
-## 4. Stage-A A1 state
+## 3. A1 state
 
 ```yaml
 A1:
   task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
   display_name: MNE-DR-001 验证包审计
+  state: DEFERRED_INDEFINITELY_BY_OWNER
   valid_substantive_report_received: false
-  current_state: PAUSED_QUOTA_READY_NOT_SELECTED
-  active_contract: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.4.md
+  current_execution_requested: false
+  quota_authorized: false
+  active_contract_if_future_resumed: notes/research-prompts/FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001-execution-contract-v0.4.md
 
   run_001:
     result: INPUT_OR_REPOSITORY_INTEGRITY_FAILURE
@@ -100,68 +94,71 @@ A1:
     adjudication: notes/adjudications/fable5-A1-R0-project-knowledge-search-mode-adjudication-2026-08-07.md
 ```
 
-The Project-knowledge route solved the original path-access problem. The separate paid full-inventory probe was not cost-proportionate and is retired.
-
-## 5. v0.4 future A1 architecture
-
-```yaml
-future_selected_A1:
-  O0:
-    role: operator_UI_and_exact_file_setup_receipt
-    Research_quota: none
-  Research_invocations: 1
-  G0:
-    role: Search_mode_semantic_coverage_gate
-    external_web_before_PASS: prohibited
-    byte_complete_claim: prohibited
-  G1:
-    role: complete_19_section_audit
-    allowed_only_after_G0_PASS_same_invocation: true
-```
-
-No future run is selected by this status.
-
-## 6. A2 state
+## 4. A2 state
 
 ```yaml
 A2:
   task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
   display_name: MNE-DR-002 表面威胁
   attempts: 0
-  current_state: DEFERRED_PENDING_VALID_A1_ADJUDICATION
-  active_contract: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.4.md
-  separate_paid_visibility_probe: prohibited
-  one_combined_G0_G1_invocation_if_later_selected: true
+  state: DEFERRED_INDEFINITELY_BY_OWNER_AND_PENDING_VALID_A1_ADJUDICATION
+  current_execution_requested: false
+  quota_authorized: false
+  active_contract_if_future_resumed: notes/research-prompts/FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001-execution-contract-v0.4.md
 ```
 
-A2 remains deferred because A1 may require package amendments or make the existing manual-surface audit object stale.
+A2 cannot resume directly. A valid A1 report, frontier adjudication, and A2 input-freshness review are prerequisites.
 
-## 7. Mainline progress
+## 5. Validation state
 
 ```yaml
-mainline_progress:
-  design_and_packaging: substantially_complete
-  A1_surface_access_question: answered_Project_knowledge_supported
-  A1_substantive_audit: no_valid_report_yet
-  A2_threat_model: not_run
-  execution_surface_selection: not_decided
-  V0_sentinel: not_authorized_not_run
-  V1_small_smoke: prepared_not_authorized_not_run
-  final_adoption_revision_or_rejection: future
+validation_state:
+  public_synthetic_scenarios: 14
+  V1_smoke_scenarios: 8
+  conditions: 5
+  V1_primary_cells_defined: 40
+  execution_surface_selected: false
+  manual_surface_verified: false
+  V0_authorized: false
+  V0_executed: false
+  V1_authorized: false
+  V1_executed: false
+  V2_executed: false
+  V3_executed: false
 ```
 
-## 8. Safe next gate
+No validation result, pass rate, model ranking, execution-surface acceptance, or exact backend identity exists.
+
+## 6. Future resumption boundary
+
+A future separate conversation must begin receive-only from:
+
+```text
+handoff/mnemosyne-frontier-clarification-validation-fable-resumption-package.md
+```
+
+It must recover the pause state and stop before requesting quota or launching research. A later explicit Owner `RUN_*` decision is required.
+
+## 7. Current conversation closure
+
+```yaml
+current_conversation_after_MNEMOSYNE_196_merge:
+  selected_substantive_work_remaining: none
+  external_work_pending: none
+  repository_work_pending: none_after_merge
+  archive_eligible: true
+```
+
+## 8. Safe next action
 
 ```yaml
 safe_next_action:
   current:
-    - human_review_and_merge_MNEMOSYNE_195_PR_or_request_changes
-  after_merge:
-    - keep_A1_paused_until_Fable_quota_available_and_user_explicitly_selects_run
-    - when_selected_use_one_v0_4_G0_G1_Research_invocation
-    - return_complete_report_for_frontier_adjudication
-  A2:
-    - remain_deferred_until_valid_A1_adjudication
+    - human_review_and_merge_MNEMOSYNE_196_PR_or_request_changes
+  post_merge:
+    - archive_current_conversation_if_no_new_user_task
+  Fable_route:
+    - remain_indefinitely_paused
   automatic_research_execution: false
   automatic_surface_selection: false
   automatic_V0_or_V1: false
