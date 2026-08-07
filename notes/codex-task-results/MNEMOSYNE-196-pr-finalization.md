@@ -10,9 +10,9 @@ base_sha: f43f6c0be64a89583ada1d44968df98aca00e7cb
 canonical_branch: mnemosyne-196-fable-indefinite-pause-and-pr-branch-disposition
 canonical_PR: 263
 PR_state: open
-PR_draft_at_record_update: true
+PR_draft: false
 PR_merged: false
-PR_mergeable_after_metadata_refresh: true
+PR_mergeable_at_ready_transition: true
 merge_performed: false
 auto_merge_enabled: false
 external_research_executed: false
@@ -35,18 +35,22 @@ lineage_gates:
   decision: create_one_new_canonical_lineage
 ```
 
-## 2. Pre-ready verification
+## 2. Ready-transition verification
 
 ```yaml
 verification:
   compare_status: ahead
-  ahead_by_before_this_record_update: 17
+  ahead_by_before_this_record_update: 18
   behind_by: 0
   changed_files: 17
-  PR_reread:
+  head_before_this_record_update: a9648f1f629277d791f021b2a9be3866f3c749b5
+  PR_reread_before_ready_transition:
     state: open
     draft: true
-    mergeable_after_metadata_refresh: true
+  ready_transition:
+    performed: true
+    draft_after_transition: false
+    mergeable_after_transition: true
   accessible_open_PRs:
     - 263
   exactly_one_canonical_open_PR: true
@@ -55,7 +59,7 @@ verification:
   CI_pass_claim: false
 ```
 
-The PR-create and an early reread reported `mergeable: false`; later open-PR enumeration reported `mergeable: true`. The difference is retained as GitHub mergeability recalculation behavior.
+The PR-create and early rereads reported `mergeable: false`; later metadata refresh and the ready transition reported `mergeable: true`. The difference is retained as GitHub mergeability recalculation behavior.
 
 No commit status or workflow run was reported. This is no CI evidence, not a CI-pass claim.
 
