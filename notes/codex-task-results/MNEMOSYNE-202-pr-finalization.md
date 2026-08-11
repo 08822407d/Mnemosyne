@@ -10,7 +10,8 @@ base_branch: master
 base_sha: bd15d62b3111a9f2e55aa64151943f7b4d7f8713
 head_branch: mnemosyne-202-record-or01-and-revise-capability-catalog
 head_sha_before_initial_finalization_record: f0eccd2e346b96362d55b389938df4d388918a0b
-head_sha_before_this_finalization_update: feefb6bd260b14a83d08b0096ec56a8656482d31
+head_sha_before_first_finalization_update: feefb6bd260b14a83d08b0096ec56a8656482d31
+head_sha_after_semantic_consistency_repairs: 614256cd90529b195bba3c231a362e8fb9240398
 final_head_sha_after_this_record: recorded_by_final_PR_snapshot
 execution_source_modified: false
 active_guidance_modified: false
@@ -73,14 +74,16 @@ all target repositories/stores
 ## 4. Semantic integrity results
 
 - OR-01 records the full 42-entry pass and the Owner's material amendments: **PASS**.
+- `ACAP-035` is no longer listed as unchanged; it is handled only through the material merge/retirement disposition: **PASS**.
 - catalogue v0.2 contains 41 active entries and historical retired `ACAP-036`: **PASS**.
 - `ACAP-035` absorbs promotion plus portability filtering; `ACAP-036` is never reused: **PASS**.
 - `ACAP-028` is provider-neutral output/representation-role semantics rather than a universal ChatGPT fact: **PASS**.
+- `ACAP-031` now says periodic audit is proposed but not active; it no longer implies that an active guard changed in this PR: **PASS**.
 - `ACAP-038` centers controlled evolution and treats rollback as optional: **PASS**.
 - execution-source terminology distinguishes behavior-control program, broader target truth, and supporting memory: **PASS**.
 - practice-dependent items are labelled provisional/evidence-needed: **PASS**.
+- validation plan now states that the three active-guard repairs are prepared for a later task, not implemented by MNEMOSYNE-202: **PASS**.
 - first-three selection v0.2 remains pending Owner disposition: **PASS**.
-- proposed active-guard repairs are clearly non-active and separately gated: **PASS**.
 - no target, Meta-Agent, product, research, quota, or private-material authorization is implied: **PASS**.
 
 ## 5. Branch-retention preflight
@@ -96,27 +99,26 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-## 6. Final verification
+## 6. Final verification before this record
 
-The exact repository checks immediately before this update returned:
+Exact checks after the semantic consistency repairs and immediately before this finalization update returned:
 
 ```yaml
-final_verification:
+final_verification_before_this_record:
   branch_vs_base: ahead
-  ahead_by_before_this_update: 9
+  ahead_by: 13
   behind_by: 0
   changed_files: 9
   changed_path_allowlist_exact: true
-  competing_open_PRs:
-    - 270
   competing_equivalent_PRs: []
   exactly_one_canonical_open_PR: true
   PR_mergeability: true
   PR_draft: true
+  head_sha: 614256cd90529b195bba3c231a362e8fb9240398
   result: PASS_PENDING_OWNER_REVIEW
 ```
 
-This update changes only this finalization record and therefore adds one final branch commit without changing the path allowlist or semantic scope. The final PR snapshot and body should record the resulting head SHA and total commit count.
+This finalization update changes only this file and adds one final branch commit without changing the path allowlist or semantic scope. The final PR snapshot and body record the resulting head SHA and total commit count.
 
 ## 7. Closeout boundary
 
