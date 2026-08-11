@@ -28,6 +28,7 @@ Read or ask the user to provide:
 - `current/cross-conversation-execution-intent-and-operator-flow-guard.md`
 - `current/external-research-display-name-guard.md`
 - `current/deep-research-report-delivery-correction-guard.md`
+- `current/source-artifact-preservation-and-design-rationale-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
 - `current/frontier-planning-clarification-handoff-adjudication-guard.md`
 - `current/pr-merge-branch-disposition-guard.md`
@@ -59,6 +60,8 @@ precedence:
     - current/external-research-display-name-guard.md
   Deep_Research_single_report_semantics:
     - current/deep-research-report-delivery-correction-guard.md
+  source_artifact_preservation_and_design_rationale:
+    - current/source-artifact-preservation-and-design-rationale-guard.md
   general_user_operation_capability_research_and_intent:
     - current/user-operation-next-step-capability-and-intent-guard.md
   clarification_architecture_and_research_trigger_adjudication:
@@ -115,6 +118,9 @@ If separately required, treat them according to their own authority and freshnes
 29. If required files are unavailable, state the limitation and do not invent repository state.
 30. Before asking the user to create or name a GPT Deep Research run, Fable-class research, one-run Project, or equivalent external research/review workspace, allocate and display a compact registered UI alias in the form `<PROJECT_ABBR>-DR-<SEQUENCE> <SHORT_TOPIC>`. Keep the canonical task ID separate, preserve established project numbering, expose the alias in the dedicated operator-flow section, and stop with `DISPLAY_NAME_ALLOCATION_BLOCKED` if the registry cannot be verified.
 31. Whenever a response asks the user to review or merge a PR, internally verify whether its head branch has a real post-merge dependency. If retention is required, prominently say `合并后请保留分支`, name the exact branch, explain the dependency, and state the release gate. If no retention dependency exists, do not add a branch-deletion notice; the Owner default is deletion after merge. Unknown retention blocks the merge instruction. When a previously retained branch reaches its release gate, explicitly state that the earlier retained branch can now be deleted, and close the durable retention obligation. Apply `current/pr-merge-branch-disposition-guard.md`.
+32. For a material user-supplied task, research, conversation-export or source file, record an explicit preservation level. Preserve exact bytes when safe, authorized, proportionate and mechanically verifiable; never call a normalized copy or hash-only receipt an exact original. Use manual import or an approved outside-Git exact store when the current surface cannot prove exact preservation.
+33. For important architecture, behavior, authority, methodology, schema or migration choices, create or reference a compact externally stated design-rationale record covering the problem, decisive alternatives, selection reason, assumptions, risks, validation and affected existing artifacts. Do not request or claim hidden chain-of-thought, and normally explain the result to the user in concise natural language rather than a large English-key YAML block.
+34. Preserve material originals without loading them routinely. Treat complete old conversations, research prompts/reports, historical handoffs and completed-task records as default `DO_NOT_READ` / `ON_DEMAND` evidence unless the current task has a specific reconstruction, dispute, migration, incident, citation or full-history-review trigger. State which cold originals were actually read.
 
 ## Required first response after loading
 
@@ -139,6 +145,9 @@ mnemosyne_guidance_refresh:
     - user_correction_and_intent_reconstruction
     - visible_answer_ledger_and_semantic_escalation
     - one_canonical_Deep_Research_report_and_supported_export
+    - exact_source_artifact_preservation_levels
+    - compact_external_design_rationale_capture
+    - cold_originals_on_demand_not_default_runtime_context
     - file_first_delivery_when_relevant
     - same_response_inline_operator_flow_for_cross_conversation_tasks
     - explicit_execution_intent_and_dedicated_operator_flow_section
@@ -157,6 +166,7 @@ Do not report the Mnemosyne maintenance current phase or next-route options as t
 
 - This command is not an execution source and does not approve new project content.
 - Loading guidance does not authorize model switching, quota use, research execution, repository writes, target-project changes, merge, branch retention, branch deletion, automation, MCP, RAG or auto-writeback.
+- It does not authorize automatic capture or upload of every conversation/task artifact, and it does not require routine reading of preserved cold originals.
 - It does not attest an exact backend.
 - It does not start a handoff.
-- It does not automatically propagate the clarification architecture or branch-retention guard into Meta-Agent or another target project's truth source.
+- It does not automatically propagate the clarification architecture, source-preservation guard or branch-retention guard into Meta-Agent or another target project's truth source.
