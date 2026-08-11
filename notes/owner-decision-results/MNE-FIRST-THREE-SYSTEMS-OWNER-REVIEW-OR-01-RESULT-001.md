@@ -53,7 +53,7 @@ The catalogue remains:
 ACAP-001, ACAP-002, ACAP-007, ACAP-008,
 ACAP-014, ACAP-015, ACAP-016, ACAP-018, ACAP-019, ACAP-021,
 ACAP-023, ACAP-024, ACAP-025, ACAP-026,
-ACAP-029, ACAP-032, ACAP-035, ACAP-037
+ACAP-029, ACAP-032, ACAP-037
 ```
 
 Notes:
@@ -61,6 +61,7 @@ Notes:
 - `ACAP-002` is understood as one unambiguous **currently adopted authority boundary**, not one physical file and not simply the newest artifact by timestamp.
 - `ACAP-006` was accepted after explanation, but receives a preservation-scope amendment in §3.2.
 - `ACAP-034` was accepted in purpose but remains empirically immature, so it appears in §3.3 rather than this list.
+- `ACAP-035` is handled under the material duplicate-resolution amendment in §3.4 rather than the unchanged list.
 
 ### 3.2 Accepted with a concrete semantic amendment
 
