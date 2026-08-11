@@ -6,11 +6,12 @@
 guard_id: MNEMOSYNE-USER-OPERATION-NEXT-STEP-CAPABILITY-INTENT-001
 guard_version: v0.2
 created_by_task: MNEMOSYNE-177
-last_amendment_task: MNEMOSYNE-178
-status: active_user_approved_behavior_guard_pending_MNEMOSYNE_178_merge
+last_amendment_task: MNEMOSYNE-200
+status: active_after_MNEMOSYNE_200_merge
 user_decision_source:
   - current_Mnemosyne_maintenance_conversation_2026_07_28_initial
   - current_Mnemosyne_maintenance_conversation_2026_07_28_research_and_clarification_amendment
+  - current_Mnemosyne_maintenance_conversation_after_MNEMOSYNE_199_V0_repair_selection
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
 applies_to:
@@ -276,7 +277,8 @@ The task must include:
 - research questions, required sections, evidence-calibration rules, unknowns, stop conditions, and prohibited actions;
 - direct URLs/stable identifiers and source-maturity requirements where relevant;
 - complete inline final-report requirement for Deep Research;
-- auxiliary `<TASK_ID>-complete-response.md` or stable equivalent for transfer when required;
+- for non-Deep-Research tasks only, an auxiliary `<TASK_ID>-complete-response.md` or stable equivalent when the complete final response genuinely must be transferred and the surface can create it;
+- for Deep Research, one complete canonical report plus a supported operator export when transfer is needed, under `current/deep-research-report-delivery-correction-guard.md`; do not require an arbitrary second model-generated complete-response file;
 - return instructions to the maintainer conversation;
 - dependency and invalidation rules.
 
@@ -589,7 +591,7 @@ This guard operationalizes:
 - §8: model replaceability and validation before enabling new capability;
 - §11: objective, evidence-bound engineering judgment;
 - §12: user operation and explanation separation;
-- §13: file-first delivery and complete-response transfer requirements;
+- §13: file-first delivery and non-Deep-Research complete-response transfer requirements; Deep Research single-report/export semantics remain controlled by `current/deep-research-report-delivery-correction-guard.md`;
 - §17: dependency-aware Pro / Deep Research staging;
 - `current/model-capability-aware-work-planning-open-question.md`: interim capability and decomposition rule while controlled validation remains open.
 
@@ -602,6 +604,7 @@ It does not change the execution-source hierarchy.
 - It does not make every task frontier-only or every important topic a Deep Research task.
 - It does not execute Deep Research or Fable-class research automatically.
 - It prohibits fabricating a research report before the research run exists.
+- It does not require an arbitrary second model-generated complete-response file for Deep Research; use the canonical report and supported export contract.
 - It does not permit a weaker model to execute a task merely because the task was labelled bounded.
 - It does not let the Agent override a confirmed user decision under the claim of knowing the user's true intent.
 - It does not authorize psychological or cognitive profiling.

@@ -5,11 +5,13 @@
 ```yaml
 guard_id: MNEMOSYNE-DEEP-RESEARCH-SINGLE-REPORT-DELIVERY-001
 created_by_task: MNEMOSYNE-179
-status: active_after_MNEMOSYNE_179_merge
+last_amended_by_task: MNEMOSYNE-200
+status: active_after_MNEMOSYNE_200_merge
 execution_source_modified: false
 scope_precedence:
   supersedes_for_Deep_Research_only:
     - current/artifact-delivery-and-direct-generation-guard.md_complete_response_requirements
+    - current/user-operation-next-step-capability-and-intent-guard.md_auxiliary_complete_response_wording
     - commands/load-mnemosyne-guidance.md_complete_response_requirements
     - previously_generated_Deep_Research_task_delivery_clauses
 ```
@@ -100,7 +102,7 @@ This correction is limited to Deep Research's single canonical report semantics.
 
 Completed task files that required both the canonical report and a custom `complete-response.md` remain historical evidence. Their report results are accepted based on the canonical report; missing custom files are not rerun triggers.
 
-Future taskbooks must use the corrected contract.
+Future taskbooks and broader guidance must use or point to the corrected contract rather than restating the older Deep Research complete-response interpretation.
 
 ## 7. Boundaries
 
