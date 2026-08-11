@@ -8,7 +8,8 @@ created_by_task: MNEMOSYNE-127
 amended_by_tasks:
   - MNEMOSYNE-155
   - MNEMOSYNE-185
-status: active_after_MNEMOSYNE_185_merge
+  - MNEMOSYNE-200
+status: active_after_MNEMOSYNE_200_merge
 applies_to:
   - Mnemosyne_related_ChatGPT_conversations
   - Codex_tasks
@@ -19,6 +20,7 @@ user_decision_provenance:
   - current_maintenance_conversation_instruction_to_redo_all_post_PR_173_work
   - current_maintenance_conversation_2026_07_25_complete_response_file_requirement
   - current_maintenance_conversation_2026_07_31_inline_operator_flow_requirement
+  - current_maintenance_conversation_after_MNEMOSYNE_199_V0_repair_selection
 tracked_issues:
   - 170
   - 171
@@ -54,6 +56,8 @@ Examples include:
 A downloadable file containing the task executor's complete final user-visible response for return to a maintainer conversation, archival, review, or evidence comparison.
 
 It is distinct from named substantive artifacts such as a synthesis, ledger, matrix, report, or patch specification. The complete response may summarize, wrap, link to, or differ from those artifacts and therefore requires its own explicit identity and role when the task asks the operator to return it.
+
+For Deep Research, the complete canonical report and a supported operator export are governed more specifically by `current/deep-research-report-delivery-correction-guard.md`; a standard report export is not a separate second research output or an arbitrary model-generated complete-response file.
 
 ### Low-risk downloadable artifact
 
@@ -98,9 +102,11 @@ Do not duplicate the complete long artifact in the chat body unless the user exp
 
 ## 3A. Complete-response transfer-file rule
 
-When a Mnemosyne task prompt, taskbook, handoff, review package, or execution instruction requires the operator to return or preserve the executor's **complete final response**, the task designer must explicitly require a separate downloadable complete-response transfer file.
+For **non-Deep-Research** tasks, when a Mnemosyne task prompt, taskbook, handoff, review package, or execution instruction requires the operator to return or preserve the executor's **complete final response**, the task designer must explicitly require a separate downloadable complete-response transfer file.
 
-The taskbook must specify:
+Deep Research is excluded from this general rule and follows `current/deep-research-report-delivery-correction-guard.md`: it has one complete canonical report, and cross-conversation transfer should use a supported operator export of that report rather than an assumed second model-generated complete-response file.
+
+For in-scope non-Deep-Research tasks, the taskbook must specify:
 
 ```yaml
 complete_response_transfer_file:
@@ -119,7 +125,7 @@ Rules:
 4. Named substantive artifacts do not substitute for the complete-response file. If the complete response and a synthesis/report differ, preserve both and record their separate byte/hash identities and roles. If they are byte-identical, the task may disclose the identity relation, but the required complete-response filename must still be delivered unless the operator explicitly waives it.
 5. Do not require a complete-response file when the maintainer needs only the named artifacts and does not require the full reply. This rule is conditional, not a requirement to export every answer.
 6. If the surface cannot generate or preserve the file, the original final response must disclose the limitation and identify the single minimal operator action needed. It must not claim that the file exists.
-7. For Deep Research, the canonical full report remains in the final report/answer under the §13 exception. When cross-conversation return of the full response is required, the taskbook should additionally require a downloadable complete-response copy as an auxiliary transfer artifact; it may not replace the inline canonical report.
+7. For Deep Research, do not require a separate arbitrary model-generated `complete-response.md` file. Require the complete canonical report in the product report/final-answer surface and, when transfer is needed, instruct the operator to export that same report in a supported format with an archival filename. A custom additional file is optional only when the current surface explicitly supports and verifies its creation; it may not replace the canonical report or be presented as a second research conclusion.
 8. Creating the local complete-response file does not authorize repository write, upload, email, forwarding, or another connected-service action.
 
 ## 3B. Same-response operator-flow mirroring rule
@@ -174,7 +180,8 @@ Before stating that a file was created or delivered, verify as far as the availa
 - the file exists at the returned location;
 - the response contains a working artifact link or the exact available transfer pointer;
 - the full long body was not unnecessarily duplicated in chat;
-- when the complete-response transfer-file rule applies, the required complete-response file was actually created and is distinguishable from the named substantive artifacts;
+- when the non-Deep-Research complete-response transfer-file rule applies, the required complete-response file was actually created and is distinguishable from the named substantive artifacts;
+- when Deep Research transfer is required, the response requests a supported export of the single canonical report rather than claiming an unverified second file exists;
 - when the same-response operator-flow rule applies, the response actually contains the complete operating procedure and does not rely only on a repository pointer.
 
 Never invent a sandbox path, repository path, attachment, successful file creation, or successful operator-package delivery.
@@ -203,10 +210,11 @@ File-first is a delivery control, not a requirement to create files for every an
 
 ## 8. Deep Research exception
 
-The existing §13 Deep Research exception remains unchanged:
+The existing §13 Deep Research exception remains unchanged and is operationalized by `current/deep-research-report-delivery-correction-guard.md`:
 
 - a Deep Research final report must include the full canonical report body in the final report/answer;
-- a downloadable export may be provided only as an auxiliary copy;
+- a supported Markdown/Word/PDF export may be provided or requested as an auxiliary representation of the same report when transfer or archival is needed;
+- no arbitrary second model-generated complete-response file is required;
 - this exception applies to the final Deep Research report, not to a Deep Research prompt, task brief, handoff package, or other transfer artifact, which remains subject to the file-first and operator-flow mirroring rules.
 
 ## 9. Authority and safety boundaries
