@@ -5,18 +5,21 @@ task_id: MNEMOSYNE-200
 record_id: MNEMOSYNE-200-PR-FINALIZATION-001
 repository: 08822407d/Mnemosyne
 canonical_PR: 268
-PR_state_at_creation: open_draft
+PR_state_at_verification: open_draft
 base_branch: master
 base_sha: 96d7e9172527f56068404f5561a212b8ddbdd29c
 head_branch: mnemosyne-200-guidance-repair-and-urgent-capability-catalog
-head_sha_before_this_record: 03ce80cb3242c928d07cfafdd3d201c4fad775aa
-final_head_sha: pending_self_record_finalization
+substantive_head_before_finalization_record: 03ce80cb3242c928d07cfafdd3d201c4fad775aa
+verified_head_after_initial_finalization_record: 384b2180fe2e169bf99e6411715b7e51f2f22a5f
+current_head_after_this_metadata_update: use_PR_268_head_metadata
 execution_source_modified: false
 loader_modified: false
 Meta_Agent_repository_written: false
 target_repository_written: false
 external_execution_or_quota_used: false
 ```
+
+`verified_head_after_initial_finalization_record` is the mechanically compared branch state that already contained all substantive files plus the first version of this finalization record. This metadata correction necessarily creates a later branch head; the current exact head is obtained from PR #268 metadata rather than using a self-referential value in this file.
 
 ## 1. Pre-PR duplicate recheck
 
@@ -38,9 +41,9 @@ pre_PR_recheck:
 - draft: `true`
 - merge performed: `false`
 
-## 3. Changed-path allowlist
+## 3. Changed-path verification
 
-Expected final paths:
+Verified paths:
 
 ```text
 current/artifact-delivery-and-direct-generation-guard.md
@@ -57,6 +60,17 @@ notes/temporary-ideas-and-urgent-work-alignment-2026-08.md
 notes/urgent-research-and-validation-roadmap-v0.1.md
 ```
 
+```yaml
+branch_comparison_after_initial_finalization_record:
+  base: 96d7e9172527f56068404f5561a212b8ddbdd29c
+  head_checked: 384b2180fe2e169bf99e6411715b7e51f2f22a5f
+  status: ahead
+  ahead_by: 12
+  behind_by: 0
+  changed_files: 12
+  unexpected_paths: []
+```
+
 Protected or deliberately unchanged:
 
 ```text
@@ -71,7 +85,18 @@ current/open-questions.md
 all target repositories/stores
 ```
 
-## 4. Branch-retention preflight
+## 4. Repair verification
+
+```yaml
+repair_verification:
+  stale_pending_MNEMOSYNE_178_status_absent_from_active_user_operation_guard: true
+  Deep_Research_single_canonical_report_and_supported_export_rule_explicit: true
+  broad_complete_response_rule_limited_to_non_Deep_Research: true
+  correction_guard_specific_precedence_names_both_broad_guards: true
+  section_level_machine_index_created: false_intentionally_deferred
+```
+
+## 5. Branch-retention preflight
 
 ```yaml
 branch_retention_preflight:
@@ -84,13 +109,16 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-## 5. Final verification status
+## 6. Final disposition
 
-This record is created after PR #268 and is itself the last expected path addition. The task must now:
-
-1. compare the branch with the pinned base;
-2. verify the exact changed-path allowlist;
-3. verify no competing open MNEMOSYNE-200 PR exists;
-4. update this record with the final head/compare result;
-5. update the PR body to reference this finalization record;
-6. stop for human review without merging or launching external work.
+```yaml
+finalization:
+  exactly_one_canonical_PR: true
+  duplicate_preflight_completed: true
+  changed_path_allowlist_passed: true
+  execution_source_and_loader_unchanged: true
+  Meta_Agent_and_targets_unchanged: true
+  external_runs_or_quota: none
+  automatic_merge: false
+  next_action: human_review_PR_268
+```
