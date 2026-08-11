@@ -21,15 +21,15 @@ The Owner's review identified three different classes of follow-up. They should 
 3. **Real-use evidence gap** — no amount of abstract explanation can establish thresholds or value; collect target evidence first.
 4. **Current provider/product fact** — verify at the time a concrete target decision depends on it.
 
-## 2. Immediate repairs in MNEMOSYNE-202
+## 2. Active-guidance repair preparation in MNEMOSYNE-202
 
-The same PR should implement three low-risk behavior repairs:
+MNEMOSYNE-202 does **not** modify active guards. It freezes an implementation-ready proposal for a later separately authorized task covering three bounded repairs:
 
 - `ACAP-004`: distinguish byte transformation from substantive-content change in source-preservation claims;
 - `ACAP-027`: add the context-sensitive “排版不对/内容排版不对” transfer-format repair trigger;
 - `ACAP-031`: add periodic stale/zombie retention-obligation audit without authorizing deletion.
 
-Other catalogue changes remain non-execution-source candidate revisions.
+The exact contract is `notes/proposed-active-guidance-amendments-from-or01-v0.1.md`. Until a later task updates the named `current/*-guard.md` files and that change is accepted, these three repairs remain proposed rather than active behavior. Other catalogue changes remain non-execution-source candidate revisions.
 
 ## 3. Coverage gap when no specific rule exists — ACAP-010
 
