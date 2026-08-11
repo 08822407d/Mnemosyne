@@ -9,8 +9,9 @@ PR_state_at_creation: open_draft
 base_branch: master
 base_sha: bd15d62b3111a9f2e55aa64151943f7b4d7f8713
 head_branch: mnemosyne-202-record-or01-and-revise-capability-catalog
-head_sha_before_this_record: f0eccd2e346b96362d55b389938df4d388918a0b
-final_head_sha: pending_final_verification
+head_sha_before_initial_finalization_record: f0eccd2e346b96362d55b389938df4d388918a0b
+head_sha_before_this_finalization_update: feefb6bd260b14a83d08b0096ec56a8656482d31
+final_head_sha_after_this_record: recorded_by_final_PR_snapshot
 execution_source_modified: false
 active_guidance_modified: false
 Meta_Agent_repository_written: false
@@ -40,7 +41,7 @@ pre_PR_recheck:
 
 ## 3. Changed-path allowlist
 
-Expected final paths:
+Verified paths:
 
 ```text
 notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md
@@ -54,7 +55,7 @@ notes/codex-task-results/MNEMOSYNE-202-result.md
 notes/codex-task-results/MNEMOSYNE-202-pr-finalization.md
 ```
 
-Protected or deliberately unchanged:
+Protected and verified absent from the diff:
 
 ```text
 current/human-approved-spec.md
@@ -69,20 +70,18 @@ current/open-questions.md
 all target repositories/stores
 ```
 
-## 4. Semantic integrity checks
+## 4. Semantic integrity results
 
-Required:
-
-- OR-01 records all 42 v0.1 items and the Owner's material amendments;
-- catalogue v0.2 contains 41 active entries plus historical retired `ACAP-036`;
-- `ACAP-035` absorbs the portability filter and `ACAP-036` is never reused;
-- `ACAP-028` is provider-neutral output-role semantics rather than a universal ChatGPT product claim;
-- `ACAP-038` centers controlled evolution, not rollback;
-- execution-source terminology distinguishes control logic, broader target truth, and supporting memory;
-- practice-dependent items are marked provisional rather than proven;
-- first-three selection v0.2 remains pending Owner disposition;
-- proposed active-guard repairs are clearly not active;
-- no target, Meta-Agent, product, research, quota, or private-material authorization is implied.
+- OR-01 records the full 42-entry pass and the Owner's material amendments: **PASS**.
+- catalogue v0.2 contains 41 active entries and historical retired `ACAP-036`: **PASS**.
+- `ACAP-035` absorbs promotion plus portability filtering; `ACAP-036` is never reused: **PASS**.
+- `ACAP-028` is provider-neutral output/representation-role semantics rather than a universal ChatGPT fact: **PASS**.
+- `ACAP-038` centers controlled evolution and treats rollback as optional: **PASS**.
+- execution-source terminology distinguishes behavior-control program, broader target truth, and supporting memory: **PASS**.
+- practice-dependent items are labelled provisional/evidence-needed: **PASS**.
+- first-three selection v0.2 remains pending Owner disposition: **PASS**.
+- proposed active-guard repairs are clearly non-active and separately gated: **PASS**.
+- no target, Meta-Agent, product, research, quota, or private-material authorization is implied: **PASS**.
 
 ## 5. Branch-retention preflight
 
@@ -97,25 +96,34 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-## 6. Final verification status
+## 6. Final verification
 
-This record is the last expected path addition. The task must now:
-
-1. compare the branch with current `master`;
-2. verify the exact changed-path allowlist;
-3. verify no competing open PR exists;
-4. verify PR mergeability;
-5. update this record and PR body with final results;
-6. stop for Owner review without merging or launching external work.
+The exact repository checks immediately before this update returned:
 
 ```yaml
 final_verification:
-  branch_vs_base: pending
-  ahead_by: pending
-  behind_by: pending
-  changed_files: pending
-  changed_path_allowlist_exact: pending
-  competing_open_PRs: pending
-  PR_mergeability: pending
-  result: pending
+  branch_vs_base: ahead
+  ahead_by_before_this_update: 9
+  behind_by: 0
+  changed_files: 9
+  changed_path_allowlist_exact: true
+  competing_open_PRs:
+    - 270
+  competing_equivalent_PRs: []
+  exactly_one_canonical_open_PR: true
+  PR_mergeability: true
+  PR_draft: true
+  result: PASS_PENDING_OWNER_REVIEW
 ```
+
+This update changes only this finalization record and therefore adds one final branch commit without changing the path allowlist or semantic scope. The final PR snapshot and body should record the resulting head SHA and total commit count.
+
+## 7. Closeout boundary
+
+The task stops after updating the PR body and final PR snapshot. It does not:
+
+- merge PR #270;
+- implement proposed guard changes;
+- complete OR-02 through OR-09;
+- launch research or target work;
+- write Meta-Agent or target repositories.
