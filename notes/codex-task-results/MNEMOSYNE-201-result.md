@@ -3,12 +3,12 @@
 ```yaml
 task_id: MNEMOSYNE-201
 record_id: MNEMOSYNE-201-RESULT-001
-status: package_complete_pending_PR_creation_and_human_review
+status: package_and_draft_PR_complete_pending_human_review
 repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: ee3a9fc1acc67e2efd5f7269fd77f097d055a97e
 canonical_branch: mnemosyne-201-first-three-owner-review-package
-canonical_PR: pending_creation
+canonical_PR: 269
 execution_source_modified: false
 active_guidance_modified: false
 Meta_Agent_repository_written: false
@@ -25,19 +25,18 @@ After PR #268 merged, the Owner instructed the current Pro conversation to:
 2. prepare sufficient material for a next-tier model to conduct the planned human decisions and answer likely questions accurately;
 3. state whether the current conversation should switch back to a next-tier model and which files that model should read.
 
-This task interprets the instruction as authorization for one bounded Mnemosyne branch and at most one draft PR containing a self-contained clarification/interview package. It does not interpret the instruction as authorization to:
+This task created one bounded Mnemosyne branch and one draft PR containing a self-contained clarification/interview package. It did not authorize or perform:
 
-- merge the PR;
-- perform the next-tier interview before the package is active on `master`;
-- modify execution source or active guidance;
-- write Meta-Agent or any target repository;
-- activate Meta-Agent;
-- create a target repository/store;
-- ingest private code or personal conversations;
-- run Fable, Deep Research, cross-provider validation, or handoff evaluation;
-- consume quota or change provider/product settings.
+- PR merge;
+- the owner-review interview before package merge;
+- execution-source or active-guidance modification;
+- Meta-Agent or target-repository writes;
+- Meta-Agent activation or target creation;
+- private code or personal-conversation ingestion;
+- Fable, Deep Research, cross-provider validation, or handoff-archive evaluation;
+- quota use or provider/product setting changes.
 
-## 2. PR #268 verification
+## 2. PR #268 and repository verification
 
 ```yaml
 PR_268_verification:
@@ -48,25 +47,11 @@ PR_268_verification:
   accessible_open_PRs_at_task_start: []
 ```
 
-The merged `master` contains:
+The merged `master` contains the MNEMOSYNE-200 active-guidance repairs, reusable Agent capability catalogue, first-three-system selection candidate, target-local repository operating model, minimum real-use launch baseline, and provider/product catalogue design.
 
-- the repaired active guidance from MNEMOSYNE-200;
-- the 42-entry reusable Agent capability catalogue;
-- the first-three-system selection candidate;
-- the target-local repository operating model candidate;
-- the minimum real-use launch baseline candidate;
-- the provider/product capability catalogue design.
+## 3. Guidance refresh receipt
 
-## 3. Guidance refresh decision and receipt
-
-A guidance refresh was necessary because this task:
-
-- creates an important repository publication;
-- prepares a cross-model/same-conversation clarification flow;
-- defines an interviewer contract and answer ledger;
-- discusses target truth, privacy, model-capability routing, and future repository work.
-
-The task read current `master` versions of the execution source, loader, required behavior guards, repository-write provenance guard, and single-active-PR lineage guard.
+A refresh was required because this task publishes an important cross-model clarification package and addresses target truth, privacy, model routing, future repository work, and answer-record integrity.
 
 ```yaml
 mnemosyne_guidance_refresh:
@@ -83,7 +68,7 @@ mnemosyne_guidance_refresh:
     - same_conversation_model_switch_preparation
 ```
 
-## 4. Repository lineage preflight
+## 4. Repository lineage
 
 ```yaml
 github_write_lineage_preflight:
@@ -104,7 +89,18 @@ github_write_lineage_preflight:
   decision: create_new_lineage
 ```
 
-## 5. Files created
+```yaml
+canonical_write_lineage:
+  task_id: MNEMOSYNE-201
+  base_branch: master
+  pinned_base_sha: ee3a9fc1acc67e2efd5f7269fd77f097d055a97e
+  canonical_branch: mnemosyne-201-first-three-owner-review-package
+  canonical_PR: 269
+  PR_state: open_draft
+  merge_performed: false
+```
+
+## 5. Artifacts created
 
 Package root:
 
@@ -112,7 +108,7 @@ Package root:
 notes/owner-review-packages/first-three-systems-capability-and-launch-v0.1/
 ```
 
-Files:
+Package files:
 
 ```text
 README.md
@@ -125,72 +121,57 @@ README.md
 07-same-conversation-startup-message.md
 ```
 
-Task record:
+Task records:
 
 ```text
 notes/codex-task-results/MNEMOSYNE-201-result.md
+notes/codex-task-results/MNEMOSYNE-201-pr-finalization.md
 ```
 
-## 6. Package design
-
-### Decision scope
+## 6. Package scope and design
 
 The package prepares nine contextualized Owner decision groups:
 
-- catalogue usability;
-- shared minimum;
-- Meta-Agent additions;
-- code-library additions;
-- language-teacher additions;
-- target-local repository/store model;
-- structured truth and private-original storage;
-- first real-use order;
-- provider/product fact deferral and verification triggers.
+1. catalogue usability;
+2. shared minimum;
+3. Meta-Agent additions;
+4. code-library additions;
+5. language-teacher additions;
+6. target-local repository/store model;
+7. structured truth and private-original storage;
+8. first real-use order;
+9. provider/product fact deferral and verification triggers.
 
-### Question quality
+Every material question contains background, downstream consequences, explained options, a rejectable recommendation where appropriate, free-form/reject/defer paths, a safe default on deferral, and escalation conditions.
 
-Each question contains:
+The package visibly proposes lighter classifications than the broad MNEMOSYNE-200 candidate where appropriate:
 
-- background and current state;
-- downstream consequence;
-- explained options and trade-offs;
-- a planner recommendation where appropriate;
-- free-form/reject/defer paths;
-- safe default on deferral;
-- frontier/product-fact escalation conditions.
+- Meta-Agent independent frontier challenge is triggered, not invoked for every design;
+- code-library PR/provenance/cross-repository controls are triggered by the selected toolchain;
+- language-teacher research/provenance controls are triggered by formal assessment, method change, product decision, or longitudinal review.
 
-### Planner revisions to MNEMOSYNE-200 selections
+These are planner recommendations for Owner review, not silent changes to source candidates.
 
-The package does not silently modify the source candidate. It visibly recommends lighter classifications for human review:
+## 7. Q&A and reading profile
 
-- Meta-Agent independent frontier challenge becomes a triggered capability rather than an activity invoked on every design;
-- code-library PR/provenance/cross-repository controls become triggered by the selected toolchain, while authorization and capability-selection semantics remain initial;
-- language-teacher research/provenance controls become triggered by formal assessment, method change, product decision, or longitudinal review, while clarification, correction, no-profiling, and capability selection remain initial.
+The package includes:
 
-The Owner can keep the original PR #268 classification or accept another arrangement.
+- concise explanations for all 42 candidate capabilities;
+- capability-versus-implementation, required-versus-always-loaded, preservation-versus-runtime, and candidate-versus-approved distinctions;
+- target-specific risks and omissions;
+- 25 likely questions with bounded answers;
+- explicit product-fact, missing-artifact, and frontier-reentry routes.
 
-### Q&A support
-
-The package provides:
-
-- a compact reference for all 42 candidate capabilities;
-- explanation of capability versus implementation, required versus always loaded, source preservation versus runtime context, and candidate versus approved truth;
-- target-specific risk explanations;
-- 25 likely questions and bounded answers;
-- explicit items that cannot be answered without current product verification or frontier adjudication.
-
-### Reading profile
-
-Required next-tier reading:
+Required next-tier initial reading:
 
 - `current/human-approved-spec.md`;
-- eight package files.
+- the eight package files.
 
-Full catalogues and design sources are on-demand only. Root navigation, current route files, old handoffs, task results, research reports, and complete source archives are excluded by default.
+The complete source catalogues and design files are on-demand only. Root navigation, current-route files, old handoffs, task archives, research reports, and complete historical sources are excluded by default.
 
-The package explicitly says the next-tier interviewer should not run the full Mnemosyne guidance loader for this frozen clarification task. If the task changes into repository writing, external research, target work, or another action class, it must stop and load the then-applicable current guidance.
+The next-tier interviewer should not run the full Mnemosyne guidance loader for this frozen clarification task. If the task changes into repository writing, external research, target work, or another action class, it must stop and load the then-applicable current guidance.
 
-## 7. Model-capability decision
+## 8. Model-capability decision
 
 ```yaml
 capability_split:
@@ -217,13 +198,13 @@ capability_split:
     - migration_and_automatic_propagation_policy
 ```
 
-The bounded owner interview is assessed as `NEXT_TIER_SUFFICIENT_CANDIDATE` after this package merges. This is not proof of reliability; package identity loss, invented facts, silent selection, correction loss, or authority/privacy errors require stop and later review.
+The bounded interview is a `NEXT_TIER_SUFFICIENT_CANDIDATE` after PR #269 merges. Package identity loss, invented facts, silent option selection, lost corrections, or authority/privacy errors require stop and later review.
 
-## 8. Recommendation on model switching and file reading
+## 9. Model-switch recommendation
 
 ```yaml
 recommendation:
-  switch_current_conversation_to_next_tier_after_package_merge: yes
+  switch_current_conversation_to_next_tier_after_PR_269_merge: yes
   create_new_conversation: no
   start_handoff: no
   send_exact_startup_message: yes
@@ -238,36 +219,20 @@ Exact startup message:
 notes/owner-review-packages/first-three-systems-capability-and-launch-v0.1/07-same-conversation-startup-message.md
 ```
 
-The next-tier model should read only the execution source and package required set initially, then use the source map for specific on-demand questions.
+The interview returns a visible answer ledger and final result in chat. Saving confirmed results remains separately gated by a new exact repository-writing instruction.
 
-## 9. Cold-source receipt
+## 10. Cold-source receipt
 
-This planning task did not read:
+This planning task did not read complete historical conversations, full research reports, old handoff packages, unrelated task-result archives, paused FCV/Fable materials, target private source, or the historical Meta-Agent bootstrap tree.
 
-- complete historical conversations;
-- full research reports;
-- old handoff packages;
-- unrelated task-result archives;
-- paused FCV/Fable validation materials;
-- target project source/private material;
-- historical Meta-Agent bootstrap tree.
+It used current active guidance, current candidate catalogue/design artifacts, the clarification template, PR #268 merge state, and the Owner's current instruction.
 
-It used current active guidance, current candidate catalogue/design artifacts, the current clarification template, PR #268 merge state, and the Owner's current instruction.
-
-## 10. Design rationale
+## 11. Design rationale
 
 ```yaml
 design_rationale:
   rationale_id: MNEMOSYNE-201-RATIONALE-001
   design_or_decision_ref: MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-001
-  source_conversation_task_and_artifact_refs:
-    - current_conversation_user_instruction_after_PR_268_merge
-    - notes/reusable-agent-capability-catalog-v0.1.md
-    - notes/first-three-system-capability-selection-v0.1.md
-    - notes/target-local-repository-operating-model-candidate-v0.1.md
-    - notes/minimum-real-use-launch-baseline-candidate-v0.1.md
-    - notes/provider-product-capability-catalog-candidate-v0.1.md
-    - notes/templates/frontier-planned-clarification-package-v0.1.md
   problem_and_user_goal: preserve_frontier_reasoning_for_open_work_while_enabling_accurate_low_burden_owner_decisions_and_QA_under_a_next_tier_model
   alternatives_considered:
     - option: next_tier_reads_all_source_files_and_full_Mnemosyne_guidance
@@ -279,10 +244,6 @@ design_rationale:
     - option: self_contained_package_plus_on_demand_sources_and_semantic_escalation
       disposition: selected
   selection_reason: keeps_the_interview_bounded_and_answerable_without_hiding_high_impact_or_current_fact_limits
-  assumptions_and_unknowns:
-    - same_conversation_model_switch_preserves_access_to_GitHub_connector_and_current_user_interaction
-    - next_tier_model_can_read_the_package_paths_from_current_master
-    - next_tier_interviewer_reliability_remains_to_be_observed
   known_risks:
     - package_length_may_still_create_context_burden
     - interviewer_may_treat_recommendations_as_defaults
@@ -290,20 +251,19 @@ design_rationale:
     - package_can_become_stale_after_later_catalogue_or_guidance_changes
   validation_or_falsification_plan:
     - observe_receive_integrity_and_required_file_loading
-    - measure_whether_ordinary_questions_are_answered_from_package_without_invention
+    - measure_whether_ordinary_questions_are_answered_without_invention
     - record_escalation_correctness_and_answer_corrections
     - compare_user_burden_with_a_frontier_only_interview
     - revise_or_reject_next_tier_interviewer_route_on_material_failure
-  affected_existing_artifacts_or_targets:
-    - none_modified
-  migration_rebuild_or_compatibility_implication: package_must_be_refreshed_if_source_catalogue_or_selection_changes_materially_before_use
+  affected_existing_artifacts_or_targets: []
+  migration_rebuild_or_compatibility_implication: refresh_package_if_source_catalogue_or_selection_changes_materially_before_use
   owner_decision_ref: current_conversation_after_PR_268_merge
   reviewer_and_independence_limitations:
     - prepared_and_self_reviewed_in_same_Pro_conversation
     - no_independent_provider_review
 ```
 
-## 11. Run context v0.2
+## 12. Run context v0.2
 
 ```yaml
 run_context:
@@ -311,11 +271,9 @@ run_context:
     record_version: v0.2
     task_id: MNEMOSYNE-201
     record_id: MNEMOSYNE-201-RUN-001
-
   date_or_window:
     started_at: 2026-08-11
     completed_or_recorded_at: 2026-08-11
-
   action:
     actor: ChatGPT
     actor_kind: agent
@@ -326,7 +284,6 @@ run_context:
         - class: operator_reported
           ref: current_conversation
           claim_scope: current_segment_reported_as_Pro_after_a_prior_next_tier_segment
-
   product_surface:
     value: standard_ChatGPT_conversation_with_GitHub_connector_actions
     evidence:
@@ -334,7 +291,6 @@ run_context:
         ref: current_task_GitHub_actions
         observed_or_accessed_at: 2026-08-11
         claim_scope: repository_read_and_write_surface
-
   operator_selection:
     verbatim: Pro
     evidence:
@@ -342,11 +298,9 @@ run_context:
         ref: current_conversation_user_message
         observed_or_accessed_at: 2026-08-11
         claim_scope: operator_visible_selection_for_package_preparation
-
   backend:
     status: unknown_or_not_attestable
     reason: consumer_chat_visible_selection_does_not_attest_the_exact_served_backend
-
   artifacts:
     status: recorded
     refs:
@@ -362,7 +316,6 @@ run_context:
           status: not_available_before_merge
           type: git_blob_sha
           value: pending_final_branch_verification
-
   user_authorization:
     status: authorized
     actor: user
@@ -386,7 +339,6 @@ run_context:
         claim_scope: task_local_package_preparation_authorization
     expires_with_task: true
     not_future_precedent: true
-
   limitations:
     - next_tier_interviewer_not_yet_executed_or_validated
     - no_current_provider_product_facts_verified
@@ -395,7 +347,7 @@ run_context:
   omissions: []
 ```
 
-## 12. Branch-retention preflight
+## 13. Branch-retention preflight
 
 ```yaml
 branch_retention_preflight:
@@ -408,11 +360,11 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-## 13. Safe next action
+## 14. Safe next action
 
 ```yaml
 safe_next_action:
-  current: complete_final_diff_and_duplicate_PR_recheck_then_create_one_draft_PR
+  current: human_review_and_merge_or_request_changes_for_PR_269
   after_merge: switch_same_conversation_to_next_tier_and_send_07_startup_message
   interview_writeback: separately_gated_after_owner_confirms_final_summary
   external_research_or_target_work: false
