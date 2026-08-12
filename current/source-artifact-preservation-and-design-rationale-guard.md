@@ -5,13 +5,18 @@
 ```yaml
 guard_id: MNEMOSYNE-SOURCE-ARTIFACT-PRESERVATION-RATIONALE-001
 created_by_task: MNEMOSYNE-198
-status: active_after_MNEMOSYNE_198_merge
+last_amended_by_task: MNEMOSYNE-203
+status: active_after_MNEMOSYNE_203_merge
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
+amendment_source:
+  - notes/proposed-active-guidance-amendments-from-or01-v0.1.md
+  - notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md
 scope_precedence:
   controls_specifically:
     - source_artifact_preservation_claims
     - exact_vs_normalized_copy_semantics
+    - byte_change_vs_substantive_content_change_semantics
     - externally_stated_design_rationale_capture
     - default_on_demand_reading_of_cold_originals
   complements:
@@ -25,12 +30,13 @@ scope_precedence:
 
 Mnemosyne cannot depend on the human user remembering every preservation or provenance step during long-running design work. Important conversations and tasks must themselves know when to preserve the source material that future redesign, migration, dispute review or stronger-model re-analysis may require.
 
-This guard addresses four distinct problems:
+This guard addresses five distinct problems:
 
 1. an uploaded research report, task file, conversation export or other source artifact may be summarized or normalized without preserving the exact supplied file;
 2. a repository record may call a readable copy an “original” even when byte identity was not proved;
-3. important design choices may survive only as final rules, scattered dialogue or model output, without a compact record of the problem, alternatives and selection reason;
-4. preserving source material may be misread as requiring every ordinary task to load and analyze large historical files.
+3. a byte-level transformation such as line-ending or encoding normalization may be described imprecisely as a substantive content rewrite, or substantive equivalence may be assumed without review;
+4. important design choices may survive only as final rules, scattered dialogue or model output, without a compact record of the problem, alternatives and selection reason;
+5. preserving source material may be misread as requiring every ordinary task to load and analyze large historical files.
 
 The intended result is **preserve first, read on demand**: irreplaceable source material remains recoverable, while normal runtime work uses the smallest relevant current working set.
 
@@ -74,6 +80,45 @@ Meanings:
 - `SOURCE_UNAVAILABLE`: the source could not be obtained or verified.
 
 A lower level must never be described as a higher one. The unqualified words `original`, `exact copy`, `lossless`, `byte-identical` and `fully reconstructable` are prohibited unless mechanically proved for the stated artifact.
+
+## 3A. Byte identity and substantive-content transformation assessment
+
+When a stored or delivered derivative differs from the received source, assess byte identity and substantive content separately rather than collapsing both into the word “modified.”
+
+Use this record when the distinction is material:
+
+```yaml
+source_transformation_assessment:
+  byte_identity:
+    status: unchanged | changed | unknown
+    evidence_refs: []
+  transformation_class:
+    exact_move_or_rename |
+    line_ending_normalization |
+    encoding_normalization |
+    wrapping_or_container_normalization |
+    substantive_content_edit |
+    mixed |
+    unknown
+  substantive_content:
+    status: unchanged_as_reviewed | changed | not_fully_reviewed | unknown
+    review_scope:
+  preservation_level_before:
+  preservation_level_after:
+  exact_received_source_retained_separately: true | false | not_applicable
+  limitations: []
+```
+
+Rules:
+
+1. Do not use an unqualified statement such as “the content was modified” when the only established fact is a byte-level normalization.
+2. Prefer precise wording such as: “Bytes changed because line endings or encoding were normalized; no substantive-content change was found within the stated review scope.”
+3. `substantive_content.status: unchanged_as_reviewed` does not restore exact byte identity and does not permit an exact-preservation claim for the derivative.
+4. If substantive equivalence was not reviewed, use `not_fully_reviewed`; do not infer equivalence merely from the stated transformation command or expected tool behavior.
+5. Preserve the exact received source separately when it is material, safe, authorized, proportionate and feasible.
+6. An exact move or rename may preserve bytes even though the repository path changes; record both identities and paths when needed.
+7. Mixed transformations must disclose both normalization and substantive edits rather than choosing the less consequential label.
+8. No new preservation level is created by this assessment. `NORMALIZED_READABLE_COPY` remains the appropriate level for a normalized derivative whose bytes differ from the received source.
 
 ## 4. Exact attachment-intake rule
 
@@ -244,6 +289,7 @@ Before claiming exact preservation, verify as applicable:
 - original path is absent only after a verified move when relocation is intended;
 - readable derivative and exact original are labelled separately;
 - no unsafe material entered a public or unverified repository;
+- byte identity and substantive-content status are stated separately when normalization or editing occurred;
 - the result record names the preservation level and limitations.
 
 A Git blob hash, SHA-256 or reconstruction test proves bytes only. It does not prove correctness, report quality, source authenticity, producer identity or hidden model identity.
@@ -258,5 +304,6 @@ This guard does not:
 - make raw material an execution source;
 - move private material into public Git;
 - promise that ChatGPT's internal storage representation is byte-identical to a user's local file without comparison evidence;
+- treat byte-level normalization as a substantive edit or substantive equivalence as proof of exact preservation;
 - require full historical rationale reconstruction;
 - replace task-local privacy, authority, versioning, migration, review or rollback decisions.
