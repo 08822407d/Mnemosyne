@@ -9,7 +9,8 @@ amended_by_tasks:
   - MNEMOSYNE-155
   - MNEMOSYNE-185
   - MNEMOSYNE-200
-status: active_after_MNEMOSYNE_200_merge
+  - MNEMOSYNE-203
+status: active_after_MNEMOSYNE_203_merge
 applies_to:
   - Mnemosyne_related_ChatGPT_conversations
   - Codex_tasks
@@ -21,6 +22,10 @@ user_decision_provenance:
   - current_maintenance_conversation_2026_07_25_complete_response_file_requirement
   - current_maintenance_conversation_2026_07_31_inline_operator_flow_requirement
   - current_maintenance_conversation_after_MNEMOSYNE_199_V0_repair_selection
+  - MNE_FIRST_THREE_SYSTEMS_OWNER_REVIEW_OR_01_ACAP_027_amendment
+amendment_source:
+  - notes/proposed-active-guidance-amendments-from-or01-v0.1.md
+  - notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md
 tracked_issues:
   - 170
   - 171
@@ -28,12 +33,13 @@ tracked_issues:
 
 ## 1. Purpose
 
-Prevent four recurring workflow failures:
+Prevent five recurring workflow failures:
 
 1. long, structured transfer content is pasted into chat and loses Markdown/YAML/code-block integrity or degrades browser performance;
-2. a user-requested low-risk downloadable artifact is promised for a later response instead of being created immediately;
-3. a task requires the operator to return another conversation or Work task's complete final response, but the taskbook requests only named result artifacts, forcing the operator to send an extra message solely to obtain a downloadable complete-response copy;
-4. a cross-conversation task, Deep Research task, Fable task, Codex task, or new-chat work package is stored correctly in repository files, but the user is forced to browse the repository merely to discover the actual operating procedure.
+2. after such transfer content, a short user correction such as “排版不对” is mistaken for an aesthetic editing request instead of a likely transfer-structure failure;
+3. a user-requested low-risk downloadable artifact is promised for a later response instead of being created immediately;
+4. a task requires the operator to return another conversation or Work task's complete final response, but the taskbook requests only named result artifacts, forcing the operator to send an extra message solely to obtain a downloadable complete-response copy;
+5. a cross-conversation task, Deep Research task, Fable task, Codex task, or new-chat work package is stored correctly in repository files, but the user is forced to browse the repository merely to discover the actual operating procedure.
 
 ## 2. Definitions
 
@@ -152,6 +158,29 @@ Rules:
 9. The operator flow in the response and the repository/download artifact must agree. A material discrepancy blocks execution until corrected.
 10. The response must preserve all required stop conditions and prohibited actions; brevity may not remove safety, privacy, authority, independence, or integrity gates.
 
+## 3C. Context-sensitive transfer-format repair shortcut
+
+When all of the following are true:
+
+- the immediately preceding Agent response contained content intended for copying or transfer, especially Markdown, YAML, code blocks, task prompts, or a long structured package;
+- the user responds with a short phrase equivalent to `排版不对`, `内容排版不对`, `格式坏了`, or `复制过去格式不对`;
+- no stronger context indicates a different request;
+
+interpret the leading hypothesis as **transfer-structure damage**, not ordinary aesthetic editing.
+
+Required response:
+
+1. Identify the likely affected artifact or content from the immediate context.
+2. Preserve its substantive semantics, section order, identifiers, instructions and code/data structure; do not silently redesign it while repairing presentation.
+3. Repair it using a verified downloadable file when the file-first rule applies; otherwise provide one complete, correctly fenced block whose boundaries are unambiguous.
+4. Avoid repeating the entire design explanation unless it is needed to resolve an actual ambiguity.
+5. State briefly which structural failure was repaired, such as lost fencing, broken indentation, list nesting, line wrapping or YAML/code-block boundary damage.
+6. Ask at most one focused clarification when several materially different prior transfer artifacts could reasonably be meant.
+7. Do not claim that a repaired file exists until creation and location are verified.
+8. If the supplied content may already have lost or changed substantive text, disclose that limitation and request the intact source rather than pretending a formatting repair reconstructs missing semantics.
+
+This is a context-sensitive shortcut, not a global keyword command. If the prior message did not contain transfer content, interpret the user's ordinary formatting request from the actual context.
+
 ## 4. Same-response generation rule
 
 When the user explicitly requests a file artifact, generate it in the same response if:
@@ -182,7 +211,8 @@ Before stating that a file was created or delivered, verify as far as the availa
 - the full long body was not unnecessarily duplicated in chat;
 - when the non-Deep-Research complete-response transfer-file rule applies, the required complete-response file was actually created and is distinguishable from the named substantive artifacts;
 - when Deep Research transfer is required, the response requests a supported export of the single canonical report rather than claiming an unverified second file exists;
-- when the same-response operator-flow rule applies, the response actually contains the complete operating procedure and does not rely only on a repository pointer.
+- when the same-response operator-flow rule applies, the response actually contains the complete operating procedure and does not rely only on a repository pointer;
+- when a context-sensitive format repair was requested, the repaired artifact preserves the intended semantics and structural boundaries within the verified review scope.
 
 Never invent a sandbox path, repository path, attachment, successful file creation, or successful operator-package delivery.
 
@@ -227,7 +257,8 @@ This guard does not:
 - change Meta-Agent authority, no-write policy, or `HO-GUIDANCE-001`;
 - authorize background work or future delivery promises;
 - close Issue #170 or #171 without behavioral verification;
-- make an unmerged task artifact active merely because its operator flow was mirrored in chat.
+- make an unmerged task artifact active merely because its operator flow was mirrored in chat;
+- permit a format-repair shortcut to alter substantive requirements or restore missing source text without evidence.
 
 ## 10. Supersession and historical records
 

@@ -1,19 +1,23 @@
 # PR Merge and Post-Merge Branch Retention Guard
 
-> User-approved Mnemosyne behavior guard for making branch-retention requirements visible when a response asks the user to review or merge a pull request, and for explicitly releasing previously retained branches when their dependency ends. This file is not a standalone execution source; `current/human-approved-spec.md` remains Mnemosyne's only execution source.
+> User-approved Mnemosyne behavior guard for making branch-retention requirements visible when a response asks the user to review or merge a pull request, explicitly releasing previously retained branches when their dependency ends, and auditing retained-branch obligations for stale or zombie states. This file is not a standalone execution source; `current/human-approved-spec.md` remains Mnemosyne's only execution source.
 
 ```yaml
 guard_id: MNEMOSYNE-PR-MERGE-BRANCH-DISPOSITION-001
-guard_version: v0.2
+guard_version: v0.3
 created_by_task: MNEMOSYNE-196
-last_amended_by_task: MNEMOSYNE-197
-status: active_after_MNEMOSYNE_197_merge
+last_amended_by_task: MNEMOSYNE-203
+status: active_after_MNEMOSYNE_203_merge
 execution_source: current/human-approved-spec.md
 execution_source_modified: false
+amendment_source:
+  - notes/proposed-active-guidance-amendments-from-or01-v0.1.md
+  - notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md
 applies_to:
   - Mnemosyne_conversations_that_ask_the_user_to_review_or_merge_a_repository_PR
   - Mnemosyne_repository_tasks
   - Mnemosyne_target_delivery_tasks_when_this_guard_is_explicitly_loaded
+  - periodic_manual_or_automated_Mnemosyne_branch_retention_obligation_audits
 user_default:
   when_no_prominent_retention_instruction_is_given: branch_may_be_deleted_after_merge
 user_facing_asymmetry:
@@ -26,14 +30,15 @@ user_facing_asymmetry:
 
 A PR head branch may need to remain after merge because another task, comparison, replay, external Agent, release process, post-merge verification, or rollback rehearsal still depends on the live branch ref. If that requirement is buried in analysis or omitted, the user may reasonably delete the branch immediately after merging.
 
-The opposite problem is also real: routinely telling the user that every ordinary merged branch may be deleted adds noise, while branches previously marked “retain” may remain indefinitely after their real dependency has ended.
+The opposite problem is also real: routinely telling the user that every ordinary merged branch may be deleted adds noise, while branches previously marked “retain” may remain indefinitely after their real dependency ended or the responsible conversation stopped checking them.
 
-The Owner therefore establishes two linked rules:
+The Owner therefore establishes three linked rules:
 
 1. **Silence means ordinary deletion is allowed after merge.**
 2. **A prior explicit retention instruction must later receive an explicit release notice when retention is no longer needed.**
+3. **Explicit retention obligations may be periodically audited so stale, satisfied, unclear, missing-dependency, or missing-branch states do not remain invisible.**
 
-Branch retention is never implicit, and branch release after a prior retention instruction is never implicit.
+Branch retention is never implicit, branch release after a prior retention instruction is never implicit, and an audit never creates automatic deletion authority.
 
 ## 2. User-facing rule before merge
 
@@ -137,6 +142,41 @@ The obligation should be recorded in the task result or another durable route-st
 
 Do not create a permanent central registry merely for ordinary branches. Track only branches that received an explicit retention instruction.
 
+## 4A. Periodic retention-obligation audit
+
+A periodic manual or automated maintenance task may inspect explicit active retention obligations to detect stale or zombie states. It must use a bounded audit record such as:
+
+```yaml
+branch_retention_obligation_audit:
+  audit_id:
+  repository:
+  observed_at:
+  active_obligations_checked: []
+  obligation_results:
+    - obligation_id:
+      branch:
+      branch_exists:
+      stated_reason:
+      retain_until:
+      responsible_route_or_task:
+      gate_status: not_reached | reached | unclear | dependency_missing
+      unique_unpreserved_work_status:
+      disposition: keep | release_notice_required | clarify | incident
+  repository_writes_or_deletions_authorized: false
+```
+
+Rules:
+
+1. Audit only obligations that were explicitly created; do not turn every merged branch into a permanent retention-registry item.
+2. The audit may identify stale obligations, satisfied gates, unclear gates, missing dependencies, missing responsible routes, or branches that no longer exist.
+3. The audit does not authorize branch deletion, obligation closure, repository writes, or silent extension of a retention period.
+4. A reached release gate requires verification that no unique unpreserved work remains and then the explicit user-facing release notice required by §5.
+5. An unclear gate or missing dependency is routed to the responsible route or Owner for clarification; it must not be silently kept forever merely because the audit cannot decide.
+6. A branch that is missing while its obligation remains active is an incident candidate. Do not mark the obligation cleanly released merely because the branch cannot be found.
+7. If the stated reason remains valid and the gate is not reached, record `keep` without creating a new user-facing retention notice unless the existing instruction must be corrected or transferred.
+8. Audit cadence is repository- and Owner-specific. It should be informed by actual obligation volume, branch lifetime, repository automation, and observed stale-state risk rather than a universal schedule.
+9. Automated maintenance may enumerate and assess evidence, but any deletion or other external side effect remains separately authorized and verified.
+
 ## 5. Mandatory release notice
 
 When a previously retained branch reaches its release gate, the responsible Mnemosyne response must explicitly tell the user that the earlier retention requirement has ended.
@@ -203,13 +243,16 @@ Important repository-writing task records should include:
 - whether an explicit retention obligation was created;
 - any retention reason, gate, responsible route, and notice reference;
 - whether an immutable commit or artifact can replace the live branch;
+- any periodic audit record when an audit was actually performed;
+- any stale/zombie, unclear-gate, missing-dependency, or missing-branch finding;
 - any later release-to-delete record.
 
 PR finalization rules:
 
 - if retention is required, record and surface it prominently;
 - if retention is not required, record the internal `SILENT_DEFAULT_DELETE_AFTER_MERGE` conclusion without adding a user-facing deletion instruction;
-- if a prior retention obligation is released, create the explicit user-facing release notice and close the obligation.
+- if a prior retention obligation is released, create the explicit user-facing release notice and close the obligation;
+- if an audit identifies an unclear or incident state, do not present it as a clean release or routine deletion candidate.
 
 ## 8. Valid reasons to retain a branch
 
@@ -233,14 +276,15 @@ This guard complements:
 - `current/run-context-and-pr-provenance-guard.md` for repository-action evidence;
 - `current/user-operation-next-step-capability-and-intent-guard.md` for opening operation placement.
 
-When rules conflict, the stricter fail-closed action applies. None of these guards authorizes merge, retention, or deletion.
+When rules conflict, the stricter fail-closed action applies. None of these guards authorizes merge, retention, deletion, or audit-triggered side effects.
 
 ## 10. Boundaries
 
 This guard does not:
 
-- authorize a PR merge, branch deletion, branch retention, tag creation, or repository write;
+- authorize a PR merge, branch deletion, branch retention, tag creation, audit-triggered repository write, or any other repository side effect;
 - require a deletion notice for every ordinary merged branch;
+- require a permanent registry for ordinary branches that never received a retention notice;
 - preserve unique unmerged work automatically;
 - replace branch-protection rules or repository policy;
 - make a branch an execution source, target truth, or authoritative artifact;
