@@ -10,8 +10,9 @@ source_master_before_task: 91efad2f2a2f22e99223c49460d27bd9fcbfdb68
 recovered_base_branch: master
 recovered_base_sha: 89bd9ef20af2844c2e762bc6ceec73c98f2cef68
 head_branch: mnemosyne-204-refresh-or02-or09-owner-review-package
-head_sha_before_this_record: f87c5a76294e2701fd7a36e98befdc675e0bcb5e
-final_head_sha: pending_final_verification
+head_sha_before_initial_finalization_record: f87c5a76294e2701fd7a36e98befdc675e0bcb5e
+head_sha_before_this_update: 85b81763c92277993eff3de1739d5ccbb54d54ad
+final_head_sha_after_this_record: recorded_by_final_PR_snapshot
 execution_source_modified: false
 active_guidance_modified: false
 Meta_Agent_repository_written: false
@@ -72,7 +73,7 @@ The recovery restored the current master tree but did not remove the incident co
 
 ## 3. Changed-path allowlist
 
-Expected final paths:
+Verified final paths:
 
 ```text
 notes/owner-review-packages/first-three-systems-capability-and-launch-v0.2/README.md
@@ -87,7 +88,7 @@ notes/codex-task-results/MNEMOSYNE-204-result.md
 notes/codex-task-results/MNEMOSYNE-204-pr-finalization.md
 ```
 
-Protected or deliberately unchanged:
+Protected and verified absent from the PR diff:
 
 ```text
 current/human-approved-spec.md
@@ -102,22 +103,22 @@ current/open-questions.md
 all target repositories/stores
 ```
 
-## 4. Required package integrity checks
+## 4. Package integrity results
 
-- package ID is consistently `MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-002`;
-- question scope is `OR-02` through `OR-09`;
-- `OR-01` is recorded complete and is not silently reopened;
-- capability catalogue and first-three selection both reference v0.2;
-- the package provides the detailed next-tier answer guide requested by the Owner;
-- the answer guide explains checklist meaning, failure prevented, minimum implementation, target relevance, omission effect, maturity, and escalation;
-- the workbook supports item-by-item review on request;
-- the interviewer contract forbids repository writes, activation, private ingestion, product claims from memory, and external runs;
-- storage questions separate structured truth, work code, complete private originals, and non-authoritative backups;
-- preparation is separated from activation and bounded real use;
-- current product facts use explicit verification routing;
-- the startup message begins at `OR-02-A` and does not import another route;
-- cold-source exclusions and on-demand read disclosure are present;
-- no target or Meta-Agent adoption is implied.
+- package ID is consistently `MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-002`: **PASS**;
+- question scope is `OR-02` through `OR-09`: **PASS**;
+- `OR-01` is recorded complete and is not silently reopened: **PASS**;
+- capability catalogue and first-three selection reference v0.2: **PASS**;
+- the detailed next-tier answer guide requested by the Owner is present: **PASS**;
+- the guide explains meaning, prevented failure, minimum implementation, target relevance, omission effect, maturity, and escalation: **PASS**;
+- the workbook supports OR-01-style item-by-item review on request: **PASS**;
+- the interviewer contract forbids repository writes, activation, private ingestion, product claims from memory, and external runs: **PASS**;
+- storage questions separate structured truth, work code, complete private originals, and non-authoritative backups: **PASS**;
+- preparation is separated from activation and bounded real use: **PASS**;
+- current product facts use explicit verification routing: **PASS**;
+- the startup message begins at `OR-02-A` and does not import another route: **PASS**;
+- cold-source exclusions and on-demand read disclosure are present: **PASS**;
+- no target or Meta-Agent adoption is implied: **PASS**.
 
 ## 5. Branch-retention preflight
 
@@ -133,35 +134,34 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-## 6. Final verification status
+## 6. Final verification before this update
 
-This record is the last expected path addition. Before the user-facing merge instruction, the task must:
-
-1. compare the final branch with current master;
-2. verify the exact ten-path allowlist;
-3. verify master still contains no package files outside the PR diff;
-4. verify no competing open PR exists;
-5. verify PR #272 is the sole canonical lineage;
-6. verify package identities and source references;
-7. verify PR mergeability or disclose recalculation/unknown state;
-8. update this record and the PR body with the final snapshot.
+Exact checks immediately before this finalization update returned:
 
 ```yaml
-final_verification:
-  branch_vs_base: pending
-  ahead_by: pending
-  behind_by: pending
-  changed_files: pending
-  changed_path_allowlist_exact: pending
-  competing_open_PRs: pending
-  package_integrity: pending
-  PR_mergeability: pending
-  result: pending
+final_verification_before_this_update:
+  branch_vs_base: ahead
+  ahead_by: 3
+  behind_by: 0
+  changed_files: 10
+  changed_path_allowlist_exact: true
+  competing_open_PRs:
+    - 272
+  exactly_one_canonical_open_PR: true
+  canonical_open_PR: 272
+  package_integrity: PASS
+  PR_mergeability: true
+  PR_draft: true
+  head_sha: 85b81763c92277993eff3de1739d5ccbb54d54ad
+  recovered_master_tree_has_no_net_difference_from_PR_271_merge: true
+  result: PASS_PENDING_OWNER_REVIEW
 ```
+
+This update changes only this finalization record and therefore preserves the exact path allowlist and package scope. The final PR snapshot and body record the resulting head SHA and commit count. GitHub may temporarily recalculate mergeability after this final commit; the user-facing instruction must disclose any unknown state rather than claiming a conflict.
 
 ## 7. Closeout boundary
 
-The task stops after final verification and PR-body refresh. It does not:
+The task stops after final branch comparison and PR-body refresh. It does not:
 
 - merge PR #272;
 - switch the conversation model;
