@@ -9,8 +9,9 @@ PR_state_at_creation: open_draft
 base_branch: master
 base_sha: 214be58743d608f50653933418ae1842fa237633
 head_branch: mnemosyne-203-implement-or01-active-guidance-repairs
-head_sha_before_this_record: a62ef026d606edbcbc220bebac2bd749628c5ec4
-final_head_sha: pending_final_verification
+head_sha_before_initial_finalization_record: a62ef026d606edbcbc220bebac2bd749628c5ec4
+head_sha_before_this_update: 0c557412d084f53a4a4641ffe14454510603cb66
+final_head_sha_after_this_record: recorded_by_final_PR_snapshot
 execution_source_modified: false
 active_guidance_modified: true
 loader_modified: false
@@ -41,7 +42,7 @@ pre_PR_recheck:
 
 ## 3. Changed-path allowlist
 
-Expected final paths:
+Verified paths:
 
 ```text
 current/source-artifact-preservation-and-design-rationale-guard.md
@@ -51,7 +52,7 @@ notes/codex-task-results/MNEMOSYNE-203-result.md
 notes/codex-task-results/MNEMOSYNE-203-pr-finalization.md
 ```
 
-Protected or deliberately unchanged:
+Protected and verified absent from the diff:
 
 ```text
 current/human-approved-spec.md
@@ -69,18 +70,18 @@ current/open-questions.md
 all target repositories/stores
 ```
 
-## 4. Required semantic checks
+## 4. Semantic integrity results
 
-- source-preservation guard records byte identity and substantive-content status separately;
-- normalization never regains exact-byte status merely because substantive content appears unchanged;
-- `not_fully_reviewed` is available when semantic equivalence was not actually checked;
-- artifact-delivery guard recognizes immediate-context transfer-format corrections without a global keyword-only command;
-- format repair preserves substantive semantics and does not claim to reconstruct missing text;
-- branch-retention guard audits only explicit obligations;
-- branch audit cannot delete, close obligations, write the repository, or silently extend unclear retention;
-- reached release gates still require unique-work verification and a visible release notice;
-- no execution source or loader diff;
-- no target or Meta-Agent propagation.
+- source-preservation guard records byte identity and substantive-content status separately: **PASS**;
+- normalization never regains exact-byte status merely because substantive content appears unchanged: **PASS**;
+- `not_fully_reviewed` is available when semantic equivalence was not actually checked: **PASS**;
+- artifact-delivery guard recognizes immediate-context transfer-format corrections without a global keyword-only command: **PASS**;
+- format repair preserves substantive semantics and does not claim to reconstruct missing text: **PASS**;
+- branch-retention guard audits only explicit obligations: **PASS**;
+- branch audit cannot delete, close obligations, write the repository, or silently extend unclear retention: **PASS**;
+- reached release gates still require unique-work verification and a visible release notice: **PASS**;
+- no execution source or loader diff: **PASS**;
+- no target or Meta-Agent propagation: **PASS**.
 
 ## 5. Branch-retention preflight
 
@@ -95,19 +96,35 @@ branch_retention_preflight:
   user_facing_branch_notice_required: false
 ```
 
-## 6. Final verification status
+## 6. Final verification before this update
 
-This record is the last expected path addition. Final branch comparison, exact changed-path allowlist, open-PR recheck, semantic checks, and PR mergeability must be verified before the user-facing merge instruction.
+Exact checks immediately before this finalization update returned:
 
 ```yaml
-final_verification:
-  branch_vs_base: pending
-  ahead_by: pending
-  behind_by: pending
-  changed_files: pending
-  changed_path_allowlist_exact: pending
-  competing_open_PRs: pending
-  semantic_checks: pending
-  PR_mergeability: pending
-  result: pending
+final_verification_before_this_update:
+  branch_vs_base: ahead
+  ahead_by: 5
+  behind_by: 0
+  changed_files: 5
+  changed_path_allowlist_exact: true
+  competing_equivalent_PRs: []
+  exactly_one_canonical_open_PR: true
+  canonical_open_PR: 271
+  semantic_checks: PASS
+  PR_mergeability: true
+  PR_draft: true
+  head_sha: 0c557412d084f53a4a4641ffe14454510603cb66
+  result: PASS_PENDING_OWNER_REVIEW
 ```
+
+This update changes only this finalization record and therefore preserves the path allowlist and semantic scope. The final PR snapshot and body record the resulting head SHA and commit count.
+
+## 7. Closeout boundary
+
+The task stops after the final branch comparison and PR-body refresh. It does not:
+
+- merge PR #271;
+- start behavioral validation;
+- refresh or execute OR-02 through OR-09;
+- launch research or target work;
+- write Meta-Agent or target repositories.
