@@ -2,9 +2,10 @@
 
 ```yaml
 task_id: MNEMOSYNE-208
-status: handoff_closeout_prepared_pending_PR
+status: handoff_closeout_complete_draft_PR_276_open
 base_master: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
 verified_merged_PR: 275
+canonical_PR: 276
 canonical_branch: mnemosyne-208-post-pr275-handoff-closeout
 execution_source_modified: false
 Meta_Agent_modified_or_activated: false
@@ -20,7 +21,7 @@ MNEMOSYNE-208 updates only the existing route handoff, startup prompt, current r
 
 ## Concurrent merge handling
 
-PR #275 was open when closeout preparation began and was merged during this tool sequence. The merge was detected before any handoff change was reported as part of `master`.
+PR #275 was open when closeout preparation began and was merged during the tool sequence. The merge was detected before any handoff change was reported as part of `master`.
 
 A post-merge draft commit had briefly been placed on a recreated `mnemosyne-207-audit-owner-review-and-enable-branch-ledger` branch after its ref was found absent. That commit was never part of PR #275 or `master` and is not the canonical continuation.
 
@@ -28,20 +29,18 @@ To preserve clean lineage:
 
 - PR #275 remains the completed MNEMOSYNE-207 line;
 - MNEMOSYNE-208 starts from the verified PR #275 merge commit;
-- only `mnemosyne-208-post-pr275-handoff-closeout` is the canonical handoff-closeout branch;
-- the recreated MNEMOSYNE-207 branch has no required post-merge dependency and should be deleted after the MNEMOSYNE-208 PR contents are verified.
+- only `mnemosyne-208-post-pr275-handoff-closeout` and PR #276 are the canonical handoff-closeout line;
+- the recreated MNEMOSYNE-207 branch has no required post-merge dependency and should be deleted after PR #276 contents are verified.
 
 ## Prepared handoff
 
-The selected continuation is:
+After PR #276 merges:
 
-1. merge and verify the MNEMOSYNE-208 handoff closeout;
-2. open a new Pro/frontier conversation with the updated startup prompt;
-3. receive the handoff;
-4. load Mnemosyne guidance separately;
-5. switch the new conversation to the selected next-tier model;
-6. use the branch-backed TLR startup for TLR-01 through TLR-05;
-7. later return to Pro/frontier in the same new conversation and continue the same TLR review branch.
+1. open a new Pro/frontier conversation with `handoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md`;
+2. receive the handoff and load Mnemosyne guidance separately;
+3. switch the new conversation to the selected next-tier model;
+4. use the branch-backed TLR startup for TLR-01 through TLR-05;
+5. later return to Pro/frontier in the same new conversation and continue the same TLR review branch.
 
 ## Changed paths
 
@@ -58,12 +57,4 @@ Created:
 
 ## Boundaries
 
-This task does not:
-
-- reopen OR-01 through OR-09;
-- start TLR-01 through TLR-05;
-- create the TLR review branch;
-- create candidate v0.2 or run validation;
-- modify or activate Meta-Agent;
-- modify a business target;
-- run research or use quota.
+This task does not reopen OR-01 through OR-09, start TLR-01 through TLR-05, create the TLR review branch, create candidate v0.2, run validation, modify or activate Meta-Agent, modify a business target, or run research/use quota.

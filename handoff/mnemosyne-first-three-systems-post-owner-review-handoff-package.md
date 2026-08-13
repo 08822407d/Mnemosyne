@@ -1,16 +1,16 @@
 # Mnemosyne First Three Systems — Target-Lifecycle Continuation Handoff Package
 
-> Owner 已选择结束当前超长对话并转入新对话。本文件是非执行源交接材料；只有 MNEMOSYNE-208 的 PR 合并并出现在执行时最新 `master` 后才可使用。
+> Owner 已选择结束当前超长对话并转入新对话。本文件是非执行源交接材料；只有 PR #276 合并并出现在执行时最新 `master` 后才可使用。
 
 ```yaml
 package_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-HANDOFF-001
 task_id: MNEMOSYNE-208
-status: PREPARED_SELECTED_PENDING_MNEMOSYNE_208_MERGE
+status: PREPARED_SELECTED_PENDING_PR_276_MERGE
 repository: 08822407d/Mnemosyne
 verified_source_master: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
 verified_merged_PR: 275
 verified_merge_commit: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
-canonical_PR: pending
+canonical_PR: 276
 canonical_branch: mnemosyne-208-post-pr275-handoff-closeout
 execution_source: current/human-approved-spec.md
 intended_receiver_action: Receive_Mnemosyne_handoff
@@ -40,7 +40,7 @@ PR #275 also established a branch-backed review rule: one material multi-step re
 
 ## Current gate
 
-MNEMOSYNE-208 must merge before this updated handoff is available on `master`.
+PR #276 must merge before this updated handoff is available on `master`.
 
 After merge, the selected continuation is:
 
@@ -75,7 +75,7 @@ Do not reopen OR-01 through OR-09 merely because a new conversation starts. The 
 
 ## Unresolved work
 
-- merge and post-merge verification of the MNEMOSYNE-208 handoff closeout;
+- merge and post-merge verification of PR #276;
 - TLR-01 through TLR-05 Owner review;
 - Pro/frontier consolidation on the same review branch;
 - candidate v0.2 and validation v0.2 only after confirmed decisions and separate authorization;
@@ -97,7 +97,7 @@ In the new conversation:
 
 ## Freshness and scope limits
 
-- invalid before the MNEMOSYNE-208 PR merges;
+- invalid before PR #276 merges;
 - later material changes require freshness review;
 - target repositories and current product facts were not inspected;
 - all package, result, candidate, validation, and handoff files remain non-execution-source.

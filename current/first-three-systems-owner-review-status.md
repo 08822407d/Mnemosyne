@@ -10,10 +10,11 @@ source_master: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
 verified_merged_PR: 275
 verified_merge_commit: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
 execution_source: current/human-approved-spec.md
+canonical_PR: 276
 canonical_task_branch: mnemosyne-208-post-pr275-handoff-closeout
 handoff_selected: true
 handoff_package: handoff/mnemosyne-first-three-systems-post-owner-review-handoff-package.md
-handoff_startup: handoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md
+handoff_startup: handoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md`
 ```
 
 ## Completed
@@ -45,7 +46,7 @@ The review branch has not been created.
 
 ## Current gate
 
-The MNEMOSYNE-208 handoff-closeout PR is the only intended merge target. The updated handoff is invalid until that PR merges and the package is available on execution-time latest `master`.
+PR #276 is the only intended merge target. The updated handoff is invalid until PR #276 merges and the package is available on execution-time latest `master`.
 
 ## Not completed or authorized
 
@@ -60,8 +61,8 @@ The MNEMOSYNE-208 handoff-closeout PR is the only intended merge target. The upd
 
 ## One safe next action
 
-Merge the MNEMOSYNE-208 handoff closeout if correct. Then open a new Pro/frontier conversation and use:
+Merge PR #276 if correct. Then open a new Pro/frontier conversation and use:
 
-ahandoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md`
+`handoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md`
 
 Do not open another substantive work line in the old conversation.
