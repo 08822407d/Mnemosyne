@@ -1,77 +1,68 @@
 # First Three Systems Owner Review and Target-Lifecycle Baseline — Current Status
 
-> Non-execution-source current navigation for the Mnemosyne-owned first-three-systems route.
+> Non-execution-source navigation for the Mnemosyne-owned first-three-systems route.
 
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-STATUS-001
-task_id: MNEMOSYNE-206
-status: PR_273_verified_merged_frontier_adjudication_complete_owner_review_package_prepared_pending_PR_274_merge
-source_master: c7e97baa39d9f107aab8294aeab0c2581c219e7a
-verified_merged_PR: 273
-verified_merge_commit: c7e97baa39d9f107aab8294aeab0c2581c219e7a
+task_id: MNEMOSYNE-207
+status: PR_274_VERIFIED_MERGED_TRANSCRIPT_AUDIT_COMPLETE_ONE_CORRECTION_RECORDED_BRANCH_BACKED_TLR_REVIEW_PENDING_MNEMOSYNE_207_MERGE
+source_master: 9d8c822f7d58305883026d0104a5027086fc0f20
+verified_merged_PR: 274
+verified_merge_commit: 9d8c822f7d58305883026d0104a5027086fc0f20
 execution_source: current/human-approved-spec.md
-canonical_PR: 274
-canonical_branch: mnemosyne-206-adjudicate-target-lifecycle-and-prepare-owner-review
+canonical_task_branch: mnemosyne-207-audit-owner-review-and-enable-branch-ledger
 ```
 
-## Current phase
+## Completed
 
-`OR-01` through `OR-09` are Owner-confirmed and preserved on `master` through PR #273.
+- OR-01 through OR-09 were Owner-confirmed and saved through PR #273.
+- PR #274 merged and added the target-lifecycle frontier adjudication plus TLR-01 through TLR-05 review package.
+- The Owner later supplied the exact received conversation export.
+- MNEMOSYNE-207 compared the export against OR-01 result 001, OR-02 through OR-09 result 002, and capability selection v0.3.
+- No missing or reversed substantive Owner decision was found.
+- One classification/provenance error was found: result 002 incorrectly placed ACAP-037 inside the OR-02 shared floor. All three target selections remain unchanged; ACAP-037 was selected separately in OR-03, OR-04, and OR-05.
 
-The route remains one coherent target-lifecycle architecture line:
+Audit and correction:
 
-1. Pro/frontier adjudication of candidate v0.1 — complete in PR #274;
-2. bounded Owner review of five remaining decisions — package prepared, not started;
-3. candidate v0.2 and validation v0.2 — not created;
-4. public/synthetic validation — not selected or executed;
-5. target adoption — separate and unauthorized.
+- `notes/audits/first-three-systems-owner-review-transcript-audit-v0.1.md`
+- `notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002-CORRECTION-001.md`
 
-## PR #273 post-merge verification
+## Exact export boundary
 
-- PR #273: merged;
-- merge commit: `c7e97baa39d9f107aab8294aeab0c2581c219e7a`;
-- latest master at MNEMOSYNE-206 start: same commit;
-- result 002, selection v0.3, candidate v0.1, validation v0.1, backlog, and route handoff are present on master;
-- execution source and active guards were not changed by PR #273.
+The received export identity is recorded in the audit. The full export is not committed to this public repository. It remains cold private evidence pending an approved private archive or explicit publication decision.
 
-## Prepared in PR #274
+## Current route
 
-- frontier adjudication:
-  - `notes/target-agent-container-evolution-and-dependency-frontier-adjudication-v0.1.md`
-- next-tier Owner-review package:
-  - `notes/owner-review-packages/target-agent-lifecycle-v0.1/`
-- same-conversation startup message:
-  - `notes/owner-review-packages/target-agent-lifecycle-v0.1/07-same-conversation-startup-message.md`
+The route remains one coherent target-lifecycle line:
 
-## Five remaining Owner decisions
+1. TLR-01 through TLR-05 Owner review;
+2. Pro/frontier consolidation on the same review branch;
+3. candidate v0.2 and validation v0.2 only after confirmed decisions and separate authorization;
+4. public/synthetic validation only after a later RUN decision;
+5. target adoption remains separate.
 
-- `TLR-01`: conditional same-repository concurrency;
-- `TLR-02`: consumer-owned dependency declarations and derived impact views;
-- `TLR-03`: primary change axis and explicit secondary effects;
-- `TLR-04`: narrow parent-owned design-brief exception;
-- `TLR-05`: provisional baseline followed by synthetic validation before target adoption.
+## Branch-backed review policy
 
-## Context-fidelity boundary
+Material multi-step Owner review may use one task-local branch for intermediate evidence. For the current TLR package, after receive passes use:
 
-The exact OR conversation export is not stored. Result 002 is the Owner-confirmed normalized record. Same-conversation model memory is not treated as exact evidence. A later exported transcript may support a bounded audit if a specific discrepancy is alleged.
+- branch: `mnemosyne-tlr-owner-review-001-ledger`
+- root: `notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/`
+- startup: `notes/owner-review-packages/target-agent-lifecycle-v0.1/09-branch-backed-startup-message.md`
 
-## Current gate
-
-PR #274 is the sole canonical merge target for MNEMOSYNE-206. The adjudication and Owner-review package are not active `master` artifacts until it merges.
+The next-tier interviewer may write only review evidence. A later Pro/frontier segment continues the same branch, may correct/consolidate records, and may delete redundant non-sensitive files from the branch tip. Ordinary deletion does not erase earlier Git history.
 
 ## Not completed or authorized
 
-- merge of PR #274;
-- Owner review TLR-01 through TLR-05;
+- TLR-01 through TLR-05 decisions;
 - candidate v0.2;
-- validation v0.2 or validation execution;
+- validation execution;
 - target adoption;
 - Meta-Agent modification or activation;
-- code/language target creation or write;
-- private-material ingestion;
-- product-fact verification;
-- Deep Research or Fable run.
+- business-target creation or write;
+- private-material publication;
+- product configuration or fact verification;
+- Deep Research, Fable, or quota-consuming run.
 
 ## One safe next action
 
-Review and merge PR #274 if correct. After merge, the Owner may switch this same conversation to the selected next-tier model and use the packaged startup message. Do not run validation or start another route merely because the package exists.
+After MNEMOSYNE-207 merges, switch to the selected next-tier model and use the branch-backed startup message. Do not use the older no-write startup message for this package.
