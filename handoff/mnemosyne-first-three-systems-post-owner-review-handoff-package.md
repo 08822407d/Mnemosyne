@@ -1,15 +1,17 @@
 # Mnemosyne First Three Systems — Post-Owner-Review Handoff Package
 
-> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. Do not use before PR #273 is merged and this package is available on execution-time latest `master`.
+> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. PR #273 is merged. The target-lifecycle frontier adjudication and Owner-review package become usable only after the MNEMOSYNE-206 PR is merged and available on execution-time latest `master`.
 
 ```yaml
 package_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-HANDOFF-001
-task_id: MNEMOSYNE-205
-status: PREPARED_READY_NOT_SELECTED_PENDING_PR_273_MERGE
+task_id: MNEMOSYNE-206
+status: PREPARED_READY_NOT_SELECTED_PENDING_MNEMOSYNE_206_PR_MERGE
 repository: 08822407d/Mnemosyne
-source_master_before_task: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
-canonical_PR: 273
-canonical_branch: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
+verified_source_master: c7e97baa39d9f107aab8294aeab0c2581c219e7a
+verified_merged_PR: 273
+verified_merge_commit: c7e97baa39d9f107aab8294aeab0c2581c219e7a
+canonical_PR: pending_creation
+canonical_branch: mnemosyne-206-adjudicate-target-lifecycle-and-prepare-owner-review
 execution_source: current/human-approved-spec.md
 intended_receiver_action: Receive_Mnemosyne_handoff
 ```
@@ -28,89 +30,83 @@ receiver_guidance_load:
 
 ## Local task summary
 
-The Owner completed and confirmed OR-02 through OR-09 after OR-01 had already completed. The current Pro segment saves the result, consolidates the first-three-system capability selection, and designs a candidate model for:
+OR-01 through OR-09 are complete and Owner-confirmed. PR #273 saved the decision result, capability selection v0.3, candidate v0.1, validation v0.1, and route backlog.
 
-- formal target storage before build;
-- multiple logical Agents in one physical repository;
-- separate Agent-internal, business, API, and provider evolution;
-- library-versus-consumer dependency responsibility;
-- non-authoritative backups.
+MNEMOSYNE-206 performs the next single-line continuation:
+
+- verifies PR #273 merge;
+- conducts Pro/frontier adjudication of candidate v0.1;
+- preserves the exact long-conversation limitation instead of relying on chat memory;
+- prepares a self-contained next-tier Owner-review package for five residual architecture decisions.
 
 ## Current gate
 
-PR #273 must merge before this package becomes an active `master` artifact.
+The MNEMOSYNE-206 PR must merge before the new adjudication and review package are available on `master`.
 
-After merge, the route is ready for one coherent frontier review of:
+After merge, the current human decision route is:
 
-`notes/target-agent-container-evolution-and-dependency-model-candidate-v0.1.md`
+`notes/owner-review-packages/target-agent-lifecycle-v0.1/`
 
-using:
+Current question sequence:
 
-`notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.1.md`
+- `TLR-01` same-repository concurrency;
+- `TLR-02` dependency responsibility and derived impact views;
+- `TLR-03` primary change axis and secondary effects;
+- `TLR-04` parent-owned design-brief boundary;
+- `TLR-05` provisional baseline and validation/adoption order.
 
-as the evidence plan.
+## Core evidence
 
-## Completed work
-
-- Owner-confirmed result:
-  - `notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002.md`
-- Owner-confirmed selection:
-  - `notes/first-three-system-capability-selection-v0.3.md`
-- Candidate architecture:
-  - `notes/target-agent-container-evolution-and-dependency-model-candidate-v0.1.md`
-- Validation plan:
-  - `notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.1.md`
-- Current route status:
-  - `current/first-three-systems-owner-review-status.md`
+- `notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002.md`
+- `notes/first-three-system-capability-selection-v0.3.md`
+- `notes/target-agent-container-evolution-and-dependency-model-candidate-v0.1.md`
+- `notes/target-agent-container-evolution-and-dependency-frontier-adjudication-v0.1.md`
+- `notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.1.md`
+- `current/first-three-systems-owner-review-status.md`
 
 ## Preserved Owner decisions
 
-- no substantive target build in a parent/meta repository before migration;
-- formal destination before design/build;
-- several Agents may share one physical repository;
-- each Agent retains a distinct authority/writer boundary;
-- relevant capability semantics default-active at the current stage;
-- selective loading remains deferred;
-- backups are required and non-authoritative;
-- first real target is readiness-driven, not preselected;
-- product facts remain target-conversation responsibilities.
+- formal destination before substantive target construction;
+- no complete parent/meta repository bootstrap;
+- several logical Agents may share one physical repository;
+- distinct authority/writer boundary per Agent;
+- no automatic cross-target propagation;
+- no default exhaustive library-side consumer reverse index;
+- backups required and non-authoritative;
+- target adoption and product facts remain target-owned.
 
-## Unresolved work
+## Context-fidelity boundary
 
-- Owner adjudication of the new candidate model;
-- bounded public/synthetic validation selection and execution;
-- final consumer reverse-index decision;
-- final same-repository co-location rules;
-- target-owned adoption;
-- Meta-Agent human review/activation;
-- language education/SLA research and target design.
+The exact OR conversation export is not stored. Result 002 is the confirmed normalized decision record. The receiver must not treat same-conversation model memory as exact source. A future exact export may support a bounded discrepancy audit.
 
 ## Forbidden actions
 
 The receiver must not infer authorization to:
 
-- modify Mnemosyne execution source or active guards;
+- modify execution source or active guards;
 - modify or activate Meta-Agent;
 - create or write target repositories;
-- ingest private source, customer data, credentials, or complete personal conversations;
+- ingest private materials;
+- create candidate v0.2 before Owner review;
+- run synthetic validation;
 - configure products, Skills, Projects, connectors, or backups;
-- run validation, Deep Research, Fable, or quota-consuming work;
-- resume the paused FCV/Fable route.
+- start Deep Research, Fable, or quota-consuming work;
+- resume paused FCV/Fable routes.
 
 ## Safe next action
 
-After receive and a separate Mnemosyne guidance refresh:
+After handoff receive and a separate Mnemosyne guidance refresh:
 
-1. verify execution-time latest `master` and PR #273 merge;
-2. read the five evidence/current files listed above;
-3. review the candidate model against the Owner-confirmed result;
-4. either amend the candidate in one new task ID, one canonical branch, and at most one Draft PR, or prepare the bounded validation task;
-5. do not reopen the full OR-01 through OR-09 interview unless a specific conflict is found.
+1. verify execution-time latest master and the MNEMOSYNE-206 merge;
+2. read the core evidence and Owner-review package;
+3. conduct TLR-01 through TLR-05 one question at a time under the interviewer contract;
+4. produce and confirm the result;
+5. wait for separate save authorization;
+6. do not run validation or adopt the candidate.
 
 ## Freshness and scope limits
 
-- Exact conversation export is not stored; result 002 is a confirmed normalized decision record.
-- Target repository contents were not inspected by MNEMOSYNE-205.
-- Product facts were deliberately not verified.
-- Candidate design is not target adoption.
-- If later master changes conflict with this package, latest execution source and active guidance control, and the affected package claim must be refreshed.
+- Target repositories were not inspected.
+- Product facts were not verified.
+- Candidate architecture remains non-execution-source.
+- Later master changes that affect the package require a freshness review.
