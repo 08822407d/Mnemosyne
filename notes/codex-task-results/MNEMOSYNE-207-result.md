@@ -2,7 +2,7 @@
 
 ```yaml
 task_id: MNEMOSYNE-207
-status: implementation_complete_pending_PR
+status: implementation_complete_draft_PR_275_open
 base_master: 9d8c822f7d58305883026d0104a5027086fc0f20
 canonical_branch: mnemosyne-207-audit-owner-review-and-enable-branch-ledger
 execution_source_modified: false
@@ -78,4 +78,6 @@ Modified:
 - `notes/owner-review-packages/target-agent-lifecycle-v0.1/README.md`
 - `current/first-three-systems-owner-review-status.md`
 
-A PR-finalization record will be added after Draft PR creation.
+Finalization record:
+
+- `notes/codex-task-results/MNEMOSYNE-207-pr-finalization.md`
