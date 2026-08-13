@@ -1,19 +1,21 @@
-# Mnemosyne First Three Systems — Post-Owner-Review Handoff Package
+# Mnemosyne First Three Systems — Target-Lifecycle Continuation Handoff Package
 
-> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. PR #273 is merged. The target-lifecycle frontier adjudication and Owner-review package become usable only after PR #274 is merged and available on execution-time latest `master`.
+> Owner 已选择结束当前超长对话并转入新对话。本文件是非执行源交接材料；只有 PR #276 合并并出现在执行时最新 `master` 后才可使用。
 
 ```yaml
 package_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-HANDOFF-001
-task_id: MNEMOSYNE-206
-status: PREPARED_READY_NOT_SELECTED_PENDING_PR_274_MERGE
+task_id: MNEMOSYNE-208
+status: PREPARED_SELECTED_PENDING_PR_276_MERGE
 repository: 08822407d/Mnemosyne
-verified_source_master: c7e97baa39d9f107aab8294aeab0c2581c219e7a
-verified_merged_PR: 273
-verified_merge_commit: c7e97baa39d9f107aab8294aeab0c2581c219e7a
-canonical_PR: 274
-canonical_branch: mnemosyne-206-adjudicate-target-lifecycle-and-prepare-owner-review
+verified_source_master: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
+verified_merged_PR: 275
+verified_merge_commit: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
+canonical_PR: 276
+canonical_branch: mnemosyne-208-post-pr275-handoff-closeout
 execution_source: current/human-approved-spec.md
 intended_receiver_action: Receive_Mnemosyne_handoff
+handoff_selected_by_owner: true
+source_conversation_close_reason: context_growth_and_UI_lag
 ```
 
 ## Receiver guidance load
@@ -30,83 +32,72 @@ receiver_guidance_load:
 
 ## Local task summary
 
-OR-01 through OR-09 are complete and Owner-confirmed. PR #273 saved the decision result, capability selection v0.3, candidate v0.1, validation v0.1, and route backlog.
+The current conversation completed OR-01 and OR-02 through OR-09, preserved their confirmed results through PR #273, prepared the target-lifecycle adjudication and TLR-01 through TLR-05 review package through PR #274, and audited the supplied source transcript through PR #275.
 
-MNEMOSYNE-206 continues only the target-lifecycle line:
+The audit found no missing or reversed substantive Owner decision. It recorded one narrow attribution correction: `ACAP-037` was selected separately in OR-03, OR-04, and OR-05 rather than inside the OR-02 shared floor. Target outcomes do not change.
 
-- verifies PR #273 merge;
-- conducts Pro/frontier adjudication of candidate v0.1;
-- preserves the exact long-conversation limitation instead of relying on chat memory;
-- prepares a self-contained next-tier Owner-review package for five residual architecture decisions.
+PR #275 also established a branch-backed review rule: one material multi-step review task may use one task-local branch for intermediate answers, and a later Pro/frontier segment continues the same branch.
 
 ## Current gate
 
-PR #274 must merge before the new adjudication and review package are available on `master`.
+PR #276 must merge before this updated handoff is available on `master`.
 
-After merge, the current human decision route is:
+After merge, the selected continuation is:
 
-`notes/owner-review-packages/target-agent-lifecycle-v0.1/`
+1. receive this handoff in a new conversation;
+2. separately load current Mnemosyne guidance;
+3. verify the audit/correction and TLR package identities;
+4. switch that new conversation to the selected next-tier model;
+5. start the branch-backed TLR review using `notes/owner-review-packages/target-agent-lifecycle-v0.1/09-branch-backed-startup-message.md`;
+6. persist intermediate answers only on branch `mnemosyne-tlr-owner-review-001-ledger` under `notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/`;
+7. after all five questions and Owner confirmation, switch to Pro/frontier in the same new conversation and continue the same branch for consolidation.
 
-Current question sequence:
-
-- `TLR-01` same-repository concurrency;
-- `TLR-02` dependency responsibility and derived impact views;
-- `TLR-03` primary change axis and secondary effects;
-- `TLR-04` parent-owned design-brief boundary;
-- `TLR-05` provisional baseline and validation/adoption order.
+The TLR review branch has not been created.
 
 ## Core evidence
 
+- `notes/audits/first-three-systems-owner-review-transcript-audit-v0.1.md`
+- `notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002-CORRECTION-001.md`
 - `notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002.md`
 - `notes/first-three-system-capability-selection-v0.3.md`
 - `notes/target-agent-container-evolution-and-dependency-model-candidate-v0.1.md`
 - `notes/target-agent-container-evolution-and-dependency-frontier-adjudication-v0.1.md`
 - `notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.1.md`
+- `current/owner-review-branch-ledger-guard.md`
 - `current/first-three-systems-owner-review-status.md`
+- `notes/owner-review-packages/target-agent-lifecycle-v0.1/README.md`
+- `notes/owner-review-packages/target-agent-lifecycle-v0.1/08-branch-backed-interview-amendment.md`
+- `notes/owner-review-packages/target-agent-lifecycle-v0.1/09-branch-backed-startup-message.md`
 
 ## Preserved Owner decisions
 
-- formal destination before substantive target construction;
-- no complete parent/meta repository bootstrap;
-- several logical Agents may share one physical repository;
-- distinct authority/writer boundary per Agent;
-- no automatic cross-target propagation;
-- no default exhaustive library-side consumer reverse index;
-- backups required and non-authoritative;
-- target adoption and product facts remain target-owned.
+Do not reopen OR-01 through OR-09 merely because a new conversation starts. The explicit ACAP-037 attribution correction is the only audit correction. Meta-Agent remains inactive; candidate architecture is not target adoption.
 
-## Context-fidelity boundary
+## Unresolved work
 
-The exact OR conversation export is not stored. Result 002 is the confirmed normalized decision record. The receiver must not treat same-conversation model memory as exact source. A future exact export may support a bounded discrepancy audit.
+- merge and post-merge verification of PR #276;
+- TLR-01 through TLR-05 Owner review;
+- Pro/frontier consolidation on the same review branch;
+- candidate v0.2 and validation v0.2 only after confirmed decisions and separate authorization;
+- validation execution and target adoption remain separate.
 
 ## Forbidden actions
 
-The receiver must not infer authorization to:
-
-- modify execution source or active guards;
-- modify or activate Meta-Agent;
-- create or write target repositories;
-- ingest private materials;
-- create candidate v0.2 before Owner review;
-- run synthetic validation;
-- configure products, Skills, Projects, connectors, or backups;
-- start Deep Research, Fable, or quota-consuming work;
-- resume paused FCV/Fable routes.
+Handoff receive does not authorize the receiver to start TLR interviewing, create the TLR branch, modify execution source, modify or activate Meta-Agent, write business targets, create candidate v0.2, run validation, configure products, or start research/quota-consuming work.
 
 ## Safe next action
 
-After handoff receive and a separate Mnemosyne guidance refresh:
+In the new conversation:
 
-1. verify execution-time latest master and PR #274 merge;
-2. read the core evidence and Owner-review package;
-3. conduct TLR-01 through TLR-05 one question at a time under the interviewer contract;
-4. produce and confirm the result;
-5. wait for separate save authorization;
-6. do not run validation or adopt the candidate.
+1. perform handoff receive only;
+2. perform `加载 Mnemosyne 指导约束` separately;
+3. read the listed core evidence;
+4. return a concise continuation-ready receipt and stop;
+5. wait for the Owner to switch model and explicitly start the branch-backed TLR package.
 
 ## Freshness and scope limits
 
-- Target repositories were not inspected.
-- Product facts were not verified.
-- Candidate architecture remains non-execution-source.
-- Later master changes that affect the package require a freshness review.
+- invalid before PR #276 merges;
+- later material changes require freshness review;
+- target repositories and current product facts were not inspected;
+- all package, result, candidate, validation, and handoff files remain non-execution-source.
