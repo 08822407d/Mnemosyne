@@ -3,66 +3,65 @@
 > Non-execution-source navigation for the Mnemosyne-owned first-three-systems route.
 
 ```yaml
-status_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-STATUS-001
-task_id: MNEMOSYNE-207
-status: PR_274_VERIFIED_MERGED_TRANSCRIPT_AUDIT_COMPLETE_ONE_CORRECTION_RECORDED_BRANCH_BACKED_TLR_REVIEW_PENDING_MNEMOSYNE_207_MERGE
-source_master: 9d8c822f7d58305883026d0104a5027086fc0f20
-verified_merged_PR: 274
-verified_merge_commit: 9d8c822f7d58305883026d0104a5027086fc0f20
+status_id: MNE-FIRST-THREE-SYSTEMS-POI4-REVIEW-STATUS-001
+task_id: MNEMOSYNE-208
+status: PR_275_VERIFIED_MERGED_HANDOFF_CLOSEOUT_PREPARED_PENDING_MNEMOSYNE_208_MERGE
+source_master: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
+verified_merged_PR: 275
+verified_merge_commit: 565d72b79fa58ce5b9b50382fe0728bd61f9d76b
 execution_source: current/human-approved-spec.md
-canonical_task_branch: mnemosyne-207-audit-owner-review-and-enable-branch-ledger
+canonical_task_branch: mnemosyne-208-post-pr275-handoff-closeout
+handoff_selected: true
+handoff_package: handoff/mnemosyne-first-three-systems-post-owner-review-handoff-package.md
+handoff_startup: handoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md
 ```
 
 ## Completed
 
 - OR-01 through OR-09 were Owner-confirmed and saved through PR #273.
-- PR #274 merged and added the target-lifecycle frontier adjudication plus TLR-01 through TLR-05 review package.
-- The Owner later supplied the exact received conversation export.
-- MNEMOSYNE-207 compared the export against OR-01 result 001, OR-02 through OR-09 result 002, and capability selection v0.3.
-- No missing or reversed substantive Owner decision was found.
-- One classification/provenance error was found: result 002 incorrectly placed ACAP-037 inside the OR-02 shared floor. All three target selections remain unchanged; ACAP-037 was selected separately in OR-03, OR-04, and OR-05.
-
-Audit and correction:
-
-- `notes/audits/first-three-systems-owner-review-transcript-audit-v0.1.md`
-- `notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002-CORRECTION-001.md`
-
-## Exact export boundary
-
-The received export identity is recorded in the audit. The full export is not committed to this public repository. It remains cold private evidence pending an approved private archive or explicit publication decision.
+- PR #274 merged and added the target-lifecycle adjudication plus TLR-01 through TLR-05 review package.
+- PR #275 merged and added the transcript audit, ACAP-037 attribution correction, branch-backed Owner-review guard, and amended TLR startup.
+- No missing or reversed substantive Owner decision was found by the audit.
+- The Owner selected a new-conversation handoff because the current conversation had become too large for comfortable continued use.
 
 ## Current route
 
-The route remains one coherent target-lifecycle line:
+After the MNEMOSYNE-208 handoff closeout merges and the new conversation receives it:
 
-1. TLR-01 through TLR-05 Owner review;
-2. Pro/frontier consolidation on the same review branch;
-3. candidate v0.2 and validation v0.2 only after confirmed decisions and separate authorization;
-4. public/synthetic validation only after a later RUN decision;
-5. target adoption remains separate.
+1. load current Mnemosyne guidance as a separate operation;
+2. verify the audit/correction and TLR package;
+3. switch that new conversation to the selected next-tier model;
+4. conduct TLR-01 through TLR-05 using one branch-backed ledger;
+5. switch back to Pro/frontier in the same new conversation for consolidation on the same branch;
+6. create candidate v0.2 or validation v0.2 only after confirmed decisions and separate authorization.
 
-## Branch-backed review policy
+## Branch-backed TLR review
 
-Material multi-step Owner review may use one task-local branch for intermediate evidence. For the current TLR package, after receive passes use:
-
-- branch: `mnemosyne-tlr-owner-review-001-ledger`
-- root: `notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/`
 - startup: `notes/owner-review-packages/target-agent-lifecycle-v0.1/09-branch-backed-startup-message.md`
+- future branch: `mnemosyne-tlr-owner-review-001-ledger`
+- working root: `notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/`
 
-The next-tier interviewer may write only review evidence. A later Pro/frontier segment continues the same branch, may correct/consolidate records, and may delete redundant non-sensitive files from the branch tip. Ordinary deletion does not erase earlier Git history.
+The review branch has not been created.
+
+## Current gate
+
+The MNEMOSYNE-208 handoff-closeout PR is the only intended merge target. The updated handoff is invalid until that PR merges and the package is available on execution-time latest `master`.
 
 ## Not completed or authorized
 
+- handoff-closeout merge and post-merge verification;
+- handoff receive;
 - TLR-01 through TLR-05 decisions;
-- candidate v0.2;
-- validation execution;
-- target adoption;
+- TLR review branch creation;
+- candidate v0.2 or validation execution;
+- target adoption or target modification;
 - Meta-Agent modification or activation;
-- business-target creation or write;
-- private-material publication;
-- product configuration or fact verification;
-- Deep Research, Fable, or quota-consuming run.
+- product configuration, research, or quota-consuming run.
 
 ## One safe next action
 
-After MNEMOSYNE-207 merges, switch to the selected next-tier model and use the branch-backed startup message. Do not use the older no-write startup message for this package.
+Merge the MNEMOSYNE-208 handoff closeout if correct. Then open a new Pro/frontier conversation and use:
+
+ahandoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md`
+
+Do not open another substantive work line in the old conversation.
