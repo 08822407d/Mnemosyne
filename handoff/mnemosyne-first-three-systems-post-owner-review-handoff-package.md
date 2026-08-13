@@ -1,16 +1,16 @@
 # Mnemosyne First Three Systems — Post-Owner-Review Handoff Package
 
-> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. PR #273 is merged. The target-lifecycle frontier adjudication and Owner-review package become usable only after the MNEMOSYNE-206 PR is merged and available on execution-time latest `master`.
+> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. PR #273 is merged. The target-lifecycle frontier adjudication and Owner-review package become usable only after PR #274 is merged and available on execution-time latest `master`.
 
 ```yaml
 package_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-HANDOFF-001
 task_id: MNEMOSYNE-206
-status: PREPARED_READY_NOT_SELECTED_PENDING_MNEMOSYNE_206_PR_MERGE
+status: PREPARED_READY_NOT_SELECTED_PENDING_PR_274_MERGE
 repository: 08822407d/Mnemosyne
 verified_source_master: c7e97baa39d9f107aab8294aeab0c2581c219e7a
 verified_merged_PR: 273
 verified_merge_commit: c7e97baa39d9f107aab8294aeab0c2581c219e7a
-canonical_PR: pending_creation
+canonical_PR: 274
 canonical_branch: mnemosyne-206-adjudicate-target-lifecycle-and-prepare-owner-review
 execution_source: current/human-approved-spec.md
 intended_receiver_action: Receive_Mnemosyne_handoff
@@ -32,7 +32,7 @@ receiver_guidance_load:
 
 OR-01 through OR-09 are complete and Owner-confirmed. PR #273 saved the decision result, capability selection v0.3, candidate v0.1, validation v0.1, and route backlog.
 
-MNEMOSYNE-206 performs the next single-line continuation:
+MNEMOSYNE-206 continues only the target-lifecycle line:
 
 - verifies PR #273 merge;
 - conducts Pro/frontier adjudication of candidate v0.1;
@@ -41,7 +41,7 @@ MNEMOSYNE-206 performs the next single-line continuation:
 
 ## Current gate
 
-The MNEMOSYNE-206 PR must merge before the new adjudication and review package are available on `master`.
+PR #274 must merge before the new adjudication and review package are available on `master`.
 
 After merge, the current human decision route is:
 
@@ -97,7 +97,7 @@ The receiver must not infer authorization to:
 
 After handoff receive and a separate Mnemosyne guidance refresh:
 
-1. verify execution-time latest master and the MNEMOSYNE-206 merge;
+1. verify execution-time latest master and PR #274 merge;
 2. read the core evidence and Owner-review package;
 3. conduct TLR-01 through TLR-05 one question at a time under the interviewer contract;
 4. produce and confirm the result;

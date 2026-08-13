@@ -6,9 +6,11 @@
 package_id: MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001
 task_id: MNEMOSYNE-206
 question_range: TLR-01_through_TLR-05
-status: prepared_pending_MNEMOSYNE_206_PR_merge_not_executed
+status: prepared_pending_PR_274_merge_not_executed
 repository: 08822407d/Mnemosyne
 source_master: c7e97baa39d9f107aab8294aeab0c2581c219e7a
+canonical_PR: 274
+canonical_branch: mnemosyne-206-adjudicate-target-lifecycle-and-prepare-owner-review
 execution_source: current/human-approved-spec.md
 repository_write_during_interview: false
 Meta_Agent_activation_authorized: false
@@ -55,3 +57,7 @@ The Owner has already confirmed OR-01 through OR-09. This package does **not** r
 ## Completion
 
 After `TLR-01` through `TLR-05`, produce one complete result using the template and wait for explicit Owner confirmation. Confirmation does not itself authorize repository saving, candidate v0.2 creation, validation execution, or target adoption.
+
+## Activation gate
+
+This package is not active on `master` until PR #274 is merged. Before that merge, do not use the startup message to begin the interview.
