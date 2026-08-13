@@ -3,11 +3,11 @@
 ```yaml
 task_id: MNEMOSYNE-205
 record_id: MNEMOSYNE-205-RESULT-001
-status: candidate_files_prepared_pending_PR_creation_and_owner_review
+status: complete_pending_owner_review_and_PR_273_merge
 repository: 08822407d/Mnemosyne
 source_master: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
 canonical_branch: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
-canonical_PR: pending_creation
+canonical_PR: 273
 execution_source_modified: false
 active_guidance_modified: false
 Meta_Agent_modified_or_activated: false
@@ -33,7 +33,7 @@ This task interpreted that as authorization to:
 3. use frontier reasoning to advance the linked target-container/evolution/dependency questions as a candidate;
 4. prepare a validation plan;
 5. prepare a route-specific future handoff;
-6. create one canonical branch and at most one Draft PR.
+6. create one canonical branch and one Draft PR.
 
 Excluded:
 
@@ -83,6 +83,18 @@ repository_preflight:
   intended_branch_matches: []
   equivalent_scope_open_PRs: []
   decision: create_one_canonical_lineage
+```
+
+Pre-PR recheck:
+
+```yaml
+pre_PR_recheck:
+  open_PRs_before_creation: []
+  exact_task_or_head_matches: []
+  branch_head: 6a606830701e3ac1ec542fcdcc35c716a0ec7356
+  master_head: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
+  decision: create_one_Draft_PR
+  created_PR: 273
 ```
 
 ## 3. Files prepared
@@ -170,14 +182,59 @@ design_rationale:
     - no_behavioral_validation
 ```
 
-## 6. Verification plan before closeout
+## 6. Current PR state and branch retention
 
-- exact changed-path allowlist;
-- no protected execution/guard paths;
-- branch ahead/behind check;
-- open-PR recheck before PR creation;
-- package/result IDs and cross-references;
-- handoff `receiver_guidance_load` present in package and startup prompt;
-- no current external run instruction;
-- branch-retention preflight;
-- PR body execution-context disclosure.
+```yaml
+canonical_PR:
+  number: 273
+  state: open_draft
+  base: master
+  head: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
+  changed_files: 10
+  initial_additions: 1786
+  initial_deletions: 0
+
+branch_retention_preflight:
+  downstream_live_branch_dependencies: []
+  immutable_merged_history_available_after_merge: true
+  unique_unpreserved_work_after_merge: false
+  retention_required: false
+  decision: SILENT_DEFAULT_DELETE_AFTER_MERGE
+```
+
+## 7. Run-context summary
+
+```yaml
+run_context_summary:
+  product_surface: standard_ChatGPT_conversation_with_GitHub_connector_reads_and_writes
+  operator_selection_verbatim: Pro
+  backend_status: unknown_or_not_attestable
+  switch_history:
+    - prior_Pro_package_preparation
+    - next_tier_OR_02_through_OR_09_interview_exact_visible_name_not_preserved
+    - Pro_owner_confirmation_and_consolidation
+  human_adjudication: Owner_confirmed_final_OR_02_through_OR_09_summary
+  source_conversation_preservation_level: EXCERPT_OR_SUMMARY_ONLY
+```
+
+## 8. Verification and closeout boundary
+
+Verified before PR creation:
+
+- master remained at the pinned base;
+- canonical branch advanced while master did not;
+- PR changed-file list exactly matched the 10-path allowlist;
+- no execution source, loader, README, active guard, Meta-Agent, or target path was changed;
+- handoff package and startup prompt both expose `receiver_guidance_load`;
+- no current external run instruction exists.
+
+This task stops after final PR metadata and branch comparison. It does not:
+
+- merge PR #273;
+- use the future handoff package now;
+- run the validation plan;
+- modify or activate Meta-Agent;
+- create or modify target repositories;
+- ingest private materials;
+- verify/configure products;
+- launch Deep Research, Fable, or other quota-consuming work.

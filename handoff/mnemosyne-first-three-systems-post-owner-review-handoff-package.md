@@ -1,14 +1,15 @@
 # Mnemosyne First Three Systems — Post-Owner-Review Handoff Package
 
-> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. Do not use before the MNEMOSYNE-205 canonical PR is merged and the package is available on execution-time latest `master`.
+> Prepared non-execution-source transfer artifact for a later new Mnemosyne conversation. Do not use before PR #273 is merged and this package is available on execution-time latest `master`.
 
 ```yaml
 package_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-HANDOFF-001
 task_id: MNEMOSYNE-205
-status: PREPARED_READY_NOT_SELECTED_PENDING_PR_MERGE
+status: PREPARED_READY_NOT_SELECTED_PENDING_PR_273_MERGE
 repository: 08822407d/Mnemosyne
 source_master_before_task: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
-canonical_PR: pending_creation
+canonical_PR: 273
+canonical_branch: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
 execution_source: current/human-approved-spec.md
 intended_receiver_action: Receive_Mnemosyne_handoff
 ```
@@ -37,7 +38,7 @@ The Owner completed and confirmed OR-02 through OR-09 after OR-01 had already co
 
 ## Current gate
 
-The MNEMOSYNE-205 PR must merge before this package becomes an active `master` artifact.
+PR #273 must merge before this package becomes an active `master` artifact.
 
 After merge, the route is ready for one coherent frontier review of:
 
@@ -100,10 +101,10 @@ The receiver must not infer authorization to:
 
 After receive and a separate Mnemosyne guidance refresh:
 
-1. verify execution-time latest `master` and MNEMOSYNE-205 merge;
+1. verify execution-time latest `master` and PR #273 merge;
 2. read the five evidence/current files listed above;
 3. review the candidate model against the Owner-confirmed result;
-4. either amend the candidate in one canonical PR or prepare the bounded validation task;
+4. either amend the candidate in one new task ID, one canonical branch, and at most one Draft PR, or prepare the bounded validation task;
 5. do not reopen the full OR-01 through OR-09 interview unless a specific conflict is found.
 
 ## Freshness and scope limits

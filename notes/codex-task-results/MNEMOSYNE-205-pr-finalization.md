@@ -6,9 +6,10 @@ record_id: MNEMOSYNE-205-PR-FINALIZATION-001
 repository: 08822407d/Mnemosyne
 source_master: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
 head_branch: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
-canonical_PR: pending_creation
-PR_state_at_creation: pending
-final_head_sha: pending
+canonical_PR: 273
+PR_state_at_creation: open_draft
+head_sha_before_finalization_update: 6a606830701e3ac1ec542fcdcc35c716a0ec7356
+final_head_sha_after_this_record: recorded_by_final_PR_snapshot
 execution_source_modified: false
 active_guidance_modified: false
 Meta_Agent_modified_or_activated: false
@@ -26,26 +27,42 @@ pre_branch_preflight:
   intended_branch_matches: []
   equivalent_scope_matches: []
   decision: create_one_canonical_branch
+
+pre_PR_recheck:
+  open_PRs_before_creation: []
+  exact_task_or_head_matches: []
+  master_head: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
+  branch_head: 6a606830701e3ac1ec542fcdcc35c716a0ec7356
+  decision: create_one_Draft_PR
 ```
 
-A second open-PR enumeration and exact-head/task-ID recheck is required immediately before PR creation.
+Canonical PR:
+
+- number: `273`
+- title: `MNEMOSYNE-205 close owner review and prepare target-lifecycle baseline`
+- base: `master`
+- head: `mnemosyne-205-close-owner-review-and-target-lifecycle-baseline`
+- draft: `true`
+- merge performed: `false`
 
 ## 2. Changed-path allowlist
 
+Verified exact paths:
+
 ```text
-notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002.md
-notes/first-three-system-capability-selection-v0.3.md
-notes/target-agent-container-evolution-and-dependency-model-candidate-v0.1.md
-notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.1.md
-notes/first-three-systems-frontier-reentry-backlog-v0.1.md
 current/first-three-systems-owner-review-status.md
 handoff/mnemosyne-first-three-systems-post-owner-review-handoff-package.md
 handoff/mnemosyne-first-three-systems-post-owner-review-startup-prompt.md
-notes/codex-task-results/MNEMOSYNE-205-result.md
 notes/codex-task-results/MNEMOSYNE-205-pr-finalization.md
+notes/codex-task-results/MNEMOSYNE-205-result.md
+notes/first-three-system-capability-selection-v0.3.md
+notes/first-three-systems-frontier-reentry-backlog-v0.1.md
+notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002.md
+notes/target-agent-container-evolution-and-dependency-model-candidate-v0.1.md
+notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.1.md
 ```
 
-Protected paths must remain unchanged:
+Protected and absent from the PR diff:
 
 ```text
 current/human-approved-spec.md
@@ -56,43 +73,63 @@ README.md
 all target repositories/stores
 ```
 
-## 3. Branch retention preflight
+## 3. Content-integrity checks
+
+- Owner-confirmed review result saved: **PASS**;
+- exact conversation export absent and preservation honestly recorded as `EXCERPT_OR_SUMMARY_ONLY`: **PASS**;
+- selection v0.3 records default-active semantics and target adaptations: **PASS**;
+- default-active capability does not authorize unconditional external action: **PASS**;
+- ACAP-010 receipt/coverage-gap and deferred selective-loading split preserved: **PASS**;
+- Agent-internal, business, API, and provider evolution axes remain separate: **PASS**;
+- exhaustive library-side consumer reverse index is not reintroduced as default: **PASS**;
+- same-repository multiple-Agent model retains target authority boundaries: **PASS**;
+- backup candidate is non-authoritative and restore-tested in the plan: **PASS**;
+- validation is prepared/not selected/not executed: **PASS**;
+- handoff package and startup prompt both expose `receiver_guidance_load`: **PASS**;
+- handoff is not selected before merge: **PASS**;
+- no current research, validation, target, or activation run is requested: **PASS**.
+
+## 4. Branch retention preflight
 
 ```yaml
 branch_retention_preflight:
+  PR: 273
+  branch: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
   downstream_live_branch_dependencies: []
   immutable_merged_history_available_after_merge: true
   unique_unpreserved_work_after_merge: false
   retention_required: false
   decision: SILENT_DEFAULT_DELETE_AFTER_MERGE
+  user_facing_branch_notice_required: false
 ```
 
-No user-facing deletion notice is required.
-
-## 4. Final verification
-
-Pending after file commit and PR creation:
+## 5. Verification before this finalization commit
 
 ```yaml
-final_verification:
-  branch_vs_base:
-  ahead_by:
-  behind_by:
-  changed_path_allowlist_exact:
-  competing_open_PRs:
-  exactly_one_canonical_open_PR:
-  PR_mergeability:
-  PR_draft:
-  head_sha:
-  result:
+verification_before_finalization_commit:
+  branch_parent: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
+  branch_head: 6a606830701e3ac1ec542fcdcc35c716a0ec7356
+  branch_vs_base: ahead
+  ahead_by: 1
+  behind_by: 0
+  PR_changed_files: 10
+  changed_path_allowlist_exact: true
+  open_PRs_before_PR_creation: []
+  canonical_open_PR_after_creation: 273
+  exactly_one_canonical_open_PR: true
+  PR_mergeability: true
+  PR_draft: true
+  result: PASS_PENDING_OWNER_REVIEW
 ```
 
-## 5. Closeout boundary
+This record and the status/handoff/result metadata are updated together in one final commit. GitHub may temporarily recalculate mergeability after the commit; the final user-facing response must report the observed state honestly.
 
-This task may create one Draft PR and ask the Owner to review/merge it. It must not:
+## 6. Closeout boundary
 
-- merge the PR;
-- use the future handoff package now;
+The task stops after final branch comparison and PR-body refresh. It does not:
+
+- merge PR #273;
+- use the handoff package now;
 - run the validation plan;
 - modify or activate Meta-Agent;
 - create or modify target repositories;

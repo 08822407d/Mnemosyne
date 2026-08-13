@@ -5,10 +5,11 @@
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POST-REVIEW-STATUS-001
 task_id: MNEMOSYNE-205
-status: owner_review_closed_candidate_baseline_prepared_pending_PR_merge
+status: owner_review_closed_candidate_baseline_prepared_pending_owner_review_and_PR_merge
 source_master: 0d75f47e977ca40fd4737a5d3900c5e3ad11d5f9
 execution_source: current/human-approved-spec.md
-canonical_PR: pending_creation
+canonical_PR: 273
+canonical_branch: mnemosyne-205-close-owner-review-and-target-lifecycle-baseline
 ```
 
 ## Current phase
@@ -21,7 +22,7 @@ canonical_PR: pending_creation
 4. bounded validation preparation;
 5. future conversation handoff readiness.
 
-## Completed in this task branch
+## Completed in PR #273
 
 - confirmed decision result 002;
 - capability selection v0.3;
@@ -29,6 +30,10 @@ canonical_PR: pending_creation
 - bounded validation plan;
 - route-specific handoff package and startup prompt;
 - task provenance/result records.
+
+## Current gate
+
+PR #273 is the sole canonical merge target. The candidate architecture, validation plan, and handoff package are not active `master` artifacts until it merges.
 
 ## Not completed or authorized
 
@@ -51,4 +56,4 @@ canonical_PR: pending_creation
 
 ## One safe next action
 
-After the canonical PR merges, continue this route in the current conversation while context remains reliable, or use the route-specific handoff package in a new Pro/frontier conversation. The first substantive continuation should review the new candidate model as one coherent unit rather than reopen all three systems separately.
+Review and merge PR #273 if its scope and contents are correct. After merge, continue this route in the current conversation while context remains reliable, or use the route-specific handoff package in a new Pro/frontier conversation. The first substantive continuation should review the new candidate model as one coherent unit rather than reopen all three systems separately.
