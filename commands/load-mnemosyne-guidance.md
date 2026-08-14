@@ -30,6 +30,7 @@ Read or ask the user to provide:
 - `current/deep-research-report-delivery-correction-guard.md`
 - `current/source-artifact-preservation-and-design-rationale-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
+- `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`
 - `current/frontier-planning-clarification-handoff-adjudication-guard.md`
 - `current/pr-merge-branch-disposition-guard.md`
 - this command file, if available
@@ -41,6 +42,10 @@ For GitHub or connected-repository writes, or important records intended for pub
 For branch or pull-request creation, also read:
 
 - `current/github-single-active-pr-lineage-guard.md`
+
+For branch-backed multi-step Owner review, also read:
+
+- `current/owner-review-branch-ledger-guard.md`
 
 Read additional files only when the local task independently requires them.
 
@@ -54,6 +59,8 @@ precedence:
     - current/artifact-delivery-and-direct-generation-guard.md
   cross_conversation_execution_intent_and_operator_flow:
     - current/cross-conversation-execution-intent-and-operator-flow-guard.md
+  Agent_product_PR_readiness_Owner_review_frontier_efficiency_and_post_merge_closeout:
+    - current/agent-product-ready-pr-and-frontier-efficiency-guard.md
   PR_merge_and_post_merge_branch_retention:
     - current/pr-merge-branch-disposition-guard.md
   external_research_display_names:
@@ -68,7 +75,7 @@ precedence:
     - current/frontier-planning-clarification-handoff-adjudication-guard.md
 ```
 
-The more specific correction/adjudication guard controls only its stated scope. It does not replace unrelated requirements in the broader guards.
+The more specific correction/adjudication/readiness guard controls only its stated scope. It does not replace unrelated requirements in the broader guards.
 
 ## Files not loaded as action-plan sources by this command
 
@@ -121,6 +128,10 @@ If separately required, treat them according to their own authority and freshnes
 32. For a material user-supplied task, research, conversation-export or source file, record an explicit preservation level. Preserve exact bytes when safe, authorized, proportionate and mechanically verifiable; never call a normalized copy or hash-only receipt an exact original. Use manual import or an approved outside-Git exact store when the current surface cannot prove exact preservation.
 33. For important architecture, behavior, authority, methodology, schema or migration choices, create or reference a compact externally stated design-rationale record covering the problem, decisive alternatives, selection reason, assumptions, risks, validation and affected existing artifacts. Do not request or claim hidden chain-of-thought, and normally explain the result to the user in concise natural language rather than a large English-key YAML block.
 34. Preserve material originals without loading them routinely. Treat complete old conversations, research prompts/reports, historical handoffs and completed-task records as default `DO_NOT_READ` / `ON_DEMAND` evidence unless the current task has a specific reconstruction, dispute, migration, incident, citation or full-history-review trigger. State which cold originals were actually read.
+35. For Mnemosyne and similar Agent-product work, completed scope with required Agent semantic review and mechanical checks defaults to one Ready PR (`draft: false`). Draft is an exception for incomplete work, content-changing pending decisions/reviews, expected substantive commits, or an explicit Owner request. Do not use Draft as a substitute for comprehensive human review.
+36. Treat Owner merge as an authority/acceptance gate, not evidence that the Owner read every changed file or line. The responsible Agent must complete substantive review, state known risks and deferrals, and give a clear merge disposition; the Owner may inspect or sample but does not carry the default full-diff review burden.
+37. Before ending a scarce Pro/frontier segment, apply the frontier-turn completion check. Complete all authorized frontier-level work that can safely proceed, honor an explicit request to continue, and route only bounded/mechanical follow-up to a lower-cost model with an explicit model requirement.
+38. After a PR merge, verify the merge commit and latest `master`, repair stale route/status records through a new follow-up lineage when needed, close the old PR gate, and state the next true route and model requirement. Merge does not authorize validation, target adoption or another separately gated action.
 
 ## Required first response after loading
 
@@ -151,6 +162,12 @@ mnemosyne_guidance_refresh:
     - file_first_delivery_when_relevant
     - same_response_inline_operator_flow_for_cross_conversation_tasks
     - explicit_execution_intent_and_dedicated_operator_flow_section
+    - completed_Agent_product_Ready_PR_default
+    - Draft_PR_exception_only
+    - Owner_merge_not_comprehensive_human_review
+    - Agent_pre_merge_semantic_and_mechanical_review
+    - frontier_turn_completion_and_quota_efficiency
+    - mandatory_post_merge_route_closeout
     - prominent_PR_branch_retention_only_when_required
     - explicit_release_of_previously_retained_branches
     - compact_registered_external_research_display_names
@@ -169,4 +186,4 @@ Do not report the Mnemosyne maintenance current phase or next-route options as t
 - It does not authorize automatic capture or upload of every conversation/task artifact, and it does not require routine reading of preserved cold originals.
 - It does not attest an exact backend.
 - It does not start a handoff.
-- It does not automatically propagate the clarification architecture, source-preservation guard or branch-retention guard into Meta-Agent or another target project's truth source.
+- It does not automatically propagate the clarification architecture, source-preservation guard, Ready-PR guard or branch-retention guard into Meta-Agent or another target project's truth source.

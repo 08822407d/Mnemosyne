@@ -1,17 +1,20 @@
 # First Three Systems — Frontier Re-entry and Evidence Backlog v0.2
 
-> Current non-execution-source routing record after Owner-confirmed TLR-01 through TLR-05 and Pro/frontier formalization. It supersedes v0.1 for current backlog navigation but does not close items that still require validation, real-use evidence or target-specific adoption.
+> Current non-execution-source routing record after Owner-confirmed TLR-01 through TLR-05, Pro/frontier formalization, and verified merge of PR #277. It supersedes v0.1 for current backlog navigation but does not close items that still require validation, real-use evidence or target-specific adoption.
 
 ```yaml
 backlog_id: MNE-FIRST-THREE-SYSTEMS-FRONTIER-BACKLOG-002
-version: 0.2.0
-task_id: MNEMOSYNE-209
+version: 0.2.1
+created_by_task: MNEMOSYNE-209
+last_updated_by_task: MNEMOSYNE-210
 supersedes_for_current_navigation: notes/first-three-systems-frontier-reentry-backlog-v0.1.md
 owner_result_ref: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001.md
 candidate_ref: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
 validation_ref: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
 validation_package_ref: notes/target-agent-lifecycle-validation-package-v0.2/README.md
-status: priority_1_provisional_baseline_prepared_validation_not_authorized_other_priorities_preserved
+V0_decision_candidate_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md
+PR_277_post_merge_verification_ref: notes/codex-task-results/MNEMOSYNE-210-pr277-post-merge-verification.md
+status: priority_1_merged_V0_recommendation_prepared_pending_explicit_Owner_run_authorization_other_priorities_preserved
 execution_source: current/human-approved-spec.md
 ```
 
@@ -19,7 +22,13 @@ execution_source: current/human-approved-spec.md
 
 ### Current state
 
-Owner review is complete and formally recorded. Candidate v0.2, validation v0.2 and a frozen public/synthetic validation package are prepared on the canonical review branch.
+Owner review is complete and formally recorded. Candidate v0.2, validation v0.2 and the frozen public/synthetic validation package were merged through PR #277 at commit:
+
+```text
+9432a4415cefeb7c605b73a94042ba1763e15f06
+```
+
+MNEMOSYNE-210 verified the merge, expected artifact identities, absence of a required live-branch dependency, and the fact that no validation had begun. It also prepared a Pro-recommended V0-only run decision candidate so the Owner does not need to reconstruct D1 through D7 or spend another frontier turn merely to obtain a proposed profile.
 
 Confirmed baseline:
 
@@ -49,13 +58,39 @@ Confirmed baseline:
 - whether the no-parent-content default causes meaningful design-history loss;
 - backup independence and restore proof.
 
+### Recommended V0 profile
+
+The current Pro recommendation is:
+
+```yaml
+recommended_V0:
+  decision_candidate: MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001
+  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  visibility: public
+  phase: V0_ONLY
+  material: public_synthetic_only
+  executor: current_next_tier_non_Pro_selection_recorded_verbatim_at_launch
+  tools:
+    - GitHub_read_write_only_on_synthetic_repository
+    - mechanical_identity_path_diff_schema_and_no_write_checks
+  web_or_research: prohibited
+  paid_or_external_quota: false
+  raw_output: synthetic_repository_only
+  Mnemosyne_ingestion: separately_gated
+```
+
+This is a recommendation, not authorization. Repository creation and V0 remain blocked until the Owner explicitly confirms the decision candidate and records the exact visible execution selection at launch.
+
 ### Current gate
 
 ```yaml
 priority_1_gate:
-  candidate_v0_2_prepared: true
-  validation_v0_2_prepared: true
-  frozen_validation_package_prepared: true
+  PR_277_verified_merged: true
+  merge_commit: 9432a4415cefeb7c605b73a94042ba1763e15f06
+  candidate_v0_2_merged: true
+  validation_v0_2_merged: true
+  frozen_validation_package_merged: true
+  V0_owner_decision_candidate_prepared: true
   validation_repository_created: false
   V0_authorized: false
   V1_authorized: false
@@ -64,7 +99,13 @@ priority_1_gate:
   target_adoption_authorized: false
 ```
 
-One later Owner decision must complete `notes/target-agent-lifecycle-validation-package-v0.2/00-run-scope-and-owner-decision.md` before any V0 action.
+The next true gate is explicit Owner acceptance or correction of:
+
+```text
+notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md
+```
+
+A V0 authorization does not authorize V1.
 
 ## Priority 2 — Meta-Agent target-owned readiness
 
@@ -74,7 +115,7 @@ Preserved blockers:
 - initial construction has not yet received the required human review;
 - first operational task scope, acceptance and stop conditions remain unknown.
 
-Route to the Meta-Agent construction conversation. Candidate v0.2 does not modify or activate Meta-Agent.
+Route to the Meta-Agent construction conversation. Candidate v0.2 and the V0 decision candidate do not modify or activate Meta-Agent.
 
 ## Priority 3 — Language-learning professional basis
 
@@ -102,7 +143,7 @@ The synthetic S11 validation may test semantics. It does not authorize real back
 
 ## Priority 5 — Evidence about change documentation and change records
 
-Newly explicit after TLR-02/TLR-03:
+Explicit after TLR-02/TLR-03:
 
 - test whether human-facing and Agent-facing change documentation can remain semantically consistent;
 - test whether the Agent-facing form supports accurate downstream reconstruction;

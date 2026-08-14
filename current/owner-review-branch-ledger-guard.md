@@ -5,13 +5,17 @@
 ```yaml
 guard_id: MNEMOSYNE-OWNER-REVIEW-BRANCH-LEDGER-001
 created_by_task: MNEMOSYNE-207
-status: active_user_approved_behavior_guard_pending_merge
+last_amended_by_task: MNEMOSYNE-210
+status: active_after_MNEMOSYNE_210_merge
 applies_to:
   - material_multi_step_owner_review
   - correction_aware_human_decision_interview
   - next_tier_interview_followed_by_frontier_consolidation
 execution_source: current/human-approved-spec.md
-owner_direction_ref: current_conversation_after_exact_export_supply
+owner_direction_ref:
+  - current_conversation_after_exact_export_supply
+  - current_conversation_after_PR_277_workflow_failure_review
+specific_PR_readiness_guard: current/agent-product-ready-pr-and-frontier-efficiency-guard.md
 ```
 
 ## 1. Purpose
@@ -80,6 +84,8 @@ A later Pro/frontier model may continue the same branch when it:
 
 The Pro/frontier segment may revise interpretations, consolidate records, and delete unnecessary working files from the branch tip when within the task scope.
 
+Before ending the frontier segment, it must also apply the frontier-turn completion check in `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`: complete all authorized frontier-level synthesis and review, then route only genuinely bounded or mechanical follow-up away from the scarce frontier condition.
+
 ## 6. Deletion and withdrawal semantics
 
 A later commit can delete a file so that it disappears from the branch's current tree and final PR diff. This is suitable for obsolete, redundant, or superseded non-sensitive working files.
@@ -93,9 +99,16 @@ Ordinary deletion does **not** erase the file from earlier Git commits. Therefor
 ## 7. PR and merge behavior
 
 - A PR is not required merely to keep an interview branch durable.
-- At most one canonical Draft PR may later be opened for the review task.
+- At most one canonical PR may later be opened for the review task.
+- When the interview, Pro/frontier consolidation, required Agent review and mechanical checks are complete and no blocking decision remains, the canonical PR must be created as a **Ready PR** (`draft: false`) by default.
+- A Draft PR is allowed only when substantive work is still incomplete, a material Owner decision or required review remains pending, further substantive commits are intentionally expected, or the Owner explicitly requests Draft status.
+- The mere fact that future validation, target adoption or another separately gated stage has not run does not make a completed review/formalization PR incomplete; those boundaries must be stated in the PR rather than represented by Draft status.
 - The Pro/frontier consolidation may keep useful intermediate evidence, merge it into the final result, or delete redundant working files before PR creation.
-- Owner confirmation of interview answers does not automatically authorize candidate implementation, validation, target adoption, or merge.
+- The responsible Agent must complete substantive semantic review and give a clear merge recommendation before asking the Owner to merge. It must not shift comprehensive diff review to the Owner by saying only “please review the PR”.
+- Owner confirmation, Ready transition, approval or merge is an authority/acceptance gate. None of those actions by itself proves that the Owner performed a complete file-by-file or line-by-line content review.
+- Owner confirmation of interview answers does not automatically authorize candidate implementation, validation, target adoption or merge.
+
+The more specific Ready-PR, Owner-review-evidence and post-merge rules are in `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`.
 
 ## 8. Concurrency and stale-state handling
 
@@ -136,4 +149,5 @@ This guard:
 - does not make provisional answers final;
 - does not authorize private-material publication;
 - does not attest model identity;
-- does not replace final Owner confirmation or post-merge verification.
+- does not turn Ready status or merge into evidence of comprehensive human content review;
+- does not replace final Owner confirmation, required Agent review, mechanical checks or post-merge verification.
