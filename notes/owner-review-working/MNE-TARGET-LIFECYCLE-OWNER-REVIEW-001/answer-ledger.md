@@ -9,9 +9,9 @@
 - TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
 
 暂定：
-- TLR-02：代码库 Agent 只负责详细、可供使用项目理解的自身变化记录；各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。需要参考成熟开源库的变更记录与迁移说明惯例，结合 Agent 能力确定机器可理解的变化表达方式。
+- TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
 
-当前问题：TLR-02（等待研究补充与 Owner 确认解释）
+当前问题：TLR-02（等待 Owner 确认新增细化解释）
 剩余：TLR-02 至 TLR-05
 ```
 
@@ -75,46 +75,52 @@ question_result:
 
   owner_answer:
     verbatim_or_safe_ref: >-
-      TLR02的问题我当时说过，按照我的设想，代码库agent只负责详细记录自己的变化（而且这些当中有一些是要给引用了本库的项目看的，让它们能知道本库具体发生了哪些变化），而各项目只有在需要重新构建的时候才会发现有变化，这时候各项目自己的agent查阅库的变化细节来决定如何重构自己的项目。我当时似乎还说了要查阅各大开源库的惯例，学习它们是如何记录和说明变化的，结合agent的能力来确定应该如何描述变化以使具体项目agent可以清晰的了解变化。这个调查分析你自己应该就能完成，或者你不确定的话可以出具一份深度研究课题我交给深度研究。
-    message_ref: current_conversation_owner_answer_TLR_02
+      TLR02的问题我当时说过，按照我的设想，代码库agent只负责详细记录自己的变化（而且这些当中有一些是要给引用了本库的项目看的，让它们能知道本库具体发生了哪些变化），而各项目只有在需要重新构建的时候才会发现有变化，这时候各项目自己的agent查阅库的变化细节来决定如何重构自己的项目。我当时似乎还说了要查阅各大开源库的惯例，学习它们是如何记录和说明变化的，结合agent的能力来确定应该如何描述变化以使具体项目agent可以清晰的了解变化。这个调查分析你自己应该就能完成，或者你不确定的话可以出具一份深度研究课题我交给深度研究。随后 Owner 确认该解释准确，并进一步要求：变化说明分成两部分，一个是给人类看的，另一份是给项目agent看的。给人看的最低要求简要说明变化但不排除后续会加其他内容；给agent看的必须让项目agent知道怎么重构自己负责的项目；并且应该在库项目的总说明中简要说明这两种文档的存在、用途和放置位置。
+    message_ref: current_conversation_owner_answer_and_refinement_TLR_02
 
   interviewer_interpretation: >-
-    Owner 重申 OR-04 的责任分工：代码库 Agent 的职责是准确、详细并面向使用方可理解地记录本库自身的接口、版本、兼容性和其他重要变化；它不默认维护所有使用项目的完整消费者总表，也不主动替各项目执行升级。具体项目只有在需要重新构建、升级或其他触发条件出现时，才由项目自己的 Agent 读取代码库的变化记录，分析本项目实际使用情况，并决定如何修改、迁移和验证。Owner 还要求参考成熟开源库的版本变化、破坏兼容的变更、迁移指南和弃用说明惯例，结合 Agent 的读取与推理能力，设计一种既适合人阅读、也足以让项目 Agent 清楚判断影响的变化描述方式。
+    Owner 确认 OR-04/TLR-02 的责任分工，并进一步要求代码库的变化说明至少区分两种面向对象。第一种是面向人类的变化说明：最低要求是用自然、简洁的方式说明本库发生了哪些重要变化，但未来可以加入更丰富的背景、示例、设计说明等内容。第二种是面向引用本库的项目 Agent 的变化说明：它必须比人类版更强调可执行性和重构所需信息，使项目 Agent 在触发重新构建或升级时，能够据此识别受影响接口或行为、理解旧约定和新约定、确定替代/迁移步骤，并据此修改和验证自己负责的项目。两类文档可以共享事实来源，但用途不同，不应假定人类版的简述天然足以支持 Agent 重构。代码库项目还应有一份总说明或文档导航，简要告诉引用本库的 Agent：除代码之外还提供哪些文档、每类文档的用途是什么、放在哪里；其中必须明确介绍上述人类版变化说明和项目 Agent 版变化说明。代码库 Agent 仍不默认维护所有引用项目的完整消费者名单，也不替项目做项目侧重构；具体项目 Agent 在需要重新构建/升级时读取 Agent 版变化说明，并结合本项目实际使用情况自行决定修改和验证。
   interpretation_confirmed: no
-  confirmation_ref: null
+  confirmation_ref: current_conversation_owner_confirmed_prior_TLR_02_interpretation_then_added_refinement
 
-  selected_option_or_rule: library_records_own_changes_consumers_rebuild_on_demand
+  selected_option_or_rule: library_records_own_changes_with_human_and_agent_documentation_consumers_rebuild_on_demand
   modifications:
+    - split change documentation into a human-facing version and a downstream-project-Agent-facing version
+    - human-facing version has a minimum requirement of concise change explanation but may later include richer content
+    - Agent-facing version must carry enough actionable migration/rebuild information for a downstream project Agent to reconstruct its own project safely
+    - library-level documentation index or overview must state what non-code documentation exists, what each document is for, and where it is located
+    - the overview must explicitly name the human-facing and Agent-facing change documentation and their roles
     - do not require an always-current library-side consumer impact view as a default responsibility
     - project-side Agent performs impact analysis when rebuild/upgrade is actually triggered
-    - library change records must be deliberately designed for downstream Agent comprehension
-    - mature open-source change/migration documentation practices should inform the format
+    - mature open-source change/migration documentation practices should inform the human-facing material and the underlying change facts
   rejected_options:
     - library_maintains_exhaustive_consumer_reverse_index_by_default
     - library_agent_owns_project_specific_upgrade_decisions
+    - single_undifferentiated_change_document_assumed_sufficient_for_both_humans_and_agents
   conditions_or_exceptions: []
 
   deferred:
     value: false
-    safe_default: preserve OR-04 responsibility split while researching the change-description format
-    revisit_trigger: evidence that on-demand project-side discovery is insufficient for important cases
+    safe_default: preserve OR-04 responsibility split and the two-audience documentation model while refining exact schemas later
+    revisit_trigger: evidence that the two-document model or on-demand project-side discovery is insufficient for important cases
 
   residual_uncertainty:
-    - exact change-record schema and presentation format remains to be designed
-    - whether narrowly scoped proactive notification/registration exceptions are still useful remains open pending evidence
+    - exact file names, schema, storage paths, and update synchronization between the human-facing and Agent-facing change documents remain to be designed
+    - whether narrowly scoped proactive notification/registration exceptions are useful remains open pending evidence
+    - the minimum machine-oriented structure needed to reliably support downstream Agent migration should be validated later
   affected_later_questions: []
 
   external_fact_checks_required:
-    - compare mature open-source project practices for release notes, breaking changes, migration guides, deprecation notices, and compatibility documentation
-    - assess which structures are most legible to downstream Agents as well as humans
+    - completed bounded comparison of mature open-source practices for release notes, breaking changes, migration guides, deprecation notices, and compatibility documentation
+    - later validation should test whether the Agent-facing format is sufficient for downstream project Agents to identify and implement required reconstruction
   missing_artifacts: []
 
   frontier_reentry:
     required: false
-    reason: answer restates and sharpens the already preserved OR-04 responsibility direction without changing target authority
+    reason: the refinement strengthens documentation and discoverability within the existing OR-04 responsibility boundary; it does not change target authority or create a competing writer
     affected_decision: null
 ```
 
 ## Confirmation gate
 
-Do not advance to TLR-03 until the Owner confirms or corrects the TLR-02 interviewer interpretation after the bounded evidence review.
+Do not advance to TLR-03 until the Owner confirms or corrects the refined TLR-02 interviewer interpretation above.
