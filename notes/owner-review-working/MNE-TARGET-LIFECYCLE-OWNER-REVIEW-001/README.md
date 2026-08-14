@@ -8,7 +8,7 @@ base_branch: master
 base_sha: 365540c8340491c50032ee99b06654644aeb7b6f
 working_branch: mnemosyne-tlr-owner-review-001-ledger
 working_root: notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/
-current_question: TLR-04
+current_question: TLR-05
 writes_limited_to_review_evidence: true
 execution_source_modified: false
 target_modified_or_activated: false
