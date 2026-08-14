@@ -8,12 +8,10 @@
 已确认：
 - TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
 - TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
+- TLR-03：保留具有实际用途的变化路径区分，但不建立为了分类而分类的复杂体系；上游元 Agent 经 Owner 发起并在受授权范围内研究/设计特定下游修改，不具有自由修改下游的持续权限。至少保留需求原文并明确记录重要 API 变化，更细的分类、关键字段和记录规则留待真实运行后形成；未来可由 Pro 分析、虚拟案例/测试以及另行授权的 Pro Deep Research 辅助改进。
 
-暂定：
-- TLR-03：变化类型应按实际入口和用途做足够但不过度的区分；不为了分类而分类。上游元 Agent 只是经 Owner 发起、针对特定下游进行受授权的设计研究/修改任务，不获得自由修改下游的持续权限。需求原文和 API 变化可作为最低限度可靠记录，更细的分类与记录规则留待真实运行后形成；可在后续自身建设中用 Pro Deep Research 搜集有帮助的信息，并由 Pro 设计虚拟案例和测试方案进行预估，但当前未授权启动这些工作。
-
-当前问题：TLR-03（等待 Owner 确认修正后的解释）
-剩余：TLR-03 至 TLR-05
+当前问题：TLR-04
+剩余：TLR-04 至 TLR-05
 ```
 
 ## TLR-01 — Same-repository concurrency
@@ -128,7 +126,7 @@ question_result:
 question_result:
   question_id: TLR-03
   label: Primary change axis and secondary effects
-  status: PROVISIONAL
+  status: CONFIRMED
 
   owner_answer:
     verbatim_or_safe_ref: >-
@@ -141,8 +139,8 @@ question_result:
     The previous frontier-reentry concern is withdrawn after Owner clarification. “Upstream actively modifies downstream” means the Owner initiates a bounded task in which the upstream/meta Agent researches/designs or, when separately authorized, executes a change directed at a specific downstream target. It does not mean automatic propagation, standing cross-target writer authority, or permission for an upstream Agent to freely change downstream truth. The downstream/Owner authorization boundary therefore remains intact.
 
     For recording, a robust minimum exists even before a mature schema: preserve the original requirement/source input and clearly record material API changes. More elaborate primary-axis/secondary-effect fields, category granularity, and key-information requirements should be learned through real operation rather than over-designed in advance. Later Mnemosyne/self-construction work may use Pro-level analysis, bounded synthetic cases/tests, and—when separately selected and authorized—Pro Deep Research to collect evidence about useful change-record structures. These are future evidence routes, not authorization to start research or validation in the current TLR interview.
-  interpretation_confirmed: no
-  confirmation_ref: null
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_03_accuracy
 
   selected_option_or_rule: practical_route_based_change_distinction_with_no_automatic_propagation_and_practice_learned_recording
   modifications:
@@ -194,6 +192,6 @@ question_result:
     affected_decision: null
 ```
 
-## Confirmation gate
+## Current question
 
-Do not advance to TLR-04 until the Owner confirms or corrects the refined TLR-03 interviewer interpretation above.
+`TLR-04 — Parent-owned design brief exception`
