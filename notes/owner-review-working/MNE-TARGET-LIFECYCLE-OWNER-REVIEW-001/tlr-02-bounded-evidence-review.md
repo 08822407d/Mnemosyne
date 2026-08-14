@@ -14,6 +14,21 @@ Sources sampled:
 - Kubernetes official deprecation policy and deprecated-API migration guide;
 - Semantic Versioning 2.0.0 as a reference convention, not as a universal rule.
 
+## Verification note
+
+```yaml
+verification:
+  verified_at: 2026-08-14
+  verification_scope: current accessibility and stated migration/deprecation/change-documentation behavior of the named official sources
+  source_class: official_primary_documentation
+  result: verified_for_current_TLR_02_bounded_use
+  limitations:
+    - this is a small illustrative sample, not an empirical census of open-source ecosystems
+    - common-pattern conclusions are engineering synthesis, not a claim that every project follows the same policy
+```
+
+The current official pages support the bounded observations used below: NumPy exposes release notes, a dedicated 2.0 migration guide, and downstream-package guidance; Django release notes explicitly call out backwards-incompatible changes and its upgrade guide tells users to read intervening release notes and deprecation timelines; OpenSSL publishes a migration guide including deprecated-function mappings; Kubernetes publishes a deprecation policy and deprecated-API migration guide. NumPy's current downstream guidance also explicitly states that NumPy does not use Semantic Versioning, which is why version numbers alone are not treated as a universal compatibility signal.
+
 ## Observed common pattern
 
 1. The library/project primarily documents its own public interface, version, compatibility state, deprecations, removals, and migration path.
@@ -22,7 +37,7 @@ Sources sampled:
 4. Breaking changes are grouped or highlighted so downstream users do not have to infer them from an undifferentiated commit list.
 5. Migration documentation frequently states the old form, the new/replacement form, and required downstream action.
 6. Downstream users/projects are expected to inspect the release/migration information relevant to the versions they move across; the upstream project does not normally maintain an authoritative complete list of every consumer and its exact usage.
-7. Version numbers are useful signals but are not sufficient as the only machine-readable compatibility signal because major projects do not all follow the same versioning convention (for example, NumPy explicitly does not use Semantic Versioning).
+7. Version numbers are useful signals but are not sufficient as the only machine-readable compatibility signal because major projects do not all follow the same versioning convention; NumPy explicitly states that it does not use Semantic Versioning.
 
 ## Implication for an Agent-oriented library change record
 
