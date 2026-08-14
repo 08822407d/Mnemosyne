@@ -9,15 +9,13 @@
 - TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
 - TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
 - TLR-03：保留具有实际用途的变化路径区分，但不建立为了分类而分类的复杂体系；上游元 Agent 经 Owner 发起并在受授权范围内研究/设计特定下游修改，不具有自由修改下游的持续权限。至少保留需求原文并明确记录重要 API 变化，更细的分类、关键字段和记录规则留待真实运行后形成；未来可由 Pro 分析、虚拟案例/测试以及另行授权的 Pro Deep Research 辅助改进。
+- TLR-05：接受推荐顺序；把本轮确认结果、延期项和安全默认整理为供验证使用的暂定架构版本，再由 Owner 分别授权候选/验证准备与实际验证；验证复核前不允许真实目标采用。
 
 延期：
 - TLR-04：现阶段先不在元 Agent 中保存下游 Agent 的实质内容；下游全部资料留在自己的正式仓库，并由专门备份系统承担丢失后的恢复。什么内容值得作为“必要的上游保留”尚无充分实践依据，待多个真实项目运行后再研究。此延期边界已由 Owner 确认。
 
-暂定：
-- TLR-05：Owner 选择接受推荐顺序：把 TLR-01 至 TLR-04 的确认结果、延期项和安全默认整理为供验证使用的暂定架构版本；随后再由 Owner 分别授权是否创建/运行公开或合成验证。验证执行并由 Pro/frontier 复核之前，不允许把该暂定版本视为成熟架构或自动采用到真实目标 Agent。当前等待 Owner 确认 interviewer interpretation。
-
-当前问题：TLR-05（等待解释确认）
-剩余：TLR-05
+当前状态：TLR-01 至 TLR-05 均已完成逐题解释确认；等待 Owner 对完整 final-result-candidate 做最后总确认。
+剩余问题：无新的 TLR 问题；仅剩 package-level 最终总确认。
 ```
 
 ## TLR-01 — Same-repository concurrency
@@ -257,7 +255,7 @@ question_result:
 question_result:
   question_id: TLR-05
   label: Provisional baseline and validation/adoption sequence
-  status: PROVISIONAL
+  status: CONFIRMED
 
   owner_answer:
     verbatim_or_safe_ref: >-
@@ -272,8 +270,8 @@ question_result:
     TLR-04 remains explicitly deferred inside this provisional baseline: the safe default is no substantive downstream content in parent/meta repositories, while the question of a useful minimum may be revisited after real-project evidence. TLR-03 likewise preserves only the practical route distinctions and minimum records currently confirmed; it does not invent the detailed classification/record schema that the Owner chose to learn from practice.
 
     The Owner's selection of the recommended sequence does not itself authorize creation of candidate v0.2, validation v0.2, a validation repository, validation execution, target modification, Meta-Agent work, Deep Research, Fable, quota use, or a PR. Those remain later Pro/frontier and Owner authorization steps under the existing handoff/package contract.
-  interpretation_confirmed: no
-  confirmation_ref: null
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_05_accuracy
 
   selected_option_or_rule: provisional_baseline_then_separately_authorized_validation_then_owner_and_target_adoption
   modifications:
@@ -306,6 +304,6 @@ question_result:
     affected_decision: null
 ```
 
-## Confirmation gate
+## Completion gate
 
-All five questions have now been covered, but TLR-05 is not final until the Owner confirms or corrects the interviewer interpretation above. Do not create `final-result-candidate.md`, candidate v0.2, validation v0.2, any validation run, or a PR until this confirmation gate is passed and the later workflow authorizes the relevant step.
+TLR-01 through TLR-05 have each passed their per-question Owner interpretation-confirmation gate. Create and present `final-result-candidate.md` under the same review working root, then wait for the Owner's package-level correction or final confirmation. Do not create candidate v0.2, validation v0.2, any validation run, target modification, Meta-Agent work, Deep Research/Fable run, quota-consuming task, or PR under this confirmation alone.
