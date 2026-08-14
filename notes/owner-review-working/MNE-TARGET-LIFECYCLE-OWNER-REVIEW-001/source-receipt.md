@@ -70,15 +70,15 @@ run_context:
       - ref: notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/source-receipt.md
         relation: created
         immutable_identity:
-          status: not_available_before_write_completion
+          status: recorded
           type: git_commit_sha
-          value: pending
+          value: 64da428a2d9f799d670ada4aea58c2e17cfde13a
       - ref: notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/answer-ledger.md
-        relation: planned
+        relation: created
         immutable_identity:
-          status: unknown
+          status: recorded
           type: git_commit_sha
-          value: pending
+          value: c954f4e609cf236c46bb5057c54c1257aaea947e
   user_authorization:
     status: authorized
     actor: Owner
