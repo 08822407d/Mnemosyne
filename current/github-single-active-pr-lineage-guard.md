@@ -5,8 +5,8 @@
 ```yaml
 guard_id: MNEMOSYNE-GITHUB-SINGLE-ACTIVE-PR-LINEAGE-001
 created_by_task: MNEMOSYNE-118
-last_amended_by_task: MNEMOSYNE-197
-status: active_user_approved_behavior_guard
+last_amended_by_task: MNEMOSYNE-210
+status: active_after_MNEMOSYNE_210_merge
 applies_to:
   - ordinary_ChatGPT_GitHub_app_repository_writes
   - Codex_repository_writes
@@ -14,6 +14,7 @@ applies_to:
 execution_source: current/human-approved-spec.md
 default_rule: one_task_id_one_canonical_write_branch_at_most_one_open_canonical_PR
 parallel_PR_default: prohibited
+PR_readiness_guard: current/agent-product-ready-pr-and-frontier-efficiency-guard.md
 post_merge_branch_guard: current/pr-merge-branch-disposition-guard.md
 ```
 
@@ -27,6 +28,8 @@ The failure was not merely a merge-conflict problem. It was a write-lineage cont
 - a second branch and PR were created instead of continuing the existing PR head branch;
 - the user-facing response did not enumerate all related PRs;
 - more than one plausible merge target existed at the same time.
+
+A later failure around PR #277 showed that canonical lineage alone is not enough: a completed Agent-product change was unnecessarily created as Draft, the Owner was implicitly burdened with turning it Ready, and the Draft transition risked being confused with substantive human review. This guard now delegates Ready-vs-Draft and review-evidence semantics to the specific Agent-product PR guard.
 
 ## 2. Canonical write lineage
 
@@ -94,7 +97,7 @@ Do not create a second branch or PR. Continue the existing PR by committing to i
 
 ### 4.3 A related PR is already merged
 
-Do not reuse the old task ID or silently reopen the merged lineage. Use a new follow-up task ID and a new branch from current default branch for any repair, amendment, or reconciliation, unless the user explicitly authorizes task-number reuse.
+Do not reuse the old task ID or silently reopen the merged lineage. Use a new follow-up task ID and a new branch from current default branch for any repair, amendment, post-merge state correction, or reconciliation, unless the user explicitly authorizes task-number reuse.
 
 ### 4.4 A related PR is closed but unmerged
 
@@ -115,6 +118,30 @@ Immediately before creating a PR, repeat the open-PR enumeration and exact-head/
 - an explicitly approved parallel variant is recorded.
 
 The actor must record the recheck result and the exact head/base pair.
+
+### 5A. Ready-vs-Draft state gate
+
+After the duplicate-lineage preflight, decide PR state using `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`.
+
+```yaml
+PR_readiness_preflight:
+  substantive_scope_complete:
+  required_Agent_semantic_review_complete:
+  required_mechanical_checks_complete:
+  blocking_Owner_decisions: []
+  further_substantive_commits_expected:
+  explicit_Owner_Draft_request:
+  decision: READY | DRAFT_WITH_RECORDED_EXCEPTION | BLOCKED
+  reason:
+```
+
+Rules:
+
+1. Completed Agent-product work defaults to `READY` and must be created with `draft: false`.
+2. Use Draft only for an explicit recorded exception: incomplete substantive work, a content-changing Owner decision, a required review/check still pending, expected substantive commits, or an explicit Owner request.
+3. Large diff size, Agent authorship, generic caution, or an unexecuted later stage is not a Draft exception.
+4. Do not ask the Owner to turn a completed PR Ready merely to simulate human review.
+5. Ready transition, approval and merge are not evidence that the Owner comprehensively reviewed the content.
 
 ## 6. Parallel variants
 
@@ -162,6 +189,9 @@ merge_instruction:
   closed_or_superseded_related_prs: []
   exactly_one_merge_target: true
   duplicate_preflight_completed: true
+  PR_state: ready | draft_with_recorded_exception
+  merge_recommendation: RECOMMEND_MERGE | REQUEST_CHANGES | BLOCKED
+  comprehensive_human_diff_review_assumed: false
 
   # Include only when the live branch must be retained after merge:
   branch_retention:
@@ -171,7 +201,7 @@ merge_instruction:
     retain_until:
 ```
 
-If more than one related open PR remains, `exactly_one_merge_target` is false, or branch retention cannot be established, the assistant must not issue a merge instruction.
+If more than one related open PR remains, `exactly_one_merge_target` is false, branch retention cannot be established, the PR is incomplete Draft work, or the responsible Agent cannot give an evidence-bound merge disposition, the assistant must not issue a merge instruction.
 
 ### 8.1 Retention-only visibility
 
@@ -199,14 +229,18 @@ Every important repository-writing task result must record:
 - canonical branch;
 - pre-branch duplicate-lineage preflight;
 - pre-PR duplicate-lineage recheck;
-- canonical PR number;
+- PR-readiness preflight and any Draft exception;
+- canonical PR number and Ready/Draft state;
 - all related PR numbers and states;
 - whether parallel variants were approved;
 - the single user-facing merge target;
+- the responsible Agent's semantic-review and merge disposition;
+- that comprehensive human diff review is not assumed unless separately evidenced;
 - internal branch-retention preflight;
 - any created retention obligation, reason, gate, responsible route, and notice ref;
 - any later explicit release-to-delete record;
 - final comparison against default branch;
+- post-merge verification/status closeout when the merge occurs;
 - any enumeration limitations or exceptions.
 
 For an ordinary branch with no retention dependency, the result record may state `SILENT_DEFAULT_DELETE_AFTER_MERGE`; this internal field need not appear in the user-facing response.
@@ -219,7 +253,8 @@ A merged PR's commits remain in repository history after ordinary head-branch de
 
 ## 11. Boundaries
 
-- This guard does not authorize repository writes, parallel PRs, merges, auto-merge, branch deletion, branch retention, or task-number reuse.
+- This guard does not authorize repository writes, PR creation, parallel PRs, merges, auto-merge, branch deletion, branch retention, or task-number reuse.
 - This guard does not introduce GitHub Actions or automatic enforcement.
 - It does not make PR metadata or result records execution source.
-- It does not replace user approval, platform permission, latest-default-branch checks, diff verification, post-merge validation, or the dedicated branch-retention guard.
+- It does not make Ready status, approval or merge evidence of comprehensive human content review.
+- It does not replace user approval, platform permission, latest-default-branch checks, semantic review, diff verification, post-merge validation/closeout, or the dedicated branch-retention guard.
