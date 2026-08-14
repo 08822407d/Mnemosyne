@@ -9,10 +9,10 @@
 - TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
 - TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
 
-需 Pro/frontier：
-- TLR-03：Owner 对变化分类和记录方向已有明确说明，但“上游元 Agent 主动修改下游 Agent 的目录组织和行为约束文件”触及下游写入权责与自动传播边界，必须先做 frontier re-entry；其余关于需求/API 变化入口、最低保留需求原文、具体规则留待实践的内容已保存。
+暂定：
+- TLR-03：变化类型应按实际入口和用途做足够但不过度的区分；不为了分类而分类。上游元 Agent 只是经 Owner 发起、针对特定下游进行受授权的设计研究/修改任务，不获得自由修改下游的持续权限。需求原文和 API 变化可作为最低限度可靠记录，更细的分类与记录规则留待真实运行后形成；可在后续自身建设中用 Pro Deep Research 搜集有帮助的信息，并由 Pro 设计虚拟案例和测试方案进行预估，但当前未授权启动这些工作。
 
-当前问题：TLR-03（FRONTIER_REENTRY_REQUIRED，停止普通访谈推进）
+当前问题：TLR-03（等待 Owner 确认修正后的解释）
 剩余：TLR-03 至 TLR-05
 ```
 
@@ -128,57 +128,72 @@ question_result:
 question_result:
   question_id: TLR-03
   label: Primary change axis and secondary effects
-  status: FRONTIER_REENTRY_REQUIRED
+  status: PROVISIONAL
 
   owner_answer:
     verbatim_or_safe_ref: >-
-      这个问题中区分辨别变化的种类相对比较简单，因为入口和路径有明显的不同。来自上游agent或者说各元agent的变化是由元agent触发的，上游主动修改下游的agent目录组织和行为约束相关文件。而需求变化分代码库类型和具体业务项目，业务项目的需求变化无需详细讨论因为它没有下游了，再怎么变也是自己的事；而代码库的需求主要来自于具体业务的需求的综合分析，其一定程度上会引起api设计的变化，而如果我要求尖端模型进行设计评估和改善以及多agent互评和后续的修改，通常会引起api变化，api变化应该是很容易记录的，而需求变化因为入口固定，记录起来也相对简单，需求本身的文字数量也不是很多，即使没有设计好一个可靠的方案，至少记录需求原文不是一件很困难的事。不过这些细则还是得等到实践的时候才能确定一套有意义和有效的方案和规则，现在不急于详细讨论。
-    message_ref: current_conversation_owner_answer_TLR_03
+      Owner first stated that change types are relatively easy to distinguish because their entrances and paths differ; upstream/meta-Agent changes are triggered from the upstream route, business-project requirement changes remain project-local, code-library requirements largely arise from synthesis of business-project needs and may drive API changes, and API changes are comparatively easy to record. Owner also stated that requirement originals are small enough that preserving the original text is a practical minimum even before a mature scheme exists, and that detailed rules should wait for real practice. Owner then clarified that “上游主动修改下游” does not grant the upstream Agent free or standing authority to directly modify downstream targets. Instead, after an upstream system changes, the Owner actively asks that upstream system to study and design changes for a specific downstream target; the upstream system is the directional initiator and the downstream target is the recipient, but the task remains explicitly Owner-initiated and bounded. Owner further stated that upstream improvements are often motivated by dissatisfaction or bugs observed while using downstream systems, but can also originate from new ideas or lessons from other systems. For classification, categories must have real practical value rather than exist for classification’s sake; actual cases will not fit ideal taxonomies perfectly; the analyzing Agent is intelligent enough that preserving key information matters more than building a complex classifier. What information is actually key should be learned from sustained real operation. In later self-construction work, Pro Deep Research may collect potentially useful evidence and Pro conversation may design synthetic cases/tests to estimate useful recording schemes.
+    message_ref: current_conversation_owner_answer_and_clarification_TLR_03
 
   interviewer_interpretation: >-
-    Owner 认为不同变化类型本身并不难识别，因为它们有清楚的入口和处理路径。来自 Mnemosyne、Meta-Agent 或其他上游元 Agent 的变化属于上游能力/方法演化路径；业务项目自身的需求变化没有下游传播问题，可主要由该项目自行处理；代码库需求主要来自多个具体业务需求的综合分析，并可能进一步引起 API 设计变化；尖端模型设计评估、多 Agent 互评及后续修订也可能导致 API 变化。需求入口相对固定且原始文字通常不长，因此即使正式记录机制尚未成熟，也至少可以保存需求原文；API 变化本身也应相对容易记录。Owner 不要求现在冻结一套复杂的“主要变化 + 连带影响”记录方案，而倾向把具体规则留到真实实践中，根据是否有意义、是否有效再逐步形成。
+    Owner accepts the existing principle that materially different change routes should remain distinguishable and should not automatically propagate into one another, but does not want a detailed universal classification system frozen now. The useful first distinction is mainly based on real entry path and responsibility: upstream/meta-system method changes; target-local business requirements; code-library requirements synthesized from business needs; resulting API/design changes; and other categories only when they prove useful in practice. Categories are instruments for preserving causality, responsibility, and useful evidence, not goals in themselves. The system should therefore prefer a small, practical route-based distinction and preserve enough source information for a capable Agent to reconstruct meaning rather than depend on a brittle fine-grained classifier.
 
-    但 Owner 同时表述“上游主动修改下游的 Agent 目录组织和行为约束相关文件”。若这里意味着上游元 Agent 对下游目标具有持续、自动或无需下游/Owner 单独授权的直接写入权，则会改变当前已确认的 target writer authority / no automatic cross-target propagation 边界。当前 next-tier 访谈不能替 Owner 将这一高影响权责变化直接吸收为 TLR-03 的普通细则，因此必须交给 Pro/frontier 单独判定。若 Owner 实际含义只是“由上游元 Agent 发起一个明确、受授权、写入范围受限的下游修改任务”，则可能仍与既有权责边界兼容，但这一点不能由 interviewer 自行补写。
+    The previous frontier-reentry concern is withdrawn after Owner clarification. “Upstream actively modifies downstream” means the Owner initiates a bounded task in which the upstream/meta Agent researches/designs or, when separately authorized, executes a change directed at a specific downstream target. It does not mean automatic propagation, standing cross-target writer authority, or permission for an upstream Agent to freely change downstream truth. The downstream/Owner authorization boundary therefore remains intact.
 
+    For recording, a robust minimum exists even before a mature schema: preserve the original requirement/source input and clearly record material API changes. More elaborate primary-axis/secondary-effect fields, category granularity, and key-information requirements should be learned through real operation rather than over-designed in advance. Later Mnemosyne/self-construction work may use Pro-level analysis, bounded synthetic cases/tests, and—when separately selected and authorized—Pro Deep Research to collect evidence about useful change-record structures. These are future evidence routes, not authorization to start research or validation in the current TLR interview.
   interpretation_confirmed: no
   confirmation_ref: null
 
-  selected_option_or_rule: separate_change_routes_with_practice_deferred_recording_details
+  selected_option_or_rule: practical_route_based_change_distinction_with_no_automatic_propagation_and_practice_learned_recording
   modifications:
-    - treat change classification as primarily route/entry-point based rather than requiring heavy classification machinery
-    - business-project requirement evolution is target-local and needs no downstream-propagation model by default
-    - code-library requirements arise substantially from synthesis of business-project needs and may legitimately create API redesign candidates
-    - preserve original requirement text as the minimum durable evidence while richer recording rules remain immature
-    - defer detailed record schemas and effective operational rules until practice provides evidence
+    - classify only where categories have practical decision, provenance, or routing value
+    - prefer simple route/entry-point distinctions over a complex classifier
+    - do not expect real cases to fit an ideal taxonomy perfectly
+    - rely on capable Agent reasoning when key source information is preserved
+    - preserve original requirement text as a minimum durable record before richer schemes mature
+    - record material API changes explicitly
+    - business-project requirement evolution is target-local and has no default downstream propagation problem
+    - code-library requirements may arise from synthesis of business-project needs and legitimately lead to API redesign
+    - upstream/meta-Agent route is Owner-initiated and bounded; direction of initiation does not confer standing downstream write authority
+    - defer detailed category schemas and key-information rules until real-operation evidence exists
+    - future Pro analysis, synthetic cases/tests, and separately authorized Pro Deep Research may inform later design
   rejected_options:
     - freeze_a_heavy_change_taxonomy_now
-    - assume_every_change_category_needs_the_same_recording_process
+    - classification_for_its_own_sake
+    - require_every_real_case_to_fit_one_predefined_fine_grained_category
+    - automatic_cross_axis_propagation
+    - standing_upstream_authority_to_freely_modify_downstream_targets
   conditions_or_exceptions: []
+
+  corrections:
+    - previous_interpretation: upstream Agent might have standing/free downstream writer authority, triggering FRONTIER_REENTRY_REQUIRED
+      correction: Owner clarified that “active” describes directionality and task initiation after explicit Owner request; it does not grant free or standing downstream write authority
+      ref: current_conversation_owner_clarification_TLR_03_upstream_directionality
 
   deferred:
     value: true
-    safe_default: preserve_distinct_change_routes_and_no_automatic_cross_axis_propagation_until_frontier_reentry_and_real_use_evidence
-    revisit_trigger: Pro/frontier adjudication of upstream-to-downstream writer authority plus practical evidence from real target evolution
+    safe_default: preserve distinct practical change routes, original source/requirement text, explicit API-change records, and no automatic cross-route propagation while learning richer rules from practice
+    revisit_trigger: sustained real-use evidence or a later Pro/self-construction task showing that additional categories or fields materially improve correctness, traceability, or change handling
 
   residual_uncertainty:
-    - exact meaning and authorization boundary of upstream Agent actively modifying downstream Agent organization/behavior files
-    - whether a formal primary-axis/secondary-effect record is needed beyond the simpler route-based provenance described by Owner
-    - exact schemas for requirement/API/change records should be learned from practice
-  affected_later_questions:
-    - TLR-04 may depend on the same parent/upstream versus target ownership boundary
+    - exact category set beyond the currently useful routes should be learned from practice
+    - exact key-information fields beyond original requirement/source and explicit material API changes remain open
+    - exact primary-axis/secondary-effect record format remains optional pending evidence of practical value
+  affected_later_questions: []
 
   external_fact_checks_required: []
   missing_artifacts: []
 
+  future_evidence_routes_not_authorized_in_current_interview:
+    - Pro Deep Research on potentially useful change-record information and practices
+    - Pro-designed synthetic cases and tests to estimate whether proposed classification/recording rules are meaningful and effective
+
   frontier_reentry:
-    required: true
-    reason: >-
-      Owner statement about an upstream meta-Agent actively modifying downstream Agent directory organization and behavior-constraint files potentially changes writer authority and could imply automatic cross-target propagation. The current package requires frontier re-entry for such authority/propagation changes.
-    affected_decision: upstream_to_downstream_writer_authority_and_adoption_boundary
+    required: false
+    reason: Owner clarified that upstream-to-downstream direction does not alter target authority or create automatic propagation; the answer remains within the already confirmed no-automatic-propagation boundary
+    affected_decision: null
 ```
 
-## Stop gate
+## Confirmation gate
 
-`FRONTIER_REENTRY_REQUIRED — TLR-03: upstream-to-downstream writer authority / automatic propagation boundary`
-
-Do not advance to TLR-04 until this re-entry is adjudicated or the Owner explicitly clarifies that the upstream Agent acts only as a bounded task writer under an already-approved downstream/Owner authorization model.
+Do not advance to TLR-04 until the Owner confirms or corrects the refined TLR-03 interviewer interpretation above.
