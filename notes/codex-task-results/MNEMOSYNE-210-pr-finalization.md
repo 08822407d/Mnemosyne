@@ -16,6 +16,9 @@ commits_at_creation: 11
 changed_files_at_creation: 11
 additions_at_creation: 1419
 deletions_at_creation: 76
+mergeability_resolved_at_head: adbb42a0938075b5c3a1191bb292920618832795
+mergeable_at_resolved_recheck: true
+current_head_after_this_record_update: authoritative_in_current_PR_278_metadata
 execution_source_modified: false
 Meta_Agent_or_business_target_written: false
 validation_repository_created: false
@@ -94,9 +97,36 @@ pull_request:
 
 The PR body explains the Owner decisions, semantic review, mechanical scope, V0 recommendation, known limitations, and actions not authorized. It explicitly states `RECOMMEND_MERGE` and does not ask the Owner to conduct comprehensive diff review.
 
-The initial GitHub metadata returned `mergeable: false` immediately at creation. That value may be transient while GitHub computes mergeability; a later exact PR recheck is required and the initial value is not hidden.
+The initial compact connector snapshot returned `mergeable: false` immediately after PR creation. A raw GitHub REST fetch then showed `mergeable: null` and `mergeable_state: unknown`, confirming that GitHub had not completed the computation rather than proving a conflict. A later exact normalized PR recheck for head `adbb42a0938075b5c3a1191bb292920618832795` returned `mergeable: true`. The initial transient state is preserved rather than hidden.
 
-## 5. Changed scope at creation
+## 5. Final post-creation verification before this record update
+
+At verified head `adbb42a0938075b5c3a1191bb292920618832795`:
+
+```yaml
+final_recheck:
+  branch_vs_base:
+    status: ahead
+    ahead_by: 13
+    behind_by: 0
+    changed_files: 12
+  PR:
+    number: 278
+    state: open
+    draft: false
+    merged: false
+    mergeable: true
+  accessible_open_PRs:
+    - 278
+  exactly_one_canonical_PR: true
+  competing_open_PRs: []
+  workflow_runs_for_head: []
+  CI_pass_claim: false
+```
+
+This update to the finalization record necessarily creates a later head commit. The current exact head, commit count, changed-file count and any recomputed mergeability after this metadata-only update are authoritative in current PR #278 metadata.
+
+## 6. Changed scope
 
 ```text
 commands/load-mnemosyne-guidance.md
@@ -105,6 +135,7 @@ current/first-three-systems-owner-review-status.md
 current/github-single-active-pr-lineage-guard.md
 current/owner-review-branch-ledger-guard.md
 notes/chatgpt-github-write-preflight-checklist.md
+notes/codex-task-results/MNEMOSYNE-210-pr-finalization.md
 notes/codex-task-results/MNEMOSYNE-210-pr277-post-merge-verification.md
 notes/codex-task-results/MNEMOSYNE-210-result.md
 notes/design-rationales/agent-product-ready-pr-owner-feedback-and-frontier-efficiency-v0.1.md
@@ -114,7 +145,7 @@ notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-00
 
 No execution source, Meta-Agent, business target, validation repository, workflow, fixture, or result file was modified or created.
 
-## 6. Branch retention
+## 7. Branch retention
 
 ```yaml
 branch_retention_preflight:
@@ -129,7 +160,7 @@ branch_retention_preflight:
 
 The next route reads the merged guard and V0 decision candidate from `master`. No validation executor needs the live PR branch.
 
-## 7. Remaining gates
+## 8. Remaining gates
 
 The following remain unauthorized:
 
@@ -152,7 +183,7 @@ notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-00
 
 V0 execution is a next-tier candidate and does not require Pro. Any semantic, authority, no-write-proof or product-surface failure returns to Pro.
 
-## 8. Run context
+## 9. Run context
 
 ```yaml
 run_context:
@@ -197,7 +228,7 @@ run_context:
         relation: created
         immutable_identity: {status: recorded, type: GitHub_pull_request_number, value: 278}
       - ref: notes/codex-task-results/MNEMOSYNE-210-pr-finalization.md
-        relation: created
+        relation: modified
         immutable_identity: {status: not_available_before_write_completion, type: git_blob_sha, value: pending}
   user_authorization:
     status: authorized
@@ -223,8 +254,8 @@ run_context:
     not_future_precedent: true
   limitations:
     - exact served backend identity is not attested
-    - initial mergeability value was not yet recomputed
     - no CI workflow run is claimed
     - Ready status does not prove validation or human full-diff review
+    - current head after this metadata update is obtained from PR metadata
   omissions: []
 ```
