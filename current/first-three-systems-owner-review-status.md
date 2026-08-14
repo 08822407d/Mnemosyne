@@ -5,11 +5,11 @@
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POI4-REVIEW-STATUS-001
 last_updated_by_task: MNEMOSYNE-209
-status: TLR_OWNER_CONFIRMED_V0_2_AND_FROZEN_VALIDATION_PACKAGE_VERIFIED_PENDING_PR_AUTHORIZATION
+status: DRAFT_PR_277_OPEN_PENDING_OWNER_REVIEW
 source_master: 365540c8340491c50032ee99b06654644aeb7b6f
 execution_source: current/human-approved-spec.md
 canonical_task_branch: mnemosyne-tlr-owner-review-001-ledger
-canonical_PR: null
+canonical_PR: 277
 owner_review_result: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001.md
 candidate_v0_2: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
 validation_v0_2: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
@@ -17,6 +17,7 @@ validation_package: notes/target-agent-lifecycle-validation-package-v0.2/README.
 backlog: notes/first-three-systems-frontier-reentry-backlog-v0.2.md
 formalization_verification: notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/pro-consolidation-verification.md
 formalization_result: notes/codex-task-results/MNEMOSYNE-209-result.md
+PR_creation_record: notes/codex-task-results/MNEMOSYNE-209-pr-creation.md
 ```
 
 ## Completed
@@ -33,6 +34,9 @@ formalization_result: notes/codex-task-results/MNEMOSYNE-209-result.md
 - One frozen public/synthetic validation package is prepared.
 - Mechanical changed-path, lineage, Owner-confirmation binding, semantic-boundary and package-integrity checks passed.
 - `MNEMOSYNE-209-RESULT-001` records the formalization and remaining gates.
+- The Owner explicitly authorized one Draft PR from the existing canonical branch to `master`.
+- Draft PR #277 was created after a repository-wide duplicate-lineage recheck found no open PR.
+- The immediate post-creation check found exactly one related open PR: #277.
 - No substantive target content, private material, validation run, Meta-Agent modification or business-target modification occurred.
 
 ## Owner-confirmed baseline
@@ -75,22 +79,28 @@ validation_state:
   target_adoption_authorized: false
 ```
 
-The package's `00-run-scope-and-owner-decision.md` remains unanswered. No validation action may begin until the package is merged and the Owner separately selects repository, visibility, write scope, product surface, phase scope, quota and result-retention decisions.
+The package's `00-run-scope-and-owner-decision.md` remains unanswered. No validation action may begin merely because PR #277 exists or is later merged. After merge, the Owner must separately select repository, visibility, write scope, product surface, phase scope, quota and result-retention decisions.
 
 ## Current branch and PR state
 
 - canonical branch: `mnemosyne-tlr-owner-review-001-ledger`;
+- canonical PR: #277;
+- PR state: open Draft;
+- PR base: `master`;
+- related accessible open PRs after creation: #277 only;
 - second review branch: prohibited and none detected;
-- related open PR at final formalization verification: none;
-- PR creation: not yet authorized;
 - direct `master` write: prohibited;
-- merge: not authorized.
+- merge and auto-merge: not authorized;
+- validation: not authorized.
 
-The same branch contains the durable interview evidence and the Pro/frontier formalization. No second implementation branch should be created.
+The same branch contains the durable interview evidence, Pro/frontier formalization and PR provenance. Corrections, if required, must continue on this branch and PR rather than creating a replacement lineage.
+
+No verified downstream route currently requires retaining the live branch after a future merge; the internal disposition remains `SILENT_DEFAULT_DELETE_AFTER_MERGE`. This is not a branch-deletion instruction before merge.
 
 ## Not completed or authorized
 
-- Draft PR creation or merge;
+- marking Draft PR #277 ready for review;
+- merge or auto-merge;
 - package merge to `master`;
 - validation repository/fixture creation;
 - V0 or V1 execution;
@@ -105,10 +115,8 @@ The same branch contains the durable interview evidence and the Pro/frontier for
 
 ## One safe next action
 
-Review the branch-local formalization and, if correct, explicitly authorize creation of one Draft PR from:
+Review Draft PR #277. If corrections are needed, continue the existing branch/PR. A merge decision remains a separate explicit Owner action and must not be combined with validation authorization.
 
-`mnemosyne-tlr-owner-review-001-ledger`
-
-No validation run should be authorized merely by creating or merging that PR. After merge, validation still begins with a separate Owner decision using:
+After any future merge and post-merge verification, validation still begins with a separate Owner decision using:
 
 `notes/target-agent-lifecycle-validation-package-v0.2/00-run-scope-and-owner-decision.md`
