@@ -5,7 +5,7 @@
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POI4-REVIEW-STATUS-001
 last_updated_by_task: MNEMOSYNE-209
-status: TLR_OWNER_CONFIRMED_V0_2_AND_FROZEN_VALIDATION_PACKAGE_PREPARED_PENDING_PR_AUTHORIZATION
+status: TLR_OWNER_CONFIRMED_V0_2_AND_FROZEN_VALIDATION_PACKAGE_VERIFIED_PENDING_PR_AUTHORIZATION
 source_master: 365540c8340491c50032ee99b06654644aeb7b6f
 execution_source: current/human-approved-spec.md
 canonical_task_branch: mnemosyne-tlr-owner-review-001-ledger
@@ -15,6 +15,8 @@ candidate_v0_2: notes/target-agent-container-evolution-and-dependency-model-cand
 validation_v0_2: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
 validation_package: notes/target-agent-lifecycle-validation-package-v0.2/README.md
 backlog: notes/first-three-systems-frontier-reentry-backlog-v0.2.md
+formalization_verification: notes/owner-review-working/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001/pro-consolidation-verification.md
+formalization_result: notes/codex-task-results/MNEMOSYNE-209-result.md
 ```
 
 ## Completed
@@ -29,6 +31,8 @@ backlog: notes/first-three-systems-frontier-reentry-backlog-v0.2.md
 - Pro/frontier consolidation formalized the Owner result as `MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001`.
 - Candidate v0.2 and validation v0.2 are prepared.
 - One frozen public/synthetic validation package is prepared.
+- Mechanical changed-path, lineage, Owner-confirmation binding, semantic-boundary and package-integrity checks passed.
+- `MNEMOSYNE-209-RESULT-001` records the formalization and remaining gates.
 - No substantive target content, private material, validation run, Meta-Agent modification or business-target modification occurred.
 
 ## Owner-confirmed baseline
@@ -59,7 +63,7 @@ validation_state:
   candidate_v0_2_prepared: true
   validation_v0_2_prepared: true
   package_prepared: true
-  package_integrity_review_pending: true
+  package_integrity_review: passed
   validation_repository_created: false
   V0_selected: false
   V0_authorized: false
@@ -76,8 +80,8 @@ The package's `00-run-scope-and-owner-decision.md` remains unanswered. No valida
 ## Current branch and PR state
 
 - canonical branch: `mnemosyne-tlr-owner-review-001-ledger`;
-- second review branch: prohibited;
-- related open PR at Pro formalization start: none;
+- second review branch: prohibited and none detected;
+- related open PR at final formalization verification: none;
 - PR creation: not yet authorized;
 - direct `master` write: prohibited;
 - merge: not authorized.
