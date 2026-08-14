@@ -1,0 +1,309 @@
+# Answer Ledger — MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001
+
+## Current progress
+
+```text
+人工抉择进度 — MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001
+
+已确认：
+- TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
+- TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
+- TLR-03：保留具有实际用途的变化路径区分，但不建立为了分类而分类的复杂体系；上游元 Agent 经 Owner 发起并在受授权范围内研究/设计特定下游修改，不具有自由修改下游的持续权限。至少保留需求原文并明确记录重要 API 变化，更细的分类、关键字段和记录规则留待真实运行后形成；未来可由 Pro 分析、虚拟案例/测试以及另行授权的 Pro Deep Research 辅助改进。
+- TLR-05：接受推荐顺序；把本轮确认结果、延期项和安全默认整理为供验证使用的暂定架构版本，再由 Owner 分别授权候选/验证准备与实际验证；验证复核前不允许真实目标采用。
+
+延期：
+- TLR-04：现阶段先不在元 Agent 中保存下游 Agent 的实质内容；下游全部资料留在自己的正式仓库，并由专门备份系统承担丢失后的恢复。什么内容值得作为“必要的上游保留”尚无充分实践依据，待多个真实项目运行后再研究。此延期边界已由 Owner 确认。
+
+当前状态：TLR-01 至 TLR-05 均已完成逐题解释确认；等待 Owner 对完整 final-result-candidate 做最后总确认。
+剩余问题：无新的 TLR 问题；仅剩 package-level 最终总确认。
+```
+
+## TLR-01 — Same-repository concurrency
+
+```yaml
+question_result:
+  question_id: TLR-01
+  label: Same-repository concurrency
+  status: CONFIRMED
+
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      在目前已经有多个人工开发和agent开发的小项目放在同一个仓库中了，我将它们创建到了其中各个独立的文件夹中，虽然我还没有真正并行推进其中多个项目，它们的修改都在各自所属文件夹内，有过对两个项目修改都没有立即同步到github上，并行存在commit状态，但没有发生过问题。因此我认为只要能验证这种安排确实不会互相干扰，就不要强制串行。
+    message_ref: current_conversation_owner_answer_TLR_01
+
+  interviewer_interpretation: >-
+    Owner 接受 TLR-01 的条件式并发方向：同一物理仓库中，不同 logical Agent / 项目的独立任务不应仅因共仓而被强制串行；如果能够验证它们的修改范围与语义依赖确实互不干扰，则允许并发。Owner 的既有实践经验——独立文件夹、各自修改范围、多个本地未同步 commit 状态并存且未观察到冲突——作为支持这一方向的实践背景，但不被视为对未来并发安全的机械证明。因此正式规则仍需要 write-set / shared-global object / dependency 等验证门槛，而不是仅凭目录不同自动放行。
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_01_accuracy
+
+  selected_option_or_rule: conditional_concurrency_when_non_interference_is_verified
+  modifications:
+    - Owner emphasis: do not force serialization when non-interference can be verified
+    - existing practical experience supports the policy direction but does not replace validation
+  rejected_options:
+    - unconditional_repository_wide_serialization
+    - uncontrolled_concurrency_without_non_interference_verification
+  conditions_or_exceptions:
+    - verify modifications are confined to independent project/Agent scopes
+    - verify no shared or repository-global object conflict
+    - verify no relevant semantic or uncommitted-result dependency
+
+  corrections: []
+
+  deferred:
+    value: false
+    safe_default: serialize_if_non_interference_cannot_be_established
+    revisit_trigger: bounded validation or evidence showing current verification is insufficient
+
+  residual_uncertainty:
+    - exact mechanical verification mechanism remains to be frozen in candidate v0.2/validation, not decided by this answer alone
+  affected_later_questions: []
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: false
+    reason: answer stays within the prepared conditional-concurrency architecture
+    affected_decision: null
+```
+
+## TLR-02 — Shared objects and dependency responsibility
+
+```yaml
+question_result:
+  question_id: TLR-02
+  label: Shared objects and dependency responsibility
+  status: CONFIRMED
+
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      TLR02的问题我当时说过，按照我的设想，代码库agent只负责详细记录自己的变化（而且这些当中有一些是要给引用了本库的项目看的，让它们能知道本库具体发生了哪些变化），而各项目只有在需要重新构建的时候才会发现有变化，这时候各项目自己的agent查阅库的变化细节来决定如何重构自己的项目。我当时似乎还说了要查阅各大开源库的惯例，学习它们是如何记录和说明变化的，结合agent的能力来确定应该如何描述变化以使具体项目agent可以清晰的了解变化。这个调查分析你自己应该就能完成，或者你不确定的话可以出具一份深度研究课题我交给深度研究。随后 Owner 确认该解释准确，并进一步要求：变化说明分成两部分，一个是给人类看的，另一份是给项目agent看的。给人看的最低要求简要说明变化但不排除后续会加其他内容；给agent看的必须让项目agent知道怎么重构自己负责的项目；并且应该在库项目的总说明中简要说明这两种文档的存在、用途和放置位置。
+    message_ref: current_conversation_owner_answer_and_refinement_TLR_02
+
+  interviewer_interpretation: >-
+    Owner 确认 OR-04/TLR-02 的责任分工，并进一步要求代码库的变化说明至少区分两种面向对象。第一种是面向人类的变化说明：最低要求是用自然、简洁的方式说明本库发生了哪些重要变化，但未来可以加入更丰富的背景、示例、设计说明等内容。第二种是面向引用本库的项目 Agent 的变化说明：它必须比人类版更强调可执行性和重构所需信息，使项目 Agent 在触发重新构建或升级时，能够据此识别受影响接口或行为、理解旧约定和新约定、确定替代/迁移步骤，并据此修改和验证自己负责的项目。两类文档可以共享事实来源，但用途不同，不应假定人类版的简述天然足以支持 Agent 重构。代码库项目还应有一份总说明或文档导航，简要告诉引用本库的 Agent：除代码之外还提供哪些文档、每类文档的用途是什么、放在哪里；其中必须明确介绍上述人类版变化说明和项目 Agent 版变化说明。代码库 Agent 仍不默认维护所有引用项目的完整消费者名单，也不替项目做项目侧重构；具体项目 Agent 在需要重新构建/升级时读取 Agent 版变化说明，并结合本项目实际使用情况自行决定修改和验证。
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_02_refined_accuracy
+
+  selected_option_or_rule: library_records_own_changes_with_human_and_agent_documentation_consumers_rebuild_on_demand
+  modifications:
+    - split change documentation into a human-facing version and a downstream-project-Agent-facing version
+    - human-facing version has a minimum requirement of concise change explanation but may later include richer content
+    - Agent-facing version must carry enough actionable migration/rebuild information for a downstream project Agent to reconstruct its own project safely
+    - library-level documentation index or overview must state what non-code documentation exists, what each document is for, and where it is located
+    - the overview must explicitly name the human-facing and Agent-facing change documentation and their roles
+    - do not require an always-current library-side consumer impact view as a default responsibility
+    - project-side Agent performs impact analysis when rebuild/upgrade is actually triggered
+    - mature open-source change/migration documentation practices should inform the human-facing material and the underlying change facts
+  rejected_options:
+    - library_maintains_exhaustive_consumer_reverse_index_by_default
+    - library_agent_owns_project_specific_upgrade_decisions
+    - single_undifferentiated_change_document_assumed_sufficient_for_both_humans_and_agents
+  conditions_or_exceptions: []
+
+  deferred:
+    value: false
+    safe_default: preserve OR-04 responsibility split and the two-audience documentation model while refining exact schemas later
+    revisit_trigger: evidence that the two-document model or on-demand project-side discovery is insufficient for important cases
+
+  residual_uncertainty:
+    - exact file names, schema, storage paths, and update synchronization between the human-facing and Agent-facing change documents remain to be designed
+    - whether narrowly scoped proactive notification/registration exceptions are useful remains open pending evidence
+    - the minimum machine-oriented structure needed to reliably support downstream Agent migration should be validated later
+  affected_later_questions: []
+
+  external_fact_checks_required:
+    - completed bounded comparison of mature open-source practices for release notes, breaking changes, migration guides, deprecation notices, and compatibility documentation
+    - later validation should test whether the Agent-facing format is sufficient for downstream project Agents to identify and implement required reconstruction
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: false
+    reason: the refinement strengthens documentation and discoverability within the existing OR-04 responsibility boundary; it does not change target authority or create a competing writer
+    affected_decision: null
+```
+
+## TLR-03 — Primary change axis and secondary effects
+
+```yaml
+question_result:
+  question_id: TLR-03
+  label: Primary change axis and secondary effects
+  status: CONFIRMED
+
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      Owner first stated that change types are relatively easy to distinguish because their entrances and paths differ; upstream/meta-Agent changes are triggered from the upstream route, business-project requirement changes remain project-local, code-library requirements largely arise from synthesis of business-project needs and may drive API changes, and API changes are comparatively easy to record. Owner also stated that requirement originals are small enough that preserving the original text is a practical minimum even before a mature scheme exists, and that detailed rules should wait for real practice. Owner then clarified that “上游主动修改下游” does not grant the upstream Agent free or standing authority to directly modify downstream targets. Instead, after an upstream system changes, the Owner actively asks that upstream system to study and design changes for a specific downstream target; the upstream system is the directional initiator and the downstream target is the recipient, but the task remains explicitly Owner-initiated and bounded. Owner further stated that upstream improvements are often motivated by dissatisfaction or bugs observed while using downstream systems, but can also originate from new ideas or lessons from other systems. For classification, categories must have real practical value rather than exist for classification’s sake; actual cases will not fit ideal taxonomies perfectly; the analyzing Agent is intelligent enough that preserving key information matters more than building a complex classifier. What information is actually key should be learned from sustained real operation. In later self-construction work, Pro Deep Research may collect potentially useful evidence and Pro conversation may design synthetic cases/tests to estimate useful recording schemes.
+    message_ref: current_conversation_owner_answer_and_clarification_TLR_03
+
+  interviewer_interpretation: >-
+    Owner accepts the existing principle that materially different change routes should remain distinguishable and should not automatically propagate into one another, but does not want a detailed universal classification system frozen now. The useful first distinction is mainly based on real entry path and responsibility: upstream/meta-system method changes; target-local business requirements; code-library requirements synthesized from business needs; resulting API/design changes; and other categories only when they prove useful in practice. Categories are instruments for preserving causality, responsibility, and useful evidence, not goals in themselves. The system should therefore prefer a small, practical route-based distinction and preserve enough source information for a capable Agent to reconstruct meaning rather than depend on a brittle fine-grained classifier.
+
+    The previous frontier-reentry concern is withdrawn after Owner clarification. “Upstream actively modifies downstream” means the Owner initiates a bounded task in which the upstream/meta Agent researches/designs or, when separately authorized, executes a change directed at a specific downstream target. It does not mean automatic propagation, standing cross-target writer authority, or permission for an upstream Agent to freely change downstream truth. The downstream/Owner authorization boundary therefore remains intact.
+
+    For recording, a robust minimum exists even before a mature schema: preserve the original requirement/source input and clearly record material API changes. More elaborate primary-axis/secondary-effect fields, category granularity, and key-information requirements should be learned through real operation rather than over-designed in advance. Later Mnemosyne/self-construction work may use Pro-level analysis, bounded synthetic cases/tests, and—when separately selected and authorized—Pro Deep Research to collect evidence about useful change-record structures. These are future evidence routes, not authorization to start research or validation in the current TLR interview.
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_03_accuracy
+
+  selected_option_or_rule: practical_route_based_change_distinction_with_no_automatic_propagation_and_practice_learned_recording
+  modifications:
+    - classify only where categories have practical decision, provenance, or routing value
+    - prefer simple route/entry-point distinctions over a complex classifier
+    - do not expect real cases to fit an ideal taxonomy perfectly
+    - rely on capable Agent reasoning when key source information is preserved
+    - preserve original requirement text as a minimum durable record before richer schemes mature
+    - record material API changes explicitly
+    - business-project requirement evolution is target-local and has no default downstream propagation problem
+    - code-library requirements may arise from synthesis of business-project needs and legitimately lead to API redesign
+    - upstream/meta-Agent route is Owner-initiated and bounded; direction of initiation does not confer standing downstream write authority
+    - defer detailed category schemas and key-information rules until real-operation evidence exists
+    - future Pro analysis, synthetic cases/tests, and separately authorized Pro Deep Research may inform later design
+  rejected_options:
+    - freeze_a_heavy_change_taxonomy_now
+    - classification_for_its_own_sake
+    - require_every_real_case_to_fit_one_predefined_fine_grained_category
+    - automatic_cross_axis_propagation
+    - standing_upstream_authority_to_freely_modify_downstream_targets
+  conditions_or_exceptions: []
+
+  corrections:
+    - previous_interpretation: upstream Agent might have standing/free downstream writer authority, triggering FRONTIER_REENTRY_REQUIRED
+      correction: Owner clarified that “active” describes directionality and task initiation after explicit Owner request; it does not grant free or standing downstream write authority
+      ref: current_conversation_owner_clarification_TLR_03_upstream_directionality
+
+  deferred:
+    value: true
+    safe_default: preserve distinct practical change routes, original source/requirement text, explicit API-change records, and no automatic cross-route propagation while learning richer rules from practice
+    revisit_trigger: sustained real-use evidence or a later Pro/self-construction task showing that additional categories or fields materially improve correctness, traceability, or change handling
+
+  residual_uncertainty:
+    - exact category set beyond the currently useful routes should be learned from practice
+    - exact key-information fields beyond original requirement/source and explicit material API changes remain open
+    - exact primary-axis/secondary-effect record format remains optional pending evidence of practical value
+  affected_later_questions: []
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  future_evidence_routes_not_authorized_in_current_interview:
+    - Pro Deep Research on potentially useful change-record information and practices
+    - Pro-designed synthetic cases and tests to estimate whether proposed classification/recording rules are meaningful and effective
+
+  frontier_reentry:
+    required: false
+    reason: Owner clarified that upstream-to-downstream direction does not alter target authority or create automatic propagation; the answer remains within the already confirmed no-automatic-propagation boundary
+    affected_decision: null
+```
+
+## TLR-04 — Parent-owned design brief exception
+
+```yaml
+question_result:
+  question_id: TLR-04
+  label: Parent-owned design brief exception
+  status: DEFERRED
+
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      这个问题确实非常麻烦，最初额度构想中要在各元agent中保存它们设计的产品(下游agent)的一部分资料，但在进行迁移测试后我更改了想法，要把下游agent的全部资料都放在它们自己的仓库中，双亲agent仓库里只保存“必要的”内容且这个“必要的内容”也没有仔细研究过，再后来又决定建立专门的备份系统，使得原本丢失以后也能从备份中进行重建，这就是现在的版本。但这样的话“各元agent中保留下游agent的内容”就意义不明了，需要仔细研究，或者干脆在多个项目实践之后再确定。现在先不在元agent中保留内容吧。
+    message_ref: current_conversation_owner_answer_TLR_04
+
+  interviewer_interpretation: >-
+    Owner does not adopt the proposed parent-owned substantive design-brief exception at the current stage. The design history has moved through three stages: an early idea of retaining part of downstream-Agent material in each parent/meta Agent; a later migration-test-driven decision to place all downstream-Agent material in the downstream target's own repository while leaving only an undefined set of “necessary” parent-side material; and a still later dedicated backup design that provides reconstruction after loss without needing the parent/meta repository to act as a recovery copy. Given this evolution, the practical purpose of retaining downstream-Agent content in parent/meta repositories is currently unclear and has not been studied enough.
+
+    The safe current default is therefore: do not store substantive downstream-Agent content in parent/meta Agent repositories merely because the parent designed the downstream system. Keep the downstream system's full material in its own authoritative repository and rely on the separately designed backup system for loss recovery. Revisit whether any parent-side content is genuinely necessary only after several real projects provide evidence, or through a later focused study.
+
+    This answer is interpreted as deferring the parent-owned design-brief exception rather than establishing an irreversible universal prohibition. It also does not, without a separate explicit Owner decision, retroactively delete or invalidate already-confirmed minimal meta-level indexes, target identity/provenance pointers, or other parent-owned records whose purpose is about the parent system's own method/history rather than preserving downstream content. Whether such minimal references should remain, and exactly where the line falls between a pointer/index and “downstream content,” remains open for later review.
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_04_accuracy
+
+  selected_option_or_rule: defer_parent_owned_substantive_downstream_content_with_no_content_safe_default
+  modifications:
+    - do not activate the narrow parent-owned substantive design-brief exception now
+    - downstream Agent full material remains in its own authoritative repository
+    - dedicated backup system, not the parent/meta repository, is the recovery mechanism for loss
+    - the practical value of any parent-side retained downstream content must be demonstrated rather than assumed
+    - revisit after multiple real projects or a later focused study
+  rejected_options:
+    - retain_substantive_parent_side_downstream_design_material_by_default_now
+    - use_parent_or_meta_repository_as_a_recovery_copy_of_downstream_truth
+  conditions_or_exceptions: []
+
+  deferred:
+    value: true
+    safe_default: no_substantive_downstream_content_in_parent_or_meta_repository
+    revisit_trigger: multiple_real_project_experience_or_later_focused_study_demonstrates_a_specific_useful_parent_owned_minimum
+
+  residual_uncertainty:
+    - whether already-confirmed minimal meta-level indexes or provenance pointers should remain and whether they count as downstream content
+    - what, if anything, constitutes a genuinely necessary parent-owned minimum after backup exists
+  affected_later_questions: []
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: false
+    reason: the answer narrows or defers the optional parent-owned design-brief exception and does not expand parent authority, create a competing writer, or make the parent a live target workspace
+    affected_decision: null
+```
+
+## TLR-05 — Provisional baseline and validation/adoption sequence
+
+```yaml
+question_result:
+  question_id: TLR-05
+  label: Provisional baseline and validation/adoption sequence
+  status: CONFIRMED
+
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      我的选择是第一种“接受推荐顺序”
+    message_ref: current_conversation_owner_answer_TLR_05
+
+  interviewer_interpretation: >-
+    Owner accepts the recommended sequence. After TLR-01 through TLR-04 are consolidated, including explicit deferrals and their safe defaults rather than pretending every open detail is resolved, a later Pro/frontier segment may prepare a provisional candidate v0.2 and corresponding validation v0.2 as the frozen architecture contract to be tested. This provisional baseline means only “the design currently selected for validation”; it is not proof, execution source, target truth, target activation, or permission for real target adoption.
+
+    Repository preparation and actual validation execution remain separate gates. The Owner must separately authorize any validation repository creation, writes, or run. The validation should use public/synthetic fixtures and frozen tasks, with next-tier execution and mechanical checks as appropriate. Pro/frontier then adjudicates failures and revises the architecture if necessary. Only after validation is executed and reviewed does the Owner decide whether the architecture is acceptable for future target-specific adoption, and each target still receives its own separate adoption/migration decision.
+
+    TLR-04 remains explicitly deferred inside this provisional baseline: the safe default is no substantive downstream content in parent/meta repositories, while the question of a useful minimum may be revisited after real-project evidence. TLR-03 likewise preserves only the practical route distinctions and minimum records currently confirmed; it does not invent the detailed classification/record schema that the Owner chose to learn from practice.
+
+    The Owner's selection of the recommended sequence does not itself authorize creation of candidate v0.2, validation v0.2, a validation repository, validation execution, target modification, Meta-Agent work, Deep Research, Fable, quota use, or a PR. Those remain later Pro/frontier and Owner authorization steps under the existing handoff/package contract.
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_05_accuracy
+
+  selected_option_or_rule: provisional_baseline_then_separately_authorized_validation_then_owner_and_target_adoption
+  modifications:
+    - carry confirmed deferrals and safe defaults into the provisional baseline explicitly
+    - do not treat deferred TLR-04 or practice-learned TLR-03 details as silently resolved
+    - keep preparation of candidate/validation artifacts separate from authorization to run validation
+    - keep global architecture acceptance separate from each target's adoption/migration decision
+  rejected_options:
+    - require_validation_before_any_provisional_baseline_can_be_named
+    - accept_architecture_without_validation
+    - defer_validation_indefinitely_while_retaining_only_v0_1
+  conditions_or_exceptions: []
+
+  deferred:
+    value: false
+    safe_default: null
+    revisit_trigger: null
+
+  residual_uncertainty:
+    - exact contents of candidate v0.2 and validation v0.2 must be produced by later Pro/frontier work, not invented in this interview
+    - exact validation execution surface and repository/write plan remain separately gated
+  affected_later_questions: []
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: false
+    reason: Owner selected the prepared recommended sequencing option without changing target authority, activation, or automatic-propagation boundaries
+    affected_decision: null
+```
+
+## Completion gate
+
+TLR-01 through TLR-05 have each passed their per-question Owner interpretation-confirmation gate. Create and present `final-result-candidate.md` under the same review working root, then wait for the Owner's package-level correction or final confirmation. Do not create candidate v0.2, validation v0.2, any validation run, target modification, Meta-Agent work, Deep Research/Fable run, quota-consuming task, or PR under this confirmation alone.
