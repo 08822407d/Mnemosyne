@@ -1,20 +1,21 @@
 # First Three Systems — Frontier Re-entry and Evidence Backlog v0.2
 
-> Current non-execution-source routing record after Owner-confirmed TLR-01 through TLR-05, Pro/frontier formalization, and verified merge of PR #277. It supersedes v0.1 for current backlog navigation but does not close items that still require validation, real-use evidence or target-specific adoption.
+> Current non-execution-source routing record after Owner-confirmed TLR-01 through TLR-05, Pro/frontier formalization, Ready-PR guidance repair, and verified merge of PR #278. It supersedes v0.1 for current backlog navigation but does not close items that still require validation, real-use evidence or target-specific adoption.
 
 ```yaml
 backlog_id: MNE-FIRST-THREE-SYSTEMS-FRONTIER-BACKLOG-002
-version: 0.2.1
+version: 0.2.2
 created_by_task: MNEMOSYNE-209
-last_updated_by_task: MNEMOSYNE-210
+last_updated_by_task: MNEMOSYNE-211
 supersedes_for_current_navigation: notes/first-three-systems-frontier-reentry-backlog-v0.1.md
 owner_result_ref: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001.md
 candidate_ref: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
 validation_ref: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
 validation_package_ref: notes/target-agent-lifecycle-validation-package-v0.2/README.md
 V0_decision_candidate_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md
-PR_277_post_merge_verification_ref: notes/codex-task-results/MNEMOSYNE-210-pr277-post-merge-verification.md
-status: priority_1_merged_V0_recommendation_prepared_pending_explicit_Owner_run_authorization_other_priorities_preserved
+PR_278_merge_commit: 8e1affee8776709f0673862d8b0203a25c9aaf59
+PR_278_post_merge_closeout_ref: notes/codex-task-results/MNEMOSYNE-211-result.md
+status: priority_1_PR_278_verified_merged_V0_recommendation_pending_explicit_Owner_run_authorization_other_priorities_preserved
 execution_source: current/human-approved-spec.md
 ```
 
@@ -22,15 +23,21 @@ execution_source: current/human-approved-spec.md
 
 ### Current state
 
-Owner review is complete and formally recorded. Candidate v0.2, validation v0.2 and the frozen public/synthetic validation package were merged through PR #277 at commit:
+Owner review is complete and formally recorded. Candidate v0.2, validation v0.2 and the frozen public/synthetic validation package were merged through PR #277 at:
 
 ```text
 9432a4415cefeb7c605b73a94042ba1763e15f06
 ```
 
-MNEMOSYNE-210 verified the merge, expected artifact identities, absence of a required live-branch dependency, and the fact that no validation had begun. It also prepared a Pro-recommended V0-only run decision candidate so the Owner does not need to reconstruct D1 through D7 or spend another frontier turn merely to obtain a proposed profile.
+MNEMOSYNE-210 then formalized the Ready-PR / Owner-review / frontier-turn-efficiency repair and prepared the Pro-recommended V0-only run decision candidate. Ready PR #278 merged at:
 
-Confirmed baseline:
+```text
+8e1affee8776709f0673862d8b0203a25c9aaf59
+```
+
+MNEMOSYNE-211 verified that this merge commit is also execution-time latest `master`, that the expected twelve PR #278 paths are present in the merged comparison, that the former PR head branch is no longer present, and that no GitHub Actions workflow run was returned for the merge commit. No CI-pass claim is made.
+
+Confirmed baseline remains:
 
 - multiple logical Agents may share one physical repository;
 - provably disjoint target-local tasks may proceed concurrently;
@@ -60,7 +67,7 @@ Confirmed baseline:
 
 ### Recommended V0 profile
 
-The current Pro recommendation is:
+The merged Pro recommendation is:
 
 ```yaml
 recommended_V0:
@@ -79,18 +86,20 @@ recommended_V0:
   Mnemosyne_ingestion: separately_gated
 ```
 
-This is a recommendation, not authorization. Repository creation and V0 remain blocked until the Owner explicitly confirms the decision candidate and records the exact visible execution selection at launch.
+This is a recommendation, not authorization. Repository creation and V0 remain blocked until the Owner explicitly confirms or corrects the decision candidate and the exact visible execution selection is recorded at launch.
 
 ### Current gate
 
 ```yaml
 priority_1_gate:
   PR_277_verified_merged: true
-  merge_commit: 9432a4415cefeb7c605b73a94042ba1763e15f06
+  PR_278_verified_merged: true
+  current_master: 8e1affee8776709f0673862d8b0203a25c9aaf59
   candidate_v0_2_merged: true
   validation_v0_2_merged: true
   frozen_validation_package_merged: true
-  V0_owner_decision_candidate_prepared: true
+  Ready_PR_guidance_merged: true
+  V0_owner_decision_candidate_merged: true
   validation_repository_created: false
   V0_authorized: false
   V1_authorized: false
