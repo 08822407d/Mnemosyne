@@ -5,10 +5,10 @@
 ```text
 人工抉择进度 — MNE-TARGET-LIFECYCLE-OWNER-REVIEW-001
 
-暂定：
-- TLR-01：支持在确认互不干扰时允许同仓库不同 logical Agent 的独立任务并发，不要求一律串行；当前等待 Owner 确认 interviewer interpretation。
+已确认：
+- TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
 
-当前问题：TLR-01（等待解释确认）
+当前问题：TLR-02
 剩余：TLR-02 至 TLR-05
 ```
 
@@ -18,7 +18,7 @@
 question_result:
   question_id: TLR-01
   label: Same-repository concurrency
-  status: PROVISIONAL
+  status: CONFIRMED
 
   owner_answer:
     verbatim_or_safe_ref: >-
@@ -27,8 +27,8 @@ question_result:
 
   interviewer_interpretation: >-
     Owner 接受 TLR-01 的条件式并发方向：同一物理仓库中，不同 logical Agent / 项目的独立任务不应仅因共仓而被强制串行；如果能够验证它们的修改范围与语义依赖确实互不干扰，则允许并发。Owner 的既有实践经验——独立文件夹、各自修改范围、多个本地未同步 commit 状态并存且未观察到冲突——作为支持这一方向的实践背景，但不被视为对未来并发安全的机械证明。因此正式规则仍需要 write-set / shared-global object / dependency 等验证门槛，而不是仅凭目录不同自动放行。
-  interpretation_confirmed: no
-  confirmation_ref: null
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_01_accuracy
 
   selected_option_or_rule: conditional_concurrency_when_non_interference_is_verified
   modifications:
@@ -62,6 +62,8 @@ question_result:
     affected_decision: null
 ```
 
-## Confirmation gate
+## Current question
 
-Do not advance to TLR-02 until the Owner confirms or corrects the interviewer interpretation above.
+`TLR-02 — Shared objects and dependency responsibility`
+
+The Owner has not yet answered TLR-02.
