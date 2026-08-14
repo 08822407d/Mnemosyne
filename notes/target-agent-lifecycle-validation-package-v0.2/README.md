@@ -46,7 +46,8 @@ notes/target-agent-lifecycle-validation-package-v0.2/
 ├── 02-next-tier-executor-taskbook.md
 ├── 03-mechanical-checks-and-rubric.md
 ├── 04-run-manifest-and-result-template.md
-└── 05-startup-message.md
+├── 05-startup-message.md
+└── 06-package-integrity-checklist.md
 ```
 
 ## File roles
@@ -59,6 +60,7 @@ notes/target-agent-lifecycle-validation-package-v0.2/
 | `03-mechanical-checks-and-rubric.md` | Required mechanical evidence, critical blockers and semantic scoring/dispositions |
 | `04-run-manifest-and-result-template.md` | Run identity, authorization, cell ledger, incidents, no-write proof and return bundle schema |
 | `05-startup-message.md` | Copyable startup instruction for a later separately authorized execution conversation/task |
+| `06-package-integrity-checklist.md` | Pre-merge/pre-run file, reference, semantic, authorization and material-safety checks |
 
 ## Phase state
 
