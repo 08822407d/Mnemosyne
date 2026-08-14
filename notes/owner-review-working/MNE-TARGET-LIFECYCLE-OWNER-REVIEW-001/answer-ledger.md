@@ -10,7 +10,10 @@
 - TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
 - TLR-03：保留具有实际用途的变化路径区分，但不建立为了分类而分类的复杂体系；上游元 Agent 经 Owner 发起并在受授权范围内研究/设计特定下游修改，不具有自由修改下游的持续权限。至少保留需求原文并明确记录重要 API 变化，更细的分类、关键字段和记录规则留待真实运行后形成；未来可由 Pro 分析、虚拟案例/测试以及另行授权的 Pro Deep Research 辅助改进。
 
-当前问题：TLR-04
+延期：
+- TLR-04：现阶段先不在元 Agent 中保存下游 Agent 的实质内容；下游全部资料留在自己的正式仓库，并由专门备份系统承担丢失后的恢复。什么内容值得作为“必要的上游保留”尚无充分实践依据，待多个真实项目运行后再研究；当前等待 Owner 确认解释边界。
+
+当前问题：TLR-04（等待解释确认）
 剩余：TLR-04 至 TLR-05
 ```
 
@@ -192,6 +195,59 @@ question_result:
     affected_decision: null
 ```
 
-## Current question
+## TLR-04 — Parent-owned design brief exception
 
-`TLR-04 — Parent-owned design brief exception`
+```yaml
+question_result:
+  question_id: TLR-04
+  label: Parent-owned design brief exception
+  status: DEFERRED
+
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      这个问题确实非常麻烦，最初额度构想中要在各元agent中保存它们设计的产品(下游agent)的一部分资料，但在进行迁移测试后我更改了想法，要把下游agent的全部资料都放在它们自己的仓库中，双亲agent仓库里只保存“必要的”内容且这个“必要的内容”也没有仔细研究过，再后来又决定建立专门的备份系统，使得原本丢失以后也能从备份中进行重建，这就是现在的版本。但这样的话“各元agent中保留下游agent的内容”就意义不明了，需要仔细研究，或者干脆在多个项目实践之后再确定。现在先不在元agent中保留内容吧。
+    message_ref: current_conversation_owner_answer_TLR_04
+
+  interviewer_interpretation: >-
+    Owner does not adopt the proposed parent-owned substantive design-brief exception at the current stage. The design history has moved through three stages: an early idea of retaining part of downstream-Agent material in each parent/meta Agent; a later migration-test-driven decision to place all downstream-Agent material in the downstream target's own repository while leaving only an undefined set of “necessary” parent-side material; and a still later dedicated backup design that provides reconstruction after loss without needing the parent/meta repository to act as a recovery copy. Given this evolution, the practical purpose of retaining downstream-Agent content in parent/meta repositories is currently unclear and has not been studied enough.
+
+    The safe current default is therefore: do not store substantive downstream-Agent content in parent/meta Agent repositories merely because the parent designed the downstream system. Keep the downstream system's full material in its own authoritative repository and rely on the separately designed backup system for loss recovery. Revisit whether any parent-side content is genuinely necessary only after several real projects provide evidence, or through a later focused study.
+
+    This answer is interpreted as deferring the parent-owned design-brief exception rather than establishing an irreversible universal prohibition. It also does not, without a separate explicit Owner decision, retroactively delete or invalidate already-confirmed minimal meta-level indexes, target identity/provenance pointers, or other parent-owned records whose purpose is about the parent system's own method/history rather than preserving downstream content. Whether such minimal references should remain, and exactly where the line falls between a pointer/index and “downstream content,” remains open for later review.
+  interpretation_confirmed: no
+  confirmation_ref: null
+
+  selected_option_or_rule: defer_parent_owned_substantive_downstream_content_with_no_content_safe_default
+  modifications:
+    - do not activate the narrow parent-owned substantive design-brief exception now
+    - downstream Agent full material remains in its own authoritative repository
+    - dedicated backup system, not the parent/meta repository, is the recovery mechanism for loss
+    - the practical value of any parent-side retained downstream content must be demonstrated rather than assumed
+    - revisit after multiple real projects or a later focused study
+  rejected_options:
+    - retain_substantive_parent_side_downstream_design_material_by_default_now
+    - use_parent_or_meta_repository_as_a_recovery_copy_of_downstream_truth
+  conditions_or_exceptions: []
+
+  deferred:
+    value: true
+    safe_default: no_substantive_downstream_content_in_parent_or_meta_repository
+    revisit_trigger: multiple_real_project_experience_or_later_focused_study_demonstrates_a_specific_useful_parent_owned_minimum
+
+  residual_uncertainty:
+    - whether already-confirmed minimal meta-level indexes or provenance pointers should remain and whether they count as downstream content
+    - what, if anything, constitutes a genuinely necessary parent-owned minimum after backup exists
+  affected_later_questions: []
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: false
+    reason: the answer narrows or defers the optional parent-owned design-brief exception and does not expand parent authority, create a competing writer, or make the parent a live target workspace
+    affected_decision: null
+```
+
+## Confirmation gate
+
+Do not advance to TLR-05 until the Owner confirms or corrects the TLR-04 interviewer interpretation above.
