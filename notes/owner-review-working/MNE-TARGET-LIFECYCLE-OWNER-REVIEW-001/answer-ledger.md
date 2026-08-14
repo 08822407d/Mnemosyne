@@ -13,7 +13,10 @@
 延期：
 - TLR-04：现阶段先不在元 Agent 中保存下游 Agent 的实质内容；下游全部资料留在自己的正式仓库，并由专门备份系统承担丢失后的恢复。什么内容值得作为“必要的上游保留”尚无充分实践依据，待多个真实项目运行后再研究。此延期边界已由 Owner 确认。
 
-当前问题：TLR-05
+暂定：
+- TLR-05：Owner 选择接受推荐顺序：把 TLR-01 至 TLR-04 的确认结果、延期项和安全默认整理为供验证使用的暂定架构版本；随后再由 Owner 分别授权是否创建/运行公开或合成验证。验证执行并由 Pro/frontier 复核之前，不允许把该暂定版本视为成熟架构或自动采用到真实目标 Agent。当前等待 Owner 确认 interviewer interpretation。
+
+当前问题：TLR-05（等待解释确认）
 剩余：TLR-05
 ```
 
@@ -248,8 +251,61 @@ question_result:
     affected_decision: null
 ```
 
-## Current question
+## TLR-05 — Provisional baseline and validation/adoption sequence
 
-`TLR-05 — Provisional baseline and validation/adoption sequence`
+```yaml
+question_result:
+  question_id: TLR-05
+  label: Provisional baseline and validation/adoption sequence
+  status: PROVISIONAL
 
-The Owner has not yet answered TLR-05.
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      我的选择是第一种“接受推荐顺序”
+    message_ref: current_conversation_owner_answer_TLR_05
+
+  interviewer_interpretation: >-
+    Owner accepts the recommended sequence. After TLR-01 through TLR-04 are consolidated, including explicit deferrals and their safe defaults rather than pretending every open detail is resolved, a later Pro/frontier segment may prepare a provisional candidate v0.2 and corresponding validation v0.2 as the frozen architecture contract to be tested. This provisional baseline means only “the design currently selected for validation”; it is not proof, execution source, target truth, target activation, or permission for real target adoption.
+
+    Repository preparation and actual validation execution remain separate gates. The Owner must separately authorize any validation repository creation, writes, or run. The validation should use public/synthetic fixtures and frozen tasks, with next-tier execution and mechanical checks as appropriate. Pro/frontier then adjudicates failures and revises the architecture if necessary. Only after validation is executed and reviewed does the Owner decide whether the architecture is acceptable for future target-specific adoption, and each target still receives its own separate adoption/migration decision.
+
+    TLR-04 remains explicitly deferred inside this provisional baseline: the safe default is no substantive downstream content in parent/meta repositories, while the question of a useful minimum may be revisited after real-project evidence. TLR-03 likewise preserves only the practical route distinctions and minimum records currently confirmed; it does not invent the detailed classification/record schema that the Owner chose to learn from practice.
+
+    The Owner's selection of the recommended sequence does not itself authorize creation of candidate v0.2, validation v0.2, a validation repository, validation execution, target modification, Meta-Agent work, Deep Research, Fable, quota use, or a PR. Those remain later Pro/frontier and Owner authorization steps under the existing handoff/package contract.
+  interpretation_confirmed: no
+  confirmation_ref: null
+
+  selected_option_or_rule: provisional_baseline_then_separately_authorized_validation_then_owner_and_target_adoption
+  modifications:
+    - carry confirmed deferrals and safe defaults into the provisional baseline explicitly
+    - do not treat deferred TLR-04 or practice-learned TLR-03 details as silently resolved
+    - keep preparation of candidate/validation artifacts separate from authorization to run validation
+    - keep global architecture acceptance separate from each target's adoption/migration decision
+  rejected_options:
+    - require_validation_before_any_provisional_baseline_can_be_named
+    - accept_architecture_without_validation
+    - defer_validation_indefinitely_while_retaining_only_v0_1
+  conditions_or_exceptions: []
+
+  deferred:
+    value: false
+    safe_default: null
+    revisit_trigger: null
+
+  residual_uncertainty:
+    - exact contents of candidate v0.2 and validation v0.2 must be produced by later Pro/frontier work, not invented in this interview
+    - exact validation execution surface and repository/write plan remain separately gated
+  affected_later_questions: []
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: false
+    reason: Owner selected the prepared recommended sequencing option without changing target authority, activation, or automatic-propagation boundaries
+    affected_decision: null
+```
+
+## Confirmation gate
+
+All five questions have now been covered, but TLR-05 is not final until the Owner confirms or corrects the interviewer interpretation above. Do not create `final-result-candidate.md`, candidate v0.2, validation v0.2, any validation run, or a PR until this confirmation gate is passed and the later workflow authorizes the relevant step.
