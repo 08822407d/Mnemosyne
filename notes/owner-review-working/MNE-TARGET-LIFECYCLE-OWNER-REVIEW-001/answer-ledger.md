@@ -9,7 +9,10 @@
 - TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
 - TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
 
-当前问题：TLR-03
+需 Pro/frontier：
+- TLR-03：Owner 对变化分类和记录方向已有明确说明，但“上游元 Agent 主动修改下游 Agent 的目录组织和行为约束文件”触及下游写入权责与自动传播边界，必须先做 frontier re-entry；其余关于需求/API 变化入口、最低保留需求原文、具体规则留待实践的内容已保存。
+
+当前问题：TLR-03（FRONTIER_REENTRY_REQUIRED，停止普通访谈推进）
 剩余：TLR-03 至 TLR-05
 ```
 
@@ -119,8 +122,63 @@ question_result:
     affected_decision: null
 ```
 
-## Current question
+## TLR-03 — Primary change axis and secondary effects
 
-`TLR-03 — Primary change axis and secondary effects`
+```yaml
+question_result:
+  question_id: TLR-03
+  label: Primary change axis and secondary effects
+  status: FRONTIER_REENTRY_REQUIRED
 
-The Owner has not yet answered TLR-03.
+  owner_answer:
+    verbatim_or_safe_ref: >-
+      这个问题中区分辨别变化的种类相对比较简单，因为入口和路径有明显的不同。来自上游agent或者说各元agent的变化是由元agent触发的，上游主动修改下游的agent目录组织和行为约束相关文件。而需求变化分代码库类型和具体业务项目，业务项目的需求变化无需详细讨论因为它没有下游了，再怎么变也是自己的事；而代码库的需求主要来自于具体业务的需求的综合分析，其一定程度上会引起api设计的变化，而如果我要求尖端模型进行设计评估和改善以及多agent互评和后续的修改，通常会引起api变化，api变化应该是很容易记录的，而需求变化因为入口固定，记录起来也相对简单，需求本身的文字数量也不是很多，即使没有设计好一个可靠的方案，至少记录需求原文不是一件很困难的事。不过这些细则还是得等到实践的时候才能确定一套有意义和有效的方案和规则，现在不急于详细讨论。
+    message_ref: current_conversation_owner_answer_TLR_03
+
+  interviewer_interpretation: >-
+    Owner 认为不同变化类型本身并不难识别，因为它们有清楚的入口和处理路径。来自 Mnemosyne、Meta-Agent 或其他上游元 Agent 的变化属于上游能力/方法演化路径；业务项目自身的需求变化没有下游传播问题，可主要由该项目自行处理；代码库需求主要来自多个具体业务需求的综合分析，并可能进一步引起 API 设计变化；尖端模型设计评估、多 Agent 互评及后续修订也可能导致 API 变化。需求入口相对固定且原始文字通常不长，因此即使正式记录机制尚未成熟，也至少可以保存需求原文；API 变化本身也应相对容易记录。Owner 不要求现在冻结一套复杂的“主要变化 + 连带影响”记录方案，而倾向把具体规则留到真实实践中，根据是否有意义、是否有效再逐步形成。
+
+    但 Owner 同时表述“上游主动修改下游的 Agent 目录组织和行为约束相关文件”。若这里意味着上游元 Agent 对下游目标具有持续、自动或无需下游/Owner 单独授权的直接写入权，则会改变当前已确认的 target writer authority / no automatic cross-target propagation 边界。当前 next-tier 访谈不能替 Owner 将这一高影响权责变化直接吸收为 TLR-03 的普通细则，因此必须交给 Pro/frontier 单独判定。若 Owner 实际含义只是“由上游元 Agent 发起一个明确、受授权、写入范围受限的下游修改任务”，则可能仍与既有权责边界兼容，但这一点不能由 interviewer 自行补写。
+
+  interpretation_confirmed: no
+  confirmation_ref: null
+
+  selected_option_or_rule: separate_change_routes_with_practice_deferred_recording_details
+  modifications:
+    - treat change classification as primarily route/entry-point based rather than requiring heavy classification machinery
+    - business-project requirement evolution is target-local and needs no downstream-propagation model by default
+    - code-library requirements arise substantially from synthesis of business-project needs and may legitimately create API redesign candidates
+    - preserve original requirement text as the minimum durable evidence while richer recording rules remain immature
+    - defer detailed record schemas and effective operational rules until practice provides evidence
+  rejected_options:
+    - freeze_a_heavy_change_taxonomy_now
+    - assume_every_change_category_needs_the_same_recording_process
+  conditions_or_exceptions: []
+
+  deferred:
+    value: true
+    safe_default: preserve_distinct_change_routes_and_no_automatic_cross_axis_propagation_until_frontier_reentry_and_real_use_evidence
+    revisit_trigger: Pro/frontier adjudication of upstream-to-downstream writer authority plus practical evidence from real target evolution
+
+  residual_uncertainty:
+    - exact meaning and authorization boundary of upstream Agent actively modifying downstream Agent organization/behavior files
+    - whether a formal primary-axis/secondary-effect record is needed beyond the simpler route-based provenance described by Owner
+    - exact schemas for requirement/API/change records should be learned from practice
+  affected_later_questions:
+    - TLR-04 may depend on the same parent/upstream versus target ownership boundary
+
+  external_fact_checks_required: []
+  missing_artifacts: []
+
+  frontier_reentry:
+    required: true
+    reason: >-
+      Owner statement about an upstream meta-Agent actively modifying downstream Agent directory organization and behavior-constraint files potentially changes writer authority and could imply automatic cross-target propagation. The current package requires frontier re-entry for such authority/propagation changes.
+    affected_decision: upstream_to_downstream_writer_authority_and_adoption_boundary
+```
+
+## Stop gate
+
+`FRONTIER_REENTRY_REQUIRED — TLR-03: upstream-to-downstream writer authority / automatic propagation boundary`
+
+Do not advance to TLR-04 until this re-entry is adjudicated or the Owner explicitly clarifies that the upstream Agent acts only as a bounded task writer under an already-approved downstream/Owner authorization model.
