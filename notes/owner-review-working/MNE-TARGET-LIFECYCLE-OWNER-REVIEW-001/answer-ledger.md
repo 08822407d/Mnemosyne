@@ -11,10 +11,10 @@
 - TLR-03：保留具有实际用途的变化路径区分，但不建立为了分类而分类的复杂体系；上游元 Agent 经 Owner 发起并在受授权范围内研究/设计特定下游修改，不具有自由修改下游的持续权限。至少保留需求原文并明确记录重要 API 变化，更细的分类、关键字段和记录规则留待真实运行后形成；未来可由 Pro 分析、虚拟案例/测试以及另行授权的 Pro Deep Research 辅助改进。
 
 延期：
-- TLR-04：现阶段先不在元 Agent 中保存下游 Agent 的实质内容；下游全部资料留在自己的正式仓库，并由专门备份系统承担丢失后的恢复。什么内容值得作为“必要的上游保留”尚无充分实践依据，待多个真实项目运行后再研究；当前等待 Owner 确认解释边界。
+- TLR-04：现阶段先不在元 Agent 中保存下游 Agent 的实质内容；下游全部资料留在自己的正式仓库，并由专门备份系统承担丢失后的恢复。什么内容值得作为“必要的上游保留”尚无充分实践依据，待多个真实项目运行后再研究。此延期边界已由 Owner 确认。
 
-当前问题：TLR-04（等待解释确认）
-剩余：TLR-04 至 TLR-05
+当前问题：TLR-05
+剩余：TLR-05
 ```
 
 ## TLR-01 — Same-repository concurrency
@@ -214,8 +214,8 @@ question_result:
     The safe current default is therefore: do not store substantive downstream-Agent content in parent/meta Agent repositories merely because the parent designed the downstream system. Keep the downstream system's full material in its own authoritative repository and rely on the separately designed backup system for loss recovery. Revisit whether any parent-side content is genuinely necessary only after several real projects provide evidence, or through a later focused study.
 
     This answer is interpreted as deferring the parent-owned design-brief exception rather than establishing an irreversible universal prohibition. It also does not, without a separate explicit Owner decision, retroactively delete or invalidate already-confirmed minimal meta-level indexes, target identity/provenance pointers, or other parent-owned records whose purpose is about the parent system's own method/history rather than preserving downstream content. Whether such minimal references should remain, and exactly where the line falls between a pointer/index and “downstream content,” remains open for later review.
-  interpretation_confirmed: no
-  confirmation_ref: null
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_04_accuracy
 
   selected_option_or_rule: defer_parent_owned_substantive_downstream_content_with_no_content_safe_default
   modifications:
@@ -248,6 +248,8 @@ question_result:
     affected_decision: null
 ```
 
-## Confirmation gate
+## Current question
 
-Do not advance to TLR-05 until the Owner confirms or corrects the TLR-04 interviewer interpretation above.
+`TLR-05 — Provisional baseline and validation/adoption sequence`
+
+The Owner has not yet answered TLR-05.
