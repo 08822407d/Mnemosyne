@@ -32,7 +32,8 @@ clarification_result:
   Meta_Agent_modified_or_activated: false
   target_repository_modified_or_created: false
   private_material_ingested: false
-  external_research_or_quota_used: false
+  bounded_external_web_primary_source_verification_performed: true
+  Deep_Research_Fable_or_external_quota_used: false
   PR_created: false
 ```
 
@@ -102,7 +103,9 @@ Owner 的既有实践——多个独立文件夹项目、各自存在未同步 G
 
 ### 2.3 有边界的外部证据核查
 
-本轮已完成一次有边界的官方资料核查，抽查 NumPy、Django、OpenSSL、Kubernetes 以及 Semantic Versioning 规范。观察到的共同模式支持 Owner 的责任分工：上游库主要维护自己的接口、版本、弃用、不兼容变化和迁移信息，下游项目按实际升级需要处理自己的迁移；重大不兼容变化通常需要比普通更新日志更明确的迁移说明。
+本轮完成并在 2026-08-14 重新核验了一次有边界的官方一手资料检查，抽查 NumPy、Django、OpenSSL、Kubernetes 以及 Semantic Versioning 规范。观察到的共同模式支持 Owner 的责任分工：上游库主要维护自己的接口、版本、弃用、不兼容变化和迁移信息，下游项目按实际升级需要处理自己的迁移；重大不兼容变化通常需要比普通更新日志更明确的迁移说明。NumPy 当前的下游作者指南还明确说明 NumPy 不使用 Semantic Versioning，因此版本号不应被当作唯一兼容性信号。
+
+这只是小规模工程证据样本，不代表所有开源生态都采用相同政策。
 
 **仍待后续设计/验证：** 两类文档的文件名、目录、字段、事实同步方式、Agent 版最小机器可理解结构，以及是否存在少数确需主动通知/登记的例外场景。
 
@@ -234,6 +237,8 @@ TLR-04 的延期必须显式带入该暂定版本，不能被假装解决。TLR-
 - 运行 Deep Research 或 Fable；
 - 消耗外部 quota；
 - 创建 PR、合并或修改 master。
+
+本轮仅额外执行了经 Owner 在 TLR-02 中允许的、范围有限的普通网页一手资料核验；它不等同于 Deep Research/Fable/付费 quota run，也没有改变上述未授权边界。
 
 ## 9. 最终确认门槛
 
