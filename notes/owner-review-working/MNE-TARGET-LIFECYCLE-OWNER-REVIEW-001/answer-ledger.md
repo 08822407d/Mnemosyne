@@ -7,12 +7,10 @@
 
 已确认：
 - TLR-01：在能够验证不互相干扰时，允许同仓库不同 logical Agent / 项目的独立任务并发；不因共仓而一律强制串行。
-
-暂定：
 - TLR-02：代码库 Agent 只负责本库自身变化；变化说明分成人类版和项目 Agent 版。人类版至少简要说明变化，可继续扩展；项目 Agent 版必须提供足够信息，使引用本库的项目 Agent 能据此判断并完成项目重构。库项目总说明还应介绍这两类文档的存在、用途和位置。各项目在需要重新构建/升级时，由自己的 Agent 查阅这些变化并决定项目侧重构。
 
-当前问题：TLR-02（等待 Owner 确认新增细化解释）
-剩余：TLR-02 至 TLR-05
+当前问题：TLR-03
+剩余：TLR-03 至 TLR-05
 ```
 
 ## TLR-01 — Same-repository concurrency
@@ -71,7 +69,7 @@ question_result:
 question_result:
   question_id: TLR-02
   label: Shared objects and dependency responsibility
-  status: PROVISIONAL
+  status: CONFIRMED
 
   owner_answer:
     verbatim_or_safe_ref: >-
@@ -80,8 +78,8 @@ question_result:
 
   interviewer_interpretation: >-
     Owner 确认 OR-04/TLR-02 的责任分工，并进一步要求代码库的变化说明至少区分两种面向对象。第一种是面向人类的变化说明：最低要求是用自然、简洁的方式说明本库发生了哪些重要变化，但未来可以加入更丰富的背景、示例、设计说明等内容。第二种是面向引用本库的项目 Agent 的变化说明：它必须比人类版更强调可执行性和重构所需信息，使项目 Agent 在触发重新构建或升级时，能够据此识别受影响接口或行为、理解旧约定和新约定、确定替代/迁移步骤，并据此修改和验证自己负责的项目。两类文档可以共享事实来源，但用途不同，不应假定人类版的简述天然足以支持 Agent 重构。代码库项目还应有一份总说明或文档导航，简要告诉引用本库的 Agent：除代码之外还提供哪些文档、每类文档的用途是什么、放在哪里；其中必须明确介绍上述人类版变化说明和项目 Agent 版变化说明。代码库 Agent 仍不默认维护所有引用项目的完整消费者名单，也不替项目做项目侧重构；具体项目 Agent 在需要重新构建/升级时读取 Agent 版变化说明，并结合本项目实际使用情况自行决定修改和验证。
-  interpretation_confirmed: no
-  confirmation_ref: current_conversation_owner_confirmed_prior_TLR_02_interpretation_then_added_refinement
+  interpretation_confirmed: yes
+  confirmation_ref: current_conversation_owner_confirmation_TLR_02_refined_accuracy
 
   selected_option_or_rule: library_records_own_changes_with_human_and_agent_documentation_consumers_rebuild_on_demand
   modifications:
@@ -121,6 +119,8 @@ question_result:
     affected_decision: null
 ```
 
-## Confirmation gate
+## Current question
 
-Do not advance to TLR-03 until the Owner confirms or corrects the refined TLR-02 interviewer interpretation above.
+`TLR-03 — Primary change axis and secondary effects`
+
+The Owner has not yet answered TLR-03.
