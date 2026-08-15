@@ -5,14 +5,15 @@
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POI4-REVIEW-STATUS-001
 last_updated_by_task: MNEMOSYNE-212
-status: V1_OWNER_AUTHORIZED_NOT_ACTIVE_PENDING_CANONICAL_READY_PR_MERGE_AND_MASTER_IDENTITY_VERIFICATION
+status: V1_OWNER_AUTHORIZED_READY_PR_280_OPEN_PENDING_OWNER_MERGE_AND_POST_MERGE_MASTER_IDENTITY_VERIFICATION
 source_master: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
 execution_source: current/human-approved-spec.md
 canonical_task_branch: mnemosyne-212-v0-adjudication-and-v1-plan
 confirmed_reviewed_branch_head: f35e1b4c28785dc0dc59273047a06bdf6a049653
 confirmed_V1_candidate_blob: 42bb0415243a7ffa7658d57bb6a651c86f5fb991
-canonical_PR: pending_creation
-canonical_PR_required_state: ready
+canonical_PR: 280
+canonical_PR_state: open_ready
+PR_finalization_ref: notes/codex-task-results/MNEMOSYNE-212-pr-finalization.md
 V0_adjudication: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md
 V1_decision_candidate: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001.md
 V1_owner_authorization: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
@@ -34,7 +35,8 @@ V1_executed: false
 - Current OpenAI documentation plus observed V0 behavior support the distinction between GitHub-side repository authorization and ChatGPT-side sync selection.
 - Pro prepared the complete V1 baseline decision candidate, three-conversation execution package, S8 knowledge firewall, rationale and operator flow.
 - The Owner explicitly confirmed the exact reviewed branch head `f35e1b4c28785dc0dc59273047a06bdf6a049653` and V1 decision candidate blob `42bb0415243a7ffa7658d57bb6a651c86f5fb991`.
-- `MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001` is now saved on the same canonical branch.
+- `MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001` is saved on the same canonical branch.
+- Ready PR #280 was created with `draft: false`; auto-merge is not enabled or authorized.
 
 ## V0 adjudication
 
@@ -62,7 +64,7 @@ Other real-target classes remain prohibited but were not named by exact reposito
 ```yaml
 V1:
   authorization_id: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
-  authorization_status: CONFIRMED_NOT_ACTIVE_UNTIL_PR_MERGE_AND_IDENTITY_VERIFICATION
+  authorization_status: CONFIRMED_NOT_ACTIVE_UNTIL_PR_280_MERGE_AND_IDENTITY_VERIFICATION
   repository: 08822407d/mnemosyne-target-lifecycle-validation-002
   pinned_base: e8e3296922185b4b70997c2351d6f39423f2cd4f
   phase: V1_BASELINE_ONLY
@@ -100,17 +102,16 @@ S8 must run in a new next-tier conversation that has not seen S7 sufficient migr
 
 V1 is Owner-authorized but **not active**. It may start only after all of the following are true:
 
-1. one canonical Ready PR from `mnemosyne-212-v0-adjudication-and-v1-plan` to `master` is created;
-2. the Owner merges that PR;
-3. execution-time latest `master` is re-read;
-4. merged candidate, execution package and authorization identities/content lineage match the confirmed branch artifacts;
-5. the synthetic repository still has the required V0 final head as the V1 starting point;
-6. no conflicting V1 execution has begun.
+1. Ready PR #280 is merged by the Owner;
+2. execution-time latest `master` is re-read;
+3. merged candidate, execution package and authorization identities/content lineage match the confirmed branch artifacts;
+4. the synthetic repository still has the required V0 final head as the V1 starting point;
+5. no conflicting V1 execution has begun.
 
 Until then:
 
 ```yaml
-V1_execution_state: AUTHORIZED_BUT_NOT_ACTIVE_PENDING_PR_MERGE_AND_IDENTITY_VERIFICATION
+V1_execution_state: AUTHORIZED_BUT_NOT_ACTIVE_PENDING_PR_280_MERGE_AND_MASTER_IDENTITY_VERIFICATION
 ```
 
 ## Current branch and publication state
@@ -119,19 +120,21 @@ V1_execution_state: AUTHORIZED_BUT_NOT_ACTIVE_PENDING_PR_MERGE_AND_IDENTITY_VERI
 MNEMOSYNE_212:
   base_master: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
   canonical_branch: mnemosyne-212-v0-adjudication-and-v1-plan
-  canonical_PR: pending_creation
-  PR_creation_authorized: true
-  required_PR_state: ready
-  Draft_prohibited_by_Owner: true
+  canonical_PR: 280
+  PR_state: open_ready
+  PR_draft: false
   auto_merge_authorized: false
+  Agent_merge_authorized: false
   direct_master_write: prohibited
   V1_execution_authorized_after_activation_gate_only: true
 ```
 
+No verified post-merge route requires retaining the live MNEMOSYNE-212 branch; the ordinary deletion-after-merge default applies.
+
 ## Not authorized or not yet active
 
-- auto-merge or merge by the Agent;
-- V1 before the canonical Ready PR merge and post-merge identity check;
+- Agent merge or auto-merge of PR #280;
+- V1 before PR #280 merge and post-merge identity check;
 - S10 or V2;
 - raw V1 result ingestion into Mnemosyne;
 - global architecture acceptance;
@@ -144,4 +147,4 @@ MNEMOSYNE_212:
 
 ## One safe next action
 
-Create the single authorized Ready PR to `master`. Do not run V1 and do not auto-merge. After Owner merge, perform post-merge identity verification before any V1 execution.
+The Owner may merge Ready PR #280. After the merge becomes observable, verify the exact merge commit, latest `master`, merged candidate/execution-package/authorization identities, and the synthetic V0 head before starting `MNE-DR-003 Execute`.
