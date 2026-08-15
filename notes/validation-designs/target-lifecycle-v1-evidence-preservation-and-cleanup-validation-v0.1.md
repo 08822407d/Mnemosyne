@@ -13,6 +13,7 @@ source_owner_decision: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-V1-OWNE
 validation_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
 archive_creation_authorized: false
 cleanup_authorized: false
+current_standard_GitHub_connector_delete_ref_capability: unavailable
 ```
 
 ## 1. Validation question
@@ -46,6 +47,7 @@ phases:
     prerequisites:
       - P1_passed
       - P2_explicit_cleanup_release
+      - selected_surface_exposes_exact_auditable_ref_deletion
   P4_POST_DELETE_RECOVERY_PROOF:
     writes: none_unless_a_separate_result_storage_action_is_authorized
 ```
@@ -231,6 +233,7 @@ After P1 passes, the Owner must receive a bounded decision package containing:
 - proposed deletion list;
 - proposed retained navigation refs;
 - recovery-proof plan;
+- exact deletion surface/capability and partial-failure behavior;
 - explicit `delete none / delete selected scenario refs / defer / reject premise / other` options.
 
 Recommendation remains to retain:
@@ -241,9 +244,13 @@ Recommendation remains to retain:
 
 The Owner may choose to retain all 16 branches instead. P1 success does not create a cleanup obligation.
 
-## 9. P3 deletion contract
+## 9. P3 deletion contract and surface gate
 
-P3 requires a new task ID, new exact authorization and an exact branch list. Rules:
+P3 requires a new task ID, new exact authorization and an exact branch list. The execution surface must expose an exact branch-ref deletion operation and must preserve each attempt/result. The current standard ChatGPT GitHub connector does not expose such an operation, so P3 is `BLOCKED_ON_CURRENT_CONNECTOR` unless the product capability changes and is reverified.
+
+A suitable future surface may be a controlled Codex/Git environment or an explicit human GitHub operation. The chosen surface, repository access, exact deletion commands/actions, confirmation behavior, partial-failure handling and return evidence must be recorded before the first deletion.
+
+Rules:
 
 1. re-run P0 and verify the anchor unchanged;
 2. verify every branch selected for deletion still equals its preserved head;
@@ -251,7 +258,8 @@ P3 requires a new task ID, new exact authorization and an exact branch list. Rul
 4. stop immediately on any failed or ambiguous deletion;
 5. never delete validation `master`, controller, fixture or anchor unless the Owner explicitly overrides the recommended retained set;
 6. do not force-update any branch;
-7. preserve every attempted deletion and result.
+7. preserve every attempted deletion and result;
+8. do not substitute file deletion, PR closure, branch movement or a narrative claim for actual ref deletion.
 
 ## 10. P4 post-delete proof
 
