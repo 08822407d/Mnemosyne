@@ -4,8 +4,10 @@
 task_id: MNEMOSYNE-221
 verification_status: PASS_WITH_RECORDED_LIMITATIONS
 base_master_at_start: cafb080293d9525dd186a550f8ffcf98e1e4478d
+latest_master_integrated: c237458be062e37950278a5cdd7b3a60bcac2bf0
 receive_only_branch: mne-dr-005-fable-result-intake-001
 canonical_adjudication_branch: mnemosyne-221-mne-dr-005-fable-pro-adjudication
+branch_merge_commit_integrating_latest_master: 97136f1c69350fc6b74d8ea2f5ec6730f7d6b63f
 execution_source_modified: false
 Meta_Agent_modified: false
 validation_repository_modified: false
@@ -85,7 +87,20 @@ Primary/official source classes checked:
 - NIST SSDF;
 - Meta's official October 2021 outage report.
 
-## 6. Protected boundaries
+## 6. Concurrent-branch integration
+
+```yaml
+PR_288_merged: true
+PR_288_merge_commit: c237458be062e37950278a5cdd7b3a60bcac2bf0
+F1_F2_path_overlap: false
+Fable_launch_time_F1_candidate_blob_preserved: accb13ccb57677d316f5f94ef58f7939ad69521b
+later_F1_Owner_decision_preserved_as_post_run_state: true
+branch_ahead_by_after_integration: 20
+branch_behind_by_after_integration: 0
+open_Mnemosyne_PRs_before_F2_PR_creation: []
+```
+
+## 7. Protected boundaries
 
 Verified unchanged by this task:
 
@@ -95,4 +110,4 @@ Verified unchanged by this task:
 - V1 validation repository;
 - real target repositories.
 
-No PR or merge is performed by this verification record.
+No merge is performed by this verification record.
