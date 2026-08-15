@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.1.2
-last_updated_by_task: MNEMOSYNE-213
+version: 0.1.3
+last_updated_by_task: MNEMOSYNE-214
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -22,7 +22,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 005
+    next_unallocated_sequence: 006
 
   Meta_Agent:
     project_id: meta-agent
@@ -60,7 +60,7 @@ issued_aliases:
     sequence: 003
     canonical_task_id: MNE-TARGET-LIFECYCLE-V1-001
     project: Mnemosyne
-    status: issued_owner_authorized_activation_gated
+    status: issued_owner_authorized_execution_complete_pending_fresh_Pro
     allocation_task: MNEMOSYNE-212
     execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
     notes:
@@ -81,6 +81,19 @@ issued_aliases:
       - Fable_run_used_historical_UI_name_MNE_DR_003_能力归属
       - stored_alias_changed_only_for_navigation_after_parallel_sequence_collision
       - canonical_task_id_and_original_report_unchanged
+
+  - display_name: MNE-DR-005 跨仓库并发
+    sequence: 005
+    canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
+    project: Mnemosyne
+    status: issued_prepared_not_selected
+    allocation_task: MNEMOSYNE-214
+    execution_package: handoff/fable5-ready/FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001/
+    notes:
+      - roadmap_F2
+      - may_run_in_parallel_with_V1_fresh_Pro_review
+      - V1_controller_results_remain_provisional_input
+      - one_fresh_Project_one_Research_invocation
 ```
 
 ## 3. Historical Meta-Agent compatibility
