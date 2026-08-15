@@ -13,6 +13,7 @@ source_rationale: notes/design-rationales/target-lifecycle-v1-evidence-preservat
 validation_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
 current_retained_branch_count: 16
 current_cleanup_authorized: false
+current_standard_GitHub_connector_delete_ref_capability: unavailable
 ```
 
 ## 1. 需要决定什么
@@ -34,6 +35,7 @@ V1 的 16 条证据分支目前都保留完好。仓库体积很小，也没有�
 - 16 条 `tlr-v1-*` 分支的当前 head 已与 controller evidence 相互核对；
 - 仅保存 SHA 的文档不能单独保证删除全部 ref 后对象仍永久可达；
 - 当前仓库约 95 KiB，没有存储紧急性；
+- 当前 GitHub 连接器具备构造未来锚点所需的 blob/tree/commit/ref 动作，但没有 branch-ref 删除动作；
 - 本次任务没有写验证仓库，也没有删除任何分支。
 
 ## 3. 选项
@@ -46,7 +48,7 @@ V1 的 16 条证据分支目前都保留完好。仓库体积很小，也没有�
 - 当前不创建 `tlr-v1-evidence-anchor-001`；
 - 当前不删除任何分支；
 - 只有出现真实清理需求或 Owner 以后明确选择 P1，才启动锚点创建与验证；
-- 锚点通过后仍必须再次由 Owner 决定是否删除哪些分支。
+- 锚点通过后仍必须再次由 Owner 决定是否删除哪些分支，并选择具备精确 branch-ref 删除能力的表面。
 
 优点：不制造当前不必要的 Git 操作，同时使未来路线不再从零设计。
 
@@ -60,11 +62,12 @@ V1 的 16 条证据分支目前都保留完好。仓库体积很小，也没有�
 - 下一阶段准备一份精确 P1 运行授权；
 - 只创建并验证 `tlr-v1-evidence-anchor-001`；
 - P1 中删除数量必须为 0；
-- P1 结束后返回 Owner，再决定是否清理。
+- P1 结束后返回 Owner，再决定是否清理；
+- 如以后进入 P3，必须换到具备精确 ref 删除能力且能够保存部分失败证据的 Codex/Git/人工 GitHub 表面。
 
 优点：提前建立可达性保存机制，未来清理时更快。
 
-代价：当前没有实际清理压力，却要增加一个非常规多父提交和一个长期 anchor ref；还需要一次独立写入运行与复核。
+代价：当前没有实际清理压力，却要增加一个非常规多父提交和一个长期 anchor ref；还需要一次独立写入运行与复核。P1 即使通过，也不能由当前标准 GitHub 连接器继续执行 P3 删除。
 
 ### C — 只保留现状，不接受本设计为未来路线
 
@@ -118,7 +121,7 @@ Owner 可以：
 - 修改 Meta-Agent、真实目标或 `current/human-approved-spec.md`；
 - Work、Deep Research、Fable、Scheduled Task 或外部 quota。
 
-选择 B 也只表示下一步可以准备 P1 的精确授权，不等于本文件本身已经授权写验证仓库。
+选择 B 也只表示下一步可以准备 P1 的精确授权，不等于本文件本身已经授权写验证仓库，更不授权 P3 删除。
 
 ## 6. 简洁确认格式
 
