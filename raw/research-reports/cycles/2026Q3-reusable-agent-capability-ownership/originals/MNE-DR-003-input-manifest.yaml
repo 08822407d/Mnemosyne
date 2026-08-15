@@ -1,0 +1,80 @@
+manifest_id: MNE-DR-003-INPUT-MANIFEST-002
+task_id: FABLE5-MNE-REUSABLE-CAPABILITY-OWNERSHIP-001
+display_name: MNE-DR-003 能力归属
+run_selected_by_owner: true
+automatic_retry: false
+repository_write: prohibited
+validation_execution: prohibited
+source_pins:
+  Mnemosyne:
+    repository: 08822407d/Mnemosyne
+    branch_for_Project_sync: master
+    maintainer_verified_head_at_package_generation: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+    Fable_can_independently_attest_commit_SHA_from_Project_GitHub: false
+  Meta_Agent:
+    repository: 08822407d/Meta-Agent
+    branch_for_Project_sync: master
+    maintainer_verified_head_at_package_generation: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+    Fable_can_independently_attest_commit_SHA_from_Project_GitHub: false
+local_files:
+- MNE-DR-003-最终任务.md
+- MNE-DR-003-输入清单.yaml
+Mnemosyne_files:
+- current/human-approved-spec.md
+- current/source-artifact-preservation-and-design-rationale-guard.md
+- notes/urgent-research-and-validation-roadmap-v0.1.md
+- notes/reusable-agent-capability-catalog-v0.2.md
+- notes/first-three-system-capability-selection-v0.3.md
+- notes/target-local-repository-operating-model-candidate-v0.1.md
+- notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
+- notes/target-agent-container-evolution-and-dependency-frontier-adjudication-v0.1.md
+- notes/capability-feedback-resolution-and-real-use-validation-plan-v0.1.md
+Meta_Agent_files:
+- current/approved-spec.md
+- methodology/core-methodology.md
+- authority/source-and-owner-map.md
+counts:
+  local_files: 2
+  Mnemosyne_files: 9
+  Meta_Agent_files: 3
+  total_logical_files: 14
+input_roles:
+  task_instruction:
+  - MNE-DR-003-最终任务.md
+  input_manifest:
+  - MNE-DR-003-输入清单.yaml
+  authoritative_constraints:
+  - 'Mnemosyne: current/human-approved-spec.md'
+  - 'Meta-Agent: current/approved-spec.md'
+  accepted_methodology:
+  - 'Meta-Agent: methodology/core-methodology.md'
+  authority_map:
+  - 'Meta-Agent: authority/source-and-owner-map.md'
+  research_objects:
+  - 其余列出的 Mnemosyne 文件
+prohibited_contamination:
+- prior_Fable_reports
+- prior_Pro_adjudications_not_listed_here
+- FCV_A1_or_A2_material
+- FABLE5_GREENFIELD_material
+- unrelated_active_context_or_handoff
+- private_conversations_or_personal_material
+- target_business_truth
+- live_connector_output
+input_verification_pass_requires:
+- all_14_logical_files_resolved
+- repository_names_and_all_required_paths_resolved
+- maintainer_supplied_source_receipt_not_misrepresented_as_Fable_commit_attestation
+- task_and_manifest_identity_match
+- authority_methodology_candidate_and_evidence_roles_distinguished
+- capability_catalogue_identity_recovered
+- first_three_target_selection_identity_recovered
+- target_local_operating_model_identity_recovered
+- target_lifecycle_candidate_v0_2_identity_recovered
+- frontier_adjudication_fixed_decisions_and_repairs_recovered
+- F1_question_timing_and_decision_value_recovered
+- unresolved_input_gaps_empty
+- external_web_sources_before_gate_zero
+- substantive_recommendation_before_gate_false
+- byte_complete_read_claim_false
+- connector_or_write_action_false
