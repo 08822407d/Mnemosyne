@@ -3,10 +3,11 @@
 ```yaml
 task_id: MNEMOSYNE-221
 repository: 08822407d/Mnemosyne
-source_master: cafb080293d9525dd186a550f8ffcf98e1e4478d
+source_master_at_start: cafb080293d9525dd186a550f8ffcf98e1e4478d
+latest_master_integrated: c237458be062e37950278a5cdd7b3a60bcac2bf0
 receive_only_branch: mne-dr-005-fable-result-intake-001
 canonical_branch: mnemosyne-221-mne-dr-005-fable-pro-adjudication
-status: FRESH_PRO_ADJUDICATION_COMPLETE_PENDING_OWNER_DISPOSITION_AND_PR_PUBLICATION
+status: FRESH_PRO_ADJUDICATION_COMPLETE_READY_PR_PREPARED
 return_identity: PASS_EXACT
 report_disposition: ACCEPT_WITH_MATERIAL_CORRECTIONS
 implementation_readiness: REJECT
@@ -27,7 +28,9 @@ real_target_modified: false
 7. adjudicated the hybrid architecture recommendation;
 8. prepared a corrected provisional F2 amendment candidate;
 9. prepared an Owner decision candidate;
-10. updated the F2 current-status candidate on the canonical branch.
+10. updated the F2 current-status candidate;
+11. integrated the later merged F1 Owner-decision PR without changing Fable's launch-time input identity;
+12. completed the Ready-PR publication preflight.
 
 ## Main substantive result
 
@@ -61,4 +64,6 @@ V2 execution, any real-target action and candidate-v0.2 modification remain sepa
 
 ## Concurrent F1 boundary
 
-PR #288 is a separate F1 Owner-decision publication. The MNE-DR-005 run used the pre-decision F1 candidate blob `accb13ccb57677d316f5f94ef58f7939ad69521b`. MNEMOSYNE-221 preserves that launch-time fact and does not modify, merge or pre-empt PR #288.
+PR #288 merged as `c237458be062e37950278a5cdd7b3a60bcac2bf0` and records the later F1 Owner Option A decision.
+
+The MNE-DR-005 run used the pre-decision F1 candidate blob `accb13ccb57677d316f5f94ef58f7939ad69521b`. MNEMOSYNE-221 preserves that launch-time fact and the later Owner decision as separate time layers.
