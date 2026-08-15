@@ -1,43 +1,56 @@
 # Target-Lifecycle V1 Baseline — Staged Multi-Cell Execution Package 001
 
-> Run-specific orchestration supplement for the frozen candidate/validation/package after V0. It does not amend scenario semantics, authorize V1, create branches in the synthetic repository, execute a cell, ingest results into Mnemosyne or accept the architecture.
+> Historical orchestration package for `MNE-TARGET-LIFECYCLE-V1-001`, with an Owner-accepted prospective amendment for any future reuse. The historical run remains bound to its original exact blobs; the current files do not retroactively rewrite that run. This package does not self-authorize another run, result ingestion, target adoption or execution-source change.
 
 ```yaml
 execution_package_id: MNE-TARGET-LIFECYCLE-V1-EXECUTION-PACKAGE-001
-version: 0.1.0
-task_id: MNEMOSYNE-212
-status: prepared_not_selected_not_executed
+version: 0.1.1
+created_by_task: MNEMOSYNE-212
+last_amended_by_task: MNEMOSYNE-215
+status: HISTORICAL_V1_COMPLETE_OWNER_ACCEPTED_FUTURE_REUSE_REQUIRES_NEW_AUTHORIZATION
 source_V0_adjudication: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md
 source_V1_decision_candidate: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001.md
+source_V1_adjudication: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V1-ADJUDICATION-001.md
+source_V1_owner_decision: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-V1-OWNER-ARCHITECTURE-DECISION-001.md
 source_candidate: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
 source_validation: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
 source_frozen_package: notes/target-agent-lifecycle-validation-package-v0.2/README.md
 source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
 source_V0_final_head: e8e3296922185b4b70997c2351d6f39423f2cd4f
-proposed_V1_run_id: MNE-TARGET-LIFECYCLE-V1-001
+historical_V1_run_id: MNE-TARGET-LIFECYCLE-V1-001
+historical_controller_head: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+historical_result_bundle_blob: 8a5f3644707ae518182ed352174e58d1ca419067
+historical_README_blob: 2dcccd37c42f0ea8e9e6dfef4fed6c59e915fe59
+post_run_amendment: notes/target-agent-lifecycle-v1-execution-package-001/08-owner-accepted-post-v1-amendment.md
 material_class: public_synthetic_only
-V1_authorized: false
-V1_executed: false
+new_run_authorized: false
 S10_selected: false
 V2_authorized: false
+target_adoption_authorized: false
 ```
 
-## Purpose
+## 1. Historical result and identity boundary
 
-The frozen v0.2 package defines scenario semantics and acceptance rules but leaves execution-time orchestration to a later Owner decision. This supplement freezes one concrete, low-contamination topology for the complete baseline V1:
+The package originally froze one low-contamination topology for the complete baseline V1:
 
-- all baseline-critical scenarios S1–S9 and S11;
+- baseline-critical scenarios S1–S9 and S11;
 - no exploratory S10;
 - one canonical branch per repository-writing task;
-- one bounded next-tier main executor for all non-S8 logical cells and mechanical closeout;
-- a mandatory fresh-context S8 negative worker;
+- one bounded next-tier main executor for non-S8 cells and closeout;
+- a fresh-context S8 negative worker;
 - exact blob plus commit identity for every output;
 - final no-write comparison and fresh Pro adjudication;
-- only three Owner-operated conversations.
+- three Owner-operated conversations.
 
-This package is operational scaffolding only. If it conflicts with candidate v0.2 or the frozen validation package, execution must stop and return `V1_PROTOCOL_PROFILE_CONFLICT` for Pro review. The supplement may not silently override the frozen source.
+That historical run completed and was Owner accepted with:
 
-## File map
+```text
+PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW
+```
+
+The exact historical package inputs remain the identities recorded in the V1 adjudication. Current amendments are prospective only. They do not rewrite synthetic branches, change candidate v0.2, or upgrade historical static evidence into runtime evidence.
+
+## 2. File map
 
 ```text
 notes/target-agent-lifecycle-v1-execution-package-001/
@@ -49,12 +62,19 @@ notes/target-agent-lifecycle-v1-execution-package-001/
 ├── 04-backup-restore-cell-s11.md
 ├── 05-mechanical-closeout-and-return.md
 ├── 06-startup-messages.md
-└── 07-integrity-checklist.md
+├── 07-integrity-checklist.md
+└── 08-owner-accepted-post-v1-amendment.md
 ```
 
-## Logical cells and actual conversations
+For any future reuse, file `08` must be read together with this README and files `00`, `05` and `07`. It controls the narrow prospective amendments for:
 
-The branch/evidence model retains six logical cells, but they use only three conversations:
+- fixture-root `README.md` write permission;
+- test-evidence strength terminology;
+- the known S6 import prerequisite before a runtime supplement.
+
+## 3. Logical cells and conversation topology
+
+The historical branch/evidence model retained six logical cells in three conversations:
 
 ```text
 Conversation 1 — MNE-DR-003 Execute (next-tier)
@@ -77,18 +97,18 @@ Conversation 3 — MNE-DR-003 Review (fresh Pro)
 Owner architecture decision
 ```
 
-Logical task isolation remains in Git branches and contracts rather than requiring a new chat for every scenario. Conversation 1 may run its compatible cells in another order only when dependency and contamination rules remain satisfied.
+Required isolation semantics remain:
 
-Required order constraints:
+- controller/fixture first;
+- S7 library output before S7 Alpha migration;
+- S8 branches from the fixture and has no S7 ancestry;
+- S11 uses a pinned source state;
+- closeout waits for S8 exact refs;
+- final semantic review uses a fresh Pro conversation that executed no scenario cell.
 
-- controller/fixture completes first;
-- S7 library output precedes the S7 Alpha migration segment;
-- S8 branch is created from its isolated fixture-based input and has no S7 ancestry;
-- S11 uses a pinned source target state;
-- mechanical closeout waits for the fresh S8 result;
-- final Pro adjudication occurs in a fresh conversation that executed no V1 cell.
+A future run may not infer authorization from the historical topology. It requires a new exact Owner decision and execution-time identity check.
 
-## Fixed scenario scope
+## 4. Fixed scenario scope of the historical run
 
 ```yaml
 selected:
@@ -106,77 +126,49 @@ not_selected:
   - S10
 ```
 
-S10 remains available for a later separate exploratory authorization. Its exclusion does not prevent a complete baseline disposition because it is non-baseline in the frozen package.
+S10 remains optional exploration. V2 remains unauthorized. The historical V1 result does not authorize either.
 
-## Repository and branch model
+## 5. Repository and branch model
 
-All V1 writes occur only in:
+Historical V1 writes occurred only in:
 
 ```text
 08822407d/mnemosyne-target-lifecycle-validation-002
 ```
 
-V1 pins:
+The run pinned:
 
 ```text
 master@e8e3296922185b4b70997c2351d6f39423f2cd4f
 ```
 
-The main executor allocates exact branches from pinned commits. Branch names are defined in `00-controller-fixture-and-branch-contract.md`. No V1 scenario PR is required or authorized.
+V0 evidence under `runs/MNE-TARGET-LIFECYCLE-V0-001/` remained unchanged. V1 scenario code and evidence remain on exact task branches and are referenced by immutable commit/tree/blob identities in the controller bundle.
 
-V0 files under:
+All `tlr-v1-*` evidence branches remain retained. Cleanup is not authorized until branch-unique evidence is durably preserved and the Owner issues a separate release.
 
-```text
-runs/MNE-TARGET-LIFECYCLE-V0-001/
-```
+## 6. Model and context evidence
 
-must not be edited, replaced or deleted.
+The historical execution roles were `NEXT_TIER_SUFFICIENT_CANDIDATE`; final semantic adjudication required a fresh Pro conversation. Every conversation recorded the visible model/mode and reasoning setting as operator-visible provenance. No UI label attests the exact served backend.
 
-V1 controller/result files use:
+Future reuse must re-evaluate the available surface and model class. Historical model recommendations are not permanent product facts.
 
-```text
-runs/MNE-TARGET-LIFECYCLE-V1-001/
-```
+## 7. Authority and safety boundary
 
-Scenario code and task evidence live on their exact task branches and are referenced by immutable commit/tree/blob identities in the controller result bundle.
+Neither the historical package nor the post-run amendment authorizes:
 
-## Model and context model
-
-The frozen execution roles are `NEXT_TIER_SUFFICIENT_CANDIDATE`. The current recommendation, if still visible and available at launch, is the user-reported option:
-
-```text
-gpt-5.6 sol extra high
-```
-
-Every conversation records the actual visible selection and reasoning setting verbatim. A UI label does not attest the served backend.
-
-Mandatory separation:
-
-- `MNE-DR-003 S8` is a new conversation and receives only the sanitized branch/input contract;
-- it must not receive S7 output, the sufficient Agent-facing guide, the frozen file section containing the exact v2 contract or a summary of those facts;
-- `MNE-DR-003 Review` is another new Pro conversation and has executed no scenario.
-
-The main executor may pause after preparing S8 and later resume mechanical closeout from exact S8 refs. If the product surface cannot preserve this return flow, stop and revise the profile rather than opening unnecessary ad hoc chats.
-
-## Authority and safety boundary
-
-This package does not authorize:
-
-- V1 or any repository write;
-- S10 or V2;
+- another V1 run, S10 or V2;
 - a PR in the synthetic repository;
-- writes to Mnemosyne, Meta-Agent or any real target;
-- private/real material;
-- web research, Deep Research, Fable, other connected apps or external quota;
-- candidate or validation-package amendment;
+- writes to Mnemosyne, Meta-Agent or any real target as validation execution;
+- private or real-target material;
+- Web research, Deep Research, Fable, other apps or external quota;
+- candidate or frozen validation semantic amendment during execution;
 - raw-result ingestion into Mnemosyne;
-- architecture acceptance or target adoption.
+- architecture acceptance beyond the recorded Owner decision;
+- target adoption, migration, activation or evidence cleanup.
 
-A later Owner authorization must name this execution package and exact scenario scope.
+## 8. Evidence requirements
 
-## Evidence requirements
-
-Each writing task must preserve:
+Each writing task preserves:
 
 ```yaml
 task_evidence:
@@ -192,40 +184,39 @@ task_evidence:
     - path:
       blob_sha:
       creation_or_update_commit_sha:
+  test_evidence_level:
   mechanical_check_refs: []
   incidents_and_retries: []
   provisional_disposition:
 ```
 
-The main executor must never replace an exact identity with only a narrative summary.
+Test-related claims must use `notes/validation-evidence-strength-levels-v0.1.md`. A test file, static inspection, runtime execution and runtime pass are distinct facts.
 
-## Stop conditions
+## 9. Stop conditions for any future reuse
 
 Stop the affected cell or whole run when:
 
-- V1 Owner authorization is absent or does not match the package;
-- the repository or pinned V0 head differs;
-- a required package file or identity is missing;
-- a logical cell is about to write outside its exact task branch/write set;
-- private or real-target material appears;
+- a new Owner authorization is absent or mismatched;
+- the repository/base or required package identity differs;
+- a task is about to write outside its exact branch/write set, including root files not explicitly listed;
+- private or real material appears;
 - S8 contamination cannot be ruled out;
 - a deferred TLR-03/TLR-04 rule would need invention;
 - output blob/commit identity cannot be preserved;
-- no-write proof for named real repositories cannot be established;
+- named real-repository no-write proof cannot be established;
 - a critical failure contaminates dependent work;
-- candidate/package semantics would need revision during execution.
+- candidate/package semantics would need revision during execution;
+- a runtime claim is requested without the evidence level required for that claim.
 
-## Return route
-
-V1 ends with a complete bundle in the synthetic repository and a visible decision-relevant response. The bundle returns to `MNE-DR-003 Review`, a fresh Pro conversation. That review may recommend pass, bounded amendment, protocol revision, rerun, rejection or further Owner review, but cannot adopt the architecture into a real target.
-
-## Current execution intent
+## 10. Current execution intent
 
 ```yaml
 execution_intent:
-  response_role: ANALYSIS_AND_PREPARATION
-  task_id: MNE-TARGET-LIFECYCLE-V1-001
-  execution_disposition: READY_NOT_SELECTED
-  current_required_user_action: confirm_or_correct_the_V1_decision_candidate_after_MNEMOSYNE_212_is_merged
+  response_role: HISTORICAL_PACKAGE_AND_FUTURE_REUSE_REFERENCE
+  historical_run: complete_and_Owner_accepted
+  current_required_user_action: none_for_historical_V1
+  future_reuse: separately_designed_and_authorized_only
+  runtime_supplement: not_authorized
   external_execution_or_quota_authorized: false
+  target_adoption_authorized: false
 ```
