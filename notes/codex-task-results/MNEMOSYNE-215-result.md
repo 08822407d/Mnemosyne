@@ -5,9 +5,15 @@ task_id: MNEMOSYNE-215
 repository: 08822407d/Mnemosyne
 base_master: e15cf20ede4ce2ee42072c6a406b3063b4b4b487
 canonical_branch: mnemosyne-215-v1-adjudication-owner-acceptance-and-work-observation
-status: SUBSTANTIVE_WORK_COMPLETE_PENDING_READY_PR_FINALIZATION
+canonical_PR: 283
+PR_state: open_ready
+PR_draft: false
+auto_merge_enabled: false
+status: READY_PR_283_OPEN_RECOMMEND_MERGE
 operator_selection_verbatim: Pro
 backend_status: unknown_or_not_attestable
+merge_recommendation: RECOMMEND_MERGE
+comprehensive_human_diff_review_assumed: false
 execution_source_modified: false
 Meta_Agent_or_real_target_written: false
 validation_repository_written: false
@@ -26,10 +32,10 @@ The Owner prohibited Draft status, auto-merge, runtime supplement, S10, V2, Work
 ## Preflight
 
 - PR #282 was verified merged at `e15cf20ede4ce2ee42072c6a406b3063b4b4b487`.
-- execution-time latest `master` matched that merge commit.
-- no open Mnemosyne PR existed before branch creation.
+- execution-time latest `master` matched that merge commit through final PR preflight.
+- no open Mnemosyne PR existed before branch creation or immediately before PR #283 creation.
 - no existing `MNEMOSYNE-215` task or `mnemosyne-215-*` branch was found.
-- the canonical branch was created from the exact latest master.
+- the canonical branch was created from the exact latest master and remained `behind_by: 0`.
 
 ## Completed substantive work
 
@@ -42,7 +48,8 @@ The Owner prohibited Draft status, auto-merge, runtime supplement, S10, V2, Work
 7. corrected stale Target Lifecycle status and backlog;
 8. updated ChatGPT Work assessment for current cloud sync/Project behavior;
 9. recorded the Owner-observed Chat-to-Work transfer hypothesis and a non-authorized read-only pilot candidate;
-10. preserved a design rationale for accepting the recovered result without duplicate Pro rerun.
+10. preserved a design rationale for accepting the recovered result without duplicate Pro rerun;
+11. created one canonical Ready PR, not Draft, with no auto-merge.
 
 ## V1 result preserved
 
@@ -52,11 +59,14 @@ V1:
   bundle_blob: 8a5f3644707ae518182ed352174e58d1ca419067
   global_disposition: PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW
   candidate_revision_required: false
-  rerun_required: false
+  complete_V1_rerun_required: false
+  S8_rerun_required: false
+  S11_rerun_required: false
+  production_readiness_proven: false
   target_adoption_authorized: false
 ```
 
-Historical synthetic evidence and original package blobs were not rewritten. Current package files are amended only for future reuse and explicitly preserve the historical binding.
+Historical synthetic evidence and the historical package README, controller contract and integrity-checklist blobs remain unchanged. The new `08-owner-accepted-post-v1-amendment.md` controls only prospective reuse.
 
 ## Source-artifact provenance
 
@@ -71,17 +81,38 @@ recovered_attachment:
   semantic_reliability: independently_verified_for_decision_relevant_scope
 ```
 
-## Review and merge recommendation
+## Verification and PR publication
 
 ```yaml
-semantic_review:
-  status: PASS
-  blocking_findings: []
-  disposition: RECOMMEND_MERGE
-mechanical_verification:
-  status: pending_final_branch_compare_and_PR_identity
-comprehensive_human_diff_review_assumed: false
+verification:
+  ref: notes/codex-task-results/MNEMOSYNE-215-verification.md
+  semantic_review: PASS
+  mechanical_verification_before_PR: PASS
+  branch_base: e15cf20ede4ce2ee42072c6a406b3063b4b4b487
+  branch_head_before_PR_creation: 8be0a7f6e35da9b23fc0f5f2a91e4c0138a5a971
+  ahead_by_before_PR_creation: 17
+  behind_by: 0
+  changed_files_before_PR_finalization: 12
+
+PR:
+  number: 283
+  title: MNEMOSYNE-215 — accept Target-Lifecycle V1 and record Chat-to-Work observation
+  base: master
+  base_sha_at_creation: e15cf20ede4ce2ee42072c6a406b3063b4b4b487
+  head_branch: mnemosyne-215-v1-adjudication-owner-acceptance-and-work-observation
+  head_sha_at_creation: 8be0a7f6e35da9b23fc0f5f2a91e4c0138a5a971
+  state: open_ready
+  draft: false
+  auto_merge: false
+  creation_ref: notes/codex-task-results/MNEMOSYNE-215-pr-finalization.md
 ```
+
+GitHub's immediate asynchronous mergeability field at creation returned `false`; this is not treated as a conflict verdict until final post-commit refresh. The final PR recheck must report the current GitHub result honestly.
+
+## Branch retention
+
+- The MNEMOSYNE-215 branch may follow the ordinary deletion-after-merge rule after PR #283 and post-merge verification.
+- Every `tlr-v1-*` branch in the synthetic repository remains retained; cleanup is not authorized.
 
 ## Frontier-turn completion check
 
@@ -95,18 +126,16 @@ authorized_frontier_scope:
 substantive_frontier_work_completed: true
 substantive_frontier_work_remaining: []
 additional_work_possible_without_new_Owner_decision:
-  - final_mechanical_identity_checks
-  - Ready_PR_creation_and_finalization
+  - final_PR_metadata_and_mergeability_recheck
 bounded_work_suitable_for_next_tier:
   - post_merge_closeout_after_Owner_merge
 mechanical_work_remaining:
-  - final_branch_compare
-  - create_and_recheck_Ready_PR
+  - post_merge_closeout_after_Owner_action
 current_user_requested_continue_if_possible_honored: true
-reason_frontier_turn_ends_now: only_Owner_merge_gate_remains_after_Ready_PR_publication
+reason_frontier_turn_ends_now: Owner_merge_is_the_only_remaining_route_gate
 next_action_model_requirement: no_Pro_required_for_Owner_merge_or_post_merge_mechanical_closeout
 ```
 
 ## Boundaries
 
-This task does not authorize or perform target adoption, runtime supplement, S10, V2, Work pilot, Deep Research, Fable, evidence cleanup, Meta-Agent/real-target write, execution-source change or auto-merge.
+This task does not authorize or perform target adoption, runtime supplement, S10, V2, Work pilot, Deep Research, Fable, evidence cleanup, Meta-Agent/real-target write, execution-source change, Agent merge or auto-merge.
