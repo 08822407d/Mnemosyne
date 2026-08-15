@@ -8,15 +8,19 @@ pinned_base_at_task_start: cafb080293d9525dd186a550f8ffcf98e1e4478d
 latest_master_before_PR: c237458be062e37950278a5cdd7b3a60bcac2bf0
 canonical_branch: mnemosyne-221-mne-dr-005-fable-pro-adjudication
 branch_merge_commit_integrating_PR_288: 97136f1c69350fc6b74d8ea2f5ec6730f7d6b63f
-canonical_PR: null_pending_creation
+canonical_PR: 289
+PR_state: ready
+PR_draft: false
+PR_head_at_creation: dffa9a0d8434cd330c5ec2a6ac85119f1f13527b
+PR_changed_files_at_creation: 48
+PR_commits_at_creation: 23
 substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
 blocking_Owner_decisions_for_adjudication_PR: []
 later_Owner_disposition: separately_gated_not_blocking_current_PR
-PR_state: READY
 Draft_exception: none
-branch_ahead_by_before_PR: 20
+branch_ahead_by_before_PR: 23
 branch_behind_by_before_PR: 0
 open_Mnemosyne_PRs_before_creation: []
 merge_recommendation: RECOMMEND_MERGE
@@ -31,13 +35,13 @@ PR #288 merged as:
 c237458be062e37950278a5cdd7b3a60bcac2bf0
 ```
 
-The MNEMOSYNE-221 branch was then merged with that exact latest `master` while preserving the complete F2 intake, input snapshot, adjudication and candidate identities. Its current diff is therefore F2-only and no longer behind `master`.
+The MNEMOSYNE-221 branch was then merged with that exact latest `master` while preserving the complete F2 intake, input snapshot, adjudication and candidate identities. Its PR diff is therefore F2-only and was not behind `master` at PR creation.
 
 The Fable run still retains its launch-time F1 candidate blob and status. The later F1 Owner acceptance is post-run repository state and is not rewritten into the historical 30-file input snapshot.
 
 ## Ready PR semantics
 
-Merging the PR will preserve:
+Merging PR #289 will preserve:
 
 - the exact Fable return archive;
 - the exact 30-file input snapshot;
@@ -59,7 +63,7 @@ It will not:
 
 ## Post-merge branch release candidate
 
-After this PR merges and exact preserved paths are verified, the following retained branches should no longer be needed:
+After PR #289 merges and exact preserved paths are verified, the following retained branches should no longer be needed:
 
 ```text
 mne-dr-005-project-knowledge-snapshot-001
