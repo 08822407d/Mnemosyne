@@ -23,7 +23,7 @@ target_adoption_authorized: false
 
 ## 1. Recommendation
 
-Authorize one **complete baseline V1** in the existing public synthetic repository, using the staged multi-cell execution profile:
+Authorize one **complete baseline V1** in the existing public synthetic repository, using the three-conversation staged multi-cell profile:
 
 ```text
 notes/target-agent-lifecycle-v1-execution-package-001/README.md
@@ -47,7 +47,7 @@ exploratory_scenarios_not_selected:
   - S10
 ```
 
-A complete baseline disposition requires all baseline-critical scenarios above. S10 is optional exploration and is intentionally excluded from this first V1.
+A complete baseline disposition requires all selected baseline-critical scenarios. S10 is optional exploration and is intentionally excluded from this first V1.
 
 ## 2. Why V1 may proceed
 
@@ -61,7 +61,7 @@ V0 has been Pro-adjudicated as a valid sentinel pass:
 - no substantive scenario started;
 - no candidate or package revision is required before V1.
 
-V0 does not establish substantive architecture correctness. V1 is the stage that generates that evidence.
+V0 does not establish substantive architecture correctness. V1 generates that evidence.
 
 ## 3. Recommended decisions
 
@@ -89,31 +89,35 @@ validation_repository_decision:
   material_class: public_synthetic_only
 ```
 
-Reuse avoids another repository-creation surface dependency and preserves V0→V1 lineage. V1 must pin the exact V0 final head before its first write.
+Reuse avoids another repository-creation dependency and preserves V0→V1 lineage. V1 must pin the exact V0 final head before its first write.
 
-### D2 — Execution surfaces, cells and visible selections
+### D2 — Execution surface, logical cells and actual conversations
 
 ```yaml
 execution_surface_decision:
   controller_and_worker_surface: standard_ChatGPT_conversation_with_GitHub_connector
-  execution_profile: staged_multicell
-  required_cells:
+  execution_profile: staged_multicell_three_conversations
+  logical_cells:
     - controller_and_fixture
     - core_S1_S2_S3_S4_S5_S6_S9
     - positive_documentation_S7
     - fresh_negative_documentation_S8
     - backup_restore_S11
     - final_mechanical_closeout
-  mandatory_fresh_context:
-    - negative_documentation_S8
-    - final_Pro_adjudication
+  actual_conversations:
+    - name: MNE-DR-003 Execute
+      role: main_next_tier_executor_controller_core_S7_S11_and_closeout
+    - name: MNE-DR-003 S8
+      role: mandatory_fresh_negative_documentation_worker
+    - name: MNE-DR-003 Review
+      role: mandatory_fresh_Pro_adjudicator
   recommended_next_tier_visible_selection_if_still_available: gpt-5.6 sol extra high
-  each_cell_visible_selection_verbatim: RECORD_AT_LAUNCH
-  each_cell_reasoning_setting_verbatim: RECORD_AT_LAUNCH
+  each_conversation_visible_selection_verbatim: RECORD_AT_LAUNCH
+  each_conversation_reasoning_setting_verbatim: RECORD_AT_LAUNCH
   exact_backend_status: unknown_or_not_attestable
 ```
 
-The exact current UI label must be recorded separately in each cell. The recommendation does not claim a hidden backend identity.
+Logical cells retain separate task branches, inputs, write sets and results even when the main executor runs compatible cells in one conversation.
 
 Use Pro/frontier for:
 
@@ -121,7 +125,7 @@ Use Pro/frontier for:
 - final V1 semantic adjudication in a fresh conversation;
 - any protocol, authority, contamination or candidate conflict.
 
-Use a next-tier model for the frozen scenario execution cells unless failure evidence triggers escalation.
+Use a next-tier model for the main execution conversation and fresh S8 conversation unless failure evidence triggers escalation.
 
 ### D3 — Phase and scenario scope
 
@@ -172,7 +176,7 @@ quota_decision:
   exact_surface_or_budget: no_separate_paid_Project_Deep_Research_Fable_API_or_external_run
 ```
 
-Ordinary plan/model usage remains subject to the user's product limits, but no separate external quota is authorized.
+Ordinary plan/model use remains subject to the user's product limits, but no separate external quota is authorized.
 
 ### D6 — Output and Mnemosyne ingestion
 
@@ -190,12 +194,12 @@ result_storage_decision:
   complete_return_bundle:
     - controller_manifest
     - fixture_identity_and_material_safety_receipt
-    - exact_cell_inputs_and_outputs
+    - exact_logical_cell_inputs_and_outputs
     - task_write_contracts
     - branches_commits_trees_and_blob_identities
     - declared_vs_actual_write_set_tables
     - scenario_dispositions
-    - contamination_and_isolation_receipts
+    - S8_contamination_and_isolation_receipts
     - incidents_retries_and_protocol_defects
     - real_repository_before_after_no_write_proof
     - backup_restore_evidence
@@ -227,18 +231,28 @@ retention_plan:
     - reviewed_Pro_disposition
 ```
 
-Because V1 raw evidence is distributed across task branches, the branches must remain until final Pro adjudication confirms that all unique evidence has been preserved and issues a release decision.
+Because V1 raw evidence is distributed across task branches, branches remain until final Pro adjudication confirms that unique evidence is preserved and issues a release decision.
 
 ## 4. Required execution topology
 
 ```text
-Cell 0 — Controller / fixture / branch allocation
-Cell 1 — Core: S1, S2, S3, S4, S5, S6, S9
-Cell 2 — S7 positive library documentation and Alpha migration
-Cell 3 — S8 negative documentation test in a fresh conversation
-Cell 4 — S11 backup and restore
-Cell 5 — final mechanical aggregation and no-write proof
-Fresh Pro conversation — semantic adjudication
+MNE-DR-003 Execute — next-tier main executor
+  Controller / fixture
+  Core S1,S2,S3,S4,S5,S6,S9
+  Positive S7
+  Backup/restore S11
+  Prepare isolated S8 branch
+  Pause
+       ↓
+MNE-DR-003 S8 — fresh next-tier conversation
+  Negative S8 only
+       ↓
+Return S8 exact refs to MNE-DR-003 Execute
+  Mechanical closeout and complete bundle
+       ↓
+MNE-DR-003 Review — fresh Pro conversation
+  Semantic adjudication
+       ↓
 Owner — accept, revise, defer or reject
 ```
 
@@ -247,9 +261,9 @@ S8 must not receive:
 - S7's sufficient Agent-facing migration guide;
 - S7 worker output;
 - expected migration actions beyond the intentionally insufficient input;
-- prior chat context that contains those facts.
+- prior chat context containing those facts.
 
-Any breach invalidates S8 and requires a clean rerun.
+Any breach invalidates S8 and requires a separately adjudicated clean rerun.
 
 ## 5. Normalized pending authorization
 
@@ -280,11 +294,12 @@ validation_run_authorization:
     - S10
   product_surface: standard_ChatGPT_conversation_with_GitHub_connector
   execution_profile_ref: notes/target-agent-lifecycle-v1-execution-package-001/README.md
-  visible_selection_verbatim: REQUIRED_PER_CELL_AT_LAUNCH
+  visible_selection_verbatim: REQUIRED_PER_CONVERSATION_AT_LAUNCH
   allowed_actions:
     - create_only_the_profile_named_controller_fixture_task_and_result_branches
     - initialize_the_frozen_public_synthetic_fixture
     - execute_only_selected_scenarios
+    - use_one_main_next_tier_conversation_plus_one_fresh_S8_conversation
     - write_only_the_synthetic_repository_within_exact_task_contracts
     - perform_required_mechanical_and_restore_checks
     - preserve_attempts_failures_incidents_and_complete_bundle
@@ -320,22 +335,23 @@ A sufficient confirmation after this candidate and execution package are merged 
 确认 MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001。
 授权在 08822407d/mnemosyne-target-lifecycle-validation-002 中，
 从 V0 final head e8e3296922185b4b70997c2351d6f39423f2cd4f 开始，
-按 staged multi-cell profile 运行 V1 baseline：S1–S9 和 S11；不运行 S10 或 V2。
+按三段对话的 staged multi-cell profile 运行 V1 baseline：S1–S9 和 S11；不运行 S10 或 V2。
 
-每个执行单元启动时原样记录界面模型/模式；S8 必须使用未见过 S7 充分迁移说明的全新对话。
+主执行和 S8 使用次一档模型，每段启动时原样记录界面模型/模式；
+S8 必须使用未见过 S7 充分迁移说明的全新对话；完成后交给另一段全新的 Pro 对话裁决。
 只允许写合成验证仓库，不得写 Mnemosyne、Meta-Agent 或真实目标；
 不得使用私有材料、Web/Deep Research/Fable/其他 app 或外部 quota；
 不得把原始结果写回 Mnemosyne。
-完成后停止，并把完整 bundle 交给全新的 Pro 对话裁决。
+完成后停止。
 ```
 
-The Owner may instead revise the selected scenarios, cell topology, model/surface, repository, no-write scope, retention or quota boundary.
+The Owner may instead revise the selected scenarios, conversation topology, model/surface, repository, no-write scope, retention or quota boundary.
 
 ## 7. Capability and research assessment
 
 ```yaml
 model_capability_estimate:
-  V1_frozen_execution_cells:
+  V1_main_and_S8_execution:
     capability_class: NEXT_TIER_SUFFICIENT_CANDIDATE
     Pro_required: false
     recommended_visible_selection_if_available: gpt-5.6 sol extra high
@@ -358,7 +374,7 @@ deep_research_assessment:
   reason: V1 requires controlled execution evidence rather than external research
 parallel_frontier_research_assessment:
   status: DEFER_UNTIL_V1_RESULT
-  reason: independent challenge may add value before global architecture acceptance, but it should target actual V1 findings rather than duplicate the frozen pre-run design
+  reason: any independent challenge should target actual V1 findings rather than duplicate the frozen pre-run design
 ```
 
 ## 8. Current boundary
