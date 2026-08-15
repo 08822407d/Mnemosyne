@@ -73,18 +73,10 @@ Required baseline expectations:
 expected_validation_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
 expected_controller_head: e892749fc9e242b24908f89b6a78f1c0f0bed75e
 expected_controller_bundle_blob: 8a5f3644707ae518182ed352174e58d1ca419067
-expected_branch_identity_blob: b881836d1a6dd7b2f748ad082048219b6d8337
+expected_branch_identity_blob: b881836d1a6dd7b7d2f748ad082048219b6d8337
 expected_retained_branch_count: 16
 expected_anchor_absent: true
 ```
-
-Correction: the expected branch-identity blob is actually:
-
-```text
-b881836d1a6dd7b7d2f748ad082048219b6d8337
-```
-
-The longer value above is the controlling value. Any transcription conflict in an executable package must be corrected before launch; this design intentionally exposes the typo rather than hiding it.
 
 ## 4. P0 stop conditions
 
