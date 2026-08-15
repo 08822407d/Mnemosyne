@@ -25,7 +25,7 @@ Also verify the same commit contains:
 - `notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md`;
 - `notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001.md`;
 - `notes/design-rationales/target-lifecycle-v1-staged-multicell-execution-v0.1.md`;
-- the current display-name registry entry for `MNE-DR-003 生命周期验证`.
+- the display-name registry entry for `MNE-DR-003 生命周期验证` with `Execute`, `S8` and `Review` suffixes.
 
 ## 2. Source identity and lineage
 
@@ -42,21 +42,21 @@ source_contract:
   V0_authorization_blob: 25e330445c18cdd0833411d259a093c7a3ccfc61
 ```
 
-Before V1 launch, replace branch-local identities with the exact merged MNEMOSYNE-212 commit and blobs and verify the synthetic repository still pins to the V0 final head.
+Before V1 launch, replace branch-local identities with the exact merged MNEMOSYNE-212 commit/blobs and verify the synthetic repository still pins to the V0 final head.
 
 ## 3. Decision and authorization integrity
 
 Confirm:
 
-- V0 has a Pro adjudication accepting it only as a valid sentinel pass;
+- V0 Pro adjudication accepts only a valid sentinel pass;
 - V1 decision candidate is a recommendation, not authorization;
-- this execution package does not self-authorize V1;
-- V1 Owner authorization must name the exact candidate, package, repository, pinned base, selected scenarios and execution profile;
+- this package does not self-authorize V1;
+- V1 Owner authorization names the exact candidate, package, repository, pinned base, selected scenarios and three-conversation profile;
 - S10 and V2 remain unauthorized;
 - raw-result ingestion into Mnemosyne remains unauthorized;
 - global architecture acceptance and target adoption remain separate Owner gates.
 
-If an authorization field affecting repository, scenario scope, material, write authority, context isolation or phase is missing, return `V1_BLOCKED_MISSING_OWNER_DECISION`.
+If a field affecting repository, scenario scope, material, write authority, S8 isolation or phase is missing, return `V1_BLOCKED_MISSING_OWNER_DECISION`.
 
 ## 4. Scenario-scope integrity
 
@@ -78,11 +78,11 @@ excluded:
   - S10
 ```
 
-Verify no startup message or cell contract silently adds S10, V2 or candidate amendments.
+No startup message or logical-cell contract may add S10, V2 or candidate amendments.
 
 ## 5. Frozen-semantics integrity
 
-Check the execution package against candidate v0.2 and the frozen validation package:
+Check against candidate v0.2 and the frozen validation package:
 
 - destination before substantive design/build;
 - no parent/meta substantive target copy;
@@ -98,7 +98,7 @@ Check the execution package against candidate v0.2 and the frozen validation pac
 - backups remain non-authoritative and restore from exact source identity;
 - TLR-03/TLR-04 deferrals remain explicit.
 
-Any semantic contradiction returns `V1_PROTOCOL_PROFILE_CONFLICT` and blocks execution.
+Any contradiction returns `V1_PROTOCOL_PROFILE_CONFLICT` and blocks execution.
 
 ## 6. Branch-map integrity
 
@@ -126,96 +126,118 @@ Rules:
 - no task gets a numbered fallback branch after collision;
 - S3 uses two distinct tasks, not parallel variants of one task;
 - S7 Alpha depends on the preserved S7 library final commit;
-- S8 branches directly from the fixture commit and excludes S7 ancestry;
-- scenario PRs remain absent unless a later authorization explicitly changes the profile;
+- S8 branches from the fixture commit and excludes S7 ancestry;
+- scenario PRs remain absent unless later explicitly authorized;
 - controller result refs point to immutable task-branch identities.
 
-## 7. S8 knowledge-firewall integrity
+## 7. Three-conversation topology integrity
+
+Verify actual UI conversations are exactly:
+
+```yaml
+conversations:
+  - MNE-DR-003 Execute
+  - MNE-DR-003 S8
+  - MNE-DR-003 Review
+```
+
+Requirements:
+
+- Execute runs controller/fixture, Core, S7, S11, prepares S8, pauses, then later performs closeout;
+- logical cells remain separated by task branches/contracts/results inside Execute;
+- S8 is a new next-tier conversation and receives no Execute transcript or S7 facts;
+- Review is a new Pro conversation and has executed no V1 cell;
+- actual visible model/mode and reasoning setting are recorded per conversation;
+- inability to pause/resume Execute from exact S8 refs blocks or revises the profile rather than creating ad hoc chats.
+
+## 8. S8 knowledge-firewall integrity
 
 Before package acceptance and again before S8 launch, verify:
 
 - S8 contract contains no concrete hidden v2 signature, argument replacement, removed key or return-object fields;
-- S8 startup message does not instruct the worker to read frozen package `01`;
-- S8 worker receives only the sanitized branch/input files;
-- sufficient S7 guide and output are absent;
+- S8 startup message does not instruct reading frozen package `01`;
+- S8 receives only sanitized branch/input files;
+- sufficient S7 guide/output are absent;
 - S7 commits are not S8 ancestors;
-- the worker chat is fresh and has not received S7 facts;
+- the S8 chat is fresh and has not received S7 facts;
 - Alpha writes are prohibited;
 - contamination causes invalidation, not an in-context retry.
 
 If any condition fails or is unknown, S8 must not run.
 
-## 8. Evidence identity integrity
+## 9. Evidence identity integrity
 
-Every produced V1 artifact must include:
+Every produced V1 artifact includes:
 
 - exact repository;
 - branch;
-- base and head commit;
+- base/head commit;
 - path;
 - Git blob SHA;
-- creation or update commit SHA;
+- creation/update commit SHA;
 - attempt/retry relation;
 - declared and actual write set.
 
-A commit identity alone does not substitute for file-content identity. A file/blob identity alone does not preserve the branch/run transition. Both are required.
+A commit alone does not substitute for file-content identity; a blob alone does not preserve the run transition. Both are required.
 
-## 9. Material and connector integrity
+## 10. Material and connector integrity
 
 Verify:
 
 - synthetic repository remains public;
-- all materials are public/synthetic;
-- no credentials/secrets/private conversations/real source/real learner or customer data;
-- connector can resolve and write the exact synthetic repository in every writing cell;
+- materials remain public/synthetic;
+- no credentials, private conversations, real source, learner or customer data;
+- connector resolves/writes the exact synthetic repository in Execute and S8;
 - GitHub permission does not substitute for task authorization;
 - ChatGPT repository-sync selection is treated separately from GitHub access;
-- no Web, Deep Research, Fable or other app is enabled or used;
-- exact visible model/mode is recorded per cell, without backend inference.
+- no Web, Deep Research, Fable or other app is used;
+- visible selections do not become backend claims.
 
-## 10. Real-repository no-write integrity
+## 11. Real-repository no-write integrity
 
-Controller records before and after refs for:
+Execute records before/after refs for:
 
 - `08822407d/Mnemosyne`;
 - `08822407d/Meta-Agent`.
 
-The claim must remain explicitly limited:
+The claim remains limited to:
 
-- exact commit-level no-write proof for the two named repositories;
+- exact commit-level proof for those named repositories;
 - no connector access/write action to unnamed real targets;
 - no per-repository SHA claim for unnamed targets.
 
-A changed named ref requires investigation and blocks the simple no-write pass. Do not assume every concurrent repository change was caused by V1.
+A changed named ref requires investigation and blocks the simple no-write pass. Do not assume every concurrent change was caused by V1.
 
-## 11. Cell and return integrity
+## 12. Logical-cell and return integrity
 
 Verify:
 
-- Controller setup stops before scenarios;
+- Execute completes a valid receive before writes;
+- fixture and S8 isolated input are prepared before S7 can affect any branch ancestry;
 - Core runs only S1–S6 and S9;
 - S7 runs only positive library/Alpha flow;
-- S8 runs only isolated negative flow;
 - S11 runs only synthetic backup/restore;
-- closeout does not run or repair scenarios;
+- Execute pauses before S8 and does not run S8 itself;
+- S8 runs only isolated negative flow;
+- Execute closeout begins only after exact S8 result refs return;
+- closeout does not repair or rerun scenarios;
 - final bundle contains every selected scenario, incident, retry, branch and proof;
-- fresh Pro review is mandatory and has not executed any cell;
+- fresh Pro review is mandatory;
 - Owner architecture decision remains pending after Pro review.
 
-## 12. Operator-flow integrity
+## 13. Operator-flow integrity
 
 Confirm `06-startup-messages.md`:
 
 - states `DO_NOT_RUN` before authorization;
-- exposes `MNE-DR-003` names;
+- exposes the three `MNE-DR-003` names;
 - gives exact model/surface recording instructions;
-- includes all cell launch messages and timing;
+- includes the Execute launch, S8 launch, Execute closeout continuation and fresh Pro launch;
 - keeps S8 instructions isolated;
 - names stop conditions and prohibited actions;
-- returns to a fresh Pro conversation;
 - does not rely on repository navigation as the only operating procedure.
 
-## 13. Pre-run receipt
+## 14. Pre-run receipt
 
 ```yaml
 V1_execution_package_integrity_receipt:
@@ -227,6 +249,7 @@ V1_execution_package_integrity_receipt:
   selected_scenario_set_matches:
   frozen_semantics_match:
   branch_map_unique:
+  three_conversation_profile_match:
   S8_firewall_pass:
   material_safety_pass:
   connector_and_surface_pass:
@@ -237,13 +260,13 @@ V1_execution_package_integrity_receipt:
   disposition: PASS | BLOCKED
 ```
 
-Do not create V1 branches or run a cell unless disposition is `PASS`.
+Do not create V1 branches or run a logical cell unless disposition is `PASS`.
 
-## 14. Post-run integrity
+## 15. Post-run integrity
 
 Before fresh Pro adjudication, verify:
 
-- every selected cell stopped;
+- every selected logical cell stopped;
 - V1 result bundle and no-write proof are complete;
 - all exact identities are preserved;
 - S8 contamination audit completed;
