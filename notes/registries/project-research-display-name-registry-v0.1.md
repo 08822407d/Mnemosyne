@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.1.1
-last_updated_by_task: MNEMOSYNE-212
+version: 0.1.2
+last_updated_by_task: MNEMOSYNE-213
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -22,7 +22,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 004
+    next_unallocated_sequence: 005
 
   Meta_Agent:
     project_id: meta-agent
@@ -60,7 +60,7 @@ issued_aliases:
     sequence: 003
     canonical_task_id: MNE-TARGET-LIFECYCLE-V1-001
     project: Mnemosyne
-    status: issued_prepared_not_owner_authorized
+    status: issued_owner_authorized_activation_gated
     allocation_task: MNEMOSYNE-212
     execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
     notes:
@@ -69,6 +69,18 @@ issued_aliases:
       - three_conversation_operator_flow
       - use_suffixes_Execute_S8_Review
       - no_Deep_Research_or_Fable_execution_implied
+
+  - display_name: MNE-DR-004 能力归属
+    sequence: 004
+    canonical_task_id: FABLE5-MNE-REUSABLE-CAPABILITY-OWNERSHIP-001
+    project: Mnemosyne
+    status: completed_pending_Owner_disposition
+    allocation_task: MNEMOSYNE-213
+    report_cycle: raw/research-reports/cycles/2026Q3-reusable-agent-capability-ownership/
+    notes:
+      - Fable_run_used_historical_UI_name_MNE_DR_003_能力归属
+      - stored_alias_changed_only_for_navigation_after_parallel_sequence_collision
+      - canonical_task_id_and_original_report_unchanged
 ```
 
 ## 3. Historical Meta-Agent compatibility
@@ -82,14 +94,7 @@ MA-DR-09
 MA-DR-15
 ```
 
-These IDs already satisfy the user's required `<PROJECT_ABBR>-DR-<SEQUENCE>` prefix and remain unchanged. UI labels may append short topics, for example:
-
-```text
-MA-DR-13 仓库拓扑
-MA-DR-15 能力矩阵
-```
-
-The Mnemosyne route must not reissue or renumber Meta-Agent sequences. Future Meta-Agent allocation belongs to the Meta-Agent target route and, after migration, its dedicated repository.
+These IDs remain unchanged. The Mnemosyne route must not reissue or renumber Meta-Agent sequences.
 
 ## 4. Allocation procedure
 
@@ -110,7 +115,7 @@ allocation:
     - expose_display_name_in_operator_flow
 ```
 
-Do not use an issue or pull-request number as the DR sequence. GitHub issues and pull requests share a repository-wide number sequence, while DR aliases are project-owned stable navigation IDs.
+Do not use an issue or pull-request number as the DR sequence. A prepared but not durably registered alias is vulnerable to a cross-conversation allocation race; incident `MNE-RESEARCH-DISPLAY-NAME-COLLISION-001` records the first observed case.
 
 ## 5. Migration rule
 
