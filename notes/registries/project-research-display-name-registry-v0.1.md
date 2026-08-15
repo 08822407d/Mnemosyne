@@ -65,8 +65,9 @@ issued_aliases:
     execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
     notes:
       - alias_only_no_canonical_rename
-      - one_V1_run_with_multiple_context_isolation_cells
-      - use_suffixes_Controller_Core_S7_S8_S11_Closeout_Review
+      - one_V1_run_with_logical_multicell_execution
+      - three_conversation_operator_flow
+      - use_suffixes_Execute_S8_Review
       - no_Deep_Research_or_Fable_execution_implied
 ```
 
