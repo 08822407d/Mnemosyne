@@ -1,147 +1,135 @@
-# MNEMOSYNE-211 Result — PR #278 Post-Merge Closeout and V0 Owner Gate
+# MNEMOSYNE-211 Result — PR #278 Post-Merge Closeout and V0 Authorization Handoff
 
 ```yaml
 task_id: MNEMOSYNE-211
 record_id: MNEMOSYNE-211-RESULT-001
-status: post_merge_closeout_prepared_waiting_Owner_V0_decision
+status: post_merge_closeout_complete_ready_PR_279_open_V0_authorized_but_repository_creation_tool_blocked
 repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 8e1affee8776709f0673862d8b0203a25c9aaf59
 canonical_branch: mnemosyne-211-pr278-post-merge-closeout
-canonical_PR: null
+canonical_PR: 279
+canonical_PR_state: open_ready
 source_PR: 278
 source_PR_merged: true
 source_PR_merge_commit: 8e1affee8776709f0673862d8b0203a25c9aaf59
 latest_master_matches_merge_commit: true
 validation_repository_created: false
+V0_authorized: true
 V0_executed: false
+V1_authorized: false
 V1_executed: false
 Meta_Agent_or_business_target_written: false
 execution_source_modified: false
 external_research_or_quota_used: false
 ```
 
-## 1. Owner instruction and scope
+## 1. PR #278 post-merge verification
 
-The Owner instructed the current GitHub-connected conversation to:
+GitHub verified PR #278 as closed and merged. The merge commit and execution-time latest `master` are both:
 
-1. verify PR #278's merge commit, execution-time latest `master`, and expected files;
-2. complete MNEMOSYNE-210 post-merge state closeout;
-3. read and restate `notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md` in natural Chinese;
-4. not create the validation repository, not run V0 or V1, and wait for explicit Owner confirmation or correction of the V0 profile.
+`8e1affee8776709f0673862d8b0203a25c9aaf59`
 
-This task treats that instruction as authority for the bounded post-merge status-record writes required by the active post-merge closeout guard. It does not treat it as authorization to create a new PR, create the validation repository, run validation, write Meta-Agent or real targets, use private material, or spend external quota.
+Mechanical comparison against the prior `master` returned the expected twelve PR #278 changed paths. The former PR head branch is no longer present. No GitHub Actions workflow run was returned for the merge commit, so no CI-pass claim is made.
 
-## 2. PR #278 and master verification
+## 2. Stale-state closeout
 
-GitHub reported:
+The merged route status still described PR #278 as open Ready. MNEMOSYNE-211 created one follow-up branch from the verified merge commit and corrected:
+
+- `current/first-three-systems-owner-review-status.md`;
+- `notes/first-three-systems-frontier-reentry-backlog-v0.2.md`;
+- this result record.
+
+The route no longer waits for PR #278 merge. It now records the Owner-authorized V0 state and the current execution-tool block.
+
+## 3. Owner V0 authorization
+
+The Owner explicitly confirmed:
+
+> `确认 MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001。`
+>
+> `授权按推荐方案创建公开合成验证仓库，并且仅运行 V0。`
+>
+> `不要运行 V1，不要写入 Mnemosyne、Meta-Agent 或真实目标。`
+
+The durable authorization is:
+
+`notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001.md`
+
+Authorized profile:
 
 ```yaml
-PR_278:
-  state: closed
-  merged: true
+V0_authorization:
+  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  visibility: public
+  material: public_synthetic_only
+  phase: V0_ONLY
+  repository_creation_authorized: true
+  synthetic_repository_write_authorized: true
+  GitHub_read_on_Mnemosyne: merged_package_inputs_only
+  GitHub_write_on_Mnemosyne_during_V0: prohibited
+  Meta_Agent_or_real_target_write: prohibited
+  local_mechanical_checks: allowed
+  web_or_research: prohibited
+  Deep_Research_or_Fable: prohibited
+  external_quota: false
+  raw_output: synthetic_repository_only
+  Mnemosyne_result_ingestion: separately_gated
+  V1_pre_authorized: false
+  visible_model_or_mode: record_verbatim_at_launch
+```
+
+## 4. Repository creation capability block
+
+The exact repository name was rechecked and returned GitHub `404 Not Found`, so no name conflict was found.
+
+However, the currently exposed GitHub connector actions do not include a repository-creation mutation. Plugin discovery also returned no alternative installable GitHub repository-creation plugin.
+
+Therefore:
+
+```yaml
+V0_execution:
+  Owner_authorization_missing: false
+  repository_name_conflict: false
+  repository_creation_tool_available: false
+  repository_created: false
+  V0_started: false
+  substitute_repository_or_store_selected: false
+  status: BLOCKED_TOOL_CAPABILITY_REPOSITORY_CREATION_UNAVAILABLE
+```
+
+Fail-closed behavior is required: do not substitute another repository/store, do not write V0 material into Mnemosyne, and do not start V0 until the named public repository can be created on an authorized surface.
+
+## 5. Ready PR #279
+
+The Owner separately authorized one Ready PR for this closeout and prohibited auto-merge.
+
+PR #279 was created:
+
+```yaml
+PR_279:
+  title: MNEMOSYNE-211 — close PR #278 state and hand off to V0 authorization
+  base: master
+  head: mnemosyne-211-pr278-post-merge-closeout
+  state: open
   draft: false
-  head_branch: mnemosyne-210-ready-pr-and-post-pr277-continuation
-  head_sha: 59a8778fe4b2ca284ca6de44a4a8f1336407ad18
-  merge_commit_sha: 8e1affee8776709f0673862d8b0203a25c9aaf59
-  merged_at: 2026-08-14T09:40:19Z
-
-master:
-  execution_time_latest_sha: 8e1affee8776709f0673862d8b0203a25c9aaf59
-  matches_PR_278_merge_commit: true
+  auto_merge: not_authorized
 ```
 
-The former PR #278 head branch is no longer present in the accessible branch search. No prior retention obligation required it to remain live.
+The PR is a state/provenance closeout only. It does not execute V0 and does not create the validation repository.
 
-The merge commit returned no associated GitHub Actions workflow runs. This task therefore makes no CI-pass claim.
+## 6. Current boundaries
 
-## 3. Expected merged paths
+Still prohibited or not completed:
 
-Mechanical comparison from PR #278's base `9432a4415cefeb7c605b73a94042ba1763e15f06` to merge commit `8e1affee8776709f0673862d8b0203a25c9aaf59` returned exactly the following twelve changed paths:
-
-```text
-commands/load-mnemosyne-guidance.md
-current/agent-product-ready-pr-and-frontier-efficiency-guard.md
-current/first-three-systems-owner-review-status.md
-current/github-single-active-pr-lineage-guard.md
-current/owner-review-branch-ledger-guard.md
-notes/chatgpt-github-write-preflight-checklist.md
-notes/codex-task-results/MNEMOSYNE-210-pr-finalization.md
-notes/codex-task-results/MNEMOSYNE-210-pr277-post-merge-verification.md
-notes/codex-task-results/MNEMOSYNE-210-result.md
-notes/design-rationales/agent-product-ready-pr-owner-feedback-and-frontier-efficiency-v0.1.md
-notes/first-three-systems-frontier-reentry-backlog-v0.2.md
-notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md
-```
-
-Key merged identities re-read from the merge commit include:
-
-```yaml
-key_files:
-  current/agent-product-ready-pr-and-frontier-efficiency-guard.md:
-    blob_sha: 737c15177dbe56ae3783cac3a12503c8777d3504
-  current/first-three-systems-owner-review-status.md:
-    blob_sha: 441142c74ae0769c6a86203e6b77d32a12155e6c
-  notes/first-three-systems-frontier-reentry-backlog-v0.2.md:
-    blob_sha: 24f156e921c3a021f1fdaf8ae21ebaa317fb2c15
-  notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md:
-    blob_sha: 6dc65ddb1df3074e6cf39bd25b96f4aa137d4cb4
-  notes/codex-task-results/MNEMOSYNE-210-result.md:
-    blob_sha: 591970c0a0fc00d3416d4dc88855d7e808a942fe
-  notes/codex-task-results/MNEMOSYNE-210-pr-finalization.md:
-    blob_sha: f82ec5fa2ed1380fb9b5aa663e861737c43bb103
-```
-
-## 4. Stale post-merge state found
-
-The merged `current/first-three-systems-owner-review-status.md` still described:
-
-```text
-READY_PR_278_OPEN_RECOMMEND_MERGE_PENDING_OWNER_MERGE_DECISION
-```
-
-and still listed PR #278 as `open_ready`. This is expected pre-merge state preserved by the merged PR, but it is stale after the Owner merged PR #278.
-
-The merged backlog already correctly identifies the V0 decision candidate as the next true route, but it does not yet record PR #278's merge commit. MNEMOSYNE-211 updates both navigation records on this new follow-up branch.
-
-## 5. Post-merge closeout disposition
-
-After the navigation updates in this task, the current route is:
-
-```yaml
-route_state:
-  PR_278_verified_merged: true
-  PR_278_gate_closed: true
-  Ready_PR_guidance_active_on_master: true
-  V0_decision_candidate_merged: true
-  validation_repository_created: false
-  V0_authorized: false
-  V0_executed: false
-  V1_authorized: false
-  V1_executed: false
-  next_true_gate: Owner_confirm_or_correct_MNE_TARGET_LIFECYCLE_V0_RUN_DECISION_CANDIDATE_001
-```
-
-No validation action follows from this closeout automatically.
-
-## 6. Lineage preflight
-
-Before creating this branch:
-
-```yaml
-github_write_lineage_preflight:
-  task_id: MNEMOSYNE-211
-  intended_scope_summary: PR_278_post_merge_state_closeout_only
-  default_branch: master
-  pinned_default_branch_sha: 8e1affee8776709f0673862d8b0203a25c9aaf59
-  intended_branch: mnemosyne-211-pr278-post-merge-closeout
-  accessible_open_PRs: []
-  matching_task_records: []
-  matching_branches: []
-  decision: create_new_lineage
-```
-
-No PR is created by this record because the current user instruction did not separately authorize PR creation.
+- auto-merge or merge by the Agent;
+- V1 or any substantive S1–S11 scenario;
+- write to Mnemosyne, Meta-Agent or real targets during V0;
+- private/real target material;
+- Deep Research, Fable, web research or external quota;
+- raw V0 result ingestion into Mnemosyne;
+- architecture acceptance or target adoption;
+- real backup configuration.
 
 ## 7. Run context
 
@@ -152,12 +140,12 @@ run_context:
     task_id: MNEMOSYNE-211
     record_id: MNEMOSYNE-211-RUN-001
   date_or_window:
-    started_at: 2026-08-14
-    completed_or_recorded_at: 2026-08-14
+    started_at: 2026-08-15
+    completed_or_recorded_at: 2026-08-15
   action:
     actor: ChatGPT
     actor_kind: agent
-    source: standard_ChatGPT_conversation_with_GitHub_connector_reads_and_task_scoped_writes
+    source: standard_ChatGPT_conversation_with_GitHub_connector
     switch_history:
       status: unknown
       evidence: []
@@ -166,60 +154,58 @@ run_context:
     evidence:
       - class: operator_observed
         ref: current_conversation_GitHub_actions
-        observed_or_accessed_at: 2026-08-14
-        claim_scope: repository_read_and_post_merge_closeout_write_surface
+        observed_or_accessed_at: 2026-08-15
+        claim_scope: post_merge_closeout_PR_creation_and_V0_preflight_surface
   operator_selection:
-    verbatim: not_restated_in_current_launch_message
+    verbatim: not_restated_for_V0_launch
     evidence:
       - class: unknown_or_not_attestable
         ref: null
-        claim_scope: current_visible_model_selection
-        detail: the current launch message did not restate a model-picker label and this mechanical closeout does not need backend attestation
+        claim_scope: exact_visible_model_selection_for_future_V0_execution
+        detail: must be recorded verbatim at actual V0 launch
   backend:
     status: unknown_or_not_attestable
-    reason: consumer Chat visible selection and model self-report do not attest the exact served backend
+    reason: consumer Chat selection or model self-report does not attest the exact served backend
   artifacts:
     status: recorded
     refs:
-      - ref: notes/codex-task-results/MNEMOSYNE-211-result.md
+      - ref: PR_279
         relation: created
-        immutable_identity: {status: not_available_before_write_completion, type: git_blob_sha, value: pending}
-      - ref: current/first-three-systems-owner-review-status.md
-        relation: modified
-        immutable_identity: {status: not_available_before_write_completion, type: git_blob_sha, value: pending}
-      - ref: notes/first-three-systems-frontier-reentry-backlog-v0.2.md
-        relation: modified
-        immutable_identity: {status: not_available_before_write_completion, type: git_blob_sha, value: pending}
+        immutable_identity: {status: recorded, type: GitHub_pull_request_number, value: 279}
+      - ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001.md
+        relation: created
+        immutable_identity: {status: recorded, type: git_blob_sha, value: pending_current_branch_identity}
   user_authorization:
     status: authorized
     actor: Owner
-    decision_ref: current_conversation_PR_278_post_merge_closeout_instruction
+    decision_ref: current_conversation_V0_confirmation_and_MNEMOSYNE_211_Ready_PR_authorization
     authorized_actions:
-      - verify_PR_278_merge_master_and_expected_files
-      - create_one_follow_up_branch_for_required_stale_state_correction
-      - update_post_merge_navigation_and_result_records
-      - read_and_explain_the_merged_V0_decision_candidate
+      - create_one_Ready_PR_for_MNEMOSYNE_211_to_master
+      - create_named_public_synthetic_repository
+      - write_only_that_synthetic_repository_within_V0_scope
+      - run_V0_only
     excluded_actions:
-      - create_validation_repository
-      - run_V0_or_V1
-      - write_Meta_Agent_or_real_targets
-      - modify_execution_source
-      - use_private_material
-      - use_Deep_Research_Fable_or_external_quota
-      - create_PR_without_separate_PR_authorization
+      - auto_merge
+      - V1_or_S1_through_S11
+      - write_Mnemosyne_Meta_Agent_or_real_targets_during_V0
+      - private_material
+      - research_or_external_quota
+      - raw_result_ingestion_into_Mnemosyne
     evidence:
       - class: direct_user_instruction
-        ref: current_conversation_PR_278_post_merge_closeout_instruction
-        claim_scope: bounded_post_merge_closeout_and_V0_explanation
+        ref: current_conversation_V0_confirmation_and_MNEMOSYNE_211_Ready_PR_authorization
+        claim_scope: V0_only_and_Ready_PR_279_authority
     expires_with_task: true
     not_future_precedent: true
   limitations:
-    - no CI workflow run was returned for the merge commit
-    - no validation repository exists and no validation was executed
-    - branch changes are not on master until separately published and merged
+    - current GitHub connector cannot create a new repository
+    - no V0 execution has begun
+    - no CI workflow run was reported for PR_278 merge commit
   omissions: []
 ```
 
-## 8. Current stop condition
+## 8. Current next gate
 
-This task stops before validation-repository creation or V0/V1 execution. The Owner must explicitly confirm or correct `MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001` before those actions can begin.
+- PR #279 may be manually merged by the Owner; auto-merge is not authorized.
+- V0 is already Owner-authorized but cannot start on this surface because repository creation capability is unavailable.
+- Once the named repository exists on an authorized surface, record the exact visible model/mode at launch, execute V0 only, and stop for review.
