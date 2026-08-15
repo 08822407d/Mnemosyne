@@ -30,7 +30,7 @@ V1_executed: false
 - V0 raw evidence remains only in the public synthetic repository at `master@e8e3296922185b4b70997c2351d6f39423f2cd4f`.
 - Pro/frontier review accepted V0 as a valid surface/identity/material/permission/no-write sentinel pass.
 - No candidate or frozen-package revision is required before an Owner V1 decision.
-- A staged multi-cell V1 baseline decision candidate and complete execution package are prepared on the MNEMOSYNE-212 branch.
+- A three-conversation staged V1 baseline decision candidate and complete execution package are prepared on the MNEMOSYNE-212 branch.
 - Current OpenAI documentation and the observed run support that ChatGPT repository sync selection is separate from GitHub-side repository access; the exact new repository was readable and writable despite not being selected for sync.
 
 ## V0 adjudication
@@ -52,10 +52,10 @@ V0_review:
   architecture_globally_accepted: false
 ```
 
-The high-confidence no-write proof is exact for the two named repositories:
+The high-confidence no-write proof is exact for:
 
-- `08822407d/Mnemosyne` remained `930b5ed0c8d1db82e46fd9439035db3f2dd20c46`;
-- `08822407d/Meta-Agent` remained `1fdbd7af9437f72f7c8106714ad1e64908983fb7`.
+- `08822407d/Mnemosyne` at `930b5ed0c8d1db82e46fd9439035db3f2dd20c46`;
+- `08822407d/Meta-Agent` at `1fdbd7af9437f72f7c8106714ad1e64908983fb7`.
 
 Other real-target classes were prohibited but not named by exact repository identity; V0 did not access or write them and did not claim per-repository SHA proof for them.
 
@@ -82,10 +82,11 @@ recommended_V1:
     - S11
   excluded_exploratory_scenario:
     - S10
-  execution_profile: staged_multicell
-  required_fresh_contexts:
-    - S8_negative_documentation_worker
-    - final_Pro_adjudicator
+  execution_profile: staged_multicell_three_conversations
+  conversations:
+    - MNE-DR-003 Execute
+    - MNE-DR-003 S8
+    - MNE-DR-003 Review
   next_tier_execution_recommended: true
   final_Pro_adjudication_required: true
   web_research_or_external_quota: prohibited
@@ -93,20 +94,26 @@ recommended_V1:
   Mnemosyne_ingestion: separately_gated
 ```
 
-The selected cell topology is:
+Actual operator flow:
 
 ```text
-Controller/fixture
-  -> Core S1,S2,S3,S4,S5,S6,S9
-  -> Positive S7
-  -> Fresh negative S8
-  -> Backup/restore S11
-  -> Mechanical closeout
-  -> Fresh Pro adjudication
-  -> Owner architecture decision
+MNE-DR-003 Execute（次一档）
+  Controller/fixture + Core + S7 + S11 + prepare S8
+  pause
+      ↓
+MNE-DR-003 S8（全新次一档对话）
+  isolated negative test
+      ↓
+return exact S8 refs to Execute
+  mechanical closeout
+      ↓
+MNE-DR-003 Review（全新 Pro 对话）
+  semantic adjudication
+      ↓
+Owner architecture decision
 ```
 
-S8 must use a new conversation that has not seen S7 or the exact sufficient migration facts. A contaminated S8 attempt is invalid and cannot be repaired in the same context.
+S8 must not receive the Execute transcript, S7 output or exact sufficient migration facts. A contaminated S8 attempt is invalid and cannot be repaired in the same context.
 
 ## Current authority and execution state
 
