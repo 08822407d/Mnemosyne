@@ -1,0 +1,97 @@
+manifest_id: MNE-DR-005-INPUT-MANIFEST-001
+task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
+display_name: MNE-DR-005 跨仓库并发
+execution_state: READY_NOT_SELECTED
+automatic_retry: false
+repository_write: prohibited
+validation_execution: prohibited
+source_receipts:
+  Mnemosyne:
+    repository: 08822407d/Mnemosyne
+    branch_for_Project_sync: master
+    maintainer_verified_master_at_package_generation: 4198d18352a071cbdcc7dc97734e65886da0621b
+    Fable_can_independently_attest_commit_SHA_from_Project_GitHub: false
+  V1_controller:
+    repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+    branch_for_Project_sync: tlr-v1-controller
+    maintainer_observed_head_at_package_generation: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+    result_bundle_blob: 8a5f3644707ae518182ed352174e58d1ca419067
+    Pro_frontier_disposition_at_package_generation: pending
+    Fable_must_treat_scenario_dispositions_as: provisional_executor_results
+local_files:
+- MNE-DR-005-最终任务.md
+- MNE-DR-005-输入清单.yaml
+Mnemosyne_files:
+- current/human-approved-spec.md
+- current/github-single-active-pr-lineage-guard.md
+- current/run-context-and-pr-provenance-guard.md
+- notes/urgent-research-and-validation-roadmap-v0.1.md
+- notes/target-local-repository-operating-model-candidate-v0.1.md
+- notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
+- notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
+- notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
+- notes/target-agent-lifecycle-v1-execution-package-001/README.md
+- notes/target-agent-lifecycle-v1-execution-package-001/00-controller-fixture-and-branch-contract.md
+- notes/target-agent-lifecycle-v1-execution-package-001/01-core-cell-s1-s6-s9.md
+- notes/target-agent-lifecycle-v1-execution-package-001/05-mechanical-closeout-and-return.md
+- notes/design-rationales/target-lifecycle-v1-staged-multicell-execution-v0.1.md
+- notes/reusable-agent-capability-ownership-and-lifecycle-model-candidate-v0.1.md
+V1_controller_files:
+- runs/MNE-TARGET-LIFECYCLE-V1-001/00-controller-receive.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/02-branch-and-task-map.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/04-run-manifest.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/06-v1-result-bundle.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/cells/core-cell-result.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s7-positive-cell-result.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s8-negative-cell-result.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s11-backup-cell-result.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/M0-M11-summary.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/branch-and-output-identities.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/contamination-and-isolation-checks.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/final-no-write-proof.yaml
+- runs/MNE-TARGET-LIFECYCLE-V1-001/incidents/incident-ledger.yaml
+counts:
+  local_files: 2
+  Mnemosyne_files: 14
+  V1_controller_files: 14
+  total_logical_files: 30
+input_roles:
+  task_instruction:
+  - MNE-DR-005-最终任务.md
+  input_manifest:
+  - MNE-DR-005-输入清单.yaml
+  authoritative_constraints:
+  - 'Mnemosyne: current/human-approved-spec.md'
+  - 'Mnemosyne: V1 Owner authorization within its exact scope'
+  active_guards:
+  - current/github-single-active-pr-lineage-guard.md
+  - current/run-context-and-pr-provenance-guard.md
+  candidate_designs_and_validation_contracts:
+  - target-local repository operating model
+  - target lifecycle candidate v0.2
+  - validation design v0.2
+  - V1 staged execution package
+  - capability ownership corrected candidate
+  provisional_behavior_evidence:
+  - all listed V1 controller files
+prohibited_contamination:
+- fresh_Pro_V1_review_conclusions_not_explicitly_supplied
+- prior_Fable_F1_report_or_unlisted_Pro_adjudication
+- unlisted_scenario_branches
+- private_or_real_target_material
+- unrelated_Project_chats_or_files
+- live_connector_output
+input_verification_pass_requires:
+- all_30_logical_files_resolved
+- repository_names_branches_and_all_required_paths_resolved
+- task_and_manifest_identity_match
+- authority_candidate_validation_and_provisional_evidence_roles_separated
+- V1_result_bundle_identity_and_pending_Pro_status_recovered
+- all_selected_scenario_and_mechanical_summary_roles_recovered
+- one_protocol_discrepancy_not_silently_resolved
+- no_external_web_before_gate
+- no_substantive_recommendation_before_gate
+- byte_complete_read_not_claimed
+- no_connector_or_write_action
+- unresolved_input_gaps_empty
