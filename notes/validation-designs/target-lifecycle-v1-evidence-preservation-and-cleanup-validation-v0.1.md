@@ -30,8 +30,9 @@ These questions must not be collapsed into one run.
 
 ```yaml
 phases:
-  P0_READ_ONLY_PREFLIGHT:
+  P0A_PRE_ANCHOR_READ_ONLY_PREFLIGHT:
     writes: none
+    expected_anchor_state: absent
   P1_CREATE_AND_VERIFY_ANCHOR:
     writes:
       - synthetic_archive_manifest_blob
@@ -42,11 +43,15 @@ phases:
   P2_OWNER_CLEANUP_DECISION:
     writes: Owner_decision_record_only_if_separately_authorized
     deletions: none
+  P0B_PRE_CLEANUP_READ_ONLY_PREFLIGHT:
+    writes: none
+    expected_anchor_state: present_at_Owner_accepted_verified_commit
   P3_DELETE_APPROVED_SCENARIO_REFS:
     writes: exact_ref_deletions_only
     prerequisites:
       - P1_passed
       - P2_explicit_cleanup_release
+      - P0B_passed
       - selected_surface_exposes_exact_auditable_ref_deletion
   P4_POST_DELETE_RECOVERY_PROOF:
     writes: none_unless_a_separate_result_storage_action_is_authorized
@@ -54,53 +59,89 @@ phases:
 
 P1 must stop before P2. P3 must never be auto-triggered by a P1 pass.
 
-## 3. Frozen P0 inputs
+## 3. Common frozen inputs
 
-At execution time, P0 must re-read rather than trust the candidate snapshot.
+At execution time, each preflight must re-read rather than trust the candidate snapshot.
 
-Required objects:
+Common required objects:
 
 - `08822407d/Mnemosyne@master`;
 - Owner decision `MNE-TARGET-LIFECYCLE-V1-OWNER-ARCHITECTURE-DECISION-001`;
-- preservation candidate and validation design exact blobs;
+- preservation candidate, validation design and branch-manifest exact blobs;
 - public repository metadata for `08822407d/mnemosyne-target-lifecycle-validation-002`;
 - validation `master`;
 - all branches matching `tlr-v1-*`;
 - controller bundle and branch/output inventory exact blobs;
 - existing PRs, archive refs or concurrent preservation/cleanup tasks.
 
-Required baseline expectations:
+Common historical expectations:
 
 ```yaml
 expected_validation_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
 expected_controller_head: e892749fc9e242b24908f89b6a78f1c0f0bed75e
 expected_controller_bundle_blob: 8a5f3644707ae518182ed352174e58d1ca419067
 expected_branch_identity_blob: b881836d1a6dd7b7d2f748ad082048219b6d8337
-expected_retained_branch_count: 16
-expected_anchor_absent: true
+expected_original_retained_branch_count: 16
 ```
 
-## 4. P0 stop conditions
+### P0A mode-specific expectations
 
-Return `PRESERVATION_PREFLIGHT_BLOCKED` and perform no write when:
+```yaml
+P0A:
+  anchor_branch_expected: absent
+  original_16_branches_expected: present_at_authorized_heads
+  cleanup_or_archive_PR_expected: absent
+```
+
+### P0B mode-specific expectations
+
+P0B may run only from a completed, separately reviewed P1 result. It freezes the exact anchor commit/tree/manifest identities returned by P1 and accepted for the cleanup decision.
+
+```yaml
+P0B:
+  anchor_branch_expected: present
+  anchor_branch: tlr-v1-evidence-anchor-001
+  anchor_commit_expected: FROM_OWNER_ACCEPTED_P1_RESULT
+  anchor_tree_expected: FROM_OWNER_ACCEPTED_P1_RESULT
+  anchor_manifest_blob_expected: FROM_OWNER_ACCEPTED_P1_RESULT
+  original_16_branches_expected_before_cleanup: present_at_original_authorized_heads
+  unexpected_additional_preservation_or_cleanup_lineage: absent
+```
+
+P0B must not reuse P0A's `anchor absent` condition.
+
+## 4. Common stop conditions
+
+Return the appropriate `PRESERVATION_PREFLIGHT_BLOCKED` or `CLEANUP_PREFLIGHT_BLOCKED` result and perform no write when:
 
 - Mnemosyne source identities differ from the selected authorization;
 - validation repository visibility is not public as expected;
 - validation `master` moved;
 - branch enumeration is incomplete;
-- retained branch count, names or heads differ;
+- original branch count, names or heads differ from the relevant approved manifest;
 - controller bundle or branch-identity blob differs;
-- an archive anchor already exists unexpectedly;
-- another preservation/cleanup branch or PR is active;
+- another preservation/cleanup branch or PR is active unexpectedly;
 - private or real-target material appears;
-- exact low-level commit/tree writes are unavailable;
-- the parent set or manifest cannot be frozen before the first write.
+- the exact required tool capability is unavailable;
+- the parent set, anchor identity, cleanup list or evidence manifest cannot be frozen before the first write.
+
+Additional P0A blockers:
+
+- an archive anchor already exists unexpectedly;
+- exact low-level blob/tree/multi-parent-commit/ref creation is unavailable.
+
+Additional P0B blockers:
+
+- the expected archive anchor is absent, moved, duplicated or not fetchable;
+- the anchor parent set/tree/manifest no longer matches the accepted P1 result;
+- any branch selected for cleanup moved after P1/P2;
+- the selected execution surface lacks exact branch-ref deletion or cannot expose partial failures.
 
 ## 5. P1 construction contract
 
 P1 may run only under a later Owner authorization naming:
 
-- exact Mnemosyne candidate/validation blobs;
+- exact Mnemosyne candidate/validation/manifest blobs;
 - exact validation repository;
 - exact 16 input heads;
 - anchor branch `tlr-v1-evidence-anchor-001`;
@@ -111,7 +152,7 @@ P1 may run only under a later Owner authorization naming:
 Required sequence:
 
 1. record before refs for Mnemosyne, Meta-Agent and validation `master`;
-2. re-run P0 immediately before writes;
+2. run P0A immediately before writes;
 3. create the archive-manifest blob;
 4. create a tree based on the exact controller-head tree, changing only the archive-manifest path;
 5. create one commit with the controller head as first parent and the remaining 15 retained heads as additional parents;
@@ -139,7 +180,7 @@ The commit must be labelled as a reachability anchor, not a semantic merge or ac
 
 ### A2 — Complete branch enumeration
 
-- exactly the expected 16 `tlr-v1-*` branches before anchor creation;
+- exactly the expected 16 original `tlr-v1-*` branches before anchor creation;
 - no duplicate or unexpected preservation lineage.
 
 ### A3 — Head equality
@@ -250,9 +291,9 @@ P3 requires a new task ID, new exact authorization and an exact branch list. The
 
 A suitable future surface may be a controlled Codex/Git environment or an explicit human GitHub operation. The chosen surface, repository access, exact deletion commands/actions, confirmation behavior, partial-failure handling and return evidence must be recorded before the first deletion.
 
-Rules:
+Required sequence:
 
-1. re-run P0 and verify the anchor unchanged;
+1. run P0B and verify the anchor plus every original ref;
 2. verify every branch selected for deletion still equals its preserved head;
 3. delete one ref at a time or in a tool sequence whose partial progress is fully visible;
 4. stop immediately on any failed or ambiguous deletion;
@@ -292,12 +333,12 @@ evidence_scope:
 
 ## 12. Concurrent-write rule
 
-Immediately before branch creation, immediately before the collector commit, immediately before anchor publication and immediately before any later deletion:
+Immediately before anchor preparation, immediately before the collector commit, immediately before anchor publication and immediately before any later deletion:
 
 - re-read validation `master`;
 - enumerate all relevant refs;
 - check for active related PRs/tasks;
-- compare exact heads.
+- compare exact heads and the expected anchor state for P0A or P0B.
 
 If another conversation writes any relevant ref, stop and return the delta. Do not rebase, merge, refresh or delete around concurrent work automatically.
 
@@ -305,7 +346,7 @@ If another conversation writes any relevant ref, stop and return the delta. Do n
 
 This design does not authorize:
 
-- P1, P2, P3 or P4 execution;
+- P0A, P1, P2, P0B, P3 or P4 execution;
 - validation-repository writes or deletions;
 - tags, bundles, releases or external archives;
 - runtime supplement, S10, V2, Work, Deep Research or Fable;
