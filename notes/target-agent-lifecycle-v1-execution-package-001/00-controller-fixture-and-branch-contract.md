@@ -1,20 +1,26 @@
 # V1 Controller, Fixture and Branch Contract
 
+> Historical controller/fixture profile for `MNE-TARGET-LIFECYCLE-V1-001`, prospectively amended after Owner acceptance. The historical run remains bound to blob `7068b5efc0d484baf48824c5692ee1b3b2d8a634`; the current file corrects the fixture-root README allowlist only for future reuse.
+
 ```yaml
 execution_package_id: MNE-TARGET-LIFECYCLE-V1-EXECUTION-PACKAGE-001
 file_role: controller_fixture_branch_allocation
-status: prepared_not_executed
-V1_authorized: false
+created_by_task: MNEMOSYNE-212
+last_amended_by_task: MNEMOSYNE-215
+status: HISTORICAL_RUN_COMPLETE_FUTURE_REUSE_AMENDED
+historical_blob: 7068b5efc0d484baf48824c5692ee1b3b2d8a634
+amendment_ref: notes/target-agent-lifecycle-v1-execution-package-001/08-owner-accepted-post-v1-amendment.md
+new_V1_authorized: false
 ```
 
 ## 1. Controller role
 
 The controller is a bounded executor and evidence aggregator. It is not the architecture author or final semantic adjudicator.
 
-The controller may, after exact Owner authorization:
+After an exact run authorization it may:
 
-- verify the execution-time latest Mnemosyne package identities;
-- verify the synthetic repository and pinned V0 final head;
+- verify execution-time Mnemosyne package identities;
+- verify the synthetic repository and pinned base;
 - record before-run refs for named real repositories;
 - create the public/synthetic fixture on the fixture branch;
 - allocate the exact task branches below from pinned commits;
@@ -23,35 +29,33 @@ The controller may, after exact Owner authorization:
 - run final mechanical aggregation and no-write comparison;
 - preserve the complete bundle.
 
-The controller must not:
+It must not:
 
 - run a scenario outside the selected set;
 - expose S7 sufficient migration facts to the S8 worker;
 - revise candidate/package semantics;
 - merge scenario branches merely for convenience;
-- create scenario PRs;
+- create scenario PRs without separate authority;
 - write a real repository;
 - act as final Pro adjudicator.
 
-## 2. Pre-run identity gate
+## 2. Historical pre-run identity gate
 
-Required exact identities at launch:
+The completed historical V1 used:
 
 ```yaml
-V1_preflight:
-  Mnemosyne_master: RECORD_AT_LAUNCH
-  candidate_blob_expected: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
-  validation_blob_expected: 364482a28ab9218c3a6beddb072be2545779132f
-  package_README_blob_expected: 444b7e7186e6e90002a1b9966bc69ff0e1b49aaa
-  V0_authorization_blob_expected: 25e330445c18cdd0833411d259a093c7a3ccfc61
-  V0_adjudication_ref: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md
-  V1_authorization_ref: REQUIRED
+historical_V1_preflight:
+  Mnemosyne_master: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+  candidate_blob: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+  validation_blob: 364482a28ab9218c3a6beddb072be2545779132f
+  package_README_blob: 444b7e7186e6e90002a1b9966bc69ff0e1b49aaa
+  V1_authorization_blob: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
   synthetic_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
   synthetic_repository_visibility: public
-  V0_final_head_expected: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  V0_final_head: e8e3296922185b4b70997c2351d6f39423f2cd4f
 ```
 
-The MNEMOSYNE-212 merge commit and the exact V0-adjudication/V1-decision/execution-package blobs are recorded at launch after the PR is merged. Any mismatch blocks V1.
+A future run must create a new receipt using current exact identities and a new Owner authorization. The historical values are evidence, not standing execution authority.
 
 ## 3. Controller and fixture branches
 
@@ -60,15 +64,16 @@ branches:
   controller:
     task_id: TLR-V1-CONTROLLER-001
     branch: tlr-v1-controller
-    base: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    historical_base: e8e3296922185b4b70997c2351d6f39423f2cd4f
     allowed_write_roots:
       - runs/MNE-TARGET-LIFECYCLE-V1-001/
 
   fixture_base:
     task_id: TLR-V1-FIXTURE-001
     branch: tlr-v1-fixture-base
-    base: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    historical_base: e8e3296922185b4b70997c2351d6f39423f2cd4f
     allowed_write_roots:
+      - README.md
       - repository-governance/
       - targets/
       - libraries/
@@ -77,13 +82,13 @@ branches:
       - run-evidence/fixture/
 ```
 
-The fixture branch contains only the frozen public/synthetic initial fixture. It must not contain V1 scenario outcomes.
+The addition of root `README.md` reconciles this exact write set with the required initial fixture tree. The historical executor created only the public/synthetic fixture overview at that path. This amendment is prospective and does not erase the recorded historical protocol discrepancy.
 
-The controller branch contains manifests, receipts, task contracts, cell result pointers, incidents and the final bundle. It must not contain a substantive target copy outside the synthetic fixture repository; this repository itself is the selected target-owned validation destination.
+The fixture branch contains only the frozen public/synthetic initial fixture. It must not contain scenario outcomes. The controller branch contains manifests, receipts, task contracts, cell result pointers, incidents and the final bundle.
 
 ## 4. Scenario task branch map
 
-All scenario branches are created from the exact fixture commit unless a dependency below explicitly names another base.
+All scenario branches are created from the exact fixture commit unless a dependency explicitly names another base.
 
 ```yaml
 scenario_branches:
@@ -91,118 +96,69 @@ scenario_branches:
     task_id: TLR-V1-S1-001
     branch: tlr-v1-s1-destination-block
     base: fixture_commit
-
   S2:
     task_id: TLR-V1-S2-001
     branch: tlr-v1-s2-bounded-writer
     base: fixture_commit
-
   S3_alpha:
     task_id: TLR-V1-S3-ALPHA-001
     branch: tlr-v1-s3-alpha
     base: fixture_commit
-
   S3_beta:
     task_id: TLR-V1-S3-BETA-001
     branch: tlr-v1-s3-beta
     base: fixture_commit
-
   S4_shared:
     task_id: TLR-V1-S4-SHARED-001
     branch: tlr-v1-s4-shared-schema
     base: fixture_commit
-
   S4_dependent:
     task_id: TLR-V1-S4-DEPENDENT-001
     branch: tlr-v1-s4-alpha-dependent
     base: fixture_commit
-
   S4_unknown:
     task_id: TLR-V1-S4-UNKNOWN-001
     branch: tlr-v1-s4-unknown-global
     base: fixture_commit
-
   S5:
     task_id: TLR-V1-S5-001
     branch: tlr-v1-s5-upstream-proposal
     base: fixture_commit
-
   S6:
     task_id: TLR-V1-S6-001
     branch: tlr-v1-s6-beta-requirement
     base: fixture_commit
-
   S7_library:
     task_id: TLR-V1-S7-LIBRARY-001
     branch: tlr-v1-s7-commonlib-v2
     base: fixture_commit
-
   S7_alpha:
     task_id: TLR-V1-S7-ALPHA-001
     branch: tlr-v1-s7-alpha-migration
     base: S7_library_final_commit
-
   S8_input_and_worker:
     task_id: TLR-V1-S8-001
     branch: tlr-v1-s8-insufficient-docs
     base: fixture_commit
-
   S9:
     task_id: TLR-V1-S9-001
     branch: tlr-v1-s9-imperfect-route
     base: fixture_commit
-
   S11:
     task_id: TLR-V1-S11-001
     branch: tlr-v1-s11-backup-restore
     base: fixture_commit
 ```
 
-A task branch may be created only once. If the branch already exists unexpectedly, stop and reconcile; do not create a numbered replacement.
+A task branch may be created only once. If it already exists unexpectedly, stop and reconcile; do not create a numbered replacement.
 
-## 5. Result branches / files
+## 5. Result files
 
-Cells write their cell-level result to their scenario/task branches and return exact refs. The controller records normalized pointers under:
-
-```text
-runs/MNE-TARGET-LIFECYCLE-V1-001/
-```
-
-Recommended controller paths:
-
-```text
-00-controller-receive.yaml
-01-fixture-receipt.yaml
-02-branch-and-task-map.yaml
-03-real-repository-no-write-baseline.yaml
-cells/
-  core-cell-result.yaml
-  s7-positive-cell-result.yaml
-  s8-negative-cell-result.yaml
-  s11-backup-cell-result.yaml
-mechanical/
-  declared-vs-actual-write-sets.yaml
-  branch-and-output-identities.yaml
-  contamination-and-isolation-checks.yaml
-  final-no-write-proof.yaml
-incidents/
-  incident-ledger.yaml
-06-v1-result-bundle.yaml
-```
-
-Every pointer includes:
-
-- repository;
-- branch;
-- commit SHA;
-- tree SHA when relevant;
-- file path;
-- blob SHA;
-- attempt/retry relation.
+Cells write results to their scenario/task branches and return exact refs. The controller records normalized pointers under the authorized run root, including repository, branch, commit, tree when relevant, file path, blob and attempt/retry relation.
 
 ## 6. Initial fixture contract
 
-Create exactly the tree and synthetic contracts defined in the frozen `01-synthetic-fixture-and-scenario-contracts.md`:
+Create exactly the public/synthetic tree and contracts defined by the frozen scenario package:
 
 ```text
 README.md
@@ -215,7 +171,7 @@ backups-fixture/
 run-evidence/
 ```
 
-The fixture must include CommonLib v1, Alpha's v1 usages, Beta's initial non-use, authority files, dependency declarations and deterministic tests needed by the selected scenarios.
+The fixture includes CommonLib v1, Alpha's v1 usages, Beta's initial non-use, authority files, dependencies and deterministic test artifacts needed by selected scenarios.
 
 Do not add:
 
@@ -226,67 +182,36 @@ Do not add:
 - a universal consumer registry;
 - a parent/meta downstream copy.
 
-## 7. S8 input preparation firewall
+Test artifacts in the fixture establish only `TEST_ARTIFACT_PRESENT` until a stronger evidence level is recorded under `notes/validation-evidence-strength-levels-v0.1.md`.
 
-The controller prepares the S8 branch from the fixture commit with only:
+## 7. S8 input firewall
 
-- the v2 API/behavior change needed to make migration relevant;
-- the intentionally insufficient human-only note;
-- Alpha's v1 usage;
-- the S8 task instruction and stop rules;
-- no `CHANGES-AGENT.md` sufficient guide;
-- no S7 worker output;
-- no file, comment or controller summary containing the required migration actions.
+The controller prepares the S8 branch from the fixture commit with only the authorized intentionally insufficient packet and Alpha's v1 usage. It must exclude the sufficient Agent guide, S7 output and concrete hidden migration actions. It records branch inventory and absence receipts before launch.
 
-The controller records a branch inventory and a negative search/absence receipt before the S8 worker launches.
-
-The S8 worker is not told the required migration facts. Its correct outcome is to block and identify the missing categories, not to reconstruct the hidden answer.
+The S8 worker's correct outcome is to block and identify missing information categories, not reconstruct hidden answers.
 
 ## 8. Real-repository no-write baseline
 
-Before any V1 synthetic write, record exact default-branch refs for:
-
-```yaml
-named_real_repositories:
-  - 08822407d/Mnemosyne
-  - 08822407d/Meta-Agent
-```
-
-Do not enumerate or access other real repositories merely to enlarge the claim. The final claim remains exact for these two named repositories and limited for unnamed targets.
+Before any synthetic write, record exact default-branch refs for the named real repositories in the current authorization. Do not access unnamed targets merely to enlarge the proof claim.
 
 ## 9. Controller stop rules
 
-Return `V1_CONTROLLER_BLOCKED` and perform no scenario write when:
+Return a blocked receipt and perform no scenario write when:
 
-- V1 Owner authorization is absent or mismatched;
-- synthetic repository `master` is not the pinned V0 final head;
-- V0 evidence paths changed;
+- run authorization is absent or mismatched;
+- repository/base, visibility or material class is wrong;
 - expected package identities differ;
 - existing branches/PRs conflict with the branch map;
-- visibility or material class is wrong;
+- a required path is outside the declared write set;
 - no-write baseline cannot be recorded;
 - S8 isolation cannot be prepared;
-- any required fixture fact is semantically ambiguous rather than format-only.
+- a required fixture fact is semantically ambiguous rather than format-only;
+- a requested test claim exceeds the available evidence level.
 
-## 10. Controller completion receipt
+## 10. Completion receipt
 
-Before launching cells, return and store:
+Before launching cells, store a receipt containing run ID, execution package, Owner authorization, exact Mnemosyne source, synthetic repository/base, fixture branch/commit/tree, controller branch, task map, named real-repository before refs, S8 isolation state, material-safety result, test-evidence contract version and PASS/BLOCKED disposition.
 
-```yaml
-V1_controller_receipt:
-  run_id:
-  execution_package_id:
-  Owner_authorization_ref:
-  Mnemosyne_master:
-  synthetic_repository:
-  V0_final_head_verified:
-  fixture_branch:
-  fixture_commit:
-  fixture_tree:
-  controller_branch:
-  task_branch_map_ref:
-  named_real_repository_before_refs: []
-  S8_isolation_input_prepared:
-  material_safety_pass:
-  disposition: PASS | BLOCKED
-```
+## 11. Boundaries
+
+This current contract does not authorize a new run, runtime supplement, branch cleanup, target adoption, Meta-Agent write, execution-source change, S10, V2, external research or quota.
