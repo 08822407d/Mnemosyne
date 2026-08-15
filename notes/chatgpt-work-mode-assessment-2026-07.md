@@ -1,90 +1,68 @@
-# ChatGPT Work 模式对 Mnemosyne 的适用性评估（2026-07）
+# ChatGPT Work 模式对 Mnemosyne 的适用性评估（2026-07，2026-08 修订）
 
 ```yaml
 record_type: platform_mode_assessment_and_candidate_guidance
 created_by_task: MNEMOSYNE-114
+last_amended_by_task: MNEMOSYNE-215
 authority_level: non_execution_source_candidate_guidance
-consulted_at: 2026-07-13
+first_consulted_at: 2026-07-13
+last_official_delta_check: 2026-08-15
+status: candidate_guidance_with_owner_observation_and_pending_read_only_pilot
 execution_source_modified: false
 candidate_guidance_promoted: false
+chat_to_work_observation_ref: notes/platform-observations/chat-to-work-follow-up-transfer-observation-2026-08.md
 ```
 
 ## 1. 目的
 
-本文件评估 OpenAI 新推出的 ChatGPT Work 是否适合 Mnemosyne 自身建设、跨模型复核、目标项目记忆系统设计和长周期维护任务。
+本文件评估 Chat、Work 与 Codex 对 Mnemosyne 自身建设、跨模型复核、目标项目记忆系统设计和长周期维护任务的适用性。
 
 它是平台能力评估和候选行为指导，不是执行源。`current/human-approved-spec.md` 仍是 Mnemosyne 唯一执行源。
 
-## 2. 已核实的官方产品事实
+## 2. 2026-08 官方产品事实增量
 
-根据 OpenAI 官方产品页、Help Center 和 release notes：
+根据 2026-08-15 访问的 OpenAI 官方资料：
 
-- ChatGPT 现在区分 Chat、Work 和 Codex 三种工作体验。
-- Chat 适合提问、搜索、讨论和快速协作。
-- Work 面向更长、更复杂的研究与交付任务，可分析信息、使用已连接应用和文件，并产出文档、表格、演示文稿、报告和 Sites。
-- Work 允许用户跟踪进度、回答问题、改变方向并批准重要动作。
-- Work 支持一次性、定时、触发式或监控型 Scheduled Tasks。
-- Codex 仍是软件开发、代码、命令、测试和 repository 工作的专用体验。
-- Web/mobile Work 在云端运行；桌面 Work 在获得许可后还可使用本地文件和桌面应用。
-- 截至发布时，cloud Work conversations 不会出现在 desktop Work；desktop Work threads 和本地文件留在该电脑上。普通 Chat conversations 会在 web 和 desktop 间同步。
-- Project 可以把相关 conversations、files 和 instructions 放在一起，但这不能替代显式的 Mnemosyne handoff。
-- Plan mode 会先收集上下文、提问并形成步骤计划，用户可以修改或批准后再开始执行。
-- Plugin Directory 在 ChatGPT web/desktop、Work 和 Codex 中可用；具体 plugin/app 是否可读、可写、是否需要确认，仍取决于 plan、workspace、role、surface、region、app 配置和源系统权限。
-- Work 使用与 Codex 相同的 usage structure；实际消耗随任务而变化。
+- Chat 仍适合快速问答、搜索、讨论和交互式协作；
+- Work 面向更长、多步骤的任务和可交付成果，可以分析信息并生成文档、表格、演示、报告或网站等；
+- Codex 仍偏向代码、命令、测试和 repository 开发工作；
+- Work 在符合条件的 web、mobile 和 desktop 表面可用；
+- Chat 与 cloud Work 对话会共同出现在 Recents 中；
+- 现有 Project 中可以选择启动 Chat 或 Work，Work 会使用该 Project 的上下文；
+- **cloud Work 对话现在会在 web、mobile 与 desktop 间同步**；local desktop chats 仍保留在本机；
+- Work 可以一次性运行，也可以通过 Scheduled Tasks 重复、按触发器运行或监控变化；
+- Plan mode 可以先收集上下文、提问并形成计划，再由用户修改或批准后执行。
+
+这修正了本文件 2026-07 初版中的旧说法：cloud Work conversations 不会出现在 desktop Work。该说法已被当前官方产品状态取代。
 
 官方来源：
 
-- https://openai.com/chatgpt-work/
-- https://help.openai.com/en/articles/20001275
-- https://help.openai.com/en/articles/6825453-chatgpt-release-notes
-- https://help.openai.com/en/articles/20001276
-- https://help.openai.com/en/articles/20001256-plugins-in-chatgpt-and-codex
+- `https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex`
+- `https://help.openai.com/en/articles/6825453-chatgpt-release-notes`
+- `https://openai.com/chatgpt-work/`
 
-## 3. 当前结论
+## 3. Owner 新观察：Chat 可能把后续任务转移到 Work
 
-### 3.1 新维护对话的 handoff 接收与路径选择
+Owner 观察到，普通 Chat 对话中可能出现将接下来的任务转移到 Work 执行的能力。
 
-推荐使用：**普通 Chat，GPT-5.6 Sol + Pro**。
+当前尚不清楚：
 
-理由：
+- 由什么界面动作、提示词或任务特征触发；
+- 是系统自动触发、模型建议，还是用户点击接受；
+- 是否可以通过明确指令稳定触发；
+- 转移的是完整上下文、Project context、附件、连接器权限还是一个摘要；
+- Work 中的模型、推理强度、工具、用量、中断、恢复和结果返回如何确定；
+- 是否在所有 plan、workspace、region 和 surface 上一致。
 
-- 第一步是读取 handoff、核验仓库状态、解释权限边界并让用户选择路线；这是交互式治理和决策任务，不需要 Work 的长自主执行能力。
-- 当前仓库维护依赖精确的 execution-source / authority / frozen-artifact 边界；普通 Chat 更适合逐步确认和小范围 GitHub 文档 PR。
-- 引入 Work 会额外增加 context/surface 迁移问题，而当前任务尚未需要多应用整合、长时运行或成套交付物。
+当前官方资料说明了如何选择 Work、如何从 Project 启动 Work 和 cloud Work 的跨设备同步，但没有说明普通 Chat 会自动或主动把“下一项任务”转换成 Work。因此这仍是 Owner-observed、待实验的平台能力，而不是已核实的操作规则。
 
-### 3.2 适合考虑 Work 的 Mnemosyne 任务
+详细记录和 pilot 问题：
 
-Work 候选场景：
+```text
+notes/platform-observations/chat-to-work-follow-up-transfer-observation-2026-08.md
+```
 
-1. read-only comprehensive health review：需要读取许多报告和状态文件，形成完整审计报告、矩阵和建议包；
-2. 大型独立设计或对照设计：需要多文件综合、计划、分阶段产出多个可交付 artifact；
-3. 跨应用证据整合：需要同时使用 GitHub、Drive、Gmail、Notion 或其他授权来源；
-4. 周期性监控：例如平台能力变化、研究 delta、依赖更新或固定节奏状态报告；
-5. 需要 Plan mode 先审阅方案，再让 agent 长时间执行的任务。
-
-这些任务应优先是 read-only 或严格限定写入范围。任何 external action 仍须单独满足 platform permission 与 Mnemosyne task authority。
-
-### 3.3 更适合普通 Chat 的任务
-
-- handoff receive 与路线选择；
-- 小范围 maintainer triage；
-- 用户决策问答；
-- 单个或少量文档的证据核验；
-- 低范围文档修补与 ready PR；
-- 需要频繁人工判断、暂缓和改变优先级的维护工作。
-
-### 3.4 更适合 Codex 的任务
-
-- 软件开发、脚本、测试、命令和 repository implementation；
-- 多文件 deterministic patch；
-- 需要 shell、git diff、test suite、编译或本地环境的工作；
-- 大范围 repository refactor。
-
-Work 不应因为“任务很长”就自动替代 Codex；任务本质仍是首要判断依据。
-
-## 4. 候选 surface-selection 规则
-
-以下仅为候选规则，尚未进入执行源：
+## 4. 当前 surface-selection 候选规则
 
 ```yaml
 candidate_surface_selection:
@@ -103,6 +81,7 @@ candidate_surface_selection:
       - cross_app_workflow
       - scheduled_or_monitoring_requirement
       - plan_review_before_execution_is_valuable
+      - a_reliable_auditable_Chat_to_Work_handoff_is_available
   Codex:
     default_for:
       - software_development
@@ -111,77 +90,97 @@ candidate_surface_selection:
       - local_or_remote_codebase_work
 ```
 
-在建议启动 Work 前，Agent 应显式告诉用户：
+任务本质仍优先于时长。Work 不应仅因“内容很多”就替代 Chat 或 Codex。
 
-- `recommended_surface: Chat | Work | Codex`；
-- 为什么当前任务适合该 surface；
-- 使用 web/cloud Work 还是 desktop/local Work；
-- 需要连接哪些 apps、files 或 project；
-- 哪些动作是 read-only，哪些动作会改变外部状态；
-- 预期交付物；
-- 完成后如何汇报和交接。
+## 5. 目前仍适合普通 Chat 的任务
 
-## 5. Work 结果的建议汇报与交接格式
+- handoff receive、路线选择和 Owner 决策；
+- 需要频繁澄清、暂停或改方向的治理工作；
+- 小范围仓库核验和文档修补；
+- 明确的 Ready PR 交付；
+- 对 Work/Codex/外部研究结果的审查和采用决定。
 
-Work 任务结束时应返回一个可迁移的高信号 package，至少包括：
+普通 Chat 中出现 Work 转移建议时，不应自动接受。先说明目标、上下文、权限、材料、外部动作、用量、停止条件和结果交接。
+
+## 6. 适合考虑 Work 的任务
+
+- 大型 read-only health review 或多文件综合；
+- 多个成品 artifact 的设计与交付；
+- 跨 GitHub、Drive、Gmail、Notion 等已授权来源的证据整合；
+- 计划先审后执行的长任务；
+- 经明确授权的定时、触发或监控任务；
+- 能从普通 Chat 可靠交接并返回可审计结果的冻结执行包。
+
+这些任务应优先使用公开/合成或低敏感材料开始，严格区分 read-only 和 external action。
+
+## 7. 更适合 Codex 的任务
+
+- 软件开发、脚本、测试、命令和 repository implementation；
+- 需要 shell、git diff、test suite、编译或本地环境；
+- deterministic multi-file patch 或大范围 refactor。
+
+Work 与 Codex 的选择不应只根据“agentic”程度，而应根据任务所需环境、工具、可复现性和审计边界。
+
+## 8. Work 结果建议交接格式
 
 ```yaml
 work_result_handoff:
   work_context_id_or_title:
-  execution_surface: web_cloud_work | mobile_cloud_work | desktop_local_work
-  model_and_reasoning_setting:
+  source_Chat_or_Project_ref:
+  transfer_or_launch_method:
+  execution_surface: web_cloud_work | mobile_cloud_work | desktop_cloud_work | desktop_local_work
+  visible_model_and_reasoning_setting:
+  backend_status: unknown_or_not_attestable
   objective:
+  transferred_context_manifest:
   inputs_used:
   connected_apps_used:
+  permissions_and_approvals:
   external_actions_attempted_or_completed:
-  approvals_requested_and_received:
   deliverables:
   repository_or_file_changes:
   checks_performed:
+  usage_or_quota_observation:
+  interruption_and_recovery_events:
   unresolved_questions:
   limitations:
   safe_next_action:
   canonical_storage_status:
 ```
 
-不得假设 Chat、cloud Work、desktop Work 和 Codex 自动共享完整历史。跨 surface 继续工作时，应使用 repository-backed handoff、明确的 artifact 路径或用户提供的文件。
+不得仅因 Chat 与 Work 出现在统一 Recents 中，就假设它们自动共享完整隐藏上下文。跨 surface 的关键任务仍需要精确 handoff、artifact path、repository ref 或输入清单。
 
-## 6. 当前不立即写入行为执行源的原因
+## 9. 当前不写入行为执行源的原因
 
-ChatGPT Work 刚刚发布并仍在逐步 rollout。以下问题尚需实测或 delta research：
+仍需实测：
 
-- 同一 Project 中 Chat 与 Work 的实际可见上下文范围；
-- web/mobile cloud Work 与 desktop Work 的 artifact、thread 和 file 迁移行为；
-- GitHub plugin 在 Work 中的实际 read/write action 列表和确认行为；
-- Work 的 usage、长任务中断、恢复和结果持久化方式；
-- Work 产出的文件如何最可靠地进入 Mnemosyne repository；
-- Work 与普通 Chat/GitHub App/Codex 在 PR、diff 和审计上的分工边界。
+- Chat→Work 的真实触发方式和稳定性；
+- 转移上下文、Project 指令、附件和连接器状态的精确范围；
+- GitHub plugin/app 在 Work 中的实际 read/write/confirmation 行为；
+- 用量、长任务中断、恢复和重复执行；
+- Work 输出进入 Mnemosyne 的可靠 provenance；
+- Chat、Work、Codex 的 PR、diff、测试和审计分工。
 
-因此，现阶段只保留候选指导。建议先做一次受限、read-only 的 Work pilot，再决定是否将 surface-selection 规则写入 `current/human-approved-spec.md`。
+因此当前只保留候选指导和高优先级平台观察。
 
-## 7. 建议的受限 Work pilot
+## 10. 建议的受限 pilot — 尚未授权
 
 ```yaml
 pilot:
-  surface: ChatGPT_Work_web_or_desktop_as_available
-  objective: produce_read_only_Mnemosyne_health_review_package
+  status: CANDIDATE_NOT_AUTHORIZED
+  surface: ordinary_Chat_to_cloud_Work_as_available
+  objective: measure_trigger_context_permission_and_result_handoff
+  material: public_synthetic_only
   repository_access: read_only
-  required_sources:
-    - README.md
-    - current/human-approved-spec.md
-    - current/review-and-validation-status.md
-    - notes/codex-task-results/MNEMOSYNE-113-result.md
-  prohibited:
-    - repository_write
-    - execution_source_update
-    - target_workspace_or_material_actions
-    - regression_formalization
-    - paused_route_resumption
-  required_output:
-    - source_manifest
-    - findings_with_evidence_paths
-    - surface_behavior_observations
+  external_actions: prohibited
+  scheduled_or_monitoring_actions: prohibited
+  required_outputs:
+    - exact_UI_and_prompt_sequence
+    - source_and_destination_identity_receipt
+    - transferred_context_manifest
+    - model_tool_permission_and_usage_observation
+    - interruption_resume_result
     - limitations_and_handoff_package
 ```
 
-Pilot 通过后，仍需在普通维护 Chat 中审查其结果，再决定是否创建执行源更新任务。
+Pilot 完成后，仍需在普通维护 Chat 中审查结果，再决定是否更新活动指导。
