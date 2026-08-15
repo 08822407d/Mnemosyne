@@ -74,20 +74,19 @@ recommended_V1:
       - S11
     excluded:
       - S10
-  topology: staged_multicell
-  execution_cells:
-    - controller_and_fixture
-    - core_S1_S2_S3_S4_S5_S6_S9
-    - positive_S7
-    - fresh_negative_S8
-    - backup_restore_S11
-    - mechanical_closeout
+  logical_profile: staged_multicell
+  actual_conversations:
+    - MNE-DR-003 Execute
+    - MNE-DR-003 S8
+    - MNE-DR-003 Review
   final_review: fresh_Pro_adjudication
   raw_output: synthetic_repository_only
   web_research_or_external_quota: prohibited
 ```
 
-S8 requires a new context that has not seen S7 or the exact sufficient migration facts. S10 remains optional exploration and is not needed for the first baseline disposition.
+`MNE-DR-003 Execute` performs controller/fixture, Core, S7 and S11, prepares the isolated S8 branch, pauses, and later performs closeout after exact S8 refs return. `MNE-DR-003 S8` is the only fresh next-tier worker required. `MNE-DR-003 Review` is a separate fresh Pro adjudicator.
+
+S8 must not receive the Execute transcript, S7 output or exact sufficient migration facts. S10 remains optional exploration and is not needed for the first baseline disposition.
 
 ### Current gate
 
