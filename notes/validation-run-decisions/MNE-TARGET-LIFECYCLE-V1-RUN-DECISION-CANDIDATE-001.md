@@ -325,27 +325,38 @@ validation_run_authorization:
   not_future_precedent: true
 ```
 
-## 6. Owner decision still required
+## 6. Owner decision and publication sequencing
 
-All non-authority design judgments are filled. The Owner must still decide whether to accept this exact V1 profile.
+All non-authority design judgments are filled. The Owner may confirm or correct this profile **before** PR publication, provided the authorization record binds to the exact candidate blob and execution-package identities on the canonical branch. This permits one Ready PR to contain:
 
-A sufficient confirmation after this candidate and execution package are merged is:
+- the V0 adjudication;
+- the V1 decision candidate;
+- the exact Owner V1 authorization record;
+- the V1 execution package and route updates.
+
+V1 still cannot start until that Ready PR is merged and the execution-time latest `master` contains identities matching the confirmed branch artifacts. A pre-merge confirmation is therefore an authority decision, not permission to execute branch-local files.
+
+The Owner may instead defer confirmation until after merge; that is valid but requires another repository-writing step to preserve the later authorization.
+
+A sufficient one-message confirmation and PR authorization is:
 
 ```text
-确认 MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001。
-授权在 08822407d/mnemosyne-target-lifecycle-validation-002 中，
-从 V0 final head e8e3296922185b4b70997c2351d6f39423f2cd4f 开始，
-按三段对话的 staged multi-cell profile 运行 V1 baseline：S1–S9 和 S11；不运行 S10 或 V2。
+确认 MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001，
+并授权在当前 MNEMOSYNE-212 canonical branch 记录与该候选精确 blob 绑定的 V1 Owner authorization。
 
+授权创建一个 Ready PR 到 master，不要自动合并；V1 只能在该 PR 合并并完成 master 身份核验后运行。
+
+V1 范围：在 08822407d/mnemosyne-target-lifecycle-validation-002 中，
+从 V0 final head e8e3296922185b4b70997c2351d6f39423f2cd4f 开始，
+按三段对话 staged multi-cell profile 运行 baseline S1–S9 和 S11；不运行 S10 或 V2。
 主执行和 S8 使用次一档模型，每段启动时原样记录界面模型/模式；
 S8 必须使用未见过 S7 充分迁移说明的全新对话；完成后交给另一段全新的 Pro 对话裁决。
 只允许写合成验证仓库，不得写 Mnemosyne、Meta-Agent 或真实目标；
 不得使用私有材料、Web/Deep Research/Fable/其他 app 或外部 quota；
-不得把原始结果写回 Mnemosyne。
-完成后停止。
+不得把原始结果写回 Mnemosyne。完成后停止。
 ```
 
-The Owner may instead revise the selected scenarios, conversation topology, model/surface, repository, no-write scope, retention or quota boundary.
+The Owner may revise the selected scenarios, conversation topology, model/surface, repository, no-write scope, retention or quota boundary instead.
 
 ## 7. Capability and research assessment
 
