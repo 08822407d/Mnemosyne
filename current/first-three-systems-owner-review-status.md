@@ -4,42 +4,37 @@
 
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POI4-REVIEW-STATUS-001
-last_updated_by_task: MNEMOSYNE-215
-status: V1_OWNER_ACCEPTED_READY_PR_283_OPEN_RECOMMEND_MERGE
-base_master_at_update_start: e15cf20ede4ce2ee42072c6a406b3063b4b4b487
+last_updated_by_task: MNEMOSYNE-216
+status: V1_OWNER_ACCEPTED_PR_283_MERGED_POST_MERGE_CLOSEOUT_COMPLETE_NO_MANDATORY_NEXT_EXECUTION
+source_master_at_closeout: 630d51a28b42a641f4a75ffaf4486e816704266a
 execution_source: current/human-approved-spec.md
-canonical_task_branch: mnemosyne-215-v1-adjudication-owner-acceptance-and-work-observation
+closeout_branch: mnemosyne-216-pr283-post-merge-closeout
+closeout_ref: notes/codex-task-results/MNEMOSYNE-216-pr283-post-merge-closeout.md
 canonical_PR: 283
-canonical_PR_state: open_ready
-canonical_PR_draft: false
-canonical_PR_auto_merge: false
-PR_finalization_ref: notes/codex-task-results/MNEMOSYNE-215-pr-finalization.md
-merge_recommendation: RECOMMEND_MERGE
-comprehensive_human_diff_review_assumed: false
+canonical_PR_state: merged
+canonical_PR_merge_commit: 630d51a28b42a641f4a75ffaf4486e816704266a
+former_MNEMOSYNE_215_branch_present: false
 candidate: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
 V1_adjudication: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V1-ADJUDICATION-001.md
 V1_owner_architecture_decision: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-V1-OWNER-ARCHITECTURE-DECISION-001.md
 V1_recovery_incident: notes/provenance-incidents/MNE-TARGET-LIFECYCLE-V1-ADJUDICATION-RECOVERY-001.md
-V1_execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
 V1_execution_package_amendment: notes/target-agent-lifecycle-v1-execution-package-001/08-owner-accepted-post-v1-amendment.md
 V1_display_name: MNE-DR-003 生命周期验证
 V1_executed: true
 V1_global_disposition: PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW
 candidate_global_status: OWNER_ACCEPTED_PROVISIONAL_ARCHITECTURE_BASELINE_FOR_TARGET_SPECIFIC_CONSIDERATION
+candidate_revision_required: false
 target_adoption_authorized: false
 ```
 
 ## Completed
 
-- OR-01 through OR-09 and TLR-01 through TLR-05 Owner review are complete and formally recorded.
-- Candidate v0.2, validation v0.2 and the frozen public/synthetic validation package were merged through PR #277.
-- Ready-PR and frontier-turn-efficiency guidance was merged through PR #278.
-- V0 authorization and post-merge state were merged through PR #279.
-- V0 executed in `08822407d/mnemosyne-target-lifecycle-validation-002`; Pro accepted it as a valid sentinel pass.
-- V1 decision, authorization and staged three-conversation execution package were merged through PR #280.
-- PR #280 was verified merged at `1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea` before V1 began.
-- V1 executed all selected baseline scenarios S1–S9 and S11; S10 and V2 were not run.
-- The complete controller bundle remains at:
+- OR-01 through OR-09 and TLR-01 through TLR-05 Owner review are complete.
+- Candidate v0.2, validation v0.2 and the public/synthetic validation package were merged through PR #277.
+- V0 passed its sentinel gate.
+- V1 decision, authorization and staged execution package were merged through PR #280.
+- V1 executed S1–S9 and S11 in `08822407d/mnemosyne-target-lifecycle-validation-002`; S10 and V2 were not run.
+- The complete V1 controller bundle remains at:
 
 ```text
 08822407d/mnemosyne-target-lifecycle-validation-002
@@ -48,24 +43,22 @@ runs/MNE-TARGET-LIFECYCLE-V1-001/06-v1-result-bundle.yaml
 blob 8a5f3644707ae518182ed352174e58d1ca419067
 ```
 
-- A fresh Pro conversation adjudicated V1. After an accidental regenerate/stop event, the recovered result was normalized and independently checked against exact repository evidence.
-- The Owner accepted `PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW` and candidate v0.2 as a provisional global baseline for future target-specific consideration.
+- A fresh Pro adjudicator produced `PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW`.
+- After the regenerate/stop/recovery incident, the recovered adjudication was independently rechecked and accepted by the Owner.
+- The Owner accepted candidate v0.2 as a provisional global architecture baseline for future target-specific consideration.
 - Complete V1, S8 and S11 reruns are not required.
-- A prospective amendment records the root `README.md` write scope and test-evidence strength rules without rewriting the historical package or synthetic evidence.
-- V1 evidence branches remain retained; cleanup is not authorized.
-- Ready PR #283 was created with `draft: false`; auto-merge and Agent merge are not authorized.
+- Prospective profile amendments preserve the root `README.md` fixture write permission and test-evidence strength distinctions without rewriting historical evidence.
+- Ready PR #283 merged at `630d51a28b42a641f4a75ffaf4486e816704266a`.
+- The merge commit and final PR head have the same tree `6fdf8cb7f5de161eb7253296bff07f40860e5223`, so all 13 final PR changes entered `master` exactly.
+- The former MNEMOSYNE-215 implementation branch is absent after merge and has no retention obligation.
+- All 16 `tlr-v1-*` evidence branches remain present and retained; cleanup is not authorized.
 
-## Accepted V1 result
+## Accepted V1 meaning
 
 ```yaml
 V1:
   run_id: MNE-TARGET-LIFECYCLE-V1-001
-  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
-  execution_Mnemosyne_master: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
-  controller_head: e892749fc9e242b24908f89b6a78f1c0f0bed75e
-  result_bundle_blob: 8a5f3644707ae518182ed352174e58d1ca419067
-  selected_scenarios: [S1,S2,S3,S4,S5,S6,S7,S8,S9,S11]
-  excluded: [S10,V2]
+  global_disposition: PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW
   scenario_failures: []
   candidate_defects: []
   bounded_protocol_defects:
@@ -73,33 +66,15 @@ V1:
   noncritical_executor_artifact_defects:
     - S6_test_missing_sort_invoices_import
   contamination: []
-  named_real_repository_no_write_proof: PASS
-  global_disposition: PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW
+  candidate_revision_required: false
+  complete_V1_rerun_required: false
+  S8_rerun_required: false
+  S11_rerun_required: false
+  production_readiness_proven: false
+  target_adoption_authorized: false
 ```
 
-## Owner architecture decision
-
-Candidate v0.2 is now the Owner-accepted provisional global architecture baseline for later per-target evaluation. It may guide a future target's own adoption decision; it does not mean:
-
-- universal correctness;
-- production readiness;
-- quantitative migration reliability;
-- provider portability;
-- any current target already adopted it;
-- automatic propagation into Meta-Agent or a business target.
-
-Each target must separately decide adoption, migration, privacy, authority, backup, rollback and validation.
-
-## Profile amendment and runtime evidence
-
-For future reuse of the V1 execution profile:
-
-- fixture root `README.md` is included in the fixture task exact write set through the post-run amendment;
-- tests must be labelled by evidence level: artifact present, statically inspected, runtime executed, runtime passed, and optionally independently reproduced;
-- the historical S6 test is not claimed to have run or passed;
-- its missing import must be fixed before any separately authorized runtime supplement.
-
-No runtime supplement is currently authorized or required for the Owner architecture decision.
+Candidate v0.2 may guide a future real target's own adoption decision. It does not establish universal correctness, production readiness, provider portability, quantitative migration reliability, or automatic propagation into any target.
 
 ## Preserved deferrals
 
@@ -108,27 +83,53 @@ No runtime supplement is currently authorized or required for the Owner architec
 - production-grade concurrency automation;
 - final human/Agent documentation serialization and synchronization;
 - optional consumer registration/notification;
-- real backup providers/accounts/credentials/automation;
+- real backup providers, accounts, credentials, retention and automation;
 - quantitative migration reliability;
 - all target-specific adoption and migration decisions.
 
 ## Evidence retention
 
-All `tlr-v1-*` evidence branches in the synthetic repository remain retained until:
+The following synthetic V1 branch classes remain retained:
 
-1. durable branch-unique evidence preservation or archive is established;
-2. preservation completeness is verified; and
-3. the Owner explicitly authorizes cleanup.
+```text
+tlr-v1-controller
+tlr-v1-fixture-base
+tlr-v1-s1-destination-block
+tlr-v1-s2-bounded-writer
+tlr-v1-s3-alpha
+tlr-v1-s3-beta
+tlr-v1-s4-alpha-dependent
+tlr-v1-s4-shared-schema
+tlr-v1-s4-unknown-global
+tlr-v1-s5-upstream-proposal
+tlr-v1-s6-beta-requirement
+tlr-v1-s7-alpha-migration
+tlr-v1-s7-commonlib-v2
+tlr-v1-s8-insufficient-docs
+tlr-v1-s9-imperfect-route
+tlr-v1-s11-backup-restore
+```
 
-The MNEMOSYNE-215 implementation branch has no equivalent retention dependency after PR #283 merges and post-merge verification passes.
+Cleanup requires all of:
 
-## Platform observation backlog
+1. durable preservation or archival of branch-unique evidence;
+2. verification that preservation is complete;
+3. explicit Owner cleanup release.
 
-The Owner observed a possible ordinary-Chat-to-Work follow-up transfer capability. Current official documentation confirms Work selection, Project context use and cloud cross-device sync, but the observed transfer trigger and context/permission semantics remain unverified. The observation and a non-authorized read-only pilot candidate are recorded separately.
+## True next optional routes
+
+There is **no mandatory next Target-Lifecycle execution**. A later task must be explicitly selected. Independent options are:
+
+1. **Per-target adoption review** — choose one real target and prepare a target-owned adopt/adapt/defer/reject decision package.
+2. **Optional runtime-evidence supplement** — only if stronger synthetic runtime-correctness evidence is valuable; separately authorize it and first repair the S6 import defect.
+3. **Evidence preservation / cleanup design** — design durable preservation for branch-unique evidence before any cleanup decision.
+4. **Chat → Work read-only pilot design** — investigate the Owner-observed handoff behavior using public/synthetic, read-only material; the pilot itself remains unauthorized.
+5. **Wait** — do nothing on this route until a concrete target or evidence question makes one of the above worthwhile.
+
+No option is implied by the V1 acceptance.
 
 ## Not authorized
 
-- Agent merge or auto-merge of PR #283;
 - target adoption, migration or activation;
 - modification of Meta-Agent or any real target;
 - execution-source modification;
@@ -137,6 +138,12 @@ The Owner observed a possible ordinary-Chat-to-Work follow-up transfer capabilit
 - deletion or rewriting of V1 evidence branches;
 - Work pilot, Scheduled Task, monitoring, Deep Research, Fable, other app action or external quota.
 
-## One safe next action
+## Publication state
 
-The Owner may merge Ready PR #283. After merge becomes observable, a next-tier/mechanical closeout should verify the merge commit, latest `master`, expected files, ordinary disposition of the MNEMOSYNE-215 branch, and continued retention of every synthetic V1 evidence branch. None of those checks requires Pro unless a material contradiction appears.
+The post-merge closeout evidence and this corrected navigation are prepared on:
+
+```text
+mnemosyne-216-pr283-post-merge-closeout
+```
+
+Direct `master` write is not used. Publication of this closeout through a PR is a separate GitHub action and requires its own authorization.
