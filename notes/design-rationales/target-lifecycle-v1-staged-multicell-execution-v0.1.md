@@ -11,9 +11,9 @@ V1_authorized: false
 
 ## Problem and user goal
 
-V0 established that the public synthetic repository and the current GitHub connector can preserve package identity, material boundaries and named-repository no-write proof. The next useful evidence must test the candidate's actual semantics through S1–S9 and S11.
+V0 established that the public synthetic repository and current GitHub connector can preserve package identity, material boundaries and named-repository no-write proof. The next useful evidence must test candidate semantics through S1–S9 and S11.
 
-The V1 execution design must satisfy two competing needs:
+The V1 design must satisfy two competing needs:
 
 - keep the Owner's manual operating burden and model cost proportionate;
 - prevent context contamination, especially the S8 negative documentation test, whose worker must not know the sufficient migration facts revealed in S7.
@@ -36,24 +36,23 @@ It must also preserve one canonical branch per writing task, exact artifact iden
 
 ## Alternatives considered
 
-### Option A — One long executor conversation
+### Option A — One conversation for every execution and review role
 
 **Advantages**
 
-- lowest operator overhead;
-- simplest conversational continuity;
-- one place to collect outputs.
+- lowest launch count;
+- simplest conversational continuity.
 
 **Disadvantages**
 
-- the executor would see S7's sufficient migration guide before S8;
-- a long context increases accidental semantic drift and hidden reuse of expected answers;
-- one failure can contaminate many dependent scenarios;
-- reviewer/executor role separation becomes weaker.
+- the same executor would see S7's sufficient migration guide before S8;
+- S8 would cease to be a credible missing-information negative test;
+- final review would not be context-independent from execution;
+- long context increases accidental reuse of expected answers.
 
-**Disposition:** rejected because it cannot credibly preserve the S8 knowledge firewall.
+**Disposition:** rejected because it violates the S8 firewall and review-separation goals.
 
-### Option B — One fresh conversation per scenario
+### Option B — One fresh conversation per scenario or logical cell
 
 **Advantages**
 
@@ -64,56 +63,68 @@ It must also preserve one canonical branch per writing task, exact artifact iden
 **Disadvantages**
 
 - unnecessarily high Owner operating cost;
-- repeated fixture/package setup increases transport and input-binding risk;
-- many small conversations create avoidable bookkeeping and return-routing burden.
+- repeated setup increases transport and input-binding risk;
+- many small conversations create avoidable bookkeeping and return-routing burden;
+- most scenarios do not have a planted knowledge-isolation requirement.
 
-**Disposition:** rejected as the universal topology; retained only where isolation is material.
+**Disposition:** rejected as the default topology.
 
-### Option C — Staged multi-cell execution
+### Option C — Three-conversation staged execution
 
-Use one controller/setup cell, one grouped core cell, separate positive and negative documentation cells, one backup/restore cell, and one mechanical closeout. S8 alone receives a mandatory fresh-context firewall. Final semantic adjudication occurs in a fresh Pro conversation.
+Use one next-tier main executor conversation for controller/fixture work, Core, S7, S11 and final mechanical closeout; one mandatory fresh next-tier conversation for S8; and one mandatory fresh Pro conversation for final adjudication.
+
+The main executor prepares the isolated S8 branch and launch receipt, performs all non-S8 logical cells on their separate canonical task branches, pauses for the fresh S8 result, then resumes mechanical closeout.
 
 **Advantages**
 
-- preserves the only mandatory knowledge-isolation case;
-- groups scenarios with compatible context and authority structure;
-- limits Owner launches to a small number of well-defined cells;
-- keeps failures and branch lineages reconstructable;
-- permits exact controller-side mechanical aggregation without making the controller the final semantic authority.
+- preserves the only mandatory worker knowledge firewall;
+- preserves fresh final review;
+- reduces the Owner's required conversations from six or more to three;
+- keeps task and evidence isolation in Git branches rather than forcing unnecessary chat proliferation;
+- permits exact controller-side aggregation without making the controller final semantic authority;
+- keeps all compatible frozen execution in one bounded next-tier context.
 
 **Disadvantages**
 
-- more complex than a single conversation;
-- controller must enforce exact branch/input allowlists;
-- grouped core-cell contamination remains possible among S1–S6/S9, although their expected facts do not create the same negative-test conflict as S7/S8;
-- branch retention is required until final adjudication preserves all identities.
+- the main executor context is longer;
+- Core, S7 and S11 share conversational context, although none is a negative knowledge test against another;
+- a main-executor failure may affect several logical cells and must be preserved rather than hidden;
+- controller branch/input allowlists remain essential.
 
-**Disposition:** selected.
+**Disposition:** selected. It provides the minimum conversation separation needed for valid evidence while respecting the Owner's operating cost.
 
 ## Selected topology
 
 ```text
-V1 Controller / Fixture Cell
-  ├─ Core Cell: S1, S2, S3, S4, S5, S6, S9
-  ├─ Positive Documentation Cell: S7
-  ├─ Fresh Negative Documentation Cell: S8
-  ├─ Backup / Restore Cell: S11
-  └─ Mechanical Closeout Cell
-        ↓
-Fresh Pro Adjudication
-        ↓
+Conversation 1 — MNE-DR-003 Execute (next-tier)
+  Controller / fixture
+  Core: S1, S2, S3, S4, S5, S6, S9
+  Positive documentation: S7
+  Backup / restore: S11
+  Prepare isolated S8 branch and receipt
+  Pause for S8
+       ↓
+Conversation 2 — MNE-DR-003 S8 (fresh next-tier)
+  Negative documentation: S8 only
+       ↓
+Return S8 exact result refs to Conversation 1
+  Mechanical closeout and complete V1 bundle
+       ↓
+Conversation 3 — MNE-DR-003 Review (fresh Pro)
+  Semantic adjudication
+       ↓
 Owner architecture decision
 ```
 
-The controller may create and pin fixture/task branches but must not reveal S7 sufficient migration facts to the S8 worker. Each writing task retains its own task ID and canonical branch. Scenario PRs are unnecessary and remain prohibited unless a later authorization explicitly requires them.
+Logical cells and task branches remain separate even when the main executor runs them in one conversation. Each writing task retains its own task ID, branch, write set, result and provisional disposition. Scenario PRs are unnecessary and remain prohibited unless a later authorization explicitly requires them.
 
 ## Why S10 is excluded
 
 S10 is explicitly exploratory and non-baseline. It investigates optional impact views and registration exceptions and may generate candidate amendments. Including it in the first baseline V1 would:
 
-- add scope that is not required for a baseline disposition;
-- risk mixing optional design exploration with pass/fail evidence;
-- create additional Pro adjudication work before the baseline mechanisms are known to function.
+- add scope not required for a baseline disposition;
+- mix optional design exploration with pass/fail evidence;
+- increase execution and adjudication burden before baseline mechanisms are known to function.
 
 S10 may be separately selected after baseline V1 results if the Owner wants that evidence.
 
@@ -121,7 +132,8 @@ S10 may be separately selected after baseline V1 results if the Owner wants that
 
 - every baseline-critical scenario receives execution evidence;
 - S8 remains a credible negative test rather than a memory test the worker has already been taught to pass;
-- V1 can be executed by a bounded next-tier model while semantic acceptance remains with Pro and the Owner;
+- the Owner operates only three conversations;
+- V1 execution can use a bounded next-tier model while semantic acceptance remains with fresh Pro and the Owner;
 - raw outputs remain in the synthetic repository;
 - Mnemosyne receives only a later reviewed summary and references under separate authority;
 - V0 evidence remains immutable and distinguishable from V1.
@@ -130,34 +142,35 @@ S10 may be separately selected after baseline V1 results if the Owner wants that
 
 | Risk | Control |
 |---|---|
-| S8 worker sees S7 guide | fresh conversation; exact branch/file allowlist; no broad repository search; contamination check in result |
-| grouped core cell drifts across scenarios | frozen inputs; separate task branches; per-scenario contracts and dispositions |
-| controller silently repairs protocol | protocol-defect stop; proposed amendments marked non-adopted |
-| branch proliferation | fixed branch map; one canonical branch per task; retain only through adjudication; later explicit cleanup decision |
-| artifact identity inconsistency | require both blob SHA and creation/update commit for every output |
+| S8 worker sees S7 guide | fresh conversation; exact branch/file allowlist; no broad repository search; contamination check |
+| long main-executor context drifts | frozen inputs; separate task branches/contracts/results; stop on semantic conflict |
+| failure contaminates later main-executor cells | preserve incident; stop dependent work; do not clean-rewrite history |
+| controller silently repairs protocol | protocol-defect stop; amendments remain non-adopted |
+| branch proliferation | fixed map; one branch per task; retain through adjudication only |
+| artifact identity inconsistency | require blob SHA plus creation/update commit for every output |
 | unsupported no-write claim | exact before/after refs only for named repositories; disclose unnamed-target limitation |
-| next-tier executor overreaches | exact stop rules and return-to-Pro triggers |
-| same-context final review | fresh Pro adjudication conversation required |
+| same-context final review | separate fresh Pro adjudication conversation |
 
 ## Validation / falsification plan
 
 The topology is invalid or must be revised if:
 
 - the product surface cannot keep S8 in a fresh context with exact input restrictions;
-- scenario workers cannot read/write only their authorized branches;
-- branch or output identity cannot be preserved;
-- the controller cannot produce exact declared-versus-actual write-set evidence;
-- real-repository before/after proof cannot be reconstructed;
-- grouped scenarios show material cross-contamination;
-- the operator flow imposes substantially more human work than the one-conversation alternative without adding useful evidence.
+- the main executor cannot pause and later resume closeout from exact S8 refs;
+- scenario tasks cannot remain mechanically separated by branch and write contract;
+- branch/output identity cannot be preserved;
+- no-write proof cannot be reconstructed;
+- the main context shows material cross-scenario contamination;
+- the three-conversation flow still imposes disproportionate Owner work without useful evidence.
 
 ## Affected artifacts
 
 - adds one V1 Owner decision candidate;
-- adds one V1 execution-profile package that supplements but does not amend the frozen validation package;
-- updates the current route status and backlog after V0 review;
+- adds one V1 execution package that supplements but does not amend the frozen validation package;
+- allocates one display alias with Execute/S8/Review suffixes;
+- updates current route status and backlog after V0 review;
 - does not modify candidate v0.2, validation v0.2, the frozen package, Meta-Agent or any real target.
 
 ## Owner decision and review limitations
 
-Owner confirmation is required before V1 runs. The current rationale is a Pro recommendation produced in the same conversation that executed V0 under a prior visible selection; exact backend identities are unknown. Final V1 adjudication should therefore use a fresh Pro conversation and must preserve this limitation.
+Owner confirmation is required before V1 runs. The current rationale is a Pro recommendation produced in the same conversation that executed V0 under a prior visible selection; exact backend identities are unknown. Final V1 adjudication therefore uses a fresh Pro conversation.
