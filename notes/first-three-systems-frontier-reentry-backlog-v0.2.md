@@ -1,110 +1,158 @@
 # First Three Systems — Frontier Re-entry and Evidence Backlog v0.2
 
-> Current non-execution-source routing record after Owner-confirmed TLR review, PR #278 merge, and explicit Owner authorization of the recommended V0-only validation profile.
+> Current non-execution-source routing record after Owner-confirmed TLR review, V0 execution/Pro adjudication, and explicit Owner authorization of the bounded V1 baseline. It does not make V1 active before PR #280 merge/post-merge identity verification and does not authorize architecture acceptance or target adoption.
 
 ```yaml
 backlog_id: MNE-FIRST-THREE-SYSTEMS-FRONTIER-BACKLOG-002
-version: 0.2.3
+version: 0.2.6
 created_by_task: MNEMOSYNE-209
-last_updated_by_task: MNEMOSYNE-211
+last_updated_by_task: MNEMOSYNE-212
 owner_result_ref: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001.md
 candidate_ref: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
 validation_ref: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
 validation_package_ref: notes/target-agent-lifecycle-validation-package-v0.2/README.md
-V0_decision_candidate_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md
 V0_authorization_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001.md
-PR_278_merge_commit: 8e1affee8776709f0673862d8b0203a25c9aaf59
-PR_278_post_merge_closeout_ref: notes/codex-task-results/MNEMOSYNE-211-result.md
-status: priority_1_V0_owner_authorized_execution_blocked_only_by_repository_creation_tool_other_priorities_preserved
+V0_adjudication_ref: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md
+V1_decision_candidate_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001.md
+V1_authorization_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
+V1_execution_package_ref: notes/target-agent-lifecycle-v1-execution-package-001/README.md
+V1_display_name: MNE-DR-003 生命周期验证
+canonical_PR: 280
+canonical_PR_state: open_ready
+status: priority_1_V1_owner_authorized_Ready_PR_280_open_pending_Owner_merge_and_post_merge_master_identity_verification_other_priorities_preserved
 execution_source: current/human-approved-spec.md
 ```
 
 ## Priority 1 — Target lifecycle, container, evolution and dependency responsibility
 
-Owner review is complete. Candidate v0.2, validation v0.2 and the frozen validation package are merged. PR #278 also merged the Ready-PR / Owner-review / frontier-efficiency workflow repair.
+### Completed evidence
 
-The Owner has now explicitly accepted `MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001` and authorized:
+- Owner review and candidate v0.2 formalization are complete.
+- Candidate v0.2, validation v0.2 and the frozen public/synthetic package are merged.
+- V0 ran in `08822407d/mnemosyne-target-lifecycle-validation-002` and stopped before substantive scenarios.
+- Raw V0 evidence remains in the synthetic repository at `master@e8e3296922185b4b70997c2351d6f39423f2cd4f`.
+- Pro adjudication accepts V0 only as a valid surface/identity/material/permission/no-write sentinel pass.
+- No candidate/package repair is required before V1.
+- Pro prepared a complete V1 baseline candidate and a three-conversation staged execution package.
+- The Owner confirmed branch `mnemosyne-212-v0-adjudication-and-v1-plan` at reviewed head `f35e1b4c28785dc0dc59273047a06bdf6a049653` and candidate blob `42bb0415243a7ffa7658d57bb6a651c86f5fb991`.
+- `MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001` records the Owner's exact V1 authority on the canonical branch.
+- Ready PR #280 is open with `draft: false`; auto-merge and Agent merge remain unauthorized.
 
-- creation of `08822407d/mnemosyne-target-lifecycle-validation-002` as a public synthetic-only repository;
-- writes only inside that synthetic repository for the exact V0 scope;
-- `V0_ONLY` execution;
-- mechanical repository/ref/path/diff/schema/hash/identity/no-write checks;
-- retention of raw V0 outputs in the synthetic repository.
+### V0 evidence boundary
 
-The Owner explicitly did **not** authorize:
+```yaml
+V0:
+  disposition: ACCEPT_V0_AS_VALID_SENTINEL_PASS
+  package_and_authorization_identity: pass
+  public_synthetic_material: pass
+  write_allowlist: pass
+  named_real_repository_no_write_proof: pass
+  S1_through_S11_started: false
+  architecture_accepted: false
+```
 
-- V1 or any substantive S1–S11 scenario;
-- writes to Mnemosyne, Meta-Agent or real targets during V0;
-- private/real target material;
-- web research, Deep Research, Fable or external quota;
-- raw-result ingestion into Mnemosyne;
-- architecture acceptance or target adoption.
+Named real-repository refs remained unchanged during V0:
 
-### Current V0 execution state
+- Mnemosyne: `930b5ed0c8d1db82e46fd9439035db3f2dd20c46`;
+- Meta-Agent: `1fdbd7af9437f72f7c8106714ad1e64908983fb7`.
+
+Other real targets were prohibited but not named by full repository identity. No per-repository commit proof is claimed for them.
+
+### Owner-authorized V1 baseline
+
+```yaml
+V1:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  pinned_base: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  owner_authorized: true
+  execution_active: false
+  scenario_scope:
+    selected:
+      - S1
+      - S2
+      - S3
+      - S4
+      - S5
+      - S6
+      - S7
+      - S8
+      - S9
+      - S11
+    excluded:
+      - S10
+      - V2
+  logical_profile: staged_multicell
+  actual_conversations:
+    - MNE-DR-003 Execute
+    - MNE-DR-003 S8
+    - MNE-DR-003 Review
+  execution_models:
+    Execute: next_tier
+    S8: fresh_next_tier
+    Review: fresh_Pro
+  raw_output: synthetic_repository_only
+  web_research_other_apps_or_external_quota: prohibited
+```
+
+`MNE-DR-003 Execute` performs controller/fixture, Core, S7 and S11, prepares the isolated S8 branch, pauses, and later performs mechanical closeout after exact S8 refs return. `MNE-DR-003 S8` is a fresh negative-test worker. `MNE-DR-003 Review` is a separate fresh Pro adjudicator that did not execute a V1 cell.
+
+S8 must not receive the Execute transcript, S7 output or exact sufficient migration facts. A contaminated S8 attempt is invalid and cannot be repaired in the same context.
+
+### Current activation gate
 
 ```yaml
 priority_1_gate:
-  PR_277_verified_merged: true
-  PR_278_verified_merged: true
-  current_master: 8e1affee8776709f0673862d8b0203a25c9aaf59
-  candidate_v0_2_merged: true
-  validation_v0_2_merged: true
-  frozen_validation_package_merged: true
-  V0_owner_authorization_recorded: true
-  repository_name: 08822407d/mnemosyne-target-lifecycle-validation-002
-  repository_name_exact_recheck: not_found_available_at_recheck
-  repository_creation_authorized: true
-  synthetic_repository_write_authorized: true
-  V0_authorized: true
-  V0_executed: false
-  V1_authorized: false
-  execution_block: BLOCKED_TOOL_CAPABILITY_REPOSITORY_CREATION_UNAVAILABLE
-  substitute_store_authorized: false
+  V0_Pro_adjudicated: true
+  V1_decision_candidate_prepared: true
+  V1_execution_package_prepared: true
+  V1_owner_authorized: true
+  V1_active: false
+  canonical_Ready_PR: 280
+  canonical_Ready_PR_state: open_ready
+  canonical_Ready_PR_merged: false
+  post_merge_master_identity_verified: false
+  V1_executed: false
+  S10_selected: false
+  V2_authorized: false
+  raw_result_ingestion_authorized: false
   architecture_globally_accepted: false
   target_adoption_authorized: false
 ```
 
-The current GitHub connector exposes repository/file/branch/PR mutations but no repository-creation mutation. Therefore V0 must not start on another store. Resume only on a surface that can create the already-authorized named repository, and record the exact visible model/mode at launch.
+V1 may begin only after PR #280 is merged and execution-time latest `master` is mechanically matched to the confirmed candidate/package/authorization lineage. The synthetic repository must also still be pinned to the required V0 final head before the first V1 write.
 
 ### Explicit deferrals preserved
 
-1. **TLR-04 parent-side minimum** — current safe default remains no substantive downstream content in parent/meta repositories.
-2. **TLR-03 detailed change schema** — preserve source/requirement and material API changes; learn finer categories/fields from practice.
-3. Exact concurrency proof/write-contract mechanics.
-4. Exact human/Agent change-document schema and synchronization.
-5. Narrow proactive notification/registration exceptions.
-6. Real backup provider/account topology and restore implementation.
+1. TLR-04 parent-side minimum-content question.
+2. TLR-03 detailed universal change schema.
+3. Real production concurrency automation beyond validated task contracts.
+4. Final human/Agent change-document schema and synchronization method.
+5. Optional proactive consumer notification/registration mechanisms.
+6. Real backup providers, accounts, credentials and synchronization.
 
-### Validation-dependent items after V0
-
-V0 is only a sentinel. If it succeeds, later separately authorized V1 is still needed for substantive evidence on:
-
-- write-set/non-interference mechanics;
-- shared/global/generated dependency detection;
-- downstream Agent migration from Agent-facing change documentation;
-- human-facing vs Agent-facing change-document consistency;
-- route-based change evidence sufficiency;
-- no-parent-content design-history tradeoffs;
-- backup independence and restore semantics.
-
-A V0 pass does not authorize V1.
+V1 may generate evidence or non-adopted amendment proposals; it may not silently close these deferrals.
 
 ## Priority 2 — Meta-Agent target-owned readiness
 
-Preserved blockers remain target-owned. Candidate v0.2 and V0 do not modify or activate Meta-Agent.
+Preserved blockers remain target-owned. Candidate v0.2 and validation runs do not modify or activate Meta-Agent.
 
 ## Priority 3 — Language-learning professional basis
 
-Still requires target-specific professional/education review, privacy/retention design and later product verification. No research is authorized by this backlog entry.
+Still requires target-specific education review, privacy/retention design and product verification. No research or target work is authorized by this backlog.
 
 ## Priority 4 — Backup implementation
 
-Real backup implementation still requires independent locations, controlled non-authoritative synchronization, source identity, restore tests, target-specific scope and credential/privacy review. V0 does not configure real backups.
+S11 may test synthetic backup/restore semantics only. Real implementation still requires independent locations, source identity, controlled non-authoritative synchronization, restore tests, target-specific scope and credential/privacy review.
 
 ## Priority 5 — Change documentation and record evidence
 
-Later evidence should test Agent-facing migration sufficiency, human/Agent semantic consistency, and which change fields prove useful in practice. Do not pre-build a universal schema merely because this backlog exists.
+S7/S8 will test positive and negative downstream-Agent migration behavior. S9 will test practical route evidence without a brittle taxonomy. Later quantitative or external research remains optional and should be triggered only by a precise evidence question after V1.
+
+## Platform observation — GitHub access versus ChatGPT sync
+
+Current OpenAI documentation and V0 behavior indicate that GitHub-side repository authorization and ChatGPT-side sync selection are separate. A repository authorized by the GitHub installation may remain accessible even when it is not selected for sync. Recheck after installation-scope, repository-visibility/ownership or product changes.
 
 ## Closure rule
 
-Preparation is not execution. V0 pass is not V1 authorization. Validation pass is not architecture acceptance. Architecture acceptance is not automatic target adoption or cross-target propagation.
+V0 pass is not architecture acceptance. V1 Owner authorization is not V1 activation before PR #280 merge/post-merge identity verification. V1 execution evidence is not Pro acceptance. Pro acceptance is not Owner architecture acceptance. Architecture acceptance is not target adoption or automatic propagation. Each later gate remains separate.

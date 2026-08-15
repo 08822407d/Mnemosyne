@@ -1,156 +1,150 @@
 # First Three Systems Owner Review and Target-Lifecycle Baseline — Current Status
 
-> Non-execution-source navigation for the Mnemosyne-owned first-three-systems route.
+> Non-execution-source navigation for the Mnemosyne-owned first-three-systems route. `current/human-approved-spec.md` remains the only execution source.
 
 ```yaml
 status_id: MNE-FIRST-THREE-SYSTEMS-POI4-REVIEW-STATUS-001
-last_updated_by_task: MNEMOSYNE-211
-status: PR_278_VERIFIED_MERGED_V0_OWNER_AUTHORIZED_BLOCKED_ON_REPOSITORY_CREATION_TOOL
-source_master: 8e1affee8776709f0673862d8b0203a25c9aaf59
-verified_merged_PR: 278
-verified_merge_commit: 8e1affee8776709f0673862d8b0203a25c9aaf59
+last_updated_by_task: MNEMOSYNE-212
+status: V1_OWNER_AUTHORIZED_READY_PR_280_OPEN_PENDING_OWNER_MERGE_AND_POST_MERGE_MASTER_IDENTITY_VERIFICATION
+source_master: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
 execution_source: current/human-approved-spec.md
-canonical_task_branch: mnemosyne-211-pr278-post-merge-closeout
-canonical_PR: 279
+canonical_task_branch: mnemosyne-212-v0-adjudication-and-v1-plan
+confirmed_reviewed_branch_head: f35e1b4c28785dc0dc59273047a06bdf6a049653
+confirmed_V1_candidate_blob: 42bb0415243a7ffa7658d57bb6a651c86f5fb991
+canonical_PR: 280
 canonical_PR_state: open_ready
-post_merge_closeout_result: notes/codex-task-results/MNEMOSYNE-211-result.md
-owner_review_result: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001.md
-candidate_v0_2: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
-validation_v0_2: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
-validation_package: notes/target-agent-lifecycle-validation-package-v0.2/README.md
-V0_decision_candidate: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001.md
-V0_authorization: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001.md
-backlog: notes/first-three-systems-frontier-reentry-backlog-v0.2.md
-Ready_PR_and_frontier_efficiency_guard: current/agent-product-ready-pr-and-frontier-efficiency-guard.md
+PR_finalization_ref: notes/codex-task-results/MNEMOSYNE-212-pr-finalization.md
+V0_adjudication: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md
+V1_decision_candidate: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-DECISION-CANDIDATE-001.md
+V1_owner_authorization: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
+V1_execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
+V1_design_rationale: notes/design-rationales/target-lifecycle-v1-staged-multicell-execution-v0.1.md
+V1_display_name: MNE-DR-003 生命周期验证
+V1_executed: false
 ```
 
 ## Completed
 
 - OR-01 through OR-09 and TLR-01 through TLR-05 Owner review are complete and formally recorded.
 - Candidate v0.2, validation v0.2 and the frozen public/synthetic validation package were merged through PR #277.
-- PR #278 merged at `8e1affee8776709f0673862d8b0203a25c9aaf59` and made the Ready-PR / Owner-review / frontier-efficiency rules active.
-- MNEMOSYNE-211 verified that latest `master` equals the PR #278 merge commit, the expected merged paths are present, the old PR branch is absent, and no workflow run was returned for the merge commit.
-- The stale PR #278 open/merge gate is closed on the MNEMOSYNE-211 follow-up lineage.
-- Owner confirmed `MNE-TARGET-LIFECYCLE-V0-RUN-DECISION-CANDIDATE-001` and explicitly authorized the recommended public synthetic repository plus `V0_ONLY` execution.
-- Ready PR #279 was created for the MNEMOSYNE-211 closeout with `draft: false`; auto-merge is not authorized.
-- No validation repository has been created and no V0/V1 execution has begun.
+- PR #278 merged and made the Ready-PR / Owner-review / frontier-turn-efficiency rules active.
+- PR #279 merged at `930b5ed0c8d1db82e46fd9439035db3f2dd20c46` and preserved the V0-only Owner authorization.
+- V0 executed in `08822407d/mnemosyne-target-lifecycle-validation-002` and stopped before substantive scenarios.
+- V0 raw evidence remains only in the public synthetic repository at `master@e8e3296922185b4b70997c2351d6f39423f2cd4f`.
+- Pro/frontier review accepted V0 as a valid surface/identity/material/permission/no-write sentinel pass.
+- Current OpenAI documentation plus observed V0 behavior support the distinction between GitHub-side repository authorization and ChatGPT-side sync selection.
+- Pro prepared the complete V1 baseline decision candidate, three-conversation execution package, S8 knowledge firewall, rationale and operator flow.
+- The Owner explicitly confirmed the exact reviewed branch head `f35e1b4c28785dc0dc59273047a06bdf6a049653` and V1 decision candidate blob `42bb0415243a7ffa7658d57bb6a651c86f5fb991`.
+- `MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001` is saved on the same canonical branch.
+- Ready PR #280 was created with `draft: false`; auto-merge is not enabled or authorized.
 
-## Agent-product PR and review rule
-
-For Mnemosyne and similar Agent products, the merged active rule is:
-
-- completed work with required Agent semantic review and mechanical checks defaults to one Ready PR;
-- Draft is limited to recorded incomplete-work or explicit-Owner exceptions;
-- Owner merge is an authority/acceptance gate, not evidence of comprehensive line-by-line review;
-- the responsible Agent carries the default semantic/mechanical review burden and states a merge disposition;
-- concrete real-use behavioral feedback is first-class evidence, while hidden/high-impact risks still require proactive safeguards;
-- scarce Pro/frontier turns should finish all authorized frontier work before routing only bounded/mechanical follow-up away from Pro;
-- every observed merge requires post-merge state closeout.
-
-The active specific guard is `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`.
-
-## Owner-confirmed target-lifecycle baseline
-
-- provably disjoint target-local tasks may proceed concurrently in one physical repository; shared/global/unknown work serializes, reconciles or blocks;
-- bounded task writers remain distinct from authority owners;
-- library Agent documents its own changes; consuming project Agents migrate on demand;
-- library change information has human-facing and downstream-Agent-facing roles plus a discoverable documentation overview;
-- no exhaustive authoritative consumer list is required by default;
-- upstream/meta changes enter downstream only through Owner-initiated bounded tasks; there is no automatic propagation or standing downstream write authority;
-- change categories remain practical and lightweight; original requirements/source and material API changes form the current minimum record;
-- current safe default is no substantive downstream content in parent/meta repositories;
-- dedicated backups remain non-authoritative recovery copies.
-
-## Preserved deferrals
-
-1. Exact detailed change categories, key fields and fixed change-record schema.
-2. Whether any genuinely necessary parent-owned minimum downstream content exists.
-3. Exact concurrency proof/write-contract mechanics.
-4. Exact human/Agent change-document schema, synchronization and comprehension evidence.
-5. Narrow proactive notification/registration exceptions.
-6. Real backup provider/account topology and restore implementation.
-
-## Current validation authorization
+## V0 adjudication
 
 ```yaml
-validation_state:
-  PR_277_verified_merged: true
-  PR_278_verified_merged: true
-  candidate_v0_2_merged: true
-  validation_v0_2_merged: true
-  package_merged: true
-  Ready_PR_guidance_merged: true
-  V0_decision_candidate_merged: true
-  V0_owner_authorization_recorded_on_PR_279_branch: true
-  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
-  visibility: public
-  repository_name_exact_recheck: not_found_available_at_recheck
-  repository_creation_authorized: true
-  synthetic_repository_write_authorized: true
-  V0_selected: true
-  V0_authorized: true
-  V0_executed: false
-  V1_selected: false
-  V1_authorized: false
+V0_review:
+  run_id: MNE-TARGET-LIFECYCLE-V0-001
+  synthetic_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  V0_final_head: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  disposition: ACCEPT_V0_AS_VALID_SENTINEL_PASS
+  blocking_defects: []
+  candidate_revision_required_before_V1: false
+  package_revision_required_before_V1: false
   architecture_globally_accepted: false
-  target_adoption_authorized: false
 ```
 
-The Owner authorization is:
+High-confidence commit-level no-write proof is exact for:
 
-`notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001.md`
+- `08822407d/Mnemosyne` at `930b5ed0c8d1db82e46fd9439035db3f2dd20c46`;
+- `08822407d/Meta-Agent` at `1fdbd7af9437f72f7c8106714ad1e64908983fb7`.
 
-It authorizes only the recommended public/synthetic V0 profile. It prohibits V1, writes to Mnemosyne/Meta-Agent/real targets during V0, private material, web/research, external quota, raw-result ingestion into Mnemosyne, and target adoption.
+Other real-target classes remain prohibited but were not named by exact repository identity; no per-repository SHA proof is claimed for them.
 
-## Current execution block
-
-The target repository name returned exact GitHub `404 Not Found`, so no name conflict was found. However, the GitHub connector action set exposed in the current conversation has no repository-creation mutation.
+## Owner-authorized V1 profile
 
 ```yaml
-V0_execution_block:
-  status: BLOCKED_TOOL_CAPABILITY_REPOSITORY_CREATION_UNAVAILABLE
-  owner_authorization_missing: false
-  repository_name_conflict: false
-  validation_started: false
-  substitute_store_selected: false
-  safe_behavior: do_not_substitute_another_store_or_start_V0
-  resume_condition:
-    - use_an_execution_surface_with_authorized_GitHub_repository_creation_capability
-    - record_visible_model_or_mode_verbatim_at_launch
+V1:
+  authorization_id: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
+  authorization_status: CONFIRMED_NOT_ACTIVE_UNTIL_PR_280_MERGE_AND_IDENTITY_VERIFICATION
+  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  pinned_base: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  phase: V1_BASELINE_ONLY
+  selected_scenarios:
+    - S1
+    - S2
+    - S3
+    - S4
+    - S5
+    - S6
+    - S7
+    - S8
+    - S9
+    - S11
+  excluded:
+    - S10
+    - V2
+  execution_profile: staged_multicell_three_conversations
+  conversations:
+    - MNE-DR-003 Execute
+    - MNE-DR-003 S8
+    - MNE-DR-003 Review
+  main_and_S8_model_class: next_tier
+  final_review_model_class: fresh_Pro
+  synthetic_repository_only_writes: true
+  raw_output_ingestion_into_Mnemosyne: false
+  external_research_or_quota: prohibited
 ```
 
-This is a tool-capability block, not a request to redesign V0. The authorization remains valid for the named repository and expires with the run.
+### S8 isolation
 
-## Current MNEMOSYNE-211 PR state
+S8 must run in a new next-tier conversation that has not seen S7 sufficient migration documentation or concrete hidden migration facts. It receives only the sanitized S8 worker packet and authorized branch inputs. Contamination invalidates the attempt; it must not be repaired in the same conversation.
+
+## Activation gate
+
+V1 is Owner-authorized but **not active**. It may start only after all of the following are true:
+
+1. Ready PR #280 is merged by the Owner;
+2. execution-time latest `master` is re-read;
+3. merged candidate, execution package and authorization identities/content lineage match the confirmed branch artifacts;
+4. the synthetic repository still has the required V0 final head as the V1 starting point;
+5. no conflicting V1 execution has begun.
+
+Until then:
 
 ```yaml
-MNEMOSYNE_211:
-  base_master: 8e1affee8776709f0673862d8b0203a25c9aaf59
-  canonical_branch: mnemosyne-211-pr278-post-merge-closeout
-  canonical_PR: 279
+V1_execution_state: AUTHORIZED_BUT_NOT_ACTIVE_PENDING_PR_280_MERGE_AND_MASTER_IDENTITY_VERIFICATION
+```
+
+## Current branch and publication state
+
+```yaml
+MNEMOSYNE_212:
+  base_master: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+  canonical_branch: mnemosyne-212-v0-adjudication-and-v1-plan
+  canonical_PR: 280
   PR_state: open_ready
   PR_draft: false
-  merge_or_auto_merge: not_authorized
+  auto_merge_authorized: false
+  Agent_merge_authorized: false
   direct_master_write: prohibited
+  V1_execution_authorized_after_activation_gate_only: true
 ```
 
-No verified downstream route requires retaining the branch after a future merge; the ordinary deletion-after-merge default applies.
+No verified post-merge route requires retaining the live MNEMOSYNE-212 branch; the ordinary deletion-after-merge default applies.
 
-## Not completed or authorized
+## Not authorized or not yet active
 
-- merge or auto-merge of PR #279;
-- V1 execution;
-- raw validation-result ingestion into Mnemosyne;
+- Agent merge or auto-merge of PR #280;
+- V1 before PR #280 merge and post-merge identity check;
+- S10 or V2;
+- raw V1 result ingestion into Mnemosyne;
 - global architecture acceptance;
-- target-specific adoption/migration;
-- Meta-Agent or business-target modification;
+- target-specific adoption or migration;
+- Meta-Agent or real-target modification;
 - execution-source modification;
-- Deep Research, Fable or external quota run;
-- real backup configuration.
+- Web, Deep Research, Fable, other connected apps or external quota during V1;
+- scenario PRs;
+- cleanup/deletion of V1 evidence branches before fresh Pro adjudication and evidence-preservation release.
 
 ## One safe next action
 
-1. Merge Ready PR #279 if the Owner accepts this state-only closeout.
-2. To actually begin the already-authorized V0, use a GitHub execution surface that can create `08822407d/mnemosyne-target-lifecycle-validation-002`; record the exact visible model/mode at launch and stop after V0.
-
-Do not substitute another repository/store and do not run V1.
+The Owner may merge Ready PR #280. After the merge becomes observable, verify the exact merge commit, latest `master`, merged candidate/execution-package/authorization identities, and the synthetic V0 head before starting `MNE-DR-003 Execute`.

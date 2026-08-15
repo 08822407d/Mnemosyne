@@ -5,7 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.1.0
+version: 0.1.1
+last_updated_by_task: MNEMOSYNE-212
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -21,7 +22,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 003
+    next_unallocated_sequence: 004
 
   Meta_Agent:
     project_id: meta-agent
@@ -54,6 +55,20 @@ issued_aliases:
     status: issued_deferred_not_executed
     notes:
       - alias_only_no_canonical_rename
+
+  - display_name: MNE-DR-003 生命周期验证
+    sequence: 003
+    canonical_task_id: MNE-TARGET-LIFECYCLE-V1-001
+    project: Mnemosyne
+    status: issued_prepared_not_owner_authorized
+    allocation_task: MNEMOSYNE-212
+    execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
+    notes:
+      - alias_only_no_canonical_rename
+      - one_V1_run_with_logical_multicell_execution
+      - three_conversation_operator_flow
+      - use_suffixes_Execute_S8_Review
+      - no_Deep_Research_or_Fable_execution_implied
 ```
 
 ## 3. Historical Meta-Agent compatibility
