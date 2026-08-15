@@ -1,10 +1,10 @@
 # First Three Systems — Frontier Re-entry and Evidence Backlog v0.2
 
-> Current non-execution-source routing record after Owner-confirmed TLR review, V0 execution/Pro adjudication, and explicit Owner authorization of the bounded V1 baseline. It does not make V1 active before publication/identity verification and does not authorize architecture acceptance or target adoption.
+> Current non-execution-source routing record after Owner-confirmed TLR review, V0 execution/Pro adjudication, and explicit Owner authorization of the bounded V1 baseline. It does not make V1 active before PR #280 merge/post-merge identity verification and does not authorize architecture acceptance or target adoption.
 
 ```yaml
 backlog_id: MNE-FIRST-THREE-SYSTEMS-FRONTIER-BACKLOG-002
-version: 0.2.5
+version: 0.2.6
 created_by_task: MNEMOSYNE-209
 last_updated_by_task: MNEMOSYNE-212
 owner_result_ref: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-OWNER-REVIEW-RESULT-001.md
@@ -17,7 +17,9 @@ V1_decision_candidate_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V
 V1_authorization_ref: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
 V1_execution_package_ref: notes/target-agent-lifecycle-v1-execution-package-001/README.md
 V1_display_name: MNE-DR-003 生命周期验证
-status: priority_1_V1_owner_authorized_not_active_pending_canonical_Ready_PR_merge_and_master_identity_verification_other_priorities_preserved
+canonical_PR: 280
+canonical_PR_state: open_ready
+status: priority_1_V1_owner_authorized_Ready_PR_280_open_pending_Owner_merge_and_post_merge_master_identity_verification_other_priorities_preserved
 execution_source: current/human-approved-spec.md
 ```
 
@@ -34,6 +36,7 @@ execution_source: current/human-approved-spec.md
 - Pro prepared a complete V1 baseline candidate and a three-conversation staged execution package.
 - The Owner confirmed branch `mnemosyne-212-v0-adjudication-and-v1-plan` at reviewed head `f35e1b4c28785dc0dc59273047a06bdf6a049653` and candidate blob `42bb0415243a7ffa7658d57bb6a651c86f5fb991`.
 - `MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001` records the Owner's exact V1 authority on the canonical branch.
+- Ready PR #280 is open with `draft: false`; auto-merge and Agent merge remain unauthorized.
 
 ### V0 evidence boundary
 
@@ -105,7 +108,8 @@ priority_1_gate:
   V1_execution_package_prepared: true
   V1_owner_authorized: true
   V1_active: false
-  canonical_Ready_PR_created: false
+  canonical_Ready_PR: 280
+  canonical_Ready_PR_state: open_ready
   canonical_Ready_PR_merged: false
   post_merge_master_identity_verified: false
   V1_executed: false
@@ -116,7 +120,7 @@ priority_1_gate:
   target_adoption_authorized: false
 ```
 
-V1 may begin only after the single authorized Ready PR is merged and execution-time latest `master` is mechanically matched to the confirmed candidate/package/authorization lineage. The synthetic repository must also still be pinned to the required V0 final head before the first V1 write.
+V1 may begin only after PR #280 is merged and execution-time latest `master` is mechanically matched to the confirmed candidate/package/authorization lineage. The synthetic repository must also still be pinned to the required V0 final head before the first V1 write.
 
 ### Explicit deferrals preserved
 
@@ -151,4 +155,4 @@ Current OpenAI documentation and V0 behavior indicate that GitHub-side repositor
 
 ## Closure rule
 
-V0 pass is not architecture acceptance. V1 Owner authorization is not V1 activation before publication/identity verification. V1 execution evidence is not Pro acceptance. Pro acceptance is not Owner architecture acceptance. Architecture acceptance is not target adoption or automatic propagation. Each later gate remains separate.
+V0 pass is not architecture acceptance. V1 Owner authorization is not V1 activation before PR #280 merge/post-merge identity verification. V1 execution evidence is not Pro acceptance. Pro acceptance is not Owner architecture acceptance. Architecture acceptance is not target adoption or automatic propagation. Each later gate remains separate.
