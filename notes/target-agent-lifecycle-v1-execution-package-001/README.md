@@ -29,9 +29,11 @@ The frozen v0.2 package defines scenario semantics and acceptance rules but leav
 - all baseline-critical scenarios S1–S9 and S11;
 - no exploratory S10;
 - one canonical branch per repository-writing task;
-- a mandatory fresh-context S8 negative cell;
+- one bounded next-tier main executor for all non-S8 logical cells and mechanical closeout;
+- a mandatory fresh-context S8 negative worker;
 - exact blob plus commit identity for every output;
-- final no-write comparison and fresh Pro adjudication.
+- final no-write comparison and fresh Pro adjudication;
+- only three Owner-operated conversations.
 
 This package is operational scaffolding only. If it conflicts with candidate v0.2 or the frozen validation package, execution must stop and return `V1_PROTOCOL_PROFILE_CONFLICT` for Pro review. The supplement may not silently override the frozen source.
 
@@ -50,36 +52,41 @@ notes/target-agent-lifecycle-v1-execution-package-001/
 └── 07-integrity-checklist.md
 ```
 
-## Selected run topology
+## Logical cells and actual conversations
+
+The branch/evidence model retains six logical cells, but they use only three conversations:
 
 ```text
-Owner V1 authorization
-  ↓
-Controller / Fixture Cell
-  ↓
-Core Cell — S1, S2, S3, S4, S5, S6, S9
-  ↓
-Positive Documentation Cell — S7
-  ↓
-Fresh Negative Documentation Cell — S8
-  ↓
-Backup / Restore Cell — S11
-  ↓
-Mechanical Closeout
-  ↓
-Fresh Pro Adjudication
-  ↓
+Conversation 1 — MNE-DR-003 Execute (next-tier)
+  Controller / fixture
+  Core — S1, S2, S3, S4, S5, S6, S9
+  Positive documentation — S7
+  Backup / restore — S11
+  Prepare S8 sanitized branch and isolation receipt
+  Pause for S8 result
+       ↓
+Conversation 2 — MNE-DR-003 S8 (fresh next-tier)
+  Negative documentation — S8 only
+       ↓
+Return exact S8 refs to Conversation 1
+  Mechanical closeout and complete bundle
+       ↓
+Conversation 3 — MNE-DR-003 Review (fresh Pro)
+  Semantic adjudication
+       ↓
 Owner architecture decision
 ```
 
-Cells may be launched in a different order only when the dependency and contamination rules remain satisfied. In particular:
+Logical task isolation remains in Git branches and contracts rather than requiring a new chat for every scenario. Conversation 1 may run its compatible cells in another order only when dependency and contamination rules remain satisfied.
 
-- controller/fixture must complete first;
-- S7 library output must precede the S7 Alpha migration segment;
-- S8 must branch from its isolated prepared input and must not receive S7 sufficient facts;
-- S11 requires a pinned source target state;
-- mechanical closeout occurs after every selected cell has stopped;
-- final Pro adjudication occurs in a fresh conversation that did not execute a V1 cell.
+Required order constraints:
+
+- controller/fixture completes first;
+- S7 library output precedes the S7 Alpha migration segment;
+- S8 branch is created from its isolated fixture-based input and has no S7 ancestry;
+- S11 uses a pinned source target state;
+- mechanical closeout waits for the fresh S8 result;
+- final Pro adjudication occurs in a fresh conversation that executed no V1 cell.
 
 ## Fixed scenario scope
 
@@ -115,7 +122,7 @@ V1 pins:
 master@e8e3296922185b4b70997c2351d6f39423f2cd4f
 ```
 
-The controller allocates exact branches from pinned commits. Recommended branch names are defined in `00-controller-fixture-and-branch-contract.md`. No V1 scenario PR is required or authorized by this package.
+The main executor allocates exact branches from pinned commits. Branch names are defined in `00-controller-fixture-and-branch-contract.md`. No V1 scenario PR is required or authorized.
 
 V0 files under:
 
@@ -135,22 +142,21 @@ Scenario code and task evidence live on their exact task branches and are refere
 
 ## Model and context model
 
-The frozen execution cells are `NEXT_TIER_SUFFICIENT_CANDIDATE`. The current recommendation, if still visible and available at launch, is the user-reported option:
+The frozen execution roles are `NEXT_TIER_SUFFICIENT_CANDIDATE`. The current recommendation, if still visible and available at launch, is the user-reported option:
 
 ```text
 gpt-5.6 sol extra high
 ```
 
-Every cell records the actual visible selection and reasoning setting verbatim. A UI label does not attest the served backend.
+Every conversation records the actual visible selection and reasoning setting verbatim. A UI label does not attest the served backend.
 
-Mandatory context separation:
+Mandatory separation:
 
-- S8 uses a new ChatGPT conversation;
-- S8 receives only the exact files/branch permitted by `03-fresh-negative-documentation-cell-s8.md`;
-- S8 must not receive S7 output, the sufficient Agent-facing guide or a summary of its migration facts;
-- final semantic adjudication uses another fresh Pro conversation.
+- `MNE-DR-003 S8` is a new conversation and receives only the sanitized branch/input contract;
+- it must not receive S7 output, the sufficient Agent-facing guide, the frozen file section containing the exact v2 contract or a summary of those facts;
+- `MNE-DR-003 Review` is another new Pro conversation and has executed no scenario.
 
-Other cells may use separate conversations as provided in the startup messages. The controller and final mechanical closeout may share a bounded controller conversation if the exact run ledger remains reconstructable.
+The main executor may pause after preparing S8 and later resume mechanical closeout from exact S8 refs. If the product surface cannot preserve this return flow, stop and revise the profile rather than opening unnecessary ad hoc chats.
 
 ## Authority and safety boundary
 
@@ -191,27 +197,27 @@ task_evidence:
   provisional_disposition:
 ```
 
-The controller must never replace an exact identity with only a narrative summary.
+The main executor must never replace an exact identity with only a narrative summary.
 
 ## Stop conditions
 
-Stop the affected cell or the whole run when:
+Stop the affected cell or whole run when:
 
 - V1 Owner authorization is absent or does not match the package;
 - the repository or pinned V0 head differs;
 - a required package file or identity is missing;
-- a cell is about to write outside its exact branch/write set;
+- a logical cell is about to write outside its exact task branch/write set;
 - private or real-target material appears;
 - S8 contamination cannot be ruled out;
-- a deferred TLR-03/TLR-04 rule would need to be invented;
+- a deferred TLR-03/TLR-04 rule would need invention;
 - output blob/commit identity cannot be preserved;
-- no-write proof for the named real repositories cannot be established;
-- a critical failure contaminates dependent scenarios;
+- no-write proof for named real repositories cannot be established;
+- a critical failure contaminates dependent work;
 - candidate/package semantics would need revision during execution.
 
 ## Return route
 
-V1 execution ends with a complete bundle in the synthetic repository and a visible decision-relevant response. The bundle returns to a **fresh Pro conversation** for semantic adjudication. That adjudication may recommend pass, bounded amendment, protocol revision, rerun, rejection or further Owner review, but cannot adopt the architecture into a real target.
+V1 ends with a complete bundle in the synthetic repository and a visible decision-relevant response. The bundle returns to `MNE-DR-003 Review`, a fresh Pro conversation. That review may recommend pass, bounded amendment, protocol revision, rerun, rejection or further Owner review, but cannot adopt the architecture into a real target.
 
 ## Current execution intent
 
