@@ -1,0 +1,266 @@
+manifest_id: MNE-DR-005-PROJECT-KNOWLEDGE-SNAPSHOT-MANIFEST-001
+task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
+display_name: MNE-DR-005 跨仓库并发
+snapshot:
+  repository: 08822407d/Mnemosyne
+  branch: mne-dr-005-project-knowledge-snapshot-001
+  folder: project-knowledge/MNE-DR-005
+  branch_base_master: 94072794cb67eb90034a19569d4716fc18aa635d
+  folder_selection_mode: select_this_single_folder_only
+  expected_recursive_file_count: 30
+  flat_directory: true
+  canonical_originals_moved_or_modified: false
+  research_execution_status: DO_NOT_START_UNTIL_OWNER_CONFIRMS_FOLDER_SELECTION_COUNT
+  automatic_retry: false
+  source_selection_note: The original prepared package was refreshed for current V1
+    status; the raw mechanical closeout is represented by the controller bundle and
+    M0-M11 evidence, while the Pro-corrected reusable-capability ownership candidate
+    remains an explicit F2 design input.
+source_refs:
+  Mnemosyne:
+    repository: 08822407d/Mnemosyne
+    commit: 94072794cb67eb90034a19569d4716fc18aa635d
+  V1_controller:
+    repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+    branch: tlr-v1-controller
+    head: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+current_V1_status:
+  fresh_Pro_adjudication: PASS_WITH_BOUNDED_AMENDMENTS_FOR_OWNER_REVIEW
+  Owner_decision: OWNER_ACCEPTED_PROVISIONAL_ARCHITECTURE_BASELINE_FOR_TARGET_SPECIFIC_CONSIDERATION
+  candidate_revision_required: false
+  V1_rerun_required: false
+  target_adoption_authorized: false
+  production_readiness_proven: false
+logical_files:
+- snapshot_file: 000-MNE-DR-005-最终任务.md
+  role: task_instruction
+  source: snapshot_generated_from_MNE_DR_005_with_current_V1_status_and_preflight_gate
+- snapshot_file: 001-MNE-DR-005-输入清单.yaml
+  role: input_manifest
+  source: self
+- snapshot_file: 010-Mnemosyne-human-approved-spec.md
+  role: authoritative_execution_source
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: current/human-approved-spec.md
+  source_blob: 01f64a8223677829320c66dd46d3f172cc9155cc
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 011-Mnemosyne-github-single-active-pr-lineage-guard.md
+  role: active_guard
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: current/github-single-active-pr-lineage-guard.md
+  source_blob: 042efe9e353097a17eea38d0bcb0ff1da7c4385e
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 012-Mnemosyne-run-context-and-pr-provenance-guard.md
+  role: active_guard
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: current/run-context-and-pr-provenance-guard.md
+  source_blob: 0e588b3f6789d0d941221d33c3eaba1561f6e2a3
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 013-Mnemosyne-urgent-research-and-validation-roadmap-v0.1.md
+  role: roadmap_candidate
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/urgent-research-and-validation-roadmap-v0.1.md
+  source_blob: 1019c123cd60745198be3a863ba6567029bb5a68
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 014-Mnemosyne-target-local-repository-operating-model-candidate-v0.1.md
+  role: candidate_design
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/target-local-repository-operating-model-candidate-v0.1.md
+  source_blob: 279590a434b706febf47552e92fe57ec9edf2958
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 015-Mnemosyne-target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
+  role: owner_accepted_provisional_global_candidate
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
+  source_blob: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 016-Mnemosyne-target-agent-container-evolution-and-dependency-model-validation-v0.2.md
+  role: validation_design
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
+  source_blob: 364482a28ab9218c3a6beddb072be2545779132f
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 017-Mnemosyne-V1-run-authorization-001.md
+  role: historical_owner_run_authorization
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
+  source_blob: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 018-Mnemosyne-V1-execution-package-README.md
+  role: historical_execution_package
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/target-agent-lifecycle-v1-execution-package-001/README.md
+  source_blob: 2dcccd37c42f0ea8e9e6dfef4fed6c59e915fe59
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 019-Mnemosyne-V1-controller-fixture-and-branch-contract.md
+  role: historical_execution_contract
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/target-agent-lifecycle-v1-execution-package-001/00-controller-fixture-and-branch-contract.md
+  source_blob: 7068b5efc0d484baf48824c5692ee1b3b2d8a634
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 020-Mnemosyne-reusable-capability-ownership-and-lifecycle-candidate-v0.1.md
+  role: candidate_design
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/reusable-agent-capability-ownership-and-lifecycle-model-candidate-v0.1.md
+  source_blob: accb13ccb57677d316f5f94ef58f7939ad69521b
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 021-Mnemosyne-V1-owner-accepted-post-run-amendment.md
+  role: current_owner_accepted_future_profile_amendment
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/target-agent-lifecycle-v1-execution-package-001/08-owner-accepted-post-v1-amendment.md
+  source_blob: 78d234cb1d9b2667302c1fef594389aaab077786
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 022-Mnemosyne-V1-fresh-Pro-adjudication-001.md
+  role: current_fresh_Pro_adjudication
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V1-ADJUDICATION-001.md
+  source_blob: b83a2dcf811358d2b98b367474c39aa28f711233
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 023-Mnemosyne-V1-Owner-architecture-decision-001.md
+  role: current_owner_architecture_decision
+  source_repository: 08822407d/Mnemosyne
+  source_ref: 94072794cb67eb90034a19569d4716fc18aa635d
+  source_path: notes/owner-decision-results/MNE-TARGET-LIFECYCLE-V1-OWNER-ARCHITECTURE-DECISION-001.md
+  source_blob: bc4cd7950831c6382c200b64c7e6be74ad6a8459
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 100-V1-controller-receive.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/00-controller-receive.yaml
+  source_blob: 98d8b0200bdc85aa910b2196c72d14ef7968ed5a
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 101-V1-branch-and-task-map.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/02-branch-and-task-map.yaml
+  source_blob: e49501f4b950475ac429adbf5df8f349d237abc0
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 102-V1-run-manifest.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/04-run-manifest.yaml
+  source_blob: 5d8644eca5a864c648ac4d3e80f4dbca9047a027
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 103-V1-result-bundle.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/06-v1-result-bundle.yaml
+  source_blob: 8a5f3644707ae518182ed352174e58d1ca419067
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 104-V1-core-cell-result.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/core-cell-result.yaml
+  source_blob: 7fbda83c0fd8f6b7868d84f835bfda46a384e98b
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 105-V1-S7-positive-cell-result.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s7-positive-cell-result.yaml
+  source_blob: 843ed26ace895c7bcf7cb869b3dd15233e869755
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 106-V1-S8-negative-cell-result.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s8-negative-cell-result.yaml
+  source_blob: 1f99bfd71caaa88c16c2f46c577141f8a3dfed53
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 107-V1-S11-backup-cell-result.yaml
+  role: raw_execution_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s11-backup-cell-result.yaml
+  source_blob: 0e252cfbda93d4da71dbff3afa8befa490fb40a5
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 108-V1-M0-M11-summary.yaml
+  role: raw_mechanical_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/M0-M11-summary.yaml
+  source_blob: 65fde802e6c02879237ea594b1eb37dbad691964
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 109-V1-branch-and-output-identities.yaml
+  role: raw_mechanical_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/branch-and-output-identities.yaml
+  source_blob: b881836d1a6dd7b7d2f748ad082048219b6d8337
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 110-V1-contamination-and-isolation-checks.yaml
+  role: raw_mechanical_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/contamination-and-isolation-checks.yaml
+  source_blob: c379ab4144c2bb029e01e0c0d18382e4f06c5233
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 111-V1-declared-vs-actual-write-sets.yaml
+  role: raw_mechanical_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml
+  source_blob: cac1940f922726b7d8cd77f8eb3463bc43715208
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 112-V1-final-no-write-proof.yaml
+  role: raw_mechanical_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/final-no-write-proof.yaml
+  source_blob: 682fad9e71122c2f83e697c7f09f9532f76c5724
+  snapshot_blob_expected_equal_source_blob: true
+- snapshot_file: 113-V1-incident-ledger.yaml
+  role: raw_incident_evidence
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_ref: e892749fc9e242b24908f89b6a78f1c0f0bed75e
+  source_path: runs/MNE-TARGET-LIFECYCLE-V1-001/incidents/incident-ledger.yaml
+  source_blob: 837955570511ed77529497dfdbfa2782e17fe40c
+  snapshot_blob_expected_equal_source_blob: true
+counts:
+  task_and_manifest: 2
+  Mnemosyne_source_copies: 14
+  V1_controller_source_copies: 14
+  total: 30
+preflight_gate:
+  current_action: Owner selects one folder in a fresh Claude Project and verifies
+    the Project knowledge count is 30
+  Research_enabled_during_preflight: false
+  launch_message_sent_during_preflight: false
+  pass: folder_selected_once_and_Claude_displays_30_files_without_extras
+  failure: any_other_count_missing_file_extra_file_or_folder_selection_unavailable
+  on_failure: return_to_Mnemosyne_do_not_start_Research_do_not_retry_automatically
+input_verification_after_launch:
+- all_30_snapshot_files_resolved
+- snapshot_manifest_source_mapping_recovered
+- authority_candidate_historical_raw_evidence_current_adjudication_and_Owner_decision_roles_separated
+- historical_controller_pending_status_not_misrepresented_as_current_status
+- current_fresh_Pro_and_Owner_status_not_exaggerated_into_production_or_target_adoption
+- no_external_web_before_gate
+- no_substantive_recommendation_before_gate
+- byte_complete_read_not_claimed
+- no_connector_or_write_action
+- unresolved_input_gaps_empty
+prohibited_contamination:
+- unlisted_files_or_Project_chats
+- old_Fable_F1_report
+- private_or_real_target_material
+- live_GitHub_connector_output
+- hidden_memory_or_unlisted_Pro_conclusions
