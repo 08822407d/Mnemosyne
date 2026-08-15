@@ -103,7 +103,7 @@ Advantages:
 - original branch names and heads are preserved in the manifest;
 - no scenario branch is merged into `master`;
 - original branches remain unchanged;
-- the current GitHub connector exposes the low-level commit/tree operations needed to construct it;
+- the current GitHub connector exposes the low-level blob/tree/commit/ref operations needed to construct it;
 - direct-parent equality is mechanically checkable.
 
 Disadvantages:
@@ -207,9 +207,11 @@ Archive creation and verification form one bounded stage. The stage must leave a
 - controller bundle and key result blobs remain unchanged;
 - no real repository changed because of this route.
 
-### Layer 3 — Separate cleanup decision
+### Layer 3 — Separate cleanup decision and execution surface
 
 Branch deletion is a different task and a different Owner authorization. It must never be inferred from successful anchor creation.
+
+The current standard GitHub connector exposes branch/ref creation and update but **does not expose a branch-ref deletion action**. Therefore any later cleanup task must run in a separately selected surface that can perform exact, auditable ref deletion, such as a suitable Codex/Git environment or a controlled human GitHub operation. The deletion surface, commands/actions, partial-failure handling and exact return evidence must be frozen before P3 begins.
 
 Recommended cleanup scope, if the Owner later wants less branch clutter:
 
@@ -282,7 +284,8 @@ This recommendation reflects the repository's small size and the absence of a cu
 
 - Deep Research: not needed. The decision is repository-local and supported by Git object/ref semantics plus current connector capabilities.
 - Independent Fable review: not needed before candidate publication. It may be considered only if the Owner proposes deleting irreplaceable evidence without an external archive.
-- Future anchor implementation: next-tier capable when the exact parent list, write set and checks are frozen.
+- Future anchor implementation: next-tier capable when the exact parent list, write set and checks are frozen; the current connector appears sufficient for P1 but this must be rechecked at launch.
+- Future branch deletion: cannot be executed by the currently exposed standard GitHub connector because no delete-ref action is available; P3 requires another authorized surface.
 - Any decision to delete evidence refs: Owner decision with frontier review recommended if the preservation proof is disputed.
 
 ## 10. Boundaries
