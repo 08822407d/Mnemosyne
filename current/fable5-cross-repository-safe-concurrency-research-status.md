@@ -7,7 +7,7 @@ last_updated_by_task: MNEMOSYNE-226
 canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
 display_name: MNE-DR-005 跨仓库并发
 roadmap_priority: F2
-status: V2A_A0_PACKAGE_002_CORE_ACCEPTED_PACKAGE_003_MODEL_BINDING_PREPARED_EXECUTION_NOT_AUTHORIZED
+status: PACKAGE_003_BRANCH_PREPARED_PR_PUBLICATION_WAITING_FOR_ACTIVE_PR_293_EXECUTION_NOT_AUTHORIZED
 Fable_report_received: true
 fresh_Pro_F2_adjudication_completed: true
 Owner_F2_option_A_accepted: true
@@ -17,7 +17,10 @@ MNEMOSYNE_224_provenance_incident_recorded: true
 MNEMOSYNE_224_fresh_Pro_review_completed: true
 package_002_core_technical_repair_accepted: true
 package_002_direct_G2A_readiness: false
-package_003_prepared: true
+package_003_prepared_on_branch: true
+package_003_merged: false
+MNEMOSYNE_226_PR_created: false
+blocking_open_PR: 293
 V2_A_A0_execution_authorized: false
 controller_branch_created: false
 validation_repository_written: false
@@ -75,7 +78,13 @@ Therefore package 002 is not independently ready for G2A.
 
 ## 5. Package 003
 
-Controlling future candidate after MNEMOSYNE-226 merge:
+Prepared on:
+
+```text
+mnemosyne-226-correct-mne224-provenance-and-model-binding
+```
+
+Future controlling candidate after publication:
 
 ```text
 notes/validation-run-decisions/
@@ -94,20 +103,25 @@ Package 003:
 - adds no eighth validation output file;
 - does not modify the validation repository.
 
-## 6. Parallel-route scheduling gate
+## 6. Parallel-route publication and scheduling gates
 
-At package-003 preparation time the following independent branch exists:
+Ready PR #293 currently publishes the independent MNEMOSYNE-225 F1/response-guidance task. Its paths do not overlap with MNEMOSYNE-226 and its PR body records that it should publish first.
 
-```text
-mnemosyne-225-f1-bounded-validation-design-and-next-step-write-visibility
+Therefore:
+
+```yaml
+MNEMOSYNE_226_branch_content_complete: true
+MNEMOSYNE_226_PR_publication_allowed_while_293_open: false
+parallel_PR_exception: none
+next_publication_action: wait_for_293_then_integrate_latest_master_and_create_one_Ready_PR
 ```
 
-Its paths do not overlap with MNEMOSYNE-226. However, if it is expected to publish during the A0 execution window, G2A must wait until it is merged, abandoned or explicitly paused. This prevents the dynamic protected `Mnemosyne/master` baseline from being invalidated by a known concurrent route.
+Even after package 003 publishes, G2A must wait until every route expected to move Mnemosyne `master` during A0 is merged, abandoned or explicitly paused.
 
 ## 7. Current gate
 
 ```yaml
-current_gate: MERGE_MNEMOSYNE_226_THEN_WAIT_FOR_STABLE_WRITE_WINDOW_THEN_FRESH_PRO_G2A
+current_gate: WAIT_FOR_PR_293_THEN_PUBLISH_MNEMOSYNE_226_THEN_FRESH_PRO_G2A
 G2A_execution_authorized: false
 required_future_G2A_fields:
   - run_decision_candidate_003_blob
