@@ -10,8 +10,8 @@ latest_master_integration_commit: a4839c37fec3e062b7ff6b67e7f5dfd1669b1da6
 substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
-PR_state: pending_concurrent_branch_scope_gate
-PR_number: pending
+PR_state: READY_PR_CREATION_GATE_PASS
+PR_number: pending_creation
 PR_draft: false
 Agent_merge_authorized: false
 auto_merge_authorized: false
@@ -43,28 +43,44 @@ expected_scope:
   - 3_MNEMOSYNE_225_result_verification_finalization_paths
 ```
 
-## Concurrent branch gate
+## Concurrent branch gate resolution
 
-Immediately before planned PR creation, a new visible branch appeared:
+A separate branch appeared before PR creation:
 
 ```text
 mnemosyne-226-correct-mne224-provenance-and-model-binding
 ```
 
-At first observation it pointed exactly to current `master` and had no committed diff. Its name suggests a separate MNE224/F2/V2 correction, but a branch name is not sufficient evidence of independent write/read sets.
+Its fresh Pro review record on head:
 
-Therefore PR publication remains temporarily gated until one of these is true:
+```text
+58addedd8a11061a99c92f8c96861b3b58b728df
+```
 
-1. the branch publishes or commits an exact scope that can be mechanically and semantically shown independent;
-2. the branch is released without changes;
-3. the Owner or responsible route explicitly serializes the tasks;
-4. latest-master integration is repeated after that route lands.
+explicitly states that:
 
-No competing PR is created while this scope is unknown.
+- MNEMOSYNE-226 is an additive MNE224/F2/V2 provenance and model-authorization correction;
+- it makes no global execution-source or behavior-guard change in that task;
+- its observed paths are `notes/run-context-incidents/` and `notes/adjudications/` at the checked head;
+- the MNEMOSYNE-225 paths do not overlap;
+- A0 authorization must wait until MNEMOSYNE-225 is merged, abandoned or explicitly paused.
 
-## Ready-PR semantics once the gate passes
+The exact observed concurrent paths are disjoint from all 13 MNEMOSYNE-225 paths. The routes also have no read/version dependency that requires MNEMOSYNE-226 to land first: MNEMOSYNE-225 uses unchanged F1 candidate and Owner-decision blobs, while MNEMOSYNE-226 reviews package 002 from the F2/V2 route.
 
-The PR will be created as Ready (`draft: false`) because:
+Disposition:
+
+```yaml
+concurrent_branch_scope: KNOWN_AND_SEMANTICALLY_INDEPENDENT
+publication_order: MNEMOSYNE_225_PR_MAY_OPEN_FIRST
+MNEMOSYNE_226_A0_or_G2A: must_wait_for_MNEMOSYNE_225_route_close_or_pause
+competing_PR_required: false
+```
+
+The check is execution-time evidence, not a permanent assertion. Open PRs, latest master and both branch heads must be re-read immediately before PR creation.
+
+## Ready-PR semantics
+
+The PR may be created as Ready (`draft: false`) because:
 
 - the preparation scope is complete;
 - no content-changing decision remains inside this publication task;
