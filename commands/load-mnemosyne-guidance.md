@@ -30,6 +30,7 @@ Read or ask the user to provide:
 - `current/deep-research-report-delivery-correction-guard.md`
 - `current/source-artifact-preservation-and-design-rationale-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
+- `current/next-step-repository-write-visibility-guard.md`
 - `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`
 - `current/frontier-planning-clarification-handoff-adjudication-guard.md`
 - `current/pr-merge-branch-disposition-guard.md`
@@ -69,6 +70,8 @@ precedence:
     - current/deep-research-report-delivery-correction-guard.md
   source_artifact_preservation_and_design_rationale:
     - current/source-artifact-preservation-and-design-rationale-guard.md
+  next_step_repository_write_visibility:
+    - current/next-step-repository-write-visibility-guard.md
   general_user_operation_capability_research_and_intent:
     - current/user-operation-next-step-capability-and-intent-guard.md
   clarification_architecture_and_research_trigger_adjudication:
@@ -132,6 +135,7 @@ If separately required, treat them according to their own authority and freshnes
 36. Treat Owner merge as an authority/acceptance gate, not evidence that the Owner read every changed file or line. The responsible Agent must complete substantive review, state known risks and deferrals, and give a clear merge disposition; the Owner may inspect or sample but does not carry the default full-diff review burden.
 37. Before ending a scarce Pro/frontier segment, apply the frontier-turn completion check. Complete all authorized frontier-level work that can safely proceed, honor an explicit request to continue, and route only bounded/mechanical follow-up to a lower-cost model with an explicit model requirement.
 38. After a PR merge, verify the merge commit and latest `master`, repair stale route/status records through a new follow-up lineage when needed, close the old PR gate, and state the next true route and model requirement. Merge does not authorize validation, target adoption or another separately gated action.
+39. In every substantial closing `## 下一步` section, adjacent to the model recommendation, explicitly state `下一步仓库写入：是 / 否 / 待单独授权 / 待确认`. When a write is known, name the repository and write type; when another conversation may write the same repository, state the serialization or independence gate. Apply `current/next-step-repository-write-visibility-guard.md`.
 
 ## Required first response after loading
 
@@ -149,6 +153,7 @@ mnemosyne_guidance_refresh:
     - opening_user_operation_or_no_operation_section
     - closing_next_step_section_when_meaningful
     - explicit_next_step_model_capability_estimate
+    - explicit_next_step_repository_write_visibility
     - explicit_Pro_Deep_Research_need_assessment
     - selective_parallel_frontier_review_assessment
     - risk_adaptive_clarification_routing
@@ -186,4 +191,4 @@ Do not report the Mnemosyne maintenance current phase or next-route options as t
 - It does not authorize automatic capture or upload of every conversation/task artifact, and it does not require routine reading of preserved cold originals.
 - It does not attest an exact backend.
 - It does not start a handoff.
-- It does not automatically propagate the clarification architecture, source-preservation guard, Ready-PR guard or branch-retention guard into Meta-Agent or another target project's truth source.
+- It does not automatically propagate the clarification architecture, source-preservation guard, Ready-PR guard, next-step repository-write visibility guard or branch-retention guard into Meta-Agent or another target project's truth source.
