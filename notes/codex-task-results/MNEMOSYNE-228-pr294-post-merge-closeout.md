@@ -22,8 +22,12 @@ later_concurrent_PR_merge_commit: 6badd1a540bb0b51b9022d63c7c94db8b7c4262d
 latest_master_integrated_before_publication: 6badd1a540bb0b51b9022d63c7c94db8b7c4262d
 master_integration_commit: 6966b8bb135eb4c8b8b0c6dd0b6fbbcfe557bf95
 canonical_closeout_branch: mnemosyne-228-f2-pr294-post-merge-closeout
-canonical_PR: null_pending_creation
-closeout_status: SUBSTANTIVE_COMPLETE_READY_PR_PUBLICATION_PREFLIGHT_PENDING
+canonical_PR: 296
+PR_state: ready
+PR_draft: false
+PR_head_at_creation: cd0edf0c54482bf0c17c93df4a62d6144433e551
+PR_mergeable_after_refresh: true
+closeout_status: READY_PR_296_OPEN_PENDING_OWNER_MERGE
 execution_source_modified: false
 Meta_Agent_or_real_target_written: false
 validation_repository_written: false
@@ -37,7 +41,7 @@ external_quota_used: false
 The Owner authorized this bounded follow-up after reporting that PR #294 had merged:
 
 ```text
-授权执行 PR #294 合并后的 Mnemosyne closeout；仅允许修正当前 F2 route state并发布一个 Ready PR，不授权 A0，不写 validation repository。当前对话是pro模型。有另一个mnemosyne所属对话正在准备收口和新老对话交接准备，因此可能也在写仓库，所以你在进行写入时注意一下。
+授权执行 PR #294 合并后的 Mnemosyne closeout；仅允许修正当前 F2 route state 并发布一个 Ready PR，不授权 A0，不写 validation repository。当前对话是pro模型。有另一个mnemosyne所属对话正在准备收口和新老对话交接准备，因此可能也在写仓库，所以你在进行写入时注意一下。
 ```
 
 The Owner later reported:
@@ -68,8 +72,6 @@ Explicitly excluded:
 
 ## 2. PR #294 merge and exact-tree verification
 
-GitHub was re-read after the Owner reported the merge:
-
 ```yaml
 PR_294:
   state: closed
@@ -91,7 +93,7 @@ branch_disposition:
   deletion_action_performed_by_MNEMOSYNE_228: false
 ```
 
-The merged package identities were also re-read:
+Merged package identities re-read during closeout:
 
 ```yaml
 candidate_003_blob: 9e46dd849c3c8604f5e2fa7fce9c02c5504ff202
@@ -133,22 +135,15 @@ The next durable gate is:
 OWNER_SEPARATE_G2A_DECISION_AFTER_WRITE_QUIESCENCE_AND_DYNAMIC_FIELD_RECHECK
 ```
 
-The current-status file intentionally does not encode this closeout branch or its publication PR as the durable F2 gate. This prevents another recursive post-merge status chain.
+The current-status file intentionally does not encode this closeout branch or PR #296 as the durable F2 gate. This prevents another recursive post-merge status chain.
 
 ## 4. Cross-conversation concurrency handling
 
 The Owner warned that another Mnemosyne conversation might write concurrently. Remote state was therefore re-read repeatedly.
 
-Initial observations:
-
-```yaml
-master_at_initial_closeout: 5ca091e1c52bb1e7483b2d54e9259d3ec85b7b93
-initially_observed_other_branch: mnemosyne-227-f1-validation-disposition-handoff
-```
-
 Before MNEMOSYNE-228 publication, the other route published Ready PR #295. MNEMOSYNE-228 did not create a parallel PR and instead waited for #295 to close.
 
-The Owner later reported #295 no longer open. GitHub then verified:
+GitHub later verified:
 
 ```yaml
 PR_295:
@@ -175,15 +170,13 @@ notes/codex-task-results/MNEMOSYNE-227-result.md
 notes/codex-task-results/MNEMOSYNE-227-verification.md
 ```
 
-None overlaps MNEMOSYNE-228's two paths.
-
-MNEMOSYNE-228 integrated #295's exact merged `master` with two-parent commit:
+None overlaps MNEMOSYNE-228's two paths. MNEMOSYNE-228 integrated that merged `master` with two-parent commit:
 
 ```text
 6966b8bb135eb4c8b8b0c6dd0b6fbbcfe557bf95
 ```
 
-No F1 file was modified by the F2 route.
+No F1 file was modified by this F2 route.
 
 ## 5. Changed paths and semantic disposition
 
@@ -220,7 +213,7 @@ run_context:
 
   date_or_window:
     started_at: unknown_exact_timestamp_current_conversation
-    completed_or_recorded_at: pending_PR_publication
+    completed_or_recorded_at: PR_296_publication_window
 
   action:
     actor: ChatGPT model using GitHub connector
@@ -269,7 +262,7 @@ run_context:
       - ref: notes/codex-task-results/MNEMOSYNE-228-pr294-post-merge-closeout.md
         relation: modified
         immutable_identity:
-          status: not_available_before_final_PR_binding
+          status: not_recursively_self_recorded
           type: git_blob_sha
           value: null
 
@@ -304,46 +297,29 @@ run_context:
     - Exact consumer-chat backend identity is not attestable.
     - Cross-conversation coordination is limited to observable GitHub state.
     - No CI workflow is required for this two-file natural-language route-state repair; absence of CI is not a CI-pass claim.
-
-  omissions:
-    - field: provider_normalization
-      reason: not_applicable
-      detail: No current provider model-name normalization is needed or claimed.
-    - field: operator_reasoning_setting
-      reason: not_available
-      detail: No distinct reasoning-setting value was reported.
-    - field: segments
-      reason: not_available
-      detail: Whole-task switch history is unknown, so segment attribution is not invented.
 ```
 
-Review events:
+Review disposition:
 
 ```yaml
-review_events:
-  - review_id: MNEMOSYNE-228-SEMANTIC-REVIEW-001
-    actor: current ChatGPT model
-    actor_kind: model
-    role: F2 route-state semantic reviewer
-    context_relation_to_producer: same_conversation
-    model_relation_to_producer: unknown
-    provider_relation_to_producer: unknown
-    criteria_fixed_before_exposure: true
-    review_scope: two-file F2 closeout, authority boundaries, non-recursive durable route state and PR_295 integration
-    result: PASS
-    limitations:
-      - Same-conversation review is not heterogeneous review.
+semantic_review:
+  actor: current ChatGPT conversation
+  scope: two-file F2 closeout, authority boundaries, non-recursive durable route state and PR_295 integration
+  result: PASS
+  model_relation_to_producer: unknown
+  heterogeneous_review: false
 
-  - review_id: MNEMOSYNE-228-MECHANICAL-VERIFICATION-001
-    actor: GitHub connector plus current ChatGPT controller
-    actor_kind: mixed
-    role: repository identity and changed-path verification
-    context_relation_to_producer: not_applicable
-    model_relation_to_producer: not_applicable
-    provider_relation_to_producer: not_applicable
-    criteria_fixed_before_exposure: true
-    review_scope: PR_294 merge/tree identity, candidate/package blobs, validation no-write state, PR_295 merge/path scope, open-PR state and branch comparison
-    result: PASS_TO_CURRENT_PREFLIGHT
+mechanical_review:
+  actor: GitHub connector plus current ChatGPT controller
+  scope:
+    - PR_294 merge/tree identity
+    - candidate/package blobs
+    - validation no-write state
+    - PR_295 merge/path scope
+    - open-PR enumeration
+    - branch comparison
+    - PR_296 state and mergeability refresh
+  result: PASS
 ```
 
 Human adjudication remains:
@@ -352,34 +328,42 @@ Human adjudication remains:
 human_adjudication:
   status: pending
   actor: Owner
-  decision: merge_or_request_changes_after_canonical_Ready_PR_publication
-  limitation: A future merge decision does not by itself prove comprehensive line-by-line human review.
+  decision: merge_or_request_changes_for_PR_296
+  limitation: A merge decision does not by itself prove comprehensive line-by-line human review.
 ```
 
-## 7. PR readiness and publication gate
+## 7. PR publication and readiness
 
 ```yaml
+canonical_PR:
+  number: 296
+  title: MNEMOSYNE-228 — close PR 294 F2 route state
+  state: open
+  draft: false
+  base: master
+  base_SHA_at_creation: 6badd1a540bb0b51b9022d63c7c94db8b7c4262d
+  head_branch: mnemosyne-228-f2-pr294-post-merge-closeout
+  head_SHA_at_creation: cd0edf0c54482bf0c17c93df4a62d6144433e551
+  mergeable_after_refresh: true
+
 PR_readiness_preflight:
   substantive_scope_complete: true
   required_Agent_semantic_review_complete: true
   required_mechanical_checks_complete: true
   blocking_Owner_decisions: []
-  further_substantive_commits_expected_before_PR_creation: false
+  further_substantive_commits_expected_after_final_binding: false
   explicit_Owner_Draft_request: false
   decision: READY
   reason: The bounded F2 closeout is complete; G2A/A0 remain separately gated and do not make this closeout incomplete.
 
-publication_preflight:
-  latest_master_integrated: 6badd1a540bb0b51b9022d63c7c94db8b7c4262d
-  integration_commit: 6966b8bb135eb4c8b8b0c6dd0b6fbbcfe557bf95
-  open_PR_enumeration_after_PR_295_merge: none_observed_before_this_record_refresh
-  canonical_PR: null_pending_creation
-  decision: READY_FOR_FINAL_RACE_SENSITIVE_RECHECK_AND_PR_CREATION
+merge_recommendation: RECOMMEND_MERGE
+comprehensive_human_diff_review_assumed: false
+branch_retention_required: false
 ```
 
 ## 8. Boundaries after this closeout
 
-Publishing or merging the MNEMOSYNE-228 Ready PR does **not** authorize:
+Publishing or merging PR #296 does **not** authorize:
 
 - G2A;
 - A0 or A1–A7;
