@@ -5,22 +5,29 @@ task_id: MNEMOSYNE-223
 repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 2308c1e55fbbfb753ec527691809dd8f91f6f462
+latest_master_before_PR: 2308c1e55fbbfb753ec527691809dd8f91f6f462
 canonical_branch: mnemosyne-223-prepare-v2a-sentinel-run-plan
 canonical_PR: null_pending_creation
-PR_state_requested: ready
+PR_state: READY
 Draft_exception: none
 substantive_scope_complete: true
 Agent_semantic_review_complete: true
-mechanical_checks_complete: pending_final_branch_compare_and_PR_recheck
+mechanical_checks_complete: true
 blocking_Owner_decisions_for_plan_PR: []
 future_G2A_execution: separately_gated_not_authorized
+branch_head_before_PR: 5647b5f3d3d590788c74937c2fece59bf044f867
+branch_ahead_by_before_PR: 13
+branch_behind_by_before_PR: 0
+changed_files_before_PR: 12
+open_Mnemosyne_PRs_before_creation: []
+related_PRs_for_exact_head_before_creation: []
 merge_recommendation: RECOMMEND_MERGE
 comprehensive_human_diff_review_assumed: false
 ```
 
 ## 1. Publication scope
 
-The future Ready PR publishes:
+The Ready PR publishes:
 
 - the exact V2-A A0 sentinel surface/run-decision candidate;
 - the seven-file frozen A0 execution package;
@@ -58,9 +65,9 @@ After merge, the responsible Pro route must recheck:
 
 Only then may the Owner receive the exact G2A execution-authorization choice.
 
-## 4. Expected changed paths
+## 4. Exact changed paths
 
-Expected total: 12.
+Observed total: 12. The actual compare matched the allowlist exactly.
 
 ```text
 current/fable5-cross-repository-safe-concurrency-research-status.md
@@ -77,17 +84,52 @@ notes/codex-task-results/MNEMOSYNE-223-verification.md
 notes/codex-task-results/MNEMOSYNE-223-pr-finalization.md
 ```
 
-## 5. PR publication gate
+## 5. Mechanical and semantic preflight
 
-Before PR creation:
+```yaml
+latest_master_rechecked: true
+master_matches_pinned_base: true
+open_PR_enumeration_complete_for_accessible_results: true
+all_accessible_open_PRs_checked: true
+duplicate_task_or_head_PR_found: false
+branch_behind_master: false
+changed_path_allowlist_match: true
+package_file_count: 7
+validation_repository_written: false
+validation_controller_branch_created: false
+Meta_Agent_modified: false
+real_target_modified: false
+current_human_approved_spec_modified: false
+validation_execution_started: false
+external_quota_consumed: false
+PR_decision: READY
+```
 
-- confirm latest master remains the pinned base or explicitly integrate a non-conflicting later master;
-- enumerate all accessible open Mnemosyne PRs;
-- confirm no related task/branch/PR exists;
-- compare exact changed paths to the allowlist;
-- confirm branch is not behind master;
-- confirm validation repository, Meta-Agent and real targets remain unchanged;
-- create exactly one Ready PR, not Draft;
-- do not auto-merge.
+## 6. Execution context disclosure for PR
 
-After PR creation, record the PR number, exact head SHA, changed-file count, commit count and mergeability below through a final update.
+```yaml
+execution_context:
+  action_actor: ChatGPT_model_using_GitHub_connector
+  product_surface: ChatGPT_conversation_with_GitHub_connector
+  operator_selection_verbatim: Pro
+  served_model_identifier_status: unknown_or_not_attestable
+  semantic_review: PASS_same_conversation_Pro_planning_with_recorded_backend_limitation
+  mechanical_verification: PASS
+  human_adjudication: Owner_selected_V2_A_sentinel_preparation_route
+  authorization_ref: current_conversation_choose_A_and_continue_on_Pro_preparation_only
+  full_run_record: notes/codex-task-results/MNEMOSYNE-223-result.md
+  verification_record: notes/codex-task-results/MNEMOSYNE-223-verification.md
+```
+
+## 7. Post-PR update requirement
+
+After PR creation, this file is updated with:
+
+- PR number;
+- exact current head;
+- commit count;
+- changed-file count;
+- Ready/draft state;
+- mergeability.
+
+That metadata update does not alter the run-plan semantics.
