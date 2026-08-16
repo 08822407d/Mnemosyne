@@ -13,7 +13,7 @@ PR_base_at_creation: c01918b2a1ad0b0e25b9b62cbc90fb923836f36d
 PR_head_at_creation: 44ed608e8004973d9308c8b07cebb87e91ef7cbb
 PR_changed_files_at_creation: 15
 PR_commits_at_creation: 15
-PR_head_after_finalization_commit: pending_live_recheck
+live_PR_head_and_mergeability: verify_from_PR_object_after_finalization
 Draft_exception: none
 substantive_scope_complete: true
 Agent_semantic_review_complete: true
