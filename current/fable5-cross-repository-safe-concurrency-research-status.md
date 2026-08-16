@@ -3,34 +3,32 @@
 ```yaml
 status_id: MNE-FABLE5-CROSS-REPOSITORY-CONCURRENCY-STATUS-001
 created_by_task: MNEMOSYNE-214
-last_updated_by_task: MNEMOSYNE-224
+last_updated_by_task: MNEMOSYNE-226
 canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
 display_name: MNE-DR-005 跨仓库并发
 roadmap_priority: F2
-status: V2A_A0_SENTINEL_PROTOCOL_REPAIR_PACKAGE_002_PREPARED_EXECUTION_NOT_AUTHORIZED
+status: V2A_A0_PACKAGE_002_CORE_ACCEPTED_PACKAGE_003_MODEL_BINDING_PREPARED_EXECUTION_NOT_AUTHORIZED
 Fable_report_received: true
-return_identity_verified: true
-fresh_Pro_adjudication_completed: true
-Owner_F2_disposition:
-  selected: A
-  decision_ref: notes/owner-decision-results/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-OWNER-DECISION-001.md
-modified_provisional_amendment_accepted: true
-V2_staged_validation_design_prepared: true
-Owner_stage_selection: A_prepare_minimal_V2_A_sentinel
+fresh_Pro_F2_adjudication_completed: true
+Owner_F2_option_A_accepted: true
+V2_staged_design_prepared: true
 V2_A_A0_plan_prepared: true
+MNEMOSYNE_224_provenance_incident_recorded: true
+MNEMOSYNE_224_fresh_Pro_review_completed: true
+package_002_core_technical_repair_accepted: true
+package_002_direct_G2A_readiness: false
+package_003_prepared: true
 V2_A_A0_execution_authorized: false
-V2_A_A1_to_A7_execution_authorized: false
-V2_B_execution_authorized: false
-V2_C_execution_authorized: false
 controller_branch_created: false
-validation_repository_written_by_MNEMOSYNE_224: false
-connector_permission_change_authorized: false
-external_execution_or_quota_authorized: false
+validation_repository_written: false
+external_quota_authorized: false
 automatic_retry: false
 real_target_adoption_authorized: false
 ```
 
-## 1. Preserved research and adjudication
+## 1. Preserved research and accepted F2 direction
+
+The exact Fable report, input snapshot, fresh Pro F2 adjudication and Owner Option A remain controlling historical evidence:
 
 ```text
 raw/research-reports/cycles/2026Q3-cross-repository-safe-concurrency/
@@ -39,141 +37,99 @@ notes/cross-repository-safe-concurrency-and-ordered-work-amendment-candidate-v0.
 notes/owner-decision-results/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-OWNER-DECISION-001.md
 ```
 
-Controlling F2 disposition remains:
+No architecture or target-adoption status changes in MNEMOSYNE-226.
+
+## 2. Package-001 defect and package-002 repair
+
+Package 001 incorrectly coupled immutable source identity to a pre-publication Mnemosyne `master` and therefore invalidated itself when PR #291 merged.
+
+Package 002 correctly repaired that by separating:
 
 ```yaml
-return_identity: PASS_EXACT
-run_validity: ACCEPT_WITH_LIMITATIONS
-input_verification: PASS_WITH_BOUNDED_IDENTITY_DEFECT
-task_contract_compliance: PASS_WITH_LIMITATIONS
-citation_portability: FAIL
-architecture_direction: ACCEPT_AS_CORROBORATED_MODIFIED_PROVISIONAL_DIRECTION
-technical_details: ACCEPT_WITH_MATERIAL_CORRECTIONS
-implementation_readiness: REJECT
+immutable_source_integrity: exact_path_blob_pairs
+execution_window_no_write: Owner_frozen_current_refs_checked_before_and_after_A0
 ```
 
-## 2. Staged V2 design
+Fresh Pro review in MNEMOSYNE-226 accepts this core repair, the hard-pinned validation dependencies, A0-only scope, seven-file write set, no-worker/no-PR boundary, no retry/repair and fresh-Pro return gate.
+
+## 3. MNEMOSYNE-224 provenance incident
+
+The Owner reports that the MNEMOSYNE-224/PR #292 work was produced while a next-tier model option was selected, not Pro. PR #292's `operator_selection_verbatim: Pro` and `PASS_Pro_protocol_repair` claims are therefore invalid for attribution scope.
+
+Additive records:
 
 ```text
-notes/validation-designs/cross-repository-safe-concurrency-v2-staged-validation-v0.1.md
-notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/
+notes/run-context-incidents/MNEMOSYNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001.md
+notes/adjudications/MNEMOSYNE-224-PACKAGE-002-FRESH-PRO-REVIEW-001.md
 ```
 
-- V2-A: public/synthetic core concurrency and stale-state design;
-- V2-B: public/synthetic ordered multi-repository failure/recovery design;
-- V2-C: connector/app permission/privacy design only.
+The exact prior UI label and hidden backend remain unknown. Historical artifacts are not rewritten.
 
-No V2 stage is currently authorized to execute.
+## 4. Package-002 model-binding defect
 
-## 3. A0 sentinel topology
+Package 002's decision/status identified five G2A dynamic fields, including `authorized_visible_model_label`, but its startup template supplied only four placeholders and omitted the model label from the message delivered to the fresh controller.
 
-```yaml
-sentinel:
-  run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
-  selected_stage: V2_A
-  selected_cells: [A0]
-  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
-  visibility: public
-  controller_base: master@e8e3296922185b4b70997c2351d6f39423f2cd4f
-  read_only_fixture: tlr-v1-fixture-base@81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
-  fixture_tree: f1e221ce8aef404579b96adb3ab01319016889db
-  future_controller_branch: v2a-sentinel-001-controller
-  worker_branches: []
-  PR_creation: prohibited
-  output_file_count: 7
-  recommended_visible_selection_if_available: gpt-5.6 sol extra high
-  post_run_review: fresh_ChatGPT_Pro
-```
+The omission is material because a consumer-chat assistant cannot reliably infer current UI selection from prior context. The present incident demonstrates that risk.
 
-A0 tests only package/source identity, material class, product/tool surface, branch/path scope and bounded no-write evidence. It does not test A1–A7 concurrency semantics.
+Therefore package 002 is not independently ready for G2A.
 
-## 4. Protocol defect discovered after PR #291
+## 5. Package 003
 
-Package 001/candidate 001 hard-pinned the pre-publication Mnemosyne `master` as an execution precondition:
-
-```text
-2308c1e55fbbfb753ec527691809dd8f91f6f462
-```
-
-PR #291 successfully published that package and therefore moved `master` to:
-
-```text
-9157c476e8bf785f6440af4aaefbc44532d47c14
-```
-
-This created a publication-induced self-invalidation loop: every new publication of an exact protected master would itself change the master again.
-
-```yaml
-protocol_defect_id: V2A-SENTINEL-PROTOCOL-DEFECT-001
-classification: package_profile_defect
-A0_executed_before_detection: false
-validation_repository_write_before_detection: false
-candidate_or_F2_architecture_defect: not_established
-```
-
-## 5. Repair package 002
-
-Controlling future A0 package candidate after MNEMOSYNE-224 merge:
+Controlling future candidate after MNEMOSYNE-226 merge:
 
 ```text
 notes/validation-run-decisions/
-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-RUN-DECISION-CANDIDATE-002.md
+MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-RUN-DECISION-CANDIDATE-003.md
 
-notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/
+notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/
 ```
 
-Repair semantics:
+Package 003:
 
-```yaml
-immutable_source_integrity:
-  mechanism: exact_load_bearing_path_blob_pairs
-  candidate_blob: bound_by_future_G2A
-  source_manifest_blob: bound_by_future_G2A
+- inherits package 002's accepted technical repair and all A0 boundaries;
+- requires the exact Owner-authorized and actual operator-selected visible labels in the same G2A/startup message;
+- preserves both raw strings and exact equality result;
+- blocks before branch creation when either label is absent, uncertain or mismatched;
+- keeps backend identity unknown/not attestable;
+- adds no eighth validation output file;
+- does not modify the validation repository.
 
-execution_window_no_write_baseline:
-  Mnemosyne_master: supplied_by_future_G2A_after_package_merge
-  Meta_Agent_master: supplied_by_future_G2A_after_package_merge
-  may_controller_refresh_expected_value: false
-  must_match_before_first_validation_write: true
-  must_match_after_A0: true
+## 6. Parallel-route scheduling gate
 
-hard_pinned_run_dependencies:
-  validation_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
-  fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
-  fixture_tree: f1e221ce8aef404579b96adb3ab01319016889db
-  historical_V1_ref_inventory: exact_manifest_002
+At package-003 preparation time the following independent branch exists:
+
+```text
+mnemosyne-225-f1-bounded-validation-design-and-next-step-write-visibility
 ```
 
-Package 001 and MNEMOSYNE-223 records remain historical evidence; package 002 supersedes only the defective pre-run binding scope.
+Its paths do not overlap with MNEMOSYNE-226. However, if it is expected to publish during the A0 execution window, G2A must wait until it is merged, abandoned or explicitly paused. This prevents the dynamic protected `Mnemosyne/master` baseline from being invalidated by a known concurrent route.
 
-## 6. Current gate
+## 7. Current gate
 
 ```yaml
-current_gate: MERGE_MNEMOSYNE_224_REPAIR_THEN_FRESH_PRO_FREEZE_G2A_DYNAMIC_FIELDS
-G1A_repaired_package_prepared: true
+current_gate: MERGE_MNEMOSYNE_226_THEN_WAIT_FOR_STABLE_WRITE_WINDOW_THEN_FRESH_PRO_G2A
 G2A_execution_authorized: false
-required_future_G2A_dynamic_fields:
-  - decision_candidate_002_blob
-  - source_manifest_002_blob
+required_future_G2A_fields:
+  - run_decision_candidate_003_blob
+  - package_003_source_manifest_blob
   - protected_Mnemosyne_master
   - protected_Meta_Agent_master
   - authorized_visible_model_label
+  - operator_selected_visible_model_label
 ```
 
-After these values are frozen by Owner authorization, no additional Mnemosyne publication occurs before A0. The Owner authorization text is preserved verbatim in validation output.
+No repository publication follows the future G2A before A0.
 
-## 7. Explicit boundaries
+## 8. Explicit boundaries
 
 No current artifact authorizes:
 
 - creation of `v2a-sentinel-001-controller`;
-- any validation-repository write;
+- validation-repository writes;
 - A0 or A1–A7 execution;
 - V2-B/V2-C;
-- connector/app/account permission changes;
-- web, Deep Research, Fable or external quota;
+- connector/account changes;
+- web, Research, Fable or external quota;
 - private/real-target material;
-- modification of Target Lifecycle candidate v0.2, execution source, Meta-Agent or real target;
-- lock/lease/orchestrator service;
-- automatic retry/compensation/reset/force-push;
-- target adoption or production-readiness claims.
+- execution-source, Meta-Agent, architecture or target modification;
+- automatic retry, repair, compensation, reset or force-push.
