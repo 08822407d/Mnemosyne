@@ -2,8 +2,8 @@
 
 ```yaml
 status_id: MNE-REUSABLE-CAPABILITY-OWNERSHIP-STATUS-001
-last_updated_by_task: MNEMOSYNE-220
-source_master_at_decision_execution: cafb080293d9525dd186a550f8ffcf98e1e4478d
+last_updated_by_task: MNEMOSYNE-225
+source_master_at_validation_design_start: 9157c476e8bf785f6440af4aaefbc44532d47c14
 canonical_task_id: FABLE5-MNE-REUSABLE-CAPABILITY-OWNERSHIP-001
 canonical_display_name: MNE-DR-004 能力归属
 historical_run_display_name: MNE-DR-003 能力归属
@@ -11,83 +11,129 @@ research_complete: true
 report_preserved: true
 Pro_adjudication: ACCEPT_WITH_MATERIAL_CORRECTIONS
 corrected_candidate_prepared: true
-PR_281_verified_merged: true
-PR_281_merge_commit: 4198d18352a071cbdcc7dc97734e65886da0621b
 Owner_disposition: OWNER_CONFIRMED_OPTION_A_ACCEPT_MODIFIED_PROVISIONAL_BASELINE
 Owner_decision_ref: notes/owner-decision-results/MNE-REUSABLE-CAPABILITY-OWNERSHIP-OWNER-DECISION-001.md
-candidate_status: OWNER_ACCEPTED_MODIFIED_PROVISIONAL_BASELINE_PENDING_BOUNDED_VALIDATION
+candidate_status: OWNER_ACCEPTED_MODIFIED_PROVISIONAL_BASELINE
+bounded_validation_design_prepared: true
+bounded_validation_package_prepared: true
+validation_disposition_pending: true
+execution_profile_selected: false
+validation_execution_authorized: false
 implementation_authorized: false
-validation_authorized: false
 shared_repository_creation_or_migration_authorized: false
-execution_source_modified: false
+execution_source_modified_for_F1_semantics: false
 Meta_Agent_modified: false
 real_target_modified: false
 ```
 
 ## Current result
 
-The independent Fable report recommended role-based federation and no new shared repository. The Pro adjudication accepted that direction with material corrections concerning current catalogue location, Meta-Agent authority, source-local evidence ownership, versioning maturity, provider-adapter ownership and future repository cutover semantics.
+The independent Fable report and fresh Pro adjudication produced a corrected role-federated model. The Owner accepted that model as a modified provisional baseline:
 
-The Owner has now accepted the **Pro-corrected modified provisional baseline**. The controlling candidate remains:
+- Mnemosyne currently owns the reusable capability catalogue;
+- no new shared capability repository is created now;
+- Meta-Agent retains its own methodology and target-truth authority;
+- each target owns its capability selection, adaptation, implementation and current truth;
+- stable capability identity, revisions and explicit lifecycle relations are candidates for evidence;
+- target-local selection is authoritative for the target;
+- meta-side impact views are derived and non-authoritative;
+- upstream change creates review candidates, not automatic target writes or standing writer authority;
+- any future ownership cutover remains separately gated.
+
+Controlling candidate:
 
 ```text
 notes/reusable-agent-capability-ownership-and-lifecycle-model-candidate-v0.1.md
 ```
 
-Acceptance selects that model for later bounded validation. It does not implement the proposed lifecycle schema, migrate catalogue ownership, modify a target, or authorize validation execution.
+## Prepared bounded validation design
 
-## Accepted provisional ownership model
+MNEMOSYNE-225 prepared:
 
-Current direction:
+```text
+notes/validation-designs/
+reusable-capability-ownership-and-lifecycle-bounded-validation-v0.1.md
 
-- Mnemosyne remains the current owner of the reusable capability catalogue;
-- no fourth/shared capability repository is created now;
-- Meta-Agent keeps its own accepted methodology and target-truth authority without inheriting catalogue ownership;
-- each target owns its own capability selection, adaptation, implementation and current truth;
-- stable capability IDs, catalogue versions, object revisions and explicit split/merge/supersede/retire relationships are candidate mechanisms for validation;
-- target-side selection records are authoritative only inside the adopting target;
-- meta-side impact views are derived and non-authoritative;
-- upstream changes trigger review candidates, not automatic downstream writes or standing writer authority;
-- any future catalogue ownership cutover requires a separately selected migration with destination truth, compatibility, recovery, no-dual-writer closure and explicit Owner acceptance.
+notes/reusable-capability-ownership-validation-package-v0.1/
 
-Full Semantic Versioning is not required for every natural-language capability at the current maturity. It may later be adopted for capability families with stable, testable contracts and repeated consumers.
+notes/owner-decision-candidates/
+MNE-REUSABLE-CAPABILITY-OWNERSHIP-VALIDATION-DISPOSITION-CANDIDATE-001.md
+```
+
+The design uses one public/synthetic code-library-shaped target only as a domain fixture. It tests:
+
+1. initial target-local capability selection;
+2. compatible upstream revision;
+3. breaking upstream revision;
+4. split, merge and retirement relations;
+5. stale/incorrect derived impact view;
+6. minimum-record versus excessive-schema burden.
+
+It explicitly does not build the business-function code-library Agent. Future real construction remains a Meta-Agent/target-repository task under separate authority.
 
 ## Current gate
 
-The next substantive F1 gate is:
-
 ```yaml
-next_gate: BOUNDED_VALIDATION_DESIGN
-validation_selected: false
+next_gate: OWNER_VALIDATION_DISPOSITION
+Owner_decision_candidate: notes/owner-decision-candidates/MNE-REUSABLE-CAPABILITY-OWNERSHIP-VALIDATION-DISPOSITION-CANDIDATE-001.md
+default_recommendation: A_accept_design_and_authorize_exact_execution_profile_preparation_only
+validation_execution_selected: false
 validation_execution_authorized: false
-implementation_selected: false
+real_target_construction_selected: false
 ```
 
-A future bounded validation should test whether the identity/lifecycle/selection/impact model works in realistic synthetic or public cases without becoming excessive schema burden or target-write authority.
+Design acceptance, exact run-profile preparation, validation execution, fresh-Pro adjudication, implementation and real-target adoption remain separate gates.
 
-Validation design, validation execution and implementation remain separate decisions.
+## Construction boundary
 
-## Concurrent F2 boundary
+This F1 route may use the already Owner-confirmed high-level code-library domain shape as synthetic validation context. It must not:
 
-At the time of the Owner decision, `MNE-DR-005` cross-repository-safe-concurrency work had active, separate repository branches.
+- identify or open the real target repository by guess;
+- read private code or requirements;
+- create target instructions or target truth;
+- modify Meta-Agent;
+- start construction, migration, activation or a real pilot.
 
-One F2 Project-knowledge snapshot contains the pre-decision F1 corrected candidate as a frozen input. The Owner decision does not rewrite or invalidate that historical launch-time input. Any later F2 adjudication should distinguish its exact run inputs from the later F1 Owner acceptance.
+When real construction is later selected, Meta-Agent may conduct target design, while the target's own approved repository/store remains the authority for its selection, adaptation, implementation and current truth.
 
-This F1 status does not authorize, merge, modify or adjudicate F2.
+## Parallel F2/V2 boundary
+
+At validation-design start, another conversation owned:
+
+```text
+mnemosyne-224-repair-v2a-sentinel-publication-freshness
+```
+
+Its observed write set was limited to F2/V2 status and a V2-A sentinel repair package. It did not overlap the F1 candidate, Owner decision, F1 status, F1 package or next-step repository-write guard.
+
+This design does not adjudicate, authorize or execute F2/V2. Before PR publication or any future run-profile preparation, latest master, active branches, open PRs, read/write dependencies, authority scope and merge-order effects must be rechecked.
+
+## Reply-guidance amendment in the same task
+
+MNEMOSYNE-225 also records a narrow user-approved behavior guard:
+
+```text
+current/next-step-repository-write-visibility-guard.md
+```
+
+It requires a meaningful closing `## 下一步` section to state, near the model recommendation, whether the next stage writes a repository. This is a response-planning clarification, not an F1 semantic change or validation execution.
 
 ## Still not authorized
 
+- exact validation execution-profile preparation until Owner selects it;
+- validation execution;
+- public validation repository creation or modification;
 - capability lifecycle schema implementation;
-- capability ownership validation execution;
 - new shared repository creation or migration;
-- catalogue ownership transfer to Meta-Agent;
+- catalogue transfer to Meta-Agent;
 - Meta-Agent or real-target modification;
 - target adoption, migration or activation;
-- execution-source modification;
-- automatic upstream-to-downstream propagation;
+- automatic downstream propagation;
+- private-material ingestion;
+- F2/V2 action through this route;
 - Work, Deep Research, Fable, Scheduled Tasks or external quota;
-- F2 execution or adjudication through this route.
+- auto-merge.
 
 ## Safe next action
 
-After publication of this Owner decision/status package, the F1 route may either stop at the accepted provisional baseline or, under a new explicit Owner instruction, prepare a bounded validation design. No validation run follows automatically.
+Review and publish the MNEMOSYNE-225 preparation package. After merge, the Owner may select A, B, C or D in the validation disposition candidate. No run follows automatically.
