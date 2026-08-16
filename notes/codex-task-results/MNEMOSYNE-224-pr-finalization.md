@@ -6,9 +6,9 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 9157c476e8bf785f6440af4aaefbc44532d47c14
 canonical_branch: mnemosyne-224-repair-v2a-sentinel-publication-freshness
-canonical_PR: null_pending_creation
+canonical_PR: 292
 PR_state_requested: ready
-Draft_exception: none
+PR_draft: false
 substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
@@ -20,7 +20,7 @@ comprehensive_human_diff_review_assumed: false
 
 ## Publication scope
 
-The Ready PR should publish only:
+PR #292 publishes only:
 
 - `V2A-SENTINEL-PROTOCOL-DEFECT-001` classification;
 - repaired run decision candidate 002;
@@ -29,6 +29,21 @@ The Ready PR should publish only:
 - MNEMOSYNE-224 result/verification/finalization records.
 
 Package 001 and MNEMOSYNE-223 historical records remain unchanged.
+
+## Pre-publication mechanical state
+
+```yaml
+base_master: 9157c476e8bf785f6440af4aaefbc44532d47c14
+branch_ahead_by_before_PR: 12
+branch_behind_by_before_PR: 0
+changed_files_before_PR: 12
+package_002_file_count: 7
+open_Mnemosyne_PRs_before_creation: []
+validation_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
+controller_branch_exists: false
+validation_repository_written: false
+A0_executed: false
+```
 
 ## Merge semantics
 
