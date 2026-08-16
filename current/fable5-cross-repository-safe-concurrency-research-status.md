@@ -3,39 +3,48 @@
 ```yaml
 status_id: MNE-FABLE5-CROSS-REPOSITORY-CONCURRENCY-STATUS-001
 created_by_task: MNEMOSYNE-214
-last_updated_by_task: MNEMOSYNE-221
+last_updated_by_task: MNEMOSYNE-222
 canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
 display_name: MNE-DR-005 跨仓库并发
 roadmap_priority: F2
-status: FABLE_REPORT_RECEIVED_FRESH_PRO_ADJUDICATED_PENDING_OWNER_DISPOSITION
+status: OWNER_OPTION_A_ACCEPTED_MODIFIED_PROVISIONAL_AMENDMENT_V2_DESIGN_PREPARED_EXECUTION_NOT_AUTHORIZED
 Fable_report_received: true
 return_identity_verified: true
 fresh_Pro_adjudication_completed: true
-Owner_disposition_pending: true
+Owner_disposition:
+  selected: A
+  decision_ref: notes/owner-decision-results/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-OWNER-DECISION-001.md
+modified_provisional_amendment_accepted: true
+validation_design_prepared: true
+validation_package_prepared: true
+validation_execution_selected: false
+validation_execution_authorized: false
+V2_A_execution_authorized: false
+V2_B_execution_authorized: false
+V2_C_execution_authorized: false
+connector_permission_change_authorized: false
 external_execution_or_quota_authorized: false
 automatic_retry: false
-validation_design_authorized: false
-validation_execution_authorized: false
 repository_write_by_Fable: false
 real_target_adoption_authorized: false
 ```
 
-## Preserved result
+## Preserved result and adjudication
+
+Exact Fable result cycle:
 
 ```text
 raw/research-reports/cycles/2026Q3-cross-repository-safe-concurrency/
 ```
 
-Exact return identities:
+Fresh Pro adjudication:
 
-```yaml
-ZIP_sha256: d141fb3962c61617e2051c9b318516d63437e287f7b88b2f3e41df9d130c0559
-formal_report_sha256: 83468668e64a7bf9b82292b0b672d6cb8b249e4cd069395df3a0888b9eda2ccd
-visible_process_output_sha256: 4575975fa7af3dd2de3d8fbf4d06dd662257efc94f046d335c48a0731d964304
-input_snapshot_file_count: 30
+```text
+notes/research-adjudications/
+MNE-DR-005-CROSS-REPOSITORY-SAFE-CONCURRENCY-PRO-ADJUDICATION-001.md
 ```
 
-## Fresh Pro disposition
+The controlling F2 result remains:
 
 ```yaml
 return_identity: PASS_EXACT
@@ -48,55 +57,76 @@ technical_details: ACCEPT_WITH_MATERIAL_CORRECTIONS
 implementation_readiness: REJECT
 ```
 
-The central hybrid direction is accepted as useful corroboration:
+## Owner Option A decision
 
-- task-local contracts and exact scope evidence by default;
-- conservative serialization/reconciliation for shared/global/unknown work;
-- no mandatory global orchestrator;
-- ordered cross-repository identities and explicit partial-failure handling;
-- stronger synthetic failure evidence before stronger acceptance.
+The Owner accepted the Pro-corrected amendment as a modified provisional baseline for validation design.
 
-Material corrections include:
+Accepted direction:
 
-- disjoint write sets alone are not a sufficient non-interference proof;
-- final diff verification is not complete optimistic concurrency control;
-- any future lease requires destination-enforced fencing;
-- automatic compensation is not a default Git recovery mechanism;
-- GitHub stale-ref primitives are tool-surface-specific;
-- GitHub Actions concurrency and SLSA level claims in the report were overstated;
-- many “missing” rules already exist in candidate v0.2;
-- the report's external sources are not portable;
-- one Owner-decision blob was truncated.
+- task-local contracts remain the default;
+- non-interference evidence extends beyond write-set intersection;
+- read/version freshness, generated/derived effects and semantic contracts are explicit;
+- shared/global/authority-changing/unknown scope fails closed;
+- cross-repository work uses ordered committed-identity checkpoints;
+- stop plus forward repair or explicit revert is the normal recovery;
+- future leases require destination-enforced fencing;
+- project-native evidence-strength labels replace inappropriate SLSA-level analogies;
+- V2-A, V2-B and V2-C are separate validation surfaces.
 
-## Current Owner gate
+The Owner did not authorize execution or a real target.
 
-```text
-notes/owner-decision-candidates/
-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-DISPOSITION-CANDIDATE-001.md
-```
+## Prepared V2 design
 
-Pro recommends:
+Design:
 
 ```text
-A — accept the modified provisional amendment and authorize V2 design only
+notes/validation-designs/
+cross-repository-safe-concurrency-v2-staged-validation-v0.1.md
 ```
 
-This does not authorize V2 execution or any real-target action.
-
-## Snapshot-branch release
-
-After the result/adjudication PR is merged:
-
-- the exact 30-file input snapshot will exist under the preserved research cycle;
-- the exact Fable return will be reconstructable from `source-archive/`;
-- no further Project re-sync is expected.
-
-At that point the retention obligation for:
+Package:
 
 ```text
-mne-dr-005-project-knowledge-snapshot-001
+notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/
 ```
 
-may be released, provided the merge and preserved paths are mechanically verified.
+### V2-A
 
-The receive-only result-intake branch may also be released after its contents are confirmed present in the merged canonical result lineage.
+Public/synthetic core repository concurrency and stale-state design:
+
+- positive independent work;
+- generated/derived collision;
+- stale read/base identity;
+- merge-order dependence;
+- duplicate canonical lineage;
+- shared/global/unknown fail-closed behavior;
+- mechanically clean but semantically invalid work.
+
+### V2-B
+
+Public/synthetic ordered multi-repository design:
+
+- ordered identity handoff;
+- later-step failure after an earlier commit;
+- separately authorized recovery;
+- recovery failure and human gate;
+- cutover stale-writer evidence by enforcement layer;
+- backup non-authority.
+
+### V2-C
+
+Design-only connector/app permission and privacy boundary. It is not runnable until a separate product/security/account authorization exists.
+
+## Current gate
+
+```yaml
+current_gate: FUTURE_OWNER_STAGE_AND_SURFACE_SELECTION
+recommended_next_sequence:
+  - review_or_merge_MNEMOSYNE_222_design_PR
+  - separately_select_V2_A_sentinel_or_defer
+  - prepare_exact_repository_and_run_authorization_if_selected
+  - fresh_Pro_adjudication_after_any_run
+V2_execution_authorized_now: false
+```
+
+No package merge, branch creation or status update implies execution authorization, connector permission change, external quota use, architecture promotion or real-target adoption.
