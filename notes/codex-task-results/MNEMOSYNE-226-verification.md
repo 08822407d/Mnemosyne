@@ -2,12 +2,13 @@
 
 ```yaml
 task_id: MNEMOSYNE-226
-verification_status: PASS_READY_FOR_SINGLE_READY_PR
+verification_status: PASS_READY_PR_294_PUBLISHED
 base_master_at_start: d0cae2f1d145c8c3e63f4912c9685148face1dc7
 latest_master_integrated: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
 integration_commit: 733034c3fa519031f0ff5f8bd15160472d56074b
 canonical_branch: mnemosyne-226-correct-mne224-provenance-and-model-binding
-canonical_PR: null_pending_creation
+canonical_PR: 294
+PR_state: ready
 execution_source_modified: false
 validation_repository_modified: false
 A0_executed: false
@@ -102,24 +103,25 @@ path_overlap_between_PR_293_and_MNEMOSYNE_226: false
 F1_or_reply_guard_paths_modified_by_226: false
 ```
 
-The integration tree used latest-master content as the base and overlaid only the thirteen existing MNEMOSYNE-226 blobs.
-
-## 6. Final pre-PR checks
+## 6. Ready PR #294 preflight
 
 ```yaml
-latest_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
-open_Mnemosyne_PRs: []
-branch_compare_before_publication_record_updates:
-  ahead_by: 18
-  behind_by: 0
-  changed_files: 13
+PR: 294
+PR_state: ready
+PR_draft: false
+base: master@9b2c39e18791d29901de9e7a201a61fa7d98d94f
+head_at_creation: 910e94fc31ab7db75c3a906074ebb0035b0e47c8
+open_Mnemosyne_PRs_before_creation: []
+existing_PR_for_exact_head_before_creation: false
+branch_behind_by_before_creation: 0
+changed_files: 13
 changed_paths_exactly_MNEMOSYNE_226_scope: true
 validation_repository_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
 validation_repository_open_PRs: []
 validation_controller_branch_exists: false
 ```
 
-No current evidence of parallel publication conflicts remains.
+No current evidence of parallel publication conflicts existed at PR creation.
 
 ## 7. Non-execution verification
 
@@ -140,14 +142,13 @@ execution_source_modified: false
 automatic_retry_or_compensation: false
 ```
 
-## 8. Publication gate
+## 8. Post-merge gate
 
-The PR #293 blocker is resolved. Immediately before PR creation, repeat:
+After Owner merges PR #294:
 
-1. latest `master`;
-2. accessible open PR enumeration;
-3. exact branch compare;
-4. exact-head/task duplicate lookup;
-5. validation-repository no-write/controller-branch absence check.
-
-If unchanged, create exactly one Ready PR and do not auto-merge.
+1. verify merge commit and current master;
+2. verify candidate003/package003/incident/review identities on master;
+3. recheck validation repository remained untouched;
+4. wait for a stable short A0 write window;
+5. fresh Pro prepare G2A dynamic values without publishing another Mnemosyne PR;
+6. Owner separately authorizes, revises or defers A0.
