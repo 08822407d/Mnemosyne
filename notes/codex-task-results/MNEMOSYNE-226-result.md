@@ -5,7 +5,8 @@ task_id: MNEMOSYNE-226
 repository: 08822407d/Mnemosyne
 base_master: d0cae2f1d145c8c3e63f4912c9685148face1dc7
 canonical_branch: mnemosyne-226-correct-mne224-provenance-and-model-binding
-status: PROVENANCE_INCIDENT_RECORDED_PACKAGE_002_FRESH_PRO_REVIEWED_PACKAGE_003_PREPARED_NOT_EXECUTED
+status: CONTENT_COMPLETE_PR_PUBLICATION_WAITING_FOR_ACTIVE_PR_293
+canonical_PR: null
 execution_context:
   product_surface: ChatGPT_conversation_with_GitHub_connector
   operator_selection_verbatim: Pro
@@ -46,9 +47,17 @@ known_other_write_branch:
   path_overlap_with_MNEMOSYNE_226: false
 ```
 
-MNEMOSYNE-226 uses new task ID and paths limited to F2/A0 review, provenance correction and package 003. It does not reuse or modify the MNEMOSYNE-225 branch.
+During MNEMOSYNE-226 preparation, that route created Ready PR #293 and integrated the latest `master`. Its PR body records that it has no path overlap with MNEMOSYNE-226 and should publish first.
 
-Because no PR was open, this task may publish one Ready PR. The known other route must not publish a second PR concurrently; its responsible conversation should refresh from the latest master after the current PR resolves.
+```yaml
+pre_PR_recheck:
+  open_PRs: [293]
+  parallel_PR_exception_authorized: false
+  MNEMOSYNE_226_PR_created: false
+  decision: wait_for_PR_293_then_integrate_latest_master_and_publish_one_PR
+```
+
+MNEMOSYNE-226 uses a new task ID and paths limited to F2/A0 review, provenance correction and package 003. It does not reuse or modify the MNEMOSYNE-225 branch.
 
 ## 3. Provenance incident
 
@@ -171,13 +180,7 @@ current/fable5-cross-repository-safe-concurrency-research-status.md
 
 A0 remains unauthorized.
 
-Known scheduling gate:
-
-```text
-mnemosyne-225-f1-bounded-validation-design-and-next-step-write-visibility
-```
-
-Package publication can proceed because paths do not overlap. G2A must wait until every route expected to publish during A0 is merged, abandoned or explicitly paused.
+Package publication can proceed after PR #293 resolves because paths do not overlap. G2A must then wait until every route expected to publish during A0 is merged, abandoned or explicitly paused.
 
 ## 9. Explicit non-actions
 
@@ -191,8 +194,17 @@ MNEMOSYNE-226 did not:
 - modify Meta-Agent or a real target;
 - change connector/account permissions;
 - use Research/Fable/external quota;
-- authorize retry, repair, compensation, reset or force-push.
+- authorize retry, repair, compensation, reset or force-push;
+- create a parallel PR while PR #293 is open.
 
 ## 10. Current gate
 
-Merge the MNEMOSYNE-226 Ready PR. After merge, do not issue G2A until the parallel Mnemosyne write route is resolved and a fresh Pro recheck supplies current refs, merged candidate/manifest blobs and the exact model labels.
+```text
+WAIT_FOR_PR_293_MERGE_OR_CLOSE
+→ integrate execution-time latest master into mnemosyne-226 branch
+→ repeat path/open-PR/identity checks
+→ create exactly one Ready PR for MNEMOSYNE-226
+→ after that PR merges and no known write route remains, fresh Pro may prepare package-003 G2A
+```
+
+No A0 execution or G2A is authorized now.
