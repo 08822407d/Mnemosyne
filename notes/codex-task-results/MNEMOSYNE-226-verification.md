@@ -2,40 +2,35 @@
 
 ```yaml
 task_id: MNEMOSYNE-226
-verification_status: PASS_CONTENT_PREPARED_PR_PUBLICATION_BLOCKED_BY_ACTIVE_PR_293
-base_master: d0cae2f1d145c8c3e63f4912c9685148face1dc7
+verification_status: PASS_READY_FOR_SINGLE_READY_PR
+base_master_at_start: d0cae2f1d145c8c3e63f4912c9685148face1dc7
+latest_master_integrated: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+integration_commit: 733034c3fa519031f0ff5f8bd15160472d56074b
 canonical_branch: mnemosyne-226-correct-mne224-provenance-and-model-binding
-canonical_PR: null_waiting_for_PR_293_resolution
+canonical_PR: null_pending_creation
 execution_source_modified: false
 validation_repository_modified: false
 A0_executed: false
 ```
 
-## 1. PR #292 and master identity
+## 1. PR #292 and provenance correction
 
 ```yaml
 PR_292:
   merged: true
   merge_commit: d0cae2f1d145c8c3e63f4912c9685148face1dc7
-Mnemosyne_master_at_branch_creation: d0cae2f1d145c8c3e63f4912c9685148face1dc7
-```
-
-## 2. Provenance correction
-
-Verified from Owner direct instruction:
-
-```yaml
 MNEMOSYNE_224_previous_turn_selection_category: next_tier
 exact_previous_UI_label: unknown_not_reported
 PR_292_claimed_operator_selection: Pro
 attribution_match: false
 current_MNEMOSYNE_226_selection: Pro
+current_selection_evidence: direct_user_instruction
 backend_identity: unknown_or_not_attestable
 ```
 
 The incident record is additive and historical PR/task artifacts remain unchanged.
 
-## 3. Fresh Pro quality review
+## 2. Fresh Pro quality review
 
 ```yaml
 self_invalidation_root_cause: PASS
@@ -49,7 +44,7 @@ package_002_ready_for_G2A: false
 package_003_required: true
 ```
 
-## 4. Package 003 identities
+## 3. Package 003 identities
 
 ```yaml
 run_decision_candidate_003: 9e46dd849c3c8604f5e2fa7fce9c02c5504ff202
@@ -68,7 +63,7 @@ incident: 5b22b5e5e014922745088aa029b92238439d4037
 
 Manifest self-identity is intentionally supplied by future G2A rather than recursively embedded.
 
-## 5. Semantic checks
+## 4. Semantic checks
 
 ```yaml
 P0_parent_package_002_core_preserved: PASS
@@ -84,33 +79,47 @@ P9_no_global_guidance_change: PASS
 P10_parallel_write_route_recorded: PASS
 ```
 
-## 6. Parallel-route preflight
+## 5. PR #293 integration verification
 
-At branch creation:
-
-```yaml
-open_PRs: []
-known_other_branch: mnemosyne-225-f1-bounded-validation-design-and-next-step-write-visibility
-path_overlap: false
-```
-
-At pre-PR recheck:
-
-```yaml
-open_PRs:
-  - 293
-PR_293_title: MNEMOSYNE-225 — add next-step write visibility and prepare F1 bounded validation
-PR_293_paths_overlap_with_MNEMOSYNE_226: false
-PR_293_body_records_MNEMOSYNE_226_and_priority_publication: true
-single_active_PR_guard_allows_second_PR: false_without_explicit_parallel_exception
-PR_226_creation_attempted: false
-```
-
-Disposition:
+PR #293 merged as:
 
 ```text
-COMPLETE_BRANCH_CONTENT_WAIT_FOR_PR_293_MERGE_OR_CLOSE_THEN_INTEGRATE_LATEST_MASTER_AND_CREATE_ONE_READY_PR
+9b2c39e18791d29901de9e7a201a61fa7d98d94f
 ```
+
+MNEMOSYNE-226 integrated that exact master with:
+
+```text
+733034c3fa519031f0ff5f8bd15160472d56074b
+```
+
+Two-parent relation:
+
+```yaml
+parent_1_latest_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+parent_2_prior_226_head: 64d39c0bf32f3950f74a4eef71d3004c257ceac1
+path_overlap_between_PR_293_and_MNEMOSYNE_226: false
+F1_or_reply_guard_paths_modified_by_226: false
+```
+
+The integration tree used latest-master content as the base and overlaid only the thirteen existing MNEMOSYNE-226 blobs.
+
+## 6. Final pre-PR checks
+
+```yaml
+latest_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+open_Mnemosyne_PRs: []
+branch_compare_before_publication_record_updates:
+  ahead_by: 18
+  behind_by: 0
+  changed_files: 13
+changed_paths_exactly_MNEMOSYNE_226_scope: true
+validation_repository_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
+validation_repository_open_PRs: []
+validation_controller_branch_exists: false
+```
+
+No current evidence of parallel publication conflicts remains.
 
 ## 7. Non-execution verification
 
@@ -131,13 +140,14 @@ execution_source_modified: false
 automatic_retry_or_compensation: false
 ```
 
-## 8. Remaining publication gate
+## 8. Publication gate
 
-After PR #293 merges or closes:
+The PR #293 blocker is resolved. Immediately before PR creation, repeat:
 
-1. read latest `master` and PR #293 disposition;
-2. merge/rebase the exact latest master into this canonical branch without rewriting package identities;
-3. inspect changed-path overlap and current status interactions;
-4. refresh result/verification/finalization repository-state fields;
-5. repeat open-PR and exact-head preflight;
-6. create exactly one Ready PR for MNEMOSYNE-226.
+1. latest `master`;
+2. accessible open PR enumeration;
+3. exact branch compare;
+4. exact-head/task duplicate lookup;
+5. validation-repository no-write/controller-branch absence check.
+
+If unchanged, create exactly one Ready PR and do not auto-merge.
