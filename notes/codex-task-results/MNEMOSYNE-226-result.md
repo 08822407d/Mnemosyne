@@ -7,8 +7,9 @@ base_master_at_start: d0cae2f1d145c8c3e63f4912c9685148face1dc7
 latest_master_integrated: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
 integration_commit: 733034c3fa519031f0ff5f8bd15160472d56074b
 canonical_branch: mnemosyne-226-correct-mne224-provenance-and-model-binding
-status: LATEST_MASTER_INTEGRATED_READY_FOR_PR_PUBLICATION
-canonical_PR: null_pending_creation
+canonical_PR: 294
+PR_state: ready
+status: READY_PR_294_PUBLISHED
 execution_context:
   product_surface: ChatGPT_conversation_with_GitHub_connector
   operator_selection_verbatim: Pro
@@ -180,16 +181,23 @@ incident_blob: 5b22b5e5e014922745088aa029b92238439d4037
 
 The manifest does not recursively embed its own identity; future Owner G2A names its exact merged blob.
 
-## 8. Final pre-PR repository state
+## 8. Publication state
 
-After integrating PR #293:
+Ready PR:
+
+```text
+#294 — MNEMOSYNE-226 — correct MNEMOSYNE-224 provenance and A0 model binding
+```
+
+PR creation preflight:
 
 ```yaml
-Mnemosyne_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
-branch_ahead_by_before_publication_record_updates: 18
+base_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+head_at_PR_creation: 910e94fc31ab7db75c3a906074ebb0035b0e47c8
 branch_behind_by: 0
 changed_files: 13
-open_Mnemosyne_PRs: []
+open_Mnemosyne_PRs_before_creation: []
+existing_PR_for_exact_head_before_creation: false
 validation_repository_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
 validation_repository_open_PRs: []
 validation_controller_branch_exists: false
@@ -215,8 +223,7 @@ MNEMOSYNE-226 did not:
 ## 10. Current gate
 
 ```text
-create exactly one Ready PR for MNEMOSYNE-226
-→ Owner merge
+Owner merge PR #294
 → post-merge exact identity check
 → wait for a stable short A0 write window
 → fresh Pro prepares package-003 G2A dynamic fields
