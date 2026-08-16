@@ -3,7 +3,7 @@
 ```yaml
 artifact_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-SOURCE-MANIFEST-001
 package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-PACKAGE-001
-status: frozen_source_manifest_pending_final_package_blob_fill
+status: frozen_source_manifest_with_final_non_self_package_blobs
 ```
 
 ## 1. Mnemosyne source receipt
@@ -150,18 +150,16 @@ Each output must record its Git blob SHA and creation/update commit SHA in the f
 
 ## 6. MNEMOSYNE-223 package-file identities
 
-These identities are filled after all package files are created on the canonical branch and before PR publication:
-
 ```yaml
 MNEMOSYNE_223_package_files:
-  notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-RUN-DECISION-CANDIDATE-001.md: PENDING_FINAL_BLOB
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/README.md: PENDING_FINAL_BLOB
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/00-controller-receive-and-surface-contract.md: PENDING_FINAL_BLOB
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/01-package-and-source-manifest.md: SELF_IDENTITY_NOT_EMBEDDED
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/02-next-tier-controller-task.md: PENDING_FINAL_BLOB
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/03-mechanical-checks-and-result-template.md: PENDING_FINAL_BLOB
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/04-startup-message.md: PENDING_FINAL_BLOB
-  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/05-package-integrity-and-non-execution-checklist.md: PENDING_FINAL_BLOB
+  notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-RUN-DECISION-CANDIDATE-001.md: 0a50ad12435354e50a80970a458d7c6af94785e4
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/README.md: 21b0b7d3723a5e8654089b7bba31046b806e354c
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/00-controller-receive-and-surface-contract.md: 0b8a18b9743726391513887a03da78074c10313d
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/01-package-and-source-manifest.md: SELF_IDENTITY_RECORDED_IN_MNEMOSYNE_223_VERIFICATION
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/02-next-tier-controller-task.md: fd689c9aeb4d9a22ea9e3e518d4e992f31a3dc73
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/03-mechanical-checks-and-result-template.md: 0004903f8e36a3a482303f9371ce3c9428ca67e5
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/04-startup-message.md: 9d69ccdccb4ed87e215dccbc816e9b4f80c91d82
+  notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-001/05-package-integrity-and-non-execution-checklist.md: 314441d97dff977bf901c5b6c52ea5a9a3f27aee
 ```
 
 The manifest does not attempt a recursive self-hash. Its own final blob is recorded in MNEMOSYNE-223 verification/finalization records.
