@@ -15,7 +15,7 @@ controlling_candidate:
 
 fresh_Pro_review:
   path: notes/adjudications/MNEMOSYNE-224-PACKAGE-002-FRESH-PRO-REVIEW-001.md
-  blob: ba239150234dc161d0d605195e0efef1a9e5ef9f
+  blob: 6881ff8778d27c883f68aff77e77236edbc6a234
 
 operator_selection_incident:
   path: notes/run-context-incidents/MNEMOSYNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001.md
