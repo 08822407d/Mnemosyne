@@ -8,13 +8,15 @@ pinned_base_at_task_start: d0cae2f1d145c8c3e63f4912c9685148face1dc7
 latest_master_integrated: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
 integration_commit: 733034c3fa519031f0ff5f8bd15160472d56074b
 canonical_branch: mnemosyne-226-correct-mne224-provenance-and-model-binding
-canonical_PR: null_pending_creation
+canonical_PR: 294
+PR_state: ready
+PR_draft: false
+PR_head_at_creation: 910e94fc31ab7db75c3a906074ebb0035b0e47c8
 substantive_scope_complete: true
 fresh_Pro_review_complete: true
 mechanical_verification_complete: true
-PR_state: ready
 Draft_exception: none
-blocking_open_PRs: []
+blocking_open_PRs_at_creation: []
 parallel_PR_exception: none
 merge_recommendation: RECOMMEND_MERGE
 comprehensive_human_diff_review_assumed: false
@@ -22,7 +24,7 @@ comprehensive_human_diff_review_assumed: false
 
 ## 1. Completed publication content
 
-The canonical branch contains:
+Ready PR #294 publishes:
 
 - additive operator-selection/provenance incident record;
 - fresh Pro review of PR #292/package 002;
@@ -48,7 +50,7 @@ MNEMOSYNE-226 integrated that exact latest master by a two-parent commit while p
 
 ## 3. Ready-PR preflight
 
-Immediately before publication, current checks require:
+At PR creation:
 
 ```yaml
 latest_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
@@ -56,16 +58,15 @@ open_Mnemosyne_PRs: []
 branch_behind_by: 0
 changed_files: 13
 changed_paths_limited_to_MNEMOSYNE_226_scope: true
+existing_PR_for_exact_head: false
 validation_repository_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
 validation_controller_branch_exists: false
 validation_repository_open_PRs: []
 ```
 
-Any new open PR or default-branch movement before creation requires another preflight.
+## 4. Merge semantics
 
-## 4. Future merge semantics
-
-Merging the future Ready PR will publish the review/correction. It will not:
+Merging PR #294 will publish the review/correction. It will not:
 
 - authorize G2A;
 - create the validation controller branch;
@@ -77,7 +78,7 @@ Merging the future Ready PR will publish the review/correction. It will not:
 
 ## 5. Post-publication gate
 
-After the MNEMOSYNE-226 PR merges:
+After PR #294 merges:
 
 1. mechanically verify merged candidate/package/incident/review identities;
 2. wait until no known Mnemosyne write route is expected during the short A0 window;
