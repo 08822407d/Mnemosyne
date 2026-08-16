@@ -9,7 +9,12 @@ substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
 handoff_replay_executed: false
-PR_state: pending_creation
+canonical_PR: 295
+PR_state: open_ready
+PR_created_head: 0c95528499d992d88a5d7ac8c779d3691546dd6b
+PR_base_at_creation: 5ca091e1c52bb1e7483b2d54e9259d3ec85b7b93
+PR_commits_at_creation: 6
+PR_changed_files: 6
 PR_draft: false
 Agent_merge_authorized: false
 auto_merge_authorized: false
@@ -19,7 +24,7 @@ auto_merge_authorized: false
 
 MNEMOSYNE-227 publishes a bounded new/old-conversation handoff for the F1 Owner validation-disposition gate.
 
-Expected changed paths:
+Changed paths:
 
 ```text
 current/reusable-agent-capability-ownership-research-status.md
@@ -32,7 +37,7 @@ notes/codex-task-results/MNEMOSYNE-227-pr-finalization.md
 
 ## Publication meaning
 
-Merging the future Ready PR will:
+Merging Ready PR #295 will:
 
 - publish the standard handoff package and paired startup prompt;
 - fix the stale F1 safe-next wording;
@@ -54,7 +59,7 @@ It will not:
 
 ## Handoff activation sequence
 
-After merge and post-merge identity verification, the Owner should create a fresh standard ChatGPT Pro conversation and send:
+After PR #295 merges and post-merge identity verification passes, the Owner should create a fresh standard ChatGPT Pro conversation and send:
 
 ```text
 handoff/mnemosyne-f1-validation-disposition-startup-prompt.md
@@ -64,7 +69,7 @@ The new conversation must receive and stop, then load Mnemosyne guidance in a se
 
 ## Branch retention
 
-The live MNEMOSYNE-227 branch is not required by the receiving conversation once the PR has merged and the package/prompt are verified on `master`.
+The live MNEMOSYNE-227 branch is not required by the receiving conversation once PR #295 has merged and the package/prompt are verified on `master`.
 
 ```yaml
 post_merge_branch_retention_required: false
@@ -73,7 +78,7 @@ ordinary_branch_release_after_post_merge_verification: allowed
 
 ## Ready-PR disposition
 
-The future PR should be Ready (`draft: false`) because:
+PR #295 is Ready (`draft: false`) because:
 
 - the handoff scope is complete;
 - no content-changing decision remains inside the handoff-preparation task;
