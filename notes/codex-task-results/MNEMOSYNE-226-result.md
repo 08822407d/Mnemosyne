@@ -3,10 +3,12 @@
 ```yaml
 task_id: MNEMOSYNE-226
 repository: 08822407d/Mnemosyne
-base_master: d0cae2f1d145c8c3e63f4912c9685148face1dc7
+base_master_at_start: d0cae2f1d145c8c3e63f4912c9685148face1dc7
+latest_master_integrated: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+integration_commit: 733034c3fa519031f0ff5f8bd15160472d56074b
 canonical_branch: mnemosyne-226-correct-mne224-provenance-and-model-binding
-status: CONTENT_COMPLETE_PR_PUBLICATION_WAITING_FOR_ACTIVE_PR_293
-canonical_PR: null
+status: LATEST_MASTER_INTEGRATED_READY_FOR_PR_PUBLICATION
+canonical_PR: null_pending_creation
 execution_context:
   product_surface: ChatGPT_conversation_with_GitHub_connector
   operator_selection_verbatim: Pro
@@ -27,37 +29,45 @@ The Owner:
 - reported that the prior MNEMOSYNE-224 response used a next-tier selection despite claiming Pro;
 - requested durable recording and a fresh Pro quality review;
 - warned that another conversation was writing the repository;
-- authorized careful branch creation, repository writes and PR submission for this review/correction task.
+- authorized careful branch creation, repository writes and PR submission for this review/correction task;
+- later confirmed PR #293 merged and instructed this route to continue publication.
 
 The Owner reserved broader root-cause and guidance changes for a later dedicated Mnemosyne construction conversation.
 
-## 2. Parallel-state preflight
+## 2. Parallel-state handling and PR #293 integration
 
 At branch creation:
 
 ```yaml
 latest_master: d0cae2f1d145c8c3e63f4912c9685148face1dc7
-PR_292_merged: true
 open_PRs: []
 known_other_write_branch:
   name: mnemosyne-225-f1-bounded-validation-design-and-next-step-write-visibility
-  merge_base: 9157c476e8bf785f6440af4aaefbc44532d47c14
-  ahead_by: 11
-  behind_by: 14
   path_overlap_with_MNEMOSYNE_226: false
 ```
 
-During MNEMOSYNE-226 preparation, that route created Ready PR #293 and integrated the latest `master`. Its PR body records that it has no path overlap with MNEMOSYNE-226 and should publish first.
+During MNEMOSYNE-226 preparation, that route created Ready PR #293. The single-active-PR guard therefore blocked this route from opening a parallel PR.
 
-```yaml
-pre_PR_recheck:
-  open_PRs: [293]
-  parallel_PR_exception_authorized: false
-  MNEMOSYNE_226_PR_created: false
-  decision: wait_for_PR_293_then_integrate_latest_master_and_publish_one_PR
+PR #293 later merged as:
+
+```text
+9b2c39e18791d29901de9e7a201a61fa7d98d94f
 ```
 
-MNEMOSYNE-226 uses a new task ID and paths limited to F2/A0 review, provenance correction and package 003. It does not reuse or modify the MNEMOSYNE-225 branch.
+MNEMOSYNE-226 then integrated that exact latest `master` with a two-parent commit:
+
+```text
+733034c3fa519031f0ff5f8bd15160472d56074b
+```
+
+Parents:
+
+```yaml
+latest_master_parent: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+prior_MNEMOSYNE_226_head: 64d39c0bf32f3950f74a4eef71d3004c257ceac1
+```
+
+The resulting tree preserves all PR #293 F1/reply-guidance paths and overlays only the thirteen MNEMOSYNE-226 F2/provenance/package-003 paths. No F1 file is modified by this task.
 
 ## 3. Provenance incident
 
@@ -118,7 +128,7 @@ The controller cannot safely infer current UI selection from:
 - response style or speed;
 - a recommendation stored in GitHub.
 
-The just-recorded incident demonstrates that this is not theoretical.
+The recorded incident demonstrates that this is not theoretical.
 
 ## 6. Candidate/package 003
 
@@ -152,7 +162,7 @@ future_G2A_startup_message:
 
 No extra validation output path is added; model receipts are written into the existing seven outputs.
 
-## 7. Package 003 identities at preparation
+## 7. Package 003 identities
 
 ```yaml
 run_decision_candidate_003_blob: 9e46dd849c3c8604f5e2fa7fce9c02c5504ff202
@@ -170,17 +180,22 @@ incident_blob: 5b22b5e5e014922745088aa029b92238439d4037
 
 The manifest does not recursively embed its own identity; future Owner G2A names its exact merged blob.
 
-## 8. Current status and scheduling
+## 8. Final pre-PR repository state
 
-Updated:
+After integrating PR #293:
 
-```text
-current/fable5-cross-repository-safe-concurrency-research-status.md
+```yaml
+Mnemosyne_master: 9b2c39e18791d29901de9e7a201a61fa7d98d94f
+branch_ahead_by_before_publication_record_updates: 18
+branch_behind_by: 0
+changed_files: 13
+open_Mnemosyne_PRs: []
+validation_repository_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
+validation_repository_open_PRs: []
+validation_controller_branch_exists: false
 ```
 
-A0 remains unauthorized.
-
-Package publication can proceed after PR #293 resolves because paths do not overlap. G2A must then wait until every route expected to publish during A0 is merged, abandoned or explicitly paused.
+A0 remains unauthorized and the validation repository remains untouched by MNEMOSYNE-226.
 
 ## 9. Explicit non-actions
 
@@ -195,16 +210,17 @@ MNEMOSYNE-226 did not:
 - change connector/account permissions;
 - use Research/Fable/external quota;
 - authorize retry, repair, compensation, reset or force-push;
-- create a parallel PR while PR #293 is open.
+- create a parallel PR while PR #293 was open.
 
 ## 10. Current gate
 
 ```text
-WAIT_FOR_PR_293_MERGE_OR_CLOSE
-→ integrate execution-time latest master into mnemosyne-226 branch
-→ repeat path/open-PR/identity checks
-→ create exactly one Ready PR for MNEMOSYNE-226
-→ after that PR merges and no known write route remains, fresh Pro may prepare package-003 G2A
+create exactly one Ready PR for MNEMOSYNE-226
+→ Owner merge
+→ post-merge exact identity check
+→ wait for a stable short A0 write window
+→ fresh Pro prepares package-003 G2A dynamic fields
+→ Owner separately authorizes or defers A0
 ```
 
 No A0 execution or G2A is authorized now.
