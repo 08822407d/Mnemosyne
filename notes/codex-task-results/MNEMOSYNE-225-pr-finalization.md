@@ -10,8 +10,12 @@ latest_master_integration_commit: a4839c37fec3e062b7ff6b67e7f5dfd1669b1da6
 substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
-PR_state: READY_PR_CREATION_GATE_PASS
-PR_number: pending_creation
+canonical_PR: 293
+PR_state: open_ready
+PR_created_head: 695bcee8cb1d51322fa353e22c2181e9d5b2c3eb
+PR_base_at_creation: d0cae2f1d145c8c3e63f4912c9685148face1dc7
+PR_commits_at_creation: 15
+PR_changed_files_at_creation: 13
 PR_draft: false
 Agent_merge_authorized: false
 auto_merge_authorized: false
@@ -30,7 +34,7 @@ No validation run or target construction is part of the publication scope.
 
 PR #292 advanced `master` during MNEMOSYNE-225. The exact merged master was integrated with a two-parent commit after path and semantic independence were checked.
 
-Current expected diff after this finalization record:
+Final expected PR scope remains:
 
 ```yaml
 base: d0cae2f1d145c8c3e63f4912c9685148face1dc7
@@ -61,26 +65,24 @@ explicitly states that:
 
 - MNEMOSYNE-226 is an additive MNE224/F2/V2 provenance and model-authorization correction;
 - it makes no global execution-source or behavior-guard change in that task;
-- its observed paths are `notes/run-context-incidents/` and `notes/adjudications/` at the checked head;
+- its observed paths are confined to MNE224/F2/V2 adjudication, incident and package-003 preparation at the checked heads;
 - the MNEMOSYNE-225 paths do not overlap;
 - A0 authorization must wait until MNEMOSYNE-225 is merged, abandoned or explicitly paused.
 
-The exact observed concurrent paths are disjoint from all 13 MNEMOSYNE-225 paths. The routes also have no read/version dependency that requires MNEMOSYNE-226 to land first: MNEMOSYNE-225 uses unchanged F1 candidate and Owner-decision blobs, while MNEMOSYNE-226 reviews package 002 from the F2/V2 route.
+The routes also have no read/version dependency that requires MNEMOSYNE-226 to land first: MNEMOSYNE-225 uses unchanged F1 candidate and Owner-decision blobs, while MNEMOSYNE-226 reviews package 002 from the F2/V2 route.
 
 Disposition:
 
 ```yaml
 concurrent_branch_scope: KNOWN_AND_SEMANTICALLY_INDEPENDENT
-publication_order: MNEMOSYNE_225_PR_MAY_OPEN_FIRST
+publication_order: MNEMOSYNE_225_PR_OPENED_FIRST
 MNEMOSYNE_226_A0_or_G2A: must_wait_for_MNEMOSYNE_225_route_close_or_pause
-competing_PR_required: false
+competing_PR_created_before_PR_293: false
 ```
-
-The check is execution-time evidence, not a permanent assertion. Open PRs, latest master and both branch heads must be re-read immediately before PR creation.
 
 ## Ready-PR semantics
 
-The PR may be created as Ready (`draft: false`) because:
+PR #293 was created as Ready (`draft: false`) because:
 
 - the preparation scope is complete;
 - no content-changing decision remains inside this publication task;
@@ -103,4 +105,4 @@ Merging the PR will not:
 
 ## Branch retention
 
-No post-merge task depends on the MNEMOSYNE-225 live branch. After a future PR merges and post-merge identity verification passes, the branch has no special retention obligation under current evidence.
+No post-merge task depends on the MNEMOSYNE-225 live branch. After PR #293 merges and post-merge identity verification passes, the branch has no special retention obligation under current evidence.
