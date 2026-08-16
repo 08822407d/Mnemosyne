@@ -97,12 +97,12 @@ See:
 
 ```text
 notes/run-context-incidents/
-MNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001.md
+MNEMOSYNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001.md
 ```
 
 ## 4. Material operational defect in package 002
 
-Candidate 002 and current status correctly list five future G2A dynamic fields:
+Candidate 002 and current status correctly list five G2A dynamic fields:
 
 ```yaml
 required:
