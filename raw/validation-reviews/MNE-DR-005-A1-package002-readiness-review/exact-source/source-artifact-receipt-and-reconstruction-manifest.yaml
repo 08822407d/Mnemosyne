@@ -1,0 +1,46 @@
+source_artifact_receipt:
+  artifact_id: MNE-DR-005-A1-PACKAGE002-READINESS-REVIEW-COMPLETE-RESPONSE-001
+  source_attachment_ref: current_conversation_uploaded_file
+  operator_filename: MNE-DR-005-A1-PACKAGE002-READINESS-REVIEW-complete-response(1).md
+  media_type: text/markdown
+  original_bytes: 37074
+  original_sha256: 6e639f7b49c8bfd6d47e950a7eb6cce54cf41c07903fb57fae3d0a29b7c2a4e0
+  preservation_level: EXACT_RECONSTRUCTABLE_ARCHIVE
+  source_device_identity_verified: unknown
+  repository_visibility_at_storage: public
+  material_class: public_synthetic_validation_review
+  archive:
+    algorithm: deterministic_gzip_then_base64
+    gzip_mtime: 0
+    gzip_filename: empty
+    gzip_os_byte: 255
+    gzip_bytes: 13234
+    gzip_sha256: e138a3ab4f28f38b5c17935992d3db6c2e0688f5dc5a46ca37bb346b62e7032c
+    base64_wrapping: none_with_single_final_LF_per_part
+    ordered_parts:
+      - path: raw/validation-reviews/MNE-DR-005-A1-package002-readiness-review/exact-source/archive-part-001.b64
+        bytes: 6001
+        blob: 89d4bbbae13745fd7ebea22fb16cb026b4e834e9
+      - path: raw/validation-reviews/MNE-DR-005-A1-package002-readiness-review/exact-source/archive-part-002.b64
+        bytes: 6001
+        blob: ccd208ca144c59251533c310fd7bd0a27317721a
+      - path: raw/validation-reviews/MNE-DR-005-A1-package002-readiness-review/exact-source/archive-part-003.b64
+        bytes: 2001
+        blob: cce7403d68c3ac9337620f2cf1b5a56aefaac968
+      - path: raw/validation-reviews/MNE-DR-005-A1-package002-readiness-review/exact-source/archive-part-004.b64
+        bytes: 2001
+        blob: 4b716ad17d9216bad885d4ec8da0bd2fb972e21e
+      - path: raw/validation-reviews/MNE-DR-005-A1-package002-readiness-review/exact-source/archive-part-005.b64
+        bytes: 1649
+        blob: 77a827e8532e0ffba920e80cda7a71ee1446d591
+  reconstruction:
+    command: cat ordered archive parts; remove exactly one final LF from each; concatenate base64 text; base64-decode; gzip-decompress
+    reconstructed_bytes: 37074
+    reconstructed_sha256: 6e639f7b49c8bfd6d47e950a7eb6cce54cf41c07903fb57fae3d0a29b7c2a4e0
+    verified: true
+  runtime_reading_profile:
+    default: DO_NOT_READ
+    access: ON_DEMAND
+  limitations:
+    - Exact identity is with the file exposed to this conversation, not independently with an unobserved user-device source.
+    - The five-part archive is exact only when reconstructed in the stated order and procedure.
