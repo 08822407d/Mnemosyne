@@ -6,9 +6,12 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
 canonical_branch: mnemosyne-229-v2a-a0-adjudication-writeback
-canonical_PR: null_pending_creation
+canonical_PR: 297
 PR_state: READY
-draft: false
+PR_draft: false
+PR_head_at_creation: 9f8f952e174b84f580d235b5a284fc502dbea32c
+PR_changed_files_at_creation: 7
+PR_commits_at_creation: 7
 substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
@@ -20,7 +23,7 @@ comprehensive_human_diff_review_assumed: false
 
 ## Publication scope
 
-The Ready PR will publish:
+PR #297 publishes:
 
 - the accepted fresh Pro A0 adjudication;
 - the additive package path-identity correction;
@@ -29,9 +32,19 @@ The Ready PR will publish:
 - the repaired durable F2 route state;
 - MNEMOSYNE-229 result and verification records.
 
+## Mechanical state at publication
+
+```yaml
+base_master: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
+branch_behind_by_before_PR: 0
+changed_files_before_PR: 7
+open_Mnemosyne_PRs_before_creation: []
+exactly_one_merge_target: true
+```
+
 ## Explicit non-effects
 
-Merging the PR will not:
+Merging PR #297 will not:
 
 - modify or delete `v2a-sentinel-001-controller`;
 - rewrite any of the seven historical A0 outputs;
