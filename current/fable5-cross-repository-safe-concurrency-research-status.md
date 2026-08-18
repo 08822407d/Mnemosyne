@@ -3,11 +3,11 @@
 ```yaml
 status_id: MNE-FABLE5-CROSS-REPOSITORY-CONCURRENCY-STATUS-001
 created_by_task: MNEMOSYNE-214
-last_updated_by_task: MNEMOSYNE-230
+last_updated_by_task: MNEMOSYNE-231
 canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
 display_name: MNE-DR-005 跨仓库并发
 roadmap_priority: F2
-status: A1_EXACT_RUN_PLAN_PREPARED_EXECUTION_NOT_AUTHORIZED
+status: A1_PACKAGE_002_DURABLE_EXECUTION_NOT_AUTHORIZED
 
 Fable_report_received: true
 fresh_Pro_F2_adjudication_completed: true
@@ -29,12 +29,40 @@ V2_A_A0:
   durable_evidence_correction_recorded: true
 
 V2_A_A1:
-  Owner_plan_preparation_selected: true
-  exact_run_plan_prepared: true
-  package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-PACKAGE-001
   run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-001
   selected_cells: [A1]
+  Owner_plan_preparation_selected: true
+  package_001:
+    id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-PACKAGE-001
+    preserved_immutable: true
+    run_decision_candidate_001_blob: bb140196a38d8b14f6eba9e2175cd45744efb23b
+    source_manifest_001_blob: 12a480449b1dac45cd265864a812f399d19ec15c
+    execution_ready_as_written: false
+  model_binding_order_defect:
+    id: MNE-V2A-A1-MODEL-BINDING-ORDER-DEFECT-001
+    status: confirmed_pre_execution_blocker
+    classification: validation_protocol_and_package_profile_defect
+    architecture_candidate_defect: false
+    A1_runtime_failure: false
+    A1_rerun_required: false
+  package_002:
+    id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-PACKAGE-002
+    role: additive_model_binding_and_operator_flow_repair
+    run_decision_candidate_002_blob: a8b627b8aa74b5a1a5af19d3af485a17aa2cd0b7
+    source_manifest_002_blob: 1f54f4711a44129c3dfee066aa2ab297f94718b7
+    required_file_count: 6
+    preserves_package_001_non_delta_semantics: true
+  repaired_model_binding:
+    controller_selected_label_bound_at: controller_G2A
+    Alpha_authorized_label_bound_at: controller_G2A
+    Beta_authorized_label_bound_at: controller_G2A
+    Alpha_selected_label_bound_at: Alpha_worker_launch
+    Beta_selected_label_bound_at: Beta_worker_launch
+    worker_label_match_required_before_write: true
+    hidden_backend_identity: unknown_or_not_attestable
+  inherited_exact_profile_unchanged: true
   execution_authorized: false
+  G2A_issued: false
   controller_launched: false
   worker_launched: false
   validation_repository_written: false
@@ -52,7 +80,7 @@ automatic_retry_or_repair_authorized: false
 
 ## 1. Preserved Fable research and accepted F2 direction
 
-The exact Fable report, input snapshot, fresh Pro F2 adjudication and Owner Option A remain preserved under:
+The Fable report, exact input snapshot, fresh-Pro F2 adjudication and Owner Option A remain preserved under:
 
 ```text
 raw/research-reports/cycles/2026Q3-cross-repository-safe-concurrency/
@@ -61,142 +89,109 @@ notes/cross-repository-safe-concurrency-and-ordered-work-amendment-candidate-v0.
 notes/owner-decision-results/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-OWNER-DECISION-001.md
 ```
 
-The accepted direction remains a provisional architecture baseline. It does not prove production readiness or authorize any real target.
+The accepted direction remains provisional. It does not prove production readiness or authorize a real target.
 
 ## 2. Accepted A0 state
 
-Durable A0 records:
+A0 remains Owner-accepted as:
 
 ```text
-notes/validation-adjudications/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A0-ADJUDICATION-001.md
-notes/evidence-corrections/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A0-PATH-IDENTITY-CORRECTION-001.md
-notes/owner-decision-results/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A0-OWNER-DECISION-001.md
+PASS_WITH_BOUNDED_EVIDENCE_DEFECTS
 ```
 
-Accepted result:
+Its controller branch and seven historical outputs remain immutable. A0 neither requires rerun nor automatically authorizes A1.
 
-```yaml
-overall_A0_adjudication: PASS_WITH_BOUNDED_EVIDENCE_DEFECTS
-repository_safety_and_write_boundary: PASS
-frozen_ref_and_inventory_integrity: PASS
-package_and_source_content_integrity: PASS
-evidence_record_integrity: PASS_WITH_ONE_BOUNDED_PATH_IDENTITY_DEFECT
-A0_rerun_required: false
-package_repair_required: false
-```
+## 3. A1 package 001 and discovered defect
 
-The bounded defects remain historical evidence:
+Package 001 froze the fixture, branch map, worker/effect contracts, expected blobs/trees, order oracle, ten-file result set, no-PR, no-retry and retention rules.
 
-- `A0-TOOL-001` — non-blocking unsupported read shortcut; required evidence was recovered using distinct supported read-only operations without repeating the failed call;
-- one false shortened path in historical A0 output 02; the canonical package path/blob was independently verified and preserved through an additive correction.
+A pre-execution review found one cross-file timing defect:
 
-A0 does not automatically authorize A1 or any later cell.
+- package 001 required Alpha/Beta actual `operator_selected_visible_label` values in the controller G2A;
+- the same package opened Alpha/Beta worker conversations only after controller G2A and preflight;
+- those actual selected-label evidence objects therefore could not exist at G2A time.
 
-## 3. A1 preparation decision
-
-The Owner selected preparation only:
+The defect is recorded at:
 
 ```text
-notes/owner-decision-results/
-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-PREPARATION-OWNER-DECISION-001.md
+notes/validation-protocol-defects/
+MNE-V2A-A1-MODEL-BINDING-ORDER-DEFECT-001.md
 ```
 
-This permits an exact Mnemosyne run plan/package and one Ready PR. It does not permit a validation-repository branch, file, commit, PR, worker launch or cell execution.
+The prior execution-time review's mechanical source/ref/effect/order/tool findings remain useful. Its package-001 `ready_for_Owner_G2A` conclusion is superseded by this temporal blocker.
 
-## 4. A1 exact run decision and package
+## 4. Additive package 002
+
+Controlling repaired artifacts:
 
 ```text
 notes/validation-run-decisions/
-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-RUN-DECISION-CANDIDATE-001.md
+MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-RUN-DECISION-CANDIDATE-002.md
 
-notes/cross-repository-safe-concurrency-v2a-a1-execution-package-001/
+notes/cross-repository-safe-concurrency-v2a-a1-execution-package-002/
 ```
 
-The package contains ten files and freezes:
+Package 002 contains six files and supersedes package 001 only for:
 
-- one controller, two worker and two order-simulation branch names;
-- one public/synthetic fixture commit and tree;
-- two exact two-path worker contracts;
-- complete read/write/generated/shared/global/authority effect sets;
-- four exact output blobs;
-- exact Alpha-only, Beta-only and combined Git trees;
-- both Alpha→Beta and Beta→Alpha order-construction contracts;
-- a ten-file controller result manifest;
-- model-label evidence, stop/no-retry rules and retention;
-- fresh Pro adjudication after any future execution.
+- controller G2A model fields;
+- worker selected-label timing;
+- worker-opening/startup flow;
+- staged model-receipt interpretation in the existing ten outputs.
 
-## 5. Exact future validation profile
+All fixture, task, effect, branch, blob, tree, order, output, no-PR, no-retry and retention semantics remain inherited unchanged from package 001.
 
-```yaml
-validation_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
-validation_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
-fixture:
-  ref: tlr-v1-fixture-base
-  commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
-  tree: f1e221ce8aef404579b96adb3ab01319016889db
-A0_controller:
-  ref: v2a-sentinel-001-controller
-  head: d936cd2d4acd3f5b71f6f7f0d86ae6ffe93ab58c
-future_A1_branches:
-  - v2a-a1-001-controller
-  - v2a-a1-001-alpha
-  - v2a-a1-001-beta
-  - v2a-a1-001-order-alpha-beta
-  - v2a-a1-001-order-beta-alpha
-future_validation_PRs: prohibited
+## 5. Repaired staged binding
+
+```text
+Owner G2A:
+  controller authorized + actual selected label
+  Alpha authorized label only
+  Beta authorized label only
+
+controller preflight and branch creation:
+  freeze both immutable worker task payloads before first worker result
+
+Alpha launch:
+  bind Alpha actual selected label in its own fresh conversation
+  compare before any write
+
+Beta launch:
+  bind Beta actual selected label in its own fresh conversation
+  compare before any write
 ```
 
-### Frozen worker outputs
-
-```yaml
-Alpha:
-  paths:
-    - targets/agent-alpha/src/alpha_feature.py
-    - targets/agent-alpha/tests/test_alpha_feature.py
-  blobs:
-    source: 18959a155b44d1d24a14407f23bb8731eb5aaf49
-    test: 9303a7ce7968512c1036c5ad19bbfd61c8db544a
-  expected_root_tree: 5929e4caeac1f10681057f530286e3d3dc27b28d
-Beta:
-  paths:
-    - targets/agent-beta/src/beta_feature.py
-    - targets/agent-beta/tests/test_beta_feature.py
-  blobs:
-    source: 5ddad8381514e9a203ac1b5e67e38463fe2b14a2
-    test: a9eafff2c2e007f556dc789fecb4eb465e2955ca
-  expected_root_tree: 5dc4fa21362bb9e130de71779e2af0296eb11acc
-both_orders_expected_root_tree: 2b919544aecfbd1634e5f136af22571f2e8d9fd0
-```
-
-The oracle is static content inspection plus mechanical Git identity comparison. Runtime tests and wall-clock concurrency are not required and must not be claimed from this package.
+A missing, unknown or mismatched worker selected label blocks that worker before repository write. A planned or recommended label cannot substitute for actual worker-conversation evidence.
 
 ## 6. Current gate
 
 ```yaml
-current_gate: OWNER_SEPARATE_DECISION_AFTER_PACKAGE_MERGE_AND_EXECUTION_TIME_PRO_RECHECK
-A1_automatically_authorized_by_package_merge: false
-reuse_A0_G2A_for_A1: false
+current_gate: PACKAGE_002_POST_MERGE_IDENTITY_REVIEW_THEN_SEPARATE_OWNER_G2A
+package_002_publication_implies_G2A: false
 A1_execution_authorized: false
 required_before_A1_execution:
-  - package_merged_and_exact_blobs_verified
-  - fresh_Pro_execution_time_source_ref_branch_and_product_review
+  - package_002_merged_and_exact_blobs_verified
+  - fresh_Pro_execution_time_review_of_package_002_and_inherited_package_001
   - then_current_Mnemosyne_and_Meta_Agent_refs
-  - exact_controller_Alpha_Beta_visible_model_label_binding
+  - controller_current_selected_label_and_exact_match
+  - Alpha_and_Beta_Owner_authorized_labels
   - five_A1_branches_absent
   - no_competing_PR_or_lineage
   - explicit_Owner_G2A_for_A1_only
 ```
+
+Worker selected labels are intentionally not G2A fields. They are required later at the respective worker pre-write gates.
 
 ## 7. Explicit boundaries
 
 No current record authorizes:
 
 - creation or movement of any A1 validation branch;
-- modification of validation `master`, fixture, any `tlr-v1-*` ref or the A0 controller;
+- modification of validation `master`, fixture, any `tlr-v1-*` ref or A0 controller;
 - controller or worker launch;
 - A1 execution or retry;
+- modification of package 001;
 - A2–A7, V2-B or V2-C;
 - a validation PR or merge;
 - Meta-Agent or real-target write/adoption;
 - Web, Deep Research, Fable, another app, private material or external quota;
-- package/fixture repair, reset, force-push or branch cleanup.
+- package/fixture repair, reset, force-push or cleanup.
