@@ -6,7 +6,8 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: a7a7c54dc095d32dd3cc82767a1afbb4bbf9ae44
 canonical_branch: mnemosyne-232-v2a-a1-wrapper-verification-repair-handoff
-canonical_PR: null_pending_creation
+canonical_PR: 300
+PR_creation_head_sha: b83c72270ed7691b792495ecaf6b26e26f0d70d2
 PR_state: READY
 draft: false
 substantive_scope_complete: true
