@@ -6,9 +6,14 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: 4ff2d021a568ae3bfdf98c7dee81d87545fcd3d1
 canonical_branch: mnemosyne-231-v2a-a1-model-binding-repair
-canonical_PR: null_pending_creation
+canonical_PR: 299
 PR_state: READY
 draft: false
+PR_head_at_creation: b58a0d11b7ca710616ed327394624ef3d4b79f38
+PR_commits_at_creation: 13
+PR_changed_files_at_creation: 13
+branch_behind_by_at_creation: 0
+open_Mnemosyne_PRs_before_creation: []
 substantive_scope_complete: true
 semantic_review_complete: true
 mechanical_verification_complete: true
@@ -20,7 +25,7 @@ comprehensive_human_diff_review_assumed: false
 
 ## Publication scope
 
-The Ready PR publishes:
+Ready PR #299 publishes:
 
 - the Owner's package-002 repair authorization;
 - `MNE-V2A-A1-MODEL-BINDING-ORDER-DEFECT-001`;
@@ -40,9 +45,20 @@ Package 002 changes only:
 
 It preserves all other package-001 semantics and leaves package 001 unchanged.
 
+## Exact controlling identities
+
+```yaml
+Owner_repair_authorization_blob: f12b4526c30b099c2f8db982198ecf63c90d9718
+defect_blob: 7cd37e808540e50c57a7440e367fabaa99442826
+candidate_002_blob: a8b627b8aa74b5a1a5af19d3af485a17aa2cd0b7
+package_002_source_manifest_blob: 1f54f4711a44129c3dfee066aa2ab297f94718b7
+inherited_candidate_001_blob: bb140196a38d8b14f6eba9e2175cd45744efb23b
+inherited_package_001_manifest_blob: 12a480449b1dac45cd265864a812f399d19ec15c
+```
+
 ## Explicit non-effects
 
-Merging the PR will not:
+Merging PR #299 will not:
 
 - issue A1 G2A;
 - create or move any validation branch;
