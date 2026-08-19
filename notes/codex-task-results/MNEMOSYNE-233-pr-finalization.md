@@ -6,7 +6,7 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: b70acfc8ab190f18fdd987f034963039728ca887
 canonical_branch: mnemosyne-233-v2a-a1-package004-handoff-repair
-canonical_PR: null_pending_creation
+canonical_PR: 301
 PR_state: READY
 draft: false
 substantive_scope_complete: true
