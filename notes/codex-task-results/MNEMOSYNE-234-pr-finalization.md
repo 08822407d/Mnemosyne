@@ -6,7 +6,7 @@ repository: 08822407d/Mnemosyne
 base_branch: master
 pinned_base_sha: cc06e929515e6bcae8f4997cc6bb6e165bcdd151
 canonical_branch: mnemosyne-234-f2-handoff003-schema-oracle-repair
-canonical_PR: null_pending_creation
+canonical_PR: 302
 PR_state: READY
 draft: false
 substantive_scope_complete: true
@@ -21,6 +21,8 @@ merge_recommendation: RECOMMEND_MERGE
 comprehensive_human_diff_review_assumed: false
 branch_retention_required_after_merge: false
 ```
+
+PR #302 is the single active publication lineage for this repair.
 
 This PR is limited to the route-specific Handoff 003 receive-schema/oracle repair: defect record, canonical schema, Handoff Package 003, Startup Prompt 003, Rehearsal Contract 002, current F2 state and MNEMOSYNE-234 records.
 
