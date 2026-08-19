@@ -219,11 +219,18 @@ mnemosyne_handoff_receive:
   limitations_or_unknowns: list_of_strings
 ```
 
-## Comparison semantics
+## Expected-value sources and comparison semantics
+
+Static expected values are copied exactly from Handoff Package 003 into the receiver report, except for the one unavoidable self-reference field:
+
+```text
+mnemosyne_handoff_receive.package.blob.expected
+```
+
+Handoff Package 003 cannot contain its own Git blob without recursive self-reference. Therefore that one expected value is supplied by the exact merged Startup Prompt 003, which is created only after Handoff Package 003's blob is known. Startup Prompt 003 must also name the same schema path/blob. No other report field may take an expected value from an alternate source.
 
 For every `{expected, actual, exact_match}` mapping:
 
-- `expected` is copied exactly from Handoff Package 003 into the receiver report;
 - `actual` is independently observed by the receiver from execution-time GitHub evidence or its own receive state;
 - `exact_match` is `true` iff the typed `actual` value exactly equals the typed `expected` value;
 - strings use raw Unicode string equality; no case-folding, trimming, alias substitution or semantic paraphrase is allowed;
@@ -234,7 +241,7 @@ For every `{expected, actual, exact_match}` mapping:
 
 ## Successful receive constants
 
-Handoff Package 003 supplies all route-specific expected values. A mechanically acceptable receive additionally requires:
+Handoff Package 003 supplies the route-specific expected values and Startup Prompt 003 supplies only the Handoff Package 003 self-blob expected value. A mechanically acceptable receive additionally requires:
 
 ```yaml
 handoff_receive_status: RECEIVED
