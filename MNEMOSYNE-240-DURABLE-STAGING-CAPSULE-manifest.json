@@ -1,0 +1,42 @@
+{
+  "capsule_id": "MNEMOSYNE-240-DURABLE-STAGING-CAPSULE-001",
+  "role": "emergency_preservation_only",
+  "execution_authorized": false,
+  "files": [
+    {
+      "filename": "MNEMOSYNE-240-task.md",
+      "bytes": 1599,
+      "sha256": "9052cac9f686e078402966b5be3b30f8f27a14c598c4f64a2829d74fc69e7edf"
+    },
+    {
+      "filename": "MNEMOSYNE-240-repository-payload.zip",
+      "bytes": 956225,
+      "sha256": "ed94a71f67f0f04367a4693c8d734af6a023e160d1506dcef9a9e9502d13b767"
+    },
+    {
+      "filename": "MNEMOSYNE-240-repository-payload-manifest.json",
+      "bytes": 36214,
+      "sha256": "8fec9dd374c0cf3e63f66654344976b3c045adc05b8702f9d08d9c8d2f59106b"
+    },
+    {
+      "filename": "MNEMOSYNE-240-PR-BODY.md",
+      "bytes": 2387,
+      "sha256": "03979ed0757b2f21a2ff6a4127a6caa5020850ff4c49bae3ff6f5ef31020a6d3"
+    },
+    {
+      "filename": "MNEMOSYNE-240-UBUNTU-OPERATOR-REVISION-002.pyz",
+      "bytes": 959615,
+      "sha256": "028a47167d79ae39a5546b79c4969e7de86a2d1497d5f88a2f503430d5756ff1"
+    },
+    {
+      "filename": "MNE-MNEMOSYNE-240-PREFLIGHT-403-PRO-ADJUDICATION-001.md",
+      "bytes": 2477,
+      "sha256": "1ab16bb726ea36d5734f8ad07f357c9cdc7874ee4897b6c68bd5d5b33285c0a8"
+    },
+    {
+      "filename": "MNEMOSYNE-240-DURABLE-STAGING-CAPSULE-README.md",
+      "bytes": 592,
+      "sha256": "70910f5c768049795dd5c291d4fd18aafe1746244a7ba9f6eae5138c3822c032"
+    }
+  ]
+}
