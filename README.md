@@ -8,6 +8,8 @@ Mnemosyne 是一个用于设计、演化和交付 AI Agent 外部持久记忆系
 
 当前阶段采用中文作为主要工作语言。
 
+AI / external-review 入口：`notes/ai-onboarding/MNEMOSYNE-AI-START-HERE.md`（非执行源；不会选择任务、路线或写入权限）。
+
 当前 live wayfinding：`current/post-interruption-live-wayfinding-status.md`；当前 review / validation 汇总：`current/review-and-validation-status.md`。这些文件都不是执行源；`current/human-approved-spec.md` 仍是唯一执行源。
 
 FABLE5-GREENFIELD 最新执行偏差、续接与最终阶段交接入口：`current/fable-greenfield-execution-deviation-status.md`。最终阶段 handoff package：`handoff/fable5-greenfield-final-phase-handoff-package.md`；配套 startup prompt：`handoff/fable5-greenfield-final-phase-next-conversation-startup-prompt.md`。这些文件都不是执行源。

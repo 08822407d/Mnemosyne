@@ -1,0 +1,69 @@
+index_id: MNEMOSYNE-AI-CURRENT-STATE-INDEX-001
+schema_version: 1
+package_version: 0.1.0
+authority: non_execution_source_pointer_index
+purpose: pointers_only_no_duplicated_dynamic_truth
+selection_effect: none
+refresh_rule:
+  path_existence: verify_on_the_exact_repository_ref
+  content: read_execution_time_content
+  repository_metadata: query_execution_time_Git_or_GitHub_state
+  platform_and_model_facts: reverify_when_material
+entries:
+  execution_source:
+    path: current/human-approved-spec.md
+    authority_class: execution_source
+    routine_read: true
+  project_overview_and_advertised_wayfinding:
+    path: README.md
+    authority_class: non_execution_source_navigation
+    routine_read: true
+    warning: advertised_wayfinding_may_lag_the_exact_task
+  general_live_wayfinding:
+    path: current/post-interruption-live-wayfinding-status.md
+    authority_class: non_execution_source_status
+    routine_read: false
+    read_when: exact_task_requires_general_route_reconstruction
+    warning: never_select_a_task_from_this_pointer
+  review_and_validation_summary:
+    path: current/review-and-validation-status.md
+    authority_class: non_execution_source_status
+    routine_read: false
+    read_when: exact_task_requires_repository_health_or_validation_history
+  active_context:
+    path: current/active-context.md
+    authority_class: non_execution_source_working_view
+    routine_read: false
+    read_when: exact_task_explicitly_requires_it
+    warning: may_be_stale_and_never_a_default_action_plan
+  handoff_compatibility_pointer:
+    path: handoff/handoff-current.md
+    authority_class: deprecated_non_execution_source_compatibility_pointer
+    routine_read: false
+    read_when: exact_Owner_instruction_explicitly_requires_it
+    warning: not_a_global_route_selector
+  command_registry:
+    path: commands/README.md
+    authority_class: non_execution_source_command_registry
+    routine_read: when_a_command_is_invoked_or_designed
+  platform_and_app_delta:
+    path: current/platform-context-apps-delta-status.md
+    authority_class: time_sensitive_non_execution_source_evidence
+    routine_read: when_platform_Project_memory_or_app_behavior_is_material
+  Claude_GitHub_surface_facts:
+    path: current/claude-github-work-surface-facts.md
+    authority_class: time_sensitive_non_execution_source_evidence
+    routine_read: when_Claude_Web_Claude_Code_or_GitHub_surface_behavior_is_material
+  external_research_alias_registry:
+    path: notes/registries/project-research-display-name-registry-v0.1.md
+    authority_class: non_execution_source_registry
+    routine_read: before_allocating_an_external_research_or_review_alias
+task_specific_state:
+  discovery_rule: follow_only_the_exact_current_task_work_order_or_Owner_selected_handoff_citations
+  default_path: null
+  routine_read: false
+  nearby_file_inference: prohibited
+cold_sources:
+  default: DO_NOT_READ
+  access: ON_DEMAND
+  trigger_required: reconstruction_dispute_migration_incident_citation_or_authorized_full_history_review

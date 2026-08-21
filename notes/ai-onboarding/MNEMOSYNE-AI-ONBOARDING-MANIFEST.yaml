@@ -1,0 +1,65 @@
+package_id: MNE-AI-ONBOARDING-PACKAGE-001
+manifest_id: MNEMOSYNE-AI-ONBOARDING-MANIFEST-001
+schema_version: 1
+package_version: 0.1.0
+status: repository_native_non_execution_source_navigation
+execution_source: current/human-approved-spec.md
+selection_effect: none
+implementation_task: MNEMOSYNE-243
+source_candidate:
+  design_path: notes/ai-onboarding-candidates/MNE-AI-ONBOARDING-PACKAGE-DESIGN-001.md
+  work_order_path: notes/ai-onboarding-candidates/MNEMOSYNE-243-AI-ONBOARDING-WORK-ORDER.md
+  archive_path: notes/ai-onboarding-candidates/MNEMOSYNE-AI-ONBOARDING-CANDIDATE-001.zip
+  archive_bytes: 6659
+  archive_git_blob_sha: c2d90cfde34ede358884fb2f4883dce6a4c091e8
+  archive_sha256: 72e47e85e9f853fcadf63c96036c285600d5dab4a26e0d4578ac4b742ce10603
+  archive_member_manifest_verified: true
+package_files:
+  - path: notes/ai-onboarding/MNEMOSYNE-AI-START-HERE.md
+    bytes: 4069
+    sha256: 147e922eb0649ebe56a27b8dfad0676d20cad37964fffc9b6d4a041568ac9d66
+    git_blob_sha: 8b5c31ea3a474f9aab34a4a7a8c11f1d3aaed79c
+  - path: notes/ai-onboarding/MNEMOSYNE-REPOSITORY-MAP.yaml
+    bytes: 3192
+    sha256: c11e1fdbbf9c08ce787a88715247447f98423b2452734169e1107976dab81d3b
+    git_blob_sha: 37fc0a5ee2b7bd2e55a5cf11d4f0f7224fe10ee3
+  - path: notes/ai-onboarding/MNEMOSYNE-AUTHORITY-AND-EVIDENCE.md
+    bytes: 3428
+    sha256: 6fa244fcf0c7209bd304236b85793006300a41a9248d84d34fd1cb1bd1910126
+    git_blob_sha: 410558f3be4cd93a386a0271ed513c38bad02f44
+  - path: notes/ai-onboarding/MNEMOSYNE-CURRENT-STATE-INDEX.yaml
+    bytes: 2999
+    sha256: 6a2d5e4005c094e5f2ec0dd30d8148dd3691df865da2da5c25d95e7f39370f86
+    git_blob_sha: 87cce362a5d0fc9f1a009c64e75fda4a4a601a2f
+  - path: notes/ai-onboarding/MNEMOSYNE-CLAUDE-WEB-FAST-CONTEXT.md
+    bytes: 1693
+    sha256: d38dee4a7635389db1778c2c93215cbab29c1e8cc7d0d7c34d6bd30f1149e8ec
+    git_blob_sha: 37a07c69eb042632dd53ed7acbd8c04b562acdba
+  - path: notes/ai-onboarding/MNEMOSYNE-CLAUDE-CODE-LOCAL-START.md
+    bytes: 2944
+    sha256: 0c9068b93de55883afd62d867ec305375c8a6efb55d28b6e4258ae29b4d32bcb
+    git_blob_sha: 846e46855aab3eec93aa22df01712d05ad27a72b
+  - path: notes/ai-onboarding/MNEMOSYNE-TAKEOVER-CHECKLIST.md
+    bytes: 1747
+    sha256: fc2e439bc46be0f639976801a6e0d8a1d64bbd7be7e188fbf0434def95d8b7ab
+    git_blob_sha: 477366606123df5c3e8467fedfcf9e8956652b10
+manifest_file:
+  path: notes/ai-onboarding/MNEMOSYNE-AI-ONBOARDING-MANIFEST.yaml
+  identity_policy: excluded_from_its_own_content_hash_set_to_avoid_recursive_self_identity
+  verification: use_exact_ref_tree_or_result_record_readback
+repository_integration:
+  README_pointer: README.md
+  result_record: notes/codex-task-results/MNEMOSYNE-243-ai-onboarding.md
+validation_contract:
+  yaml_parse_required: true
+  payload_hash_verification_required: true
+  protected_path_diff_check_required: true
+  fresh_context_cases_required: 3
+  external_surface_claim_rule: claim_actual_only_when_invoked
+boundaries:
+  execution_source_duplicated: false
+  dynamic_current_status_duplicated: false
+  root_CLAUDE_md_created: false
+  root_AGENTS_md_created: false
+  repository_write_or_takeover_authorized_by_package: false
+  cold_originals_default: DO_NOT_READ_ON_DEMAND
