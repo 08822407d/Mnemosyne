@@ -47,6 +47,24 @@ Review and implement `MNEMOSYNE-243`:
 - validate Claude Web/Fable read-only analysis, local Claude Code maintenance, and unauthorized takeover blocking;
 - create a Ready PR and do not merge.
 
+## Receiver guidance load
+
+```yaml
+receiver_guidance_load:
+  project_guidance: not_applicable
+  mnemosyne_guidance: required
+  refresh_completed: false
+  phase_order:
+    - receive_report
+    - stop
+    - separate_Mnemosyne_guidance_refresh
+    - confirm_transferred_task_preserved
+    - explicit_Owner_continuation_authorization
+```
+
+The execution source remains `current/human-approved-spec.md`. Guidance refresh applies
+behavior constraints without replacing the transferred task.
+
 ## Receive sequence
 
 1. Receive this exact package and return a compact receive report.
@@ -60,8 +78,9 @@ Review and implement `MNEMOSYNE-243`:
 ```yaml
 release_notice:
   branch: mnemosyne-235-f2-g2a-and-handoff-audit-closeout
-  may_delete: true
-  reason: no unique unpreserved work and PR_303 publication is merged
+  observed_absent_at_MNEMOSYNE_242: true
+  no_user_action_required: true
+  unique_unpreserved_work: false
 active_retention:
   branch: mnemosyne-240-preservation-capsule
   retain: true

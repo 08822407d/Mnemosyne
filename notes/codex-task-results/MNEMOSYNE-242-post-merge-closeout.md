@@ -144,6 +144,12 @@ MNEMOSYNE-243 under a separate Ready PR.
 The startup prompt deliberately retains one unfilled field for the execution-time merged
 handoff-package blob. That value is not invented here.
 
+After Pro review (`MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001`), the final handoff package
+contains the explicit `receiver_guidance_load` block required by
+`commands/receive-mnemosyne-handoff.md`, and the final startup prompt requires exactly one
+top-level `mnemosyne_handoff_receive:` receive-report object with one nested
+`receive_evidence` block. The transferred task and authority boundaries are unchanged.
+
 ## 5. Branch disposition record
 
 ```yaml

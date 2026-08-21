@@ -43,7 +43,7 @@ open_PRs_before_this_branch: 0
 ```yaml
 existing_files_modified: 3
 files_added: 7
-total_changed_paths: 8
+total_changed_paths: 10
 unauthorized_paths_changed: 0
 ```
 
@@ -80,15 +80,25 @@ added:
     members: 8
     extracted: false
   handoff/mnemosyne-post-pr303-ai-onboarding-handoff-package-001.md:
-    blob: 29eeade4bae324907192056faf79d589013d2c88
-    bytes: 2928
-    source_sha256: 6c3aa9a416c29373df5b273bb9e66f3378aa05896595b6adff032e20f707cc1a
-    byte_identical_to_supplied_package: true
+    supplied_source_sha256: 6c3aa9a416c29373df5b273bb9e66f3378aa05896595b6adff032e20f707cc1a
+    supplied_source_bytes: 2928
+    initial_commit_blob: 29eeade4bae324907192056faf79d589013d2c88
+    byte_identical_to_supplied_package: false
+    revised_by: MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001
+    revision_content: explicit_receiver_guidance_load_block_and_closed_235_release_observation
+    final_bytes: 3430
+    final_sha256: 1690fb70ecad49b07f2f4801ad3ae898eddd685042761af2d7a9a4e2225db176
+    final_blob: 70ad767b449e4db98ad1abd444e25c787aad2e61
   handoff/mnemosyne-post-pr303-ai-onboarding-startup-prompt-001.md:
-    blob: 454fb60846c76c0a4f434f1ad54d0c797a50f5aa
-    bytes: 979
-    source_sha256: 3d0c02b0ab1bfd2a79815ca473d889ee18d7a74d428ed1b8034e814c4871dd25
-    byte_identical_to_supplied_package: true
+    supplied_source_sha256: 3d0c02b0ab1bfd2a79815ca473d889ee18d7a74d428ed1b8034e814c4871dd25
+    supplied_source_bytes: 979
+    initial_commit_blob: 454fb60846c76c0a4f434f1ad54d0c797a50f5aa
+    byte_identical_to_supplied_package: false
+    revised_by: MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001
+    revision_content: canonical_top_level_mnemosyne_handoff_receive_object_with_nested_receive_evidence
+    final_bytes: 1151
+    final_sha256: 52663e75ef962fad54b5767f7a377f40a791128724adf3100d59f5650cca1e84
+    final_blob: 4cf0f9b1dda58f68796870a380d96978d5e0a722
     unfilled_execution_time_field: PACKAGE_BLOB_FROM_MERGED_MNEMOSYNE_242
   notes/codex-task-results/MNEMOSYNE-242-post-merge-closeout.md:
     authored_by: MNEMOSYNE-242
@@ -97,15 +107,19 @@ added:
     self_blob: not_representable_inside_itself
 ```
 
-The five supplied artifacts are committed byte for byte, so each committed blob reproduces the
-sha256 declared in `MNEMOSYNE-242-CLOSEOUT-AND-HANDOFF-PACKAGE-manifest.json`. No repository
-path or task number required correction, so no candidate text was altered. All nine changed
-text files use LF line endings, matching the existing repository convention.
+The three onboarding candidate artifacts remain byte-identical to the supplied package: each
+committed blob reproduces the sha256 declared in
+`MNEMOSYNE-242-CLOSEOUT-AND-HANDOFF-PACKAGE-manifest.json`. The two handoff artifacts were
+intentionally revised after Pro review (`MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001`) for
+compatibility with the active `commands/receive-mnemosyne-handoff.md`; the revisions do not
+change the transferred task or the authority boundaries. No repository path or task number
+required correction. Nine of the ten changed paths are text files using LF line endings,
+matching the existing repository convention; the tenth is the candidate ZIP archive.
 
 Aid for the fresh conversation, recorded rather than substituted into the startup prompt: the
-handoff package content hashes to blob `29eeade4bae324907192056faf79d589013d2c88`. Git blobs
-are content-addressed, so this value is expected to hold on merged master, but the receiver
-must still read it back from execution-time master rather than trusting this line.
+final handoff package content hashes to blob `70ad767b449e4db98ad1abd444e25c787aad2e61`. Git
+blobs are content-addressed, so this value is expected to hold on merged master, but the
+receiver must still read it back from execution-time master rather than trusting this line.
 
 ## 3. Protected boundary verification
 
@@ -163,7 +177,26 @@ checks:
   one_Ready_PR_and_no_competing_Mnemosyne_PR: PASS
 ```
 
-## 6. Scope statement
+## 6. Pro review repair 001
+
+```yaml
+pro_review_repair:
+  repair_id: MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001
+  applied: true
+  corrective_commit_kind: single_normal_additive_commit
+  amend_rebase_squash_or_force_push: false
+  arithmetic_corrected: total_changed_paths_8_to_10
+  revised_paths:
+    - handoff/mnemosyne-post-pr303-ai-onboarding-handoff-package-001.md
+    - handoff/mnemosyne-post-pr303-ai-onboarding-startup-prompt-001.md
+  new_paths_added: 0
+  transferred_task_changed: false
+  authority_boundaries_changed: false
+  handoff_has_receiver_guidance_load: true
+  startup_requires_one_top_level_mnemosyne_handoff_receive: true
+```
+
+## 7. Scope statement
 
 This verification covers preparation only. It does not issue G2A, authorize or execute A1,
 publish or execute HVAL fixtures, write the validation repository, delete branches, merge the

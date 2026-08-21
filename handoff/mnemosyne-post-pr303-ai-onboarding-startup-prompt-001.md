@@ -13,15 +13,24 @@ Expected package blob on execution-time latest 08822407d/Mnemosyne@master:
 
 Read `commands/receive-mnemosyne-handoff.md`, then the exact handoff package and only its minimum receive evidence.
 
-Return a compact receive report containing:
+As the receive report, output exactly one top-level `mnemosyne_handoff_receive:` YAML
+object and no other top-level object. It must preserve every field required by the
+"Required first response after receiving" section of
+`commands/receive-mnemosyne-handoff.md`.
 
-- package path, package ID and observed blob;
-- execution-time master at start and end;
-- transferred task ID and role;
-- authority and forbidden-action preservation;
-- required separate guidance-refresh phase;
-- branch-retention obligations;
-- whether the receiver is ready to stop after receive.
+Inside that object, add one nested `receive_evidence` block:
+
+```yaml
+receive_evidence:
+  package_path:
+  package_id:
+  observed_package_blob:
+  execution_time_master_start:
+  execution_time_master_end:
+  branch_retention_obligations:
+```
+
+Then stop.
 
 Do not load Mnemosyne guidance in this receive operation. Do not continue MNEMOSYNE-243, modify repositories, issue G2A, execute A1/HVAL, delete branches, import another route, or infer a task from `handoff/handoff-current.md`.
 
