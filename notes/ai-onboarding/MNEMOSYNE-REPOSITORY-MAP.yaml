@@ -1,0 +1,66 @@
+map_id: MNEMOSYNE-AI-REPOSITORY-MAP-001
+schema_version: 1
+package_version: 0.1.0
+authority: non_execution_source_navigation
+execution_source: current/human-approved-spec.md
+selection_effect: none
+default_read_strategy: minimum_sufficient_context
+areas:
+  README.md:
+    role: project_overview_and_advertised_wayfinding
+    authority_class: non_execution_source_navigation
+    freshness: verify_execution_time_content
+  current/:
+    role: execution_source_status_views_behavior_guards_and_open_questions
+    authority_class: mixed_read_each_file_header
+    default_read_policy: task_relevant_only
+  commands/:
+    role: explicit_user_facing_workflow_shortcuts
+    authority_class: non_execution_source
+    registry: commands/README.md
+  handoff/:
+    role: route_specific_transfer_packages_startup_prompts_and_historical_handoffs
+    authority_class: non_execution_source
+    default_read_policy: exact_Owner_selected_package_only
+  notes/ai-onboarding/:
+    role: stable_AI_navigation_package
+    authority_class: non_execution_source_navigation
+  notes/codex-task-results/:
+    role: durable_task_results_verification_and_run_context
+    authority_class: non_execution_source_evidence
+    default_read_policy: current_task_or_incident_only
+  notes/:
+    role: designs_decisions_templates_registries_todos_validation_and_research_derivatives
+    authority_class: non_execution_source_unless_a_file_header_states_a_narrower_approved_role
+    default_read_policy: task_relevant_only
+  raw/:
+    role: preserved_source_and_research_originals
+    authority_class: evidence_not_execution_source
+    default_read_policy: DO_NOT_READ_ON_DEMAND
+  manual-import-inbox/:
+    role: temporary_user_supplied_transfer_surface
+    authority_class: none_until_verified_and_routed
+    write_precondition: visibility_sensitivity_credentials_and_destination_preflight
+  target-projects/:
+    role: target_specific_bootstrap_design_delivery_or_historical_material
+    authority_class: never_automatically_Mnemosyne_execution_source_or_target_truth
+    default_read_policy: exact_target_task_only
+high_signal:
+  project_overview: README.md
+  execution_source: current/human-approved-spec.md
+  guidance_loader: commands/load-mnemosyne-guidance.md
+  command_registry: commands/README.md
+  authority_guide: notes/ai-onboarding/MNEMOSYNE-AUTHORITY-AND-EVIDENCE.md
+  pointer_only_state_index: notes/ai-onboarding/MNEMOSYNE-CURRENT-STATE-INDEX.yaml
+  web_fast_context: notes/ai-onboarding/MNEMOSYNE-CLAUDE-WEB-FAST-CONTEXT.md
+  local_maintenance_start: notes/ai-onboarding/MNEMOSYNE-CLAUDE-CODE-LOCAL-START.md
+  takeover_checklist: notes/ai-onboarding/MNEMOSYNE-TAKEOVER-CHECKLIST.md
+rules:
+  - do_not_infer_current_task_or_route_from_navigation_or_status_files
+  - direct_Owner_instruction_or_exact_selected_package_supplies_local_task_authority
+  - guidance_refresh_preserves_and_does_not_replace_the_local_task
+  - platform_permission_does_not_equal_Mnemosyne_task_authority
+  - reverify_dynamic_repository_platform_and_model_facts
+  - preserve_originals_without_routine_loading
+  - prefer_one_canonical_branch_and_at_most_one_open_PR_per_task
+  - no_root_CLAUDE_md_or_AGENTS_md_without_separate_approved_authority
