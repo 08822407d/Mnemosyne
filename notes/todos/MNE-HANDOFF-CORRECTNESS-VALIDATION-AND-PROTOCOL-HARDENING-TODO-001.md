@@ -2,9 +2,9 @@
 
 ```yaml
 todo_id: MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001
-status: R0_and_preexecution_design_audits_complete_Pro_adjudicated_pending_staged_implementation_and_validation
+status: R0_and_preexecution_design_audits_complete_Pro_adjudicated_and_published_via_PR_303_pending_separately_gated_fixtures_execution_and_staged_implementation
 created_by_task: MNEMOSYNE-233
-last_updated_by_task: MNEMOSYNE-240
+last_updated_by_task: MNEMOSYNE-242
 source: direct_Owner_instruction
 execution_source: false
 priority: high
@@ -35,6 +35,30 @@ HVAL_preexecution_design_audit:
   accepted_design: MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-002
 cross_route_root_cause: BLOCKED_PENDING_EXACT_GOD_VIEW_EXPORTS
 ```
+
+## Publication of R0 evidence and HVAL Design 002
+
+```yaml
+publication:
+  complete: true
+  carrier_task: MNEMOSYNE-241
+  PR: 303
+  merged: true
+  merge_commit: 3ea2b97c369837d27d0e4a65c38c252e755954b5
+  post_merge_readback_task: MNEMOSYNE-242
+  published:
+    - repository_audit_evidence
+    - HVAL_preexecution_design_audit_evidence
+    - failure_forensics_evidence
+    - MNEMOSYNE_235_through_239_incident_record
+    - accepted_design_MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-002
+  HVAL_design_002_blob: 260f9bafefc6eadeae28b2e440433399d31c2d10
+  HVAL_executed: false
+  HVAL_fixtures_published: false
+  HO_GUIDANCE_001_resolved: false
+```
+
+Publication makes the evidence and the accepted design readable. It does not execute HVAL, publish fixtures, grant quota or resolve `HO-GUIDANCE-001`.
 
 ## Verified failure classes
 
@@ -84,12 +108,13 @@ The design includes scenario blinding, positive manifest guidance, fabricated-re
 
 ## Required remaining work
 
-1. Publish the audit evidence, accepted design and 235–239 incident record through the Ubuntu-native MNEMOSYNE-240 successor.
-2. Separately decide whether to publish synthetic fixtures.
-3. Separately decide scenario execution and quota.
-4. Run HVAL under a repository change freeze.
-5. Use results to decide P-04/P-05/P-06 and any generic schema/oracle migration.
-6. Keep the god-view study privacy- and Owner-gated.
+1. Separately decide whether to publish synthetic fixtures.
+2. Separately decide scenario execution and quota.
+3. Run HVAL under a repository change freeze.
+4. Use results to decide P-04/P-05/P-06 and any generic schema/oracle migration.
+5. Keep the god-view study privacy- and Owner-gated.
+
+Each item above still requires its own explicit Owner decision. Publication of the audit evidence, the 235–239 incident record and HVAL Design 002 is complete through PR #303 and is no longer remaining work.
 
 ## Boundaries
 
