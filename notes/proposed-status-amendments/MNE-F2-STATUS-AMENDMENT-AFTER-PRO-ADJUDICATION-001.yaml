@@ -1,0 +1,52 @@
+target_path: current/fable5-cross-repository-safe-concurrency-research-status.md
+expected_current_blob: 0e02aab3e777000a159401ba9cf168b530ee7ac4
+last_updated_by_task: MNEMOSYNE-235
+top_level_status: A1_READINESS_PASS_PRO_CORRECTED_G2A_TEMPLATE_PENDING_PUBLICATION_AND_SEPARATE_OWNER_G2A
+required_field_updates:
+  handoff_003.receive_rehearsal_run: true
+  handoff_003.guidance_loaded_in_receiver: true
+  V2_A_A1.execution_authorized: false
+  V2_A_A1.G2A_issued: false
+  V2_A_A1.controller_or_worker_launched: false
+  V2_A_A1.validation_repository_written: false
+  V2_A_A1.A1_branches_created: false
+required_new_blocks:
+  handoff_003_behavioral_evidence:
+    receive_only_phase_exercised: true
+    separate_guidance_phase_exercised: true
+    transferred_task_preserved: true
+    substantive_continuation_separately_authorized: true
+    originating_oracle_transcript_durably_archived: false
+    evidence_class: direct_current_conversation_evidence_plus_Pro_adjudication
+    disposition: POSITIVE_BEHAVIORAL_EXERCISE_WITH_ARCHIVAL_LIMITATION
+  fresh_Pro_A1_readiness:
+    adjudication_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-PACKAGE-004-FRESH-PRO-READINESS-ADJUDICATION-001
+    package_lineage: '004_003_002_001'
+    disposition: READY_TO_RETURN_TO_OWNER_GATE_WITH_MANDATORY_G2A_COMPOSITION_CLOSURE
+    G2A_issued: false
+  G2A_composition_closure:
+    Fable_task: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001
+    Fable_candidate_sha256: e51af7f7c175bf9ce43171a56921f77a51dfe5d05cff973ae4f05ceadf3a2516
+    Fable_candidate_direct_issue_status: BLOCKED_MATERIAL_NONAUTHORIZATION_TRANSFORMATION_DEFECT
+    Pro_adjudication_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-COMPOSITE-G2A-PRO-ADJUDICATION-001
+    Pro_corrected_template_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-CANDIDATE-001
+    template_publication_required: true
+    post_merge_template_blob_readback_required: true
+    dynamic_fill_and_validator_required: true
+    separate_Owner_G2A_required: true
+    G2A_issued: false
+    A1_execution_authorized: false
+replace_current_gate_with:
+- merge MNEMOSYNE-235 Ready PR publishing exact evidence, Pro adjudications and corrected
+  G2A issuance template
+- post-merge readback of the corrected G2A template and updated route status
+- separate Owner decision whether to issue A1 controller G2A
+- 'only after actual Owner G2A: fresh controller read-only preflight'
+no_current_authorization:
+  A1_execution: false
+  A2_to_A7_execution: false
+  V2_B_execution: false
+  V2_C_execution: false
+  validation_repository_write: false
+  generic_handoff_command_or_guard_modification: false
+  automatic_retry_repair_cleanup_or_branch_deletion: false

@@ -1,0 +1,3 @@
+# MNEMOSYNE-240 — Publication Verification Contract
+
+The external receipt and originating-conversation readback must prove: Ubuntu/Linux execution; exact operator-package hash; exact base and validation refs; absent new branch before formal start; no related open PR; exact payload ZIP and manifest identities; exact manifest paths and Git blob SHA-1 values; four pinned base modifications; one commit parented by `e726dea818dca9418181775d0e7dcd62eb6c464a`; one non-force push to `mnemosyne-240-f2-g2a-and-handoff-audit-closeout`; historical branch `mnemosyne-235-f2-g2a-and-handoff-audit-closeout` unchanged; post-push branch fetch and complete byte readback; no G2A, A1, validation write, retry, cleanup, amend, force-push, second commit or merge.

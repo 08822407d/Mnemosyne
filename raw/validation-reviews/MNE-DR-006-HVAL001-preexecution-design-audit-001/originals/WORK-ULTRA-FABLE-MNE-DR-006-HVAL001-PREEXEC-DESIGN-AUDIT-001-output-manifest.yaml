@@ -1,0 +1,81 @@
+artifact: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-output-manifest
+task_id: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001
+display_name: MNE-DR-006 HVAL预审
+model_mode_effort: Fable 5 / Work / Ultra
+research: OFF
+manifest_written_utc: 2026-08-19T16:14Z
+manifest_written_last: true
+
+verdict: MNE_HVAL_001_DESIGN_READY_WITH_NONBLOCKING_REPAIRS
+
+inputs_verified:
+  MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-001.md:
+    bytes: 15042
+    sha256: 78419602b6489ced71f165a6991d6873f07dbd5ed914d3a8e12c7f05d10a2142
+    match_vs_task_declaration: EXACT
+  MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-PRO-ADJUDICATION-001.md:
+    bytes: 8137
+    sha256: 077664ba8b8e6e7e25b9405139a5b3447cb5aa31185f48ef056716c7828e9a85
+    match_vs_task_declaration: EXACT
+
+repository_observation:
+  repository: 08822407d/Mnemosyne
+  master_start_sha: e726dea818dca9418181775d0e7dcd62eb6c464a
+  master_start_observed_utc: 2026-08-19T15:24Z
+  master_end_sha: e726dea818dca9418181775d0e7dcd62eb6c464a
+  master_end_observed_utc: 2026-08-19T15:30Z
+  drift_during_audit: none
+  reads_pinned_to: e726dea818dca9418181775d0e7dcd62eb6c464a
+  method_note: api.github.com REST rate-limited (shared egress IP); head SHA via commits/master.atom; bulk reads via codeload tarball pinned to the start SHA
+  mnemosyne_236_publication_landed: false
+
+outputs:
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-complete-response.md
+    bytes: 12467
+    sha256: 3e51359b27d1c1f5118702422443592396a77aa4fc065c2eea7265ceee76663e
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-design-audit.md
+    bytes: 34110
+    sha256: a2132a8096e2715a995d4b0c8a3e6f28ed35f345a1e45970e0ad76c507fcae60
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-scenario-coverage-ledger.yaml
+    bytes: 11923
+    sha256: c5f8f0f87259f0d7339d00892822d88728548f5bd06e30566ee50cd783ff88d3
+    machine_parse: PASS
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-budget-and-scoring-audit.yaml
+    bytes: 7782
+    sha256: a7b37c0d70a99d03dedf16ab9c7086ea0a1341f619bd7927e1549f79f12658d2
+    machine_parse: PASS
+    qa_note: one pre-manifest syntax-only repair (scalar-plus-nested-mapping under hidden_key_mechanics.secrecy) applied and re-parsed before hashing; no semantic change
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-adversarial-review.md
+    bytes: 10732
+    sha256: 90372901c5b1be0be39da0d89e3d9068ceeb09a2d6c16730d3f01b21feb3bb06
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-owner-pro-brief.md
+    bytes: 8407
+    sha256: 6ec5323e29b2bef46ecf69cb643b3fe7b6822bdb5a4df71010f018a21f9b9ca3
+  - file: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-output-manifest.yaml
+    note: this file; listed for set completeness; cannot contain its own hash
+
+defect_ledger_summary:
+  class_A_required_before_marked_gate:
+    AF-01: {severity: MAJOR, gate: fixture_publication, topic: scenario_label_blinding}
+    AF-02: {severity: MEDIUM_MAJOR, gate: execution_authorization, topic: pro_turn_terminality_and_A_family_receiver_exemption}
+    AF-03: {severity: MEDIUM, gate: execution_authorization, topic: evidence_budget_aggregation_or_raised_ceiling}
+    AF-04: {severity: MEDIUM, gate: fixture_publication, topic: N-017_absence_by_construction}
+    AF-05: {severity: MEDIUM, gate: fixture_publication, topic: missing_guidance_and_two_phase_startup_fixtures_plus_fixture_ceiling_30}
+    AF-06: {severity: MEDIUM, gate: execution_authorization, topic: N-022_harness_side_rekeying}
+    AF-07: {severity: MEDIUM, gate: execution_authorization, topic: per_scenario_capability_fields}
+  class_B_recommended: [BR-01_positive_manifest_scenario, BR-02_fabricated_report_probe_and_contract_depth_decision, BR-03_orphaned_adjudicator_rule, BR-04_classification_enum_completions, BR-05_harness_write_enumeration_and_change_freeze, BR-06_reissue_authorization_in_design, BR-07_spec_pinned_path_blob, BR-08_minor_text_pins, BR-09_fc_cross_map_at_publication]
+
+attestations:
+  independent_passes_not_distinct_agents: true
+  separated_passes_performed: [scenario_matrix_completeness, budget_scoring_hidden_key_mechanics, safety_authority_fixture_isolation, adversarial_false_PASS_false_BLOCK, lead_synthesis]
+  repository_writes_performed: false
+  fixture_publication_performed: false
+  validation_scenario_execution_performed: false
+  HO_GUIDANCE_001_resolved: false
+  patch_adoption_selected: false
+  quota_spend_beyond_this_Fable_run: false
+  automatic_retry_performed: false
+  retry_after_block_or_interruption: none_occurred_none_performed
+  forbidden_bodies_read: none
+  forbidden_path_families_listed_not_read: [raw/**, notes/**/raw/**, cold_conversation_exports]
+  no_write_evidence_class: read_only_transport_atom_feed_and_codeload_tarball_no_write_capable_credential_held

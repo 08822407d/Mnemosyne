@@ -1,0 +1,33 @@
+receipt_id: MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-SOURCE-RECEIPT-001
+preservation: exact_uploaded_files_plus_normalized_chat_copy
+formal_files:
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-adversarial-review.md
+  bytes: 10732
+  sha256: 90372901c5b1be0be39da0d89e3d9068ceeb09a2d6c16730d3f01b21feb3bb06
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-budget-and-scoring-audit.yaml
+  bytes: 7782
+  sha256: a7b37c0d70a99d03dedf16ab9c7086ea0a1341f619bd7927e1549f79f12658d2
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-complete-response.md
+  bytes: 12467
+  sha256: 3e51359b27d1c1f5118702422443592396a77aa4fc065c2eea7265ceee76663e
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-design-audit.md
+  bytes: 34110
+  sha256: a2132a8096e2715a995d4b0c8a3e6f28ed35f345a1e45970e0ad76c507fcae60
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-output-manifest.yaml
+  bytes: 4869
+  sha256: 1cc989a53c9869e33dda77d5cd3358606acb8eae66bc20a728e4fb7bf4d52a89
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-owner-pro-brief.md
+  bytes: 8407
+  sha256: 6ec5323e29b2bef46ecf69cb643b3fe7b6822bdb5a4df71010f018a21f9b9ca3
+- filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-scenario-coverage-ledger.yaml
+  bytes: 11923
+  sha256: c5f8f0f87259f0d7339d00892822d88728548f5bd06e30566ee50cd783ff88d3
+chat_copy:
+  filename: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-chat-natural-language-response.txt
+  bytes: 2336
+  sha256: afa2e92b879fa071ea5f2e5b6726ec35c54350e7aa4eaf8da22e5791edccd5f3
+  identity_limit: normalized readable copy; original Claude UI bytes not attested
+output_manifest_nonself_entries_verified: 6
+machine_parse:
+  scenario_coverage_yaml: PASS
+  budget_scoring_yaml: PASS

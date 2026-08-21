@@ -1,0 +1,405 @@
+# NON_AUTHORIZING_CANDIDATE — DO NOT SEND TO A CONTROLLER UNTIL A LATER PRO REVIEW AND SEPARATE OWNER G2A.
+# Clause-source matrix for MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-COMPOSITE-G2A-CANDIDATE-001
+# Candidate file: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-composite-g2a-candidate.md
+# Candidate sha256: e51af7f7c175bf9ce43171a56921f77a51dfe5d05cff973ae4f05ceadf3a2516
+# All controlling_source_blob values were re-verified content-addressed (git blob SHA-1 recomputed locally) against
+# Mnemosyne master e726dea818dca9418181775d0e7dcd62eb6c464a during this task.
+
+matrix_id: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-CLAUSE-SOURCE-MATRIX-001
+exactness_check_vocabulary:
+  byte_exact_mechanical_copy: block copied by script from the source blob and cmp-verified byte-identical
+  exact_token_and_value_binding: every ID/path/blob/token value byte-equal to source; surrounding prose composite
+  normative_paraphrase_faithful: rule restated; all operative tokens, values and outcomes preserved exactly
+  new_composite_glue: text with no single package source; exists to satisfy the composition task contract
+
+candidate_clauses:
+
+  - clause_id: C-01
+    candidate_text_ref: "[C-01] non-authorizing artifact statement; G2A_authorized: false fixed"
+    controlling_source_path: current/fable5-cross-repository-safe-concurrency-research-status.md
+    controlling_source_blob: 0e02aab3e777000a159401ba9cf168b530ee7ac4
+    source_section: "Current gate; No current record authorizes (G2A_issued: false)"
+    inheritance_or_supersession_reason: task composition requirement 14 + status-file gate sequence; no package grants G2A
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+  - clause_id: C-02
+    candidate_text_ref: "[C-02] scope = A1 positive independent pair only"
+    controlling_source_path: notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-RUN-DECISION-CANDIDATE-002.md
+    controlling_source_blob: a8b627b8aa74b5a1a5af19d3af485a17aa2cd0b7
+    source_section: "header yaml selected_cells/cell_name; §6 boundaries; also pkg002/03 §3 scope sentence"
+    inheritance_or_supersession_reason: inherited unchanged through 003/004
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: none
+
+  - clause_id: C-03
+    candidate_text_ref: "[C-03] bind candidate 004 + package 004 manifest (paths/blobs, six files)"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-004/01-package-and-source-manifest.md
+    controlling_source_blob: 8a978e1a075674e9f6d3909a1530c483abaf428d
+    source_section: "Controlling repair identities; Package 004 files; required_package_file_count 6"
+    inheritance_or_supersession_reason: task composition requirement 1; 004 is the top layer per its own delta
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: none
+
+  - clause_id: C-04
+    candidate_text_ref: "[C-04] bind inherited candidates/manifests 003, 002, 001"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-004/01-package-and-source-manifest.md
+    controlling_source_blob: 8a978e1a075674e9f6d3909a1530c483abaf428d
+    source_section: "Inherited candidates and packages"
+    inheritance_or_supersession_reason: task composition requirement 2; identical values independently stated in candidate-004, pkg003 manifest, pkg002 manifest and F2 status
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: none
+
+  - clause_id: C-05
+    candidate_text_ref: "[C-05] controller must read 004→003→002→001 in full; missing/mismatched pair or partial reading ⇒ CONTROLLER_BLOCKED"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-004/00-delta-precedence-and-source-identity-correction-contract.md
+    controlling_source_blob: a8c70040bc54109fa3aa92b31bf36c4205e78666
+    source_section: "Inherited scope (all four layers named as continuing to control)"
+    inheritance_or_supersession_reason: >-
+      task composition requirement 3. Supersedes pkg002/03 §3 preflight reading scope, which listed only
+      candidate-002 + package-002 + inherited package-001; with Packages 003/004 now controlling, a 002-only
+      reading can no longer discover the canonical wrapper contract or the corrected source identity.
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: superseded_resolved_004_over_002_reading_scope
+
+  - clause_id: C-06
+    candidate_text_ref: "[C-06] precedence map with per-package supersession scopes; archive-manifest controlling blob 6e90c8f1"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-004/00-delta-precedence-and-source-identity-correction-contract.md
+    controlling_source_blob: a8c70040bc54109fa3aa92b31bf36c4205e78666
+    source_section: "Exact supersession scope; Inherited scope"
+    inheritance_or_supersession_reason: >-
+      task composition requirement 4 (Package 004 narrow source-identity/handoff scope). Also draws scope wording
+      from pkg003 00-delta (blob 5ce64f2bd9ae73dd2ec6ac1fa01b507d42d7d071, "controls only where predecessors would
+      permit 1–5") and pkg002 00-delta (blob 85855f2e434902f5fbdc62b80b5d232d2646c3a4, §2/§3). Resolves the
+      004-vs-003 archive-manifest blob difference (6e90c8f1 controls; 7c2af723 superseded for that tuple only,
+      exactly as pkg004 states).
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: superseded_resolved_004_over_003_archive_tuple_only
+
+  - clause_id: C-07
+    candidate_text_ref: "[C-07] validation pins, 16-ref V1 inventory by reference, five A1 branch names, all-absent requirement, no PRs"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-001/01-package-and-source-manifest.md
+    controlling_source_blob: 12a480449b1dac45cd265864a812f399d19ec15c
+    source_section: "§4 validation hard pins + frozen V1 ref inventory; §7 branch map"
+    inheritance_or_supersession_reason: task composition requirement 7; values re-stated identically by pkg002 manifest §5, pkg003 manifest pins, pkg004 manifest pins, and the two 00-delta hard-pin lists
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: flagged_for_pro_F5_v1_inventory_bound_by_reference_not_relisted
+
+  - clause_id: C-08
+    candidate_text_ref: "[C-08] G2A-issuance placeholder registry; NOT_YET_OBSERVED worker selected states; backend unknown"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-001/01-package-and-source-manifest.md
+    controlling_source_blob: 12a480449b1dac45cd265864a812f399d19ec15c
+    source_section: "§8 future_G2A_dynamic_fields (incl. execution_window_start)"
+    inheritance_or_supersession_reason: >-
+      merged with pkg002 02-staged-model-binding §2 (blob 935f19c92da2f47a8227ab7d4c172833ca1b5d58) and
+      pkg002/03 §2 dynamic-field list and §3 NOT_YET_OBSERVED_UNTIL_*_LAUNCH state lines; supersedes
+      pkg001/07 §2-§3 which asserted Alpha/Beta operator-selected labels as G2A fields (the model-binding-order
+      defect that Package 002 repaired). <G2A_TIMESTAMP_UTC> has no package source; it implements this task's
+      §6 "timestamps" dynamic class.
+    dynamic_or_static: dynamic_placeholders_only
+    exactness_check: exact_token_and_value_binding
+    conflict_status: superseded_resolved_002_over_001_g2a_selected_labels; flagged_for_pro_F2_state_token_spelling; flagged_for_pro_F4_timestamp_field_task_added
+
+  - clause_id: C-09
+    candidate_text_ref: "[C-09] exclusive fill schedule: authorized-label only before template freeze; selected-label only at exact worker launch; exactly one substitution"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/02-canonical-runtime-wrapper-transport-and-comparison-contract.md
+    controlling_source_blob: 20ca5ceb51c8991d29acef81124ec9276f8c1b2c
+    source_section: "'The controller fills only the authorized-label placeholder before freezing each template. The operator later replaces only the selected-label placeholder.' + canonical-serialization paragraph"
+    inheritance_or_supersession_reason: task composition requirement 9; both freeze-blocking directions (unresolved authorized at freeze; early-resolved selected) are the fail-closed reading of the same sentence pair plus pkg002 evidence-time rules
+    dynamic_or_static: static_rule_over_dynamic_fields
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+  - clause_id: C-10
+    candidate_text_ref: "[C-10] read-only preflight verification list; CONTROLLER_BLOCKED; no refresh/repair/substitute/reinterpret/retry"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-002/03-revised-operator-flow-and-startup-messages.md
+    controlling_source_blob: fd125ff3d434870a60014330c52b914d2ddd0a5b
+    source_section: "§3 preflight verify list + CONTROLLER_BLOCKED sentence"
+    inheritance_or_supersession_reason: >-
+      inherited; merged with pkg002 02-staged §2 block conditions, pkg001 00-owner-gates §4 ("cannot refresh values,
+      repair the package or ask the Owner to reinterpret a near match"), pkg001-manifest §9, candidate-002 §5
+      (fresh branch/PR inventory + no-competing-route confirmation), and extended per C-05 to cover the four-layer
+      identity set including Package 004's archive blob. Reading scope portion of pkg002 §3 superseded (see C-05).
+    dynamic_or_static: static_rule; branch/PR inventory itself is a dynamic observation made at preflight, never pre-asserted
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: superseded_resolved_004_over_002_reading_scope
+
+  - clause_id: C-11
+    candidate_text_ref: "[C-11] three exact branch creations; 00/01/02 writes; immutable payload path/blobs; freeze templates before Alpha; stop and hand payloads to Owner"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-002/02-staged-model-binding-contract.md
+    controlling_source_blob: 935f19c92da2f47a8227ab7d4c172833ca1b5d58
+    source_section: "§3 immutable worker task payloads; §7 receipt mapping (00/01/02 fields, runtime_pending)"
+    inheritance_or_supersession_reason: >-
+      branch parents from pkg001 02-branch-map §1 (blob 6da0b44d982adb6431b54cd2ecc1af92c52d2b82) and pkg002/03 §3
+      creation lines; template-freeze-before-Alpha from pkg003/03 ("Controller pre-worker phase remains package 002:
+      ... freeze both immutable task path/blobs plus both canonical wrapper templates before Alpha"); the pkg002 §3
+      instruction to store "the two wrapper templates below this message" is superseded — the frozen templates are
+      the Package 003 canonical blocks (see C-13 and superseded-sentence S3).
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: superseded_resolved_003_over_002_template_source
+
+  - clause_id: C-12
+    candidate_text_ref: "[C-12] canonical serialization rules + MNE-A1-WORKER-PROHIBITIONS-001 definition + provenance sentence for the two blocks"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/02-canonical-runtime-wrapper-transport-and-comparison-contract.md
+    controlling_source_blob: 20ca5ceb51c8991d29acef81124ec9276f8c1b2c
+    source_section: "opening canonicalization paragraph; prohibitions-profile paragraph"
+    inheritance_or_supersession_reason: task composition requirements 5 and 8
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful_with_exact_rule_tokens
+    conflict_status: none
+
+  - clause_id: C-12-ALPHA-BLOCK
+    candidate_text_ref: "§6.1 Alpha canonical BEGIN…END block (16 lines, 822 bytes canonical form)"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/02-canonical-runtime-wrapper-transport-and-comparison-contract.md
+    controlling_source_blob: 20ca5ceb51c8991d29acef81124ec9276f8c1b2c
+    source_section: "## Alpha template"
+    inheritance_or_supersession_reason: task composition requirement 8; mechanically incorporated
+    dynamic_or_static: static_template_containing_the_two_dynamic_label_placeholders
+    exactness_check: byte_exact_mechanical_copy (cmp PASS; canonical sha256 8d82d785612bd1a42a284e23b80cc22b14b1b89ec2528d0382da1c7e1cd0b210; embedded task_contract_blob 9cb67f6e8b007941779326509db0b2d07fd035dd re-verified against live master tree)
+    conflict_status: none
+
+  - clause_id: C-12-BETA-BLOCK
+    candidate_text_ref: "§6.2 Beta canonical BEGIN…END block (16 lines, 816 bytes canonical form)"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/02-canonical-runtime-wrapper-transport-and-comparison-contract.md
+    controlling_source_blob: 20ca5ceb51c8991d29acef81124ec9276f8c1b2c
+    source_section: "## Beta template"
+    inheritance_or_supersession_reason: task composition requirement 8; mechanically incorporated
+    dynamic_or_static: static_template_containing_the_two_dynamic_label_placeholders
+    exactness_check: byte_exact_mechanical_copy (cmp PASS; canonical sha256 798f8ba658430559e479c5244806edf2d22894b49de9a70bfd92349de013b445; embedded task_contract_blob 9544963bc40face1eb3caca190de6fe5f96802f5 re-verified against live master tree)
+    conflict_status: none
+
+  - clause_id: C-13
+    candidate_text_ref: "[C-13] Package 002 §4/§5 prose wrappers + §3 pointer sentence historical/superseded; token supersession; what 002 still controls"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/00-delta-precedence-and-readiness-defect-contract.md
+    controlling_source_blob: 5ce64f2bd9ae73dd2ec6ac1fa01b507d42d7d071
+    source_section: "'Package 003 controls only where predecessors would permit: 1. worker launch without a canonical complete wrapper block; ...'"
+    inheritance_or_supersession_reason: task composition requirement 10; the concrete sentence inventory is in package_002_superseded_sentences below
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: superseded_resolved_003_over_002_wrapper_transport
+
+  - clause_id: C-14
+    candidate_text_ref: "[C-14] one-substitution launch procedure + verbatim @GitHub launch instruction"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/03-revised-worker-launch-return-and-controller-resume-flow.md
+    controlling_source_blob: a8447a57d4be9f8880ce758b87f38a1edb10cf1a
+    source_section: "'At role launch, Owner replaces only that role's selected-label placeholder...' + first text block"
+    inheritance_or_supersession_reason: inherited; instruction block mechanically embedded (byte-verified as substring of candidate)
+    dynamic_or_static: static_procedure_over_dynamic_selected_label
+    exactness_check: byte_exact_mechanical_copy_for_instruction; normative_paraphrase_faithful_for_procedure
+    conflict_status: none
+
+  - clause_id: C-15
+    candidate_text_ref: "[C-15] staged timing, evidence classes, pre-write gate, WORKER_BLOCKED_BEFORE_WRITE, Alpha-then-Beta, peer-isolation"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-002/02-staged-model-binding-contract.md
+    controlling_source_blob: 935f19c92da2f47a8227ab7d4c172833ca1b5d58
+    source_section: "§1 roles/evidence times; §4 runtime receipt; §5 pre-write gate; §6 sequential launch"
+    inheritance_or_supersession_reason: task composition requirement 6; peer-isolation sentence also in candidate-001 §4; pkg003 full-wrapper check added per pkg003/02
+    dynamic_or_static: static_rule_over_dynamic_fields
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+  - clause_id: C-16
+    candidate_text_ref: "[C-16] Owner two-object return format (verbatim) + verbatim-echo and received_wrapper_sha256 duty + no-self-report-authority"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/03-revised-worker-launch-return-and-controller-resume-flow.md
+    controlling_source_blob: a8447a57d4be9f8880ce758b87f38a1edb10cf1a
+    source_section: "'Owner return after each worker must include two separately delimited objects' + block"
+    inheritance_or_supersession_reason: supersedes pkg002/03 §6 return-message templates, which lack the Owner-sent wrapper echo and SHA-256 (superseded sentences S10/S11); echo duty from pkg003/02
+    dynamic_or_static: static_format
+    exactness_check: byte_exact_mechanical_copy_for_format_block
+    conflict_status: superseded_resolved_003_over_002_return_format
+
+  - clause_id: C-17
+    candidate_text_ref: "[C-17] three-way comparison definition, SHA-256 over three canonical representations, comparison schema fields, ceiling sentence, self-PASS never substitutes"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/02-canonical-runtime-wrapper-transport-and-comparison-contract.md
+    controlling_source_blob: 20ca5ceb51c8991d29acef81124ec9276f8c1b2c
+    source_section: "final two paragraphs (three-way comparison; positive-result conditions; ceiling)"
+    inheritance_or_supersession_reason: task composition requirement 5; schema field list from pkg003/04 (blob 5a148859be2312e95bf6467b600d5da5fa1b2b57) runtime_wrapper_comparison; self-PASS rule from pkg003/03 ("Alpha self-PASS may permit isolated Beta launch ... any false positive prevents order construction")
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: none
+
+  - clause_id: C-18
+    candidate_text_ref: "[C-18] order-branch construction, both root trees == 2b919544..., ten outputs exact, 01 in-place update, 03/04/08 wrapper storage, final return to fresh Pro, no PR/cleanup"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-001/02-branch-task-and-effect-map.md
+    controlling_source_blob: 6da0b44d982adb6431b54cd2ecc1af92c52d2b82
+    source_section: "§5 order-construction contracts; §7 controller evidence write set"
+    inheritance_or_supersession_reason: >-
+      task composition requirement 7; ten-path list per pkg001-manifest §7; 01-update and no-eleventh-output per
+      pkg002 02-staged §7 and pkg003/04; final-return content per pkg002/03 §3 last paragraph augmented with wrapper
+      comparisons per pkg003/04.
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: none
+
+  - clause_id: C-19
+    candidate_text_ref: "[C-19] phase disposition tokens; Alpha-fail and Beta-fail handling"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/03-revised-worker-launch-return-and-controller-resume-flow.md
+    controlling_source_blob: a8447a57d4be9f8880ce758b87f38a1edb10cf1a
+    source_section: "Phase dispositions yaml"
+    inheritance_or_supersession_reason: task composition requirement 11; identical token set in candidate-003; partial-state prose from pkg002 02-staged §6
+    dynamic_or_static: static
+    exactness_check: exact_token_and_value_binding
+    conflict_status: none
+
+  - clause_id: C-20
+    candidate_text_ref: "[C-20] ref_not_moved is not zero_repository_side_effect; object SHAs; unknown unenumerable risk; preserve partial state"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/04-result-mapping-tool-side-effect-and-integrity-checklist.md
+    controlling_source_blob: 5a148859be2312e95bf6467b600d5da5fa1b2b57
+    source_section: "'Object calls may succeed before update_ref...' paragraph"
+    inheritance_or_supersession_reason: task composition requirement 12
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful_with_exact_rule_tokens
+    conflict_status: none
+
+  - clause_id: C-21
+    candidate_text_ref: "[C-21] full prohibition union for all A1 conversations"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-001/00-owner-gates-and-surface-contract.md
+    controlling_source_blob: 543b4c7740a256b2cb54ef5a2d73f9b007e9d143
+    source_section: "§6 exact prohibitions"
+    inheritance_or_supersession_reason: >-
+      task composition requirement 13; union with pkg003/02 prohibitions-profile additions (expected-value refresh,
+      reset, force-push, rollback, cleanup), pkg002/03 §3 prohibition sentence (Web/Deep Research/Fable/other
+      app/private material/external quota), and candidate-002 §6.
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+  - clause_id: C-22
+    candidate_text_ref: "[C-22] Owner-visible stop conditions"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-002/03-revised-operator-flow-and-startup-messages.md
+    controlling_source_blob: fd125ff3d434870a60014330c52b914d2ddd0a5b
+    source_section: "§7 Owner-visible stop conditions"
+    inheritance_or_supersession_reason: inherited; augmented with wrapper-comparison FAIL/DISPUTED per pkg003/04 comparison_result vocabulary; superset of pkg001/07 §7
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+  - clause_id: C-23
+    candidate_text_ref: "[C-23] evidence ceiling and non-claims; retention terms"
+    controlling_source_path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-002/02-staged-model-binding-contract.md
+    controlling_source_blob: 935f19c92da2f47a8227ab7d4c172833ca1b5d58
+    source_section: "§8 evidence ceiling"
+    inheritance_or_supersession_reason: merged with candidate-001 §3 non-claims sentence and pkg001 00-owner-gates §8 retention; task composition requirement 7 (evidence ceilings, retention)
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+  - clause_id: C-24
+    candidate_text_ref: "[C-24] required future sequence; issued message must reproduce static bindings and fill only issuance fields; candidate never becomes G2A"
+    controlling_source_path: current/fable5-cross-repository-safe-concurrency-research-status.md
+    controlling_source_blob: 0e02aab3e777000a159401ba9cf168b530ee7ac4
+    source_section: "Current gate chain (rehearsal → fresh Pro execution-time review → separate Owner A1 controller G2A)"
+    inheritance_or_supersession_reason: same chain in candidate-004 future sequence and pkg004 00-delta publication closure; task composition requirement 14
+    dynamic_or_static: static
+    exactness_check: normative_paraphrase_faithful
+    conflict_status: none
+
+# ---------------------------------------------------------------------------
+# Explicit comparisons required by task §7
+# ---------------------------------------------------------------------------
+
+explicit_source_comparisons:
+  package_002_s3_vs_old_s4_s5_wrappers:
+    finding: >-
+      pkg002/03 §3 (line "本消息下方两份 worker runtime-wrapper template 原文") binds the runtime-wrapper transport
+      to the §4/§5 in-message prose templates of the same file. pkg003/02 replaces the wrapper bodies with the
+      canonical BEGIN…END blocks and pkg003/03 keeps the pre-worker phase "package 002" while re-pointing the frozen
+      templates to the canonical blocks. Composite resolution: staged timing/receipts stay 002; wrapper bodies,
+      pointer sentence, placeholder token names and return formats become 003 (candidate [C-11]/[C-13]).
+  package_003_canonical_wrapper_contract:
+    finding: >-
+      pkg003/02 supplies canonical serialization, the two exact templates, the fill discipline sentence pair, the
+      prohibitions-profile definition, the echo/sha256 duty and the three-way comparison. Incorporated at
+      [C-09]/[C-12]/[C-12-*-BLOCK]/[C-17] with the two blocks byte-exact.
+  package_003_revised_flow:
+    finding: >-
+      pkg003/03 supplies pre-worker-phase pointer, one-substitution launch, launch instruction text, two-object
+      Owner-return format, self-PASS handling and phase dispositions. Incorporated at [C-11]/[C-14]/[C-16]/[C-17]/[C-19]
+      with the two operative text blocks byte-exact.
+  package_004_candidate_manifest_and_narrow_delta:
+    finding: >-
+      candidate-004 + pkg004 manifest + pkg004 00-delta establish the top layer, the six-file count, the corrected
+      archive-manifest tuple (controls only that tuple + route handoff closure) and explicit preservation of all
+      003/002/001 scopes. Incorporated at [C-03]/[C-05]/[C-06]; the candidate changes no wrapper, model-binding,
+      fixture, branch, task/effect, blob/tree, order, ten-output, no-PR, no-retry, retention or evidence-ceiling term,
+      matching candidate-004's "changes no" list.
+  package_001_future_owner_g2a_hierarchy:
+    finding: >-
+      pkg001 00-owner-gates §4 and pkg001/07 §2-§3 define the original G2A minimum fields, including asserted
+      Alpha/Beta selected labels inside the G2A. pkg002 00-delta §2 supersedes exactly that temporal assertion;
+      the composite therefore carries authorized-label placeholders plus explicit NOT_YET_OBSERVED states and
+      forbids asserted worker selected labels ([C-08]), while every non-superseded pkg001 §4 field (masters,
+      validation pins, labels-as-pairs for controller, branch map, output manifest, retention, retry_authorized:
+      false) appears in [C-07]/[C-08]/[C-10]/[C-18]/[C-21]/[C-23].
+
+# ---------------------------------------------------------------------------
+# Package 002 sentences that the composite replaces, qualifies or renders
+# non-authoritative (source: pkg002/03, blob fd125ff3d434870a60014330c52b914d2ddd0a5b)
+# ---------------------------------------------------------------------------
+
+package_002_superseded_sentences:
+  - id: S1
+    location: "§3 preflight reading scope (lines '先执行完全只读 preflight，严格读取并执行：…package 001 exact path/blob 内容。')"
+    disposition: replaced
+    by: "[C-05] four-layer reading 004→003→002→001"
+  - id: S2
+    location: "§3 控制身份 lines binding candidate-002/manifest-002 as the top control identities"
+    disposition: qualified
+    by: "[C-03]/[C-04]: 002 identities remain bound, now as an inherited layer under 004"
+  - id: S3
+    location: "§3 line '本消息下方两份 worker runtime-wrapper template 原文。'"
+    disposition: replaced_and_rendered_non_authoritative
+    by: "[C-11]/[C-13]: frozen templates are the Package 003 canonical blocks of candidate §6, never below-message prose"
+  - id: S4
+    location: "§3 line '然后停止主动工作，把两份 worker launch payload 交给 Owner…'"
+    disposition: qualified
+    by: "[C-11]: retained; payload redefined as the frozen canonical templates plus immutable task path/blobs"
+  - id: S5
+    location: "§4 preamble 'The controller preserves this template before Alpha begins…' and entire §4 Alpha prose template"
+    disposition: rendered_historical_non_authoritative_for_wrapper_transport
+    by: "[C-13]: must not be frozen or sent"
+  - id: S6
+    location: "§5 preamble and entire §5 Beta prose template"
+    disposition: rendered_historical_non_authoritative_for_wrapper_transport
+    by: "[C-13]: must not be frozen or sent"
+  - id: S7
+    location: "§1 step 8 'Fill only <ALPHA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH> in the already frozen Alpha runtime wrapper and send it once.'"
+    disposition: qualified
+    by: "[C-13]/[C-14]: rule retained; wrapper body and placeholder token are the canonical __MNE_ALPHA_…__ form"
+  - id: S8
+    location: "§1 step 11 (Beta equivalent of step 8)"
+    disposition: qualified
+    by: "[C-13]/[C-14]: as S7 for Beta"
+  - id: S9
+    location: "§2 worker-launch field tokens '<ALPHA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH>' and '<BETA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH>'"
+    disposition: replaced_token_names
+    by: "[C-13]: canonical __MNE_*_AT_LAUNCH__ tokens; timing semantics unchanged"
+  - id: S10
+    location: "§6 both worker-return message templates ('Alpha worker 已停止…' and 'Alpha 和 Beta worker 均已停止…')"
+    disposition: replaced
+    by: "[C-16]: Package 003 two-object return format with Owner-sent wrapper echo and SHA-256"
+  - id: S11
+    location: "§1 step 12 'Return both complete raw worker outputs to the original controller conversation in one message without editing them.'"
+    disposition: qualified
+    by: "[C-16]: unedited-return duty retained; the return must additionally carry the exact Owner-sent wrapper blocks and SHA-256 per role"
+  - id: S12
+    location: "§3 line 'Owner 返回 worker 输出后，独立读取 GitHub 验证。'"
+    disposition: qualified
+    by: "[C-17]: GitHub verification retained; positive acceptance additionally requires the package-003 three-way wrapper comparison"
+  - id: S13
+    location: "§3 final-return line naming '三组模型收据' among returned evidence"
+    disposition: qualified
+    by: "[C-18]: three model receipts retained; both wrapper comparisons added per pkg003/04"
+
+matrix_conflict_summary:
+  material_unresolved_conflicts: 0
+  resolved_by_stated_precedence: [C-05, C-06, C-08, C-10, C-11, C-13, C-16]
+  flagged_for_pro: [F1_language_presentation_see_adversarial_review, F2_state_token_spelling, F3_composite_candidate_id_is_new, F4_g2a_timestamp_field_task_added, F5_v1_inventory_bound_by_reference]

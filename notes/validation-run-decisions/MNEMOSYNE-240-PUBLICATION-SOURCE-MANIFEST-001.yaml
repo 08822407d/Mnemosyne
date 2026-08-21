@@ -1,0 +1,13 @@
+manifest_id: MNEMOSYNE-240-PUBLICATION-SOURCE-MANIFEST-001
+base_commit: e726dea818dca9418181775d0e7dcd62eb6c464a
+base_tree: de6474d8c4d75f9b445048129d862e190837f0a4
+branch: mnemosyne-240-f2-g2a-and-handoff-audit-closeout
+historical_branch_untouched: mnemosyne-235-f2-g2a-and-handoff-audit-closeout
+terminal_predecessors: [MNEMOSYNE-235, MNEMOSYNE-236, MNEMOSYNE-237, MNEMOSYNE-238, MNEMOSYNE-239]
+substantive_source: MNEMOSYNE-239 payload plus exact MNEMOSYNE-239 incident evidence and Pro successor adjudication
+path_authority: external JSON operator payload manifest
+changed_path_count: 91
+raw_evidence_policy: exact individual earlier Fable artifacts plus one exact archive for the MNEMOSYNE-239 attempt
+G2A_issued: false
+A1_execution_authorized: false
+validation_repository_write: false

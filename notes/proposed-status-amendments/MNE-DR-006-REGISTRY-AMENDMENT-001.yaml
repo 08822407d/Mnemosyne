@@ -1,0 +1,23 @@
+target_path: notes/registries/project-research-display-name-registry-v0.1.md
+expected_current_blob: aad3ed795fd426fceb581bc65ca2ce061be42742
+required_changes:
+  registry_version: 0.1.4
+  last_updated_by_task: MNEMOSYNE-235
+  projects.Mnemosyne.next_unallocated_sequence: 7
+  append_issued_alias:
+    display_name: MNE-DR-006 交接加固
+    sequence: '006'
+    canonical_task_id: FABLE5-MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
+    project: Mnemosyne
+    status: completed_Fable_repository_audit_Pro_adjudicated_pending_Owner_implementation_disposition
+    allocation_task: current_Pro_conversation_prepared_for_MNEMOSYNE_235
+    report_source_root: raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/
+    notes:
+    - Fable_5_Work_Ultra_Research_OFF
+    - repository_only_public_evidence_audit
+    - cross_route_god_view_claims_remain_blocked
+    - alias_reserved_by_Owner_route_before_external_run_and_to_be_durably_recorded_by_MNEMOSYNE_235
+constraints:
+- Do not renumber or modify aliases 001-005.
+- Do not treat the alias as execution authority.
+- Preserve Meta-Agent allocation boundary.

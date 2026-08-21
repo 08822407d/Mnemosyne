@@ -1,0 +1,119 @@
+`MNEMOSYNE_237_BLOCKED`
+
+GitHub 与输入文件的只读核验全部通过，但唯一一次实际执行在 `REMOTE_PREFLIGHT` 阶段因本地缺少 `gh` 可执行文件而阻断。未发生 clone、materialize、commit、push 或 PR 创建；未重试、未清理。
+
+完整回执：svgmnemosyne-237-execution-receipt.json
+
+```
+{
+```
+
+  "task\_id": "MNEMOSYNE-237",
+
+  "status": "MNEMOSYNE\_237\_BLOCKED",
+
+  "started\_at\_utc": "2026-08-20T03:31:51.092060+00:00",
+
+  "commands": [
+
+    {
+
+      "seq": 1,
+
+      "timestamp\_utc": "2026-08-20T03:32:00.395971+00:00",
+
+      "command": [
+
+"git",
+
+"ls-remote",
+
+"--heads",
+
+"[https://github.com/08822407d/Mnemosyne.git](https://github.com/08822407d/Mnemosyne.git)",
+
+"master",
+
+"mnemosyne-235-f2-g2a-and-handoff-audit-closeout"
+
+      ],
+
+      "cwd": null,
+
+      "exit\_status": 0,
+
+      "retry\_count": 0,
+
+      "stdout": "e726dea818dca9418181775d0e7dcd62eb6c464a\trefs/heads/master\ne726dea818dca9418181775d0e7dcd62eb6c464a\trefs/heads/mnemosyne-235-f2-g2a-and-handoff-audit-closeout\n",
+
+      "stderr": ""
+
+    },
+
+    {
+
+      "seq": 2,
+
+      "timestamp\_utc": "2026-08-20T03:32:06.839890+00:00",
+
+      "command": [
+
+"git",
+
+"ls-remote",
+
+"--heads",
+
+"[https://github.com/08822407d/mnemosyne-target-lifecycle-validation-002.git](https://github.com/08822407d/mnemosyne-target-lifecycle-validation-002.git)",
+
+"master",
+
+"v2a-a1-001-controller",
+
+"v2a-a1-001-alpha",
+
+"v2a-a1-001-beta",
+
+"v2a-a1-001-order-alpha-beta",
+
+"v2a-a1-001-order-beta-alpha"
+
+      ],
+
+      "cwd": null,
+
+      "exit\_status": 0,
+
+      "retry\_count": 0,
+
+      "stdout": "e8e3296922185b4b70997c2351d6f39423f2cd4f\trefs/heads/master\n",
+
+      "stderr": ""
+
+    }
+
+  ],
+
+  "G2A\_issued": false,
+
+  "A1\_execution\_authorized": false,
+
+  "A1\_executed": false,
+
+  "validation\_repository\_written": false,
+
+  "retry\_count": 0,
+
+  "completed\_at\_utc": "2026-08-20T03:32:06.842037+00:00",
+
+  "stage": "REMOTE\_PREFLIGHT",
+
+  "error": "FileNotFoundError(2, 'No such file or directory')",
+
+  "local\_workdir\_preserved": "/workspace/scratch/7fe982ee26ce/mnemosyne-237-local-git-workdir",
+
+  "payload\_extraction\_preserved": null
+
+}
+
+MNEMOSYNE\_237\_BLOCKED

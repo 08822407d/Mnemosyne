@@ -1,0 +1,42 @@
+manifest_id: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-output-manifest
+task_id: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002
+run_metadata:
+  model_and_mode: Claude Fable 5 / Work mode / Ultra effort / Research OFF
+  manifest_generated_utc_container_clock: 2026-08-19T16:30:09Z
+  container_clock_note: container clock ~1 day behind product-stated date 2026-08-20; deltas unaffected
+  repo_access_window_container_utc: {start: ~2026-08-19T16:0x, end: 2026-08-19T16:19:41Z}
+  repository_drift_during_audit: none (full ref maps byte-identical start to end)
+  yaml_deliverable_lint: all three YAML outputs machine-parsed OK before delivery (two in-authoring plain-scalar colon defects found and repaired pre-delivery; disclosed here)
+input_integrity_gate: PASS_32_OF_32
+verdict: DUAL_FAILURE_PARTIAL_CAUSE_RECOVERY_ARCHITECTURE_READY_WITH_UNKNOWNS
+markers:
+  independent_passes_not_distinct_agents: true
+  repository_writes_performed: false
+  git_objects_or_refs_created: false
+  retry_of_235_or_236_performed: false
+  cleanup_performed: false
+  G2A_issued: false
+  A1_executed: false
+  missing_236_raw_error_invented: false
+output_files:  # 7 sibling files; this manifest cannot self-hash
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-complete-response.md
+    bytes: 10893
+    sha256: 1ed81c64dd461bc1cae0bad1b877994024a4fca1dad83113abf37a9f79c38175
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-forensic-report.md
+    bytes: 19848
+    sha256: dfc2962599c073e7acab98558d2c36bbe614a1918aafedd493da8741a84abf22
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-timeline-and-object-effect-ledger.yaml
+    bytes: 8319
+    sha256: 344cc6ed575b2fb99356a9a114ed043774276aad37937fbfdd1e616e3c6b1a43
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-failure-classification-matrix.yaml
+    bytes: 7556
+    sha256: c49ca746bde0f335f14b6619855dd7778d21293281e01ef1a58a8a479fafae4a
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-recovery-architecture-comparison.md
+    bytes: 8521
+    sha256: 79040b89a57915fda673472502c09e3adad5d7951f5e3d28dac27220462aa337
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-future-publication-contract.md
+    bytes: 11194
+    sha256: 4bebfd161ff27298ff80e2efb520903c3974e2bed734e6b3c32c7b0ceead2892
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-pro-owner-brief.md
+    bytes: 4286
+    sha256: 7a6b55b16f74342f61389142aea6f117b08b300120d06422bff6116f06cab5bc

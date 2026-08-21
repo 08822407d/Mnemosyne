@@ -1,0 +1,9 @@
+All eight deliverables are above. Run summary:
+
+**Input-integrity gate: PASS\_32\_OF\_32.** Every evidence file hash-exact against the no-ZIP manifest; all 32 payload members Base64-decoded to byte/SHA-256 matches of the ordered manifest; publishable filter = exactly 31 with `README.md` the sole exclusion. The original ZIP was never inspected — container claims rest solely on the attested extraction receipt, as contracted. One disclosed variance: the receipt names the bundle `.json` vs the uploaded `.txt` (hash-identical, non-blocking).
+
+**Repository dynamic gate: zero drift.** Both repos' full ref maps are byte-identical start→end. Master = branch = `e726dea8…`, 0 open PRs (triple-corroborated), all six anchor blobs exact, G2A/A1 booleans all false, the five A1 branch names all absent in the validation repo, and the payload's frozen G2A anchors still match live heads. REST rate-limiting forced a pivot to `git ls-remote` + raw-fetch/`hash-object` — mechanically equivalent and noted in the limitations.
+
+**Findings.** 235's cause is sufficiently determined (executor case-drift inside a 7-path mixed-casing hazard zone; 236's §5.3 repair proven sufficient by drift simulation). 236's cause is partial by evidence gap — the failing request/response was never preserved and is reported as **absent, not reconstructed**; ordering, size, and content invalidity are ruled out, encoding/request-shape/connector remain indeterminate. The Pro 422s are analyzed as dangling blob references, with the `b49f205a` both-lists anomaly motivating the mandated per-call receipt schema. Recommendation: Architecture A primary, B fallback, C rejected; the MNEMOSYNE-237 draft contract encodes it (authorizing nothing — Owner decision required).
+
+Read-only compliance held throughout: no writes, no objects, no refs, no retries, no cleanup, no G2A, no A1. Two YAML lint defects in my own drafts were caught and repaired pre-delivery (disclosed in the manifest).

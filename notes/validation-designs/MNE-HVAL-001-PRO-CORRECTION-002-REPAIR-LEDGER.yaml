@@ -1,0 +1,41 @@
+ledger_id: MNE-HVAL-001-PRO-CORRECTION-002-REPAIR-LEDGER-001
+source_design:
+  path: notes/validation-designs/MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-001.md
+  sha256: 78419602b6489ced71f165a6991d6873f07dbd5ed914d3a8e12c7f05d10a2142
+source_audit: WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001
+formal_disposition: DESIGN_001_REPAIR_REQUIRED_DESIGN_002_ACCEPTED_FOR_SEPARATE_OWNER_AUTHORIZATION
+accepted_class_A:
+- AF-01
+- AF-02
+- AF-03
+- AF-04
+- AF-05
+- AF-06
+- AF-07
+accepted_class_B:
+- BR-01
+- BR-02_option_independent_reobservation
+- BR-03
+- BR-04
+- BR-05
+- BR-06
+- BR-07
+- BR-08
+- BR-09
+counts:
+  positive: 4
+  negative: 15
+  adjudication: 4
+  total: 23
+  mandatory_receiver_conversations: 19
+  worst_case_receiver_conversations: 23
+  receiver_ceiling: 24
+  Pro_turn_ceiling: 6
+  fixture_file_ceiling: 30
+  evidence_file_ceiling: 60
+non_authorizations:
+  fixture_publication: false
+  scenario_execution: false
+  quota_spend: false
+  HO_GUIDANCE_001_resolution: false
+  command_or_guard_change: false

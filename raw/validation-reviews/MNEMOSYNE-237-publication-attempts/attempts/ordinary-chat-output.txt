@@ -1,0 +1,81 @@
+`MNEMOSYNE-237` 已按一次性规则终止为 **blocked**，未重试、未清理、未切换到 object/Contents API，也未发生仓库写入、commit、push、PR 创建、G2A、A1 或 validation repository 写入。任务规定首个失败即永久停止。
+
+GitHub connector 的前置核验本身通过：主仓库 `master` 与既有恢复分支均指向 `e726dea818dca9418181775d0e7dcd62eb6c464a`，且 compare 为 identical；validation `master` 为要求的 `e8e3296922185b4b70997c2351d6f39423f2cd4f`。随后 supplied one-shot executor 的**第一个本地 Git 命令**因执行环境无法解析 `github.com` 而失败，因此在 `REMOTE_PREFLIGHT` 关闭任务。executor 的设计明确规定失败输出 `MNEMOSYNE_237_BLOCKED` 且不清理/重试。  
+
+完整 executor 输出如下：
+
+```
+{
+```
+
+  "task\_id": "MNEMOSYNE-237",
+
+  "status": "MNEMOSYNE\_237\_BLOCKED",
+
+  "started\_at\_utc": "2026-08-20T03:17:51.748910+00:00",
+
+  "commands": [
+
+    {
+
+      "seq": 1,
+
+      "timestamp\_utc": "2026-08-20T03:17:51.813108+00:00",
+
+      "command": [
+
+"git",
+
+"ls-remote",
+
+"--heads",
+
+"[https://github.com/08822407d/Mnemosyne.git](https://github.com/08822407d/Mnemosyne.git)",
+
+"master",
+
+"mnemosyne-235-f2-g2a-and-handoff-audit-closeout"
+
+      ],
+
+      "cwd": null,
+
+      "exit\_status": 128,
+
+      "retry\_count": 0,
+
+      "stdout": "",
+
+      "stderr": "fatal: unable to access '[https://github.com/08822407d/Mnemosyne.git/](https://github.com/08822407d/Mnemosyne.git/)': Could not resolve host: github.com\n"
+
+    }
+
+  ],
+
+  "G2A\_issued": false,
+
+  "A1\_execution\_authorized": false,
+
+  "A1\_executed": false,
+
+  "validation\_repository\_written": false,
+
+  "retry\_count": 0,
+
+  "completed\_at\_utc": "2026-08-20T03:17:51.813195+00:00",
+
+  "stage": "REMOTE\_PREFLIGHT",
+
+  "error": "RuntimeError(\"command failed at sequence 1: ['git', 'ls-remote', '--heads', '[https://github.com/08822407d/Mnemosyne.git](https://github.com/08822407d/Mnemosyne.git)', 'master', 'mnemosyne-235-f2-g2a-and-handoff-audit-closeout']\")",
+
+  "local\_workdir\_preserved": "/mnt/data/mnemosyne-237-local-worktree",
+
+  "payload\_extraction\_preserved": null
+
+}
+
+MNEMOSYNE\_237\_BLOCKED
+
+本次正式 execution receipt： svgMNEMOSYNE-237-execution-receipt.json
+
+**不会重跑 MNEMOSYNE-237。**

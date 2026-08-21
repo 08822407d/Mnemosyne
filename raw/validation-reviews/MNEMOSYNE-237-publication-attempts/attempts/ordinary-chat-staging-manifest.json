@@ -1,0 +1,32 @@
+{
+  "staging_id": "MNEMOSYNE-237-BLOCKED-RUN-STAGING-001",
+  "operation": "mechanical_receive_and_stage_only",
+  "semantic_analysis_performed": false,
+  "recovery_task_generated": false,
+  "repository_write_performed_by_current_conversation": false,
+  "source_class": "user_pasted_executor_output",
+  "preservation_level": "NORMALIZED_READABLE_COPY",
+  "normalization": "UTF-8 without BOM, LF line endings; outer quotation marks excluded.",
+  "identity_limit": "Preserves text supplied in the current ChatGPT message; byte identity to the original executor UI/provider representation is not attested.",
+  "pasted_output_file": {
+    "filename": "MNEMOSYNE-237-blocked-run-natural-language-output.txt",
+    "bytes": 2297,
+    "sha256": "0bbd460497b950e8bd8f3f5873b112dcbefb4f2240a5d65df459528bcd062640"
+  },
+  "referenced_execution_receipt": {
+    "filename_as_pasted": "MNEMOSYNE-237-execution-receipt.json",
+    "actual_file_uploaded_in_current_message": false,
+    "note": "The pasted reply references an execution receipt, but no separate receipt attachment is available in this turn; it is therefore not reconstructed or invented."
+  },
+  "read_only_repository_observations_after_receive": {
+    "mnemosyne_master": "e726dea818dca9418181775d0e7dcd62eb6c464a",
+    "recovery_branch": "mnemosyne-235-f2-g2a-and-handoff-audit-closeout",
+    "recovery_branch_head": "e726dea818dca9418181775d0e7dcd62eb6c464a",
+    "compare_status": "identical",
+    "ahead_by": 0,
+    "behind_by": 0,
+    "total_commits": 0,
+    "open_prs_from_recovery_branch": 0
+  },
+  "durability_limitation": "Session-local sandbox persistence only; repository-level durability is not claimed."
+}

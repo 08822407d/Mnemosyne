@@ -1,0 +1,36 @@
+repair_id: MNE-HANDOFF-AUDIT-FAILURE-TAXONOMY-YAML-REPAIR-001
+source_file:
+  filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy.yaml
+  bytes: 29638
+  sha256: 47ae2d61e8d2851c53f4d43cd71ed670b2f5a78adcabac35f525a694f955e268
+repaired_file:
+  filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy-yaml-repair-001.yaml
+  bytes: 29772
+  sha256: e0ae9db3afadebeebb5405467328c2b226ce33f04616020471d006acf5662c33
+transformation_class: YAML_syntax_only_quoting_and_folded_scalar_repair
+source_preservation_level: EXACT_FILE_OUTSIDE_REPOSITORY_WITH_VERIFIED_POINTER
+repaired_derivative_preservation_level: NORMALIZED_READABLE_COPY
+semantic_content_status: unchanged_as_reviewed
+mechanical_validation:
+  yaml_safe_load: PASS
+  top_level_keys:
+  - taxonomy_meta
+  - failure_cases
+  - defect_class_rollup
+  failure_case_count: 12
+  case_ids:
+  - FC-01-CHAT-VISIBLE-STARTUP-DRIFT
+  - FC-02-SOURCE-ARCHIVE-IDENTITY-CLOSURE
+  - FC-03-RECEIVE-SCHEMA-ORACLE-MISMATCH
+  - FC-04-SEPARATE-MESSAGE-GUIDANCE-LOADING-FRAGILITY
+  - FC-05-ORIGINATING-CONVERSATION-RETIREMENT-TIMING
+  - FC-06-FROZEN-PRE-PUBLICATION-MASTER-VS-DYNAMIC-STATE
+  - FC-07-PACKAGE-RECEIVED-VS-CONTINUATION-READY
+  - FC-08-STALE-OR-WRONG-PROJECT-AGENT-GUIDANCE
+  - FC-09-TASK-CONTAMINATION-DURING-GUIDANCE-REFRESH
+  - FC-10-OWNER-REPORTED-OTHER-ROUTE-INCOMPLETE-HANDOFF
+  - FC-11-MODEL-BINDING-TEMPORAL-UNSATISFIABILITY
+  - FC-12-WRAPPER-INDEPENDENT-VERIFICATION-GAP
+limitations:
+- The repaired derivative is not byte-identical to the Fable original.
+- The exact Fable original must remain preserved separately as evidence.

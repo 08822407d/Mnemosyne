@@ -1,0 +1,373 @@
+# WORK-ULTRA-FABLE-MNE-DR-006 — Handoff Failure Taxonomy
+# All repository facts observed at 08822407d/Mnemosyne master@e726dea818dca9418181775d0e7dcd62eb6c464a.
+# Claim classes: VERIFIED_REPOSITORY_FACT | REPOSITORY_SUPPORTED_INFERENCE |
+#   OWNER_REPORTED_BUT_NOT_ARCHIVALLY_VERIFIED | DESIGN_RECOMMENDATION | UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+taxonomy_meta:
+  artifact_id: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy
+  task_id: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
+  execution_source: false
+  audited_master_sha: e726dea818dca9418181775d0e7dcd62eb6c464a
+  relation_to_existing_taxonomy: >
+    notes/handoff-replay-scorecard-v0.1.md section 8 already defines a 14-entry receiver-behavior
+    failure taxonomy (old task replay, stale status accepted, contamination, wrong source promotion,
+    hallucinated write, missing approval, invented assumption, evidence-path mismatch, etc.).
+    None of the 2026-08 committed protocol failures below are receiver-behavior failures of that kind;
+    they are producer/publication-side contract defects absent from the v0.1 taxonomy. FC-01..FC-12
+    therefore extends, not replaces, the v0.1 receiver taxonomy.
+
+failure_cases:
+
+  - failure_case:
+      case_id: FC-01-CHAT-VISIBLE-STARTUP-DRIFT
+      preconditions:
+        - Handoff 001 canonical package and startup prompt merged to master (blobs d2dc7f9d.., d5926454..)
+        - Owner manually transferred a startup message from the source conversation into a fresh receiver conversation
+      intended_contract: >
+        The chat-visible startup message equals the canonical repository startup artifact
+        (artifact-delivery guard section 3B rule 9: response operator flow and repository artifact must agree;
+        spec section 13 long-transfer fidelity).
+      exact_artifacts_and_blobs:
+        canonical_startup_001:
+          path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-startup-prompt.md
+          blob: d5926454ab4718953b0fab976e4a82cf7f31e4cb
+        canonical_package_001:
+          path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-handoff-package.md
+          blob: d2dc7f9dbb1c023cb377a78934eee91469e0485e
+        recording_defect_note:
+          path: notes/validation-protocol-defects/MNE-V2A-A1-PACKAGE003-SOURCE-ARCHIVE-MANIFEST-IDENTITY-DEFECT-001.md
+          blob: d9a35c0a6691689a50be821e0783b00dc9904eb2
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT (committed defect-note statement): "The first handoff attempt also failed
+        because the old conversation's visible startup text used a wrong package path, package ID and
+        receive key even though the repository's canonical startup artifact used the correct values.
+        That is a separate user-visible operator-flow/canonical-artifact drift."
+      receiver_or_owner_observation_class: OWNER_AND_SOURCE_CONVERSATION_OBSERVED_DRIFT_RECORDED_IN_COMMITTED_DEFECT_NOTE
+      failed_gate: publication_closure_and_operator_flow_vs_canonical_artifact_equality (advisory only; no mechanical check existed)
+      defect_class: producer_side_transfer_channel_drift
+      correction:
+        - rehearsal contracts 001/002 rule: startup text must be copied from the final merged startup artifact, never retyped or restated
+        - startup prompts 002/003 embed the expected package blob, so a drifted message now fails closed at receiver identity verification
+      correction_validation_status: designed_and_published_not_behaviorally_exercised (receive_rehearsal_run: false)
+      residual_unknowns:
+        - exact drifted text the Owner pasted: UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+        - how the drift was produced in the source conversation (manual retype vs stale draft vs model restatement): UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+        - what the receiver replied to the drifted message: UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+  - failure_case:
+      case_id: FC-02-SOURCE-ARCHIVE-IDENTITY-CLOSURE
+      preconditions:
+        - Package 003 and Handoff 001 artifacts prepared on branch, merged via PR 300 (historical)
+        - source archive manifest existed at the frozen path with actual blob 6e90c8f1..
+      intended_contract: >
+        Every load-bearing path/blob tuple frozen in a package or startup prompt resolves exactly on the
+        merged tree at receive time (spec section 15 evidence-path mapping; receive command rule 7).
+      exact_artifacts_and_blobs:
+        frozen_wrong_tuple:
+          path: raw/validation-reviews/MNE-DR-005-A1-package002-readiness-review/exact-source/source-artifact-receipt-and-reconstruction-manifest.yaml
+          recorded_blob: 7c2af723c395283aca23a5240847e46e6c97e93b
+          actual_blob_then_and_now: 6e90c8f1384657939d5dcd9e7e30177e3c2e7b2a   # re-verified by this audit via tree metadata at e726dea8..
+        affected_committed_artifacts:
+          - { path: notes/cross-repository-safe-concurrency-v2a-a1-execution-package-003/01-package-and-source-manifest.md, blob: 7611773d861e065f539118853ec93026515f4065 }
+          - { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-handoff-package.md, blob: d2dc7f9dbb1c023cb377a78934eee91469e0485e }
+          - { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-startup-prompt.md, blob: d5926454ab4718953b0fab976e4a82cf7f31e4cb }
+          - { path: notes/codex-task-results/MNEMOSYNE-232-verification.md, blob: 3fbd45e724a25565a3b747e848a6b09bf47c9801 }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: the wrong blob 7c2af723.. is frozen verbatim in Handoff-001 package and
+        startup prompt (both read by this audit); the corrected blob 6e90c8f1.. is what the path carries on
+        the audited master. Defect note records that direct lookup of 7c2af723.. resolved to no repository
+        blob during the receive investigation, and that the receiver blocked. TODO-001 records the receive
+        as "correctly blocked".
+      receiver_or_owner_observation_class: RECEIVER_FAIL_CLOSED_BLOCK_RECORDED_IN_COMMITTED_DEFECT_NOTE_AND_TODO
+      failed_gate: final_head_post_merge_path_blob_readback (did not exist as a required step)
+      defect_class: producer_side_identity_closure_failure_propagated_provisional_or_stale_identity
+      correction:
+        - Package 004 (additive): canonical archive-manifest identity 6e90c8f1..; independent five-part
+          reconstruction receipt reproducing original bytes 37074 and sha256 6e639f7b..; corrected handoff
+          publication and receive-rehearsal contract required
+        - Handoff 002 exact-source-identities block; rehearsal timing step 2 requires post-merge readback
+          of all load-bearing identities from the merge commit/current master
+      correction_validation_status: >
+        archive content integrity independently verified (reconstruction receipt); corrected identities
+        re-verified present on audited master by this audit; end-to-end receive not yet rehearsed because
+        Handoff 002 was superseded by FC-03 before rehearsal
+      residual_unknowns:
+        - exact origin of 7c2af723..: REPOSITORY_SUPPORTED_INFERENCE only (provisional/stale/incorrectly
+          calculated identity propagated without final-head readback, per the defect note's own
+          evidence-bound limit); exact producer action UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+  - failure_case:
+      case_id: FC-03-RECEIVE-SCHEMA-ORACLE-MISMATCH
+      preconditions:
+        - Handoff 002 package and Rehearsal Contract 001 merged; rehearsal pending
+      intended_contract: >
+        The receiver report the package requires and the report the mechanical acceptance oracle checks
+        are structurally isomorphic, so a compliant receive mechanically passes and any deviation
+        mechanically blocks.
+      exact_artifacts_and_blobs:
+        handoff_package_002: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-handoff-package-002.md, blob: 30699edcf16228f931f89e9162b2f9bc08d4c4c7 }
+        startup_prompt_002: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-startup-prompt-002.md, blob: 868974dbc497da689aac48a5768a6de7e1de68b8 }
+        rehearsal_contract_001: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-post-merge-receive-rehearsal-contract-001.md, blob: 1cb2f56ca4501040b5e2784e4ad46f58b690b94e }
+        defect_note: { path: notes/validation-protocol-defects/MNE-F2-V2A-A1-HANDOFF002-RECEIVE-SCHEMA-ORACLE-MISMATCH-001.md, blob: ad8d0cc5f51e8d54a808fef7b9f6cdf1f60a08f1 }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT, independently re-derived by this audit from the two primary artifacts:
+        field-name mismatches (package_id vs package_id_exact; package_blob_match vs package_blob;
+        candidate_004 vs candidate_004_blob; package_004_manifest vs package_004_manifest_blob;
+        source_archive_manifest vs source_archive_manifest_blob; archive_reconstruction_receipt vs
+        archive_reconstruction_receipt_blob); granularity mismatch (single A1_status vs four booleans
+        A1_execution_authorized/A1_executed/A1_validation_branches_created/validation_repository_written);
+        object-vs-scalar mismatch (structured current_task_from_package vs exact scalar); asymmetric sets
+        (oracle-only: guidance_loaded_during_receive, repository_or_service_writes_during_receive,
+        source_original_sha256; package-only: execution_time_master, receiver_guidance_load,
+        forbidden_actions, safe_next_action, limitations_or_unknowns); no frozen field/type mapping.
+      receiver_or_owner_observation_class: DETECTED_PRE_REHEARSAL_BY_PRO_ADJUDICATION_NO_RECEIVER_RAN (owner decision accepts the prior Pro adjudication)
+      failed_gate: schema_oracle_isomorphism_check_before_publication (did not exist)
+      defect_class: producer_side_dual_source_of_truth_contract_incompatibility
+      correction:
+        - single canonical schema MNE-F2-V2A-A1-HANDOFF-RECEIVE-REPORT-SCHEMA-001 (blob 52e2ce60..) with
+          exact field paths, types, and expected/actual/exact_match semantics
+        - Handoff Package 003 supplies all static expected values except its own blob; Startup Prompt 003
+          supplies only package.blob.expected; Rehearsal Contract 002 defines no second field list and
+          adjudicates schema-driven, alias-free
+      correction_validation_status: >
+        structurally verified by this audit at e726dea8..: 40 schema expected-fields, 39 supplied by
+        Package 003, the single gap exactly the designed package.blob self-reference, resolved by
+        Startup 003 with bb60b9c1.. equal to the package's actual tree blob; zero extra paths; all
+        cross-referenced blobs match. Behavioral rehearsal NOT yet run (receive_rehearsal_run: false).
+      residual_unknowns:
+        - whether a model executor applies the exact-comparison prose without alias tolerance in practice
+          (false PASS / false BLOCK rates unmeasured)
+
+  - failure_case:
+      case_id: FC-04-SEPARATE-MESSAGE-GUIDANCE-LOADING-FRAGILITY
+      preconditions:
+        - Mnemosyne-owned handoff received; guidance refresh required as a separate Owner-sent message
+          (spec section 15; both commands; HO-GUIDANCE-001 settled part)
+      intended_contract: >
+        After the receive report, the Owner sends the separate guidance message; the receiver loads the
+        current guard set and confirms the received task was preserved before substantive continuation.
+      exact_artifacts_and_blobs:
+        spec_section_15: { path: current/human-approved-spec.md, blob: 01f64a8223677829320c66dd46d3f172cc9155cc }
+        load_command: { path: commands/load-mnemosyne-guidance.md, blob: 1124c2e058bba339688641c45ddf18a65f97e1ef }
+        todo_owner_requirement: { path: notes/todos/MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001.md, blob: fd231986dab84d77f265264f599c98d64a91dbfd }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: TODO-001 (source: direct_Owner_instruction) names this "the current
+        fragile pattern that requires the Owner to send a separate follow-up guidance message" and
+        requires a future design to assess and, if justified, supersede it. No committed defect note
+        records a guidance-load omission or ordering failure instance.
+      receiver_or_owner_observation_class: OWNER_REPORTED_FRAGILITY_RECORDED_IN_COMMITTED_TODO_NO_ARCHIVED_FAILURE_INSTANCE
+      failed_gate: none_triggered_in_archive (fragility is structural - extra Owner-dependent ordered manual step)
+      defect_class: protocol_structure_multi_message_owner_dependency
+      correction: none_yet (explicitly deferred to the general hardening task; rehearsal contracts keep the separate message and add a guidance-completion check)
+      correction_validation_status: not_applicable_no_correction_exists
+      residual_unknowns:
+        - whether the Owner-reported other-route incomplete handoff (FC-10) involved a guidance-step
+          failure: UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+  - failure_case:
+      case_id: FC-05-ORIGINATING-CONVERSATION-RETIREMENT-TIMING
+      preconditions:
+        - a handoff package merged; source conversation overlong and ready to retire
+      intended_contract: >
+        The source conversation retains adjudication responsibility until receive correctness and task
+        reconstruction are accepted (TODO-001 target-workflow item 8; rehearsal contracts steps 9-11).
+      exact_artifacts_and_blobs:
+        legacy_pattern: { path: handoff/handoff-current.md, statement: "After the MNEMOSYNE-140 handoff PR merges, the source conversation may retire." }
+        new_pattern_001: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-post-merge-receive-rehearsal-contract-001.md, statement: "status: required_before_originating_conversation_release" }
+        new_pattern_002: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-post-merge-receive-rehearsal-contract-002.md, statement: "only then may the originating conversation retire (step 11)" }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: the generic/legacy pattern permits retirement at merge, before any
+        receive validation; the route-specific pattern forbids it until rehearsal acceptance, separate
+        guidance refresh, and task-preservation confirmation. The Handoff-001 failures occurred
+        post-merge; under retire-at-merge no adjudicator would have existed.
+      receiver_or_owner_observation_class: DESIGN_DIVERGENCE_VERIFIED_IN_COMMITTED_ARTIFACTS_NO_ARCHIVED_EARLY_RETIREMENT_INCIDENT
+      failed_gate: none_triggered_in_archive (hazard window verified; incident not archived)
+      defect_class: protocol_structure_release_before_validation_hazard
+      correction: route-specific retirement gating (rehearsal contracts); generic commands not yet amended
+      correction_validation_status: designed_route_locally_not_behaviorally_exercised_and_not_generalized
+      residual_unknowns:
+        - whether any historical source conversation actually retired before a failed receive
+          (including FC-10): UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+  - failure_case:
+      case_id: FC-06-FROZEN-PRE-PUBLICATION-MASTER-VS-DYNAMIC-STATE
+      preconditions:
+        - packages record source_base_master at preparation time; publication itself moves master
+      intended_contract: >
+        Receive validity binds to exact content blobs on execution-time current master plus quiescence
+        during receive, never to a frozen pre-publication branch-head SHA.
+      exact_artifacts_and_blobs:
+        package_001_frozen_base: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-handoff-package.md, field: "source_base_master: a7a7c54dc095d32dd3cc82767a1afbb4bbf9ae44" }
+        package_002_explicit_rule: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-handoff-package-002.md, statement: "Do not require current master to equal b70acfc8..; publication moves master; validity is based on current-master presence and exact path/blob identities." }
+        schema_001_dynamic_rule: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-receive-report-schema-001.md, statement: "execution_time_master intentionally does not encode a pre-publication expected SHA; observed_start_sha == observed_end_sha plus four-way equality with originating observations" }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: the design lineage moved from frozen base recording (001) to an explicit
+        prohibition (002) to a formalized dynamic start/end rule with four-way equality (schema-001,
+        rehearsal-002 check 12). FC-02 is the adjacent realized harm of freezing an identity computed
+        before the final head.
+      receiver_or_owner_observation_class: DESIGN_EVOLUTION_VERIFIED_IN_COMMITTED_ARTIFACTS
+      failed_gate: none_for_the_master_SHA_itself (the realized failure was the adjacent frozen content-identity, FC-02)
+      defect_class: protocol_structure_static_freeze_of_dynamic_state
+      correction: schema-001 dynamic execution-time-master rule; rehearsal-002 four-way equality
+      correction_validation_status: designed_not_behaviorally_exercised; Owner-side manual SHA relay across two conversations remains an unmeasured error channel
+      residual_unknowns:
+        - false-BLOCK rate from benign concurrent pushes during a receive window: unmeasured
+
+  - failure_case:
+      case_id: FC-07-PACKAGE-RECEIVED-VS-CONTINUATION-READY
+      preconditions:
+        - receiver completes a receive report; substantive continuation prerequisites not yet satisfied
+      intended_contract: >
+        Received, identity-verified, task-reconstructed, guidance-loaded, and continuation-ready are
+        distinct states; success at receive still reports continuation as blocked (TODO-001 item 10).
+      exact_artifacts_and_blobs:
+        early_ladder: { path: notes/handoff-package-strategy-v0.1.md, field: receiving_operation_statuses (five pending/completed/blocked states) }
+        route_tri_status: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-receive-report-schema-001.md, fields: [handoff_receive_status, identity_verification_status, substantive_continuation_status] }
+        forced_blocked_constant: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-handoff-package-003.md, statement: "A successful receive still uses substantive_continuation_status: BLOCKED_PENDING_REHEARSAL_ACCEPTANCE_AND_GUIDANCE" }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: the state separation exists in v0.1 strategy (five-state ladder) and is
+        hardened route-locally into a typed tri-status whose success value is a blocked continuation.
+        The v0.1 ladder lacks identity-verified and task-reconstructed as distinct states. Motivating
+        evidence for the conflation risk: FC-10 Owner report of a receiver reporting "incomplete transfer",
+        and FC-02 where receive was attempted but correctly did not proceed.
+      receiver_or_owner_observation_class: MIXED (design VERIFIED; motivating incident OWNER_REPORTED_BUT_NOT_ARCHIVALLY_VERIFIED)
+      failed_gate: state_conflation_guard (generic layer has the weaker five-state ladder only; commands' report has no typed continuation gate)
+      defect_class: protocol_structure_state_conflation_risk
+      correction: route-specific tri-status with forced blocked-on-success; not generalized
+      correction_validation_status: designed_not_behaviorally_exercised
+      residual_unknowns:
+        - which state the FC-10 receiver actually reached: UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+  - failure_case:
+      case_id: FC-08-STALE-OR-WRONG-PROJECT-AGENT-GUIDANCE
+      preconditions:
+        - receiver loads guidance from the execution-time-latest load command's file list; source
+          conversation never pins which guards the transferred task needs
+      intended_contract: >
+        The receiver applies exactly the guidance the transferred task requires: correct project
+        (Mnemosyne vs target project vs Agent), correct guard set, current versions, with fail-closed
+        behavior when required guidance is unavailable (TODO-001 guidance-loading requirement).
+      exact_artifacts_and_blobs:
+        receiver_side_selection: { path: commands/load-mnemosyne-guidance.md, blob: 1124c2e058bba339688641c45ddf18a65f97e1ef }
+        open_question: { path: current/handoff-guidance-open-question.md, id: HO-GUIDANCE-001, unsettled: should_a_target_project_business_conversation_also_load_Mnemosyne_guidance }
+        stale_pointer_examples:
+          - { path: handoff/handoff-current.md, fact: points at superseded non-FABLE health-review route (MNEMOSYNE-140 era) while live route is MNEMOSYNE-234 }
+          - { path: current/active-context.md, fact: opening compact view describes the post-MNEMOSYNE-053/085 era, roughly 150 task numbers behind the live route }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: guidance selection is receiver-side and unpinned; no per-handoff guidance
+        manifest exists; HO-GUIDANCE-001 leaves the target-project question open with a mandatory
+        task-local yes/no/unknown field; concrete stale nearby artifacts exist on the audited master
+        exactly where a receiver could mistakenly look (which is why receive command rule 9 and the load
+        command exclude them as action plans). No committed instance of a wrong-guidance load is archived.
+      receiver_or_owner_observation_class: RISK_CLASS_VERIFIED_BY_DESIGN_AND_STALE_ARTIFACTS_NO_ARCHIVED_INCIDENT
+      failed_gate: source_selected_guidance_manifest (does not exist)
+      defect_class: protocol_structure_unpinned_receiver_side_guidance_selection
+      correction: none_yet (explicitly deferred; TODO-001 requires a source-selected exact-guidance design)
+      correction_validation_status: not_applicable_no_correction_exists
+      residual_unknowns:
+        - whether FC-10 involved wrong or missing guidance: UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+
+  - failure_case:
+      case_id: FC-09-TASK-CONTAMINATION-DURING-GUIDANCE-REFRESH
+      preconditions:
+        - receiver has completed receive; Owner sends the separate guidance message
+      intended_contract: >
+        Guidance refresh changes behavior constraints only; the received task is preserved verbatim;
+        no maintenance live route is imported (spec section 15; load command required report fields
+        current_conversation_task_preserved / handoff_started:false / maintenance_live_route_imported:false;
+        rehearsal-002 guidance-completion check naming the exact transferred task and A1-unauthorized state).
+      exact_artifacts_and_blobs:
+        load_command_report: { path: commands/load-mnemosyne-guidance.md, fields: [current_conversation_task_preserved, handoff_started, maintenance_live_route_imported, auto_handoff_detection_performed] }
+        rehearsal_completion_check: { path: handoff/mnemosyne-f2-v2a-a1-wrapper-verification-repair-post-merge-receive-rehearsal-contract-002.md, section: Guidance completion check }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: the contamination mode is defended against in at least five independent
+        committed artifacts (spec, load command, startup instructions, both rehearsal contracts,
+        strategy v0.1 receiving-operation contract). No committed defect note archives a realized
+        contamination instance.
+      receiver_or_owner_observation_class: RISK_CLASS_HEAVILY_DEFENDED_NO_ARCHIVED_INCIDENT
+      failed_gate: none_triggered_in_archive
+      defect_class: protocol_structure_context_replacement_risk_during_constraint_refresh
+      correction: existing layered defenses; route-specific completion check adds a named-task echo
+      correction_validation_status: designed_not_behaviorally_exercised_under_the_new_rehearsal_flow
+      residual_unknowns:
+        - REPOSITORY_SUPPORTED_INFERENCE: the density of defensive text suggests the mode was observed or
+          near-missed in live conversations, but no archival instance exists; confirmation would require
+          conversation exports (UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE)
+
+  - failure_case:
+      case_id: FC-10-OWNER-REPORTED-OTHER-ROUTE-INCOMPLETE-HANDOFF
+      preconditions: unknown
+      intended_contract: unknown_route_specific
+      exact_artifacts_and_blobs:
+        recording: { path: notes/todos/MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001.md, statement: "The Owner reports another handoff whose new Pro receiver also reported incomplete transfer. Its exact source/receiver outputs have not yet been ingested into this TODO and must be obtained before cross-route root-cause claims." }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: only the second-hand committed record above exists. The route, package,
+        artifacts, blobs, failure mode, and receiver behavior are not archived.
+      receiver_or_owner_observation_class: OWNER_REPORTED_BUT_NOT_ARCHIVALLY_VERIFIED
+      failed_gate: unknown
+      defect_class: unclassifiable_pending_evidence
+      correction: none_possible_yet
+      correction_validation_status: not_applicable
+      residual_unknowns:
+        - everything beyond the existence of the report: UNKNOWN_REQUIRES_GOD_VIEW_EVIDENCE
+        - consequence: any cross-route root-cause claim remains BLOCKED
+
+  - failure_case:
+      case_id: FC-11-MODEL-BINDING-TEMPORAL-UNSATISFIABILITY   # adjacent contract-defect class, same route family
+      preconditions: V2-A A1 execution package 001 frozen (controller G2A binds worker labels; workers opened only after G2A)
+      intended_contract: every frozen package requirement is satisfiable at its required execution moment
+      exact_artifacts_and_blobs:
+        defect_note: { path: notes/validation-protocol-defects/MNE-V2A-A1-MODEL-BINDING-ORDER-DEFECT-001.md, blob_in_tree: verified }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: package 001 required binding Alpha/Beta operator-selected labels before
+        the Alpha/Beta conversations existed - a temporal impossibility; a prior fresh-Pro readiness
+        review returned ready_for_Owner_G2A: true without reconciling it (its mechanical findings were
+        preserved, its readiness boolean rejected). Correction: staged binding in package 002.
+      receiver_or_owner_observation_class: DETECTED_PRE_EXECUTION_RECORDED_IN_COMMITTED_DEFECT_NOTE
+      failed_gate: satisfiability_review_of_frozen_contracts (plus reviewer false-PASS on readiness)
+      defect_class: producer_side_temporally_unsatisfiable_frozen_requirement_plus_reviewer_false_PASS
+      correction: package 002 staged controller-phase/worker-phase binding
+      correction_validation_status: accepted_in_status_file_not_executed (A1 unauthorized)
+      residual_unknowns: []
+
+  - failure_case:
+      case_id: FC-12-WRAPPER-INDEPENDENT-VERIFICATION-GAP   # adjacent contract-defect class, same route family
+      preconditions: package 002 frozen wrapper templates without exact sent/echo capture
+      intended_contract: the controller can independently prove only the placeholder changed in transit
+      exact_artifacts_and_blobs:
+        defect_note: { path: notes/validation-protocol-defects/MNE-V2A-A1-PACKAGE002-RUNTIME-WRAPPER-INDEPENDENT-VERIFICATION-GAP-001.md, blob_in_tree: verified }
+      observed_repository_fact: >
+        VERIFIED_REPOSITORY_FACT: package 002 did not require the exact Owner-sent wrapper and exact
+        worker-received echo, so no three-way comparison was possible; corrected additively in package 003
+        (canonical wrapper block, exact return, exact echo, controller three-way comparison; pre-write
+        mismatch blocks the worker).
+      receiver_or_owner_observation_class: DETECTED_PRE_EXECUTION_RECORDED_IN_COMMITTED_DEFECT_NOTE
+      failed_gate: independent_transfer_verification_channel (did not exist)
+      defect_class: producer_side_missing_independent_verification_channel_for_manual_transfer
+      correction: package 003 three-way comparison contract
+      correction_validation_status: accepted_in_status_file_not_executed
+      residual_unknowns: []
+      note: >
+        FC-12's echo/three-way pattern is the direct design precedent for hardening FC-01: manual
+        Owner-relayed text can be verified only by capturing both endpoints exactly.
+
+defect_class_rollup:
+  producer_side_publication_contract_defects:      # every committed protocol failure so far
+    - FC-01 producer_side_transfer_channel_drift
+    - FC-02 producer_side_identity_closure_failure
+    - FC-03 producer_side_dual_source_of_truth_contract_incompatibility
+    - FC-11 producer_side_temporally_unsatisfiable_frozen_requirement
+    - FC-12 producer_side_missing_independent_verification_channel
+  protocol_structure_risks_without_archived_incident:
+    - FC-04 multi_message_owner_dependency
+    - FC-05 release_before_validation_hazard
+    - FC-06 static_freeze_of_dynamic_state
+    - FC-07 state_conflation_risk
+    - FC-08 unpinned_receiver_side_guidance_selection
+    - FC-09 context_replacement_risk_during_constraint_refresh
+  unclassified_pending_evidence:
+    - FC-10
+  receiver_side_failures_archived: none          # the one archived receiver interaction (FC-02) fail-closed correctly
+  gap_in_existing_v0_1_taxonomy: >
+    scorecard v0.1 section 8 covers receiver-behavior failures only; it contains no
+    producer/publication-side class. The validation design and patch spec target exactly this gap.

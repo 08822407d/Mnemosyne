@@ -1,0 +1,577 @@
+{
+  "manifest_id": "MNEMOSYNE-237-OPERATOR-PAYLOAD-MANIFEST-003",
+  "base_commit": "e726dea818dca9418181775d0e7dcd62eb6c464a",
+  "base_tree": "de6474d8c4d75f9b445048129d862e190837f0a4",
+  "branch": "mnemosyne-235-f2-g2a-and-handoff-audit-closeout",
+  "changed_path_count": 69,
+  "allowed_modify_paths": [
+    "current/fable5-cross-repository-safe-concurrency-research-status.md",
+    "handoff/handoff-current.md",
+    "notes/registries/project-research-display-name-registry-v0.1.md",
+    "notes/todos/MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001.md"
+  ],
+  "payload_zip": {
+    "filename": "MNEMOSYNE-237-repository-payload.zip",
+    "bytes": 268791,
+    "sha256": "82eda85120d9bdd1f167e6a3fac2dcc5a41885b0f159e13bb4f49469568fd488"
+  },
+  "pr_body": {
+    "filename": "MNEMOSYNE-237-PR-BODY.md",
+    "bytes": 4030,
+    "sha256": "d6843705eb7e6ee424a6bf9e474a69b035a14a0217dbf64a13ad0724a7812dd2"
+  },
+  "files": [
+    {
+      "path": "current/fable5-cross-repository-safe-concurrency-research-status.md",
+      "operation": "modify",
+      "expected_base_blob": "0e02aab3e777000a159401ba9cf168b530ee7ac4",
+      "bytes": 5556,
+      "sha256": "4b5c6e2e53e75221d8f1418c66a1b2e120ec487db49d99488357d0b7b79430b5",
+      "git_blob_sha1": "89449f40ddede51c944c35cf089310b1429e9c80"
+    },
+    {
+      "path": "handoff/handoff-current.md",
+      "operation": "modify",
+      "expected_base_blob": "d44a951a80153d2ad560b22b5c428e3f59447fd1",
+      "bytes": 1129,
+      "sha256": "d9c5c8586a378128422ba89640f88570dc0294cc5bf5c6e032a1f1841270edee",
+      "git_blob_sha1": "0f984dba14d9a6664cc7ced66a25d05c59124ba4"
+    },
+    {
+      "path": "notes/codex-task-results/MNE-235-236-PRO-RECOVERY-OBJECT-SIDE-EFFECT-RECEIPT-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2759,
+      "sha256": "9a6381574ab27c01d593be581dac7d833a6838d0120940590067bcf9c4442e4b",
+      "git_blob_sha1": "5e2c71e79d68779d3f849bc49de01ac0cfe0be42"
+    },
+    {
+      "path": "notes/codex-task-results/MNEMOSYNE-235-blocked-incident.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 871,
+      "sha256": "7f0fdb2008a36f7c2c24303c29602b91c1bee6d41ea4df5438bc2e4435e8a4ce",
+      "git_blob_sha1": "30247cb6027cb173efb6213425f68466d00e4908"
+    },
+    {
+      "path": "notes/codex-task-results/MNEMOSYNE-236-blocked-incident.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 898,
+      "sha256": "94e77e23cb5e3395467c5baa63a1e9859e1c8118887d60efea103ef3f95be317",
+      "git_blob_sha1": "a357d0a46fecf2030dd744e14ff49fa905e589d8"
+    },
+    {
+      "path": "notes/codex-task-results/MNEMOSYNE-237-pr-finalization.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 4791,
+      "sha256": "944cd07d49ac51075ec83670d57622a05f592c9264757150a6dc41c5ebc117e7",
+      "git_blob_sha1": "5c376a4a47be824b5d642d9ffe0e40a8ef981926"
+    },
+    {
+      "path": "notes/codex-task-results/MNEMOSYNE-237-result.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 727,
+      "sha256": "35e8882c4d8b968f893d3eb2168ce44424290be1b8e09e60a61a8b4bfc79c3f7",
+      "git_blob_sha1": "41cef62bf2d2a1b907aa7fa198d1573f535fe718"
+    },
+    {
+      "path": "notes/codex-task-results/MNEMOSYNE-237-verification.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 754,
+      "sha256": "dc867aa06517dba2066092d5cb0d3d57a02b0f471a6b70dc8b536a8fa3615ff6",
+      "git_blob_sha1": "b651c1b4decbd27275384319a612ec5f73ff562d"
+    },
+    {
+      "path": "notes/proposed-guidance-amendments/handoff-current-deprecation-candidate.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1152,
+      "sha256": "65dbbf00ba88173a34d7c13fe0e112082bf8ab4f6c3b1343f883528f6204d8af",
+      "git_blob_sha1": "61aee2772af6f1b5fcf15371c12b67139e8180f7"
+    },
+    {
+      "path": "notes/proposed-status-amendments/MNE-DR-006-REGISTRY-AMENDMENT-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1117,
+      "sha256": "0b1fb9becb453dd7e53fb2e64db748725d4d7096e4ea9a65cc4be98ab4c70852",
+      "git_blob_sha1": "90165d1cbc491964a8a38d7bfdbfd8a1e3f06c45"
+    },
+    {
+      "path": "notes/proposed-status-amendments/MNE-F2-STATUS-AMENDMENT-AFTER-PRO-ADJUDICATION-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2700,
+      "sha256": "0c4318a1c7a2cb528d89edf5e11f5edc75ec66e4a1c5513d15e1d4dab3d5c7be",
+      "git_blob_sha1": "c7af566921aa909c1a2a2e03ed63aa4b30de1135"
+    },
+    {
+      "path": "notes/proposed-status-amendments/MNE-HANDOFF-HARDENING-TODO-AMENDMENT-AFTER-R0-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1699,
+      "sha256": "35637918b379da51b1c13546f9fa621317bf17c3e407bbcd09e876a4e0350e19",
+      "git_blob_sha1": "6bd4213ad1f1f58fb8e37ea623bf106252f3c549"
+    },
+    {
+      "path": "notes/registries/project-research-display-name-registry-v0.1.md",
+      "operation": "modify",
+      "expected_base_blob": "aad3ed795fd426fceb581bc65ca2ce061be42742",
+      "bytes": 4894,
+      "sha256": "cf75ef6ddd50d3d740b3d93e22d8a7a996787d4e5bbf24c0224499d1465f8e80",
+      "git_blob_sha1": "f3b9cb9191e40570a1ca8fc49de37199f5d501eb"
+    },
+    {
+      "path": "notes/templates/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-FILL-VALUES-TEMPLATE-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 408,
+      "sha256": "a05025a129bde252d5fb45955a7cf631e44958a310bdd6b9de5e2f0d7ab35921",
+      "git_blob_sha1": "6eb91226983d9c360426ca6e45413f73cd452887"
+    },
+    {
+      "path": "notes/todos/MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001.md",
+      "operation": "modify",
+      "expected_base_blob": "fd231986dab84d77f265264f599c98d64a91dbfd",
+      "bytes": 3999,
+      "sha256": "c7184bf9cab02dfee237831c8cbc941e61f1f0bf7ee42c4df1ec65bb1a3f5012",
+      "git_blob_sha1": "53f10925b46af98377cfd238627eceeedd96947d"
+    },
+    {
+      "path": "notes/validation-adjudications/MNE-235-236-DUAL-FAILURE-FORENSIC-PRO-ADJUDICATION-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 6092,
+      "sha256": "91961ae6e1d0d96cbad672b3420d96f7f17459c1f7f210072595c3e40c7e58a3",
+      "git_blob_sha1": "d3299143fcb683e83518840c906d78563c95a704"
+    },
+    {
+      "path": "notes/validation-adjudications/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-COMPOSITE-G2A-PRO-ADJUDICATION-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 6090,
+      "sha256": "45fd3f3cd97e1d9a324affb4125b40abf69b80845940f232d7570a8d8ffa7e07",
+      "git_blob_sha1": "2ae2f19b676fe73d473eb2f01323d04f6cdc8157"
+    },
+    {
+      "path": "notes/validation-adjudications/MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-PRO-ADJUDICATION-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 8137,
+      "sha256": "077664ba8b8e6e7e25b9405139a5b3447cb5aa31185f48ef056716c7828e9a85",
+      "git_blob_sha1": "102040ad9e1d8d3221dcc46bddfecee20548f476"
+    },
+    {
+      "path": "notes/validation-adjudications/MNE-HVAL-001-DESIGN-PRO-ADJUDICATION-002.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 5075,
+      "sha256": "9007b3ec664e2c0d7aecebb07bb5e80761a4c86477fd1394d878a660d9dc5b38",
+      "git_blob_sha1": "330fafe0e95f03fc8e1d2df85489c40adcc475ce"
+    },
+    {
+      "path": "notes/validation-designs/MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 15042,
+      "sha256": "78419602b6489ced71f165a6991d6873f07dbd5ed914d3a8e12c7f05d10a2142",
+      "git_blob_sha1": "0c3143e5f8c30676f5445cdfface9c68b5ab134f"
+    },
+    {
+      "path": "notes/validation-designs/MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-002.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 13206,
+      "sha256": "bf751eb7accc9e950f7b9a7c46121d39dd004eaf65fbbc1200ea0685dad57db4",
+      "git_blob_sha1": "260f9bafefc6eadeae28b2e440433399d31c2d10"
+    },
+    {
+      "path": "notes/validation-designs/MNE-HVAL-001-PRO-CORRECTION-002-REPAIR-LEDGER.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1021,
+      "sha256": "0084511d0cf2c612e14eec60f0f2a78858d0d7ac71104f68f2a57b65b6f5aae1",
+      "git_blob_sha1": "2e0123af87dfa530f631195fda968c46f76c1694"
+    },
+    {
+      "path": "notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-CANDIDATE-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 27490,
+      "sha256": "ae3c2f7a4d56195eec9faa99c2041404718d1d557c20a3d13ea56a66fe252265",
+      "git_blob_sha1": "da36d22f35a2614dd9bb0a4f7030b73e7be27fb0"
+    },
+    {
+      "path": "notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-MANIFEST-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2332,
+      "sha256": "aa94da575987a5bd479a0b1eec38562bfbc934def82747cba331716a8df09e00",
+      "git_blob_sha1": "53269416730b21243d083acb40930a8d5352f2c6"
+    },
+    {
+      "path": "notes/validation-run-decisions/MNEMOSYNE-237-PUBLICATION-CHANGED-PATH-LEDGER-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 14584,
+      "sha256": "1ca594ab6bdf5e85b16e540808b91c6f3e7043b94cb98e62896a100382a1a422",
+      "git_blob_sha1": "55dd75aa0307f39197f23cf5d2154ab8bff74676"
+    },
+    {
+      "path": "notes/validation-run-decisions/MNEMOSYNE-237-PUBLICATION-SOURCE-MANIFEST-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 23154,
+      "sha256": "66cf6bf7fa281304f2e7341d6fee986f187b70cbaea45f584481e4e91680c5f7",
+      "git_blob_sha1": "053c5716c05b620b63d2f3a9352b75167ff37f3e"
+    },
+    {
+      "path": "notes/validation-run-decisions/MNEMOSYNE-237-RECOVERY-PUBLICATION-CONTRACT-001.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 3725,
+      "sha256": "b61c518d74e34d1af246d7f6ded62254c9c5950ddc2005f230332338d86abd84",
+      "git_blob_sha1": "f826bee467ae66a69770d0b129f51c6c67c948bc"
+    },
+    {
+      "path": "notes/validation-tools/execute_mnemosyne_237_local_git.py",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 17861,
+      "sha256": "25e06d8d871977103d10c39543258bda8e998f7080d050dc99fade767ce36c37",
+      "git_blob_sha1": "5d4ae1f1468e43c8b9134854e680c02408e3f597"
+    },
+    {
+      "path": "notes/validation-tools/validate_and_fill_mne_v2a_a1_controller_g2a.py",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 5676,
+      "sha256": "43a58a58d9696e292bf66999dc6ffdcac78191fb4b1b1178d6bf518d5eb421bf",
+      "git_blob_sha1": "d17b47821a61aaa8d97df9a6541db1576631bcfc"
+    },
+    {
+      "path": "notes/validation-tools/verify_mnemosyne_237_publication.py",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 11054,
+      "sha256": "9865da1850826ed163a8b043cbad5c6856eb5400ca35993faa54bc9e90926ca3",
+      "git_blob_sha1": "4845bd79b0dff0515dcfedf860fa5f12b286b76b"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-chat-natural-language-response.txt",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2273,
+      "sha256": "e1f358dbbbbbd09a0e7328b8eb5693f5e0aeebdedebf83bdcb96457cc272b302",
+      "git_blob_sha1": "074114570b1c37990bd25f368794d6ab64a16154"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/originals/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-adversarial-review.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 13161,
+      "sha256": "daceda7a4c371f01989fc11caa8abb79a281613a59f987a0fd8ec8ff79e40624",
+      "git_blob_sha1": "c1269e1d08804cc360684aa765b8b607481140cb"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/originals/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-clause-source-matrix.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 29844,
+      "sha256": "096cccece19dbf8d77f584fd3a506afa3f3fe77488bbde8c352dd6c0cec0abb3",
+      "git_blob_sha1": "52363d940e62a0ca30d1a668e98de3fab7bab7be"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/originals/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-complete-response.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 15180,
+      "sha256": "a162a35839edd22efc004a28d6396ccf42190d9e706e4771ac5fef985084fb62",
+      "git_blob_sha1": "fc8400912367cd0f3157e42f2dccaea430422e05"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/originals/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-composite-g2a-candidate.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 26377,
+      "sha256": "e51af7f7c175bf9ce43171a56921f77a51dfe5d05cff973ae4f05ceadf3a2516",
+      "git_blob_sha1": "a56e4bd7676e0645d2d6b2396a1cddd4a568ef43"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/originals/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-output-manifest.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2266,
+      "sha256": "1036fde965fd455413f79671c94af4915b18a95170d0aa1c74bf6692bed6c129",
+      "git_blob_sha1": "b49f205a4b07e5ae9d242f67e664b494cdc2a4c0"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/originals/WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-pro-adjudication-brief.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 5877,
+      "sha256": "362e89a8e5e1454672795f8bda44510369011f0fd9e4261e01005928c9f53260",
+      "git_blob_sha1": "ce82f7263c4b8cf451abf44165f12aab7696441c"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-G2A-composite-closure-001/source-artifact-receipt.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2107,
+      "sha256": "b6114fec59c3c7e3959ac4fa3c6e7ffd7688df04dd5295b0221635b544073ceb",
+      "git_blob_sha1": "8326e360283a7782a1842be948bdfcf96d6718ef"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-chat-natural-language-response.txt",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1969,
+      "sha256": "dea5d0fbc220803e602f609ea0599a4c613051d1efb6181fd809624394ea6f88",
+      "git_blob_sha1": "3401b97a709ff7d93cfe16cb24628b23c41f97b7"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-complete-response.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 10893,
+      "sha256": "1ed81c64dd461bc1cae0bad1b877994024a4fca1dad83113abf37a9f79c38175",
+      "git_blob_sha1": "6c4e821f9d0c471d352fbf9187b5fc369dd7f11e"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-failure-classification-matrix.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 7556,
+      "sha256": "c49ca746bde0f335f14b6619855dd7778d21293281e01ef1a58a8a479fafae4a",
+      "git_blob_sha1": "7edb14e0ca52614247891ab71b8837a531441d95"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-forensic-report.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 19848,
+      "sha256": "dfc2962599c073e7acab98558d2c36bbe614a1918aafedd493da8741a84abf22",
+      "git_blob_sha1": "53c23e981dcc98617922b6bfce6b678548a6325f"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-future-publication-contract.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 11194,
+      "sha256": "4bebfd161ff27298ff80e2efb520903c3974e2bed734e6b3c32c7b0ceead2892",
+      "git_blob_sha1": "28fbaff9a9260f2f1821c25c4449bf07c7b316f9"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-output-manifest.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2752,
+      "sha256": "8384d3237caead13bc1143953a950821e2edc2db63c3c0adfe5d735a7b076e8c",
+      "git_blob_sha1": "c22c79c91bb3fd2905fedb4dad5af8379fdc1798"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-pro-owner-brief.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 4286,
+      "sha256": "7a6b55b16f74342f61389142aea6f117b08b300120d06422bff6116f06cab5bc",
+      "git_blob_sha1": "d7f29228719b1895f96490080e6282b749930497"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-recovery-architecture-comparison.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 8521,
+      "sha256": "79040b89a57915fda673472502c09e3adad5d7951f5e3d28dac27220462aa337",
+      "git_blob_sha1": "82e5750848c404f828ee0e1fa913ed180ff8119b"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/originals/WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-timeline-and-object-effect-ledger.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 8319,
+      "sha256": "344cc6ed575b2fb99356a9a114ed043774276aad37937fbfdd1e616e3c6b1a43",
+      "git_blob_sha1": "55307a5057419c8da41ab8325bf74c48d5eb6480"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-005-MNEMOSYNE-235-236-dual-failure-forensic-audit-002/source-artifact-receipt.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2246,
+      "sha256": "5e661fcbe893fc3a12f2d58e82e75c4b742c5c1f4f53f009257213dec7656c4e",
+      "git_blob_sha1": "a35085240d318e1401d863e2cfbe8780aeee65f0"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-chat-natural-language-response.txt",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2336,
+      "sha256": "afa2e92b879fa071ea5f2e5b6726ec35c54350e7aa4eaf8da22e5791edccd5f3",
+      "git_blob_sha1": "9e15389298401faf6bf991585b7bc064fe2bde80"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-adversarial-review.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 10732,
+      "sha256": "90372901c5b1be0be39da0d89e3d9068ceeb09a2d6c16730d3f01b21feb3bb06",
+      "git_blob_sha1": "d4c9a112ea50d1646222d965eb108933d45825a3"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-budget-and-scoring-audit.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 7782,
+      "sha256": "a7b37c0d70a99d03dedf16ab9c7086ea0a1341f619bd7927e1549f79f12658d2",
+      "git_blob_sha1": "1710ce385f95a40068fde6f390a88b257489fe5e"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-complete-response.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 12467,
+      "sha256": "3e51359b27d1c1f5118702422443592396a77aa4fc065c2eea7265ceee76663e",
+      "git_blob_sha1": "7316c20ce47dd7bf0e0cfebd682753e7875a65e3"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-design-audit.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 34110,
+      "sha256": "a2132a8096e2715a995d4b0c8a3e6f28ed35f345a1e45970e0ad76c507fcae60",
+      "git_blob_sha1": "469daa1713a35d4aefc01d42d3a9afcd633a4b1d"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-output-manifest.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 4869,
+      "sha256": "1cc989a53c9869e33dda77d5cd3358606acb8eae66bc20a728e4fb7bf4d52a89",
+      "git_blob_sha1": "9c55233868d230b3edbb7231483fbe58684c0663"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-owner-pro-brief.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 8407,
+      "sha256": "6ec5323e29b2bef46ecf69cb643b3fe7b6822bdb5a4df71010f018a21f9b9ca3",
+      "git_blob_sha1": "0446034e903200c114690fc03467436e4ad3d5b5"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HVAL001-PREEXEC-DESIGN-AUDIT-001-scenario-coverage-ledger.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 11923,
+      "sha256": "c5f8f0f87259f0d7339d00892822d88728548f5bd06e30566ee50cd783ff88d3",
+      "git_blob_sha1": "a74ea7137fa7d1f37f8f339c63b5a4edc9f22ed1"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-HVAL001-preexecution-design-audit-001/source-artifact-receipt.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1855,
+      "sha256": "1dece25c1d2e19c034eaa4c4bdf543252da8e7fc6f1e38bcff34f26e1abfcdd2",
+      "git_blob_sha1": "93b03a0b29f5e0a7f0d20bebaf69e9405c3ddb8b"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-chat-natural-language-response.txt",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2584,
+      "sha256": "095ce24a65ba7563b3507950fe5462149fdd268744bb7ff65a13523f2e5e89b5",
+      "git_blob_sha1": "7ab496a48f4485fb0bb5694430e8e97d9bb50f9b"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/derived/MNE-HANDOFF-AUDIT-FAILURE-TAXONOMY-YAML-REPAIR-001-receipt.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 1654,
+      "sha256": "3dec9602272eb2465feefd80430c23a65cf1f817a7581a683ba1306f56e605d7",
+      "git_blob_sha1": "2b003ca93118448ed9867f514c4e1aadca0af07d"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/derived/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy-yaml-repair-001.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 29772,
+      "sha256": "e0ae9db3afadebeebb5405467328c2b226ce33f04616020471d006acf5662c33",
+      "git_blob_sha1": "ba90046145eb1097d412f9992ef808d9f70f4368"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-command-guard-patch-spec.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 18866,
+      "sha256": "a843de2c77ae50f416a6d119aa2f550c1a1eb381b3ac10e2d5857b6747e57e9d",
+      "git_blob_sha1": "86c50461bdae5f0963d1c3b1314cd2b8858b8653"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-complete-response.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 10755,
+      "sha256": "07d6e4f672db63c22b70878690e4068e5865a7dbe7892bf1e07f96080d79ee93",
+      "git_blob_sha1": "5ffe5f838c2e84d80826c2c496dd5c1161f9c343"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 29638,
+      "sha256": "47ae2d61e8d2851c53f4d43cd71ed670b2f5a78adcabac35f525a694f955e268",
+      "git_blob_sha1": "e41924475a9f294c48eedcc3c3448e20e293d38c"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-guidance-architecture-comparison.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 12526,
+      "sha256": "64007294f86c4a26b7beffc2d2515c24231f16a988fccaa66c73c46c08472c43",
+      "git_blob_sha1": "68b9bb049b6c98655ad9b381cb7580a447f25dbc"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-output-manifest.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 3206,
+      "sha256": "7069d0fbefc906bb253c2872de3078487fd97fa4a905988e0f25d23325135389",
+      "git_blob_sha1": "894feef151a88c6d07e366dd9fb8bf51ac9393f4"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-pro-owner-brief.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 6166,
+      "sha256": "99fd9be878810883570241dd32a0aa8d01f941c987551720b007ad91b8523e63",
+      "git_blob_sha1": "9f19255426c358bc900278f8128e0d1620c3518a"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-repository-audit.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 29316,
+      "sha256": "508e903fa5d0685a0d5ad50d0d1183efd8364cb7dc756e3d6a7727fdb8df4fc4",
+      "git_blob_sha1": "c9bb643d03ff2f8842272226c6aa2754c5aeacdc"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/originals/WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-validation-design.md",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 14321,
+      "sha256": "a25eabd0064eebadaae0db8a17aa2f958103097ea67e28188aa3c0cacfe96405",
+      "git_blob_sha1": "0a99c7faff1db6eb0e03de4414f26e525bf3db72"
+    },
+    {
+      "path": "raw/validation-reviews/MNE-DR-006-handoff-protocol-repository-audit-001/source-artifact-receipt.yaml",
+      "operation": "add",
+      "expected_base_blob": null,
+      "bytes": 2611,
+      "sha256": "0c648c4a577dbbc608166720a9a9bbed7cd434c1f69d8f8b5933122cc3bf4ad7",
+      "git_blob_sha1": "a8e02b17698e75e500be08325956e5288658fc52"
+    }
+  ]
+}

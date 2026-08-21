@@ -1,0 +1,17 @@
+操作内容（需要你手动执行）
+
+1. （必需）评审上方 8 份产物，建议从 `pro-owner-brief` 开始，其中含 D1–D5 决策项（guidance 架构、patch 采纳范围、验证包授权、god-view 导出研究、handoff-current 处置）。
+2. （提醒，非本任务范围）F2 Handoff 003 的 post-merge receive rehearsal 仍是当前 route gate（`receive_rehearsal_run: false`），按既有 route 合同独立进行，不受本审计影响。
+3. 本次运行本身无需任何补救操作；未执行任何仓库写入。
+
+### 运行结果摘要
+
+**全部门通过。** 输入完整性：任务文件 9449 字节、SHA-256 与 manifest 完全一致，恰好两个上传输入，Research OFF。执行时状态：`master` start == end == `e726dea818dca9418181775d0e7dcd62eb6c464a`，唯一分支 `master`，0 个 open PR，17/17 静态身份校验通过，0 写入。全程未读任何 `raw/` cold source 正文，未用对话导出。（运行末尾共享出口 IP 耗尽了 api.github.com 未认证配额；end-state 读取经同为只读的 github.com Atom feed / pulls 页面 / git smart-HTTP `info/refs` 完成，已在产物中透明记录。）
+
+**核心结论：** 两起已归档 F2 失败（startup 文本漂移；错误 source-archive blob 冻结）加上被 Pro 裁决拦截的 schema/oracle 不相容，全部是**发布方/出版侧合同缺陷**——归档中不存在接收方行为失败，接收侧在唯一被行使的案例中正确 fail-closed。Handoff 003 修复经本审计机械复核为**结构与身份闭合**（schema 40 个 expected 字段、Package 003 提供 39 个、唯一缺口恰为设计内的 `package.blob` 自引用并由 Startup 003 正确补齐），但**尚未行为验证**。通用 prepare/receive/load 命令层目前是 advisory prose，机械可强制性质仅存在于该单一 route 修复中。你报告的另一起 incomplete handoff 仅有二手记录，**跨 route 根因结论保持 BLOCKED**，本审计未做任何 god-view 断言。
+
+交付：MNE-HVAL-001 验证包设计（22 场景、隐藏 key 承诺方案、零 false-PASS 硬阈值，已设计未执行）、五种 guidance 加载架构对比（推荐 C→B2→E、A 保底、D 拒绝为默认，可整体拒绝）、patch 规格 P-00…P-12（最小高价值子集 P-04+P-05+P-06），以及 FC-01…FC-12 失败分类。多轮复核已记录 `independent_passes_not_distinct_agents`。
+
+REPOSITORY\_AUDIT\_COMPLETE\_READY\_FOR\_PRO\_OWNER\_REVIEW
+
+WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001\_READY\_FOR\_PRO\_OWNER\_REVIEW

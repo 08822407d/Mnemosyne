@@ -1,0 +1,56 @@
+{
+  "manifest_id": "MNEMOSYNE-239-PUBLICATION-ATTEMPT-EVIDENCE-MANIFEST-001",
+  "uploaded_output": {
+    "source_filename": "Pasted markdown(2).md",
+    "bytes": 29770,
+    "sha256": "b350fdd779cbc07737a6ec31d328cb260e9dfa7e420b4a2d9174f918dfd82bb5",
+    "preservation": "exact_uploaded_file_bytes"
+  },
+  "derived_receipt": {
+    "bytes": 29476,
+    "sha256": "eb3e69b6987ab8003795367426dc74acbdb212fb79b880fe22b4023aa47a9589",
+    "derivation": "mechanical parse of the first complete JSON object from the uploaded Markdown; not claimed as the original separately attached receipt"
+  },
+  "members": [
+    {
+      "path": "attempt/MNEMOSYNE-239-execution-output-uploaded.md",
+      "bytes": 29770,
+      "sha256": "b350fdd779cbc07737a6ec31d328cb260e9dfa7e420b4a2d9174f918dfd82bb5"
+    },
+    {
+      "path": "attempt/MNEMOSYNE-239-execution-receipt-derived.json",
+      "bytes": 29476,
+      "sha256": "eb3e69b6987ab8003795367426dc74acbdb212fb79b880fe22b4023aa47a9589"
+    },
+    {
+      "path": "frozen-inputs/MNEMOSYNE-239-PR-BODY.md",
+      "bytes": 2673,
+      "sha256": "63b491dae3d9152eb536b498630cf1021a530ed7cd2ced212b06ff1f40cc51f0"
+    },
+    {
+      "path": "frozen-inputs/MNEMOSYNE-239-repository-payload-manifest.json",
+      "bytes": 34383,
+      "sha256": "42ba162d38807b1c0083406ea22320114cd39724aa493a996f039c8904e7f511"
+    },
+    {
+      "path": "frozen-inputs/MNEMOSYNE-239-repository-payload.zip",
+      "bytes": 476522,
+      "sha256": "d7ec38985b77f9137d0940cf13bd5aec4508d5950506a9c42db0cf0d8078ff62"
+    },
+    {
+      "path": "frozen-inputs/MNEMOSYNE-239-task.md",
+      "bytes": 1277,
+      "sha256": "533bf99841f1a53cf98b775a291c15489cc6d3b00cc07b1b5fec8052b1ee9aba"
+    },
+    {
+      "path": "frozen-inputs/execute_mnemosyne_239_local_git.py",
+      "bytes": 8331,
+      "sha256": "16ed946105bed72ae69e16c0e4cf51856eea69489fcd98ae2a5bd346df329586"
+    },
+    {
+      "path": "frozen-inputs/verify_mnemosyne_239_publication.py",
+      "bytes": 6037,
+      "sha256": "c8a259d4c44bcf912e94bf8e326dd666c13d1a20e62d2c0c34116b66c3eec1d9"
+    }
+  ]
+}
