@@ -3,11 +3,11 @@
 ```yaml
 status_id: MNE-FABLE5-CROSS-REPOSITORY-CONCURRENCY-STATUS-001
 created_by_task: MNEMOSYNE-214
-last_updated_by_task: MNEMOSYNE-240
+last_updated_by_task: MNEMOSYNE-242
 canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
 display_name: MNE-DR-005 跨仓库并发
 roadmap_priority: F2
-status: A1_READINESS_PASS_CORRECTED_G2A_TEMPLATE_PUBLICATION_PENDING_MNEMOSYNE_240_READY_PR
+status: A1_READINESS_PASS_CORRECTED_G2A_TEMPLATE_PUBLISHED_VIA_PR_303_PENDING_SEPARATE_OWNER_G2A_DECISION
 ```
 
 ## Preserved F2 and A0 state
@@ -85,12 +85,73 @@ G2A_composition_closure:
   Fable_candidate_direct_issue_status: BLOCKED_MATERIAL_NONAUTHORIZATION_TRANSFORMATION_DEFECT
   Pro_adjudication_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-COMPOSITE-G2A-PRO-ADJUDICATION-001
   Pro_corrected_template_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-CANDIDATE-001
-  template_publication_required: true
-  post_merge_template_blob_readback_required: true
+  template_publication_complete: true
+  template_publication_carrier_task: MNEMOSYNE-241
+  template_publication_PR: 303
+  published_template_blob: da36d22f35a2614dd9bb0a4f7030b73e7be27fb0
+  post_merge_template_blob_readback_complete: true
+  post_merge_template_blob_readback_task: MNEMOSYNE-242
   dynamic_fill_and_validator_required: true
   separate_Owner_G2A_required: true
   G2A_issued: false
   A1_execution_authorized: false
+```
+
+## Publication result (PR #303)
+
+```yaml
+publication_result:
+  publication_carrier_task: MNEMOSYNE-241
+  PR: 303
+  PR_state: closed
+  merged: true
+  merged_at: 2026-08-21T01:24:47Z
+  PR_head_branch: mnemosyne-241-f2-g2a-handoff-hval-publication
+  PR_head_sha: 2a361d0c91ab54102d4243ca6bbd219e649e3175
+  base_before_merge: e726dea818dca9418181775d0e7dcd62eb6c464a
+  merge_commit: 3ea2b97c369837d27d0e4a65c38c252e755954b5
+  master_tree: f0cf511069eb9ec9be83579766c3990e89976100
+  PR_commits: 1
+  changed_paths: 91
+  additions: 87
+  modifications: 4
+  publication_complete: true
+  post_merge_path_and_blob_readback_complete: true
+  readback_task: MNEMOSYNE-242
+```
+
+```yaml
+merged_artifact_identities:
+  corrected_G2A_template:
+    path: notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-CANDIDATE-001.md
+    blob: da36d22f35a2614dd9bb0a4f7030b73e7be27fb0
+    declared_sha256: ae3c2f7a4d56195eec9faa99c2041404718d1d557c20a3d13ea56a66fe252265
+    authority: non_authorizing_outer_template
+  G2A_template_manifest:
+    path: notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-MANIFEST-001.yaml
+    blob: 53269416730b21243d083acb40930a8d5352f2c6
+  mechanical_validator:
+    path: notes/validation-tools/validate_and_fill_mne_v2a_a1_controller_g2a.py
+    blob: d17b47821a61aaa8d97df9a6541db1576631bcfc
+  HVAL_design_002:
+    path: notes/validation-designs/MNE-HVAL-001-PRO-CORRECTED-VALIDATION-DESIGN-002.md
+    blob: 260f9bafefc6eadeae28b2e440433399d31c2d10
+    status: DESIGNED_NOT_EXECUTED_ACCEPTED_FOR_SEPARATE_OWNER_AUTHORIZATION
+```
+
+Publication of the corrected outer template does not authorize anything. The post-merge invariants below are unchanged by the merge.
+
+```yaml
+post_merge_invariants:
+  G2A_issued: false
+  A1_execution_authorized: false
+  controller_or_worker_launched: false
+  validation_repository_written: false
+  validation_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  validation_repository_master: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  A1_branches_created: false
+  HVAL_fixture_publication_authorized: false
+  HVAL_scenario_execution_authorized: false
 ```
 
 ## Publication incidents and recovery
@@ -102,14 +163,20 @@ publication_closeout:
   MNEMOSYNE_237: BLOCKED_CLOSED_NO_RETRY
   MNEMOSYNE_238: BLOCKED_CLOSED_NO_RETRY
   MNEMOSYNE_239: BLOCKED_CLOSED_NO_RETRY
+  MNEMOSYNE_240: HISTORICAL_RECOVERY_ARCHITECTURE_AND_DURABLE_STAGING_CAPSULE_SOURCE_NOT_THE_PUBLICATION_CARRIER
+  MNEMOSYNE_241: PUBLICATION_CARRIER_SUCCEEDED_MERGED_AS_PR_303
   forensic_audit: DUAL_FAILURE_PARTIAL_CAUSE_RECOVERY_ARCHITECTURE_READY_WITH_UNKNOWNS
   Pro_forensic_adjudication: MNE-235-236-DUAL-FAILURE-FORENSIC-PRO-ADJUDICATION-001
   execution_surface_adjudication_237_238: MNE-MNEMOSYNE-237-238-EXECUTION-SURFACE-PRO-ADJUDICATION-001
   execution_surface_adjudication_239: MNE-MNEMOSYNE-239-EXECUTION-SURFACE-PRO-ADJUDICATION-001
   selected_architecture: UBUNTU_24_04_LOCAL_DETERMINISTIC_GIT_PHASE_A_THEN_ORIGINATING_CONNECTOR_READY_PR
   recovery_task: MNEMOSYNE-240
-  publication_branch: mnemosyne-240-f2-g2a-and-handoff-audit-closeout
-  historical_empty_branch_retained: mnemosyne-235-f2-g2a-and-handoff-audit-closeout
+  planned_publication_branch_not_used: mnemosyne-240-f2-g2a-and-handoff-audit-closeout
+  actual_publication_branch: mnemosyne-241-f2-g2a-handoff-hval-publication
+  historical_incident_lineage: MNEMOSYNE_235_through_MNEMOSYNE_240_retained_as_history
+  mnemosyne_235_branch_disposition: MAY_DELETE_no_unique_unpreserved_work
+  mnemosyne_235_branch_observed_at_MNEMOSYNE_242: absent_on_origin
+  mnemosyne_240_preservation_capsule_branch: RETAIN_pending_immutable_canonical_substitute_or_Owner_archival_decision
   prior_unreferenced_objects_reused: false
   cleanup_authorized: false
 ```
@@ -117,15 +184,13 @@ publication_closeout:
 ## Current gate
 
 ```text
-execute MNEMOSYNE-240 from the single Ubuntu operator package; automated preflight occurs before the one-shot Phase A begins
-→ exact post-push branch readback by the originating Pro conversation
-→ originating conversation creates one Ready PR from the frozen PR body
-→ Owner reviews and decides whether to merge
-→ exact post-merge readback of the corrected G2A template, manifest, validator and route status
-→ fill only authorized dynamic fields and run the mechanical validator
-→ separate explicit Owner decision whether to issue the A1 controller G2A
-→ only after actual Owner G2A: fresh controller preflight and Package 001–004 execution flow
+prepare only the authorized dynamic G2A values from current direct evidence
+→ run the merged mechanical validator notes/validation-tools/validate_and_fill_mne_v2a_a1_controller_g2a.py
+→ obtain a separate explicit Owner decision whether to issue the A1 controller G2A
+→ only after an actual Owner G2A: fresh controller preflight, then Package 001–004 execution flow
 ```
+
+The publication steps of the previous gate are complete and are recorded above as history. MNEMOSYNE-240 is no longer an executable instruction on this route.
 
 No current record authorizes:
 

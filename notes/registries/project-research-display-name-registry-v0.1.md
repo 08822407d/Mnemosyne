@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.1.4
-last_updated_by_task: MNEMOSYNE-240
+version: 0.1.5
+last_updated_by_task: MNEMOSYNE-242
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -68,10 +68,10 @@ issued_aliases:
     sequence: 005
     canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
     project: Mnemosyne
-    status: A1_readiness_pass_corrected_G2A_template_publication_pending
+    status: A1_readiness_pass_corrected_G2A_template_publication_complete_pending_separate_Owner_G2A_decision
     allocation_task: MNEMOSYNE-214
     execution_package: handoff/fable5-ready/FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001/
-    notes: [roadmap_F2, A0_complete, A1_not_authorized, G2A_not_issued]
+    notes: [roadmap_F2, A0_complete, A1_not_authorized, G2A_not_issued, corrected_G2A_template_published_via_PR_303_merge_3ea2b97c369837d27d0e4a65c38c252e755954b5, separate_Owner_G2A_decision_still_required]
   - display_name: MNE-DR-006 交接加固
     sequence: 006
     canonical_task_id: FABLE5-MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
@@ -85,6 +85,9 @@ issued_aliases:
       - Fable_5_Work_Ultra_Research_OFF
       - repository_only_public_evidence_audit
       - HVAL_design_002_accepted_for_separate_Owner_authorization
+      - audit_evidence_and_HVAL_design_002_published_via_PR_303
+      - registration_complete_at_repository_audit_and_HVAL_design_stage
+      - HVAL_fixture_publication_and_scenario_execution_remain_separately_gated
       - cross_route_god_view_claims_remain_blocked
 ```
 
