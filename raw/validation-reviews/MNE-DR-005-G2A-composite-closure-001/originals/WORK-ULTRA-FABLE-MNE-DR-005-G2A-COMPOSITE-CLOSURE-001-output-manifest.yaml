@@ -1,0 +1,33 @@
+manifest_version: 1
+task_id: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001
+verdict: CANDIDATE_COMPOSITION_READY_FOR_PRO
+final_status_line: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001_READY_FOR_PRO
+files:
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-complete-response.md
+    role: "full run record, gates (incl. end2 confirmation), continuity disclosure, read register, composition/comparison/audit summaries, verdict"
+    bytes: 15180
+    sha256: a162a35839edd22efc004a28d6396ccf42190d9e706e4771ac5fef985084fb62
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-composite-g2a-candidate.md
+    role: "the non-authorizing composite controller G2A/startup candidate (banner line 1; G2A_authorized: false)"
+    bytes: 26377
+    sha256: e51af7f7c175bf9ce43171a56921f77a51dfe5d05cff973ae4f05ceadf3a2516
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-clause-source-matrix.yaml
+    role: "clause-to-source matrix, explicit comparisons, Package 002 superseded-sentence list"
+    bytes: 29844
+    sha256: 096cccece19dbf8d77f584fd3a506afa3f3fe77488bbde8c352dd6c0cec0abb3
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-adversarial-review.md
+    role: "four independent_passes_not_distinct_agents, thirteen scenario tests, mechanical evidence, synthesis"
+    bytes: 13161
+    sha256: daceda7a4c371f01989fc11caa8abb79a281613a59f987a0fd8ec8ff79e40624
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-pro-adjudication-brief.md
+    role: "what Pro must verify, flagged items F1-F5, path from Pro acceptance to separate Owner G2A"
+    bytes: 5877
+    sha256: 362e89a8e5e1454672795f8bda44510369011f0fd9e4261e01005928c9f53260
+  - filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-output-manifest.yaml
+    role: "output manifest recording filenames, roles, bytes and SHA-256 of all six outputs"
+    bytes: 2266
+    sha256: omitted_self_referential
+    omission_explanation: >-
+      A file cannot record its own SHA-256, because writing the hash into the file changes the
+      file and therefore the hash. Its own byte count is recorded as a verified fixed point:
+      the stated number equals the size of this file with that number written in place.

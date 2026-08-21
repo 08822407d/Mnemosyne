@@ -1,0 +1,134 @@
+ledger_id: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-timeline-and-object-effect-ledger
+task_id: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002
+epistemic_note: >-
+  Absolute timestamps for E1-E3 were not preserved by their executors; ordering is
+  established by task lineage (236 inherits 235; the Pro receipt post-dates both blocked
+  runs by its own statement). E4 timestamps are container-clock UTC observed by this audit
+  (clock read 2026-08-19T16:19Z, ~1 day behind the product-stated current date 2026-08-20).
+  Mnemosyne repo metadata showed pushed_at 2026-08-19T12:36:25Z at audit start; attribution
+  of that push event to a specific ref is not possible read-only and is not asserted.
+
+timeline:
+  - event: E0_payload_frozen
+    description: 32-member repository payload + manifest frozen
+    evidence: manifest 488e27d9...5cc4c6; zip b99fd32a...17c86 (139424 B, attested via extraction receipt)
+    timestamp: unknown
+  - event: E1_MNEMOSYNE_235_blocked_run
+    surface: fresh ChatGPT/Codex conversation with GitHub write actions (operator-reported; backend unknown_or_not_attestable)
+    outcome: MNEMOSYNE_235_BLOCKED
+    stop_phase: pre-commit Git tree staging
+    stop_cause_recorded: >-
+      one transient staging tree entry carried lower/mixed-case
+      '...G2A-composite-closure-001...' in a filename component where the manifest requires
+      '...G2A-COMPOSITE-CLOSURE-001...' (member ...-clause-source-matrix.yaml); attributed
+      by the executor to manual transport
+    timestamp: unknown
+  - event: E2_MNEMOSYNE_236_blocked_run
+    surface: operator-reported; backend unknown_or_not_attestable
+    outcome: MNEMOSYNE_236_BLOCKED
+    gates_reported_PASS:
+      - local source/manifest gate (zip+manifest sha256, 32 count, ordered path equality, 31 publishable, README excluded, no CS/CI collisions)
+      - recoverability gate (master e726dea8, branch identical ahead 0 behind 0, 0 open PRs, no new branch, no 235 retry)
+      - bounded target blob gate (0e02aab3 / aad3ed79 / fd231986 matched; handoff-current d44a951a; root README b6d99d25; spec 01f64a82)
+      - authorization/route state gate (G2A_issued false, A1_execution_authorized false, A1_executed false)
+    stop_phase: blob-object creation, explicitly before final-tree construction
+    stop_cause_recorded: one failed blob write; exact path/encoding/request/response/SHA NOT preserved
+    timestamp: unknown
+  - event: E3_current_Pro_object_api_investigation
+    receipt: MNE-235-236-PRO-RECOVERY-OBJECT-SIDE-EFFECT-RECEIPT-001
+    pre_state_confirmed: master e726dea8; branch identical zero commits; no open PR
+    outcome: bounded investigation; no reachable commit, no ref move, no PR, no cleanup, no G2A/A1
+    timestamp: unknown (post-dates E1 and E2 by its own statement)
+  - event: E4_this_audit_FORENSIC_AUDIT_002
+    mode: read-only; Research OFF; no Git object or ref creation; no retry; no cleanup
+    input_integrity_gate: PASS_32_OF_32
+    repo_access_window_container_utc: start ~2026-08-19T16:0x, end 2026-08-19T16:19:41Z
+    start_end_ref_maps: byte-identical for both repositories (zero drift)
+
+repository_state_start_and_end:
+  Mnemosyne:
+    default_branch: master
+    master: e726dea818dca9418181775d0e7dcd62eb6c464a
+    branch_mnemosyne-235-f2-g2a-and-handoff-audit-closeout: e726dea818dca9418181775d0e7dcd62eb6c464a
+    compare_to_expected_base: {status: identical, ahead_by: 0, behind_by: 0}
+    branch_count: 2
+    open_prs_total: 0
+    open_prs_from_235_branch: 0
+    open_pr_corroboration: [zero refs/pull/*/merge in ls-remote, pulls page 0 Open / 297 Closed, 297 pull head refs max 302 gaps 170 171 244 250 265]
+    anchor_blobs_at_master_all_MATCH_start_and_end:
+      current/fable5-cross-repository-safe-concurrency-research-status.md: 0e02aab3e777000a159401ba9cf168b530ee7ac4
+      notes/registries/project-research-display-name-registry-v0.1.md: aad3ed795fd426fceb581bc65ca2ce061be42742
+      notes/todos/MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001.md: fd231986dab84d77f265264f599c98d64a91dbfd
+      handoff/handoff-current.md: d44a951a80153d2ad560b22b5c428e3f59447fd1
+      README.md: b6d99d254a01a30c930bc44e3f99c448589734da
+      current/human-approved-spec.md: 01f64a8223677829320c66dd46d3f172cc9155cc
+    g2a_a1_state_lines_from_live_status: [G2A_issued: false, A1_branches_created: false, A1_execution: false, A1_runtime_failure: false]
+  mnemosyne-target-lifecycle-validation-002:
+    default_branch: master
+    master: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    branch_count: 18
+    pull_refs_ever: 0
+    open_prs: 0
+    sentinel_controller_branch: {name: v2a-sentinel-001-controller, head: d936cd2d4acd3f5b71f6f7f0d86ae6ffe93ab58c, matches_status_recorded_final_head: true}
+    five_A1_branch_names:
+      - v2a-a1-001-controller
+      - v2a-a1-001-alpha
+      - v2a-a1-001-beta
+      - v2a-a1-001-order-alpha-beta
+      - v2a-a1-001-order-beta-alpha
+    five_A1_branch_state: all_five_absent_start_and_end (template preflight requirement satisfied)
+    live_anchors_match_payload_frozen_values: {validation_master: true, fixture_base_81f18eb5: true, sentinel_head_d936cd2d: true}
+
+object_effect_ledger:
+  reachable_effects:
+    - id: R1
+      effect: branch ref refs/heads/mnemosyne-235-f2-g2a-and-handoff-audit-closeout exists
+      points_at: e726dea818dca9418181775d0e7dcd62eb6c464a (pre-existing base commit; zero content delta)
+      created_by: E1 (MNEMOSYNE-235 blocked run)
+      status_at_audit: present, unchanged start and end
+    - id: R2
+      effect: none other (no MNEMOSYNE-235/236 commit, no PR, no validation-repo write, no G2A, no A1 branch)
+      verified: live, start and end
+  unreferenced_effects:
+    - id: U1
+      source: E1 (235 staging)
+      objects: Git tree/blob objects from create_tree staging calls, including the miscased tree entry
+      shas_preserved: false
+      enumerable: false (no refs reference them; GitHub exposes no unreachable-object listing; server-side GC lifetime unobservable)
+      cleanup: not authorized, not performed
+    - id: U2
+      source: E2 (236 blob phase)
+      objects: zero-or-more blobs created before the failed write; possibly none
+      shas_preserved: false
+      enumerable: false
+      cleanup: not authorized, not performed
+    - id: U3
+      source: E3 (Pro investigation) — SHAs PRESERVED by receipt
+      trees_10:
+        [b247dc48a00bbe0baa98864050cd2b05f6e18491, ae807302bfc23c6ef3acc199ed8cfdffcec85889,
+         4b3cfe96c225d7fb58d6401125af761d951ba804, 2b40b48a8723e5aea87743beb2982062a0818fae,
+         5c4053c18548bb386aa0b0ef3377416a683ff9b1, 02032b15ecfc2a312f4f9938de60391c5f43bb44,
+         0c8b5391846efbc1b0734909ed17f1a5edfaddc7, 7f97f839a68ff500c71f18165ed02105e5958a85,
+         1f9b6f59f47f231046ff9e4849e94603aabcd94c, fe61cb702576f0e711fa765170baee32d8973dca]
+      blobs_2:
+        [b49f205a4b07e5ae9d242f67e664b494cdc2a4c0, 0e295f313dc1abd6ffa96603fe44eaebd46fe5e7]
+      failures_422_tree_sha_not_a_valid_blob_object_ids:
+        [a56e4bd7676e0645d2d6b2396a1cddd4a568ef43, b49f205a4b07e5ae9d242f67e664b494cdc2a4c0,
+         7ab496a48f4485fb0bb5694430e8e97d9bb50f9b, ba90046145eb1097d412f9992ef808d9f70f4368,
+         86c50461bdae5f0963d1c3b1314cd2b8858b8653, 5ffe5f838c2e84d80826c2c496dd5c1161f9c343,
+         e41924475a9f294c48eedcc3c3448e20e293d38c, 68b9bb049b6c98655ad9b381cb7580a447f25dbc,
+         894feef151a88c6d07e366dd9fb8bf51ac9393f4, 9f19255426c358bc900278f8128e0d1620c3518a,
+         c9bb643d03ff2f8842272226c6aa2754c5aeacdc, 0a99c7faff1db6eb0e03de4414f26e525bf3db72,
+         a8e02b17698e75e500be08325956e5288658fc52]
+      fetch_blob: {one_404_for_expected_object: true, one_success_for_present_object: true}
+      anomaly_b49f205a: appears in both success and 422 lists; receipt preserves no per-call
+        sequence/timestamps, so ordering vs typing vs list-artifact cannot be separated
+      reuse_authorized: false
+      cleanup: not authorized, not performed
+    - id: U4
+      source: E4 (this audit)
+      objects: none (read-only; zero writes of any kind)
+  invariants_confirmed_live:
+    ref_not_moved_does_not_mean_zero_repository_side_effect: true
+    no_object_listed_anywhere_is_authorized_for_reuse: true
+    no_cleanup_authorized_or_performed_by_any_event: true

@@ -1,0 +1,51 @@
+manifest_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-MANIFEST-001
+template_file:
+  filename: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-A1-CONTROLLER-G2A-ISSUANCE-TEMPLATE-CANDIDATE-001.md
+  bytes: 27490
+  sha256: ae3c2f7a4d56195eec9faa99c2041404718d1d557c20a3d13ea56a66fe252265
+outer_artifact_authority: non_authorizing_transfer_artifact
+inner_payload_template:
+  bytes: 25109
+  sha256: bda27d39dcfe0159523721e5c8831f86886031cb3d4ba4365979ea3a5245ddd4
+  encoding: utf-8_without_bom
+  line_endings: LF
+  trailing_spaces: false
+source_fable_candidate:
+  filename: WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001-composite-g2a-candidate.md
+  bytes: 26377
+  sha256: e51af7f7c175bf9ce43171a56921f77a51dfe5d05cff973ae4f05ceadf3a2516
+allowed_G2A_time_fill_placeholders:
+- SOURCE_CONTROLLER_G2A_TEMPLATE_BLOB
+- PROTECTED_MNEMOSYNE_MASTER_AT_G2A
+- PROTECTED_META_AGENT_MASTER_AT_G2A
+- CONTROLLER_OWNER_AUTHORIZED_VISIBLE_LABEL
+- CONTROLLER_OPERATOR_SELECTED_VISIBLE_LABEL
+- ALPHA_OWNER_AUTHORIZED_VISIBLE_LABEL
+- BETA_OWNER_AUTHORIZED_VISIBLE_LABEL
+- EXECUTION_WINDOW_START_UTC
+must_remain_until_worker_launch:
+- __MNE_ALPHA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH__
+- __MNE_BETA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH__
+literal_non_G2A_format_markers:
+- <ROLE>
+- <ALPHA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH>
+- <BETA_OPERATOR_SELECTED_VISIBLE_LABEL_AT_LAUNCH>
+static_package_identities:
+  candidate_004: 87f110c5f99ba702a93cd38ca78bb6bfbff002db
+  package_004_manifest: 8a978e1a075674e9f6d3909a1530c483abaf428d
+  candidate_003: 28da6ab6a3f3638292e83a7df511100d8d23b4b0
+  package_003_manifest: 7611773d861e065f539118853ec93026515f4065
+  candidate_002: a8b627b8aa74b5a1a5af19d3af485a17aa2cd0b7
+  package_002_manifest: 1f54f4711a44129c3dfee066aa2ab297f94718b7
+  candidate_001: bb140196a38d8b14f6eba9e2175cd45744efb23b
+  package_001_manifest: 12a480449b1dac45cd265864a812f399d19ec15c
+canonical_wrapper_sha256:
+  Alpha: 8d82d785612bd1a42a284e23b80cc22b14b1b89ec2528d0382da1c7e1cd0b210
+  Beta: 798f8ba658430559e479c5244806edf2d22894b49de9a70bfd92349de013b445
+issuance_gate:
+  repository_publication_required: true
+  merged_template_blob_readback_required: true
+  mechanical_fill_validation_required: true
+  separate_Owner_G2A_required: true
+  G2A_issued: false
+  A1_execution_authorized: false

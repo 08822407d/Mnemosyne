@@ -1,0 +1,43 @@
+source_artifact_receipt:
+  task_id: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
+  material_class: public_repository_evidence_and_synthetic_validation_design_only
+  repository_visibility_preflight: public
+  primary_files:
+    preservation_level: EXACT_FILE_IN_REPOSITORY_candidate_pending_write
+    count: 8
+    files:
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-command-guard-patch-spec.md
+      bytes: 18866
+      sha256: a843de2c77ae50f416a6d119aa2f550c1a1eb381b3ac10e2d5857b6747e57e9d
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-complete-response.md
+      bytes: 10755
+      sha256: 07d6e4f672db63c22b70878690e4068e5865a7dbe7892bf1e07f96080d79ee93
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy.yaml
+      bytes: 29638
+      sha256: 47ae2d61e8d2851c53f4d43cd71ed670b2f5a78adcabac35f525a694f955e268
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-guidance-architecture-comparison.md
+      bytes: 12526
+      sha256: 64007294f86c4a26b7beffc2d2515c24231f16a988fccaa66c73c46c08472c43
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-output-manifest.yaml
+      bytes: 3206
+      sha256: 7069d0fbefc906bb253c2872de3078487fd97fa4a905988e0f25d23325135389
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-pro-owner-brief.md
+      bytes: 6166
+      sha256: 99fd9be878810883570241dd32a0aa8d01f941c987551720b007ad91b8523e63
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-repository-audit.md
+      bytes: 29316
+      sha256: 508e903fa5d0685a0d5ad50d0d1183efd8364cb7dc756e3d6a7727fdb8df4fc4
+    - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-validation-design.md
+      bytes: 14321
+      sha256: a25eabd0064eebadaae0db8a17aa2f958103097ea67e28188aa3c0cacfe96405
+  operator_reported_chat_response:
+    filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-chat-natural-language-response.txt
+    bytes: 2584
+    sha256: 095ce24a65ba7563b3507950fe5462149fdd268744bb7ff65a13523f2e5e89b5
+    preservation_level: NORMALIZED_READABLE_COPY
+    byte_identity_to_provider_UI: unknown_or_not_attestable
+  content_review_scope: repository_only_handoff_protocol_audit_and_design
+  secrets_credentials_private_material_observed: false
+  limitations:
+  - Git blob identities become available only after repository write.
+  - Artifact hashes prove bytes, not producer/backend identity or correctness.

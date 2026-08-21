@@ -1,0 +1,36 @@
+receipt_id: MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-SOURCE-RECEIPT-001
+preservation: exact_uploaded_files_plus_normalized_chat_copy
+formal_files:
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-complete-response.md
+  bytes: 10893
+  sha256: 1ed81c64dd461bc1cae0bad1b877994024a4fca1dad83113abf37a9f79c38175
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-failure-classification-matrix.yaml
+  bytes: 7556
+  sha256: c49ca746bde0f335f14b6619855dd7778d21293281e01ef1a58a8a479fafae4a
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-forensic-report.md
+  bytes: 19848
+  sha256: dfc2962599c073e7acab98558d2c36bbe614a1918aafedd493da8741a84abf22
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-future-publication-contract.md
+  bytes: 11194
+  sha256: 4bebfd161ff27298ff80e2efb520903c3974e2bed734e6b3c32c7b0ceead2892
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-output-manifest.yaml
+  bytes: 2752
+  sha256: 8384d3237caead13bc1143953a950821e2edc2db63c3c0adfe5d735a7b076e8c
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-pro-owner-brief.md
+  bytes: 4286
+  sha256: 7a6b55b16f74342f61389142aea6f117b08b300120d06422bff6116f06cab5bc
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-recovery-architecture-comparison.md
+  bytes: 8521
+  sha256: 79040b89a57915fda673472502c09e3adad5d7951f5e3d28dac27220462aa337
+- filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-timeline-and-object-effect-ledger.yaml
+  bytes: 8319
+  sha256: 344cc6ed575b2fb99356a9a114ed043774276aad37937fbfdd1e616e3c6b1a43
+chat_copy:
+  filename: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-chat-natural-language-response.txt
+  bytes: 1969
+  sha256: dea5d0fbc220803e602f609ea0599a4c613051d1efb6181fd809624394ea6f88
+  identity_limit: normalized readable copy; original Claude UI bytes not attested
+output_manifest_nonself_entries_verified: 7
+machine_parse:
+  failure_matrix_yaml: PASS
+  timeline_ledger_yaml: PASS

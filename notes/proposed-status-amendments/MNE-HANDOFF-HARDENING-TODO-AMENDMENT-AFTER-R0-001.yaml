@@ -1,0 +1,34 @@
+target_path: notes/todos/MNE-HANDOFF-CORRECTNESS-VALIDATION-AND-PROTOCOL-HARDENING-TODO-001.md
+expected_current_blob: fd231986dab84d77f265264f599c98d64a91dbfd
+required_header_updates:
+  status: R0_repository_audit_complete_Pro_adjudicated_pending_Owner_staged_implementation_and_validation
+  last_updated_by_task: MNEMOSYNE-235
+required_new_sections:
+  R0_completed_evidence:
+    Fable_task: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
+    Fable_verdict: REPOSITORY_AUDIT_COMPLETE_READY_FOR_PRO_OWNER_REVIEW
+    Pro_adjudication: MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-PRO-ADJUDICATION-001
+    accepted_scope: repository_only_no_conversation_exports
+    cross_route_root_cause: BLOCKED_PENDING_GOD_VIEW_EVIDENCE
+  Pro_corrections:
+    failure_taxonomy_original_yaml_parse: FAIL
+    failure_taxonomy_repaired_derivative: PASS_12_cases
+    MNE_HVAL_scenario_count: 21
+    suggested_receiver_conversation_ceiling: 24
+    current_Handoff_003_behavioral_state: POSITIVE_BEHAVIORAL_EXERCISE_WITH_ARCHIVAL_LIMITATION
+  staged_recommendation:
+    immediate_candidate_scope:
+    - P-04 publication receipt
+    - P-05 startup transfer fidelity
+    - P-06 optional source-selected guidance manifest and preserved-task echo
+    - P-09b deprecate handoff-current as global route pointer
+    deferred:
+    - generic schema/receive/prepare/oracle migration
+    - B2/E guidance trigger changes
+    - execution-source amendment
+    - MNE-HVAL fixture publication and execution
+    - god-view conversation exports
+boundaries:
+- R0 audit completion does not authorize command/guard edits.
+- MNE-HVAL remains designed, corrected, and unexecuted.
+- God-view export remains privacy- and Owner-gated.

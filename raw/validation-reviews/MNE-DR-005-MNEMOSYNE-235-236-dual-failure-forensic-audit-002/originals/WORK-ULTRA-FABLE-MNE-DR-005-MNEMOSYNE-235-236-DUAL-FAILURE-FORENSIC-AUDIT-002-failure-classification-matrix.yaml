@@ -1,0 +1,112 @@
+matrix_id: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002-failure-classification-matrix
+task_id: WORK-ULTRA-FABLE-MNE-DR-005-MNEMOSYNE-235-236-DUAL-FAILURE-FORENSIC-AUDIT-002
+verdict: DUAL_FAILURE_PARTIAL_CAUSE_RECOVERY_ARCHITECTURE_READY_WITH_UNKNOWNS
+
+incidents:
+
+  MNEMOSYNE-235:
+    classification: executor_transcription_path_case_drift
+    failure_layer: create_tree entry assembly (staging path string), post content-extraction, pre commit
+    mechanism:
+      finding: casing bled from the lowercase directory display-name segment into the
+        uppercase task-ID filename segment of one staged tree entry
+        (...G2A-composite-closure-001-clause-source-matrix.yaml staged where
+         ...G2A-COMPOSITE-CLOSURE-001-clause-source-matrix.yaml is required)
+      executor_attribution: manual transport (executor's own blocked-run statement)
+      structural_hazard: 7 of 31 publishable paths embed the same token in both casings
+        within a single path (all DR-005 files whose filenames carry the task token)
+      audit_verification:
+        payload_contains_correct_path_exactly_once: true
+        no_case_sensitive_duplicate: true
+        no_case_insensitive_collision_in_payload: true
+        drift_simulation: drifted string absent from manifest case-sensitively AND
+          casefold-identical to the correct path -> either a string-exact allowlist
+          assertion or a CI-collision check catches it deterministically
+    cause_determination: SUFFICIENT (mechanism class, introduction point, hazard geometry,
+      and detection point all established)
+    responsibility:
+      executor: proximate (introduced the drifted string)
+      task_design: contributory (content hashes mandated; mechanical path derivation not
+        mandated - no parse-manifest-only rule, no do-not-hand-type rule, no pre-write
+        staging-plan assertion, no CI-collision check; scope check 7.11 catches casing only
+        under an exact-string implementation the task did not require)
+      detection: succeeded pre-commit; fail-closed compliant; no repair/retry (correct)
+    effects:
+      reachable: branch ref created at pre-existing base commit only (zero content delta)
+      unreferenced: staging tree/blob objects incl. the miscased entry; SHAs not preserved; not enumerable
+    evidence_completeness: PARTIAL (narrative only; no per-call receipts, no object SHAs,
+      no exact staged wrong string, no timestamps)
+    design_repair_status: closed by MNEMOSYNE-236 section 5.3; sufficiency confirmed by
+      this audit's drift simulation
+
+  MNEMOSYNE-236:
+    classification: unresolved_create_blob_transport_failure_under_evidence_preserving_gap
+    failure_layer: blob-object creation (content transport), after all four gates PASS,
+      explicitly before final-tree construction
+    gate_credibility: >-
+      HIGH (every recorded gate value externally corroborated live by this audit --
+      master, branch, blob SHAs, PR counts, G2A/A1 booleans)
+    preserved: [stop phase, single-failed-blob-write fact, no-retry compliance, disposition line]
+    not_preserved: [failed file path, requested encoding, request payload/shape, HTTP status,
+      error body, any returned/partial object SHA, count of prior successful blobs, timestamps]
+    task_transport_contract_completeness:
+      path_mechanics: COMPLETE (section 5.3 exemplary)
+      content_transport_mechanics: INCOMPLETE (no encoding directive, no per-blob receipt,
+        no blob-phase-to-tree-phase gate, no failure-capture schema)
+      note: the failure occurred inside the only unspecified mechanical zone
+    rule_in_rule_out:
+      object_ordering: RULED_OUT  # create_blob takes no object references; conditional on the blob-write characterization
+      file_size_api_limit: EFFECTIVELY_RULED_OUT  # max member 29844 B, far under API limits
+      inherent_content_invalidity: RULED_OUT  # 32/32 byte-verified; all valid UTF-8, no BOM, LF-only
+      encoding_declaration_multibyte_handling: INDETERMINATE_ELEVATED_PRIOR  # 21/32 members contain CJK bytes; base64 transport eliminates this class
+      request_shape: INDETERMINATE
+      connector_semantics: INDETERMINATE  # schema/truncation/timeout/auth-scope/rate-abuse/5xx
+      common_cause_with_pro_422s: NOT_ESTABLISHED  # different call class; receipt disclaims the link
+    cause_determination: PARTIAL (stop point + rule-outs established; specific cause
+      indeterminable because the raw failing request/response was never preserved -
+      the contract's explicitly valid partial-cause condition)
+    responsibility:
+      executor: compliant stop behavior; evidence-poor reporting
+      task_design: contributory (transport + receipt schema unspecified)
+    effects:
+      reachable: none
+      unreferenced: zero-or-more pre-failure blobs; SHAs not preserved; not enumerable
+
+  PRO_RECEIPT_INVESTIGATION:
+    classification: tool_contract_failure_reproduction_with_full_receipts
+    observations:
+      successes: {create_blob: 2, create_tree: 10, all_shas_preserved: true}
+      failures_422: tree.sha <id> is not a valid blob (13 object IDs listed)
+      fetch_blob: {404_for_expected_object: 1, success_for_present_object: 1}
+      invariants: no reachable commit, no ref move, no PR, no cleanup, no G2A/A1 (audit-confirmed live)
+    error_semantics_422: a blob-typed tree entry (mode 100644, type blob) referenced an SHA
+      that is not a blob present in this repository's object database at call time
+    mechanisms_consistent_with_evidence:
+      - locally_computed_sha_never_uploaded (DIRECTLY evidenced by the 404 fetch_blob)
+      - blob_vs_subtree_typing_confusion (subtree SHA placed in a blob-typed entry)
+      - create_order_violation (tree call before blob creation completed)
+    anomaly_b49f205a: present in BOTH the create_blob success list AND the 422 list;
+      no per-call sequence/timestamps in the receipt, so ordering vs typing vs
+      unordered-list artifact cannot be separated - the irresolvability is itself the
+      finding motivating the per-call receipt schema
+    content_addressing_principle: local computability guarantees only "if present then this
+      ID", never existence; GitHub validates referenced SHAs against the target repo's
+      object store at call time
+    normative_correct_ordering: create_blob(base64) -> returned SHA recorded -> returned SHA
+      == locally precomputed git blob SHA-1 -> readback fetch + SHA-256 compare ->
+      single create_tree(base_tree, flat slash paths, 100644/blob) -> recursive candidate-tree
+      fetch, changed-path set == allowlist string-exact + entry SHAs == recorded blob SHAs ->
+      create_commit(parents=[base]) -> non-force fast-forward update_ref -> post-ref readback
+    typing_rule: flat-path + base_tree lets the server synthesize subtrees (removes the
+      typing surface); bottom-up assembly, if ever used, must type directories 040000/tree
+      and leaf files 100644/blob
+    proves: [object API reachable/writable from current surface, unreferenced side effects
+      real and enumerable when receipts kept, protective invariants held]
+    does_not_prove: causal identity with the external 236 failure (hypothesis only)
+
+verdict_basis:
+  MNEMOSYNE-235_cause: SUFFICIENT
+  MNEMOSYNE-236_cause: PARTIAL
+  recovery_architecture: READY (primary A, fallback B; see comparison output)
+  unknowns_carried: [exact 236 failing path/request/response, ordering resolution of
+    b49f205a anomaly, absolute timestamps of E1-E3, unreferenced-object inventories of E1/E2]

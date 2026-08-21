@@ -1,0 +1,53 @@
+# WORK-ULTRA-FABLE-MNE-DR-006 — Output Manifest
+manifest_version: 1
+task_id: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
+canonical_task_id: FABLE5-MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
+verdict: REPOSITORY_AUDIT_COMPLETE_READY_FOR_PRO_OWNER_REVIEW
+final_status_line: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001_READY_FOR_PRO_OWNER_REVIEW
+run_execution_time_state:
+  repository: 08822407d/Mnemosyne
+  master_sha_at_start: e726dea818dca9418181775d0e7dcd62eb6c464a
+  master_sha_at_end: e726dea818dca9418181775d0e7dcd62eb6c464a
+  start_end_master_equality: PASS
+  visible_branches: [master]
+  open_pull_requests: 0
+  repository_writes_performed: none
+  static_expected_identities_verified: 17_of_17
+outputs:
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-complete-response.md
+    role: complete_final_response_transfer_document
+    bytes: 10755
+    sha256: 07d6e4f672db63c22b70878690e4068e5865a7dbe7892bf1e07f96080d79ee93
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-repository-audit.md
+    role: core_repository_audit_inventory_failure_chains_protocol_evaluation
+    bytes: 29316
+    sha256: 508e903fa5d0685a0d5ad50d0d1183efd8364cb7dc756e3d6a7727fdb8df4fc4
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-failure-taxonomy.yaml
+    role: structured_failure_case_taxonomy_FC01_FC12
+    bytes: 29638
+    sha256: 47ae2d61e8d2851c53f4d43cd71ed670b2f5a78adcabac35f525a694f955e268
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-validation-design.md
+    role: bounded_validation_package_design_MNE_HVAL_001_designed_not_executed
+    bytes: 14321
+    sha256: a25eabd0064eebadaae0db8a17aa2f958103097ea67e28188aa3c0cacfe96405
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-guidance-architecture-comparison.md
+    role: five_option_guidance_loading_architecture_comparison_with_rejectable_recommendation
+    bytes: 12526
+    sha256: 64007294f86c4a26b7beffc2d2515c24231f16a988fccaa66c73c46c08472c43
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-command-guard-patch-spec.md
+    role: implementation_ready_patch_specification_P00_P12_no_edits_performed
+    bytes: 18866
+    sha256: a843de2c77ae50f416a6d119aa2f550c1a1eb381b3ac10e2d5857b6747e57e9d
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-pro-owner-brief.md
+    role: owner_facing_brief_with_decision_points_D1_D5
+    bytes: 6166
+    sha256: 99fd9be878810883570241dd32a0aa8d01f941c987551720b007ad91b8523e63
+  - filename: WORK-ULTRA-FABLE-MNE-DR-006-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001-output-manifest.yaml
+    role: output_manifest_self_entry
+    bytes: OMITTED_SELF_REFERENCE
+    sha256: OMITTED_SELF_REFERENCE
+    omission_explanation: >
+      A manifest cannot record its own SHA-256 (or a byte count stabilized against that hash)
+      without recursive self-reference: writing the value changes the bytes being hashed.
+      Only this recursive self-hash is omitted, per the task specification; the Owner may
+      compute this file's bytes and SHA-256 externally after download.

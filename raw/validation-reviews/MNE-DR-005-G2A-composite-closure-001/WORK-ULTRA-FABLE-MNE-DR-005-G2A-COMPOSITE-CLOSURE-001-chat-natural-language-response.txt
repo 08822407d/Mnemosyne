@@ -1,0 +1,13 @@
+Composing the candidate now — built mechanically so the canonical blocks and operative Package 003 texts are byte-exact copies from the verified blobs.
+
+Ran 7 commands, created 7 files, read a file
+
+All six required artifacts are above.
+
+NON\_AUTHORIZING\_CANDIDATE — DO NOT SEND TO A CONTROLLER UNTIL A LATER PRO REVIEW AND SEPARATE OWNER G2A.
+
+Gates: the input contract passed exactly (task file 8183 bytes, SHA-256 match, two inputs, identities agree). The execution-time gate passed with start == end everywhere — Mnemosyne master `e726dea8…`, validation master `e8e32969…` (equal to the hard pin), all 18 validation heads including the 16 `tlr-v1-*` refs byte-equal to the Package 001 inventory, fixture commit's tree recomputed as `f1e221ce…`, A0 head live, all five A1 branch names absent throughout, and zero open PRs in both repositories at start and end. All 15 pinned static identities matched on live master, with every extracted blob's SHA-1 recomputed locally. One evidence-transport note is fully disclosed in the complete response: shared-IP REST rate limits forced a switch to git ls-remote, depth-1 clones and the public pulls pages — all read-only, no retry after any block, no cold source touched, and seven additional necessary files recorded with their blobs.
+
+The composite candidate binds candidate/manifest 004 and the inherited 003/002/001 pairs, imposes 004→003→002→001 scoped precedence, embeds both Package 003 canonical `BEGIN…END` blocks as byte-exact mechanical copies (cmp-verified; canonical SHA-256 recorded), retains Package 002's staged label timing and Package 001's ceilings, declares Package 002's §4/§5 prose wrappers and its "below this message" pointer historical for wrapper transport, enforces the two-placeholder fill schedule, and keeps every dynamic value an explicit placeholder with `G2A_authorized: false` fixed. The matrix maps all 26 load-bearing clauses to sources and lists the 13 superseded Package 002 sentences; the four-pass audit (honestly labelled `independent_passes_not_distinct_agents`) defended all 13 mandated attack scenarios with zero material defects, leaving five presentation-level flags (F1–F5) for Pro.
+
+WORK-ULTRA-FABLE-MNE-DR-005-G2A-COMPOSITE-CLOSURE-001\_READY\_FOR\_PRO

@@ -1,0 +1,13 @@
+Audit complete. All seven required outputs are above; the manifest was written last and records bytes + sha256 for the other six.
+
+**Verdict:** **`MNE_HVAL_001_DESIGN_READY_WITH_NONBLOCKING_REPAIRS`**
+
+Execution record, briefly:
+
+- **Inputs:** both uploads verified byte- and hash-exact against the task declaration before analysis.
+- **Repository:** master `e726dea818dc…` at start and end — no drift; all reads pinned to that snapshot. The MNEMOSYNE-236 publication has not landed (no DR-006 outputs, no corrected design, no `notes/validation-fixtures/` on master), so the audit ran on the frozen uploaded candidate exactly as the task anticipated. `raw/` bodies and conversation exports were never opened.
+- **Pro corrections re-derived clean:** scenario count is exactly 21 with unique IDs; the 24-conversation ceiling holds (worst case 23); the 6-Pro-turn ceiling is coherent under one clarification the design must state. Every status token, field, and mechanism the scenarios assert was verified verbatim in schema-001 / contract-002 / package-003 / startup-003 / the guidance command, and the route's pinned blob identity web re-verified.
+- **Seven Class-A repairs** (bounded edits, gating fixture publication or execution authorization, none architectural): AF-01 blind the scenario labels (the published expected-outcome table plus scenario-named subpaths would let subjects pattern-match the key); AF-02 state Pro-turn terminality for N-family blocks; AF-03 fix the 60-file evidence arithmetic; AF-04 realize N-017 without violating fixture immutability; AF-05 define the missing guidance-message and two-phase-startup fixtures; AF-06 re-key N-022 to the deterministic harness-side realization; AF-07 add per-scenario capability fields. Ten Class-B recommendations follow, the most consequential being the fabricated-report adjudicator probe (contract-002 never requires the adjudicator to re-observe reported `actual` values) and the per-window change-freeze that shields positive scenarios from false BLOCKs.
+- **Attestations:** no repository writes, no fixture publication, no scenario execution, HO-GUIDANCE-001 untouched, no quota beyond this run, no retries; `independent_passes_not_distinct_agents: true` (five sequential passes, single instance).
+
+Per the task's no-retry rule, this run should not be re-executed.
