@@ -1,0 +1,508 @@
+##  [META-AGENT-BOOTSTRAP-REVIEW-001] 2026-07-28 kind=result outcome=normal
+  - 审计发现两个可纠正问题：目标本地导航仍将 receive 描述为 pending；同仓库路由隔离在导航中不够醒目
+  - 认定 M0-M2 在 Mnemosyne 维护对话中执行属用户路由放置错误（但产物本身有效）
+  ! 审计判定 PASS_WITH_LIMITATIONS，并首次成文 Meta-Agent/Mnemosyne 双路由隔离控制规则。
+
+##  [META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001] unknown kind=blocked outcome=blocked
+  - 连接器表面无法机械枚举 target-projects/meta-agent/ 的完整递归 Git tree，触发任务书 fail-closed 规则
+  - 未创建分支、PR 或任何部分 manifest，全部工作流未启动
+  ! 教科书式 fail-closed 停止：宁可零产出也拒绝用搜索/采样冒充完整性证明。
+
+##  [META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001] 2026-08-04 kind=result outcome=deviation_disclosed
+  - 早期一次未提交树的尝试被放弃，分支重置到最后验证提交后重来
+  - MA-DR-14 因含产品原生引用字符不宜单次文本写入，中段改用 Base64 传输
+  - Owner 报告 MA-DR-11 仅约 5 分钟完成，被作为风险信号加做增强复审（未要求重跑）
+  ! 7 份外部报告 56 分片精确保存（SHA-256 7/7），MA-DR-09 报告已收到但明确拒绝静默收录。
+
+##  [META-AGENT-PR248-HANDOFF-REPAIR-001] unknown kind=pr_finalization outcome=normal
+  - PR #249 在任务结果/收尾记录完成前已被合并，行政收尾移交给后续任务而非改写历史 PR
+  ! post-merge 回读式收尾：head-to-merge 与 merge-to-master 均为零差异。
+
+##  [META-AGENT-PR248-HANDOFF-REPAIR-001] unknown kind=result outcome=deviation_disclosed
+  - 记录了 PR #248 的范围不匹配（scope mismatch）
+  - 用 37 部分 bzip2/Base64 规范传输替换了原不完整传输
+  - PR 在任务记录与导航收尾前即被合并
+  ! 一次修复任务本身又留下需再修复的收尾残留，形成修复链。
+
+##  [META-AGENT-PRE-MIGRATION-PRESERVATION-001] 2026-08-06 kind=closeout outcome=normal
+  - 非FABLE综合健康审查在 latest master 上找不到已完成的规范结果工件，依赖状态标记为未决
+  ! T0-T7 迁移就绪门逐项定级；发现独立健康审查路线可能只存在于未回传的外部对话中。
+
+##  [META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001] 2026-08-01 kind=result outcome=normal
+  - MA-DR-06 仓库输入绑定因缺失目标输入被阻断（报告侧合规披露），reviewer 补做映射
+  - MA-DR-06 三张附属沙盒图片未能保存（关键数值在文中留存）
+  - 发现支持文件元数据陈旧（pre-disposition 措辞），仅记录不越权修复
+  ! 14/14 报告分片、31/31 文件远端身份核验；跨报告裁决为"非执行源证据接受"。
+
+##  [META-AGENT-RESEARCH-EVIDENCE-REPAIR-003] 2026-07-31 kind=pr_finalization outcome=normal
+  - PR 创建响应曾暂报 mergeable:false，判定为 GitHub 计算未完成而非冲突
+  ! 第三次修复尝试终于产出真实 PR #237，46+2 文件全部独立复读。
+
+##  [META-AGENT-RESEARCH-EVIDENCE-REPAIR-003] 2026-07-31 kind=result outcome=deviation_disclosed
+  - 远端 38 个 Base64 分块中 2 块（chunk_012/021）身份不匹配，PR 创建前替换修复至 38/38
+  - 三条失败 lineage（含不实成功声明、stale-base 因素）记入事故记录移交维护路线
+  ! 本批次最重的修复记录：确定性 tar/bzip2/Base64 重建 + 事故存证 + 失败分支不删除。
+
+##  [MNE-235-236 (MNEMOSYNE-235/236 恢复尝试回执)] unknown kind=incident outcome=failed
+  - 成功的 create_tree/create_blob 调用在仓库对象库留下 10 个未引用 tree + 2 个 blob（无 reachable commit）
+  - 多次 create_tree 返回 HTTP 422 "tree.sha ... is not a valid blob" 工具契约失败
+  - 一次 fetch_blob 404；外部 236 输出未保留失败细节，根因只能作为假设
+  ! 罕见的"对象级副作用"取证回执：孤儿 git 对象逐一列出且声明禁止复用。
+
+##  [MNEMOSYNE-025E] unknown kind=result outcome=normal
+  - 披露 raw/chatgpt-discussion-027.md 路径已存在，被本任务更新为 025E/RAW-0027 记录（raw 路径复用）
+  ! 建立系统建设基线快照；raw 讨论文件编号复用被明示。
+
+##  [MNEMOSYNE-025J] unknown kind=result outcome=deviation_disclosed
+  - 记录内注明：任务声称已执行最小路径检查，但后续人工核查发现规范文件仍残留缺 TASK_ID 旧路径
+  ! 八轮路径清理的终点仍以"声明与实际不符"的诚实批注收场。
+
+##  [MNEMOSYNE-026D] unknown kind=result outcome=normal
+  - 披露 026C 去重后 open-questions 仍有残留，故需本次硬替换
+  ! 硬去重（用户提供目标内容整体替换）仍未除净，罕见地需要用户手工接管。
+
+##  [MNEMOSYNE-026E-MANUAL] unknown kind=result outcome=normal
+  - 披露 026D 后 open-questions 仍残留已被 template pack 覆盖的问题
+  ! 三连败（026C/026D 两次自动去重失败）后由人手工完成的收尾。
+
+##  [MNEMOSYNE-029A] unknown kind=result outcome=normal
+  - 披露 029-result 声称已创建的 review/scenario 文件在 master 上实际缺失
+  ! 首次成文的"任务声称创建但 master 缺失"事故——后续 031/032 失败模式的前兆。
+
+##  [MNEMOSYNE-030D] unknown kind=result outcome=normal
+  - 披露 6 个轻度研究 prompt 原文已缺失，登记为 missing_original_prompt 并明确不得补写/伪造
+  ! 证据层永久缺失（6 个 prompt 原文丢失）被正式登记而非掩盖。
+
+##  [MNEMOSYNE-030F] unknown kind=result outcome=deviation_disclosed
+  - reviewer_notes 披露本任务声称硬同步完成，但人工核查发现 6 处关键文件仍未同步
+  - 同时披露 030E 曾声称完成但需 030F 修正
+  ! 连续两轮 Codex"硬同步"均未落地，只能转人工——031/032 失败链的典型样本。
+
+##  [MNEMOSYNE-030G-MANUAL] unknown kind=result outcome=normal
+  - 披露 030F 后仍残留状态不同步问题
+  ! 030 系列以用户手工硬同步收尾（与 026E-MANUAL 同模式）。
+
+##  [MNEMOSYNE-030] unknown kind=result outcome=deviation_disclosed
+  - 披露后续核查发现 pdf-figure-review-index 与本任务结果记录内容不足、状态未充分同步
+  ! 7 份报告 summary 建成，但任务记录自认三处产出不足。
+
+##  [MNEMOSYNE-032B] unknown kind=result outcome=deviation_disclosed
+  - 披露 MNEMOSYNE-032 结果声称 handoff 已写入验证提醒但实际未写入
+  - 追加批注：032D 指出本记录可能仅描述分支局部/中间状态，最终默认分支需直接验证
+  ! 结果记录声称成功但默认分支没有"失败模式的第一环。
+
+##  [MNEMOSYNE-032C] unknown kind=result outcome=deviation_disclosed
+  - 披露 032B 结果与最终默认分支实际内容不符，需本任务再修复
+  - 环境无配置 remote（git remote -v 空），无法 fetch/pull，只能基于工作区 HEAD
+  - 追加批注：032D 指出 032C 之后默认分支仍需直接命令验证
+  ! 修复链第二环——目标文件在本环境"已正确"，暗示改动在别处被回滚。
+
+##  [MNEMOSYNE-032H] unknown kind=result outcome=deviation_disclosed
+  - 披露原 032H 记录内嵌大量原始 diff（含已删除占位/错误文本），会污染后续 grep 检查，由 032I 清理重写
+  ! 元教训成文：结果记录不应内嵌含已删除字符串的原始 diff。
+
+##  [MNEMOSYNE-032] unknown kind=result outcome=normal
+  - 披露 Codex Cloud 环境中 origin remote 不可用
+  ! 首次 dry-run（记忆系统自验证），自称 PASS 但明确 pending 独立验证；ALLOW_STATUS_FILE_UPDATES=no 故未动状态文件。
+
+##  [MNEMOSYNE-034] unknown kind=result outcome=normal
+  - 任务环境无 origin remote，无法执行要求的 git fetch/reset 到最新 master
+  - 验证输出在 result record 填充前捕获，最终 diff 含本记录内容
+  ! 把"客观中立工程风格原则"写入执行源 §11，创建 commands/ 注册表
+
+##  [MNEMOSYNE-035] unknown kind=result outcome=normal
+  - 无 origin remote，无法 fetch origin master，只能在现有 work 分支状态工作
+  ! 执行源新增 §12 操作/结论分离原则；record 内嵌了两轮完整验证 diff（676 行）
+
+##  [MNEMOSYNE-043] 2026-06-22 kind=result outcome=normal
+  - gh 未安装无法运行 visibility preflight，改用 GitHub API 确认仓库为 public
+  ! 发现仓库实际是 public，修正 README 并加入 §14 公共仓库/敏感材料安全门
+
+##  [MNEMOSYNE-051] unknown kind=result outcome=normal
+  - 仓库 visibility 无法用 gh 验证，按 public/unverified 安全规则处理
+  ! DR2 handoff-strategy ingestion；git status 显示 helper 模板被删（D），成为下任务的修复对象
+
+##  [MNEMOSYNE-062] unknown kind=blocked outcome=blocked
+  - 所需 PRO-02/PRO-03 payload 不在 manual-import-inbox，任务按指令在 ingestion 前停止
+  ! 唯一的完全 BLOCKED 任务记录；只创建了 result record 本身，files_modified 为空
+
+##  [MNEMOSYNE-079] unknown kind=result outcome=normal
+  - 外部 dry-run 无完整 git diff 证明，本次仅此一次接受"等效 no-write 证据"
+  ! ingestion 首次真实（Meta-Agent 受控无写入）dry-run 结果，PASS_WITH_WARNINGS 89/100
+
+##  [MNEMOSYNE-090] unknown kind=result outcome=normal
+  - Fable review 全文未入库，manifest 标记 received_in_chat_not_canonical
+  ! FABLE5 跨模型 review 存储/triage 脚手架建立
+
+##  [MNEMOSYNE-096] unknown kind=result outcome=partial
+  - 7 条中文原始回答与完整解释包无法找回，仅部分原件被保存（partial_available_originals_preserved）
+  - 上传 txt 全文未逐字入库（担心 chat-to-GitHub 手工分块引入转写错误），仅记 size/sha256
+  - （据 098 追述）本任务发生过 default-branch placeholder 写入偏差
+  ! 记录用户长期授权——之后 Fable 相关文件可免再询问直接提 PR
+
+##  [MNEMOSYNE-097] unknown kind=incident outcome=deviation_disclosed
+  - audit 文件因遗漏 branch 参数被直接写到默认分支（低到中等工作流偏差，低内容风险）
+  ! 专门的偏差自曝记录文件——直接 master 写入事故的第一手披露
+
+##  [MNEMOSYNE-097] unknown kind=result outcome=deviation_disclosed
+  - audit 记录与 deviation note 两个文件均因遗漏 branch 参数被意外直接写入默认分支
+  ! Q2-2/R3 只读证据审计本体；同一任务内两次直写事故被完整披露
+
+##  [MNEMOSYNE-102] unknown kind=result outcome=normal
+  - 保存了 Fable 披露的两条 incidental exposure（E-1 charter 探测露出禁类 chunk、E-2 历史恢复露出研究摘要片段），未独立验证其"未使用"声明
+  ! GF-STEP-1A 存储起点；incidental-exposure ledger 概念出现
+
+##  [MNEMOSYNE-107] unknown kind=result outcome=normal
+  - INC-001：Fable 长任务被 provider 安全路由切换到 Opus 4.8，首次尝试中断且 PASTED 内容不可编辑，仅得部分中间输出
+  ! 首个 provider 侧安全路由事故记录（INC-001），含截图/部分输出哈希与显式分类器不确定性
+
+##  [MNEMOSYNE-117] 2026-07-13 kind=result outcome=normal
+  - 披露 PR 163 与 PR 164 是同一 MNEMOSYNE-116 任务的两个并行实现；163 意外先合并，164 被用户关闭
+  ! 重复并行 PR 失败模式的完整取证与和解，直接催生 118 的 lineage guard
+
+##  [MNEMOSYNE-119] unknown kind=verification outcome=normal
+  - 独立 fresh replay 002 行为 5/5 PASS 但机械分支枚举覆盖不完整，正确自判 BLOCKED
+  ! 被测会话"不发明例外、宁可 BLOCKED"被作为正面证据记录
+
+##  [MNEMOSYNE-120] 2026-07-14 kind=verification outcome=normal
+  - Replay 003 行为 5/5 PASS 但机械覆盖仍不可得，包级 BLOCKED
+  ! 连续第二次独立 BLOCKED，修复焦点转向传输方式而非测试内容
+
+##  [MNEMOSYNE-121] unknown kind=pr_finalization outcome=deviation_disclosed
+  - 同一 maintenance 回复内在已有 canonical PR 169 之外又创建了第二个 MNEMOSYNE-121 分支（未开 PR），弃用并作为仓库残渣披露
+  ! lineage guard 生效后仍发生同回复并行写 lineage——guard 抓到的第一例分支级事故
+
+##  [MNEMOSYNE-121] unknown kind=verification outcome=normal
+  - Replay 004 无法确立有效 master pin：公共 API 返回过期 SHA 与连接器数据冲突，行为用例 0/5 执行，BLOCKED
+  ! 承认仪器天花板并止损，而非继续消耗重试
+
+##  [MNEMOSYNE-122] unknown kind=verification outcome=normal
+  - cleanroom 合并 replay 行为全 PASS 但机械 no-write 证明仍 BLOCKED（combined BLOCKED）
+  ! 用户以 cleanroom Project 设置换取隔离性；行为目标与机械目标就此分叉
+
+##  [MNEMOSYNE-127] unknown kind=result outcome=normal
+  - 审计发现疑似低推理期产出（PR 174-176）：一个小修复用了三个连续 PR 且未实现有效指导
+  - MNEMOSYNE-125 任务号在首个 lineage 合并后被重复使用，违反 single-active PR guard 默认
+  - 两个 superseded 提案被留在 current wayfinding 下
+  ! 唯一的"疑似降智期工作全量重做"任务；PR 173 与并行的 PR 177 被明确保留不回滚
+
+##  [MNEMOSYNE-128] unknown kind=result outcome=normal
+  - Fable 返回物与 prompt 要求不符（文件名、step_name/record_type、证据 ID 体系、19 节标题分组），原样保存未修复
+  ! GF-STEP-2B6 存储；prompt/输出偏差首次成体系列举
+
+##  [MNEMOSYNE-129] unknown kind=result outcome=normal
+  - GF-STEP-2C 十项契约偏差：要求 8 个 pinned 仓库读取、返回报告 0 读取（用 13 个本地交付物替代）、SHA 表缺失、20 节代替 21 节、CB-* 代替 GF2C-B* 等
+  ! 最重的一份契约偏差清单；Fable 自称 STEP-2 完成但仓库保守拒绝采信
+
+##  [MNEMOSYNE-130] unknown kind=result outcome=normal
+  - INCIDENT-003：Fable 收到 GF-STEP-2D 校验任务却宣布触发 GF-STEP-3，未执行强制的八源验证即生成架构候选
+  ! 执行路径偏差事故（模型跳步）；仓库状态保守定为 GF_STEP_2D not_executed
+
+##  [MNEMOSYNE-133] unknown kind=pr_finalization outcome=normal
+  - PR 183 曾被不准确的标题/正文编辑，已更正；GF-STEP-3B 改由独立分支 PR 184 承载
+  ! 罕见的"修正已合并 PR 元数据"操作记录
+
+##  [MNEMOSYNE-133] unknown kind=result outcome=deviation_disclosed
+  - 前一助手回复错误声称 GF-STEP-3B 已并入开放的 PR 183；实际 183 已合并且只含 3A，中断的前次运行未完成元数据也未开 PR
+  ! 助手状态错误的自我更正记录（Correction of prior assistant state 一节）
+
+##  [MNEMOSYNE-136] unknown kind=result outcome=normal
+  - Fable GF-STEP-3R 首次尝试因必需附件 E（STEP4 自我批判）缺失而输入完整性失败，在读取设计附件前主动停止
+  ! 专门的失败尝试原样存档任务（failed-attempt storage），失败工件含 sha256 与结构校验
+
+##  [MNEMOSYNE-143] unknown kind=result outcome=deviation_disclosed
+  - GF-STEP-5 attempt 001 failed on input integrity (missing STEP3B attachment, wrong file substituted); failure preserved as historical provenance.
+  ! Preserves both the failed attempt and successful rerun of the GF-STEP-5 contrastive comparison.
+
+##  [MNEMOSYNE-144] unknown kind=result outcome=normal
+  - User-reported platform incident context recorded (selecting Pro appeared to yield a less deliberative model); checkpoint created preemptively.
+  ! Records PR #194 merge as user-confirmed model-quality restart checkpoint; explicitly separates checkpoint from backend attestation.
+
+##  [MNEMOSYNE-145] unknown kind=result outcome=deviation_disclosed
+  - Exact DR07 report bodies not embedded because connector lacked reliable large-file upload path; only hashes recorded.
+  - Earlier Project-internal research pair excluded as confounded.
+  ! Progress checkpoint effective only after PR #196 merge; honest storage-limitation disclosure instead of substitutes.
+
+##  [MNEMOSYNE-150] 2026-07-23 kind=pr_finalization outcome=deviation_disclosed
+  - Late duplicate lineage - a second noncanonical branch was created before discovering PR #201 already existed from another conversation; writes stopped, delta ported, no second PR.
+  ! Rare live demonstration of the single-active-PR guard reconciling concurrent conversations.
+
+##  [MNEMOSYNE-150] 2026-07-23 kind=incident outcome=deviation_disclosed
+  - Failed labeled-Pro review response declared materially unreliable by user; PR #198 checkpoint formally ACTIVATED and recovery recorded complete.
+  - Duplicate MNEMOSYNE-150 branch created before pre-PR recheck found existing PR #201.
+  ! The only checkpoint-activation incident record in the batch; the failed Pro response created zero repository writes.
+
+##  [MNEMOSYNE-152] 2026-07-23 kind=result outcome=deviation_disclosed
+  - Two recoverable storage-boundary reconstruction anomalies recorded in a dedicated storage-anomaly-record.
+  ! Stage A Work Ultra artifacts preserved in deterministic tar/bzip2/base64 multipart archive.
+
+##  [MNEMOSYNE-153] 2026-07-24 kind=pr_finalization outcome=normal
+  - Branch was continued after an interrupted operation window rather than creating a parallel lineage.
+  ! routine (binds PR #204)
+
+##  [MNEMOSYNE-153] 2026-07-24 kind=result outcome=deviation_disclosed
+  - CD-001 - final chat response did not reproduce complete synthesis byte-for-byte (file delivery compensated).
+  - CD-002 - prior helper process unrecoverable across PID namespace; fresh verifier rechecked critical gates; historical read-action count not fully attestable.
+  ! Pro maintainer adjudication REJECTS implementation readiness, downgrades 4 Stage-B claims, recommends PRO-SLICE-01 as first candidate.
+
+##  [MNEMOSYNE-155] 2026-07-26 kind=pr_finalization outcome=deviation_disclosed
+  - Final audit found archive parts 5-7 stored with line-wrapping that changed blob identities; replaced with exact one-line-plus-LF representations before merge.
+  ! Transport-encoding corruption caught by blob-identity audit.
+
+##  [MNEMOSYNE-155] 2026-07-26 kind=result outcome=deviation_disclosed
+  - Archive parts 5-7 line-wrapped on first store; repaired after final audit detected blob mismatch.
+  ! Adopts complete-response transfer-file behavior rule; archives PRO-SLICE-01 v1/v2 patch specs (29 patches) for later phased implementation.
+
+##  [MNEMOSYNE-157] 2026-07-26 kind=pr_finalization outcome=deviation_disclosed
+  - Actual GitHub head branch (codex/execute-mnemosyne-157-task) differed from the intended branch recorded by the Codex run.
+  - Historical switch_history "confirmed_none" amended to "unknown" because its evidence array was empty.
+  - PR #208 body lacked required execution-context disclosure; amended additively.
+  ! Additive post-merge amendment pattern - corrects lineage facts without rewriting the historical result.
+
+##  [MNEMOSYNE-157] 2026-07-26 kind=result outcome=partial
+  - make_pr tool returned no PR number or URL; task could not attest the created PR (no configured git remote or gh CLI).
+  ! Phase A implementation with 11/11 exact-once byte-hash-verified patch applications; PR identity unknown at task end.
+
+##  [MNEMOSYNE-160] 2026-07-26 kind=pr_finalization outcome=deviation_disclosed
+  - Historical task status was INCOMPLETE_PR_NUMBER_AND_REMOTE_METADATA_NOT_EXPOSED; actual lineage (PR #211, head codex/execute-mnemosyne-160-task-as-written) bound additively.
+  ! Second occurrence of the Codex-run/connector-closeout split repaired by an additive finalization.
+
+##  [MNEMOSYNE-160] 2026-07-26 kind=result outcome=partial
+  - Designated make_pr surface did not expose PR number/URL or post-creation enumeration; remote closeout recorded as BLOCKED_PLATFORM_CAPABILITY.
+  - Shell checkout had no configured remote; open-PR visibility limited to local evidence.
+  ! Phase B propagation with 18/18 exact-once verified patches despite the blocked platform closeout.
+
+##  [MNEMOSYNE-166] 2026-07-28 kind=result outcome=normal
+  - Post-merge audit of PR #216 found logical archive part 5 content-mismatched and parts 7-8 entirely missing; cycle README pointed to five nonexistent files; batch status stale.
+  ! Largest storage-integrity repair in the batch; also introduces FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT candidate.
+
+##  [MNEMOSYNE-175] 2026-07-28 kind=result outcome=deviation_disclosed
+  - Conversation attachment preview exposed stale wrong-report content; direct runtime-file read used instead; recorded as an observability/input-preview incident.
+  - A failed Base64 exact-archive attempt was removed; exact received bytes identified by hash but not reconstructable from repository.
+  - External Deep Research run metadata and native plan were not provided by the platform.
+  ! Stage A report accepted with corrections after sampling 15+ load-bearing sources; Stage B0 recommended but not selected.
+
+##  [MNEMOSYNE-177] 2026-07-28 kind=result outcome=blocked
+  - Stage B0 smoke returned CONTEXT_ISOLATION_FAILURE with zero cells started - the maintainer context could read hidden keys and no isolated worker/reviewer context existed; no pseudo-experiment simulated.
+  ! Fail-closed refusal to fake isolation, per explicit user gate; also adopts the user-operation/next-step/capability/intent guard.
+
+##  [MNEMOSYNE-181] unknown kind=pr_finalization outcome=deviation_disclosed
+  - First PR connector invocation used wrong parameter names and failed schema validation before any PR existed; corrected call created PR #233.
+  - Compact PR snapshot reported mergeable false; full fetch resolved true; discrepancy retained rather than hidden.
+  ! 20-file validation-package PR bound with explicit no-CI-evidence disclosure.
+
+##  [MNEMOSYNE-181] unknown kind=result outcome=deviation_disclosed
+  - First handoff receive attempt returned INPUT_OR_STATE_CONFLICT because PR #232 was not yet merged; receive repeated cleanly after merge.
+  - First PR connector invocation failed schema validation (no external PR created).
+  - No local parser/checkout available; integrity checks were author-reviewed and connector-backed only.
+  ! Builds the complete 15-file frontier-clarification validation package (14 scenarios, Q0-Q4, 40 V1 cells) without executing anything.
+
+##  [MNEMOSYNE-182] unknown kind=pr_finalization outcome=deviation_disclosed
+  - First PR-body update wrongly supplied maintainer_can_modify for a same-repo PR and was rejected; corrected update succeeded.
+  - Local independent checkout unavailable (DNS resolution failure for github.com).
+  ! routine binding of PR #234 with disclosed connector hiccups.
+
+##  [MNEMOSYNE-184] 2026-07-30 kind=pr_finalization outcome=deviation_disclosed
+  - Predecessor PR #235 was rejected and closed unmerged; scope independently redone as PR #236 from merged master without reusing its content as authority.
+  ! Inverted-boolean "not_performed: true" ledger explicitly glossed to avoid misreading.
+
+##  [MNEMOSYNE-185] 2026-07-31 kind=result outcome=normal
+  - User decision DEFER_REPAIR_AND_VALIDATION recorded for META-AGENT-RESEARCH-EVIDENCE-INCIDENT-001; candidate repair preserved but not started.
+  ! Adopts same-response inline operator-flow rule so users need not browse the repository to learn steps.
+
+##  [MNEMOSYNE-186] 2026-07-31 kind=result outcome=deviation_disclosed
+  - Paid Fable A1 Advanced Research run 001 failed - 18/18 repository evidence reads failed inside Advanced Research despite a passing ordinary-chat preflight; ~USD 8 spent; fail-closed PASS but cost-control FAIL.
+  ! Cleanest example of adjudicating an expensive external run failure as a surface defect, not a model defect.
+
+##  [MNEMOSYNE-191] 2026-08-06 kind=result outcome=normal
+  - Confirms stale live target navigation left after PR #255 (to be superseded post-merge rather than silently rewritten).
+  ! Accepts the receive-only migration result without rerun; designs the initial Meta-Agent memory system (M0-M9 validation, 16 cases).
+
+##  [MNEMOSYNE-192] 2026-08-06 kind=result outcome=normal
+  - Prior dedicated-conversation Pro task blocked - complete recursive tree enumeration impossible on the connected GitHub search surface (execution-surface capability mismatch, zero writes); blocked result preserved by exact hash.
+  ! Root-cause attribution deliberately avoids blaming model reasoning or the taskbook.
+
+##  [MNEMOSYNE-194] unknown kind=pr_finalization outcome=deviation_disclosed
+  - Prior PR #259 (wrong-model accident) closed unmerged with branch deleted; corrected lineage created as PR #260 without reusing its content.
+  ! routine binding otherwise.
+
+##  [MNEMOSYNE-194] 2026-08-06 kind=result outcome=deviation_disclosed
+  - A prior message was accidentally handled under the wrong model, producing PR #259; user closed it unmerged and the work was formally redone.
+  - E0 Codex run could not push remotely (no credentials); content reached the repo via user-mediated PR #258; local commit SHA not promoted to canonical identity.
+  - E0 snapshot self-reference resolved via a two-plane (payload vs control-evidence) source contract instead of rerunning E0.
+  ! The batch's clearest wrong-model incident plus a principled snapshot-churn avoidance decision.
+
+##  [MNEMOSYNE-195] 2026-08-07 kind=closeout outcome=deviation_disclosed
+  - Fable A1 R0 probe failed as a separate low-cost probe (~USD 7 spent, Search-mode only, no exhaustive-read attestation); extra OPERATOR.md upload adjudicated as operator selection error, not a Fable defect; identical probe rerun prohibited.
+  ! Declares Meta-Agent migration COMPLETE on the Mnemosyne side and restores the frontier-validation mainline.
+
+##  [MNEMOSYNE-200] unknown kind=pr_finalization outcome=deviation_disclosed
+  - Metadata correction needed because a self-referential head SHA cannot be recorded in its own file; current head deferred to PR 268 metadata.
+  ! Discloses the self-referential finalization-record head-SHA problem and resolves it by pointing at PR metadata.
+
+##  [MNEMOSYNE-201] unknown kind=pr_finalization outcome=deviation_disclosed
+  - Initial connector mergeability calculation transiently false while GitHub processed the draft PR; later exact recheck returned mergeable true.
+  ! First of several records preserving transient GitHub mergeability-unknown states instead of hiding them.
+
+##  [MNEMOSYNE-202] unknown kind=pr_finalization outcome=deviation_disclosed
+  - Semantic consistency repairs were applied to the package after initial finalization record (head advanced twice before final snapshot).
+  ! Twelve-point semantic integrity checklist all PASS after in-branch consistency repairs.
+
+##  [MNEMOSYNE-202] 2026-08-11 kind=result outcome=deviation_disclosed
+  - One initial branch-creation connector call used an invalid parameter alias and returned an argument error with no repository side effects.
+  ! Records the OR-01 42-item owner review, retires ACAP-036 permanently, and freezes three active-guard repairs for a later task.
+
+##  [MNEMOSYNE-204] unknown kind=pr_finalization outcome=deviation_disclosed
+  - Closes out the direct-master incident (8 unintended package commits from wrong branch_name parameter), recovered via corrective commit 89bd9ef without history rewrite.
+  ! repository_incident_recorded true; incident preserved as auditable history, not erased.
+
+##  [MNEMOSYNE-204] 2026-08-12 kind=incident outcome=deviation_disclosed
+  - Eight GitHub.create_file calls used incorrect argument branch_name; connector silently defaulted to master, committing 8 package files directly to the default branch.
+  - Recovery via corrective deletion commit and fast-forward, no force push; accidental commits remain visible in history.
+  ! The most significant incident of the batch — silent connector parameter fallback caused direct-master writes; fully disclosed with recovery protocol.
+
+##  [MNEMOSYNE-207] unknown kind=verification outcome=deviation_disclosed
+  - Transcript audit of the 502KB exact conversation export found one attribution error - ACAP-037 was wrongly recorded as part of the OR-02 shared floor; corrected by explicit correction record.
+  ! Full 10562-line export hash-verified locally but deliberately not published; created the branch-backed owner-review ledger guard.
+
+##  [MNEMOSYNE-208] unknown kind=pr_finalization outcome=deviation_disclosed
+  - PR 275 merged concurrently while the old conversation was preparing closeout; a noncanonical draft commit exists on a recreated MNEMOSYNE-207 branch, never entered PR 275 or master.
+  ! Concurrent-change disclosure with an orphaned branch flagged deletable after verification.
+
+##  [MNEMOSYNE-208] unknown kind=closeout outcome=deviation_disclosed
+  - PR 275 merged mid-tool-sequence; a post-merge draft commit was briefly placed on a recreated MNEMOSYNE-207 branch before being declared noncanonical.
+  ! Conversation had become slow to open; task prepares clean stopping point and new-conversation handoff.
+
+##  [MNEMOSYNE-209] 2026-08-14 kind=result outcome=deviation_disclosed
+  - Exact visible model label of the next-tier interview segment was not preserved in its launch message (recorded as attestation gap).
+  ! Formalizes owner-confirmed TLR review into candidate v0.2 and a frozen S0-S11 validation package with blob-level identities.
+
+##  [MNEMOSYNE-210] 2026-08-14 kind=verification outcome=deviation_disclosed
+  - Merged current-navigation file was stale, still describing PR 277 as open Draft after merge; requires follow-up repair in a new lineage.
+  - No workflow run found for the merge commit, so no CI-pass claim is made.
+  ! Status PASS_MERGE_VERIFIED_STALE_ROUTE_STATE_REQUIRES_FOLLOW_UP_REPAIR — merge verified, stale state routed to new task.
+
+##  [MNEMOSYNE-210] 2026-08-14 kind=pr_finalization outcome=deviation_disclosed
+  - Initial connector snapshot returned mergeable false right after PR creation; raw REST showed mergeable null/unknown; later recheck true. Transient state preserved, not hidden.
+  ! First Ready (non-draft) PR under the new Owner-decided Ready-PR default; RECOMMEND_MERGE recorded.
+
+##  [MNEMOSYNE-211] 2026-08-15 kind=blocked outcome=blocked
+  - V0 fully Owner-authorized but repository creation blocked - GitHub connector exposes no repository-creation mutation and no alternative plugin found (BLOCKED_TOOL_CAPABILITY).
+  ! Fail-closed on missing tool capability - refuses substitute repositories or Mnemosyne writes until the named repo can be created.
+
+##  [MNEMOSYNE-213] unknown kind=result outcome=deviation_disclosed
+  - MNE-DR-003 display-name collision recorded and contained by allocating MNE-DR-004 for repository navigation.
+  ! Fable report accepted with material corrections but implementation readiness REJECTED; exact-byte preservation plus deterministic ZIP of the Fable return.
+
+##  [MNEMOSYNE-215] unknown kind=result outcome=deviation_disclosed
+  - Regenerate/stop/recovery provenance incident on the V1 fresh-Pro adjudication - recovered attachment preserved at IDENTITY_RECEIPT_ONLY, exact pre-regeneration answer not attestable.
+  - GitHub asynchronous mergeable field returned false at PR creation; not treated as a conflict verdict.
+  ! Owner accepts V1 PASS_WITH_BOUNDED_AMENDMENTS and candidate v0.2 as provisional global baseline; records the Chat-to-Work transfer observation.
+
+##  [MNEMOSYNE-217] 2026-08-15 kind=closeout outcome=deviation_disclosed
+  - Residual navigation defect found after PR 284 - merged status file still carried transient pre-merge wording, risking an infinite recursive closeout chain.
+  ! Explicitly ends the recursive closeout chain by keeping publication state out of durable route navigation.
+
+##  [MNEMOSYNE-218] 2026-08-15 kind=result outcome=deviation_disclosed
+  - Two self-detected design defects corrected before publication - a mis-transcribed branch-identity blob and an invalid plan to reuse the anchor-absent gate before cleanup.
+  - Future P3 branch cleanup is BLOCKED - current connector exposes no branch-ref deletion action.
+  ! V1 evidence preservation/cleanup design under an explicit concurrent-conversation warning; used only new notes/ paths to avoid collision.
+
+##  [MNEMOSYNE-220] 2026-08-16 kind=result outcome=deviation_disclosed
+  - Concurrent conversation merged PR 287 and moved master between the Owner's read-only decision and the first write; all three F1 source blobs re-verified unchanged on the new master.
+  ! Cleanly separates Fable launch-time input identity from the later F1 Owner decision as distinct time layers.
+
+##  [MNEMOSYNE-220] unknown kind=verification outcome=deviation_disclosed
+  - Supersedes the result record's premature not_available_before_merge artifact-identity placeholder with the actual blob (correction record).
+  ! PASS_WITH_CONCURRENT_BACKGROUND - explicit blob-identity gate across unrelated master drift.
+
+##  [MNEMOSYNE-221] unknown kind=result outcome=deviation_disclosed
+  - The received Fable report contains a truncated Owner-decision blob (three hex chars dropped) and a process-count inconsistency; both recorded as bounded integrity/provenance limitations.
+  ! Fable hybrid-architecture recommendation accepted only as corroboration of candidate v0.2 (ACCEPT_WITH_MATERIAL_CORRECTIONS, implementation REJECT).
+
+##  [MNEMOSYNE-221] unknown kind=verification outcome=deviation_disclosed
+  - Fable report blob-identity defect (truncated_three_hex_characters) and 244-UI-source vs 0-portable-source citation gap mechanically documented.
+  ! Return archive verified PASS_EXACT down to per-part git blob identities; external load-bearing claims independently checked against primary sources (Chubby, Saga, SLSA, in-toto, NIST).
+
+##  [MNEMOSYNE-224] unknown kind=result outcome=deviation_disclosed
+  - "V2A-SENTINEL-PROTOCOL-DEFECT-001: package 001 froze Mnemosyne master as an execution precondition, so its own publication invalidated it before G2A (infinite publication/freshness loop)."
+  ! Self-invalidating-package defect - the batch's cleanest example of protocol design colliding with its own publication.
+
+##  [MNEMOSYNE-226] unknown kind=result outcome=deviation_disclosed
+  - Records MNEMOSYNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001 - the prior MNEMOSYNE-224 turn ran on a next-tier selection while claiming Pro, invalidating PR 292's claimed producer/reviewer provenance.
+  - Fresh Pro review found package 002's model-label binding FAIL_MATERIAL (startup message omitted the authorized visible model label from controller input).
+  ! The batch's key provenance incident - proves visible-model claims cannot be inferred and forces exact string comparison of authorized vs selected labels in future G2A.
+
+##  [MNEMOSYNE-229] unknown kind=result outcome=deviation_disclosed
+  - "A0 executed with disposition PASS_WITH_BOUNDED_EVIDENCE_DEFECTS: A0-TOOL-001 non-blocking tool/product limitation, plus a false shortened package path recorded in one A0 output."
+  ! Historical A0 outputs deliberately left byte-unchanged; corrections are additive-only.
+
+##  [MNEMOSYNE-231] 2026-08-18 kind=result outcome=deviation_disclosed
+  - "MNE-V2A-A1-MODEL-BINDING-ORDER-DEFECT-001: package 001 required worker selected-labels at controller G2A time - a temporal impossibility since worker conversations do not yet exist."
+  ! Second model-binding defect in the A1 chain; binding moved to each conversation's actual launch moment.
+
+##  [MNEMOSYNE-231] unknown kind=verification outcome=deviation_disclosed
+  - One unsupported raw git/ref/heads/master fetch returned HTTP 400; not repeated, no side effect, identity recovered via the supported branches endpoint.
+  ! Explicitly classifies the defect as a real temporal impossibility, not a cosmetic wording issue.
+
+##  [MNEMOSYNE-232] 2026-08-18 kind=result outcome=deviation_disclosed
+  - Accepted an externally uploaded complete review's wrapper-verification blocker against package 002 after Pro maintainer review.
+  - Source-preservation incident recorded with an unreachable-object evidence limit; three rejected unreferenced blobs durably disclosed.
+  ! Exact five-part reconstructable archive of the uploaded 37KB review preserved; handoff to a fresh conversation prepared.
+
+##  [MNEMOSYNE-232] unknown kind=verification outcome=deviation_disclosed
+  - Three rejected unreferenced blobs durably disclosed as object-side effects.
+  ! routine otherwise; archive reconstruction verified byte-exact.
+
+##  [MNEMOSYNE-233] 2026-08-18 kind=result outcome=deviation_disclosed
+  - "MNE-V2A-A1-PACKAGE003-SOURCE-ARCHIVE-MANIFEST-IDENTITY-DEFECT-001: package 003 recorded an incorrect source-archive-manifest blob (7c2af...); the wrong blob's exact origin is not mechanically proven."
+  - A second receiver's exact-mismatch block is accepted as a correct fail-closed outcome, not a receiver error.
+  - One web search/open attempt used only to try retrieving a public raw file; no external evidence informed the repair.
+  ! Fail-closed receive validation caught a committed identity defect - the handoff-hardening chain's proof case.
+
+##  [MNEMOSYNE-234] unknown kind=result outcome=deviation_disclosed
+  - "MNE-F2-V2A-A1-HANDOFF002-RECEIVE-SCHEMA-ORACLE-MISMATCH-001: handoff package 002's required report structure and rehearsal contract 001's acceptance fields were not mechanically isomorphic - a compliant receiver could be falsely blocked."
+  ! Schema self-hash recursion resolved by having only the startup prompt supply the package's own blob.
+
+##  [MNEMOSYNE-235] unknown kind=incident outcome=blocked
+  - Executor manually changed the uppercase task-ID filename component G2A-COMPOSITE-CLOSURE-001 to lowercase/mixed-case in one transient tree entry; mismatch detected and run stopped before commit/ref movement.
+  - Unreferenced objects may exist and their SHAs were not preserved; ref_not_moved explicitly not equated with zero repository side effect.
+  ! First of five consecutive blocked publication attempts (235-239) for the same F2 G2A/handoff-audit closeout payload.
+
+##  [MNEMOSYNE-236] unknown kind=blocked outcome=blocked
+  - Run stopped during a failed blob write; failing path, encoding, request body, HTTP status, error text and prior-blob sequence were all not preserved, so the cause is permanently unknown.
+  - Unreferenced blobs may exist; no cleanup or reuse authorized.
+  ! A blocked incident whose diagnostics were themselves lost - honesty about undiagnosable failure.
+
+##  [MNEMOSYNE-237] unknown kind=blocked outcome=blocked
+  - "Four distinct failures: DNS could not resolve github.com (ordinary ChatGPT); local gh executable absent (Work mode); supplied files absent / gh unauthenticated / integration 401 (Codex cloud); Owner mid-run branch-policy override conflicted with the frozen manifest (Codex Desktop)."
+  - Two replies referenced execution-receipt files never returned as attachments; record refuses to invent them.
+  ! The widest surface sweep in the batch - three capability failures plus one operator-intervention contract conflict, all with zero remote effect.
+
+##  [MNEMOSYNE-238] unknown kind=incident outcome=blocked
+  - "At blob 12 of the manifest the returned SHA mismatched: a one-token transcription defect in the sent content (\"wheth\" for \"whether\") during model-generated Base64 transport."
+  - Twelve unreferenced blobs left as disclosed object-side effects; must not be reused or cleaned by the successor.
+  ! Per-blob manifest SHA comparison caught a single-token corruption before any tree/commit/ref/PR was created.
+
+##  [MNEMOSYNE-239] unknown kind=blocked outcome=blocked
+  - Windows native worktree path-length limit rejected a manifest-authorized long path during git add before commit creation; terminal under the one-shot contract.
+  ! Blocked purely by an OS path-length limit on a 190+ character forensic-audit filename.
+
+##  [MNEMOSYNE-242] 2026-08-21 kind=closeout outcome=deviation_disclosed
+  - Three live navigation records still described the pre-merge MNEMOSYNE-240 gate after PR 303's 91-path publication; corrected here.
+  - mnemosyne-235 branch present in supplied evidence but absent at execution time; recorded without action (head still reachable as master's first parent).
+  - Two handoff artifacts intentionally revised after Pro review (MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001), so not byte-identical to the supplied package.
+  ! The blocked 235-240 lineage finally lands via PR 303; capsule branch given an explicit retention obligation.
+
+##  [MNEMOSYNE-242] unknown kind=verification outcome=deviation_disclosed
+  - Pro review repair 001 corrected an arithmetic error (total changed paths 8 to 10) and revised the two handoff artifacts via a single normal additive commit (no amend/force-push).
+  ! Records final vs supplied hashes for both revised artifacts and warns the receiver to read the blob back from execution-time master rather than trusting the record.
+
+##  [MNEMOSYNE-243] unknown kind=result outcome=deviation_disclosed
+  - "Run-context addendum supersedes the earlier switch_history: confirmed_none claim - the extended task later changed operator-visible model selection."
+  ! Repository-native AI onboarding package validated by three actual fresh-conversation simulations - all three PASS (read-only stop, labeled assessment, takeover blocked without exact task).
+
+##  [MNEMOSYNE-FIRST-APPLICATION-TEST-HANDOFF-PATCH] unknown kind=result outcome=deviation_disclosed
+  - The handoff package the task was asked to patch did not exist; a new package was created at the requested fallback path instead of patching.
+  ! Oldest-format record in the batch (plain Codex task template, MNEMOSYNE-039-era references) - a patch task that honestly became a creation task.
+

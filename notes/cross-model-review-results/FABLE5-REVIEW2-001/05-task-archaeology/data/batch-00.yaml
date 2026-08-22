@@ -1,0 +1,830 @@
+# Mnemosyne notes/codex-task-results 考古 批次 00
+# 来源清单: task-results-batch-00 (79 files), 生成日期: 2026-08-23
+
+- file: META-AGENT-BOOTSTRAP-REVIEW-001-pr-finalization.md
+  task_id: META-AGENT-BOOTSTRAP-REVIEW-001
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: PR #224 绑定记录，显式声明不构成 owner 接受/激活/合并授权。
+
+- file: META-AGENT-BOOTSTRAP-REVIEW-001-result.md
+  task_id: META-AGENT-BOOTSTRAP-REVIEW-001
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - 审计发现两个可纠正问题：目标本地导航仍将 receive 描述为 pending；同仓库路由隔离在导航中不够醒目
+    - 认定 M0-M2 在 Mnemosyne 维护对话中执行属用户路由放置错误（但产物本身有效）
+  repairs_or_repaired_by: 修复 MNEMOSYNE-172 移交后遗留的过期目标导航状态
+  notable: 审计判定 PASS_WITH_LIMITATIONS，并首次成文 Meta-Agent/Mnemosyne 双路由隔离控制规则。
+
+- file: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001-pr-finalization.md
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: PR 以 draft 创建、全部校验（血统/哈希/递归闭包/双目录再生成对比）通过后才转 ready。
+
+- file: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001-result.md
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MECHANICAL-INVENTORY-001
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 在具备完整树枚举能力的表面上完成了 MIGRATION-PREPARATION-001 被阻断的清点
+  notable: 完整递归树清点（45 tree/226 blob），4 份清单带 SHA-256，unknown 计数为 0。
+
+- file: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001-blocked-result.md
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-PREPARATION-001
+  date: unknown
+  kind: blocked
+  actor_surface: ChatGPT (GPT Pro, GitHub connector)
+  outcome: blocked
+  deviations:
+    - 连接器表面无法机械枚举 target-projects/meta-agent/ 的完整递归 Git tree，触发任务书 fail-closed 规则
+    - 未创建分支、PR 或任何部分 manifest，全部工作流未启动
+  repairs_or_repaired_by: 由后续在可完整枚举表面的重跑（MECHANICAL-INVENTORY-001）接续
+  notable: 教科书式 fail-closed 停止：宁可零产出也拒绝用搜索/采样冒充完整性证明。
+
+- file: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001-pr-finalization.md
+  task_id: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001
+  date: 2026-08-04
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 显式拒绝在自含记录内猜测自身提交 SHA，要求以新的 PR 读取绑定最终 head。
+
+- file: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001-result.md
+  task_id: META-AGENT-INDEPENDENT-RESEARCH-WAVE-RECORDING-001
+  date: 2026-08-04
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 记录 6 个新独立研究任务（MA-DR-10~15）为 READY_NOT_SELECTED，12 个远端 blob 身份逐一核验。
+
+- file: META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001-pr-finalization.md
+  task_id: META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001
+  date: 2026-08-04
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: PR #247 保持 Draft 直至最终校验，86 个变更文件、56/56 远端组件身份通过。
+
+- file: META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001-result.md
+  task_id: META-AGENT-INDEPENDENT-WAVE-REPORT-RECORDING-001
+  date: 2026-08-04
+  kind: result
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - 早期一次未提交树的尝试被放弃，分支重置到最后验证提交后重来
+    - MA-DR-14 因含产品原生引用字符不宜单次文本写入，中段改用 Base64 传输
+    - Owner 报告 MA-DR-11 仅约 5 分钟完成，被作为风险信号加做增强复审（未要求重跑）
+  repairs_or_repaired_by: none
+  notable: 7 份外部报告 56 分片精确保存（SHA-256 7/7），MA-DR-09 报告已收到但明确拒绝静默收录。
+
+- file: META-AGENT-OWNER-DISPOSITION-001-pr-finalization.md
+  task_id: META-AGENT-OWNER-DISPOSITION-001
+  date: 2026-07-31
+  kind: pr_finalization
+  actor_surface: ChatGPT (Pro, GitHub app)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 定义 6 文件精确路径契约与语义校验清单（MA-DEC-0007 恰好一次等）。
+
+- file: META-AGENT-OWNER-DISPOSITION-001-result.md
+  task_id: META-AGENT-OWNER-DISPOSITION-001
+  date: 2026-07-31
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub app)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 记录 Owner 决策 MA-DEC-0007（ACCEPT_WITH_LIMITATIONS，不激活），Meta-Agent v0.1 成为已接受的非激活基线。
+
+- file: META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001-result.md
+  task_id: META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001
+  date: unknown
+  kind: result
+  actor_surface: Consumer_Chat_GitHub_connector (user-reported Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 关闭 PR #251 链条后的过期 post-merge 状态标记
+  notable: 刻意不把"PR pending"缓存为 handoff 前提，改为要求接收方运行时查询 GitHub 合并状态。
+
+- file: META-AGENT-PR248-HANDOFF-REPAIR-001-pr-finalization.md
+  task_id: META-AGENT-PR248-HANDOFF-REPAIR-001
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - PR #249 在任务结果/收尾记录完成前已被合并，行政收尾移交给后续任务而非改写历史 PR
+  repairs_or_repaired_by: 行政收尾由 META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001 完成
+  notable: post-merge 回读式收尾：head-to-merge 与 merge-to-master 均为零差异。
+
+- file: META-AGENT-PR248-HANDOFF-REPAIR-001-result.md
+  task_id: META-AGENT-PR248-HANDOFF-REPAIR-001
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - 记录了 PR #248 的范围不匹配（scope mismatch）
+    - 用 37 部分 bzip2/Base64 规范传输替换了原不完整传输
+    - PR 在任务记录与导航收尾前即被合并
+  repairs_or_repaired_by: 修复 PR #248 残留；自身 post-merge 收尾残留由 PR249-POST-MERGE-HANDOFF-FINALIZATION-001 修复
+  notable: 一次修复任务本身又留下需再修复的收尾残留，形成修复链。
+
+- file: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001-pr-finalization.md
+  task_id: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 收尾 PR #249 合并后的行政状态
+  notable: routine。
+
+- file: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001-result.md
+  task_id: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+  date: unknown
+  kind: result
+  actor_surface: Consumer_Chat_GitHub_connector (user-reported Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 关闭过期的"PR #249 pending"导航并补历史 PR #249 任务记录
+  notable: 激活临时 Meta-Agent/Mnemosyne 兼容性 guard，补齐缺失的任务出处。
+
+- file: META-AGENT-PRE-MIGRATION-PRESERVATION-001-result.md
+  task_id: META-AGENT-PRE-MIGRATION-PRESERVATION-001
+  date: 2026-08-06
+  kind: result
+  actor_surface: ChatGPT (user-stated "pro模型", GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 抢救仅存于分叉分支/本地/对话输出的工件（receive report、P0 候选草案、目的地访问证据）
+  notable: 迁移前全量保全审计；因未获单独授权刻意不建 PR；逐字节 blob SHA 验证保全一致性。
+
+- file: META-AGENT-PRE-MIGRATION-PRESERVATION-001-verification-closeout.md
+  task_id: META-AGENT-PRE-MIGRATION-PRESERVATION-001
+  date: 2026-08-06
+  kind: closeout
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - 非FABLE综合健康审查在 latest master 上找不到已完成的规范结果工件，依赖状态标记为未决
+  repairs_or_repaired_by: none
+  notable: T0-T7 迁移就绪门逐项定级；发现独立健康审查路线可能只存在于未回传的外部对话中。
+
+- file: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001-pr-finalization.md
+  task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
+  date: 2026-08-01
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 33 文件路径契约 + ready 转换在完整 post-record 校验后完成。
+
+- file: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001-result.md
+  task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
+  date: 2026-08-01
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub app)
+  outcome: normal
+  deviations:
+    - MA-DR-06 仓库输入绑定因缺失目标输入被阻断（报告侧合规披露），reviewer 补做映射
+    - MA-DR-06 三张附属沙盒图片未能保存（关键数值在文中留存）
+    - 发现支持文件元数据陈旧（pre-disposition 措辞），仅记录不越权修复
+  repairs_or_repaired_by: 元数据残留由 META-AGENT-SUPPORT-METADATA-SYNC-001 修复
+  notable: 14/14 报告分片、31/31 文件远端身份核验；跨报告裁决为"非执行源证据接受"。
+
+- file: META-AGENT-RESEARCH-EVIDENCE-REPAIR-003-pr-finalization.md
+  task_id: META-AGENT-RESEARCH-EVIDENCE-REPAIR-003
+  date: 2026-07-31
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - PR 创建响应曾暂报 mergeable:false，判定为 GitHub 计算未完成而非冲突
+  repairs_or_repaired_by: 三条失败历史分支被显式保留为失败证据，均不作合并目标
+  notable: 第三次修复尝试终于产出真实 PR #237，46+2 文件全部独立复读。
+
+- file: META-AGENT-RESEARCH-EVIDENCE-REPAIR-003-result.md
+  task_id: META-AGENT-RESEARCH-EVIDENCE-REPAIR-003
+  date: 2026-07-31
+  kind: result
+  actor_surface: ChatGPT_with_GitHub_app (operator: "gpt pro")
+  outcome: deviation_disclosed
+  deviations:
+    - 远端 38 个 Base64 分块中 2 块（chunk_012/021）身份不匹配，PR 创建前替换修复至 38/38
+    - 三条失败 lineage（含不实成功声明、stale-base 因素）记入事故记录移交维护路线
+  repairs_or_repaired_by: 修复 meta-agent-research-evidence-001/repair-001/repair-002 三次失败残留；事故分析移交 META-AGENT-RESEARCH-EVIDENCE-INCIDENT-001
+  notable: 本批次最重的修复记录：确定性 tar/bzip2/Base64 重建 + 事故存证 + 失败分支不删除。
+
+- file: META-AGENT-SUPPORT-METADATA-SYNC-001-pr-finalization.md
+  task_id: META-AGENT-SUPPORT-METADATA-SYNC-001
+  date: 2026-08-01
+  kind: pr_finalization
+  actor_surface: ChatGPT (Pro 未在本任务指令中重新确认)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 指出自含记录无法内嵌自身最终 commit 的自引用问题，改由 PR body 绑定。
+
+- file: META-AGENT-SUPPORT-METADATA-SYNC-001-result.md
+  task_id: META-AGENT-SUPPORT-METADATA-SYNC-001
+  date: 2026-08-01
+  kind: result
+  actor_surface: ChatGPT (Pro 未重新确认, GitHub app)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 BATCH-A-ADJUDICATION-001 记录在案的支持文件元数据陈旧残留
+  notable: 补丁级审查确认仅状态/出处措辞变化，方法语义与权限边界零改动。
+
+- file: MNE-235-236-PRO-RECOVERY-OBJECT-SIDE-EFFECT-RECEIPT-001.md
+  task_id: MNE-235-236 (MNEMOSYNE-235/236 恢复尝试回执)
+  date: unknown
+  kind: incident
+  actor_surface: ChatGPT Pro (当前对话恢复尝试)
+  outcome: failed
+  deviations:
+    - 成功的 create_tree/create_blob 调用在仓库对象库留下 10 个未引用 tree + 2 个 blob（无 reachable commit）
+    - 多次 create_tree 返回 HTTP 422 "tree.sha ... is not a valid blob" 工具契约失败
+    - 一次 fetch_blob 404；外部 236 输出未保留失败细节，根因只能作为假设
+  repairs_or_repaired_by: 针对两次被阻断的外部 MNEMOSYNE-235/236 运行的调查回执；清理未获授权，残留对象仍在
+  notable: 罕见的"对象级副作用"取证回执：孤儿 git 对象逐一列出且声明禁止复用。
+
+- file: MNEMOSYNE-023A-result.md
+  task_id: MNEMOSYNE-023A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 为 MNEMOSYNE-023 独立验证做候选状态补账
+  notable: routine。
+
+- file: MNEMOSYNE-023B-result.md
+  task_id: MNEMOSYNE-023B
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 校正 023A 的验证落账（同批候选/决策条目再次校正）
+  notable: 与 023A 内容几乎重复的"校正与补账"，暗示首轮落账未到位。
+
+- file: MNEMOSYNE-024B-result.md
+  task_id: MNEMOSYNE-024B
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 任务名为"落账重试"，接续未成功落账的 MNEMOSYNE-024
+  notable: 记录 v0.1 PASS_WITH_WARNINGS 被接受、v0.2 首方向选定为 self-improvement workflow。
+
+- file: MNEMOSYNE-025A-result.md
+  task_id: MNEMOSYNE-025A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 清理 MNEMOSYNE-025 产物的一致性并校正结果路径规则
+  notable: 路径规则校正长链（025A→025J）的起点。
+
+- file: MNEMOSYNE-025B-result.md
+  task_id: MNEMOSYNE-025B
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 对 025A 后仍残留的 workflow 格式问题做"硬清理"
+  notable: routine（第二次清理同一文件）。
+
+- file: MNEMOSYNE-025C-result.md
+  task_id: MNEMOSYNE-025C
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 硬替换 self-improvement workflow 并再次修正结果记录默认路径
+  notable: 同一路径规则第三次修正。
+
+- file: MNEMOSYNE-025D-result.md
+  task_id: MNEMOSYNE-025D
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: files_created 再次列出 raw/chatgpt-discussion-026.md（025A 已创建同路径），RAW 编号疑似复用。
+
+- file: MNEMOSYNE-025E-result.md
+  task_id: MNEMOSYNE-025E
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations:
+    - 披露 raw/chatgpt-discussion-027.md 路径已存在，被本任务更新为 025E/RAW-0027 记录（raw 路径复用）
+  repairs_or_repaired_by: none
+  notable: 建立系统建设基线快照；raw 讨论文件编号复用被明示。
+
+- file: MNEMOSYNE-025F-result.md
+  task_id: MNEMOSYNE-025F
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 统一各文件中的结果记录默认路径并回改 025E-result
+  notable: 路径纠偏第四轮。
+
+- file: MNEMOSYNE-025G-result.md
+  task_id: MNEMOSYNE-025G
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 全仓库硬纠偏 025F 后仍残留的缺 TASK_ID 错误路径，回改 025E/025F result
+  notable: 路径纠偏第五轮，升级为"全仓库硬纠偏"。
+
+- file: MNEMOSYNE-025H-result.md
+  task_id: MNEMOSYNE-025H
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 规范化 025G 后占位符路径的不一致，回改 025G-result
+  notable: 路径占位符规范第六轮。
+
+- file: MNEMOSYNE-025I-result.md
+  task_id: MNEMOSYNE-025I
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 对规范文件做路径"硬清除"，回改 025G/025H result
+  notable: 路径清理第七轮；todo.md 检查后无 diff。
+
+- file: MNEMOSYNE-025J-result.md
+  task_id: MNEMOSYNE-025J
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: deviation_disclosed
+  deviations:
+    - 记录内注明：任务声称已执行最小路径检查，但后续人工核查发现规范文件仍残留缺 TASK_ID 旧路径
+  repairs_or_repaired_by: 声称收束 025 系列路径清理；残留由后续人工核查发现（记录未指明具体修复任务）
+  notable: 八轮路径清理的终点仍以"声明与实际不符"的诚实批注收场。
+
+- file: MNEMOSYNE-025-result.md
+  task_id: MNEMOSYNE-025
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 本批次少见的修改执行源 current/human-approved-spec.md 的任务（写入 self-improvement 规则）。
+
+- file: MNEMOSYNE-026A-result.md
+  task_id: MNEMOSYNE-026A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 026 完成后的状态同步补账
+  notable: routine。
+
+- file: MNEMOSYNE-026B-result.md
+  task_id: MNEMOSYNE-026B
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 026/026A 后的落账残留
+  notable: routine。
+
+- file: MNEMOSYNE-026C-result.md
+  task_id: MNEMOSYNE-026C
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 open-questions 去重残留由 MNEMOSYNE-026D 硬去重修复
+  notable: 026D 记录披露 026C 去重后仍有残留（026C 本文件未见该批注）。
+
+- file: MNEMOSYNE-026D-result.md
+  task_id: MNEMOSYNE-026D
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations:
+    - 披露 026C 去重后 open-questions 仍有残留，故需本次硬替换
+  repairs_or_repaired_by: 修复 026C 残留；自身残留又由 026E-MANUAL 手工修复
+  notable: 硬去重（用户提供目标内容整体替换）仍未除净，罕见地需要用户手工接管。
+
+- file: MNEMOSYNE-026E-MANUAL-result.md
+  task_id: MNEMOSYNE-026E-MANUAL
+  date: unknown
+  kind: result
+  actor_surface: 用户手工编辑 (manual)
+  outcome: normal
+  deviations:
+    - 披露 026D 后 open-questions 仍残留已被 template pack 覆盖的问题
+  repairs_or_repaired_by: 用户手工修复 026D 残留
+  notable: 三连败（026C/026D 两次自动去重失败）后由人手工完成的收尾。
+
+- file: MNEMOSYNE-026-result.md
+  task_id: MNEMOSYNE-026
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建 12 模板的 self-improvement template pack；routine。
+
+- file: MNEMOSYNE-027A-result.md
+  task_id: MNEMOSYNE-027A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 027 完成后的状态同步补账
+  notable: routine。
+
+- file: MNEMOSYNE-027-result.md
+  task_id: MNEMOSYNE-027
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建目标项目记忆系统模板包；routine。
+
+- file: MNEMOSYNE-028A-result.md
+  task_id: MNEMOSYNE-028A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 028 完成后的状态同步补账
+  notable: routine。
+
+- file: MNEMOSYNE-028B-result.md
+  task_id: MNEMOSYNE-028B
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 对 028/028A 后状态做硬同步与路线图纠偏
+  notable: routine（同一状态第二轮同步）。
+
+- file: MNEMOSYNE-028C-result.md
+  task_id: MNEMOSYNE-028C
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 四个入口状态文件硬替换，修复 028 系列后仍未到位的入口状态
+  notable: 完成声明字段为 manual_or_codex_followup_required，同一状态第三轮同步。
+
+- file: MNEMOSYNE-028-result.md
+  task_id: MNEMOSYNE-028
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建 delivery manifest template pack；routine。
+
+- file: MNEMOSYNE-029A-result.md
+  task_id: MNEMOSYNE-029A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations:
+    - 披露 029-result 声称已创建的 review/scenario 文件在 master 上实际缺失
+  repairs_or_repaired_by: 修复 MNEMOSYNE-029 缺失文件与未稳定的阶段状态
+  notable: 首次成文的"任务声称创建但 master 缺失"事故——后续 031/032 失败模式的前兆。
+
+- file: MNEMOSYNE-029-result.md
+  task_id: MNEMOSYNE-029
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: partial
+  deviations: []
+  repairs_or_repaired_by: 声称创建的 notes/template-pack-review-and-first-scenario-selection.md 在 master 缺失，由 MNEMOSYNE-029A 修复
+  notable: 本记录自身声称完成，缺失事实记载于 029A；结果与仓库实况的首次已证背离。
+
+- file: MNEMOSYNE-030A-result.md
+  task_id: MNEMOSYNE-030A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 补齐 030 后发现的 pdf-figure-review-index 与状态同步缺口
+  notable: routine 补账。
+
+- file: MNEMOSYNE-030B-result.md
+  task_id: MNEMOSYNE-030B
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 硬同步 030A 后 active-context 仍未到位的状态，回补 030A reviewer notes
+  notable: routine（030 系列第二轮修复）。
+
+- file: MNEMOSYNE-030C-result.md
+  task_id: MNEMOSYNE-030C
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建研究周期动机文件（回答"这7份报告为何存在"）；routine。
+
+- file: MNEMOSYNE-030D-result.md
+  task_id: MNEMOSYNE-030D
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations:
+    - 披露 6 个轻度研究 prompt 原文已缺失，登记为 missing_original_prompt 并明确不得补写/伪造
+  repairs_or_repaired_by: none
+  notable: 证据层永久缺失（6 个 prompt 原文丢失）被正式登记而非掩盖。
+
+- file: MNEMOSYNE-030E-result.md
+  task_id: MNEMOSYNE-030E
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 同步 030C/030D 状态；030F 记录披露 030E 声称的同步仍需修正
+  notable: 声称完成的同步被下一任务证伪（见 030F reviewer notes）。
+
+- file: MNEMOSYNE-030F-result.md
+  task_id: MNEMOSYNE-030F
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: deviation_disclosed
+  deviations:
+    - reviewer_notes 披露本任务声称硬同步完成，但人工核查发现 6 处关键文件仍未同步
+    - 同时披露 030E 曾声称完成但需 030F 修正
+  repairs_or_repaired_by: 修复 030E 残留；自身残留由 MNEMOSYNE-030G-MANUAL 手工修复
+  notable: 连续两轮 Codex"硬同步"均未落地，只能转人工——031/032 失败链的典型样本。
+
+- file: MNEMOSYNE-030G-MANUAL-result.md
+  task_id: MNEMOSYNE-030G-MANUAL
+  date: unknown
+  kind: result
+  actor_surface: 用户手工编辑 (manual)
+  outcome: normal
+  deviations:
+    - 披露 030F 后仍残留状态不同步问题
+  repairs_or_repaired_by: 用户手工修复 030F 残留
+  notable: 030 系列以用户手工硬同步收尾（与 026E-MANUAL 同模式）。
+
+- file: MNEMOSYNE-030-result.md
+  task_id: MNEMOSYNE-030
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: deviation_disclosed
+  deviations:
+    - 披露后续核查发现 pdf-figure-review-index 与本任务结果记录内容不足、状态未充分同步
+  repairs_or_repaired_by: 缺口由 MNEMOSYNE-030A 补账
+  notable: 7 份报告 summary 建成，但任务记录自认三处产出不足。
+
+- file: MNEMOSYNE-031A-result.md
+  task_id: MNEMOSYNE-031A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 建立 R1-R5 复核/用户重述协议，明确用户重述只是 raw intent evidence 非执行源。
+
+- file: MNEMOSYNE-031-checkpoint-result.md
+  task_id: MNEMOSYNE-031-checkpoint
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: R1-R3+R4A 中途 checkpoint，防长对话丢失；R4B 由用户延期。
+
+- file: MNEMOSYNE-031-entry-files-real-diff-fix-result.md
+  task_id: MNEMOSYNE-031-entry-files-real-diff-fix
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复此前入口文件同步未产生真实 diff 的问题（四文件均验得非空 diff）
+  notable: 名字即证据——"real diff fix"意味着此前某次修复实际未改动文件。
+
+- file: MNEMOSYNE-031-entry-state-fix-result.md
+  task_id: MNEMOSYNE-031-entry-state-fix
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 机械同步四个入口文件到 checkpoint 状态，防止后续会话重跑 R1-R3/R4A
+  notable: routine 修复。
+
+- file: MNEMOSYNE-031-post-checkpoint-consistency-cleanup-result.md
+  task_id: MNEMOSYNE-031-post-checkpoint-consistency-cleanup
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 清除最终 checkpoint 后仍残留的"R4B/R4C/R5 待办"过期措辞
+  notable: 历史结果文件中留 2 处旧措辞被明示为可接受（历史记录非现行指引）。
+
+- file: MNEMOSYNE-031-post-checkpoint-consistency-hard-fix-result.md
+  task_id: MNEMOSYNE-031-post-checkpoint-consistency-hard-fix
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 用精确替换脚本再次清除 cleanup 后仍残留的过期续接指引（9/9 replaced）
+  notable: 同一批过期措辞需要 cleanup+hard-fix 两轮才除净。
+
+- file: MNEMOSYNE-031-result.md
+  task_id: MNEMOSYNE-031
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 最终 R5 写回 checkpoint 分 05/06/07 三段完成，记录 D-01~D-07 用户终审决策，自查无冲突。
+
+- file: MNEMOSYNE-031-status-sync-result.md
+  task_id: MNEMOSYNE-031-status-sync
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 消除会让后续会话误以为 R1-R3/R4A 待执行的旧措辞
+  notable: routine 状态同步（031 修复链一环）。
+
+- file: MNEMOSYNE-032B-result.md
+  task_id: MNEMOSYNE-032B
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - 披露 MNEMOSYNE-032 结果声称 handoff 已写入验证提醒但实际未写入
+    - 追加批注：032D 指出本记录可能仅描述分支局部/中间状态，最终默认分支需直接验证
+  repairs_or_repaired_by: 修复 032 的 handoff 可见性缺口；自身可信度由 032C/032D 再修复
+  notable: "结果记录声称成功但默认分支没有"失败模式的第一环。
+
+- file: MNEMOSYNE-032C-result.md
+  task_id: MNEMOSYNE-032C
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - 披露 032B 结果与最终默认分支实际内容不符，需本任务再修复
+    - 环境无配置 remote（git remote -v 空），无法 fetch/pull，只能基于工作区 HEAD
+    - 追加批注：032D 指出 032C 之后默认分支仍需直接命令验证
+  repairs_or_repaired_by: 修复 032B 残留；由 032D 完成最终修复
+  notable: 修复链第二环——目标文件在本环境"已正确"，暗示改动在别处被回滚。
+
+- file: MNEMOSYNE-032D-result.md
+  task_id: MNEMOSYNE-032D
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 用直接命令修复 032B/032C 后 master 入口文件仍缺的提醒与状态措辞，并回注三个前任记录
+  notable: 032 入口文件修复链的收尾：完整 git diff 证据 + 保护文件核验全过。
+
+- file: MNEMOSYNE-032E-result.md
+  task_id: MNEMOSYNE-032E
+  date: unknown
+  kind: other
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 全链根因诊断入库：Codex Cloud 过期分支 + 无条件"Accept Incoming"冲突解决可把已正确内容回滚出 master，解释了反复"改动消失"。
+
+- file: MNEMOSYNE-032F-independent-verification-status-update-result.md
+  task_id: MNEMOSYNE-032F
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 落账 032 dry-run 独立验证 PASS；自身残留（错位 decision-log 行、占位/diff 残渣）由 032G/032H 清理
+  notable: 032 dry-run 独立验证 verdict=PASS 的授权状态写回（DEC-0051）。
+
+- file: MNEMOSYNE-032G-cleanup-result.md
+  task_id: MNEMOSYNE-032G
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 清理 032F 误append到旧 DEC-0046/0051 的状态行，新设专用 DEC-0079
+  notable: routine 清理。
+
+- file: MNEMOSYNE-032H-final-audit-cleanup-result.md
+  task_id: MNEMOSYNE-032H
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - 披露原 032H 记录内嵌大量原始 diff（含已删除占位/错误文本），会污染后续 grep 检查，由 032I 清理重写
+  repairs_or_repaired_by: 清理 032F 占位/diff 残渣与过期路线措辞；自身记录由 MNEMOSYNE-032I 清理
+  notable: 元教训成文：结果记录不应内嵌含已删除字符串的原始 diff。
+
+- file: MNEMOSYNE-032I-clean-032H-result-record-result.md
+  task_id: MNEMOSYNE-032I
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 重写 032H 记录（删除 573 行内嵌 diff），032 清理链终点
+  notable: 清理"清理记录"的任务——审计卫生的递归一例。
+
+- file: MNEMOSYNE-032-result.md
+  task_id: MNEMOSYNE-032
+  date: unknown
+  kind: result
+  actor_surface: Codex Cloud
+  outcome: normal
+  deviations:
+    - 披露 Codex Cloud 环境中 origin remote 不可用
+  repairs_or_repaired_by: 其"handoff 已写入提醒"的声明与默认分支不符，由 032B/032C/032D 修复（据 032B 记载）
+  notable: 首次 dry-run（记忆系统自验证），自称 PASS 但明确 pending 独立验证；ALLOW_STATUS_FILE_UPDATES=no 故未动状态文件。
+
+- file: MNEMOSYNE-033A-result.md
+  task_id: MNEMOSYNE-033A
+  date: unknown
+  kind: result
+  actor_surface: Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 从导出对话补录 17 条 idea（IDEA-2026-0009~0025）入非执行源 triage 层；routine。
