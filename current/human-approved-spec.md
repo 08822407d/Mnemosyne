@@ -19,6 +19,8 @@
 
 - 当前阶段中文为主要工作语言。
 - 文件名、目录名、ID、状态值、YAML key、命令、Git/GitHub 术语、工具名和产品名可以使用英文。
+- 需要用户阅读或决策的材料（决策包、评审报告、PR 说明、操作指引）以中文为主要语言。
+- 面向模型的规范与协议文件可用英文，但须在其登记索引中附中文一句话范围说明。
 
 ## 4. 执行源原则
 
@@ -34,7 +36,7 @@
 
 ## 5. 研究证据层原则
 
-- 7 份研究报告已经作为 `RC-2026Q2-initial` 轮次证据入库。
+- 研究证据按 research cycle 入库；当前有效轮次与报告清单以 `raw/research-reports/current/research-report-index.md` 为权威派生视图，执行源不维护轮次快照。
 - 研究报告是高权重证据层，用于约束能力边界判断、平台适配和新机制设计。
 - `current-evidence-map` 和 `current-capability-boundaries` 是当前研究证据派生视图。
 - PDF 报告中的图表和图片需要人工复核。
@@ -56,12 +58,12 @@
 - 只有用户确认后才可更新 `current/human-approved-spec.md`。
 - self-improvement workflow 当前是半自动流程，不包含自动查重、自动写回或自动更新 spec。
 
-## 7. handoff / active-context 原则
+## 7. 会话入场与读取原则
 
-- active-context 是当前工作集，不是执行源。
-- handoff-current 是跨会话交接卡，不是完整历史，也不是执行源。
-- 新会话应优先读取 human-approved-spec、active-context 和 handoff-current。
-- raw 和 research reports 按需回查，不默认全量读取。
+- 新会话先读取 `current/human-approved-spec.md` 与仓库 AI onboarding 入口。
+- 只有在 Owner 明确选择交接、续接或某条路线时，才读取确切 handoff package、route status 或 task package。
+- `current/active-context.md`、`handoff/handoff-current.md`、TODO、status 与历史记录均不得自动选择任务；其是否为 current、frozen 或 deprecated，以各文件头及执行时 readback 为准。
+- raw 与完整历史按任务需要逐步读取，不默认全量加载。
 
 ## 8. 模型迁移原则
 
@@ -81,7 +83,7 @@
 ## 10. 当前 v0.1 边界
 
 - 当前是半自动设计仓库。
-- Codex Cloud 当前主要作为远程 GitHub 文件写入和版本保存助手。
+- 仓库写入可经多种执行面（远程任务助手、对话内 GitHub app、本地 Agent 工具等）；各执行面的当前能力与限制以经登记的当前平台事实文件为准，执行源不绑定具体产品角色。
 - v0.1 不包含自动查重、自动索引、自动 ID、自动 schema 校验、自动写回、自动交付、自动 drift 检查、自动模型迁移、GitHub Actions、AGENTS.md、CLAUDE.md、MCP、RAG、多 Agent 自动协调。
 - 这些属于 v0.2 或 future。
 
@@ -102,6 +104,7 @@
   6. 当事实未确认时，明确标注不确定性。
 - 如果用户构想与仓库已批准规则、已知工具能力、可靠证据或当前客观事实冲突，Agent 应清楚说明冲突，并将该事项路由到 candidate / open question / research-gated 处理，而不是把它呈现为已批准设计。
 - 如果某项主张依赖关于 AI models、services、tools、product UI、pricing、APIs 或 platform behavior 的当前事实，Agent 必须将这些事实视为具有时效性，并在可能时进行验证；如果无法验证，应将该主张标注为未验证，而不是作为事实陈述。
+- 当任务实际依赖某项平台、产品、订阅或工具事实，且发现执行源或现行行为规则中的相关陈述可能过期、冲突或证据不足时，必须在本任务结果中标注 `stale_or_uncertain`、列出证据与影响，并路由到 Owner 指定的 current issue/open-question/candidate 容器。无相关接触的任务不承担全库时效审计义务。
 - 本原则不适用于与本仓库或 Mnemosyne 工作无关的其他用户对话。
 
 ## 12. 操作内容 / 结论与说明分离原则
@@ -166,9 +169,9 @@
 - 后续任何行为指导、prompt pack、handoff 或 Codex task 均不得覆盖本例外规则；若与本规则冲突，以本规则为准。
 - 本原则本身不授权任何仓库编辑；它只指导长转发内容应如何打包和交付。
 
-## 14. Manual import inbox / Codex Cloud non-image attachment boundary
+## 14. Manual import inbox 与人工材料转移边界
 
-- Current Codex Cloud task conversations cannot be assumed to receive non-image file attachments directly.
+- 当材料无法经当前任务的执行面直接进入仓库时，用户可手动放入仓库；首选暂存位置是 `manual-import-inbox/`。
 - When non-image files need to enter the repository, the user may manually place them in the repository; the preferred staging location is `manual-import-inbox/`.
 - Files in `manual-import-inbox/` are temporary transfer artifacts only: not execution source, not raw evidence, not canonical research originals, and not target-project delivery artifacts until verified and moved/copied to canonical paths.
 - Before upload/staging, the conversation/task must identify or verify current repository visibility, material sensitivity, whether the material is safe for that visibility, and whether it contains credentials, secrets, personal data, private source, customer/confidential data, or other restricted content.
@@ -177,7 +180,7 @@
 - Removing or moving a staged file later does not itself remove the file from Git history.
 - If a file is unsafe for the current repository, stop and use another user-approved transfer/storage path; do not upload it to this repository.
 - ChatGPT/Codex tasks must verify file presence, names, types, intended destinations, and safety preflight status before processing; if files are missing, unsafe, or ambiguous, stop rather than guessing.
-- Repository visibility and platform behavior are time-sensitive facts and must be reverified when relevant; this rule may be revised if Codex Cloud attachment capability changes.
+- Repository visibility and platform behavior are time-sensitive facts and must be reverified when relevant.
 
 ## 15. 交接与续接正确性原则
 
@@ -234,26 +237,18 @@
 - Deep Research prompt 仍必须遵守第 13 节 Deep Research 报告输出例外：完整报告正文必须出现在最终报告 / 最终回答正文中，下载文件只能是辅助备份。
 - 本原则不授权异步后台工作、自动执行、自动写回、真实 target dry-run、target material ingestion 或 target repository write。
 
-## 18. ChatGPT GitHub App 写入能力与任务授权原则
+## 18. Repository action 能力与任务授权原则
 
-- 本原则适用于 Mnemosyne 所属普通 ChatGPT 对话、Codex 任务和未来 Agent 任务中，需要读取、创建、修改、评论、提交 PR、合并 PR 或以其他方式影响 GitHub 仓库状态的场景。
-- 自 2026 年 7 月起，本仓库不得再假设“普通 ChatGPT 对话只能读取 GitHub，不能创建分支、文件或 PR”。当用户在官方 ChatGPT 网页端 / app 中连接并选择 GitHub app，且当前模型 / 账户 / workspace / app action 配置支持相应能力时，普通 ChatGPT 对话也可能对关联 GitHub 仓库执行写入类 actions，包括创建分支、创建文件和创建 pull request。
-- Codex Cloud 仍可作为较大、较复杂、需要代码执行式工作流或独立任务审计的首选远程 GitHub 写入助手；但“必须进入 Codex Cloud 才能向 GitHub 仓库提交 PR”不再是 Mnemosyne 的全局规则。
-- 关于 ChatGPT/GitHub app 能力、可用模型、计划限制、workspace/admin action controls、approval card 和 permission options 的事实具有时效性。涉及这些能力时，Agent 必须优先查验当前官方 OpenAI 文档、当前 ChatGPT UI、已连接 app 的 action 列表和实际 approval card；若无法查验，应标注为未验证或 stale。
-- 平台权限与 Mnemosyne 任务授权必须分离：
-  - `platform_permission` 只表示 ChatGPT 技术上可能调用某个 GitHub app action；
-  - `mnemosyne_task_authority` 表示用户已在当前 Mnemosyne 任务范围内明确批准该仓库动作。
-- GitHub 写入只有在平台权限和当前任务授权都成立时才能执行。过去授权、app 连接状态、approval card 出现或 `Always allow` 设置，都不能单独构成 Mnemosyne 写入授权。
-- 对 Mnemosyne 仓库的写入类 actions 应优先通过新分支和 PR 进行，避免直接向默认分支写入；例外只能在用户明确批准且风险很低时使用，并应在结果记录中说明原因。
-- 对任何写入类 GitHub action，Agent 在执行前必须明确说明该动作会影响 GitHub 外部状态，不只是读取；同时核对 repository、branch、file paths、protected paths、目标项目工作区 / material / target-write 边界以及是否需要 result record。
-- 对普通 ChatGPT GitHub app 写入，默认建议用户选择 `Allow once` / 一次性允许，而不是 `Always allow`。若用户选择持久授权，Agent 仍不得把持久授权视为未来任务授权。
-- 对本仓库的 GitHub actions 可按风险分级处理：
-  - read-only：读取文件、搜索仓库、读取 PR / issue metadata；需要证据引用，不得改变仓库。
-  - low-scope write：创建分支、创建 / 更新单个文档文件、创建 PR、添加普通评论；需要当前任务明确授权和平台 approval。
-  - high-scope or sensitive write：合并 PR、删除文件、批量修改 issue/label、启用 auto-merge、改变安全或权限相关配置；需要用户在动作前再次明确批准，通常应避免，除非任务专门要求。
-- 当普通 ChatGPT 对话执行了 GitHub 写入并改变 Mnemosyne 维护状态或创建持久文档时，应创建或更新相应 result record，至少记录 actor / action source、文件 created/modified、是否修改 execution source/current-state/handoff/target workspace/material/write/build/regression 文件、验证结果和已知限制。
-- 若发现旧文件仍声称普通 ChatGPT 对话只能读 GitHub 或不能提交 PR，应区分：历史记录可以作为当时平台状态或当时假设保留； live route、平台指南或执行源中的过时能力假设必须标注为 stale，并按当前 user-approved task 更新。
-- 本原则不授权自动写回、自动合并、GitHub Actions、MCP/RAG、多 Agent 自动协调、目标项目写入、target material ingestion、target workspace creation、regression formalization、operational build，或任何未被当前任务明确批准的仓库动作。
+- 本原则适用于任何 AI Agent、自动化工具或人类辅助执行面，对 Mnemosyne、目标项目或验证仓库实施读取以外的 repository action。
+- `platform_capability` 仅说明当前表面技术上可执行某动作；`task_authority` 仅来自当前 Owner 指令、已批准 task package 或其明确引用。二者必须同时成立。
+- 产品、模型、连接器、CLI、IDE、审批卡和权限配置均为时效事实，执行时按对应 surface guide 与实际 action schema 重新核验；执行源不维护具体产品快照。
+- 首次使用或此前未充分验证的写入表面，先做 bounded capability preflight；不得在正式高价值任务中边失败边探索基础能力。
+- 写入默认使用一条 canonical branch、至多一个 canonical PR，并在首笔 mutation 后读回 default ref、intended ref 与实际路径。
+- 任务必须明确 repository、base ref、authorized paths、protected paths、side effects、验证、回滚和分支处置；执行方在边界内可采用适合该表面的工程过程。
+- 直接写默认分支、merge、branch deletion、权限/安全配置、批量外部动作等高影响操作需要动作前的明确 Owner 授权。
+- 重要写入记录 repository action actor、content producer、orchestrator、reviewer、operator selection、backend uncertainty、artifact identities、授权与限制。
+- Agent 不得自行修改其权限配置来扩大自己的能力；Owner 可以手动配置或明确授权由受控机械过程修改。
+- 本原则不授权自动化、自动写回、自动合并、目标项目激活、私有材料摄入或任何未明确批准的外部动作。
 
 ## 19. Validation / dry-run 无写入证明与复核 provenance 原则
 
@@ -266,3 +261,11 @@
 - 当任务修改执行源时，result record 必须显式记录 `user_decision_recorded: true | false`、用户决定的 evidence path / conversation provenance、获批修改范围和仍未获批的相邻动作；不得用平台 permission、历史授权或推测替代当前用户决定。
 - 同一模型家族完成执行与复核不会自动使结果无效，但必须标注 evidence class / independence limitation；高风险结论应优先补充异构复核、机械 diff、可复现测试或人类抽样验证。
 - 本原则不自动批准任何 validation、dry-run、target workspace、material ingestion、target write、regression formalization、operational build、execution-source update、自动写回或自动合并。
+
+## 20. 行为约束原则
+
+- Owner 明确批准的行为 guard 与 process rule，在其声明的适用范围内约束 Mnemosyne 任务；它们仍不是独立执行源。
+- 约束力来自可追溯的 Owner 批准与 scope，不来自文件名、自称 guard 或导航注册状态。
+- guard 与执行源冲突时以执行源为准，并将冲突提交 Owner；不得由执行 Agent 静默重解释。
+- 新建、修订、合并、降级或退役 guard 需要当前任务的明确 Owner 授权，并保留历史与替代关系。
+- guard 的索引、加载分层和整编办法由非执行源指导文件维护；它们不得改变执行源或 Owner 已批准的实质约束。
