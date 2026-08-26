@@ -5,12 +5,13 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.1.5
-last_updated_by_task: MNEMOSYNE-242
+version: 0.2.0
+last_updated_by_task: MNEMOSYNE-246
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
 owner: user
+scope_extension_by_MNEMOSYNE_246: 对话命名规范（§7）——研究运行显示名之外，UI 对话名也由本表登记主线码与类型码
 ```
 
 ## 1. Project abbreviations
@@ -116,3 +117,61 @@ On repository migration: copy the full issued history, verify collisions, design
 - Aliases are not canonical task IDs.
 - It does not modify Meta-Agent target truth.
 - It does not guarantee UI character support.
+
+## 7. 对话命名规范（MNEMOSYNE-246 并入；设计源：FABLE5-REVIEW2-001 设计稿G，Owner 终审批准）
+
+### 7.1 命名格式
+
+```text
+[项目]-[主线]-[类型][序号] 简短主题
+```
+
+示例：`MNE-M-C16 状态修复批次`（Mnemosyne · 维护主线 · 普通对话第 16 代）、`MNE-FR2-K01 第二轮评审`、`MA-B-W03 产品构建`。
+
+### 7.2 主线码登记表
+
+```yaml
+mainline_codes:
+  MNE:
+    M:
+      full_name: Mnemosyne 维护主线
+      status: active
+    FR2:
+      full_name: FABLE5-REVIEW2-001 第二轮评审轨道
+      status: active
+  MA:
+    B:
+      full_name: Meta-Agent 构建主线
+      status: active_allocation_by_meta_agent_route
+# 新主线码：起名前在本表登记一行（读-占-写同批：与首个使用它的变更同 PR 落表）。
+```
+
+### 7.3 类型码表
+
+| 码 | 类型 | 说明 |
+|---|---|---|
+| C | ChatGPT 普通对话 | |
+| DR | 深度研究 | 沿用现行 MNE-DR-NNN 序列（本表 §2）时可省主线段（历史兼容） |
+| W | ChatGPT Work | |
+| X | Codex 任务 | |
+| K | Claude 网页对话 | C 已被占用；取 K 蕴意 Klaude |
+| CC | Claude Code 会话 | 通常无需手动命名（见 §7.5） |
+
+### 7.4 三条铁律
+
+1. **序号 = 主线内交接代数**：只在同主线交接时 +1；插队/派生对话用父名加后缀（如 `MNE-M-C16a`），不占代数。
+2. **名字是导航元数据，不是权威**：canonical 任务号/轨道号以仓库记录为准；名字标错可随时改，不需留痕仪式。
+3. **不用状态词命名**（Depre/Finish/Failed 一律不用）：对话死活成败写在归档索引里；日期不进名字（导出件自带创建时间）。
+
+（三条铁律分别针对档案盘点实证的命名陷阱：系列号撞名、改名残留前缀、"Finish 却在链条中段"误读。）
+
+### 7.5 Claude 侧并入方式
+
+- Claude 网页对话：创建时按 §7.1 起名（K 类型），与 ChatGPT 对话同一套登记。
+- Claude Code 会话：身份已由三层自动承载（任务号入 commit 尾注、会话记录含逐响应模型标识、转录归档带会话 ID），不强制手动命名；需要 UI 辨识时用会话重命名打同格式标签即可。
+- 归档衔接：导出文件名 = 对话名 + 创建日期（现行惯例保留）；族谱索引以任务号区间校验名字。
+
+### 7.6 迁移与容错
+
+- **历史对话不批量改名**（既有导出的真实谱系由归档索引承载）；本规范自生效起用于新对话。
+- 忘记起名/起错名无惩罚，归档索引兜底；每次归档盘点时核对序号连续性（对冲 Owner 错记上一代序号的风险）。
