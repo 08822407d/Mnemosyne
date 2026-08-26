@@ -1,5 +1,11 @@
 # Active Context
 
+> **[FROZEN_HISTORICAL]** status: frozen_historical_evidence · frozen_by_task: MNEMOSYNE-244（2026-08-26）
+> - 本文件自 MNEMOSYNE-085（2026-07-06，d8a9182）后无实质更新，内容停在 Meta-Agent handoff 时代，依执行源 §7（会话入场与读取原则）冻结为历史证据。
+> - 本文件不是会话入场读物；不得据此选择任务、恢复路线或推断当前门。
+> - 当前状态以各路线自己的 status 文件为准；入场路径见 `notes/ai-onboarding/`。
+> - 冻结依据：FABLE5-REVIEW2-001 发现 R2-FRESH-001 与执行源修订（PR #307）；正文一字未改，仅加本头部。
+
 ## Current compact view
 
 ### current phase

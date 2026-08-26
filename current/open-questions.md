@@ -1,5 +1,10 @@
 # Open Questions
 
+> **[FROZEN_HISTORICAL]** status: frozen_historical_evidence · frozen_by_task: MNEMOSYNE-244（2026-08-26）
+> - 本文件自 MNEMOSYNE-085（2026-07-06）后未再收录新未决问题，依执行源 §7 冻结为历史证据；正文条目记录的是当时状态，不代表现状。
+> - 2026-07-06 后的未决问题登记于独立文件（如 `current/handoff-guidance-open-question.md`、`current/model-capability-aware-work-planning-open-question.md`）；新未决问题按当时任务的记录惯例入库，不再追加到本文件。
+> - 不得据本文件选择任务。冻结依据：FABLE5-REVIEW2-001 发现 R2-FRESH-001；正文一字未改，仅加本头部。
+
 ## MNEMOSYNE-068 Meta-Agent first-target intake follow-up
 
 - Meta-Agent target selection:
