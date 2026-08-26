@@ -1,5 +1,9 @@
 # Current Mnemosyne Live Wayfinding
 
+> **[FROZEN_HISTORICAL]** status: frozen_historical_evidence · frozen_by_task: MNEMOSYNE-244（2026-08-26）
+> - 本总路标自 MNEMOSYNE-197（2026-08-06）后停更。按 FABLE5-REVIEW2-001 分诊束3 建议并经 Owner 门3 批准：**不恢复全局总路标**；"当前有哪些活路线、各在哪个门"以 `current/` 下各路线 status 文件为准（枚举方法：列出 `current/*-status.md` 并核对各文件头新鲜度声明，辅以 git log）。
+> - 本文件冻结为历史证据；不得据此选择任务或重建路线（执行源 §7）。正文一字未改，仅加本头部。
+
 > Non-execution-source route map. `current/human-approved-spec.md` remains Mnemosyne's only execution source. Route-status files do not authorize external research, quota use, validation, target-project writes, or automatic route selection.
 
 ```yaml

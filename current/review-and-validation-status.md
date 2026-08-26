@@ -1,6 +1,7 @@
 # Review and Validation Status
 
 > Non-execution-source live wayfinding record. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
+> last_updated_by_task: MNEMOSYNE-244（2026-08-26，修正 greenfield 过期段并登记第二轮评审）。失效声明：下一个改变评审/验证状态的任务必须更新本文件，否则须在其结果记录中说明为何不更新（FABLE5-REVIEW2-001 R2-FRESH-006 最低成本机制）。
 
 ## Current maintenance review state
 
@@ -17,17 +18,27 @@ first_wave_fable_review:
   execution_source_rule: current/human-approved-spec.md#19-validation--dry-run-无写入证明与复核-provenance-原则
   cross_model_review_index: notes/cross-model-review-results/README.md
 
+second_wave_fable_review:
+  reviews:
+    - FABLE5-REVIEW2-001
+  track_status: review_phases_complete_implementation_in_progress
+  joint_cooperation_confirmation: notes/cross-model-review-results/FABLE5-REVIEW2-001/07-pro-handover/05-owner-final-adjudication-record.md
+  spec_revision_implementation: MNEMOSYNE-247_merged_PR_307
+  track_pr: PR_306_draft_disposition_pending_owner
+
 greenfield_track:
   track_id: FABLE5-GREENFIELD-001
-  latest_completed_substep: GF-STEP-2C
-  current_record: notes/cross-model-review-results/FABLE5-GREENFIELD-001/steps/GF-STEP-2C/02-capability-boundary-baseline.md
-  reading_phase_status: all_11_active_reports_full_text_reviewed_as_Fable_advisory_evidence
-  baseline_synthesis_status: Fable_claimed_complete_stored_with_source_contract_and_schema_deviations
-  fable_claimed_GF_STEP_2_status: complete
-  substantive_maintainer_acceptance: not_performed_by_MNEMOSYNE_129_storage_task
-  next_planned_substep: pending_substantive_review_before_GF_STEP_3_task_generation
-  next_proposed_by_Fable: GF-STEP-3
-  provider_status: available_for_GF_STEP_2C_completion_future_availability_not_asserted
+  status: completed_and_closed
+  completion_facts: >
+    GF-STEP-3A/3B/4/3R/3RV/5 completed and stored 2026-07-17~21 (MNEMOSYNE-132~143);
+    subsequent Stage A/B review, Pro adjudication, and PRO-SLICE-01 implementation
+    closed by 2026-07-26.
+  stale_snapshot_note: >
+    This block was frozen at GF-STEP-2C since the MNEMOSYNE-113 era and corrected by
+    MNEMOSYNE-244 per FABLE5-REVIEW2-001 finding R2-FRESH-002.
+  per_route_status_files:
+    - current/fable-greenfield-execution-deviation-status.md
+    - current/pro-slice-01-patch-specification-status.md
   former_quota_incident: notes/cross-model-review-results/FABLE5-GREENFIELD-001/incidents/INC-002-weekly-quota-exhaustion.md
 
 conversation_routing_after_MNEMOSYNE_114:
@@ -229,5 +240,5 @@ Replays 002–004 remain useful diagnostic records but are no longer described a
 - `HO-GUIDANCE-001` remains unresolved and is separate from Issue #171.
 - No target workspace, target material, target repository write, or operational build has occurred.
 - Meta-Agent product-development subroutes remain unselected and unauthorized.
-- FABLE5-GREENFIELD-001 remains separate and incomplete at the maintainer-acceptance level; the GF-STEP-2C output is stored, Fable claims GF-STEP-2 completion, and substantive review is required before generating or executing GF-STEP-3.
+- FABLE5-GREENFIELD-001 is complete and closed; see `greenfield_track` above (the former "incomplete at maintainer-acceptance level" statement was stale and corrected by MNEMOSYNE-244).
 - ChatGPT Work guidance remains candidate guidance pending DR6-informed refresh.

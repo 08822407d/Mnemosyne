@@ -1,5 +1,10 @@
 # TODO
 
+> **[SECTION_LEVEL_FREEZE]** frozen_by_task: MNEMOSYNE-244（2026-08-26），依执行源 §7 与 FABLE5-REVIEW2-001 发现 R2-FRESH-001。
+> - **已冻结为历史证据的节**："Active"、"Waiting for user decision"、"Current boundaries"、"Recently completed" 及其后全部历史任务清单。其中"恢复 post-084 路线"等指引的对象（Meta-Agent handoff 时代）已于 2026-08-05 迁出毕业，**不得照做**；"Current boundaries" 各否定性陈述（无 target workspace 等）仅为 2026-07-06 当时事实。
+> - **仍然有效的节**："User-requested product-design research TODOs" 三条研究题为当前有效的非执行源研究需求登记。
+> - 不得据本文件选择任务；当前状态以各路线 status 文件为准。正文一字未改，仅加本头部。
+
 ## Active
 
 - Inserted long work may proceed only when specified by the user.
