@@ -1,0 +1,142 @@
+# Guard registry — navigation index only (created by MNEMOSYNE-245)
+#
+# 中文说明：本文件是行为规范（guard）的导航索引与加载调度表，属 L3 导航层。
+# 它不授予任何强制力：约束力仅来自可追溯的 Owner 批准与各 guard 自声明的 scope
+# （执行源 §20 行为约束原则）。未在本表登记的文件不因此获得或失去效力；
+# 登记状态仅影响"会不会被按触发条件找到"。
+#
+# maintenance_rules:
+#   - guard 的新建/修订/合并/降级/退役任务必须同批更新本表（读-占-写同批纪律）。
+#   - load_class 变更（尤其进入 core）需要 Owner 显式批准理由，记录在 core_reason。
+#   - last_confirmed_current 在整编评审时全量刷新。
+#
+# consolidation_triggers（校准值，非执行源权威；首个周期为参数校准运行）:
+#   - scope 重叠或规则冲突被发现
+#   - 加载预算越界（core 集显著增长）
+#   - 同一事故催生重复规则
+#   - Owner 点名
+#   - 新增满 3 份 guard 或距上次整编满 8 周（先到先触发）
+# last_consolidation: none_yet（本表创建即基线）
+#
+# layered_loading_status: shadow_pilot_first_cycle（调度表见 commands/load-mnemosyne-guidance.md）
+
+guards:
+  - guard_id: MNEMOSYNE-USER-OPERATION-NEXT-STEP-CAPABILITY-INTENT-001
+    file: current/user-operation-next-step-capability-and-intent-guard.md
+    scope_zh: 用户操作/下一步/能力评估/意图重建的通用回复义务（适用面最宽）
+    load_class: core
+    core_reason: widest_applicability_per_design_A_and_MNEMOSYNE-199_analysis
+    triggers: [every_guidance_refresh]
+    status: active
+    created_by_task: MNEMOSYNE-177
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-GITHUB-SINGLE-ACTIVE-PR-LINEAGE-001
+    file: current/github-single-active-pr-lineage-guard.md
+    scope_zh: 每任务一条写入谱系、至多一个 open PR；建分支/建 PR 前预检（含跨族写前拉最新、路径交集、共享计数器纪律）
+    load_class: conditional
+    triggers: [branch_creation, pr_creation, repository_write_planning]
+    status: active
+    created_by_task: MNEMOSYNE-118
+    last_amended_by_task: MNEMOSYNE-245
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-RUN-CONTEXT-PR-PROVENANCE-001
+    file: current/run-context-and-pr-provenance-guard.md
+    scope_zh: 重要仓库写入的运行上下文记录与 PR 来源披露（含跨族规则变更生效旗标 cross_family_effective）
+    load_class: conditional
+    triggers: [github_or_connected_repository_write, important_publication_record]
+    status: active
+    created_by_task: MNEMOSYNE-147
+    last_amended_by_task: MNEMOSYNE-245
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-ARTIFACT-DELIVERY-DIRECT-GENERATION-001
+    file: current/artifact-delivery-and-direct-generation-guard.md
+    scope_zh: 产物交付与直接生成行为约束（不虚报文件/沙箱路径等）
+    load_class: conditional
+    triggers: [artifact_generation, file_delivery]
+    status: active
+    created_by_task: MNEMOSYNE-127
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-CROSS-CONVERSATION-EXECUTION-INTENT-OPERATOR-FLOW-001
+    file: current/cross-conversation-execution-intent-and-operator-flow-guard.md
+    scope_zh: 跨对话任务的执行意图显式声明与同回复内完整操作流
+    load_class: conditional
+    triggers: [cross_conversation_task_design_or_delivery, external_task_launch]
+    status: active
+    created_by_task: MNEMOSYNE-187
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-EXTERNAL-RESEARCH-DISPLAY-NAME-001
+    file: current/external-research-display-name-guard.md
+    scope_zh: 外部研究运行的注册显示名分配（MNE-DR-NNN 等）
+    load_class: conditional
+    triggers: [external_research_run_naming]
+    status: active
+    created_by_task: MNEMOSYNE-189
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-DEEP-RESEARCH-REPORT-DELIVERY-CORRECTION-001
+    file: current/deep-research-report-delivery-correction-guard.md
+    scope_zh: Deep Research 单一权威报告语义与导出件定位
+    load_class: conditional
+    triggers: [deep_research_task_design_or_delivery]
+    status: active
+    created_by_task: MNEMOSYNE-179
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-SOURCE-ARTIFACT-PRESERVATION-DESIGN-RATIONALE-001
+    file: current/source-artifact-preservation-and-design-rationale-guard.md
+    scope_zh: 用户供给材料的原件保全等级与重大设计选择的理由记录
+    load_class: conditional
+    triggers: [material_source_file_intake, major_design_choice]
+    status: active
+    created_by_task: MNEMOSYNE-198
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-NEXT-STEP-REPOSITORY-WRITE-VISIBILITY-001
+    file: current/next-step-repository-write-visibility-guard.md
+    scope_zh: 结尾"下一步"须显式声明是否写仓库及串行化门
+    load_class: conditional
+    triggers: [substantial_closing_next_step_with_potential_write]
+    status: active
+    created_by_task: MNEMOSYNE-225
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-AGENT-PRODUCT-READY-PR-FRONTIER-EFFICIENCY-001
+    file: current/agent-product-ready-pr-and-frontier-efficiency-guard.md
+    scope_zh: Ready PR 默认、Owner 合并语义、前沿额度效率与合并后收尾
+    load_class: conditional
+    triggers: [pr_readiness_decision, frontier_segment_closure, post_merge_closeout]
+    status: active
+    created_by_task: MNEMOSYNE-210
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-ADJUDICATION-001
+    file: current/frontier-planning-clarification-handoff-adjudication-guard.md
+    scope_zh: 澄清路由架构与下层访谈委托的裁定规则
+    load_class: conditional
+    triggers: [clarification_routing_design, interviewer_delegation]
+    status: active
+    created_by_task: MNEMOSYNE-179
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-PR-MERGE-BRANCH-DISPOSITION-001
+    file: current/pr-merge-branch-disposition-guard.md
+    scope_zh: 请求 Owner 合并时的分支保留/删除义务声明
+    load_class: conditional
+    triggers: [merge_request_to_owner, branch_retention_decision]
+    status: active
+    created_by_task: MNEMOSYNE-196
+    last_confirmed_current: MNEMOSYNE-245
+
+  - guard_id: MNEMOSYNE-OWNER-REVIEW-BRANCH-LEDGER-001
+    file: current/owner-review-branch-ledger-guard.md
+    scope_zh: 分支承载的多步 Owner 评审台账
+    load_class: conditional
+    triggers: [branch_backed_owner_review]
+    status: active
+    created_by_task: MNEMOSYNE-207
+    last_confirmed_current: MNEMOSYNE-245

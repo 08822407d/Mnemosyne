@@ -18,35 +18,41 @@ Handoff remains a separate explicit workflow:
 - `commands/prepare-mnemosyne-handoff.md`
 - `commands/receive-mnemosyne-handoff.md`
 
-## Required files
+## Required files (layered loading — shadow pilot, MNEMOSYNE-245)
 
-Read or ask the user to provide:
+Loading is layered per `current/guard-registry.yaml` (navigation index; authority still comes from Owner approval and each guard's own declared scope, per execution-source §20).
+
+**Core set (read on every guidance refresh):**
 
 - `README.md`
 - `current/human-approved-spec.md`
-- `current/artifact-delivery-and-direct-generation-guard.md`
-- `current/cross-conversation-execution-intent-and-operator-flow-guard.md`
-- `current/external-research-display-name-guard.md`
-- `current/deep-research-report-delivery-correction-guard.md`
-- `current/source-artifact-preservation-and-design-rationale-guard.md`
 - `current/user-operation-next-step-capability-and-intent-guard.md`
-- `current/next-step-repository-write-visibility-guard.md`
-- `current/agent-product-ready-pr-and-frontier-efficiency-guard.md`
-- `current/frontier-planning-clarification-handoff-adjudication-guard.md`
-- `current/pr-merge-branch-disposition-guard.md`
 - this command file, if available
 
-For GitHub or connected-repository writes, or important records intended for publication, also read:
+**Conditional set (read when a trigger matches; when uncertain, read):**
 
-- `current/run-context-and-pr-provenance-guard.md`
+| Trigger | Read |
+|---|---|
+| Branch or PR creation, or repository write planning | `current/github-single-active-pr-lineage-guard.md` |
+| GitHub/connected-repository write, or important publication record | `current/run-context-and-pr-provenance-guard.md` |
+| Artifact generation or file delivery | `current/artifact-delivery-and-direct-generation-guard.md` |
+| Cross-conversation task design/delivery, or external task launch | `current/cross-conversation-execution-intent-and-operator-flow-guard.md` |
+| Naming an external research run | `current/external-research-display-name-guard.md` |
+| Deep Research task design or delivery | `current/deep-research-report-delivery-correction-guard.md` |
+| Material source-file intake, or major design choice | `current/source-artifact-preservation-and-design-rationale-guard.md` |
+| Substantial closing next-step section with potential write | `current/next-step-repository-write-visibility-guard.md` |
+| PR readiness decision, frontier segment closure, post-merge closeout | `current/agent-product-ready-pr-and-frontier-efficiency-guard.md` |
+| Clarification routing design, or interviewer delegation | `current/frontier-planning-clarification-handoff-adjudication-guard.md` |
+| Asking the Owner to merge, or branch retention decision | `current/pr-merge-branch-disposition-guard.md` |
+| Branch-backed multi-step Owner review | `current/owner-review-branch-ledger-guard.md` |
 
-For branch or pull-request creation, also read:
+Shadow-pilot rules (first cycle):
 
-- `current/github-single-active-pr-lineage-guard.md`
-
-For branch-backed multi-step Owner review, also read:
-
-- `current/owner-review-branch-ledger-guard.md`
+- The trigger table above (mirroring the registry) is the operative dispatch; when trigger applicability is uncertain, read the guard.
+- Full-set reading remains the shadow baseline: a task may be sampled (by Owner request or self-check) to read the full former list and record, in its result record, any guard the dispatch would have missed plus the loading cost.
+- Any discovered miss must be recorded and routed to registry maintenance; repeated misses of the same guard escalate it toward the core set via Owner approval.
+- New guards default to the conditional set; entering the core set requires an explicit Owner-approved reason recorded in the registry.
+- Check the registry header's consolidation triggers; if a consolidation review is due, say so in the refresh response.
 
 Read additional files only when the local task independently requires them.
 
@@ -136,6 +142,7 @@ If separately required, treat them according to their own authority and freshnes
 37. Before ending a scarce Pro/frontier segment, apply the frontier-turn completion check. Complete all authorized frontier-level work that can safely proceed, honor an explicit request to continue, and route only bounded/mechanical follow-up to a lower-cost model with an explicit model requirement.
 38. After a PR merge, verify the merge commit and latest `master`, repair stale route/status records through a new follow-up lineage when needed, close the old PR gate, and state the next true route and model requirement. Merge does not authorize validation, target adoption or another separately gated action.
 39. In every substantial closing `## 下一步` section, adjacent to the model recommendation, explicitly state `下一步仓库写入：是 / 否 / 待单独授权 / 待确认`. When a write is known, name the repository and write type; when another conversation may write the same repository, state the serialization or independence gate. Apply `current/next-step-repository-write-visibility-guard.md`.
+40. Before finishing a task, check which domains' state the task changed and whether the corresponding live status files were updated; if a relevant live file was not updated, state why in the result record.
 
 ## Required first response after loading
 
@@ -180,6 +187,8 @@ mnemosyne_guidance_refresh:
     - visibility_and_platform_freshness
     - single_active_PR_lineage_when_relevant
     - run_context_and_PR_provenance_when_relevant
+    - layered_core_conditional_loading_shadow_pilot
+    - state_change_live_file_update_check
 ```
 
 Do not report the Mnemosyne maintenance current phase or next-route options as the receiving conversation's local task state merely because this command was invoked.
