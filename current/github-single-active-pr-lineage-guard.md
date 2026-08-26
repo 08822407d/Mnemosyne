@@ -71,6 +71,7 @@ github_write_lineage_preflight:
     by_exact_task_id: []
     by_intended_head_branch: []
     by_equivalent_scope: []
+    open_pr_changed_paths_vs_authorized_paths: empty_or_overlapping
     existing_result_records_or_task_artifacts: []
   decision: create_new_lineage | continue_existing_lineage | stop_and_reconcile | blocked_incomplete_enumeration | explicitly_approved_parallel_variant
 ```
@@ -84,6 +85,14 @@ Required checks:
 - verify the latest default-branch SHA before the first write.
 
 If complete accessible enumeration is unavailable, the actor must not claim that no duplicate exists. Default action is `blocked_incomplete_enumeration`; a new PR may proceed only under a new, explicit, task-local user exception that records the limitation and is not a future precedent.
+
+### 3.1 Cross-family alternating-work extension (added by MNEMOSYNE-245)
+
+These checks apply whenever multiple writer families (for example ChatGPT-family and Claude-family surfaces) alternate on the same repository. They extend, and do not replace, the preflight above. Scope boundary: alternating work only; true concurrent writing by two families remains gated on the separately adjudicated concurrency route.
+
+- **Fetch, pin, push (stale-base prevention).** The first action of any repository-writing session is to fetch and pin the latest default-branch SHA; the pinned SHA recorded in trailers and records is the proof. Push every logically complete change promptly. If a session spans several hours before writing again, re-fetch and compare the pin; if the default branch moved, re-run the affected preflight checks.
+- **Open-PR path-intersection check (write-set conflict prevention).** Enumerate the changed paths of all open PRs (for example `gh pr diff <n> --name-only` or the PR files API) and intersect them with the current task's authorized paths. Empty intersection: normal parallel work. Non-empty intersection: stop and record one of four choices — wait for the other PR to merge; change paths; join the other lineage; or ask the Owner to serialize.
+- **Shared-counter discipline (registry and sequence race prevention).** For shared counters such as display-name sequences, task numbers, and registry entries: re-read the latest state immediately before allocating, and land the allocation in the same PR (read, claim, and write in one batch). Do not reserve numbers across sessions. On a detected collision, the later writer re-reads and re-allocates; prevention effort stays proportionate because alternating-work collisions are expected to be rare.
 
 ## 4. Decision rules
 

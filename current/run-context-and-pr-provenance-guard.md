@@ -324,7 +324,10 @@ execution_context:
   human_adjudication_status:
   authorization_ref:
   full_run_record:
+  cross_family_effective: yes_or_no
 ```
+
+`cross_family_effective` (added by MNEMOSYNE-245): set `yes` when the PR changes rules shared across writer families — the execution source, an active guard, the guidance loader, or attribution conventions — and add a one-line summary of the rule change next to the flag. Effectiveness model: such changes bind sessions started after the merge; in-progress sessions are not retroactively bound, and urgent changes reach running sessions only through an explicit Owner instruction. Set `no` for PRs that do not change shared rules.
 
 Do not use wording such as `implemented under GPT-X`, `written by GPT-X`, or `verified by GPT-X` when the only evidence is a consumer UI selection or model self-report.
 
