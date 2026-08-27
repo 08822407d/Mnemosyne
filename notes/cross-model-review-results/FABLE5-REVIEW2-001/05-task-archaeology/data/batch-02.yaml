@@ -1,0 +1,1114 @@
+# Mnemosyne task-record archaeology — batch 02 (MNEMOSYNE-142 .. MNEMOSYNE-198)
+# Source dir: /home/cheyh/projs/Mnemosyne/notes/codex-task-results/
+
+- file: MNEMOSYNE-142-result.md
+  task_id: MNEMOSYNE-142
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Storage-only preservation of Fable GF-STEP-3RV bounded re-verification with byte-exact gzip/base64 archive and structural receipt.
+
+- file: MNEMOSYNE-143-pr-finalization.md
+  task_id: MNEMOSYNE-143
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #194)
+
+- file: MNEMOSYNE-143-result.md
+  task_id: MNEMOSYNE-143
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - GF-STEP-5 attempt 001 failed on input integrity (missing STEP3B attachment, wrong file substituted); failure preserved as historical provenance.
+  repairs_or_repaired_by: none
+  notable: Preserves both the failed attempt and successful rerun of the GF-STEP-5 contrastive comparison.
+
+- file: MNEMOSYNE-144-pr-finalization.md
+  task_id: MNEMOSYNE-144
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #195)
+
+- file: MNEMOSYNE-144-result.md
+  task_id: MNEMOSYNE-144
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - User-reported platform incident context recorded (selecting Pro appeared to yield a less deliberative model); checkpoint created preemptively.
+  repairs_or_repaired_by: none
+  notable: Records PR #194 merge as user-confirmed model-quality restart checkpoint; explicitly separates checkpoint from backend attestation.
+
+- file: MNEMOSYNE-145-pr-finalization.md
+  task_id: MNEMOSYNE-145
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #196; large source report bodies intentionally not embedded)
+
+- file: MNEMOSYNE-145-result.md
+  task_id: MNEMOSYNE-145
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - Exact DR07 report bodies not embedded because connector lacked reliable large-file upload path; only hashes recorded.
+    - Earlier Project-internal research pair excluded as confounded.
+  repairs_or_repaired_by: none
+  notable: Progress checkpoint effective only after PR #196 merge; honest storage-limitation disclosure instead of substitutes.
+
+- file: MNEMOSYNE-146-pr-finalization.md
+  task_id: MNEMOSYNE-146
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #197)
+
+- file: MNEMOSYNE-146-result.md
+  task_id: MNEMOSYNE-146
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine exact archive of FABLE5-GOV-001 governance research
+
+- file: MNEMOSYNE-147-pr-finalization.md
+  task_id: MNEMOSYNE-147
+  date: 2026-07-22
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: First finalization carrying a full execution-context block (backend declared UNKNOWN_OR_NOT_ATTESTABLE).
+
+- file: MNEMOSYNE-147-result.md
+  task_id: MNEMOSYNE-147
+  date: 2026-07-22
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Adopts the run-context/PR-provenance guard v0.1; corrects operator wording to official "GPT-5.6 Sol / Extra High" naming.
+
+- file: MNEMOSYNE-148-pr-finalization.md
+  task_id: MNEMOSYNE-148
+  date: 2026-07-22
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #199; user-approved heterogeneous-review exception noted)
+
+- file: MNEMOSYNE-148-result.md
+  task_id: MNEMOSYNE-148
+  date: 2026-07-22
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Records PR #198 as Pro-switch restart checkpoint under a disclosed task-local heterogeneous-review exception.
+
+- file: MNEMOSYNE-149-pr-finalization.md
+  task_id: MNEMOSYNE-149
+  date: 2026-07-22
+  kind: pr_finalization
+  actor_surface: Codex_in_ChatGPT_Work
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Draft PR #200; discloses two false-positive PR search hits (line counts, not task IDs).
+
+- file: MNEMOSYNE-149-result.md
+  task_id: MNEMOSYNE-149
+  date: 2026-07-22
+  kind: result
+  actor_surface: Codex_in_ChatGPT_Work
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs MNEMOSYNE-147's v0.1 guard (v0.2 after WORK-ULTRA-PR198-REVIEW-001 found 8 defects)
+  notable: Most elaborate v0.2 run-context record; fixture-based validation of the new provenance schema.
+
+- file: MNEMOSYNE-150-pr-finalization.md
+  task_id: MNEMOSYNE-150
+  date: 2026-07-23
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Late duplicate lineage - a second noncanonical branch was created before discovering PR #201 already existed from another conversation; writes stopped, delta ported, no second PR.
+  repairs_or_repaired_by: canonical PR #201 repaired in place (initial version had compressed useful status detail)
+  notable: Rare live demonstration of the single-active-PR guard reconciling concurrent conversations.
+
+- file: MNEMOSYNE-150-result.md
+  task_id: MNEMOSYNE-150
+  date: 2026-07-23
+  kind: incident
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Failed labeled-Pro review response declared materially unreliable by user; PR #198 checkpoint formally ACTIVATED and recovery recorded complete.
+    - Duplicate MNEMOSYNE-150 branch created before pre-PR recheck found existing PR #201.
+  repairs_or_repaired_by: repairs live-status mismatch left by the isolated WORK-ULTRA/MNEMOSYNE-149 route
+  notable: The only checkpoint-activation incident record in the batch; the failed Pro response created zero repository writes.
+
+- file: MNEMOSYNE-151-pr-finalization.md
+  task_id: MNEMOSYNE-151
+  date: 2026-07-23
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #202)
+
+- file: MNEMOSYNE-151-result.md
+  task_id: MNEMOSYNE-151
+  date: 2026-07-23
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs stale self-referential "merge PR #201" gate left after MNEMOSYNE-150 merged
+  notable: routine post-merge live-status sync
+
+- file: MNEMOSYNE-152-pr-finalization.md
+  task_id: MNEMOSYNE-152
+  date: 2026-07-23
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #203; 15-part deterministic archive verified)
+
+- file: MNEMOSYNE-152-result.md
+  task_id: MNEMOSYNE-152
+  date: 2026-07-23
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Two recoverable storage-boundary reconstruction anomalies recorded in a dedicated storage-anomaly-record.
+  repairs_or_repaired_by: none
+  notable: Stage A Work Ultra artifacts preserved in deterministic tar/bzip2/base64 multipart archive.
+
+- file: MNEMOSYNE-153-pr-finalization.md
+  task_id: MNEMOSYNE-153
+  date: 2026-07-24
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Branch was continued after an interrupted operation window rather than creating a parallel lineage.
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #204)
+
+- file: MNEMOSYNE-153-result.md
+  task_id: MNEMOSYNE-153
+  date: 2026-07-24
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - CD-001 - final chat response did not reproduce complete synthesis byte-for-byte (file delivery compensated).
+    - CD-002 - prior helper process unrecoverable across PID namespace; fresh verifier rechecked critical gates; historical read-action count not fully attestable.
+  repairs_or_repaired_by: none
+  notable: Pro maintainer adjudication REJECTS implementation readiness, downgrades 4 Stage-B claims, recommends PRO-SLICE-01 as first candidate.
+
+- file: MNEMOSYNE-154-pr-finalization.md
+  task_id: MNEMOSYNE-154
+  date: 2026-07-24
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Live gate deliberately designed so no recursive post-merge repair PR is needed.
+
+- file: MNEMOSYNE-154-result.md
+  task_id: MNEMOSYNE-154
+  date: 2026-07-24
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs stale "merge PR #204" gate in two live status files
+  notable: routine post-merge wayfinding sync
+
+- file: MNEMOSYNE-155-pr-finalization.md
+  task_id: MNEMOSYNE-155
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Final audit found archive parts 5-7 stored with line-wrapping that changed blob identities; replaced with exact one-line-plus-LF representations before merge.
+  repairs_or_repaired_by: repaired its own archive parts in place pre-merge
+  notable: Transport-encoding corruption caught by blob-identity audit.
+
+- file: MNEMOSYNE-155-result.md
+  task_id: MNEMOSYNE-155
+  date: 2026-07-26
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Archive parts 5-7 line-wrapped on first store; repaired after final audit detected blob mismatch.
+  repairs_or_repaired_by: none
+  notable: Adopts complete-response transfer-file behavior rule; archives PRO-SLICE-01 v1/v2 patch specs (29 patches) for later phased implementation.
+
+- file: MNEMOSYNE-156-pr-finalization.md
+  task_id: MNEMOSYNE-156
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #207; result record kept as pre-PR snapshot with pending PR number)
+
+- file: MNEMOSYNE-156-result.md
+  task_id: MNEMOSYNE-156
+  date: 2026-07-26
+  kind: verification
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Post-merge verification of PR #206 plus Phase A blob identity recheck and decision handoff preparation.
+
+- file: MNEMOSYNE-157-pr-finalization.md
+  task_id: MNEMOSYNE-157
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT (record created by MNEMOSYNE-159)
+  outcome: deviation_disclosed
+  deviations:
+    - Actual GitHub head branch (codex/execute-mnemosyne-157-task) differed from the intended branch recorded by the Codex run.
+    - Historical switch_history "confirmed_none" amended to "unknown" because its evidence array was empty.
+    - PR #208 body lacked required execution-context disclosure; amended additively.
+  repairs_or_repaired_by: repairs MNEMOSYNE-157's lineage and provenance residue (created by MNEMOSYNE-159)
+  notable: Additive post-merge amendment pattern - corrects lineage facts without rewriting the historical result.
+
+- file: MNEMOSYNE-157-result.md
+  task_id: MNEMOSYNE-157
+  date: 2026-07-26
+  kind: result
+  actor_surface: Codex (OpenAI Codex agent, shell-capable executor)
+  outcome: partial
+  deviations:
+    - make_pr tool returned no PR number or URL; task could not attest the created PR (no configured git remote or gh CLI).
+  repairs_or_repaired_by: residue repaired by MNEMOSYNE-159 (PR #208 binding and provenance amendment)
+  notable: Phase A implementation with 11/11 exact-once byte-hash-verified patch applications; PR identity unknown at task end.
+
+- file: MNEMOSYNE-158-result.md
+  task_id: MNEMOSYNE-158
+  date: 2026-07-26
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine TODO capture (learning-agent and cross-agent reuse research items), PR #209
+
+- file: MNEMOSYNE-159-pr-finalization.md
+  task_id: MNEMOSYNE-159
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #210; supersedes pre-PR snapshot fields of its own result)
+
+- file: MNEMOSYNE-159-result.md
+  task_id: MNEMOSYNE-159
+  date: 2026-07-26
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs MNEMOSYNE-157 residue (branch/PR binding, switch-history overclaim, PR #208 disclosure) and records the Phase A stop gate
+  notable: Verdict ledger with REPAIR_APPLIED entries; Phase A stop gate passes for Phase B task generation.
+
+- file: MNEMOSYNE-160-pr-finalization.md
+  task_id: MNEMOSYNE-160
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT (record created by MNEMOSYNE-161)
+  outcome: deviation_disclosed
+  deviations:
+    - Historical task status was INCOMPLETE_PR_NUMBER_AND_REMOTE_METADATA_NOT_EXPOSED; actual lineage (PR #211, head codex/execute-mnemosyne-160-task-as-written) bound additively.
+  repairs_or_repaired_by: repairs MNEMOSYNE-160's remote-closeout residue (created by MNEMOSYNE-161)
+  notable: Second occurrence of the Codex-run/connector-closeout split repaired by an additive finalization.
+
+- file: MNEMOSYNE-160-result.md
+  task_id: MNEMOSYNE-160
+  date: 2026-07-26
+  kind: result
+  actor_surface: Codex (API shell-capable executor)
+  outcome: partial
+  deviations:
+    - Designated make_pr surface did not expose PR number/URL or post-creation enumeration; remote closeout recorded as BLOCKED_PLATFORM_CAPABILITY.
+    - Shell checkout had no configured remote; open-PR visibility limited to local evidence.
+  repairs_or_repaired_by: residue repaired by MNEMOSYNE-161 (PR #211 binding)
+  notable: Phase B propagation with 18/18 exact-once verified patches despite the blocked platform closeout.
+
+- file: MNEMOSYNE-161-pr-finalization.md
+  task_id: MNEMOSYNE-161
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #212; declares PRO-SLICE-01 29/29 patches complete pending closeout merge)
+
+- file: MNEMOSYNE-161-result.md
+  task_id: MNEMOSYNE-161
+  date: 2026-07-26
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs MNEMOSYNE-160's unknown-PR residue via additive finalization; also captures cognitive-coaching TODO
+  notable: Independent post-merge verification of all 18 Phase B patches from PR diff without re-executing original shell commands.
+
+- file: MNEMOSYNE-162-pr-finalization.md
+  task_id: MNEMOSYNE-162
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #213)
+
+- file: MNEMOSYNE-162-result.md
+  task_id: MNEMOSYNE-162
+  date: 2026-07-26
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs self-referential COMPLETE_PENDING_PR_212_MERGE residue left in route status after MNEMOSYNE-161 merged
+  notable: Declares PRO-SLICE-01 route COMPLETE; explicitly refuses to take over other conversations' routes.
+
+- file: MNEMOSYNE-163-pr-finalization.md
+  task_id: MNEMOSYNE-163
+  date: 2026-07-26
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #214)
+
+- file: MNEMOSYNE-163-result.md
+  task_id: MNEMOSYNE-163
+  date: 2026-07-26
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Preparation-only open question on model-capability-aware work planning (no-frontier-by-default constraint), no policy adopted.
+
+- file: MNEMOSYNE-164-pr-finalization.md
+  task_id: MNEMOSYNE-164
+  date: 2026-07-27
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #215)
+
+- file: MNEMOSYNE-164-result.md
+  task_id: MNEMOSYNE-164
+  date: 2026-07-27
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: TODO capture passes safety preflight only "with disclosed public-history risk" (limited personal learning context enters public git).
+
+- file: MNEMOSYNE-165-pr-finalization.md
+  task_id: MNEMOSYNE-165
+  date: 2026-07-27
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #216)
+
+- file: MNEMOSYNE-165-result.md
+  task_id: MNEMOSYNE-165
+  date: 2026-07-27
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: residue repaired by MNEMOSYNE-166 (merged archive missing parts 7-8 and part-5 content mismatch discovered post-merge)
+  notable: Accepts all four Pro Deep Research reports with corrections; excludes historical wrong-topic/plan-only outputs from evidence.
+
+- file: MNEMOSYNE-166-pr-finalization.md
+  task_id: MNEMOSYNE-166
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #217; also records safe archival disposition for four source conversations)
+
+- file: MNEMOSYNE-166-result.md
+  task_id: MNEMOSYNE-166
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Post-merge audit of PR #216 found logical archive part 5 content-mismatched and parts 7-8 entirely missing; cycle README pointed to five nonexistent files; batch status stale.
+  repairs_or_repaired_by: repairs MNEMOSYNE-165's archive storage residue (regenerates archive, restores parts, splits part 5 into 11 verifiable segments)
+  notable: Largest storage-integrity repair in the batch; also introduces FIRST_TARGET_MINIMUM_UPGRADE_CONTRACT candidate.
+
+- file: MNEMOSYNE-167-pr-finalization.md
+  task_id: MNEMOSYNE-167
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #218)
+
+- file: MNEMOSYNE-167-result.md
+  task_id: MNEMOSYNE-167
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Records ACCEPT_AS_ADVISORY_PILOT_ONLY disposition and first-target upgradeability checklist; no global mandate.
+
+- file: MNEMOSYNE-168-pr-finalization.md
+  task_id: MNEMOSYNE-168
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #219)
+
+- file: MNEMOSYNE-168-result.md
+  task_id: MNEMOSYNE-168
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Learner-state/adaptive-explanation synthesis plus dated official GPT Live product fact check; four-stage research roadmap.
+
+- file: MNEMOSYNE-169-pr-finalization.md
+  task_id: MNEMOSYNE-169
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #220)
+
+- file: MNEMOSYNE-169-result.md
+  task_id: MNEMOSYNE-169
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Stage A research prompt prepared (not executed) plus Meta-Agent M0/M1 build-start gate definition.
+
+- file: MNEMOSYNE-170-pr-finalization.md
+  task_id: MNEMOSYNE-170
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #221; merge semantics carefully enumerate what acceptance does NOT execute)
+
+- file: MNEMOSYNE-170-result.md
+  task_id: MNEMOSYNE-170
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Meta-Agent M0/M1 launch baseline with 16 stable requirement IDs and exact seven-file M2 scope; no target file created.
+
+- file: MNEMOSYNE-171-pr-finalization.md
+  task_id: MNEMOSYNE-171
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #222)
+
+- file: MNEMOSYNE-171-result.md
+  task_id: MNEMOSYNE-171
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: First real target-project write - exact seven Meta-Agent v0.1 files with per-file SHA-256/blob verification; operational use still prohibited.
+
+- file: MNEMOSYNE-172-pr-finalization.md
+  task_id: MNEMOSYNE-172
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #223)
+
+- file: MNEMOSYNE-172-result.md
+  task_id: MNEMOSYNE-172
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Returns the Meta-Agent product-build route to its dedicated conversation with a receive-first handoff; old conversation memory demoted to candidate evidence.
+
+- file: MNEMOSYNE-173-pr-finalization.md
+  task_id: MNEMOSYNE-173
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #225)
+
+- file: MNEMOSYNE-173-result.md
+  task_id: MNEMOSYNE-173
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs current-conversation wayfinding after the Meta-Agent diversion (PRs #223/#224)
+  notable: Deliberately leaves stale mixed global files untouched because they are inputs to the separately owned health review.
+
+- file: MNEMOSYNE-174-pr-finalization.md
+  task_id: MNEMOSYNE-174
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #226)
+
+- file: MNEMOSYNE-174-result.md
+  task_id: MNEMOSYNE-174
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: One-turn convergence design to save frontier quota without bypassing dependency gates.
+
+- file: MNEMOSYNE-175-pr-finalization.md
+  task_id: MNEMOSYNE-175
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Explicitly declares repository copy is a normalized readable copy, not a byte-exact archive.
+
+- file: MNEMOSYNE-175-result.md
+  task_id: MNEMOSYNE-175
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Conversation attachment preview exposed stale wrong-report content; direct runtime-file read used instead; recorded as an observability/input-preview incident.
+    - A failed Base64 exact-archive attempt was removed; exact received bytes identified by hash but not reconstructable from repository.
+    - External Deep Research run metadata and native plan were not provided by the platform.
+  repairs_or_repaired_by: none
+  notable: Stage A report accepted with corrections after sampling 15+ load-bearing sources; Stage B0 recommended but not selected.
+
+- file: MNEMOSYNE-176-pr-finalization.md
+  task_id: MNEMOSYNE-176
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #228)
+
+- file: MNEMOSYNE-176-result.md
+  task_id: MNEMOSYNE-176
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Full Stage B0 synthetic protocol package (C0-C3, 16 fixtures, isolation invariants) designed but expressly not executed.
+
+- file: MNEMOSYNE-177-pr-finalization.md
+  task_id: MNEMOSYNE-177
+  date: 2026-07-28
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #229; scope includes the CONTEXT_ISOLATION_FAILURE record)
+
+- file: MNEMOSYNE-177-result.md
+  task_id: MNEMOSYNE-177
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: blocked
+  deviations:
+    - Stage B0 smoke returned CONTEXT_ISOLATION_FAILURE with zero cells started - the maintainer context could read hidden keys and no isolated worker/reviewer context existed; no pseudo-experiment simulated.
+  repairs_or_repaired_by: none
+  notable: Fail-closed refusal to fake isolation, per explicit user gate; also adopts the user-operation/next-step/capability/intent guard.
+
+- file: MNEMOSYNE-178-pr-finalization.md
+  task_id: MNEMOSYNE-178
+  date: 2026-07-29
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #230)
+
+- file: MNEMOSYNE-178-result.md
+  task_id: MNEMOSYNE-178
+  date: 2026-07-28
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Documents a conservative restatement of ambiguous user wording ("automatically provide the report") to avoid inventing quota authority or fabricating reports.
+
+- file: MNEMOSYNE-179-pr-finalization.md
+  task_id: MNEMOSYNE-179
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #231)
+
+- file: MNEMOSYNE-179-result.md
+  task_id: MNEMOSYNE-179
+  date: 2026-07-29
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: corrects prior Deep Research delivery practice to one canonical report (new correction guard); retires live prompt paths to prevent accidental re-execution
+  notable: Cross-adjudicates Pro and Fable reports; Fable's 10-minute low-quota run accepted with downgrades rather than rejected by runtime alone.
+
+- file: MNEMOSYNE-180-pr-finalization.md
+  task_id: MNEMOSYNE-180
+  date: 2026-07-30
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #232; source conversation may retire after merge)
+
+- file: MNEMOSYNE-180-result.md
+  task_id: MNEMOSYNE-180
+  date: 2026-07-30
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: GPT Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Freezes the PR #231 checkpoint and transfers validation-package preparation to a fresh conversation; intentionally defers all package content.
+
+- file: MNEMOSYNE-181-pr-finalization.md
+  task_id: MNEMOSYNE-181
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - First PR connector invocation used wrong parameter names and failed schema validation before any PR existed; corrected call created PR #233.
+    - Compact PR snapshot reported mergeable false; full fetch resolved true; discrepancy retained rather than hidden.
+  repairs_or_repaired_by: none
+  notable: 20-file validation-package PR bound with explicit no-CI-evidence disclosure.
+
+- file: MNEMOSYNE-181-result.md
+  task_id: MNEMOSYNE-181
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - First handoff receive attempt returned INPUT_OR_STATE_CONFLICT because PR #232 was not yet merged; receive repeated cleanly after merge.
+    - First PR connector invocation failed schema validation (no external PR created).
+    - No local parser/checkout available; integrity checks were author-reviewed and connector-backed only.
+  repairs_or_repaired_by: none
+  notable: Builds the complete 15-file frontier-clarification validation package (14 scenarios, Q0-Q4, 40 V1 cells) without executing anything.
+
+- file: MNEMOSYNE-182-pr-finalization.md
+  task_id: MNEMOSYNE-182
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - First PR-body update wrongly supplied maintainer_can_modify for a same-repo PR and was rejected; corrected update succeeded.
+    - Local independent checkout unavailable (DNS resolution failure for github.com).
+  repairs_or_repaired_by: none
+  notable: routine binding of PR #234 with disclosed connector hiccups.
+
+- file: MNEMOSYNE-182-result.md
+  task_id: MNEMOSYNE-182
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Designs Meta-Agent next-tier repository-isolation validation (16 cases) and stages Fable5 research; nothing executed.
+
+- file: MNEMOSYNE-184-pr-finalization.md
+  task_id: MNEMOSYNE-184
+  date: 2026-07-30
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Predecessor PR #235 was rejected and closed unmerged; scope independently redone as PR #236 from merged master without reusing its content as authority.
+  repairs_or_repaired_by: supersedes rejected PR #235
+  notable: Inverted-boolean "not_performed: true" ledger explicitly glossed to avoid misreading.
+
+- file: MNEMOSYNE-184-result.md
+  task_id: MNEMOSYNE-184
+  date: 2026-07-30
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: redoes the scope of rejected PR #235
+  notable: Claude Project/GitHub product-fact verification plus new fable5-ready operator queue with exact input manifests (19 and 12 files).
+
+- file: MNEMOSYNE-185-pr-finalization.md
+  task_id: MNEMOSYNE-185
+  date: 2026-07-31
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #238; discloses pre-merge task-local activation of the inline-flow rule)
+
+- file: MNEMOSYNE-185-result.md
+  task_id: MNEMOSYNE-185
+  date: 2026-07-31
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - User decision DEFER_REPAIR_AND_VALIDATION recorded for META-AGENT-RESEARCH-EVIDENCE-INCIDENT-001; candidate repair preserved but not started.
+  repairs_or_repaired_by: none
+  notable: Adopts same-response inline operator-flow rule so users need not browse the repository to learn steps.
+
+- file: MNEMOSYNE-186-pr-finalization.md
+  task_id: MNEMOSYNE-186
+  date: 2026-07-31
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Binds PR #239; retains three historical failed branches as real failure fixtures (RETAIN disposition).
+
+- file: MNEMOSYNE-186-result.md
+  task_id: MNEMOSYNE-186
+  date: 2026-07-31
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: "pro模型")
+  outcome: deviation_disclosed
+  deviations:
+    - Paid Fable A1 Advanced Research run 001 failed - 18/18 repository evidence reads failed inside Advanced Research despite a passing ordinary-chat preflight; ~USD 8 spent; fail-closed PASS but cost-control FAIL.
+  repairs_or_repaired_by: repairs the A1/A2 execution surface (v0.2 contracts, full 22/15-path gate replaces sampled preflight); preserves the failed-run evidence
+  notable: Cleanest example of adjudicating an expensive external run failure as a surface defect, not a model defect.
+
+- file: MNEMOSYNE-187-pr-finalization.md
+  task_id: MNEMOSYNE-187
+  date: 2026-07-31
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #241)
+
+- file: MNEMOSYNE-187-result.md
+  task_id: MNEMOSYNE-187
+  date: 2026-07-31
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs its own prior response's ambiguity (user confusion over whether a Fable run was requested) via the execution-intent guard
+  notable: Introduces response_role / execution_disposition vocabulary (RUN_NOW, RUN_AFTER_GATE, READY_NOT_SELECTED...).
+
+- file: MNEMOSYNE-188-pr-finalization.md
+  task_id: MNEMOSYNE-188
+  date: 2026-08-03
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #245)
+
+- file: MNEMOSYNE-188-result.md
+  task_id: MNEMOSYNE-188
+  date: 2026-08-03
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: continues surface repair after the run-001 failure (v0.3 Project-knowledge route with R0 visibility probe)
+  notable: Post-quota-pause chronology review; official-doc-backed switch to Project-knowledge Research surface.
+
+- file: MNEMOSYNE-189-pr-finalization.md
+  task_id: MNEMOSYNE-189
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Binds PR #253; explicitly refused to guess PR numbers after Issue #250 / PRs #251-252 consumed the sequence.
+
+- file: MNEMOSYNE-189-result.md
+  task_id: MNEMOSYNE-189
+  date: 2026-08-05
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Adopts MNE/MA short display-name registry and designs the T0-T7 target-repository migration test program; nothing migrated.
+
+- file: MNEMOSYNE-190-pr-finalization.md
+  task_id: MNEMOSYNE-190
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #254; zero destination-repository writes attested)
+
+- file: MNEMOSYNE-190-result.md
+  task_id: MNEMOSYNE-190
+  date: 2026-08-06
+  kind: verification
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Verifies the new empty 08822407d/Meta-Agent destination repo and connector permissions; T0 pass, later phases explicitly NOT_AUTHORIZED/BLOCKED.
+
+- file: MNEMOSYNE-191-pr-finalization.md
+  task_id: MNEMOSYNE-191
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #256)
+
+- file: MNEMOSYNE-191-result.md
+  task_id: MNEMOSYNE-191
+  date: 2026-08-06
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: normal
+  deviations:
+    - Confirms stale live target navigation left after PR #255 (to be superseded post-merge rather than silently rewritten).
+  repairs_or_repaired_by: none
+  notable: Accepts the receive-only migration result without rerun; designs the initial Meta-Agent memory system (M0-M9 validation, 16 cases).
+
+- file: MNEMOSYNE-192-pr-finalization.md
+  task_id: MNEMOSYNE-192
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #257)
+
+- file: MNEMOSYNE-192-result.md
+  task_id: MNEMOSYNE-192
+  date: 2026-08-06
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Prior dedicated-conversation Pro task blocked - complete recursive tree enumeration impossible on the connected GitHub search surface (execution-surface capability mismatch, zero writes); blocked result preserved by exact hash.
+  repairs_or_repaired_by: repairs the blocked migration-preparation route by splitting mechanical E0 (Codex/local git) from frontier E1 (Pro resume); prohibits wasteful identical Pro rerun
+  notable: Root-cause attribution deliberately avoids blaming model reasoning or the taskbook.
+
+- file: MNEMOSYNE-194-pr-finalization.md
+  task_id: MNEMOSYNE-194
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - Prior PR #259 (wrong-model accident) closed unmerged with branch deleted; corrected lineage created as PR #260 without reusing its content.
+  repairs_or_repaired_by: supersedes rejected PR #259
+  notable: routine binding otherwise.
+
+- file: MNEMOSYNE-194-result.md
+  task_id: MNEMOSYNE-194
+  date: 2026-08-06
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: Pro)
+  outcome: deviation_disclosed
+  deviations:
+    - A prior message was accidentally handled under the wrong model, producing PR #259; user closed it unmerged and the work was formally redone.
+    - E0 Codex run could not push remotely (no credentials); content reached the repo via user-mediated PR #258; local commit SHA not promoted to canonical identity.
+    - E0 snapshot self-reference resolved via a two-plane (payload vs control-evidence) source contract instead of rerunning E0.
+  repairs_or_repaired_by: repairs the MNEMOSYNE-193/PR-259 wrong-model residue and the E0 snapshot boundary
+  notable: The batch's clearest wrong-model incident plus a principled snapshot-churn avoidance decision.
+
+- file: MNEMOSYNE-195-pr-finalization.md
+  task_id: MNEMOSYNE-195
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #262)
+
+- file: MNEMOSYNE-195-result.md
+  task_id: MNEMOSYNE-195
+  date: 2026-08-07
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app (operator selection: GPT Pro)
+  outcome: deviation_disclosed
+  deviations:
+    - Fable A1 R0 probe failed as a separate low-cost probe (~USD 7 spent, Search-mode only, no exhaustive-read attestation); extra OPERATOR.md upload adjudicated as operator selection error, not a Fable defect; identical probe rerun prohibited.
+  repairs_or_repaired_by: repairs the paid-probe design (v0.4 single-invocation G0/G1 replaces separate paid R0); closes stale migration statuses
+  notable: Declares Meta-Agent migration COMPLETE on the Mnemosyne side and restores the frontier-validation mainline.
+
+- file: MNEMOSYNE-196-pr-finalization.md
+  task_id: MNEMOSYNE-196
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Binds PR #263; first PR carrying an explicit post-merge branch disposition (DELETE_ALLOWED with required user-facing wording).
+
+- file: MNEMOSYNE-196-result.md
+  task_id: MNEMOSYNE-196
+  date: 2026-08 (approx)
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: GPT Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Owner indefinitely pauses the Fable route (A1 zero valid reports, A2 zero attempts); adopts branch-disposition guard; conversation marked archive-eligible.
+
+- file: MNEMOSYNE-197-pr-finalization.md
+  task_id: MNEMOSYNE-197
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (binds PR #264; first silent-default branch deletion under the amended rule)
+
+- file: MNEMOSYNE-197-result.md
+  task_id: MNEMOSYNE-197
+  date: 2026-08 (approx)
+  kind: result
+  actor_surface: ChatGPT_GitHub_app (operator selection: GPT Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: amends the day-old branch-disposition guard from MNEMOSYNE-196 to retention-only notices
+  notable: Narrow follow-up so the conversation can archive; ordinary branches now need no deletion notice.
+
+- file: MNEMOSYNE-198-pr-finalization.md
+  task_id: MNEMOSYNE-198
+  date: 2026-08 (approx)
+  kind: pr_finalization
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine (draft PR #266 for source-artifact-preservation guard; silent-default branch deletion)

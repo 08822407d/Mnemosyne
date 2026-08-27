@@ -1,0 +1,1046 @@
+# Mnemosyne codex-task-results archaeology — batch 03
+# Files: MNEMOSYNE-198 .. MNEMOSYNE-243 + MNEMOSYNE-FIRST-APPLICATION-TEST-HANDOFF-PATCH
+# Generated: 2026-08-23
+
+- file: MNEMOSYNE-198-result.md
+  task_id: MNEMOSYNE-198
+  date: 2026-08-11
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub connector actions)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: user-authorized repair of Mnemosyne source-preservation behavior; audit found six early light-research prompt originals initially missing (later recovered)
+  notable: Verified byte-exact attachment-to-git-blob preservation (sha1 match test) and created the source-artifact preservation guard.
+
+- file: MNEMOSYNE-199-pr-finalization.md
+  task_id: MNEMOSYNE-199
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 267 draft, V0 static mapping 34/34 loader rules PASS.
+
+- file: MNEMOSYNE-199-result.md
+  task_id: MNEMOSYNE-199
+  date: 2026-08-11
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub connector actions)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Static runtime-guidance utilization review; found universal full-guard loading disproportionate, recommended core-plus-triggered-modules profile.
+
+- file: MNEMOSYNE-200-pr-finalization.md
+  task_id: MNEMOSYNE-200
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Metadata correction needed because a self-referential head SHA cannot be recorded in its own file; current head deferred to PR 268 metadata.
+  repairs_or_repaired_by: none
+  notable: Discloses the self-referential finalization-record head-SHA problem and resolves it by pointing at PR metadata.
+
+- file: MNEMOSYNE-200-result.md
+  task_id: MNEMOSYNE-200
+  date: 2026-08-11
+  kind: result
+  actor_surface: ChatGPT (次一档模型/next-tier reported, GitHub connector actions)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repaired two active-guidance defects identified by MNEMOSYNE-199 (stale MNEMOSYNE-178 pending status; Deep Research output semantics conflict)
+  notable: Guidance repair plus creation of 42-entry reusable agent capability catalogue (ACAP-001..042) in one bounded PR.
+
+- file: MNEMOSYNE-201-pr-finalization.md
+  task_id: MNEMOSYNE-201
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Initial connector mergeability calculation transiently false while GitHub processed the draft PR; later exact recheck returned mergeable true.
+  repairs_or_repaired_by: none
+  notable: First of several records preserving transient GitHub mergeability-unknown states instead of hiding them.
+
+- file: MNEMOSYNE-201-result.md
+  task_id: MNEMOSYNE-201
+  date: 2026-08-11
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub connector actions)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Built the 8-file self-contained next-tier owner-review package (OR-01..OR-09) with interviewer contract and startup message.
+
+- file: MNEMOSYNE-202-pr-finalization.md
+  task_id: MNEMOSYNE-202
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Semantic consistency repairs were applied to the package after initial finalization record (head advanced twice before final snapshot).
+  repairs_or_repaired_by: none
+  notable: Twelve-point semantic integrity checklist all PASS after in-branch consistency repairs.
+
+- file: MNEMOSYNE-202-result.md
+  task_id: MNEMOSYNE-202
+  date: 2026-08-11
+  kind: result
+  actor_surface: ChatGPT (next-tier interview segment + Pro adjudication segment, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - One initial branch-creation connector call used an invalid parameter alias and returned an argument error with no repository side effects.
+  repairs_or_repaired_by: none
+  notable: Records the OR-01 42-item owner review, retires ACAP-036 permanently, and freezes three active-guard repairs for a later task.
+
+- file: MNEMOSYNE-203-pr-finalization.md
+  task_id: MNEMOSYNE-203
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 271 modifies three active guards only, ten semantic PASS checks.
+
+- file: MNEMOSYNE-203-result.md
+  task_id: MNEMOSYNE-203
+  date: 2026-08-12
+  kind: result
+  actor_surface: ChatGPT (Pro reported, not reconfirmed for this task; GitHub connector actions)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: implements the three active-guidance repairs frozen by MNEMOSYNE-202 (byte-vs-substantive status, 排版不对 contextual repair, branch-retention audit)
+  notable: Clean bounded implementation of pre-frozen guard amendments; notes visible model selection was not reconfirmed.
+
+- file: MNEMOSYNE-204-pr-finalization.md
+  task_id: MNEMOSYNE-204
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Closes out the direct-master incident (8 unintended package commits from wrong branch_name parameter), recovered via corrective commit 89bd9ef without history rewrite.
+  repairs_or_repaired_by: closes out MNEMOSYNE-204's own direct-master write incident
+  notable: repository_incident_recorded true; incident preserved as auditable history, not erased.
+
+- file: MNEMOSYNE-204-result.md
+  task_id: MNEMOSYNE-204
+  date: 2026-08-12
+  kind: incident
+  actor_surface: ChatGPT (Pro, GitHub connector actions)
+  outcome: deviation_disclosed
+  deviations:
+    - Eight GitHub.create_file calls used incorrect argument branch_name; connector silently defaulted to master, committing 8 package files directly to the default branch.
+    - Recovery via corrective deletion commit and fast-forward, no force push; accidental commits remain visible in history.
+  repairs_or_repaired_by: self-repaired within the task; adds preventive checklist for future connector writes
+  notable: The most significant incident of the batch — silent connector parameter fallback caused direct-master writes; fully disclosed with recovery protocol.
+
+- file: MNEMOSYNE-205-pr-finalization.md
+  task_id: MNEMOSYNE-205
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 273, exact-conversation export honestly recorded as EXCERPT_OR_SUMMARY_ONLY.
+
+- file: MNEMOSYNE-205-result.md
+  task_id: MNEMOSYNE-205
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub connector reads and writes)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Closes OR review line; discloses that exact OR-interview conversation export was unavailable, so result preserved as excerpt/summary only.
+
+- file: MNEMOSYNE-206-pr-finalization.md
+  task_id: MNEMOSYNE-206
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; explains 110 deletions as replacement of three route-navigation/handoff files, no evidence deleted.
+
+- file: MNEMOSYNE-206-result.md
+  task_id: MNEMOSYNE-206
+  date: 2026-08-13
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub connector reads and writes)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Frontier adjudication found candidate v0.1 operationally ambiguous in six areas; prepared TLR-01..05 owner-review package.
+
+- file: MNEMOSYNE-207-pr-finalization.md
+  task_id: MNEMOSYNE-207
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 275 gates owner review of audit correction and branch-ledger authority.
+
+- file: MNEMOSYNE-207-result.md
+  task_id: MNEMOSYNE-207
+  date: unknown
+  kind: verification
+  actor_surface: ChatGPT (GitHub connector; surface not restated)
+  outcome: deviation_disclosed
+  deviations:
+    - Transcript audit of the 502KB exact conversation export found one attribution error - ACAP-037 was wrongly recorded as part of the OR-02 shared floor; corrected by explicit correction record.
+  repairs_or_repaired_by: repairs the ACAP-037 attribution error in MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-RESULT-002 (from MNEMOSYNE-205)
+  notable: Full 10562-line export hash-verified locally but deliberately not published; created the branch-backed owner-review ledger guard.
+
+- file: MNEMOSYNE-208-pr-finalization.md
+  task_id: MNEMOSYNE-208
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - PR 275 merged concurrently while the old conversation was preparing closeout; a noncanonical draft commit exists on a recreated MNEMOSYNE-207 branch, never entered PR 275 or master.
+  repairs_or_repaired_by: cleans up after MNEMOSYNE-207's concurrent-merge residue (recreated branch flagged for deletion)
+  notable: Concurrent-change disclosure with an orphaned branch flagged deletable after verification.
+
+- file: MNEMOSYNE-208-result.md
+  task_id: MNEMOSYNE-208
+  date: unknown
+  kind: closeout
+  actor_surface: ChatGPT (GitHub connector; surface not restated)
+  outcome: deviation_disclosed
+  deviations:
+    - PR 275 merged mid-tool-sequence; a post-merge draft commit was briefly placed on a recreated MNEMOSYNE-207 branch before being declared noncanonical.
+  repairs_or_repaired_by: repairs MNEMOSYNE-207 lineage residue by restarting from the verified merge commit
+  notable: Conversation had become slow to open; task prepares clean stopping point and new-conversation handoff.
+
+- file: MNEMOSYNE-209-pr-creation.md
+  task_id: MNEMOSYNE-209
+  date: 2026-08-14
+  kind: pr_finalization
+  actor_surface: ChatGPT (pro, GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: PR creation gated by verbatim quoted Owner instruction; Draft PR 277 from the 45-commit TLR ledger branch.
+
+- file: MNEMOSYNE-209-result.md
+  task_id: MNEMOSYNE-209
+  date: 2026-08-14
+  kind: result
+  actor_surface: ChatGPT (pro formalization segment; next-tier interview segment with visible selection not preserved)
+  outcome: deviation_disclosed
+  deviations:
+    - Exact visible model label of the next-tier interview segment was not preserved in its launch message (recorded as attestation gap).
+  repairs_or_repaired_by: none
+  notable: Formalizes owner-confirmed TLR review into candidate v0.2 and a frozen S0-S11 validation package with blob-level identities.
+
+- file: MNEMOSYNE-210-pr277-post-merge-verification.md
+  task_id: MNEMOSYNE-210
+  date: 2026-08-14
+  kind: verification
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Merged current-navigation file was stale, still describing PR 277 as open Draft after merge; requires follow-up repair in a new lineage.
+    - No workflow run found for the merge commit, so no CI-pass claim is made.
+  repairs_or_repaired_by: stale route state repaired by MNEMOSYNE-210 itself
+  notable: Status PASS_MERGE_VERIFIED_STALE_ROUTE_STATE_REQUIRES_FOLLOW_UP_REPAIR — merge verified, stale state routed to new task.
+
+- file: MNEMOSYNE-210-pr-finalization.md
+  task_id: MNEMOSYNE-210
+  date: 2026-08-14
+  kind: pr_finalization
+  actor_surface: ChatGPT (pro, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Initial connector snapshot returned mergeable false right after PR creation; raw REST showed mergeable null/unknown; later recheck true. Transient state preserved, not hidden.
+  repairs_or_repaired_by: none
+  notable: First Ready (non-draft) PR under the new Owner-decided Ready-PR default; RECOMMEND_MERGE recorded.
+
+- file: MNEMOSYNE-210-result.md
+  task_id: MNEMOSYNE-210
+  date: 2026-08-14
+  kind: result
+  actor_surface: ChatGPT (pro, GitHub connector reads and task-scoped writes)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs stale post-PR277 route state and the Draft-by-default workflow (new agent-product-ready-pr-and-frontier-efficiency guard)
+  notable: Converts Owner's Ready-PR/manual-merge preference into an active guard and prepares the V0-only run decision candidate.
+
+- file: MNEMOSYNE-211-result.md
+  task_id: MNEMOSYNE-211
+  date: 2026-08-15
+  kind: blocked
+  actor_surface: ChatGPT (GitHub connector; switch history unknown)
+  outcome: blocked
+  deviations:
+    - V0 fully Owner-authorized but repository creation blocked - GitHub connector exposes no repository-creation mutation and no alternative plugin found (BLOCKED_TOOL_CAPABILITY).
+  repairs_or_repaired_by: repairs stale route status left after PR 278 merge
+  notable: Fail-closed on missing tool capability - refuses substitute repositories or Mnemosyne writes until the named repo can be created.
+
+- file: MNEMOSYNE-212-pr-finalization.md
+  task_id: MNEMOSYNE-212
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT (Pro segment reported, GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Ready PR 280 with blob-bound Owner V1 authorization; V1 stays AUTHORIZED_BUT_NOT_ACTIVE pending merge and master identity verification.
+
+- file: MNEMOSYNE-212-result.md
+  task_id: MNEMOSYNE-212
+  date: 2026-08-14
+  kind: result
+  actor_surface: ChatGPT (pro; V0 executor segment reported verbatim as "gpt-5.6 sol extra high")
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: V0 adjudicated as valid sentinel PASS; answers the GitHub all-repo-access-vs-ChatGPT-sync question with official-doc verification; designs three-conversation V1 topology with S8 knowledge firewall.
+
+- file: MNEMOSYNE-213-pr-finalization.md
+  task_id: MNEMOSYNE-213
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; Ready PR 281 publishes Fable capability-ownership evidence and adjudication.
+
+- file: MNEMOSYNE-213-result.md
+  task_id: MNEMOSYNE-213
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT Pro (self-declared actor_surface field)
+  outcome: deviation_disclosed
+  deviations:
+    - MNE-DR-003 display-name collision recorded and contained by allocating MNE-DR-004 for repository navigation.
+  repairs_or_repaired_by: none
+  notable: Fable report accepted with material corrections but implementation readiness REJECTED; exact-byte preservation plus deterministic ZIP of the Fable return.
+
+- file: MNEMOSYNE-214-pr281-post-merge-verification.md
+  task_id: MNEMOSYNE-214
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 281 merge verified, F1 Owner gate left open, F2 allowed to proceed in parallel.
+
+- file: MNEMOSYNE-214-pr-finalization.md
+  task_id: MNEMOSYNE-214
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 282 closes PR 281 route state and publishes the F2 research package.
+
+- file: MNEMOSYNE-214-result.md
+  task_id: MNEMOSYNE-214
+  date: unknown
+  kind: result
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Prepares MNE-DR-005 cross-repository-concurrency Fable package (30 files, read-only, G0 evidence gate); adjudicates F2-before-F3/F4 ordering.
+
+- file: MNEMOSYNE-215-pr-finalization.md
+  task_id: MNEMOSYNE-215
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Establishes that all 16 synthetic tlr-v1-* evidence branches must be retained; cleanup unauthorized.
+
+- file: MNEMOSYNE-215-result.md
+  task_id: MNEMOSYNE-215
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT (Pro, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Regenerate/stop/recovery provenance incident on the V1 fresh-Pro adjudication - recovered attachment preserved at IDENTITY_RECEIPT_ONLY, exact pre-regeneration answer not attestable.
+    - GitHub asynchronous mergeable field returned false at PR creation; not treated as a conflict verdict.
+  repairs_or_repaired_by: normalizes and repository-binds the recovered V1 adjudication after the regeneration incident
+  notable: Owner accepts V1 PASS_WITH_BOUNDED_AMENDMENTS and candidate v0.2 as provisional global baseline; records the Chat-to-Work transfer observation.
+
+- file: MNEMOSYNE-215-verification.md
+  task_id: MNEMOSYNE-215
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Introduces the five-level test-evidence-strength vocabulary (TEST_ARTIFACT_PRESENT .. INDEPENDENTLY_REPRODUCED).
+
+- file: MNEMOSYNE-216-pr283-post-merge-closeout.md
+  task_id: MNEMOSYNE-216
+  date: unknown
+  kind: closeout
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Tree-identity check (PR head tree == merge-commit tree) used as stronger-than-file-existence merge proof; 16 evidence branches confirmed retained.
+
+- file: MNEMOSYNE-217-pr284-terminal-closeout.md
+  task_id: MNEMOSYNE-217
+  date: 2026-08-15
+  kind: closeout
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - Residual navigation defect found after PR 284 - merged status file still carried transient pre-merge wording, risking an infinite recursive closeout chain.
+  repairs_or_repaired_by: repairs MNEMOSYNE-216's transient-wording residue with a terminal-navigation fix
+  notable: Explicitly ends the recursive closeout chain by keeping publication state out of durable route navigation.
+
+- file: MNEMOSYNE-218-finalization.md
+  task_id: MNEMOSYNE-218
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: supersedes stale pending-status fields in MNEMOSYNE-218-result.md (self-staleness avoidance)
+  notable: Owner chose Option A - keep all 16 evidence branches, no anchor, no cleanup; deliberately omits transient PR state to avoid self-staleness loops.
+
+- file: MNEMOSYNE-218-result.md
+  task_id: MNEMOSYNE-218
+  date: 2026-08-15
+  kind: result
+  actor_surface: ChatGPT model using GitHub connector (task-local model selection not reported)
+  outcome: deviation_disclosed
+  deviations:
+    - Two self-detected design defects corrected before publication - a mis-transcribed branch-identity blob and an invalid plan to reuse the anchor-absent gate before cleanup.
+    - Future P3 branch cleanup is BLOCKED - current connector exposes no branch-ref deletion action.
+  repairs_or_repaired_by: self-corrected its own draft defects pre-publication
+  notable: V1 evidence preservation/cleanup design under an explicit concurrent-conversation warning; used only new notes/ paths to avoid collision.
+
+- file: MNEMOSYNE-218-verification.md
+  task_id: MNEMOSYNE-218
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PASS with explicit caveat that other conversation's unobservable in-flight intentions cannot be excluded.
+
+- file: MNEMOSYNE-219-pr-finalization.md
+  task_id: MNEMOSYNE-219
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Creates an explicit retention obligation for the MNE-DR-005 Project-knowledge snapshot branch with a three-condition release gate.
+
+- file: MNEMOSYNE-219-result.md
+  task_id: MNEMOSYNE-219
+  date: 2026-08-15
+  kind: result
+  actor_surface: ChatGPT (GitHub connector); records Owner's Claude Max account UI observation
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Preserves the Claude web hyperlink-icon/full-branch-URL workaround as an operator-observed UI fact and assesses Claude Project vs Claude Code as work surfaces.
+
+- file: MNEMOSYNE-220-finalization.md
+  task_id: MNEMOSYNE-220
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: corrects the early blob placeholder in MNEMOSYNE-220-result.md
+  notable: F1 Owner Option A recorded with two concurrent F2 branches live; write sets verified disjoint.
+
+- file: MNEMOSYNE-220-result.md
+  task_id: MNEMOSYNE-220
+  date: 2026-08-16
+  kind: result
+  actor_surface: ChatGPT model using GitHub connector (operator-reported "pro模型")
+  outcome: deviation_disclosed
+  deviations:
+    - Concurrent conversation merged PR 287 and moved master between the Owner's read-only decision and the first write; all three F1 source blobs re-verified unchanged on the new master.
+  repairs_or_repaired_by: none
+  notable: Cleanly separates Fable launch-time input identity from the later F1 Owner decision as distinct time layers.
+
+- file: MNEMOSYNE-220-verification.md
+  task_id: MNEMOSYNE-220
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - Supersedes the result record's premature not_available_before_merge artifact-identity placeholder with the actual blob (correction record).
+  repairs_or_repaired_by: corrects MNEMOSYNE-220-result.md's artifact-identity field
+  notable: PASS_WITH_CONCURRENT_BACKGROUND - explicit blob-identity gate across unrelated master drift.
+
+- file: MNEMOSYNE-221-pr-finalization.md
+  task_id: MNEMOSYNE-221
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 48-file F2 adjudication PR integrating concurrent F1 PR 288 via two-parent merge; flags the two snapshot branches for post-merge release.
+
+- file: MNEMOSYNE-221-result.md
+  task_id: MNEMOSYNE-221
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT (fresh Pro adjudication segment, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - The received Fable report contains a truncated Owner-decision blob (three hex chars dropped) and a process-count inconsistency; both recorded as bounded integrity/provenance limitations.
+  repairs_or_repaired_by: prepares corrected provisional F2 amendment repairing the Fable report's defects
+  notable: Fable hybrid-architecture recommendation accepted only as corroboration of candidate v0.2 (ACCEPT_WITH_MATERIAL_CORRECTIONS, implementation REJECT).
+
+- file: MNEMOSYNE-221-verification.md
+  task_id: MNEMOSYNE-221
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - Fable report blob-identity defect (truncated_three_hex_characters) and 244-UI-source vs 0-portable-source citation gap mechanically documented.
+  repairs_or_repaired_by: none
+  notable: Return archive verified PASS_EXACT down to per-part git blob identities; external load-bearing claims independently checked against primary sources (Chubby, Saga, SLSA, in-toto, NIST).
+
+- file: MNEMOSYNE-222-pr-finalization.md
+  task_id: MNEMOSYNE-222
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 290 publishes Owner Option A and the staged V2-A/B/C validation design.
+
+- file: MNEMOSYNE-222-result.md
+  task_id: MNEMOSYNE-222
+  date: unknown
+  kind: result
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Staged V2 design requires a positive independent-concurrency case so validation cannot reward needless global serialization; lease-without-fencing prohibited.
+
+- file: MNEMOSYNE-222-verification.md
+  task_id: MNEMOSYNE-222
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; twelve semantic boundary checks PASS, nine-file package blobs pinned.
+
+- file: MNEMOSYNE-223-pr-finalization.md
+  task_id: MNEMOSYNE-223
+  date: unknown
+  kind: pr_finalization
+  actor_surface: ChatGPT (Pro, GitHub connector; execution-context block present)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 291 publishes the exact A0 sentinel plan.
+
+- file: MNEMOSYNE-223-result.md
+  task_id: MNEMOSYNE-223
+  date: 2026-08-16
+  kind: result
+  actor_surface: ChatGPT model using GitHub connector (Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: A0 sentinel plan reuses the existing public synthetic repo, seven-path write set, recommends "gpt-5.6 sol extra high" as next-tier executor.
+
+- file: MNEMOSYNE-223-verification.md
+  task_id: MNEMOSYNE-223
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PASS_PREPARATION_ONLY, all V1 refs and future branch absence verified.
+
+- file: MNEMOSYNE-224-pr-finalization.md
+  task_id: MNEMOSYNE-224
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 292 publishes the freshness-protocol repair package 002.
+
+- file: MNEMOSYNE-224-result.md
+  task_id: MNEMOSYNE-224
+  date: unknown
+  kind: result
+  actor_surface: unknown (later found to have misreported Pro - see MNEMOSYNE-226 incident)
+  outcome: deviation_disclosed
+  deviations:
+    - "V2A-SENTINEL-PROTOCOL-DEFECT-001: package 001 froze Mnemosyne master as an execution precondition, so its own publication invalidated it before G2A (infinite publication/freshness loop)."
+  repairs_or_repaired_by: repairs MNEMOSYNE-223's package 001 via additive package 002 (immutable source blobs vs dynamic execution-window baseline); its own provenance later corrected by MNEMOSYNE-226
+  notable: Self-invalidating-package defect - the batch's cleanest example of protocol design colliding with its own publication.
+
+- file: MNEMOSYNE-224-verification.md
+  task_id: MNEMOSYNE-224
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Reproduces the self-invalidation defect mechanically before verifying the repair (R0-R12 all PASS).
+
+- file: MNEMOSYNE-225-pr-finalization.md
+  task_id: MNEMOSYNE-225
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Resolves a concurrent-branch gate against mnemosyne-226 before PR creation (scopes verified semantically independent, 225 publishes first).
+
+- file: MNEMOSYNE-225-result.md
+  task_id: MNEMOSYNE-225
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT model using GitHub connector (Pro)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Creates the next-step repository-write-visibility guard (是/否/待单独授权/待确认 line required in every closing 下一步) plus the F1 bounded-validation package; skipped task ID 224 after spotting the concurrent branch.
+
+- file: MNEMOSYNE-225-verification.md
+  task_id: MNEMOSYNE-225
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Concurrent PR 292 integrated via two-parent commit with tree-level proof that F2 content was inherited, not duplicated.
+
+- file: MNEMOSYNE-226-pr-finalization.md
+  task_id: MNEMOSYNE-226
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 294 publishes the provenance correction and package 003 after waiting out PR 293.
+
+- file: MNEMOSYNE-226-result.md
+  task_id: MNEMOSYNE-226
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT (Pro per direct user instruction, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Records MNEMOSYNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001 - the prior MNEMOSYNE-224 turn ran on a next-tier selection while claiming Pro, invalidating PR 292's claimed producer/reviewer provenance.
+    - Fresh Pro review found package 002's model-label binding FAIL_MATERIAL (startup message omitted the authorized visible model label from controller input).
+  repairs_or_repaired_by: repairs MNEMOSYNE-224's provenance misattribution and package-002 model-binding defect via package 003
+  notable: The batch's key provenance incident - proves visible-model claims cannot be inferred and forces exact string comparison of authorized vs selected labels in future G2A.
+
+- file: MNEMOSYNE-226-verification.md
+  task_id: MNEMOSYNE-226
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; attribution_match false for MNEMOSYNE-224 formally recorded, P0-P10 checks PASS.
+
+- file: MNEMOSYNE-227-pr-finalization.md
+  task_id: MNEMOSYNE-227
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 295 publishes the F1 validation-disposition handoff.
+
+- file: MNEMOSYNE-227-result.md
+  task_id: MNEMOSYNE-227
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT model using GitHub connector (Pro reported)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: fixes stale post-PR-293 safe-next wording in F1 status
+  notable: Handoff package deliberately avoids hard-pinning future master, citing the publication-freshness loop from the other route as the lesson learned.
+
+- file: MNEMOSYNE-227-verification.md
+  task_id: MNEMOSYNE-227
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; handoff scored against the replay scorecard's critical dimensions without claiming a replay PASS.
+
+- file: MNEMOSYNE-228-pr294-post-merge-closeout.md
+  task_id: MNEMOSYNE-228
+  date: unknown
+  kind: closeout
+  actor_surface: ChatGPT model using GitHub connector (operator-reported "当前对话是pro模型")
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: repairs stale F2 route state after MNEMOSYNE-226's PR 294 merge
+  notable: Under an explicit Owner concurrency warning, waited for the other route's PR 295 to close instead of opening a parallel PR, then integrated it via two-parent commit.
+
+- file: MNEMOSYNE-229-pr-finalization.md
+  task_id: MNEMOSYNE-229
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 297 publishes the A0 adjudication writeback.
+
+- file: MNEMOSYNE-229-result.md
+  task_id: MNEMOSYNE-229
+  date: unknown
+  kind: result
+  actor_surface: unknown (implied ChatGPT GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - "A0 executed with disposition PASS_WITH_BOUNDED_EVIDENCE_DEFECTS: A0-TOOL-001 non-blocking tool/product limitation, plus a false shortened package path recorded in one A0 output."
+  repairs_or_repaired_by: writes back the accepted A0 adjudication and an additive path-identity correction for the A0 evidence defect
+  notable: Historical A0 outputs deliberately left byte-unchanged; corrections are additive-only.
+
+- file: MNEMOSYNE-229-verification.md
+  task_id: MNEMOSYNE-229
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Refuses to accept the false path merely because it names the canonical file's blob - path identity treated as evidence in its own right.
+
+- file: MNEMOSYNE-230-pr-finalization.md
+  task_id: MNEMOSYNE-230
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 298 freezes the A1 run plan with a pre-computed Git-tree oracle.
+
+- file: MNEMOSYNE-230-result.md
+  task_id: MNEMOSYNE-230
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT (Pro reported, GitHub connector)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: A1 positive-independence oracle derived purely mechanically - both worker orders must converge on the same root tree 2b91954.
+
+- file: MNEMOSYNE-230-verification.md
+  task_id: MNEMOSYNE-230
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Recomputes every worker blob and nested tree SHA from exact UTF-8 content via standard Git object serialization.
+
+- file: MNEMOSYNE-231-pr-finalization.md
+  task_id: MNEMOSYNE-231
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 299 publishes the staged model-binding repair (package 002).
+
+- file: MNEMOSYNE-231-result.md
+  task_id: MNEMOSYNE-231
+  date: 2026-08-18
+  kind: result
+  actor_surface: ChatGPT (Pro reported, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - "MNE-V2A-A1-MODEL-BINDING-ORDER-DEFECT-001: package 001 required worker selected-labels at controller G2A time - a temporal impossibility since worker conversations do not yet exist."
+  repairs_or_repaired_by: repairs MNEMOSYNE-230's package 001 via additive package 002 (staged model binding at actual worker launch)
+  notable: Second model-binding defect in the A1 chain; binding moved to each conversation's actual launch moment.
+
+- file: MNEMOSYNE-231-verification.md
+  task_id: MNEMOSYNE-231
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - One unsupported raw git/ref/heads/master fetch returned HTTP 400; not repeated, no side effect, identity recovered via the supported branches endpoint.
+  repairs_or_repaired_by: none
+  notable: Explicitly classifies the defect as a real temporal impossibility, not a cosmetic wording issue.
+
+- file: MNEMOSYNE-232-pr-finalization.md
+  task_id: MNEMOSYNE-232
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; terse single-page finalization for PR 300.
+
+- file: MNEMOSYNE-232-result.md
+  task_id: MNEMOSYNE-232
+  date: 2026-08-18
+  kind: result
+  actor_surface: ChatGPT (Pro reported, GitHub connector)
+  outcome: deviation_disclosed
+  deviations:
+    - Accepted an externally uploaded complete review's wrapper-verification blocker against package 002 after Pro maintainer review.
+    - Source-preservation incident recorded with an unreachable-object evidence limit; three rejected unreferenced blobs durably disclosed.
+  repairs_or_repaired_by: repairs the A1 wrapper-verification gap via package 003 (canonical wrapper transport plus three-way comparison)
+  notable: Exact five-part reconstructable archive of the uploaded 37KB review preserved; handoff to a fresh conversation prepared.
+
+- file: MNEMOSYNE-232-verification.md
+  task_id: MNEMOSYNE-232
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - Three rejected unreferenced blobs durably disclosed as object-side effects.
+  repairs_or_repaired_by: none
+  notable: routine otherwise; archive reconstruction verified byte-exact.
+
+- file: MNEMOSYNE-233-pr-finalization.md
+  task_id: MNEMOSYNE-233
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: First PR to make a post-merge receive-rehearsal mandatory before the handoff counts as complete.
+
+- file: MNEMOSYNE-233-result.md
+  task_id: MNEMOSYNE-233
+  date: 2026-08-18
+  kind: result
+  actor_surface: ChatGPT (Pro reported, GitHub connector plus local mechanical reconstruction)
+  outcome: deviation_disclosed
+  deviations:
+    - "MNE-V2A-A1-PACKAGE003-SOURCE-ARCHIVE-MANIFEST-IDENTITY-DEFECT-001: package 003 recorded an incorrect source-archive-manifest blob (7c2af...); the wrong blob's exact origin is not mechanically proven."
+    - A second receiver's exact-mismatch block is accepted as a correct fail-closed outcome, not a receiver error.
+    - One web search/open attempt used only to try retrieving a public raw file; no external evidence informed the repair.
+  repairs_or_repaired_by: repairs MNEMOSYNE-232's package 003 via candidate/package 004, corrected handoff 002 and a mandatory receive-rehearsal contract
+  notable: Fail-closed receive validation caught a committed identity defect - the handoff-hardening chain's proof case.
+
+- file: MNEMOSYNE-233-verification.md
+  task_id: MNEMOSYNE-233
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Independent five-part archive reconstruction reproduces the exact 37074-byte source and identifies the correct manifest blob 6e90c8.
+
+- file: MNEMOSYNE-234-pr-finalization.md
+  task_id: MNEMOSYNE-234
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; PR 302 limited to the Handoff 003 schema/oracle repair.
+
+- file: MNEMOSYNE-234-result.md
+  task_id: MNEMOSYNE-234
+  date: unknown
+  kind: result
+  actor_surface: unknown (inherited prior Pro adjudication)
+  outcome: deviation_disclosed
+  deviations:
+    - "MNE-F2-V2A-A1-HANDOFF002-RECEIVE-SCHEMA-ORACLE-MISMATCH-001: handoff package 002's required report structure and rehearsal contract 001's acceptance fields were not mechanically isomorphic - a compliant receiver could be falsely blocked."
+  repairs_or_repaired_by: repairs MNEMOSYNE-233's handoff 002 via one canonical receive-report schema consumed by both package 003 and rehearsal contract 002
+  notable: Schema self-hash recursion resolved by having only the startup prompt supply the package's own blob.
+
+- file: MNEMOSYNE-234-verification.md
+  task_id: MNEMOSYNE-234
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine; single-canonical-schema isomorphism checks PASS.
+
+- file: MNEMOSYNE-235-blocked-incident.md
+  task_id: MNEMOSYNE-235
+  date: unknown
+  kind: incident
+  actor_surface: unknown (executor surface unspecified)
+  outcome: blocked
+  deviations:
+    - Executor manually changed the uppercase task-ID filename component G2A-COMPOSITE-CLOSURE-001 to lowercase/mixed-case in one transient tree entry; mismatch detected and run stopped before commit/ref movement.
+    - Unreferenced objects may exist and their SHAs were not preserved; ref_not_moved explicitly not equated with zero repository side effect.
+  repairs_or_repaired_by: residue left frozen; lineage eventually superseded by MNEMOSYNE-240/241
+  notable: First of five consecutive blocked publication attempts (235-239) for the same F2 G2A/handoff-audit closeout payload.
+
+- file: MNEMOSYNE-236-blocked-incident.md
+  task_id: MNEMOSYNE-236
+  date: unknown
+  kind: blocked
+  actor_surface: unknown
+  outcome: blocked
+  deviations:
+    - Run stopped during a failed blob write; failing path, encoding, request body, HTTP status, error text and prior-blob sequence were all not preserved, so the cause is permanently unknown.
+    - Unreferenced blobs may exist; no cleanup or reuse authorized.
+  repairs_or_repaired_by: residue frozen; superseded by MNEMOSYNE-240/241
+  notable: A blocked incident whose diagnostics were themselves lost - honesty about undiagnosable failure.
+
+- file: MNEMOSYNE-237-blocked-incidents.md
+  task_id: MNEMOSYNE-237
+  date: unknown
+  kind: blocked
+  actor_surface: four surfaces attempted - ordinary ChatGPT, ChatGPT Work mode, Codex cloud, Codex Desktop
+  outcome: blocked
+  deviations:
+    - "Four distinct failures: DNS could not resolve github.com (ordinary ChatGPT); local gh executable absent (Work mode); supplied files absent / gh unauthenticated / integration 401 (Codex cloud); Owner mid-run branch-policy override conflicted with the frozen manifest (Codex Desktop)."
+    - Two replies referenced execution-receipt files never returned as attachments; record refuses to invent them.
+  repairs_or_repaired_by: residue frozen; superseded by MNEMOSYNE-240/241
+  notable: The widest surface sweep in the batch - three capability failures plus one operator-intervention contract conflict, all with zero remote effect.
+
+- file: MNEMOSYNE-238-blocked-incident.md
+  task_id: MNEMOSYNE-238
+  date: unknown
+  kind: incident
+  actor_surface: ChatGPT GitHub connector (Git Data base64 blob architecture)
+  outcome: blocked
+  deviations:
+    - "At blob 12 of the manifest the returned SHA mismatched: a one-token transcription defect in the sent content (\"wheth\" for \"whether\") during model-generated Base64 transport."
+    - Twelve unreferenced blobs left as disclosed object-side effects; must not be reused or cleaned by the successor.
+  repairs_or_repaired_by: residue disclosed for MNEMOSYNE-239/240 successors
+  notable: Per-blob manifest SHA comparison caught a single-token corruption before any tree/commit/ref/PR was created.
+
+- file: MNEMOSYNE-239-blocked-incident.md
+  task_id: MNEMOSYNE-239
+  date: unknown
+  kind: blocked
+  actor_surface: local git execution on Windows (Ubuntu-successor context)
+  outcome: blocked
+  deviations:
+    - Windows native worktree path-length limit rejected a manifest-authorized long path during git add before commit creation; terminal under the one-shot contract.
+  repairs_or_repaired_by: superseded by the Ubuntu-native MNEMOSYNE-240 successor (new branch, no retry)
+  notable: Blocked purely by an OS path-length limit on a 190+ character forensic-audit filename.
+
+- file: MNEMOSYNE-240-pr-finalization-contract.md
+  task_id: MNEMOSYNE-240
+  date: unknown
+  kind: other
+  actor_surface: originating ChatGPT Pro GitHub connector (Phase B per contract)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Contract-only file; Phase A pushes the branch, Phase B independently reads back and creates the single Ready PR.
+
+- file: MNEMOSYNE-240-result-contract.md
+  task_id: MNEMOSYNE-240
+  date: unknown
+  kind: other
+  actor_surface: external Ubuntu execution plus originating connector readback
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: successor to the MNEMOSYNE-235-239 blocked lineage
+  notable: Explicitly acknowledges a commit cannot contain its own future SHA/PR URL - freezes semantics only, live values live in the external receipt.
+
+- file: MNEMOSYNE-240-verification-contract.md
+  task_id: MNEMOSYNE-240
+  date: unknown
+  kind: other
+  actor_surface: external receipt plus originating-conversation readback
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Single-paragraph proof checklist including that the historical 235 branch stays unchanged and no amend/force-push/second commit occurs.
+
+- file: MNEMOSYNE-242-post-merge-closeout.md
+  task_id: MNEMOSYNE-242
+  date: 2026-08-21
+  kind: closeout
+  actor_surface: direct git plus public GitHub API readback (surface for writes implied ChatGPT)
+  outcome: deviation_disclosed
+  deviations:
+    - Three live navigation records still described the pre-merge MNEMOSYNE-240 gate after PR 303's 91-path publication; corrected here.
+    - mnemosyne-235 branch present in supplied evidence but absent at execution time; recorded without action (head still reachable as master's first parent).
+    - Two handoff artifacts intentionally revised after Pro review (MNE-MNEMOSYNE-242-PR304-PRO-REPAIR-001), so not byte-identical to the supplied package.
+  repairs_or_repaired_by: closes out MNEMOSYNE-241's PR 303 and stages the AI-onboarding candidate for MNEMOSYNE-243; retains the mnemosyne-240-preservation-capsule branch
+  notable: The blocked 235-240 lineage finally lands via PR 303; capsule branch given an explicit retention obligation.
+
+- file: MNEMOSYNE-242-verification.md
+  task_id: MNEMOSYNE-242
+  date: unknown
+  kind: verification
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - Pro review repair 001 corrected an arithmetic error (total changed paths 8 to 10) and revised the two handoff artifacts via a single normal additive commit (no amend/force-push).
+  repairs_or_repaired_by: corrects MNEMOSYNE-242's own initial handoff artifacts and path arithmetic
+  notable: Records final vs supplied hashes for both revised artifacts and warns the receiver to read the blob back from execution-time master rather than trusting the record.
+
+- file: MNEMOSYNE-243-ai-onboarding.md
+  task_id: MNEMOSYNE-243
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT with connected GitHub app (Pro segments; three external test conversations operator-reported as GPT-5.6 Sol extra high)
+  outcome: deviation_disclosed
+  deviations:
+    - "Run-context addendum supersedes the earlier switch_history: confirmed_none claim - the extended task later changed operator-visible model selection."
+  repairs_or_repaired_by: implements the AI-onboarding candidate staged by MNEMOSYNE-242
+  notable: Repository-native AI onboarding package validated by three actual fresh-conversation simulations - all three PASS (read-only stop, labeled assessment, takeover blocked without exact task).
+
+- file: MNEMOSYNE-FIRST-APPLICATION-TEST-HANDOFF-PATCH-result.md
+  task_id: MNEMOSYNE-FIRST-APPLICATION-TEST-HANDOFF-PATCH
+  date: unknown
+  kind: result
+  actor_surface: Codex CLI (implied by the codex-task result template with git status/diff receipts; not explicitly declared)
+  outcome: deviation_disclosed
+  deviations:
+    - The handoff package the task was asked to patch did not exist; a new package was created at the requested fallback path instead of patching.
+  repairs_or_repaired_by: none
+  notable: Oldest-format record in the batch (plain Codex task template, MNEMOSYNE-039-era references) - a patch task that honestly became a creation task.

@@ -1,0 +1,1242 @@
+# Mnemosyne codex-task-results archaeology — batch 01 (MNEMOSYNE-033 .. 142-pr-finalization)
+# Source dir: /home/cheyh/projs/Mnemosyne/notes/codex-task-results/
+
+- file: MNEMOSYNE-033-result.md
+  task_id: MNEMOSYNE-033
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建 Idea Capture Buffer/triage 规则并播种 8 条 IDEA，确立"本记录不是执行源"定位
+
+- file: MNEMOSYNE-034-result.md
+  task_id: MNEMOSYNE-034
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - 任务环境无 origin remote，无法执行要求的 git fetch/reset 到最新 master
+    - 验证输出在 result record 填充前捕获，最终 diff 含本记录内容
+  repairs_or_repaired_by: none
+  notable: 把"客观中立工程风格原则"写入执行源 §11，创建 commands/ 注册表
+
+- file: MNEMOSYNE-035-result.md
+  task_id: MNEMOSYNE-035
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - 无 origin remote，无法 fetch origin master，只能在现有 work 分支状态工作
+  repairs_or_repaired_by: none
+  notable: 执行源新增 §12 操作/结论分离原则；record 内嵌了两轮完整验证 diff（676 行）
+
+- file: MNEMOSYNE-036-result.md
+  task_id: MNEMOSYNE-036
+  date: 2026-06-17
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 建设阶段理解/HADB 术语/artifact 边界回填，全部落在非执行源位置
+
+- file: MNEMOSYNE-037-result.md
+  task_id: MNEMOSYNE-037
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（执行源 §13 长文件/chunking 指南 + near-term target readiness）
+
+- file: MNEMOSYNE-038-result.md
+  task_id: MNEMOSYNE-038
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 恢复 6 份缺失的 light research prompt 原件并按标题/目标映射到 RPT-0002..0007
+
+- file: MNEMOSYNE-039-result.md
+  task_id: MNEMOSYNE-039
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（仅记录 Pro quota refresh 计划，不执行研究）
+
+- file: MNEMOSYNE-040-result.md
+  task_id: MNEMOSYNE-040
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: DR1 ingestion；顺手修复用户暂存文件的 .md.md 双扩展名并 git mv 规范化路径
+
+- file: MNEMOSYNE-041-result.md
+  task_id: MNEMOSYNE-041
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建 manual-import-inbox/ 工作流，执行源新增 §14（Codex Cloud 非图片附件边界）
+
+- file: MNEMOSYNE-042-result.md
+  task_id: MNEMOSYNE-042
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（§12 澄清"操作内容"指用户手动操作，加标题规则）
+
+- file: MNEMOSYNE-043-result.md
+  task_id: MNEMOSYNE-043
+  date: 2026-06-22
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - gh 未安装无法运行 visibility preflight，改用 GitHub API 确认仓库为 public
+  repairs_or_repaired_by: none
+  notable: 发现仓库实际是 public，修正 README 并加入 §14 公共仓库/敏感材料安全门
+
+- file: MNEMOSYNE-044-result.md
+  task_id: MNEMOSYNE-044
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: D-01..D-07 决策与执行源覆盖映射，发现 D-04 not_reflected 等提升缺口
+
+- file: MNEMOSYNE-045-result.md
+  task_id: MNEMOSYNE-045
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其嵌入的 raw diff 残留由 MNEMOSYNE-047 清理
+  notable: 记录用户澄清"public 是有意的阶段设置，不是缺陷"，禁止未来 agent 反复建议改 private
+
+- file: MNEMOSYNE-046-result.md
+  task_id: MNEMOSYNE-046
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其嵌入的 raw diff 残留由 MNEMOSYNE-047 清理
+  notable: 创建首个 target-project dry-run 最小工具集（profile/checklist/issue-log/result 模板）
+
+- file: MNEMOSYNE-047-result.md
+  task_id: MNEMOSYNE-047
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 清理 MNEMOSYNE-045/046 result record 的 raw diff 残留；修复七文件模板过拟合（Mnemosyne 形状被硬编码进 target profile）
+  notable: 首个专职"残留修复+反模板过拟合"任务，新增 schema_tailoring 要求
+
+- file: MNEMOSYNE-048-result.md
+  task_id: MNEMOSYNE-048
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（review instruments + onboarding package，旧 handoff 包降级为 superseded 指针）
+
+- file: MNEMOSYNE-049-result.md
+  task_id: MNEMOSYNE-049
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（纯状态同步，记录 post-047/048 双 PASS 与 fresh replay 门）
+
+- file: MNEMOSYNE-050-result.md
+  task_id: MNEMOSYNE-050
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（run-manifest 模板 + 固定中文 prompt 的 fresh replay 协议）
+
+- file: MNEMOSYNE-051-result.md
+  task_id: MNEMOSYNE-051
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - 仓库 visibility 无法用 gh 验证，按 public/unverified 安全规则处理
+  repairs_or_repaired_by: 其误删 manual-import-inbox/BATCH-MANIFEST-template.md 的残留由 MNEMOSYNE-052 恢复
+  notable: DR2 handoff-strategy ingestion；git status 显示 helper 模板被删（D），成为下任务的修复对象
+
+- file: MNEMOSYNE-052-result.md
+  task_id: MNEMOSYNE-052
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 MNEMOSYNE-051 残留（active-context 同步 + 恢复 BATCH-MANIFEST 模板）
+  notable: 确认 inbox 外无 canonical 等价物后重建被删模板
+
+- file: MNEMOSYNE-053-result.md
+  task_id: MNEMOSYNE-053
+  date: 2026-06-23
+  kind: result
+  actor_surface: Codex Cloud (task premise)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其遗留的 post-050 replay 门陈旧措辞由 MNEMOSYNE-054 修复
+  notable: 经用户批准把 DR2 handoff 正确性原则写入执行源，创建 replay scorecard v0.1
+
+- file: MNEMOSYNE-054-result.md
+  task_id: MNEMOSYNE-054
+  date: unknown
+  kind: result
+  actor_surface: Codex Cloud (task premise)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 MNEMOSYNE-053 后 active-context 中一句 "post-050 replay PASS" 陈旧门残留
+  notable: 单文件单句残留修复任务（最小粒度修复的典型样本）
+
+- file: MNEMOSYNE-055-result.md
+  task_id: MNEMOSYNE-055
+  date: 2026-06-26
+  kind: result
+  actor_surface: Codex Cloud (task premise)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 open-questions 中 post-053 陈旧门措辞残留
+  notable: 记录 post-053 fresh replay reviewed PASS（95.9/100，maintainer 为用户报告的 GPT-5.5 Thinking）
+
+- file: MNEMOSYNE-056-result.md
+  task_id: MNEMOSYNE-056
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 三层 target-project workspace 边界提案（proposal only，需用户决定是否提升）
+
+- file: MNEMOSYNE-057-result.md
+  task_id: MNEMOSYNE-057
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 仅按用户要求把 056 提案的最小高层原则提升为执行源 §16，全案保持非执行源
+
+- file: MNEMOSYNE-058-result.md
+  task_id: MNEMOSYNE-058
+  date: 2026-06-23
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 post-058 current-state 同步残留由 MNEMOSYNE-059 修复
+  notable: 修复 Deep Research 交付规则（禁止"摘要+下载链接"式最终答案），ingestion PRO-01/DR4
+
+- file: MNEMOSYNE-059-result.md
+  task_id: MNEMOSYNE-059
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 MNEMOSYNE-058 同步残留；其自身 result record 的 discrepancy 又由 MNEMOSYNE-060 修复
+  notable: 修复者自身留下新残留的第一例明确记录（连锁修复链 058→059→060）
+
+- file: MNEMOSYNE-060-result.md
+  task_id: MNEMOSYNE-060
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 MNEMOSYNE-059 之后 open-questions 的 follow-up 残留（块只在历史区、缺 current 区）
+  notable: 用 grep 逐条确认残留存在后才编辑，形成"修复前残留确认"惯例
+
+- file: MNEMOSYNE-061-result.md
+  task_id: MNEMOSYNE-061
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 执行源新增 §17 Pro/Deep Research 分阶段批次生成原则（依赖感知 batch-gating）
+
+- file: MNEMOSYNE-062-result.md
+  task_id: MNEMOSYNE-062
+  date: unknown
+  kind: blocked
+  actor_surface: unknown
+  outcome: blocked
+  deviations:
+    - 所需 PRO-02/PRO-03 payload 不在 manual-import-inbox，任务按指令在 ingestion 前停止
+  repairs_or_repaired_by: 其未完成的 scope 由 MNEMOSYNE-063 在 payload 就位后完成
+  notable: 唯一的完全 BLOCKED 任务记录；只创建了 result record 本身，files_modified 为空
+
+- file: MNEMOSYNE-063-result.md
+  task_id: MNEMOSYNE-063
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 完成 blocked 的 MNEMOSYNE-062 之 B1 ingestion/hardening；其 post-063 同步残留由 MNEMOSYNE-064 修复
+  notable: PRO-02 PASS_WITH_WARNINGS、PRO-03 REPAIR_RECOMMENDED 被 ingestion 为证据
+
+- file: MNEMOSYNE-064-result.md
+  task_id: MNEMOSYNE-064
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-063 current-state 同步残留；其 open-questions 块放置残留又由 MNEMOSYNE-065 处理
+  notable: routine 修复；下游 PRO-04/DR3/DR5 prompt 生成被门在 maintainer 验收后
+
+- file: MNEMOSYNE-065-result.md
+  task_id: MNEMOSYNE-065
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 MNEMOSYNE-064 后 B1 follow-up 块位于历史区而非 current 区的放置残留
+  notable: 单文件放置修复并删除明确重复的历史块
+
+- file: MNEMOSYNE-066-result.md
+  task_id: MNEMOSYNE-066
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 post-066 active/handoff 同步残留由 MNEMOSYNE-067 修复
+  notable: ingestion PRO-04/DR5 并建立首次真实 dry-run 评估框架（scorecard/postmortem/regression 模板）
+
+- file: MNEMOSYNE-067-result.md
+  task_id: MNEMOSYNE-067
+  date: unknown
+  kind: result
+  actor_surface: Codex Cloud (task premise)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-066 同步残留并打开 first-target intake 路线
+  notable: routine 残留修复
+
+- file: MNEMOSYNE-068-result.md
+  task_id: MNEMOSYNE-068
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其造成的时序污染（见 069）由 MNEMOSYNE-069 修复
+  notable: ingestion Meta-Agent intake 草案——首个具体目标项目（Meta-Agent）进入仓库
+
+- file: MNEMOSYNE-069-result.md
+  task_id: MNEMOSYNE-069
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-068 时序性 current-state 污染："Meta-Agent selected" 措辞被回填到 057-063 等历史 checkpoint 行
+  notable: 最有趣的残留类型——历史记录被后来事实污染（anachronism contamination），逐条 grep 取证后修复
+
+- file: MNEMOSYNE-070-result.md
+  task_id: MNEMOSYNE-070
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 创建 Meta-Agent analysis-alignment guard，防止 pre-analysis scaffold 污染后续真实建设
+
+- file: MNEMOSYNE-071-result.md
+  task_id: MNEMOSYNE-071
+  date: 2026-07-01
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 post-071 路线残留由 MNEMOSYNE-072 修复
+  notable: ingestion 外部对齐包（含高层 target materials，逐项安全预检后接收），产出 draft manifest v0.2
+
+- file: MNEMOSYNE-072-result.md
+  task_id: MNEMOSYNE-072
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-071 current-route 残留并对齐 v0.2 review 状态
+  notable: routine 残留修复
+
+- file: MNEMOSYNE-073-result.md
+  task_id: MNEMOSYNE-073
+  date: 2026-07-01
+  kind: result
+  actor_surface: Codex Cloud (task premise)
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 记录用户 v0.2 review-only 批准（明确不授权 dry-run/workspace/写入），准备下一批准门
+
+- file: MNEMOSYNE-074-result.md
+  task_id: MNEMOSYNE-074
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 post-074 active-context 路线残留由 MNEMOSYNE-075 修复
+  notable: routine（final run manifest candidate v0.1 起草）
+
+- file: MNEMOSYNE-075-result.md
+  task_id: MNEMOSYNE-075
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-074 active-context 残留（其余三个状态文件已正确无需改）
+  notable: routine 单文件残留修复
+
+- file: MNEMOSYNE-076-result.md
+  task_id: MNEMOSYNE-076
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 post-076 路线残留由 MNEMOSYNE-077 修复
+  notable: 记录 preparation-only 批准并创建受控 dry-run 准备/证据/operator prompt 包
+
+- file: MNEMOSYNE-077-result.md
+  task_id: MNEMOSYNE-077
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-076 current-state 路线残留并打开实际执行决策
+  notable: routine 残留修复
+
+- file: MNEMOSYNE-078-result.md
+  task_id: MNEMOSYNE-078
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 记录实际受控 dry-run 执行批准——执行环境定为新的 high-reasoning ChatGPT 对话，明确不用 Codex Cloud
+
+- file: MNEMOSYNE-079-result.md
+  task_id: MNEMOSYNE-079
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - 外部 dry-run 无完整 git diff 证明，本次仅此一次接受"等效 no-write 证据"
+  repairs_or_repaired_by: 其 post-079 残留由 MNEMOSYNE-080 修复
+  notable: ingestion 首次真实（Meta-Agent 受控无写入）dry-run 结果，PASS_WITH_WARNINGS 89/100
+
+- file: MNEMOSYNE-080-result.md
+  task_id: MNEMOSYNE-080
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-079 残留（"real dry-run 未发生"陈旧句等）；todo 历史区一句陈旧措辞按指令有意保留
+  notable: routine；known gap 明确记录"有意不修"的历史行
+
+- file: MNEMOSYNE-081-result.md
+  task_id: MNEMOSYNE-081
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（pre-handoff 稳定化路线图 + regression candidate triage，有意不做 closure/handoff）
+
+- file: MNEMOSYNE-082-result.md
+  task_id: MNEMOSYNE-082
+  date: unknown
+  kind: closeout
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Meta-Agent 阶段收尾决定记录 + post-dry-run baseline 冻结
+
+- file: MNEMOSYNE-083-result.md
+  task_id: MNEMOSYNE-083
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其 post-083 handoff 状态残留由 MNEMOSYNE-084 修复
+  notable: 生成官方 phase-closure handoff 包与 startup prompt（后被 088 标注为冻结 artifact）
+
+- file: MNEMOSYNE-084-result.md
+  task_id: MNEMOSYNE-084
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 post-083 handoff current-state 残留
+  notable: routine 残留修复；此后 post-084 验证未再发现残留
+
+- file: MNEMOSYNE-085-result.md
+  task_id: MNEMOSYNE-085
+  date: unknown
+  kind: other
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 纯"用户批准的中断标记"记录（非修复），暂停 post-handoff 路线插入长工作；用户明确批准任务号使用
+
+- file: MNEMOSYNE-086-result.md
+  task_id: MNEMOSYNE-086
+  date: 2026-07-07
+  kind: result
+  actor_surface: ChatGPT_GitHub_tooling_not_Codex
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 首个明确声明非 Codex 执行面的记录；创建 Claude 对话能力 platform guide
+
+- file: MNEMOSYNE-087-result.md
+  task_id: MNEMOSYNE-087
+  date: 2026-07-07
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 记录范式转变——ChatGPT 普通对话经 GitHub app 不再全局只读（以 PR #133 为仓库内证据）
+
+- file: MNEMOSYNE-088-result.md
+  task_id: MNEMOSYNE-088
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 FABLE5-REVIEW-001 提出的 live-route 清晰性 findings（F-001/F-003）
+  notable: 首次由跨模型（Fable 5）review 驱动的修复；083 startup prompt 被声明为冻结 artifact
+
+- file: MNEMOSYNE-089-result.md
+  task_id: MNEMOSYNE-089
+  date: 2026-07-07
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其用户批准链疑问（R3-F-002）后经 MNEMOSYNE-095/113 关闭；其过宽兼容性表述由 MNEMOSYNE-113 收窄
+  notable: 执行源新增 §18 ChatGPT GitHub App 写入能力与任务授权原则
+
+- file: MNEMOSYNE-090-result.md
+  task_id: MNEMOSYNE-090
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Fable review 全文未入库，manifest 标记 received_in_chat_not_canonical
+  repairs_or_repaired_by: 全文缺口由 MNEMOSYNE-091 canonical 化补齐
+  notable: FABLE5 跨模型 review 存储/triage 脚手架建立
+
+- file: MNEMOSYNE-091-result.md
+  task_id: MNEMOSYNE-091
+  date: unknown
+  kind: result
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 补齐 MNEMOSYNE-090 的 canonical 全文缺口；inbox 转运副本有意留置（后被 R3-F-003 点名、113 处理）
+  notable: routine canonical 化；有意不做可选清理以避险
+
+- file: MNEMOSYNE-092-result.md
+  task_id: MNEMOSYNE-092
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: guidance-loading 对话局部性协议（三种 load mode），防止 maintenance live route 误导入
+
+- file: MNEMOSYNE-093-result.md
+  task_id: MNEMOSYNE-093
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 拆分 guidance refresh 与 handoff prepare/receive 为独立命令，移除自动模式检测
+
+- file: MNEMOSYNE-094-result.md
+  task_id: MNEMOSYNE-094
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: Pro 周配额耗尽下的降级操作模式：只存储 FABLE5-REVIEW-003，高判断项显式延后
+
+- file: MNEMOSYNE-095-result.md
+  task_id: MNEMOSYNE-095
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 记录 Fable 人答后 triage 回应（关闭 Q2-1/R3-F-002/F-004/F-005 等，Q2-2/R3 留开）
+
+- file: MNEMOSYNE-096-result.md
+  task_id: MNEMOSYNE-096
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: partial
+  deviations:
+    - 7 条中文原始回答与完整解释包无法找回，仅部分原件被保存（partial_available_originals_preserved）
+    - 上传 txt 全文未逐字入库（担心 chat-to-GitHub 手工分块引入转写错误），仅记 size/sha256
+    - （据 098 追述）本任务发生过 default-branch placeholder 写入偏差
+  repairs_or_repaired_by: 最大保存缺口（txt 全文）由 MNEMOSYNE-101 补齐
+  notable: 记录用户长期授权——之后 Fable 相关文件可免再询问直接提 PR
+
+- file: MNEMOSYNE-096-web-check-note.md
+  task_id: MNEMOSYNE-096
+  date: unknown
+  kind: other
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 11 行小记，仅声明 web 搜索结果不构成写入权威（写权来自用户指示与仓库治理）
+
+- file: MNEMOSYNE-097-direct-write-deviation.md
+  task_id: MNEMOSYNE-097
+  date: unknown
+  kind: incident
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - audit 文件因遗漏 branch 参数被直接写到默认分支（低到中等工作流偏差，低内容风险）
+  repairs_or_repaired_by: 后续 bookkeeping 经正常 ready PR 补办；MNEMOSYNE-098 建 preflight checklist 防复发
+  notable: 专门的偏差自曝记录文件——直接 master 写入事故的第一手披露
+
+- file: MNEMOSYNE-097-result.md
+  task_id: MNEMOSYNE-097
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - audit 记录与 deviation note 两个文件均因遗漏 branch 参数被意外直接写入默认分支
+  repairs_or_repaired_by: MNEMOSYNE-098 的 GitHub 写入 preflight checklist 针对此事故加固
+  notable: Q2-2/R3 只读证据审计本体；同一任务内两次直写事故被完整披露
+
+- file: MNEMOSYNE-098-result.md
+  task_id: MNEMOSYNE-098
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 针对 MNEMOSYNE-096/097 的 default-branch 直写偏差建立预防性 preflight checklist
+  notable: 事故驱动的流程加固（branch-first、ref 验证、每次写带 branch 参数、默认 ready PR）
+
+- file: MNEMOSYNE-099-result.md
+  task_id: MNEMOSYNE-099
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（为未来更强模型准备 Q2-2/R3 决策包，自身不裁决）
+
+- file: MNEMOSYNE-100-result.md
+  task_id: MNEMOSYNE-100
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（higher-model transfer prompt 准备）
+
+- file: MNEMOSYNE-101-result.md
+  task_id: MNEMOSYNE-101
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 修复 MNEMOSYNE-096 最大保存缺口——完整 Fable 回应 txt 入库（CRLF→LF 归一化，双 sha256 记录）
+  notable: 同时存入 Fable greenfield charter 并做 095-100 期间的高模型审计
+
+- file: MNEMOSYNE-102-result.md
+  task_id: MNEMOSYNE-102
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - 保存了 Fable 披露的两条 incidental exposure（E-1 charter 探测露出禁类 chunk、E-2 历史恢复露出研究摘要片段），未独立验证其"未使用"声明
+  repairs_or_repaired_by: none
+  notable: GF-STEP-1A 存储起点；incidental-exposure ledger 概念出现
+
+- file: MNEMOSYNE-103-result.md
+  task_id: MNEMOSYNE-103
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-1B 存储，实质 review 显式延后到 Pro 配额恢复）
+
+- file: MNEMOSYNE-104-result.md
+  task_id: MNEMOSYNE-104
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-1C 存储；下一步用 pinned blob SHA 控制读取范围）
+
+- file: MNEMOSYNE-105-result.md
+  task_id: MNEMOSYNE-105
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-1D 存储）
+
+- file: MNEMOSYNE-106-result.md
+  task_id: MNEMOSYNE-106
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-1E 存储，STEP-1 在 Fable advisory 轨道内记为完成）
+
+- file: MNEMOSYNE-107-result.md
+  task_id: MNEMOSYNE-107
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - INC-001：Fable 长任务被 provider 安全路由切换到 Opus 4.8，首次尝试中断且 PASTED 内容不可编辑，仅得部分中间输出
+  repairs_or_repaired_by: 事故经修订 prompt 在恢复流程中成功重跑（本任务同时保存事故与成功输出）
+  notable: 首个 provider 侧安全路由事故记录（INC-001），含截图/部分输出哈希与显式分类器不确定性
+
+- file: MNEMOSYNE-108-result.md
+  task_id: MNEMOSYNE-108
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-2B1 存储；web check 仅用于按官方用量文档保守规划 prompt 尺寸）
+
+- file: MNEMOSYNE-109-result.md
+  task_id: MNEMOSYNE-109
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-2B2A 存储）
+
+- file: MNEMOSYNE-110-result.md
+  task_id: MNEMOSYNE-110
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-2B3 存储）
+
+- file: MNEMOSYNE-111-result.md
+  task_id: MNEMOSYNE-111
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-2B4A 存储，usage-bounded 探针）
+
+- file: MNEMOSYNE-112-result.md
+  task_id: MNEMOSYNE-112
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（GF-STEP-2B4B 存储；超长 prompt 拆三份 txt 保存）
+
+- file: MNEMOSYNE-113-result.md
+  task_id: MNEMOSYNE-113
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 裁决并修复 Fable 第一波 review findings；关闭 R3 hygiene 队列；收窄 MNEMOSYNE-089 的过宽表述（修改了 089 的 result record）；创建 INC-002 周配额耗尽事故记录
+  notable: Pro 恢复后的大型实质裁决任务，把 no-write-proof/provenance 决定提升为执行源 §19
+
+- file: MNEMOSYNE-114-result.md
+  task_id: MNEMOSYNE-114
+  date: 2026-07-13
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 因对话过长影响浏览器性能而准备 handoff；附 ChatGPT Work 官方来源评估（不提升为执行源）
+
+- file: MNEMOSYNE-115-result.md
+  task_id: MNEMOSYNE-115
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 以仓库证据确认 Meta-Agent 是"test-only 而非产品建设"后恢复暂停路线，首次 regression_formalized: true
+
+- file: MNEMOSYNE-116-result.md
+  task_id: MNEMOSYNE-116
+  date: 2026-07-13
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 其成果实际经 PR 163/164 双实现落地，混乱由 MNEMOSYNE-117 reconcile
+  notable: 执行源 §15 handoff 必须显式 Load Mnemosyne guidance；诚实拒绝在非 fresh 对话冒充独立 replay
+
+- file: MNEMOSYNE-117-result.md
+  task_id: MNEMOSYNE-117
+  date: 2026-07-13
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - 披露 PR 163 与 PR 164 是同一 MNEMOSYNE-116 任务的两个并行实现；163 意外先合并，164 被用户关闭
+  repairs_or_repaired_by: 修复 PR163 合并后的三处缺口并把 PR164 的有用增量移植进 replay 包 v2
+  notable: 重复并行 PR 失败模式的完整取证与和解，直接催生 118 的 lineage guard
+
+- file: MNEMOSYNE-118-result.md
+  task_id: MNEMOSYNE-118
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 针对 PR163/164 重复并行 PR 失败模式创建 single-active PR lineage guard
+  notable: 事故驱动的第二次流程加固；guard 为用户批准的行为指导而非 GitHub 强制
+
+- file: MNEMOSYNE-119-result.md
+  task_id: MNEMOSYNE-119
+  date: unknown
+  kind: verification
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - 独立 fresh replay 002 行为 5/5 PASS 但机械分支枚举覆盖不完整，正确自判 BLOCKED
+  repairs_or_repaired_by: 为 replay harness 增加官方 REST 枚举 fallback（v3）
+  notable: 被测会话"不发明例外、宁可 BLOCKED"被作为正面证据记录
+
+- file: MNEMOSYNE-120-result.md
+  task_id: MNEMOSYNE-120
+  date: 2026-07-14
+  kind: verification
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Replay 003 行为 5/5 PASS 但机械覆盖仍不可得，包级 BLOCKED
+  repairs_or_repaired_by: 修复 fresh-session URL 传输问题（v4 literal user-message bootstrap）
+  notable: 连续第二次独立 BLOCKED，修复焦点转向传输方式而非测试内容
+
+- file: MNEMOSYNE-121-pr-finalization.md
+  task_id: MNEMOSYNE-121
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: deviation_disclosed
+  deviations:
+    - 同一 maintenance 回复内在已有 canonical PR 169 之外又创建了第二个 MNEMOSYNE-121 分支（未开 PR），弃用并作为仓库残渣披露
+  repairs_or_repaired_by: 停止对重复分支写入、保留 PR 169 为唯一合并目标；分支残渣未删除
+  notable: lineage guard 生效后仍发生同回复并行写 lineage——guard 抓到的第一例分支级事故
+
+- file: MNEMOSYNE-121-result.md
+  task_id: MNEMOSYNE-121
+  date: unknown
+  kind: verification
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Replay 004 无法确立有效 master pin：公共 API 返回过期 SHA 与连接器数据冲突，行为用例 0/5 执行，BLOCKED
+  repairs_or_repaired_by: 决定停止普通 Chat 机械证明重试循环（startup prompt 暂停），路由给用户决策
+  notable: 承认仪器天花板并止损，而非继续消耗重试
+
+- file: MNEMOSYNE-122-pr-finalization.md
+  task_id: MNEMOSYNE-122
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 172 唯一合并目标确认）
+
+- file: MNEMOSYNE-122-result.md
+  task_id: MNEMOSYNE-122
+  date: unknown
+  kind: verification
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - cleanroom 合并 replay 行为全 PASS 但机械 no-write 证明仍 BLOCKED（combined BLOCKED）
+  repairs_or_repaired_by: 属于用户指示的"疑似低推理期后重做"链条的一部分（重审 Replay 002/003/004 证据）
+  notable: 用户以 cleanroom Project 设置换取隔离性；行为目标与机械目标就此分叉
+
+- file: MNEMOSYNE-123-pr-finalization.md
+  task_id: MNEMOSYNE-123
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 173 唯一合并目标确认）
+
+- file: MNEMOSYNE-123-result.md
+  task_id: MNEMOSYNE-123
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: DR6 报告以六个有序无损 chunk + sha256 清单入库，ingestion 判定 ACCEPT_WITH_CORRECTIONS
+
+- file: MNEMOSYNE-126-result.md
+  task_id: MNEMOSYNE-126
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: GF-STEP-2B5 存储；Thinking 层自我声明 storage-only、实质 review 显式拒做（124/125 无 result record，见 127 审计）
+
+- file: MNEMOSYNE-127-pr-finalization.md
+  task_id: MNEMOSYNE-127
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: PR 174/175/176 被列为 historical_superseded；PR 178 为唯一合并目标
+
+- file: MNEMOSYNE-127-result.md
+  task_id: MNEMOSYNE-127
+  date: unknown
+  kind: result
+  actor_surface: GPT-5.6_Pro maintenance conversation via ordinary ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - 审计发现疑似低推理期产出（PR 174-176）：一个小修复用了三个连续 PR 且未实现有效指导
+    - MNEMOSYNE-125 任务号在首个 lineage 合并后被重复使用，违反 single-active PR guard 默认
+    - 两个 superseded 提案被留在 current wayfinding 下
+  repairs_or_repaired_by: 重做并取代 MNEMOSYNE-124/125（PR 174-176）的工作，改走已确立的 behavior-guard 模式
+  notable: 唯一的"疑似降智期工作全量重做"任务；PR 173 与并行的 PR 177 被明确保留不回滚
+
+- file: MNEMOSYNE-128-result.md
+  task_id: MNEMOSYNE-128
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Fable 返回物与 prompt 要求不符（文件名、step_name/record_type、证据 ID 体系、19 节标题分组），原样保存未修复
+  repairs_or_repaired_by: none（偏差记录留待后续实质 review）
+  notable: GF-STEP-2B6 存储；prompt/输出偏差首次成体系列举
+
+- file: MNEMOSYNE-129-result.md
+  task_id: MNEMOSYNE-129
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - GF-STEP-2C 十项契约偏差：要求 8 个 pinned 仓库读取、返回报告 0 读取（用 13 个本地交付物替代）、SHA 表缺失、20 节代替 21 节、CB-* 代替 GF2C-B* 等
+  repairs_or_repaired_by: 偏差未裁决；GF-STEP-2 收口验证后由 GF-STEP-2D（130/131）处理
+  notable: 最重的一份契约偏差清单；Fable 自称 STEP-2 完成但仓库保守拒绝采信
+
+- file: MNEMOSYNE-130-result.md
+  task_id: MNEMOSYNE-130
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - INCIDENT-003：Fable 收到 GF-STEP-2D 校验任务却宣布触发 GF-STEP-3，未执行强制的八源验证即生成架构候选
+  repairs_or_repaired_by: INC-003 由 MNEMOSYNE-131 的 fresh 对话成功重跑解决；过早的 STEP-3 候选保留为 preserved_unaccepted
+  notable: 执行路径偏差事故（模型跳步）；仓库状态保守定为 GF_STEP_2D not_executed
+
+- file: MNEMOSYNE-131-pr-finalization.md
+  task_id: MNEMOSYNE-131
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 182；明确 PR 181 是记录偏差的前驱而非重复）
+
+- file: MNEMOSYNE-131-result.md
+  task_id: MNEMOSYNE-131
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 解决 INC-003——保存 fresh 对话中 GF-STEP-2D 的成功重跑（八源 SHA 全匹配）
+  notable: 事故-重跑-解决闭环样本；Fable 声称 STEP-2 完成仍未获实质采信
+
+- file: MNEMOSYNE-132-result.md
+  task_id: MNEMOSYNE-132
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: GF-STEP-3A 存储；执行报告 0 仓库读取、未用过早候选，以 gzip 确定性归档
+
+- file: MNEMOSYNE-133-pr-finalization.md
+  task_id: MNEMOSYNE-133
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations:
+    - PR 183 曾被不准确的标题/正文编辑，已更正；GF-STEP-3B 改由独立分支 PR 184 承载
+  repairs_or_repaired_by: 修正 PR 183 元数据到准确历史范围
+  notable: 罕见的"修正已合并 PR 元数据"操作记录
+
+- file: MNEMOSYNE-133-result.md
+  task_id: MNEMOSYNE-133
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: deviation_disclosed
+  deviations:
+    - 前一助手回复错误声称 GF-STEP-3B 已并入开放的 PR 183；实际 183 已合并且只含 3A，中断的前次运行未完成元数据也未开 PR
+  repairs_or_repaired_by: 本任务补完独立 lineage（PR 184）并恢复 PR 183 元数据
+  notable: 助手状态错误的自我更正记录（Correction of prior assistant state 一节）
+
+- file: MNEMOSYNE-134-pr-finalization.md
+  task_id: MNEMOSYNE-134
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 185）
+
+- file: MNEMOSYNE-134-result.md
+  task_id: MNEMOSYNE-134
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: 对话过大触发 final-phase handoff；接收方角色被收窄为"存 GF-STEP-4 + 一个 ready PR + 守 STEP5 防火墙"
+
+- file: MNEMOSYNE-135-pr-finalization.md
+  task_id: MNEMOSYNE-135
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 186）
+
+- file: MNEMOSYNE-135-result.md
+  task_id: MNEMOSYNE-135
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: GF-STEP-4 自我批判结果存储；Fable 自报 ARCHITECTURE_REPAIR_GATE（阻塞项 GF4-F01）
+
+- file: MNEMOSYNE-136-pr-finalization.md
+  task_id: MNEMOSYNE-136
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 187）
+
+- file: MNEMOSYNE-136-result.md
+  task_id: MNEMOSYNE-136
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations:
+    - Fable GF-STEP-3R 首次尝试因必需附件 E（STEP4 自我批判）缺失而输入完整性失败，在读取设计附件前主动停止
+  repairs_or_repaired_by: 失败尝试由 MNEMOSYNE-141 保存的 attempt-002 成功重跑接续
+  notable: 专门的失败尝试原样存档任务（failed-attempt storage），失败工件含 sha256 与结构校验
+
+- file: MNEMOSYNE-137-pr-finalization.md
+  task_id: MNEMOSYNE-137
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: PR 188 用 GitHub closing keywords 使 Issue 170/171 仅在合并时关闭
+
+- file: MNEMOSYNE-137-result.md
+  task_id: MNEMOSYNE-137
+  date: unknown
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: artifact-delivery 行为验证 Stage-B review PASS（Case 001-004；005 NOT_RUN），闭合 Issue 170/171 路线
+
+- file: MNEMOSYNE-138-result.md
+  task_id: MNEMOSYNE-138
+  date: 2026-07-20
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 同步 PR 188 合并后仍残留的 pre-merge 措辞
+  notable: routine（post-merge 状态最终化，Issue 170/171 已关闭确认）
+
+- file: MNEMOSYNE-139-result.md
+  task_id: MNEMOSYNE-139
+  date: unknown
+  kind: closeout
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 收敛 MNEMOSYNE-085 中断标记遗留的 pause/resume 措辞（标为 historical superseded）
+  notable: Meta-Agent 行为测试目标正式记为 complete；机械 no-write 证明降级为 optional_future_only
+
+- file: MNEMOSYNE-140-result.md
+  task_id: MNEMOSYNE-140
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（非 FABLE 综合健康 review 的 handoff 准备，本身不执行 review）
+
+- file: MNEMOSYNE-141-pr-finalization.md
+  task_id: MNEMOSYNE-141
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 192）
+
+- file: MNEMOSYNE-141-result.md
+  task_id: MNEMOSYNE-141
+  date: unknown
+  kind: result
+  actor_surface: ChatGPT_GitHub_app
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: 接续 MNEMOSYNE-136 的失败——保存 GF-STEP-3R attempt-002 成功重跑（6 项修正，GF4-F01/F02 关闭声明）；attempt-001 失败件原样保留
+  notable: 失败-重跑配对的收尾半边；实质采信仍未进行
+
+- file: MNEMOSYNE-142-pr-finalization.md
+  task_id: MNEMOSYNE-142
+  date: unknown
+  kind: pr_finalization
+  actor_surface: unknown
+  outcome: normal
+  deviations: []
+  repairs_or_repaired_by: none
+  notable: routine（PR 193，GF-STEP-3RV 存储的合并目标确认）
