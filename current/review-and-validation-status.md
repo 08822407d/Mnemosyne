@@ -1,7 +1,7 @@
 # Review and Validation Status
 
 > Non-execution-source live wayfinding record. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
-> last_updated_by_task: MNEMOSYNE-244（2026-08-26，修正 greenfield 过期段并登记第二轮评审）。失效声明：下一个改变评审/验证状态的任务必须更新本文件，否则须在其结果记录中说明为何不更新（FABLE5-REVIEW2-001 R2-FRESH-006 最低成本机制）。
+> last_updated_by_task: MNEMOSYNE-248（2026-08-26，登记二轮轨道归档与批次一实施完成）。失效声明：下一个改变评审/验证状态的任务必须更新本文件，否则须在其结果记录中说明为何不更新（FABLE5-REVIEW2-001 R2-FRESH-006 最低成本机制）。
 
 ## Current maintenance review state
 
@@ -21,10 +21,10 @@ first_wave_fable_review:
 second_wave_fable_review:
   reviews:
     - FABLE5-REVIEW2-001
-  track_status: review_phases_complete_implementation_in_progress
+  track_status: complete_and_archived_via_PR_306_merge
   joint_cooperation_confirmation: notes/cross-model-review-results/FABLE5-REVIEW2-001/07-pro-handover/05-owner-final-adjudication-record.md
-  spec_revision_implementation: MNEMOSYNE-247_merged_PR_307
-  track_pr: PR_306_draft_disposition_pending_owner
+  implementation_completed: [MNEMOSYNE-247_PR_307, MNEMOSYNE-244_PR_308, MNEMOSYNE-245_PR_309, MNEMOSYNE-246_PR_310, MNEMOSYNE-248_platform_guides]
+  implementation_queue_remaining: [task6_risk_distribution_register, task7_gpt_side_exp_counterparts, open_design_review_assignment_policy]
 
 greenfield_track:
   track_id: FABLE5-GREENFIELD-001
