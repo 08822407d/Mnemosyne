@@ -137,3 +137,13 @@ Checked on 2026-08-15:
 - Anthropic Help Center — `What is the Max plan?`
 
 The exact current UI route in §1 is Owner-observed evidence and is intentionally not represented as an official universal product guarantee.
+
+## 8. GitHub-side app authorization vs installation（addendum 2026-08-28, MNEMOSYNE-251）
+
+Owner-observed on the Owner's account（截图证据，2026-08-28）：
+
+- GitHub 对 App 有两个独立层：**Authorized GitHub Apps**（授权 App 代表用户行动）与 **Installed GitHub Apps**（安装进账号并圈定仓库范围）。Anthropic 的 `Claude` App（slug `claude`，owner `anthropics`——经 `gh api /apps/claude` 核实）在仅完成 claude.ai 连接器 OAuth 时只出现在前者。
+- 公开仓库：仅授权层即可被 Claude 网页读取（Owner 此前对 Mnemosyne 的文件夹选择即在此状态下成功）。
+- **私有仓库：需要安装层的仓库授予**——经 <https://github.com/apps/claude> 安装、选 "Only select repositories" 并勾选目标私库；此后该 App 与仓库范围在 Installed GitHub Apps 页可配置。Owner 已于 2026-08-28 按此为私库 Alaya 完成配置。
+- 各厂商 App 的安装与仓库范围**互不相通**（ChatGPT 的连接器授权不覆盖 Claude，反之亦然）。
+- claim scope：本节为该账号当期观察＋GitHub 文档化模型；产品接入流程属时效事实，复核触发同 §6。
