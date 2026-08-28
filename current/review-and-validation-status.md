@@ -23,8 +23,9 @@ second_wave_fable_review:
     - FABLE5-REVIEW2-001
   track_status: complete_and_archived_via_PR_306_merge
   joint_cooperation_confirmation: notes/cross-model-review-results/FABLE5-REVIEW2-001/07-pro-handover/05-owner-final-adjudication-record.md
-  implementation_completed: [MNEMOSYNE-247_PR_307, MNEMOSYNE-244_PR_308, MNEMOSYNE-245_PR_309, MNEMOSYNE-246_PR_310, MNEMOSYNE-248_PR_311, MNEMOSYNE-249_PR_312]
-  implementation_queue_remaining: [task7_gpt_side_exp_counterparts, open_design_review_assignment_policy]
+  implementation_completed: [MNEMOSYNE-247_PR_307, MNEMOSYNE-244_PR_308, MNEMOSYNE-245_PR_309, MNEMOSYNE-246_PR_310, MNEMOSYNE-248_PR_311, MNEMOSYNE-249_PR_312, MNEMOSYNE-251_PR_314_package, MNEMOSYNE-252_task7_results]
+  implementation_queue_remaining: [open_design_review_assignment_policy]
+  cross_family_experiment_results: notes/cross-family-experiments/MNEMOSYNE-252-gpt-side-exp3-exp5-results.md
 
 greenfield_track:
   track_id: FABLE5-GREENFIELD-001
