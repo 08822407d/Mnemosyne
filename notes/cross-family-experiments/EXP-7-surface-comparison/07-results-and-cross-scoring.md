@@ -65,3 +65,18 @@ Fable 复审后客观合计：A 10（若 Owner 判 R12 外框可豁免）或 9�
 - C-19（Claude）：05 号试跑记录 A 臂表面名称误写为"ChatGPT-网页"（应为 Claude 网页）——provenance 文案错误，异族盲评抓出，本任务更正。
 - P-15（GPT，正面）：盲评严格按细则字面执行、机械钉住并复核 SHA、证据类别五分、提出 9 条细则缺陷、抓出评分者的 provenance 笔误。
 - 本实验判定"无明显表面差异"并入设计稿 H 素材表待补行（#316 合并后）。
+
+## 7. Owner 裁定与操作层失误补记（2026-08-30，MNEMOSYNE-257 追加）
+
+**裁定**：A-R12 分歧，Owner 裁定"章程外框（§12 的开头/结尾节）应豁免"→ A 臂 R12 = PASS。修正后客观项：Fable 计 A 11 / B 10（Fable 让步 A-R1、B-R7 后）；Pro 计 A 10 / B 10。判定不变。
+
+**Owner 指出的两处实验操作失误（均有现行条文，Fable 未加载）**：
+
+| # | 失误 | 现行条文 | 后果 |
+|---|---|---|---|
+| 1 | A 臂准备步骤让 Owner 在 Claude Project 的 GitHub 选择器里逐个勾选 5 个文件 | `current/claude-github-work-surface-facts.md` §1（一次选定专用文件夹 `project-knowledge/<任务>/`）；`notes/research-operations/claude-fable5-project-knowledge-research-v0.4.md`（Project 同步流程） | Owner 手工动作 ×5 |
+| 2 | A 臂任务书与 Pro 盲评提示词都未要求执行者生成"完整回复转移文件"，Owner 须多发一条消息索要可下载件 | `current/artifact-delivery-and-direct-generation-guard.md` 第 41 行（逐字预言了此失败模式）与"Complete-response transfer file"定义；loader 第 19/21 条（回传路线） | 两个外部对话各多耗一轮额度 |
+
+**根因**：本会话自始未执行分层加载调度；起草交由其他对话执行的任务书（Pro 交接包、RUN A~E、历史复盘、EXP-7 A 臂、Pro 盲评共 5 次）均属"跨对话任务设计/交付"触发条件，应读 cross-conversation guard 与 artifact-delivery guard，一次未读。**记为分层加载 shadow pilot 第一起漏载事件**（登记于 guard-registry 头部 pilot_miss_log），由试点执行者本人所犯。
+
+**处置**：(a) loader 触发表在"跨对话任务设计/交付"行显式加注"含起草交由其他对话执行的任务书；同时读 artifact-delivery guard 的完整回复转移文件条款"——非新规则，仅调度提示；(b) 登记簿 C-20；(c) 自下一个跨对话任务包（重新设计第 0 步）起：材料统一复制到 `project-knowledge/<任务号>/` 供一次勾选；任务书末尾固定要求"以可下载文件交付完整回复"。

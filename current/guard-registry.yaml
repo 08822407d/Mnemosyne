@@ -19,6 +19,14 @@
 # last_consolidation: none_yet（本表创建即基线）
 #
 # layered_loading_status: shadow_pilot_first_cycle（调度表见 commands/load-mnemosyne-guidance.md）
+#
+# shadow_pilot_miss_log:
+#   - date: 2026-08-30
+#     tasks: MNEMOSYNE-251/253/254/256（跨对话任务包起草）
+#     missed_guards: [artifact-delivery-and-direct-generation, cross-conversation-execution-intent-and-operator-flow]
+#     consequence: 任务书未要求完整回复转移文件；未用 project-knowledge 专用文件夹 → Owner 多耗动作与额度
+#     caught_by: Owner（登记簿 C-20）
+#     disposition: loader 触发行加注调度提示（非新规则）；执行者自纠
 
 guards:
   - guard_id: MNEMOSYNE-USER-OPERATION-NEXT-STEP-CAPABILITY-INTENT-001

@@ -36,7 +36,7 @@ Loading is layered per `current/guard-registry.yaml` (navigation index; authorit
 | Branch or PR creation, or repository write planning | `current/github-single-active-pr-lineage-guard.md` |
 | GitHub/connected-repository write, or important publication record | `current/run-context-and-pr-provenance-guard.md` |
 | Artifact generation or file delivery | `current/artifact-delivery-and-direct-generation-guard.md` |
-| Cross-conversation task design/delivery, or external task launch | `current/cross-conversation-execution-intent-and-operator-flow-guard.md` |
+| Cross-conversation task design/delivery, or external task launch — including authoring any taskbook to be executed by another conversation (also read the complete-response transfer-file clause of `current/artifact-delivery-and-direct-generation-guard.md`) | `current/cross-conversation-execution-intent-and-operator-flow-guard.md` |
 | Naming an external research run | `current/external-research-display-name-guard.md` |
 | Deep Research task design or delivery | `current/deep-research-report-delivery-correction-guard.md` |
 | Material source-file intake, or major design choice | `current/source-artifact-preservation-and-design-rationale-guard.md` |
