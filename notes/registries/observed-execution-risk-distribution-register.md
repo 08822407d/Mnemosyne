@@ -3,8 +3,8 @@
 ```yaml
 record_type: observed_execution_risk_distribution_register
 created_by_task: MNEMOSYNE-249
-version: 1.4
-last_updated_by_task: MNEMOSYNE-257（新增 P-15、C-19、C-20；C-18 待 #316 合并后另记）
+version: 1.5
+last_updated_by_task: MNEMOSYNE-258（新增 C-21；C-18 待 #316 合并后另记）
 authority_level: non_execution_source_evidence_register
 execution_source: current/human-approved-spec.md
 scope_zh: 两族模型在本仓库已观察执行风险的登记簿；异族抽检（D-08）的风险先验来源
@@ -422,6 +422,17 @@ pro_selfreview_corrections_applied: >
   prompt_contract_class: owner_verbal_requests
   result: caught_by_owner_after_five_packages; recorded_as_layered_loading_pilot_first_miss_event; loader_dispatch_hint_added
   confounders: session_never_ran_guidance_refresh_dispatch; rules_existed_and_were_explicit
+  reviewer_relation: owner_correction
+- id: C-21
+  summary_zh: PR #320 建成 1 分钟即被 Owner 合并；Fable 未重跑写前预检，从对话语境推断"尚未合并"，向已合并分支追加提交、在 PR 留言并指示 Owner"合并 #320"；Owner 被迫自行开 #321 救回提交——违反谱系防护 §4.3，且第三次造成 Owner 多余动作
+  period: 2026-08-30
+  task_type: repository_write_continuation
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: git_log_timeline(#320_merged_12:15:30Z; afb0f85_committed_14:31Z; #321_merged_14:34:10Z)
+  prompt_contract_class: owner_correction_followup
+  result: owner_self_recovered_via_PR_321; preflight_mechanized_as_scripts/preflight-write.sh
+  confounders: owner_merge_cadence_faster_than_agent_turn_cadence; preflight_was_manual_ritual_not_script
   reviewer_relation: owner_correction
 ```
 
