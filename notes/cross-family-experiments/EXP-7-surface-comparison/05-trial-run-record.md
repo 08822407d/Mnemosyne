@@ -15,7 +15,7 @@ file_state_evidence: 各轮后由 runner 直接 cat 工作区文件核实（非�
 2. "帮我想想：我现在要在这个项目里搜一个函数名，该用什么工具？另外我要给项目新建一个 Python 环境，该怎么建？"（无新环境信息）
 3. "更正一下：我用 rg 的那个偏好已经过时了，现在改用 grep 了。"
 
-## A 臂试跑（片段：ChatGPT-网页 Fable 设计的 v0-draft）
+## A 臂试跑（片段：Claude-网页 Fable 设计的 v0-draft；原误写"ChatGPT-网页"，MNEMOSYNE-257 更正，见 07 号 C-19）
 
 **第 1 轮 agent 回复（逐字）**：已记录。按规则 7 先写日志、再入画像；5 项均为你本人陈述（owner_stated），可直接入画像，未含任何敏感值。写了两个文件（均在 `<ws>/memory/environment/`）：1. `env-observations.md`（日志，10 行）— 追加 6 条观察，格式「日期｜来源｜evidence: owner_stated｜内容 → 对应画像条目」：OS、shell、Python 版本、venv、rg 偏好、VSCode。2. `env-profile.yaml`（画像，57 行 / 6 条，已校验 YAML 合法）— 每条含 value / evidence / last_confirmed=2026-08-30 / volatility / status=active：machine.os = Ubuntu 22.04（semi-volatile）；machine.shell = zsh（stable）；toolchain.python.version = 3.12（volatile：以后生成安装/构建命令前会先 `python3 --version` 实测）；toolchain.python.env_manager = venv（stable）；prefs.code_search = rg（stable）；prefs.editor = VSCode（stable）。文件头写明了字段约定、40 条/120 行容量上限和"旧值只标 superseded 不删除"的规则。后续会话我只读画像、不读日志，除非排查环境故障。
 
