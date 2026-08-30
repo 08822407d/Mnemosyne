@@ -3,8 +3,8 @@
 ```yaml
 record_type: observed_execution_risk_distribution_register
 created_by_task: MNEMOSYNE-249
-version: 1.1
-last_updated_by_task: MNEMOSYNE-252（新增 P-13、C-16）
+version: 1.2
+last_updated_by_task: MNEMOSYNE-254（新增 P-14、C-17）
 authority_level: non_execution_source_evidence_register
 execution_source: current/human-approved-spec.md
 scope_zh: 两族模型在本仓库已观察执行风险的登记簿；异族抽检（D-08）的风险先验来源
@@ -175,6 +175,17 @@ pro_selfreview_corrections_applied: >
   prompt_contract_class: sealed_probe_taskbook_with_embedded_scope_step_contradiction
   result: ideal_clean_failure_exposed_and_stopped
   confounders: drill_awareness_possible; n_of_1
+  reviewer_relation: cross_family_scored(Fable)
+- id: P-14
+  summary_zh: 正面条目——两个月建设史独立复盘的证据纪律：104 个证据标签、全读/抽读清单、自报薄弱结论、对无法核实的数字标 UNKNOWN 而非附和，并纠正了异族评估的六处绝对化表述
+  period: 2026-08-29
+  task_type: history_retrospective_two_phase_blind
+  surface: chatgpt_web_pro_fresh_conversation_github_connector
+  operator_selection: operator_reported_pro_tier
+  actual_executor_evidence: owner_relayed_files_sha256_recorded_plus_mechanical_spot_checks(dates_counts_timeline)
+  prompt_contract_class: two_phase_blind_prompt_package(MNEMOSYNE-254)
+  result: no_fabrication_signals; six_reviewer_overstatements_corrected; two_new_hard_constraints_contributed
+  confounders: sampled_20_of_82_conversations; self_review_of_own_family_history
   reviewer_relation: cross_family_scored(Fable)
 - id: P-12
   summary_zh: 静默参数回落且直写 master（MNEMOSYNE-204＋097）
@@ -368,6 +379,17 @@ pro_selfreview_corrections_applied: >
   result: self_caught_at_scoring_time_disclosed_in_results_report(MNEMOSYNE-252)
   confounders: rubric_stored_in_track_and_local_archive_not_reread_at_package_time
   reviewer_relation: same_family_self_caught_on_reread
+- id: C-17
+  summary_zh: 对 GPT 主导期的五点诊断含六处绝对化表述（零产品/无落地/从未写成结果标准/六代全由事故驱动/8 月才首测/非决策拉动/无一次异议），经异族两段式盲评纠正后修订为 v2
+  period: 2026-08-29
+  task_type: retrospective_diagnosis_for_owner
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: session_jsonl_plus_MNEMOSYNE-254_comparison_record
+  prompt_contract_class: owner_open_question_assessment
+  result: corrected_in_v2_all_six_accepted; underlying_numbers_verified_language_overgeneralized
+  confounders: same_family_archaeology_numbers_correct_but_absolute_wording; reviewer_family_evaluating_rival_family
+  reviewer_relation: cross_family_caught(GPT_Pro_blind_phase_then_phase2)
 ```
 
 ## 三、跨族共同观察与已验证对冲
