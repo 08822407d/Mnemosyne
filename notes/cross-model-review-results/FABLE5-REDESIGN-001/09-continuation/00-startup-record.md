@@ -39,6 +39,8 @@ github_write_lineage_preflight:
     open_pr_changed_paths_vs_authorized_paths: empty   # #316 改 current/review-and-validation-status.md、notes/cross-family-cooperation/MNEMOSYNE-253-*.md、notes/registries/project-research-display-name-registry-v0.1.md；与本轨道两目录无交集
     existing_result_records_or_task_artifacts: ["notes/cross-model-review-results/FABLE5-REDESIGN-001/00-work-order.md"]
   decision: create_new_lineage
+canonical_pr_number: 323   # Draft，建前按 §5 复查：open PR 仅 #316，无同 head 分支 PR
+first_commit: 142e66d
 authorized_paths:
   - notes/cross-model-review-results/FABLE5-REDESIGN-001/
   - project-knowledge/FABLE5-REDESIGN-001/
