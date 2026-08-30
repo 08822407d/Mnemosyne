@@ -3,8 +3,8 @@
 ```yaml
 record_type: observed_execution_risk_distribution_register
 created_by_task: MNEMOSYNE-249
-version: 1.3
-last_updated_by_task: MNEMOSYNE-257（新增 P-15、C-19；C-18 待 #316 合并后另记）
+version: 1.4
+last_updated_by_task: MNEMOSYNE-257（新增 P-15、C-19、C-20；C-18 待 #316 合并后另记）
 authority_level: non_execution_source_evidence_register
 execution_source: current/human-approved-spec.md
 scope_zh: 两族模型在本仓库已观察执行风险的登记簿；异族抽检（D-08）的风险先验来源
@@ -412,6 +412,17 @@ pro_selfreview_corrections_applied: >
   result: caught_by_cross_family_blind_scorer; corrected_by_MNEMOSYNE-257; two_of_three_scoring_disagreements_conceded
   confounders: hand_written_provenance_field; sampled_citation_check_instead_of_full_enumeration
   reviewer_relation: cross_family_caught(GPT_Pro_blind_scoring)
+- id: C-20
+  summary_zh: 起草交由其他对话执行的任务包（Pro 交接包、RUN A~E、历史复盘、EXP-7 A 臂、Pro 盲评）时未加载 cross-conversation 与 artifact-delivery 两份防护——漏掉"完整回复转移文件"要求（guard 第 41 行逐字预言的失败模式）与 project-knowledge 专用文件夹惯例；Owner 多耗动作与额度
+  period: 2026-08-23_to_2026-08-30
+  task_type: cross_conversation_task_package_authoring
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: session_jsonl; repo taskbooks lacking transfer-file clause
+  prompt_contract_class: owner_verbal_requests
+  result: caught_by_owner_after_five_packages; recorded_as_layered_loading_pilot_first_miss_event; loader_dispatch_hint_added
+  confounders: session_never_ran_guidance_refresh_dispatch; rules_existed_and_were_explicit
+  reviewer_relation: owner_correction
 ```
 
 ## 三、跨族共同观察与已验证对冲
