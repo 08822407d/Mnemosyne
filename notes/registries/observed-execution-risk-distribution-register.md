@@ -3,8 +3,8 @@
 ```yaml
 record_type: observed_execution_risk_distribution_register
 created_by_task: MNEMOSYNE-249
-version: 1.2
-last_updated_by_task: MNEMOSYNE-254（新增 P-14、C-17）
+version: 1.3
+last_updated_by_task: MNEMOSYNE-257（新增 P-15、C-19；C-18 待 #316 合并后另记）
 authority_level: non_execution_source_evidence_register
 execution_source: current/human-approved-spec.md
 scope_zh: 两族模型在本仓库已观察执行风险的登记簿；异族抽检（D-08）的风险先验来源
@@ -176,6 +176,17 @@ pro_selfreview_corrections_applied: >
   result: ideal_clean_failure_exposed_and_stopped
   confounders: drill_awareness_possible; n_of_1
   reviewer_relation: cross_family_scored(Fable)
+- id: P-15
+  summary_zh: 正面条目——EXP-7 盲评：严格按冻结细则字面打分、机械钉住并复核 master SHA、五类证据标注、提出 9 条细则缺陷、抓出评分者记录中的 provenance 笔误（C-19）
+  period: 2026-08-30
+  task_type: blind_scoring_of_cross_surface_experiment
+  surface: chatgpt_web_pro_fresh_conversation_github_connector
+  operator_selection: operator_reported_pro_tier
+  actual_executor_evidence: owner_relayed_file_sha256_recorded_plus_sha_and_findings_mechanically_verified
+  prompt_contract_class: blind_scoring_prompt(MNEMOSYNE-256)
+  result: independent_verdict_matched_fable(no_surface_difference); three_objective_item_disagreements_two_conceded_by_fable
+  confounders: scorer_tier_operator_reported; rubric_ambiguities_documented_by_scorer
+  reviewer_relation: cross_family_blind_scoring
 - id: P-14
   summary_zh: 正面条目——两个月建设史独立复盘的证据纪律：104 个证据标签、全读/抽读清单、自报薄弱结论、对无法核实的数字标 UNKNOWN 而非附和，并纠正了异族评估的六处绝对化表述
   period: 2026-08-29
@@ -390,6 +401,17 @@ pro_selfreview_corrections_applied: >
   result: corrected_in_v2_all_six_accepted; underlying_numbers_verified_language_overgeneralized
   confounders: same_family_archaeology_numbers_correct_but_absolute_wording; reviewer_family_evaluating_rival_family
   reviewer_relation: cross_family_caught(GPT_Pro_blind_phase_then_phase2)
+- id: C-19
+  summary_zh: EXP-7 试跑记录（05 号）把 A 臂表面误写为"ChatGPT-网页"（应为 Claude 网页）——provenance 文案错误；同批评分抽查亦漏过 A 臂自曝的一处引用错标
+  period: 2026-08-30(MNEMOSYNE-256)
+  task_type: experiment_record_authoring_and_scoring
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: repo_file_line_18_before_correction; fable_score_draft_in_session_scratchpad
+  prompt_contract_class: terminal_state_contract
+  result: caught_by_cross_family_blind_scorer; corrected_by_MNEMOSYNE-257; two_of_three_scoring_disagreements_conceded
+  confounders: hand_written_provenance_field; sampled_citation_check_instead_of_full_enumeration
+  reviewer_relation: cross_family_caught(GPT_Pro_blind_scoring)
 ```
 
 ## 三、跨族共同观察与已验证对冲
