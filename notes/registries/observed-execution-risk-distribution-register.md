@@ -3,8 +3,8 @@
 ```yaml
 record_type: observed_execution_risk_distribution_register
 created_by_task: MNEMOSYNE-249
-version: 1.5
-last_updated_by_task: MNEMOSYNE-258（新增 C-21；C-18 待 #316 合并后另记）
+version: 1.6
+last_updated_by_task: MNEMOSYNE-259（新增 P-16、C-18、C-22、C-23、C-24）
 authority_level: non_execution_source_evidence_register
 execution_source: current/human-approved-spec.md
 scope_zh: 两族模型在本仓库已观察执行风险的登记簿；异族抽检（D-08）的风险先验来源
@@ -176,6 +176,17 @@ pro_selfreview_corrections_applied: >
   result: ideal_clean_failure_exposed_and_stopped
   confounders: drill_awareness_possible; n_of_1
   reviewer_relation: cross_family_scored(Fable)
+- id: P-16
+  summary_zh: 显示名注册表 2026-07-30 前后建立时从 001 重新起编、未回填旧 UI 序列 DR1~13——一个月后新旧同号不同物（001~006 六对），重设计线按 next=007 取号触发撞号预警；根因条目
+  period: 2026-07-30_registry_creation_to_2026-08-31_detection
+  task_type: registry_establishment
+  surface: chatgpt_github_app_era
+  operator_selection: not_recorded
+  actual_executor_evidence: registry_git_history_plus_alaya_archive_cross_check(FABLE5-REDESIGN-001_record_04)
+  prompt_contract_class: per_task_taskbook
+  result: owner_memory_intercepted_collision; unified_numbering_v2_landed_by_MNEMOSYNE-259
+  confounders: legacy_numbers_welded_into_149_files_prevented_simple_renumber
+  reviewer_relation: owner_correction_plus_cross_session_archive_verification
 - id: P-15
   summary_zh: 正面条目——EXP-7 盲评：严格按冻结细则字面打分、机械钉住并复核 master SHA、五类证据标注、提出 9 条细则缺陷、抓出评分者记录中的 provenance 笔误（C-19）
   period: 2026-08-30
@@ -434,6 +445,50 @@ pro_selfreview_corrections_applied: >
   result: owner_self_recovered_via_PR_321; preflight_mechanized_as_scripts/preflight-write.sh
   confounders: owner_merge_cadence_faster_than_agent_turn_cadence; preflight_was_manual_ritual_not_script
   reviewer_relation: owner_correction
+- id: C-18
+  summary_zh: 把有梯度的现实压成干净二分（"提示词是耗材/原文是资产"、"工厂→机器"重定位）——Owner 纠正：原文是原始资料非绝对资产、实现层会沉淀回原文、Mnemosyne 仍须为具体 agent 造记忆系统；同类第三例（前有 C-14 计数、C-17 诊断绝对化）
+  period: 2026-08-30
+  task_type: design_dialogue_with_owner
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: raw_owner_intent_record_message_three_verbatim
+  prompt_contract_class: owner_open_discussion
+  result: corrected_and_recorded_in_raw_record; three_state_cycle_model_adopted
+  confounders: crisp_dichotomies_read_better_than_graded_reality
+  reviewer_relation: owner_correction
+- id: C-22
+  summary_zh: FABLE5-REDESIGN-001 工作令把 agent 仪式产物（预检输出/刷新块/读取清单）压进面向 Owner 的首条回复，致新会话启动报告"人类完全看不懂"——Owner 早在 GPT 时代即提过同类意见；根因在工作令起草方（维护线），修正为双频道输出（对话=人话，文件=凭证）
+  period: 2026-08-30_31
+  task_type: work_order_authoring
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: startup_report_transfer_file_plus_owner_complaint_verbatim
+  prompt_contract_class: work_order
+  result: two_channel_rule_relayed_cross_session; queued_as_redesign_phase2_design_input
+  confounders: loader_mandated_machine_blocks_in_first_reply_conflicted_with_no_jargon_clause
+  reviewer_relation: owner_correction
+- id: C-23
+  summary_zh: 重设计会话按注册表 next=007 直接取号、未反查 Alaya 存档中的旧 DR 序列（实至 13）——撞号由 Owner 记忆拦截；次因条目（根因见 P-16）
+  period: 2026-08-31
+  task_type: research_number_allocation
+  surface: claude_code_vscode
+  operator_selection: claude-fable-5
+  actual_executor_evidence: redesign_track_record_04_self_disclosure
+  prompt_contract_class: registry_allocation_procedure
+  result: caught_by_owner; archive_cross_check_then_unified_numbering; self_disclosed_by_allocating_session
+  confounders: registry_was_authoritative_looking_but_incomplete
+  reviewer_relation: owner_correction_self_disclosed
+- id: C-24
+  summary_zh: 维护会话与重设计会话共用同一工作树（/home/cheyh/projs/Mnemosyne）：维护线脚本在校验失败后未干净终止，提交落在了当时被对方切到的分支上（e83b8e8 落 fable5-redesign-001-workspace 本地）；另暴露分支切换互相干扰的持续风险。处置：维护线迁入独立 git worktree（/home/cheyh/projs/mnemosyne-maint），对方分支的多余本地提交由其自清
+  period: 2026-08-31
+  task_type: concurrent_local_sessions_repository_write
+  surface: claude_code_vscode_two_sessions_one_worktree
+  operator_selection: claude-fable-5_both
+  actual_executor_evidence: git_status_branch_mismatch_plus_stray_commit_e83b8e8
+  prompt_contract_class: maintenance_batch
+  result: commit_transplanted_to_own_branch_in_dedicated_worktree; worktree_separation_adopted
+  confounders: harness_pins_shell_cwd_to_shared_repo_path; script_error_handling_gap_under_zsh_set_e
+  reviewer_relation: same_family_self_caught
 ```
 
 ## 三、跨族共同观察与已验证对冲
