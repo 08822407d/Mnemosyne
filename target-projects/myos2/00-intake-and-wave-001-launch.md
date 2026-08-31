@@ -46,3 +46,9 @@ task_series: MYOS2-DR-NNN（本项目专用序列，先例=meta-agent 之 MA-DR�
 - repo-map.md 为目录级扫描＋抽读，未逐行核实，已在文中自我标注；
 - master 快照可能落后于主题分支（time/mmap/slub…）最新进展，公约 §4 已约束结论表述为"master 快照"；
 - 九任务由同族模型（GPT）执行，无异族复核——第一波定位为证据采集非裁决，风险可接受。
+
+## 6. 增补（2026-09-01，Owner 补充说明后的基线修正）
+
+Owner 补充：两年来 MyOS2 全部开发在本机进行，习惯为每个机制/子系统开专门分支（改动不限于该子系统源码），基本达标才合并 master——**本机当前检出分支才是最新版本**。核实：当前分支 `time` @ a039d980 已同步 GitHub，master（63f0785c）是其祖先、落后 44 提交/324 文件（含 time 新增的 mykernel/cpu/ 目录）。
+
+处置（MyOS2 master @ 02ec5877）：分析基线由 master 改为 **time @ a039d980**；确立"读 time、写 master"分工（工作区与产出仍在 master，results 纯新增、未来 time 合并 master 无冲突）；conventions/repo-map/LAUNCH 提示词同步改写，产出 YAML 头 base_snapshot 改为强制申报实际所读分支＋commit（连接器读不到 time 时允许降级用 master 分析）。新增风险：连接器能否读非默认分支未实测，降级申报机制对冲；repo-map 原本就是按本地 time 检出扫描生成，内容无需重做，仅更正了标注。
