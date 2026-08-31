@@ -1,7 +1,7 @@
 # Review and Validation Status
 
 > Non-execution-source live wayfinding record. `current/human-approved-spec.md` remains Mnemosyne's only execution source.
-> last_updated_by_task: MNEMOSYNE-248（2026-08-26，登记二轮轨道归档与批次一实施完成）。失效声明：下一个改变评审/验证状态的任务必须更新本文件，否则须在其结果记录中说明为何不更新（FABLE5-REVIEW2-001 R2-FRESH-006 最低成本机制）。
+> last_updated_by_task: MNEMOSYNE-253（2026-08-29，实施队列清零、开放设计题③草案交付）。失效声明：下一个改变评审/验证状态的任务必须更新本文件，否则须在其结果记录中说明为何不更新（FABLE5-REVIEW2-001 R2-FRESH-006 最低成本机制）。
 
 ## Current maintenance review state
 
@@ -24,7 +24,8 @@ second_wave_fable_review:
   track_status: complete_and_archived_via_PR_306_merge
   joint_cooperation_confirmation: notes/cross-model-review-results/FABLE5-REVIEW2-001/07-pro-handover/05-owner-final-adjudication-record.md
   implementation_completed: [MNEMOSYNE-247_PR_307, MNEMOSYNE-244_PR_308, MNEMOSYNE-245_PR_309, MNEMOSYNE-246_PR_310, MNEMOSYNE-248_PR_311, MNEMOSYNE-249_PR_312, MNEMOSYNE-251_PR_314_package, MNEMOSYNE-252_task7_results]
-  implementation_queue_remaining: [open_design_review_assignment_policy]
+  implementation_queue_remaining: []
+  open_design_review_assignment_policy: draft_delivered_MNEMOSYNE-253_pending_pro_cross_review_and_owner_landing_choice
   cross_family_experiment_results: notes/cross-family-experiments/MNEMOSYNE-252-gpt-side-exp3-exp5-results.md
 
 greenfield_track:
