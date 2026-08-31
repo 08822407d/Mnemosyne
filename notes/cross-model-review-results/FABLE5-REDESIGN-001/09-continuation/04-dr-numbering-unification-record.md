@@ -56,3 +56,37 @@ generated_on_surface: claude-code-vscode
 - 任务书改名与内文改号：`MNE-DR-014-platform-capability-refresh-taskbook.md`、`MNE-DR-015-continuity-practice-taskbook.md`（原 007/008 号候选作废，两号仍空闲——将由 legacy DR-07/DR-08 回填占用）；
 - `03-research-questions.md` §1/allocation_note 同步，§6 执行记录；
 - 跨会话通知维护线（mnemosyne-2e）：前因后果＋本补丁指针（Owner 指令中的"通知另一个 claude code 本地任务"即此）。
+
+## 5. 方案 v2 · 终案（2026-08-31 Owner 二次裁定，取代 §1 第 2/3/5 条与 §3 补丁）
+
+Owner 裁定原话："按照你给出的新思路"新研究001~006编号仍单独做说明以对应已存档里使用的编号，但同时给他们续编到013后面供从今天开始的所有对话/工作使用"，然后你把最新两个研究课题中的编号续到它们后面（应该是020和021了）"。
+
+### 5.1 统一号表（自 2026-08-31 起对所有新对话/工作生效）
+
+| 统一号 | 任务 | 说明 |
+|---|---|---|
+| 001~006 | 旧序列 DR1~DR6（记忆测试 / 交接策略 / not_found / 用户原文治理 / 试运行评估 / 平台 delta） | 证据映射见 §2；003 缺档待补 |
+| 007~013 | 旧序列 DR-07~DR13（多模型裁定 / HO-GUIDANCE / 学习教练 / 共享记忆 / 记忆迁移 / 自适应讲解 StageA / 澄清交接） | 原号回填，见 §2 |
+| **014** | 验证包审计（曾用号 MNE-DR-001） | 八月新研究续编段。曾用号只作读档案对照别名，**冻结材料一律不改名**；活文件"碰到才改"（lazy migration，由维护线掌握节奏） |
+| **015** | 表面威胁（曾用号 MNE-DR-002） | 同上 |
+| **016** | 生命周期验证（曾用号 MNE-DR-003） | 同上 |
+| **017** | 能力归属（曾用号 MNE-DR-004） | 同上 |
+| **018** | 跨仓库并发（曾用号 MNE-DR-005） | 同上 |
+| **019** | 交接加固（曾用号 MNE-DR-006） | 同上 |
+| **020** | 平台能力刷新（本轨道 RQ1） | taskbook `project-knowledge/FABLE5-REDESIGN-001/MNE-DR-020-platform-capability-refresh-taskbook.md` |
+| **021** | 交接实践现状（本轨道 RQ2） | taskbook `…/MNE-DR-021-continuity-practice-taskbook.md` |
+| next | **022** | |
+
+### 5.2 消歧备注
+
+- 数字 014/015 曾在本分支 commit fe40814（2026-08-31，存续约一小时、未合并）短暂标注本轨道两课题，随本终案改判归属验证包审计/表面威胁——考古时以本记录为准。
+- 自今日起新对话/工作引用八月六项研究一律用 014~019；读 8 月冻结档案（Alaya 导出、raw/validation-reviews、received 件等）遇 MNE-DR-001~006 按"曾用号"列解读。
+
+### 5.3 注册表补丁 v2（取代 §3，交维护线）
+
+1. `next_unallocated_sequence` → **022**；
+2. §2 六行既有 issued 记录改号 014~019，各加 `former_number: MNE-DR-00X`、`former_number_scope: frozen_materials_and_pre_2026-08-31_references`；
+3. 回填 legacy 001~013 行（数据源本记录 §2；`legacy_003: not_found`）；
+4. 追加 020/021 两行（canonical FABLE5-REDESIGN-001-RQ1/RQ2，issued_ready_not_executed）；
+5. 规则行：全序列严格唯一；曾用号仅为读档别名不再签发；活文件旧号引用 lazy migration；
+6. 风险登记簿记录建议同 §3 第 5 条。
