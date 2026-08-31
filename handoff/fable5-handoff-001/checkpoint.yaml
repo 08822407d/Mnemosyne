@@ -1,0 +1,13 @@
+checkpoint_id: HC-001
+package_id: FABLE5-HANDOFF-001
+task_id_allocation: MNE-DR-033 交接实测（CC）; next_unallocated: 034
+source_revision_master: c2a025a
+created_at: 2026-09-01
+created_by: 前任主导会话（FABLE5-REDESIGN-001，claude-fable-5@claude-code-vscode）
+predecessor_role_after_handoff: 只读验证者（不再写仓库；判分后退场）
+sealed_answers_sha256: 5f3d40544b490ef32974a48f73886408993a93fe614742d3ebc707499aa235dc
+file_hashes:
+  QUICK-CARD.md: 1d601923c6d1a8823251bd709293a363fd0052f17823dbf637d61012d03d029f
+environment: 主检出 /home/cheyh/projs/Mnemosyne（继任专用）；worktree 纪律照旧；gh 已登录
+rollback_point: origin/master c2a025a
+test_sample_registration: 本次交接同时登记为 SYN-2 预冻结测试的天然真实样本 S-live-1（结果供未来 12-case 引用）
