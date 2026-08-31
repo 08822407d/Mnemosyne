@@ -22,3 +22,11 @@ for n in $(gh pr list --state open --json number --jq '.[].number'); do
   printf '  #%s: ' "$n"; gh pr diff "$n" --name-only 2>/dev/null | tr '\n' ' '; echo
 done
 echo "preflight_ok"
+
+# 自身变更集核验（C-24 后补，由重设计会话教训"修复动作的基线核验与写前预检同级"）：
+# 列出本分支相对 origin/master 的全部变更文件——提交/建 PR 前人工确认其 ⊆ 本任务授权路径，
+# 出现任何非本任务文件即说明分支基线错误（多半是从他人分支尖切出），须重建。
+if [ "$(git rev-parse --abbrev-ref HEAD)" != "master" ]; then
+  echo "own_branch_changed_files_vs_master:"
+  git diff --name-only origin/master...HEAD | sed 's/^/  /'
+fi

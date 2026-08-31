@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.2.0
-last_updated_by_task: MNEMOSYNE-246
+version: 0.3.0
+last_updated_by_task: MNEMOSYNE-259（DR 编号统一终案 v2 落地：旧序列回填 001~013、八月六项改号 014~019、新签发至 027、next→028）
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -23,7 +23,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 007
+    next_unallocated_sequence: 028
   Meta_Agent:
     project_id: meta-agent
     abbreviation: MA
@@ -37,44 +37,56 @@ projects:
 
 ```yaml
 issued_aliases:
-  - display_name: MNE-DR-001 验证包审计
-    sequence: 001
+  - display_name: MNE-DR-014 验证包审计
+    sequence: 014
+    former_number: MNE-DR-001
+    former_number_scope: frozen_materials_and_pre_2026-08-31_references
     canonical_task_id: FABLE5-FCV-PACKAGE-ADVERSARIAL-AUDIT-001
     project: Mnemosyne
     status: issued_paused_not_completed
     notes: [alias_only_no_canonical_rename, R0_and_R1_use_phase_suffixes]
-  - display_name: MNE-DR-002 表面威胁
-    sequence: 002
+  - display_name: MNE-DR-015 表面威胁
+    sequence: 015
+    former_number: MNE-DR-002
+    former_number_scope: frozen_materials_and_pre_2026-08-31_references
     canonical_task_id: FABLE5-FCV-MANUAL-SURFACE-THREAT-MODEL-001
     project: Mnemosyne
     status: issued_deferred_not_executed
     notes: [alias_only_no_canonical_rename]
-  - display_name: MNE-DR-003 生命周期验证
-    sequence: 003
+  - display_name: MNE-DR-016 生命周期验证
+    sequence: 016
+    former_number: MNE-DR-003
+    former_number_scope: frozen_materials_and_pre_2026-08-31_references
     canonical_task_id: MNE-TARGET-LIFECYCLE-V1-001
     project: Mnemosyne
     status: issued_owner_authorized_execution_complete_pending_fresh_Pro
     allocation_task: MNEMOSYNE-212
     execution_package: notes/target-agent-lifecycle-v1-execution-package-001/README.md
     notes: [alias_only_no_canonical_rename, one_V1_run_with_logical_multicell_execution, three_conversation_operator_flow, use_suffixes_Execute_S8_Review, no_Deep_Research_or_Fable_execution_implied]
-  - display_name: MNE-DR-004 能力归属
-    sequence: 004
+  - display_name: MNE-DR-017 能力归属
+    sequence: 017
+    former_number: MNE-DR-004
+    former_number_scope: frozen_materials_and_pre_2026-08-31_references
     canonical_task_id: FABLE5-MNE-REUSABLE-CAPABILITY-OWNERSHIP-001
     project: Mnemosyne
     status: completed_pending_Owner_disposition
     allocation_task: MNEMOSYNE-213
     report_cycle: raw/research-reports/cycles/2026Q3-reusable-agent-capability-ownership/
     notes: [Fable_run_used_historical_UI_name_MNE_DR_003_能力归属, stored_alias_changed_only_for_navigation_after_parallel_sequence_collision, canonical_task_id_and_original_report_unchanged]
-  - display_name: MNE-DR-005 跨仓库并发
-    sequence: 005
+  - display_name: MNE-DR-018 跨仓库并发
+    sequence: 018
+    former_number: MNE-DR-005
+    former_number_scope: frozen_materials_and_pre_2026-08-31_references
     canonical_task_id: FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001
     project: Mnemosyne
     status: A1_readiness_pass_corrected_G2A_template_publication_complete_pending_separate_Owner_G2A_decision
     allocation_task: MNEMOSYNE-214
     execution_package: handoff/fable5-ready/FABLE5-MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-001/
     notes: [roadmap_F2, A0_complete, A1_not_authorized, G2A_not_issued, corrected_G2A_template_published_via_PR_303_merge_3ea2b97c369837d27d0e4a65c38c252e755954b5, separate_Owner_G2A_decision_still_required]
-  - display_name: MNE-DR-006 交接加固
-    sequence: 006
+  - display_name: MNE-DR-019 交接加固
+    sequence: 019
+    former_number: MNE-DR-006
+    former_number_scope: frozen_materials_and_pre_2026-08-31_references
     canonical_task_id: FABLE5-MNE-HANDOFF-PROTOCOL-REPOSITORY-AUDIT-001
     project: Mnemosyne
     status: repository_audit_and_HVAL_design_audit_complete_Pro_adjudicated
@@ -90,7 +102,90 @@ issued_aliases:
       - registration_complete_at_repository_audit_and_HVAL_design_stage
       - HVAL_fixture_publication_and_scenario_execution_remain_separately_gated
       - cross_route_god_view_claims_remain_blocked
+  - display_name: MNE-DR-020 平台能力刷新
+    sequence: 020
+    canonical_task_id: FABLE5-REDESIGN-001-RQ1
+    project: Mnemosyne
+    status: executed_report_recovered_archived_alaya_research_MNE
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-020-platform-capability-refresh-taskbook.md
+  - display_name: MNE-DR-021 交接实践现状
+    sequence: 021
+    canonical_task_id: FABLE5-REDESIGN-001-RQ2
+    project: Mnemosyne
+    status: executed_report_recovered_archived_alaya_research_MNE
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-021-continuity-practice-taskbook.md
+  - display_name: MNE-DR-022 需求生命周期
+    sequence: 022
+    canonical_task_id: FABLE5-REDESIGN-001-RQ3
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-022-requirements-lifecycle-taskbook.md
+  - display_name: MNE-DR-023 检索与按需加载
+    sequence: 023
+    canonical_task_id: FABLE5-REDESIGN-001-RQ6
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-023-retrieval-and-loading-taskbook.md
+  - display_name: MNE-DR-024 交接评测工具
+    sequence: 024
+    canonical_task_id: FABLE5-REDESIGN-001-RQ7
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-024-handoff-eval-instruments-taskbook.md
+  - display_name: MNE-DR-025 学习者建模证据
+    sequence: 025
+    canonical_task_id: FABLE5-REDESIGN-001-RQ8
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-025-learner-modeling-evidence-taskbook.md
+  - display_name: MNE-DR-026 开发知识资产
+    sequence: 026
+    canonical_task_id: FABLE5-REDESIGN-001-RQ9
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-026-dev-knowledge-assets-taskbook.md
+  - display_name: MNE-DR-027 GitHub写能力实测
+    sequence: 027
+    canonical_task_id: FABLE5-REDESIGN-001-RQ12
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-027-github-write-capability-taskbook.md
 ```
+
+## 2A. Legacy 2026H1 回填段（MNEMOSYNE-259，按 FABLE5-REDESIGN-001 编号统一终案 v2）
+
+旧 UI 序列 DR1~DR13（2026-06-22~07-29）按**原号**回填占用 001~013；证据映射与逐件实物见
+`notes/cross-model-review-results/FABLE5-REDESIGN-001/09-continuation/04-dr-numbering-unification-record.md` §2（该轨道 PR 合并后为准）。
+
+```yaml
+legacy_2026H1:
+  entries:
+    - {seq: "001", topic: 记忆系统测试/调试/评估证据综述, date: 2026-06, evidence: RC-2026Q2-memory-testing}
+    - {seq: "002", topic: 交接策略与量化评估, date: 2026-06, evidence: RC-2026Q2-handoff-strategy}
+    - {seq: "003", topic: not_found, note: 仓库与 Alaya 均无 3 号实物；不断言不存在，Owner 可补}
+    - {seq: "004", topic: 用户原文/需求脱敏治理, date: 2026-06-29, evidence: RC-2026Q2-user-input-governance}
+    - {seq: "005", topic: 首个真实目标试运行评估框架 v2, date: 2026-06-30, evidence: RC-2026Q2-first-target-dry-run-evaluation}
+    - {seq: "006", topic: 平台/Project memory/apps 能力 delta, date: 2026-07-15, evidence: RC-2026Q3-platform-context-apps-delta}
+    - {seq: "007", topic: 多模型裁定与溯源（pro/thinking 双运行）, date: 2026-07-21, evidence: RC-2026Q3-multi-model-adjudication-provenance}
+    - {seq: "008", topic: HO-GUIDANCE-001 目标项目对话加载指导, date: 2026-07-28, evidence: Alaya 对话导出}
+    - {seq: "009", topic: LEARNER-COGNITIVE-COACHING-001, date: 2026-07-28, evidence: Alaya 对话导出}
+    - {seq: "010", topic: CROSS-AGENT-SHARED-MEMORY-001, date: 2026-07-28, evidence: Alaya 对话导出}
+    - {seq: "011", topic: TARGET-MEMORY-MIGRATION-001, date: 2026-07-28, evidence: Alaya 对话导出}
+    - {seq: "012", topic: PRO-DR-ADAPTIVE-EXPLANATION-STAGE-A-001, date: 2026-07-28, evidence: Alaya 对话导出}
+    - {seq: "013", topic: PRO-DR-FRONTIER-PLANNING-CLARIFICATION-HANDOFF-001, date: 2026-07-29, evidence: Alaya 对话导出}
+  unnumbered_legacy: [AI Agent 持久记忆研究(0622), review batch-B(0622), 并行工作主线治理(0724), RC-2026Q2-initial 整轮]
+```
+
+**序列规则（终案 v2）**：全序列严格唯一、永不复用；曾用号（八月六项的旧 001~006 指代）仅为读档别名、不再签发；
+读 2026-08-31 前冻结档案遇 MNE-DR-001~006 按"曾用号"解读；活文件中的旧号引用采 lazy migration（碰到才改，维护线掌节奏）。
 
 ## 3. Historical Meta-Agent compatibility
 
