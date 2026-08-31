@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.3.2
-last_updated_by_task: MNEMOSYNE-260（补记 029 对照设计（普）；next→030）
+version: 0.3.3
+last_updated_by_task: MNEMOSYNE-260（补记 030/031 双向盲评；next→032）
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -23,7 +23,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 030
+    next_unallocated_sequence: 032
   Meta_Agent:
     project_id: meta-agent
     abbreviation: MA
@@ -175,6 +175,22 @@ issued_aliases:
     allocation_task: FABLE5-REDESIGN-001
     run_surface: ordinary_conversation_gpt_pro  # 独立对照设计（跨族盲设计对应件）；显示名带（普）为 PF-002 过渡标注
     notes: [display_name_mode_marker_transitional_per_PF-002]
+  - display_name: MNE-DR-030 盲评Fable稿（普）
+    sequence: 030
+    canonical_task_id: FABLE5-REDESIGN-001-BR1
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: ordinary_conversation_gpt_pro_fresh  # 盲评 Fable 重设计稿（04 号）
+    notes: [preregistered_rubric_shared_with_BR2, display_name_mode_marker_transitional_per_PF-002]
+  - display_name: MNE-DR-031 盲评Pro稿（CC）
+    sequence: 031
+    canonical_task_id: FABLE5-REDESIGN-001-BR2
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: claude_code_fresh_session_read_only  # 盲评 Pro 对照稿（029 产物，防火墙封存件）；作者回避
+    notes: [preregistered_rubric_shared_with_BR1, author_recusal, display_name_mode_marker_transitional_per_PF-002]
 ```
 
 ## 2A. Legacy 2026H1 回填段（MNEMOSYNE-259，按 FABLE5-REDESIGN-001 编号统一终案 v2）
