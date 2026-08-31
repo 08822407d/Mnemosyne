@@ -105,3 +105,7 @@ PR #325 已合并（master 注册表 next=028 核验通过），取号冻结解�
 ## 12. 阶段 3 取号（2026-08-31）
 
 MNE-DR-029 对照设计（普）——canonical FABLE5-REDESIGN-001-CP1，普通对话 Pro 设计任务（类别标"普"，PF-002 过渡做法）；next→030。注册表补记交维护线。
+
+## 13. 盲评取号（2026-08-31）
+
+MNE-DR-030 盲评Fable稿（普）＝FABLE5-REDESIGN-001-BR1；MNE-DR-031 盲评Pro稿（CC）＝FABLE5-REDESIGN-001-BR2；共用预冻结细则 `MNE-DR-030-031-shared-review-rubric.md`；next→032。

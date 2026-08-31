@@ -92,3 +92,17 @@ integrity_checks_batch_4:
   encoding: UTF-8、无 CR、无 U+FFFD；引用标记残迹为已知伪影
   identity: 首行任务号一致；Q1~Q5 全节＋来源表＋UNKNOWN 清单齐全（575 行，本批最长）
 verdict_batch_4: 确认无误入库；双仓归档同批完成
+
+---
+
+## 批次五收据（2026-08-31，MNE-DR-029 对照设计——防火墙封存）
+
+```yaml
+receipts_batch_5:
+  - {artifact_id: MNE-DR-029-counterpart-design, repository_path: 06-research-received/MNE-DR-029-counterpart-design.md, lines: 1553, bytes: 78839, sha256: 4fdbc27abc81a878fc3c38f74ab3e28d61a3234e49db89bb6b97d352e4cd39dc, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+  - {artifact_id: MNE-DR-029-complete-response, repository_path: 06-research-received/MNE-DR-029-complete-response.md, lines: 8, bytes: 1325, sha256: dca19a576ed4aa69f2cd80ea193d670a6d9b0b9482993eb5097f71866974dfc6, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+integrity_checks_batch_5:
+  content_review_scope: identity_line_and_stats_only（防火墙：本会话不读两件正文；首行任务号一致"MNE-DR-029 · GPT-5.6 Pro 对照总体方案"/状态行 COMPLETE；编码净）
+  note: 回复副本仅 8 行——与任务书"正文只给摘要、全文进设计文件"一致；其内容完整性在防火墙下不可核验，如实登记
+  firewall_status: 本会话未读正文；消化留待盲评流程（030/031）完成后按 Owner 批示进行
+producer: operator_reported_GPT-5.6_Pro_normal_conversation_via_self-fetch_mode（§2B 直链模式）
