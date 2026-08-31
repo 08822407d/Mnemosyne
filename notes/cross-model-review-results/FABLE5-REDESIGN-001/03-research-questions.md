@@ -48,3 +48,11 @@ execution_intent:
 - 2026-02 起 Deep Research 底层由 o3 换代（报道称 GPT-5.2 系），可连接 MCP/连接器、可限定信源、可中途插入补充；2026-03 起模型选择器改为 Instant/Thinking/Pro 三档；2026-03-26 legacy deep research 模式移除。运行时长通常 5~30 分钟，综合数十至数百来源。
 - 与仓库既有 DR6（2026-07）结论兼容：DR 期间对连接 app 只读；有计划配额；报告可导出。
 - 上述均为 operator 侧待核验事实——任务书已按"运行时以 UI 为准"编写，不依赖具体数字。
+
+## 5. 编号核对更正（2026-08-31，Owner 质询触发）
+
+- Owner 记忆正确：Mnemosyne 线深度研究的**旧序列编到 13**。Alaya 存档实物：MNE/ 目录下 `ChatGPT-DR-07_多模型裁定研究(pro/thinking)-20260721`、`DR-08_HO-GUIDANCE-001-20260728`、`DR-09_LEARNER-COGNITIVE-COACHING-001`、`DR-10_CROSS-AGENT-SHARED-MEMORY-001`、`DR-11_TARGET-MEMORY-MIGRATION-001`（均 20260728）、`DR12-20260728`、`DR13-20260729`；更早有无号/低号件（`DR - AI Agent 持久记忆研究-20260622`、`DR - Mnemosyne 04 -…-20260629`、`DR5 v2评测框架-20260630`、`DR - Mnemosyne 06 - platform context apps-20260715`）。旧序列与 RC-2026Q2/Q3 各轮报告文件名（DR1~DR6、DR-07=RC-2026Q3-multi-model-adjudication-provenance 等）为同一体系。
+- 注册表（MNEMOSYNE-189，约 2026-07-30 建立）从 MNE-DR-001 重新起编且未回填旧 1~13；`next_unallocated_sequence: 007` 由此而来。本轨道最初按注册表取 007/008，**未按 guard §7"不得仅凭 UI 缺项推断空号"的精神反向核对历史 UI 名**——执行方核对疏失，注册表未回填是根因。
+- 撞号事实：旧 4/5/6 与新 MNE-DR-004/005/006 已经存在数字重合、主题不同的情况；沿用 007/008 会新增与旧 DR-07/DR-08 的重合。
+- 处置：待 Owner 一字批示——改 014/015（推荐，序列视为同一条并顺延；007~013 永久跳过）或保留 007/008（以前缀区分）。批示后同步修改两份任务书与本文件 §1/§4。
+- 候选（交维护线，本轨道无注册表写权限）：注册表补记 legacy DR-01~13 映射行（指向 Alaya 实物与 RC 轮次），并按批示结果登记新号与跳号规则。
