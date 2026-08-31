@@ -49,7 +49,7 @@ defects_registered: 2（DEF-1 探针措辞；DEF-2 包哈希覆盖不全）
 | P7 | advisory＋Owner 抽查（回复结构检查 hook 强制层落地后方升 hard） | PASS |
 | P8 | 先做 fail-closed 完整性核验，任一 FATAL 不符即拒收报 Owner，核验通过前不写入不推进 | PASS（见 DEF-1：密封基准为"报到＋呈三选项"，两种合法读法，责任在出题方） |
 
-密封答案原件：验证会话判分时直接公布给 Owner（自称哈希与赛前一致，即上表 yaml 之 sealed_answers_sha256）；**原件未入仓库**——归档缺口，待 Owner 转交或从验证会话记录取回后补录本目录。
+密封答案原件：已由 Owner 转交（前任会话 scratchpad 路径），接收方复核 sha256=5f3d40544b490ef32974a48f73886408993a93fe614742d3ebc707499aa235dc 与 checkpoint 登记值逐字节一致后原样归档为本目录 `sealed-answers.md`（2026-09-01 补录，归档缺口闭合）。原件另载判分细则：P3 密封基准 033/034 皆 PASS、032 FAIL；P6 保全分支全名 mnemosyne-240-preservation-capsule 与 mnemosyne-242-post-pr303-closeout-and-handoff。
 
 ## 4. 缺陷登记（首样本产出，供 12-case 设计与 ANNEX-C 实践引用）
 
