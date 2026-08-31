@@ -80,3 +80,15 @@ integrity_checks_batch_3:
   producer: operator_reported——025/026 深度研究 Pro；027 普通对话（选择器 Pro，自报 GPT-5.6 Pro，自报不作身份证据）
 verdict_batch_3: 三件确认无误入库；027 类别标注问题另立 PF-002
 side_effects_of_027_run: 仓库新增测试分支 chatgpt-write-capability-test-20260831 与 Draft PR #326（DO NOT MERGE；处置待 Owner——建议留档后关闭 PR，分支删留均可）
+
+---
+
+## 批次四收据（2026-08-31，MNE-DR-028）
+
+```yaml
+receipts_batch_4:
+  - {artifact_id: MNE-DR-028-report, operator_filename: 8e0d1ae7-deepresearchreport_8.md, repository_path: 06-research-received/MNE-DR-028-report.md, bytes: 67746, sha256: 36a9c6707d7fadf1e49b1417d6faf95b9b90fd608b5d2411bf944253ac2c094f, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+integrity_checks_batch_4:
+  encoding: UTF-8、无 CR、无 U+FFFD；引用标记残迹为已知伪影
+  identity: 首行任务号一致；Q1~Q5 全节＋来源表＋UNKNOWN 清单齐全（575 行，本批最长）
+verdict_batch_4: 确认无误入库；双仓归档同批完成
