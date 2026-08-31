@@ -1,161 +1,101 @@
-# Mnemosyne 合成设计 v1（SYN-1）
+# Mnemosyne 合成设计 SYN-2
 
 ```yaml
 record_type: synthesis_design
 track_id: FABLE5-REDESIGN-001
-version: SYN-1_PRE-FREEZE
+version: SYN-2_PRE-FREEZE（SYN-1 经 MNE-DR-032 复核 ADOPT_WITH_CHANGES 后的修订版；BLOCKER-01~09 逐项闭合，对照见 08 附件 ANNEX-F 与本文件 §13）
 date: 2026-09-01
-sources: Fable 稿（04 v2）＋Pro 稿（MNE-DR-029/RAPW）＋双盲评（030/031）＋合成蓝图（05b，Owner"合成"批示启动）
-citation_discipline: 本稿为决策文档——凡两源稿已给完整 schema 者引用其节号不再复制；每个采纳标注〔F=Fable 稿 / P=Pro 稿 / 030 / 031〕；设计阈值一律标 [INFERENCE]；引用表见 §15
-status_gates: 待 MNE-DR-032 异族复核 → Owner 采纳 → 预冻结测试（§11）通过 → 才可冻结与迁移
+normative_unit: 本文件＋08-syn-annexes-normative.md 于同一 commit 构成唯一规范根（版本锚=commit SHA）；**04 与 MNE-DR-029 自本版起降为 evidence/reference，全部规范权由本单元承接**（closing BLOCKER-01/D-07）
+citation: 逐项追踪见 ANNEX-F；[INF]=INFERENCE 待校准，汇总见 §12
+status_gates: 待 Owner 采纳 → 预冻结测试（ANNEX-D）通过 → 冻结与迁移
 ```
 
-## 0. 最小可用子集（必修①的正面回答，先于一切细节）
+## 0. 最小可用子集
 
-本设计允许只启用以下五件即构成可运行系统，其余层按 Purpose Gate 逐个"购买"：
+五件即可运行：规范根＋manifest；当前视图＋变更集；检查点＋Quick Card 交接（ANNEX-C）；加载表＋minimal 收据（ANNEX-B）；双闸门。其余层须经目的核查证明"购买了已测出的失败面"方可启用。
 
-1. 唯一规范根＋canonical manifest（§1）；
-2. 当前有效视图＋变更集纪律（§1.4）；
-3. 任务检查点＋Quick Card 交接（§10）；
-4. 任务型加载表＋装载收据核心档（§6）；
-5. 双闸门（完整性＋目的）（§7）。
+## 1. 公理、架构与权威
 
-**任何新增层必须通过目的核查证明其购买了一个已测出的失败面**〔P §6.4〕。
+公理：记录≠加载≠呈现（N-19）；原文≠资产、裁决是资产（N-14）；耐久核心/可再生层（N-15）；节奏声明制（N-18）；规范库集中＋整体迁移＋唯一权威源（N-17）。
 
-## 1. 公理与架构
+**架构七层（A 系，closing D-06）**：A0 Owner 目的与授权 → A1 耐久核心（原始证据/裁决/当前规范/测试真值）→ A2 可再生投影 → A3 任务工作态与检查点 → A4 上下文编译器 → A5 概率模型适配层 → A6 确定性工具与权限闸门。三面（写全/读省/呈人话）纵贯 A 系。
 
-**公理**：记录≠加载≠呈现（N-19）；原文≠资产、裁决才是资产（N-14）；耐久核心/可再生层（N-15）；节奏声明制（N-18）；规范库集中＋整体迁移＋唯一权威源（N-17）。
+- 五个禁止依赖的假保证（入迷你章程）：模型确定性；上下文可寻址；指令/数据天然隔离；规则文本自动强制；交接=完整进程快照。
+- 权威语义六分表（029 §1.3 采纳为正文语义）：Owner 要求什么→A1 目标与裁决；发生过什么→原始证据与不可覆盖变更记录；现在执行什么→当前有效规范；任务进展→检查点；本模型怎么读→A2 模型投影；动作是否允许→A6 闸门。每域唯一 canonical，派生只引用。
+- 轻量语义账本：语义变更=原子变更集（change record＋当前文档＋trace＋校验同 commit）。**裁决快车道**（closing D-14）：紧急时允许 current 先行变更，但必须携带 `provisional=true`＋Owner 一字引用，48h 内补全变更集并通过 reconciliation 校验；逾期未补=integrity stop，provisional 变更回滚。
+- 投影四不变量与"耐久≠常驻"判定：见 ANNEX-B；单向写：A2/派生层禁改实质内容，变更一律经 A1 裁决再编译。
 
-**架构**：三面（写全/读省/呈人话）纵贯七层〔P §1.2 结构 × F §2 耐久性/毒性标注〕：
+## 2. 字段制度
 
-```text
-L0 Owner 目的与授权 → L1 耐久核心（原始证据·裁决·当前规范·测试真值）
-→ L2 可再生投影（人类视图·任务包·索引·模型适配）→ L3 任务工作态/检查点
-→ L4 上下文编译器 → L5 概率模型适配层 → L6 确定性工具/权限闸门
-```
-
-- **五个禁止依赖的假保证**（写入迷你章程）：模型确定性、上下文可寻址、指令/数据天然隔离、规则文本自动强制、交接=完整进程快照〔F §15.1；028〕。
-- **权威语义六分表**照抄〔P §1.3〕：六类问题各有唯一权威位置，派生视图只引用。
-- **轻量语义账本**〔P §1.4〕：语义性变更=原子变更集（change record＋当前文档＋trace＋校验，同一 commit）；聊天 token 与中间推理不入账。投影四不变量＋单向写＋裁决快车道〔P §5.4；F §15.3〕。
-- **"耐久≠常驻"判定**：以"删除后是否丢失不可安全重建之物"定耐久〔P §2.2〕。
-
-## 2. 字段制度（必修①）
-
-一切 schema 分三档：**核心必填**（缺即 blocked）/**条件必填**（触发条件成立才必填，条件写在字段旁）/**可选**。
-
-- 通用记录头核心档八字段：`artifact_id / artifact_type / canonical_status / lifecycle_state / scope / created_at / source_refs / supersedes`；其余〔P §2.5〕字段全集转条件/可选档。
-- 装载收据核心档六字段：`task_id / mandatory_sources+hash / retrieved_sources / omitted_candidates / conflicts_detected / status`；全集〔P §5.3〕仅在"重要任务"（run-context 义务级）必填。
-- 检查点核心档=Quick Card 十四字段〔P §8.3〕；Portable Checkpoint 全集〔P §8.2〕为条件档（跨族交接、长挂起、迁移时必填）。
-- 投影清单核心档：`generation_id / built_for_model_label / source_revision / integrity_status / rebuild_triggers`；全集〔P §2.3〕条件档。
-- 三档判定权：强模型维护；次档模型只按"核心档清单"机械执行〔N-19 编译要求〕。
+三档（核心/条件/可选）逐字段矩阵见 **ANNEX-E**（含次档模型 fallback 规则与触发词机械判据）。"audit 档任务"的机械定义：写耐久核心 / 跨族交接 / 迁移步 / 测试运行 / 规范变更 / Owner 明示，六者其一即是。
 
 ## 3. 规范库（norms-library）
 
-条目结构〔F §3〕＋enforcement 分级（advisory/hard，hard 必须有模型外强制层）〔F §15.2〕＋晋升五条件〔P §2.4〕＋复杂度预算与减法同权（常驻核心 ≤200 行 [INFERENCE，023 方向性证据]）〔F §3〕＋"删除也是设计动作"（review 四类结果，只增不减=目的漂移信号）〔P §6.5〕＋整体迁移 manifest 与唯一写权目录〔P §2.4；N-17〕。散文 guard 原件转 L1 历史，逐条映射机械校验〔F §10 M2〕。
+条目字段（全文，closing F-02）：`norm_id / statement / scope / status(active|superseded|retired|candidate) / supersedes / origin(L1 裁决引用＋日期) / verification(违反判定方式) / compiled_check(none|script|hook|清单) / enforcement(advisory|hard) / portability(mnemosyne_only|generic_candidate|generic_adopted) / built_for_model_generation`。
+
+- **hard 规则必须有模型外强制层**；无强制层不得标 hard。现役 hard 实例：写前预检（scripts/preflight-write.sh）、worktree 分离。**双频道暂标 advisory＋Owner 抽查**，强制层（回复结构检查 hook）落地后升 hard（closing D-08/BLOCKER-07）。
+- 复杂度预算：常驻核心 ≤200 行 [INF]；整编触发与减法同权；review 四类结果（merge/replace/archive/delete），只增不减=目的漂移信号。
+- 晋升五条件（重复故障或 Owner 原则；作用域可界定；无更低成本表达；有退出条件；过新上下文负测）；晋升序：反馈证据→可复现 case→eval/test/hook→必要时才是规则。
+- N-17 工程化：唯一写权目录；rule_id 引用；migration-manifest；迁移后旧址仅重定向。散文 guard 原件转 A1 历史，逐条映射机械校验。
 
 ## 4. 三态循环与捕获
 
-S0 原始（有毒，完整捕获但不信任）→S1 经检查构想（只供裁决）→S2 执行层；单向晋升＋新事件回环，禁止覆盖改写〔P §3；F §4〕。
+S0 原始（有毒，完整捕获不信任）→S1 经检查构想（只供裁决）→S2 执行层；单向晋升＋新事件回环；禁止覆盖改写。
 
-- 捕获时限 **48h**（登记表 §4.2；F 稿 24h 降为校准项 [INFERENCE]）〔05b 分歧3〕。
-- 反馈全材料 bundle：核心档八字段（id/时间/原话或 capture_mode/触发输入/观察行为/期望行为/影响/复现），全集〔P §4.5〕条件档。
-- 便捷捕获入口：Owner 任何随手输入发给任一在场 agent 即视为 S0 inbox 投递，由该 agent 当日转录入库（通道工具化列为迁移后研究项）〔F §2 N-02 起步形态〕。
-- 重复故障晋升序：反馈证据→可复现 case→eval/test/hook→必要时才是规则〔P §3.6；026〕。
+- 捕获时限统一 **48h**（closing D-09；"当日"表述废除）；随手输入发给任一在场 agent 即入 S0 inbox，由该 agent 在 48h 内转录。
+- 反馈 bundle 核心档八字段（id/时间/原话或 capture_mode/触发输入/观察/期望/影响/复现）；全集条件档（audit 任务）。
+- S1 最低八问与 S1→S2 晋升门（029 §3.4-3.5 采纳为正文义务）：目标与授权明确；无未决同权威冲突；状态允许；验收与停止条件写明；高风险有机械检查或 proof-gap；目的核查过；touch 预算内；变更集三同步；模型产物不得自批。
 
-## 5. 需求生命周期状态机
+## 5. 需求生命周期
 
-采用 **18 态枚举与转换表全文**〔P §4.1–4.2〕（031 评为 PASS 且比 F 稿细），附加：
+**ANNEX-A 为规范正文**：18 态、转换表、defer_reason/revisit_trigger、MODEL-EVENT、quarantine 例外、人话出口。
 
-- `rejected / deferred / blocked_unknown` 三态必须产出**Owner 可读的人话说明**（呈现面出口，必修⑤）；
-- MODEL-EVENT 结构〔P §4.4〕：新模型只触发 reassessment_pending 与冻结回归集，不自动激活/废止；quarantine_required 例外；
-- 需求记录字段按 §2 三档化（核心档：verbatim/goal_refs/state/scope/acceptance_oracles/defer_reason+revisit_triggers）。
+## 6. 加载/投影
 
-## 6. 加载/投影机制
-
-六级装载类（L0 EXECUTION_CORE ~ L5 TOXIC_RAW）＋L4/L5 装载时 `data_only / instruction_authority=false` 机器边界〔P §5.1〕；八步装载算法（硬适用性过滤先于相关性；预算未用完不是继续装载的理由）〔P §5.2〕；任务型加载表＋应载/实载/漏载/误载四单〔F §6〕；污染指标六件〔P §5.6〕（`used_source_refs` 采集办法待解决后才计入指标 [INFERENCE，031 附加条件]）；检索升级阶梯按冻结 eval 集触发、每次升级同测五面〔F §6；P §5.5；023〕。
+**ANNEX-B 为规范正文**：六级装载类（L0~L5）＋data_only 机器边界、八步算法、两档收据、指标数据映射、not_measurable 纪律、检索升级阶梯（冻结 eval 触发）、投影四不变量。任务型加载表与应载/实载/漏载/误载四单照 SYN-1 保留；污染指标阈值在预冻结测试校准 [INF]。
 
 ## 7. 目的核查（与 fail-closed 同级）
 
-双闸门（Integrity/Purpose）〔P §6.1〕＋九个触发时点〔P §6.2〕＋十条自动停止规则〔P §6.4〕＋逐轮 purpose_delta 一行、周期目的账单、收尾记账 15% 阈值 [INFERENCE 校准值]、连续两周期零推进 STOP [INFERENCE]〔F §7〕。目的账单列入异族抽检与 Owner 抽查（评分者自报偏差对冲）〔F §13.4〕。
+双闸门（Integrity=STOP_INTEGRITY / Purpose=STOP_PURPOSE 同权）；九触发点与十条自动停止规则见 ANNEX-B 末节（正文）。逐轮 purpose_delta 一行；周期目的账单（收尾记账 15% [INF]；分母=该周期全部任务记录条目数，治理类=收据/登记/归档/收尾四类标签 [INF]）；连续 2 个声明周期零 G 推进→STOP [INF]，周期取自 operating-profile，安全/事故处置豁免。目的账单入异族抽检与 Owner 抽查。
 
-## 8. Owner-touch 预算（必修③④）
+## 8. Owner 负担双账（closing D-12/BLOCKER-06）
 
-- **计数口径**照抄〔P §7.1〕：计入=不可合并的决定/批准/补件/搬运/纠错（failure_touch 单列）；不计入=发起、交付、Owner 自愿补充。
-- **预算档**：routine=0 / standard=1 / high-consequence=2 / owner-defined〔P §7.2〕[INFERENCE 待校准]；**交接场景专项 ≤2 步**（登记表 §4.1 硬指标）。
-- **超支前五步阶梯＋三件套内嵌**〔P §7.2〕：合并提问；每问必带（a）人话意思（b）答了会怎样（含推荐默认与各选项后果）（c）不答/晚答会怎样；缩 scope；defer 非关键；仍超才 ESCALATE_OWNER 一次说明。
-- 记录字段〔P §7.3〕按 §2 三档化。
+- **agent_touch 账**（029 口径）：计入=不可合并的决定/批准/补件/搬运/纠错（failure_touch、manual_transfer 单列）；不计入=发起、交付、Owner 自愿补充。预算 routine=0/standard=1/high-consequence=2/owner-defined [INF]。
+- **owner_manual_actions 账**（登记表口径）：发起、上传、复制、核对、纠错全计。**交接验收 ≤2 步以本账判定**。
+- 超支五步阶梯＋三件套内嵌：合并提问；每问带（a）人话意思（b）答后果＋推荐默认＋各选项后果（c）不答/晚答后果；缩 scope；defer 非关键；仍超才一次 ESCALATE_OWNER。
+- 两账＋owner_time 估计分别可重算（预冻结证据条件 6）。
 
-## 9. 呈现面制度（必修⑤——三面中最弱面的补强）
+## 9. 呈现面制度
 
-1. **双频道**为 hard 规范：对话=人话（本轮意义＋需 Owner 做/答什么），技术进文件（本轨道 09-continuation/02 制度全文并入规范库）；
-2. 状态机人话出口（§5）；
-3. 提问三件套（§8）；
-4. **N-11 套用成本度量**：每个新 agent/项目"从零到记忆系统就位"的 Owner 动作数与耗时入账，目标逐代下降（登记表 §4.5）；
-5. 人类投影页（当前状态/决策索引/需求看板）为 L2 标配〔P §5.4〕。
+双频道（对话人话/技术进文件；advisory＋Owner 抽查，hard 化路径见 §3）；状态机人话出口（ANNEX-A）；三件套（§8）；N-11 套用成本度量（新 agent 从零到记忆系统就位的 owner_manual_actions 与耗时入账，目标逐代下降）；人类投影页为 A2 标配。
 
-## 10. 交接协议（SYN 版）
+## 10. 迁移（T0~T5）
 
-四件套〔P §8.1〕：Portable Checkpoint（含 hidden_dependencies〔F §8.1〕与不可重推审计三问〔024〕）＋Quick Card＋Full Package（execution_history 只留有诊断价值的失败，反教条全量〔P §8.4；Handoff Tax〕）＋Receiver Receipt（fatal/warning 分级＋"B 明确 supersedes A 应接受"反陷阱〔P §8.5〕）。
+照 SYN-1 六步保留，修订两处：T2 的规范映射抽检**不预设比率**——由 T0 盘点产出的规则数量/风险/重复分布决定分层抽样方案（含最小样本与停止条件），随 T0 退出条件一并冻结（closing BLOCKER-09）；每步一 PR、影子并行、只切新会话、revert、不重写历史。
 
-- **分层选择规则**（030 缺口闭合）：由**发送方**按接收方能力类（同代强/次档/强模型接乱局）在 package `load_plan` 中指定默认层，接收方可在 Receipt 中声明升档理由；无声明时默认 Quick+Full 指针模式。
-- **族间返场**：离场超过该主线 declared_tempo 的 2 个周期或 7 天（取先到者，[INFERENCE 校准值]）即须先消费追赶简报（自 git log＋裁决层生成）；同机多会话 worktree 分离＋写者串行声明〔F §8.2；C-24〕。
+## 11. 反模式自检与测试
 
-## 11. 预冻结效果测试（必修②——登记表 §4.1 全量闭合）
+16 条自检索引照 05b §2；运行级负测（#9/#12/#14/#16）由 **ANNEX-D 协议**承担；PRE-FREEZE 状态维持至十条通过门全过。
 
-12-case（真实 6 跨三主线＋隐藏事实 2＋current/superseded 2＋应拒 1＋反陷阱 1）〔P §8.6〕×五臂条件 A~E〔P §8.6〕；接收者三类（同模型 fresh/次档/异族）〔P §8.6〕；oracle 组合与统计纪律〔P §8.6；024〕；开发折/确认折分离。
+## 12. [INF] 与 UNKNOWN 登记
 
-**通过门 = Pro 稿八条〔P §8.7〕＋登记表 §4.1 全量映射**：
+[INF] 全表：≤200 行；15% 及其分母/分类定义；2 周期 STOP；touch 默认 0/1/2；返场 2 周期；12-case 配额与六臂；Owner 参与 ≥2、盲抽 1；provisional 48h 补录窗；audit 档触发六项之界定。UNKNOWN：继承 029 §12.4 全部 14 条，另加：used_source_refs 测量办法；双频道强制层形态；**恢复登记**（closing F-13）：条目化压缩失义风险、purpose_delta 自报美化风险——均保持开放，不因"已有对冲"关闭。
 
-| 登记表条件 | 测法 |
+## 13. BLOCKER 闭合对照（MNE-DR-032 §4.2 → 本版）
+
+| BLOCKER | 闭合处 |
 |---|---|
-| 体感1 背景补充为零 | 条件 D 中 Owner 需补充背景次数=0（Owner 抽样参与 ≥2 case） |
-| 体感2 手工动作 ≤2 | touch 计数（§8 口径） |
-| 体感3 前三轮无既视感 | Owner 对参与 case 的主观判定（记录不计主分） |
-| 体感4 遮住边界测试 | Owner 盲抽 1 case 对话记录判"是否看得出换了会话" |
-| 机械1 五元恢复全对 | 闭池＋executable oracle 逐项 |
-| 机械2 ≤5 文件一次会话恢复 | load receipt 的 mandatory+retrieved 计数 |
-| 机械3 首任务无纠正 | case 内首个实质任务的 failure_touch=0 |
-| 机械4 全档审计仅 cosmetic | 条件 A 全档对照 D 的缺陷清单分级 |
-| 机械5 四类归因可判定 | 每失败 case 归因到 交接包/接收方/仓库残留/**用户操作** 四轴（031 缺口闭合） |
-| 机械6 fail-closed 正反例 | TRR/FRR 双报＋反陷阱 |
-| 11 项评估问题 | 逐项 PASS/PARTIAL/FAIL 表（design E 框架） |
+| 01 唯一权威 | 头部 normative_unit 声明＋ANNEX-A/B/C/D 正文化＋04/029 降级 |
+| 02 三档矩阵/层号 | ANNEX-E 逐字段＋A/L/S 三系正交命名＋触发词机械判据 |
+| 03 收据支撑指标 | ANNEX-B 两档＋指标数据映射＋not_measurable 纪律 |
+| 04 交接字段/分层 | ANNEX-C：hidden_dependencies 条件核心（none 显式）＋风险×能力类矩阵＋登记制能力类＋升档规则 |
+| 05 测试协议 | ANNEX-D：十条门＋11 问题列出＋条件 F 全档审计＋cosmetic 定义＋残留控制＋冻结纪律 |
+| 06 双账/双层归因 | §8 双账＋ANNEX-D 四轴×工程子因矩阵 |
+| 07 hard 一致性/快车道 | §3 双频道降 advisory＋§1 provisional 机制 |
+| 08 时间/阈值/标签 | §4 统一 48h＋ANNEX-C 去 7 天上限＋ANNEX-F 一对一追踪＋§12 [INF] 全表与风险恢复 |
+| 09 抽检率 | §10 T0 后冻结抽样方案 |
 
-## 12. 迁移计划（六步，融合 F 的 M0-M4 与 P 的 12 阶段退出条件）
+## 14. 自我批判（承 SYN-1 §14 全部有效，另加）
 
-| 步 | 内容（含 P 阶段号） | 退出条件 |
-|---|---|---|
-| T0 | 冻结边界＋盘点分类＋稳定 ID/manifest（P0-2） | 全部规范件有唯一 authority；可回滚 |
-| T1 | 三态标注（section-level 先行，不破坏历史）＋当前视图与变更集启用（P3-4） | compiler 可排除 S0/S1 指令权；账本-视图一致性校验过 |
-| T2 | 规范库条目化（M2/P5：映射机械校验＋Pro 抽检 10% [INFERENCE]）＋需求状态机启用（P6） | 无第二可编辑副本；一条真实需求走完整回环 |
-| T3 | 最小加载器＋收据（P7；不建 embedding） | 新会话可自证"装了什么为什么" |
-| T4 | 交接影子运行＋12-case 预冻结测试（P8-9） | §11 通过门，或明确 defer/stop |
-| T5 | 有限切换（单主线先行）→逐项目推广（P10）；N-17 迁移留待成熟条件（P11） | 监控四指标平稳；一键回滚在案 |
-
-每步一 PR、影子并行、只切新会话、逐步 revert、不重写历史〔F §10；P §9〕。
-
-## 13. 反模式 16 条自检（合成后重答）
-
-16 条全部有双源机制支撑（05b §2 收敛清单即索引）；合成新增风险两条入 §14。运行级负测（#9/#12/#14/#16）留待 §11 测试与 T 期影子运行，本稿维持 PRE-FREEZE 不自证。
-
-## 14. 自我批判
-
-1. **合成由被评方之一（Fable）执笔**——采纳取舍可能偏向己稿；对冲：29 项采纳中 15 项来自对方稿且含其最强机制（装载算法/双闸门/接收回执），032 异族复核专查"合成是否丢失 Pro 稿优点"；
-2. 两源稿的共同盲区双方都看不见（双盲收敛≠正确性证明；028 的 UNKNOWN 清单原样有效）；
-3. 三档字段制自身是新增复杂度，若执行走样恰是反模式 #3 变体——最小子集（§0）是其止损线；
-4. 全部 [INFERENCE] 阈值（200 行/15%/触点数/7 天返场/10% 抽检）首周期实测重校；
-5. 迁移 T0-T5 工作量仍未估计（两源稿同病），T0 盘点产出首个实测数字前不承诺时间表。
-
-## 15. 引用表（必修⑦）
-
-| 采纳/主张 | 出处 |
-|---|---|
-| 七层结构、权威六分表、轻量账本、S0-S2、18 态机、MODEL-EVENT、六级装载、八步算法、收据与污染指标、双闸门、touch 口径与阶梯、四件套交接、fatal/warning+反陷阱、12-case 五臂、通过门八条、12 阶段迁移退出条件、"删除是设计动作"、"耐久≠常驻" | Pro 稿 029 §1.2/1.3/1.4/3/4.1-4.4/5.1-5.6/6/7/8/9/6.5/2.2 |
-| 三面公理、毒性梯度落地、norms 条目与预算、enforcement 分级、任务加载表与四单、purpose_delta/账单/15%/两周期 STOP、hidden_dependencies、返场简报与 worktree、M0-M4 骨架、五假保证、单向写、双频道 | Fable 稿 04 §2/3/6/7/8/10/15 |
-| 必修七项清单与分歧消解 | 05b §3-4（源自 030 §12-13、031 §3-4） |
-| 外部证据 | 020~028 各报告（本稿不重复引注，逐条见两源稿引用表与 05b） |
-
-INFERENCE 汇总：三档字段划分本身；§2 各核心档字段选择；48h/200行/15%/触点默认/7天返场/10%抽检/两周期 STOP。UNKNOWN：继承 029 §12.4 全部 14 条。
-
-## 16. 采纳清单落位表（29 项 → 本稿节号）
-
-030 对 F 稿 14 项 → §1(骨架/账本/单向写) §3(norms/预算) §4(三态/晋升序) §5(状态机) §6(加载表/四单/阶梯/回链) §7(purpose) §10(三件套交接/返场) §12(M 骨架) §14(风险登记) §3(hard/advisory)；031 对 P 稿 15 项 → §6(装载类/算法/收据/指标) §7(双闸门/停止规则/删除设计) §8(touch/阶梯) §10(回执/反陷阱) §11(12-case/TRR-FRR/折分离/通过门) §5(MODEL-EVENT) §3(规则单元五条件) §6(升级阶梯) §1(耐久判定/投影不变量) §12(迁移方法)。无一项被丢弃；两项附条件（used_source_refs 测量、10% 抽检率）已标注。
+8. 本轮修订仍由 Fable 执笔且未再经异族复核——对冲：BLOCKER 闭合对照表逐项机械可查（§13＋ANNEX-F），Owner 可要求 MNE-DR-033 二次复核或径行采纳（成本取舍在 Owner）；
+9. 正文化使规范单元体量上升（07＋08 约 400 行）——仍在常驻 ≤200 行预算之外（规范单元属 A1 耐久核心，非常驻装载集；常驻的是由它编译出的迷你章程与任务加载表）。
