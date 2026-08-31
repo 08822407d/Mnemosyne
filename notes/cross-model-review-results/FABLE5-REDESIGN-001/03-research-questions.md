@@ -101,3 +101,7 @@ Owner 采用混合案："新研究001~006编号仍单独做说明以对应已存
 ## 11. RQ13 取号与冻结解除（2026-08-31）
 
 PR #325 已合并（master 注册表 next=028 核验通过），取号冻结解除。RQ13 正式取 **MNE-DR-028 总体模型复核**（taskbook `project-knowledge/FABLE5-REDESIGN-001/MNE-DR-028-overall-abstraction-model-taskbook.md`），next→029；注册表补记交维护线。
+
+## 12. 阶段 3 取号（2026-08-31）
+
+MNE-DR-029 对照设计（普）——canonical FABLE5-REDESIGN-001-CP1，普通对话 Pro 设计任务（类别标"普"，PF-002 过渡做法）；next→030。注册表补记交维护线。
