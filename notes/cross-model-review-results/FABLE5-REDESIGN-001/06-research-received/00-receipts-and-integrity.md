@@ -119,3 +119,17 @@ integrity_checks_batch_6:
   content_review_scope: identity_line_and_stats_only（封存延续：本会话不读评审正文，直至 030 回收后按 05a 计划统一拆封）
   reviewer_session_conduct: 仓库工作树净、分支未动（git status 0 项，head 83dfd17）——031 会话遵守了只读边界
 producer: operator_reported_fresh_Claude_Code_session（模型/表面以其 complete-response 自报为准，拆封时登记）
+
+---
+
+## 批次七收据（2026-08-31 晚，MNE-DR-030 盲评 Fable 稿）＋拆封记录
+
+```yaml
+receipts_batch_7:
+  - {artifact_id: MNE-DR-030-review, repository_path: 06-research-received/MNE-DR-030-review.md, lines: 282, bytes: 24198, sha256: ec81862f6186a4d2f336b630c6cf362024e825caaf9b8fa1a9be8a8bfb33620f, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+  - {artifact_id: MNE-DR-030-complete-response, repository_path: 06-research-received/MNE-DR-030-complete-response.md, lines: 6, bytes: 923, sha256: be40948399dfcde33b41d59bdf18dd163e6fa7547425afd791a262f0c8a92fc1, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+unseal_record:
+  condition_met: 030 与 031 均已回收（05a 计划的拆封条件）
+  unsealed_at: 2026-08-31 晚（本批提交后）
+  unseal_scope: 本会话自此读取 MNE-DR-029-counterpart-design.md、MNE-DR-030-review.md、MNE-DR-031-review.md 正文
+  firewall_ledger_close: 拆封前本会话对上述三件正文零读取（各批次收据 content_review_scope 为证）
