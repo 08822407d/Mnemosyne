@@ -106,3 +106,16 @@ integrity_checks_batch_5:
   note: 回复副本仅 8 行——与任务书"正文只给摘要、全文进设计文件"一致；其内容完整性在防火墙下不可核验，如实登记
   firewall_status: 本会话未读正文；消化留待盲评流程（030/031）完成后按 Owner 批示进行
 producer: operator_reported_GPT-5.6_Pro_normal_conversation_via_self-fetch_mode（§2B 直链模式）
+
+---
+
+## 批次六收据（2026-08-31 晚，MNE-DR-031 盲评 Pro 稿——继续封存）
+
+```yaml
+receipts_batch_6:
+  - {artifact_id: MNE-DR-031-review, repository_path: 06-research-received/MNE-DR-031-review.md, lines: 111, bytes: 15539, sha256: 16bfbb1971270a346000c909351d3622f1caca0a98af980ae8ea14cf18744a1d, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+  - {artifact_id: MNE-DR-031-complete-response, repository_path: 06-research-received/MNE-DR-031-complete-response.md, lines: 27, bytes: 3605, sha256: ca334b0b603ac2d6e41501b4d1cb66b0090c75dee09ba32dcac70655fcdd3dc6, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+integrity_checks_batch_6:
+  content_review_scope: identity_line_and_stats_only（封存延续：本会话不读评审正文，直至 030 回收后按 05a 计划统一拆封）
+  reviewer_session_conduct: 仓库工作树净、分支未动（git status 0 项，head 83dfd17）——031 会话遵守了只读边界
+producer: operator_reported_fresh_Claude_Code_session（模型/表面以其 complete-response 自报为准，拆封时登记）
