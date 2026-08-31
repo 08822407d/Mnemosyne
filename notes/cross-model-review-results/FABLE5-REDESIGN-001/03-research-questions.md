@@ -109,3 +109,7 @@ MNE-DR-029 对照设计（普）——canonical FABLE5-REDESIGN-001-CP1，普通
 ## 13. 盲评取号（2026-08-31）
 
 MNE-DR-030 盲评Fable稿（普）＝FABLE5-REDESIGN-001-BR1；MNE-DR-031 盲评Pro稿（CC）＝FABLE5-REDESIGN-001-BR2；共用预冻结细则 `MNE-DR-030-031-shared-review-rubric.md`；next→032。
+
+## 14. 合成复核取号（2026-09-01）
+
+MNE-DR-032 合成稿复核（普）＝FABLE5-REDESIGN-001-SR1（GPT-5.6 Pro 开卷复核 SYN-1，采纳前最后一道异族门）；next→033。注册表补记交维护线。
