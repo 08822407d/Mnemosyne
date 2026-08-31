@@ -1,0 +1,73 @@
+# 任务书 · MNE-DR-029 Mnemosyne 独立对照重设计（GPT-Pro 普通对话，非深度研究）
+
+> 本文件是一份完整任务书。请完整读取全文与全部附件后再开始；若附件缺失或本文件不完整（看不到最后一节"禁止与停止条件"），请回复"输入不完整"并停止。
+
+```yaml
+display_name: MNE-DR-029 对照设计（普）
+canonical_task_id: FABLE5-REDESIGN-001-CP1
+execute_in: ChatGPT 官方入口 · 新普通对话（非深度研究）· 模型选 "GPT-5.6 Pro"（选择器 Pro 档）
+language: 中文
+issued_by: Mnemosyne 项目（FABLE5-REDESIGN-001 轨道，2026-08-31）
+independence_firewall: 本任务是与 Claude 侧设计稿的"独立对照设计"。你不会拿到、也不得请求或猜测 Claude 侧设计内容；只依据附件材料独立完成你自己的设计。
+```
+
+## 1. 任务
+
+你是 GPT-5.6 Pro，受项目 Owner 委托，对 Mnemosyne（记忆系统元 Agent 仓库）做一次**独立重新设计**。你只对《目标登记表》（附件 01）负责：允许抛弃任何现行架构（它们属 H 类机制猜想），但每处抛弃须写明理由；Owner 已裁定的公理（附件 02a 中 X-1~X-4 与 N-17/18/19）必须遵守。
+
+## 2. 附件清单（Owner 将随本文件一并提供；逐件核对，缺任一件即停止）
+
+1. `01-goals-register.md` — 目标登记表（52 条＋裁决更新，你的唯一"需求方"）
+2. `02a-contradiction-clarification-package.md` — Owner 矛盾澄清裁决（逐字）
+3. `foundational-agent-antipattern-checklist-v1.md` — 反模式清单 16 条（你的设计须逐条自检）
+4. `MNE-DR-020-report.md` ~ `MNE-DR-026-report.md`、`MNE-DR-028-report.md` — 八份研究报告（平台现状、连续性实践、需求生命周期、检索加载、交接评测、学习者建模、开发知识资产、总体抽象复核）
+5. `MNE-DR-027-result.md` — ChatGPT GitHub 写能力实测记录
+
+
+## 2B. 材料获取方式 B（无附件模式——操作者在移动端时使用）
+
+若操作者未上传附件，请**自行逐个抓取**以下 12 个公开原始文件（逐件确认可读，报告每件的字节数与首行；任一件抓取失败即停止并告知操作者改用附件模式）：
+
+1. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/01-goals-register.md
+2. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/02a-contradiction-clarification-package.md
+3. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/foundational-agent-antipattern-checklist-v1.md
+4. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-020-report.md
+5. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-021-report.md
+6. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-022-report.md
+7. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-023-report.md
+8. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-024-report.md
+9. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-025-report.md
+10. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-026-report.md
+11. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-027-result.md
+12. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-028-report.md
+
+抓取完成后按 §2 清单核对齐全，再开始 §3 工作。联网能力仅限抓取上述 12 个 URL 与本任务书自身；不得抓取该仓库其他路径（尤其不得读取 notes/cross-model-review-results/FABLE5-REDESIGN-001/ 下的 02/04 等分析与设计文件——防火墙条款）。
+
+## 3. 交付物（一份设计文档，必含以下十二节）
+
+架构总览；"耐久核心/可再生层"文件组织（可再生层标注为哪代模型而建）；"原始资料→经检查构想→实现层"三态循环记录方案；需求生命周期状态机（含新模型触发重评、反馈全材料捕获、定期测试）；加载/投影机制（记录≠加载）；目的核查机制（与 fail-closed 同级的停止条件）；Owner-touch 预算；**交接方案（核心目标）及预冻结效果测试**；自现状迁移计划；反模式清单 16 条逐条自检；自我批判与盲区；证据引用（结论逐条标注依据的附件与章节，无依据处标 INFERENCE/UNKNOWN）。
+
+设计中任何提示词片段/模板须内嵌全部必填字段与状态枚举（不得给残缺片段）。
+
+## 4. 交付方式（两个文件都必须在同一最终回复中生成）
+
+```yaml
+complete_response_transfer_file:
+  required: true
+  files:
+    - MNE-DR-029-counterpart-design.md   # 设计文档本体（可下载）
+    - MNE-DR-029-complete-response.md    # 完整最终回复逐字副本（可下载，含状态行与警告）
+  create_in_same_final_response: true
+```
+
+聊天正文给简明摘要；完整内容以可下载文件交付。若你的界面无法生成文件，如实声明并给出单一最小操作请求，不得声称文件已存在。
+
+## 5. 禁止与停止条件
+
+- 不请求/不猜测 Claude 侧设计；除 §2B 列出的 12 个 URL 外不访问任何仓库路径或外部资料（证据以材料为准，材料外主张标 UNKNOWN）；
+- 不修改任何仓库；这是设计文档任务；
+- 附件/URL 材料缺失、内容不完整或主题被替换即停止；URL 模式下越界抓取仓库其他路径同样视为违例须停止。
+
+## 6. 操作者收尾（给 Owner）
+
+两个下载文件发回 Claude 侧会话即可；后续"双向盲评"是另一个独立任务，届时另发任务书（本次不含）。
