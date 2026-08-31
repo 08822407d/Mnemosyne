@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.3.1
-last_updated_by_task: MNEMOSYNE-260（补记 028；next→029；PF-002 口径注记）
+version: 0.3.2
+last_updated_by_task: MNEMOSYNE-260（补记 029 对照设计（普）；next→030）
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -23,7 +23,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 029
+    next_unallocated_sequence: 030
   Meta_Agent:
     project_id: meta-agent
     abbreviation: MA
@@ -167,6 +167,14 @@ issued_aliases:
     allocation_task: FABLE5-REDESIGN-001
     run_surface: deep_research_pro_planned
     taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-028-overall-abstraction-model-taskbook.md
+  - display_name: MNE-DR-029 对照设计（普）
+    sequence: 029
+    canonical_task_id: FABLE5-REDESIGN-001-CP1
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: ordinary_conversation_gpt_pro  # 独立对照设计（跨族盲设计对应件）；显示名带（普）为 PF-002 过渡标注
+    notes: [display_name_mode_marker_transitional_per_PF-002]
 ```
 
 ## 2A. Legacy 2026H1 回填段（MNEMOSYNE-259，按 FABLE5-REDESIGN-001 编号统一终案 v2）
