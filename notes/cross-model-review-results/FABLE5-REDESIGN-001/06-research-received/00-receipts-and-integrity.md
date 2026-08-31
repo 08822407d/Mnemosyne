@@ -64,3 +64,19 @@ integrity_checks_batch_2:
   known_artifact: ChatGPT 引用标记残迹 202/232/191 处（已知导出伪影）
   contract_conformance: 中文；UNKNOWN 显式（022 对行业标准枚举/采用率等、023 对 MB 阈值/懒加载因果收益等、024 对多个基准 license）；未逐条访问来源 URL（not_fully_reviewed）
 verdict_batch_2: 三件确认无误，入证据层；已按双仓归档制度入 Alaya（哈希同上）
+
+---
+
+## 批次三收据（2026-08-31 深夜，MNE-DR-025/026/027）
+
+```yaml
+receipts_batch_3:
+  - {artifact_id: MNE-DR-025-report, operator_filename: acdff536-MNEDR025_deepresearchreport.md, repository_path: 06-research-received/MNE-DR-025-report.md, bytes: 42582, sha256: 9a7612eb6e6b1fc2799ead5b09fd66be35cae325c1eb19b7d88e30510e1186c5, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+  - {artifact_id: MNE-DR-026-report, operator_filename: 00a20f67-MNEDR026_deepresearchreport.md, repository_path: 06-research-received/MNE-DR-026-report.md, bytes: 40770, sha256: cd7c9a2cad90dc1a6e7405a8a839524b351c278b728f0210e0f477c15f163e66, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+  - {artifact_id: MNE-DR-027-result, operator_filename: 9719e79f-MNEDR027_ChatGPT_GitHub__________.md, repository_path: 06-research-received/MNE-DR-027-result.md, bytes: 2520, sha256: d1697fc07953f374807799d59ca9d6723b7c1945538979622057d4d4b1736c02, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true, note: 非深度研究——普通对话 Pro 实测结果记录（run_surface 与类别问题见 PF-002）}
+integrity_checks_batch_3:
+  encoding: 三件均 UTF-8、无 CR、无 U+FFFD
+  identity: 025/026 首行任务号一致且完整（Q1~Q7＋来源表）；027 首行含任务号、四步结果表齐全、含 ChatGPT file-cite 标记残迹（已知伪影）
+  producer: operator_reported——025/026 深度研究 Pro；027 普通对话（选择器 Pro，自报 GPT-5.6 Pro，自报不作身份证据）
+verdict_batch_3: 三件确认无误入库；027 类别标注问题另立 PF-002
+side_effects_of_027_run: 仓库新增测试分支 chatgpt-write-capability-test-20260831 与 Draft PR #326（DO NOT MERGE；处置待 Owner——建议留档后关闭 PR，分支删留均可）
