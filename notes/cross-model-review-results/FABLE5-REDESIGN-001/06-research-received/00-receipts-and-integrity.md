@@ -133,3 +133,14 @@ unseal_record:
   unsealed_at: 2026-08-31 晚（本批提交后）
   unseal_scope: 本会话自此读取 MNE-DR-029-counterpart-design.md、MNE-DR-030-review.md、MNE-DR-031-review.md 正文
   firewall_ledger_close: 拆封前本会话对上述三件正文零读取（各批次收据 content_review_scope 为证）
+
+---
+
+## 批次八收据（2026-08-31 深夜，MNE-DR-032 合成稿复核）
+
+```yaml
+receipts_batch_8:
+  - {artifact_id: MNE-DR-032-review, repository_path: 06-research-received/MNE-DR-032-review.md, lines: 395, bytes: 29845, sha256: 55e7e65bf71aa58d49c5ef9aa4d4492eb188e9a662d0708be541fe840b2df63b, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+  - {artifact_id: MNE-DR-032-complete-response, repository_path: 06-research-received/MNE-DR-032-complete-response.md, lines: 8, bytes: 1661, sha256: c256d96730be165a766ef20d49daf87d72962ad473b330bc35a98708a75f556d, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
+verdict_received: ADOPT_WITH_CHANGES（架构方向条件采纳；文本修订关闭 BLOCKER-01~09 后再采纳为规范根；预冻结测试 BLOCKED 至修订完成）
+disposition: 本会话据此产出 SYN-2（07 修订＋规范附件 08，见对应 commit）；29+7 追踪与九项修法逐条对应
