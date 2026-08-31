@@ -23,6 +23,26 @@ independence_firewall: 本任务是与 Claude 侧设计稿的"独立对照设计
 4. `MNE-DR-020-report.md` ~ `MNE-DR-026-report.md`、`MNE-DR-028-report.md` — 八份研究报告（平台现状、连续性实践、需求生命周期、检索加载、交接评测、学习者建模、开发知识资产、总体抽象复核）
 5. `MNE-DR-027-result.md` — ChatGPT GitHub 写能力实测记录
 
+
+## 2B. 材料获取方式 B（无附件模式——操作者在移动端时使用）
+
+若操作者未上传附件，请**自行逐个抓取**以下 12 个公开原始文件（逐件确认可读，报告每件的字节数与首行；任一件抓取失败即停止并告知操作者改用附件模式）：
+
+1. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/01-goals-register.md
+2. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/02a-contradiction-clarification-package.md
+3. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/foundational-agent-antipattern-checklist-v1.md
+4. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-020-report.md
+5. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-021-report.md
+6. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-022-report.md
+7. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-023-report.md
+8. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-024-report.md
+9. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-025-report.md
+10. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-026-report.md
+11. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-027-result.md
+12. https://raw.githubusercontent.com/08822407d/Mnemosyne/fable5-redesign-001-workspace/project-knowledge/FABLE5-REDESIGN-001/pro-counterpart-materials/MNE-DR-028-report.md
+
+抓取完成后按 §2 清单核对齐全，再开始 §3 工作。联网能力仅限抓取上述 12 个 URL 与本任务书自身；不得抓取该仓库其他路径（尤其不得读取 notes/cross-model-review-results/FABLE5-REDESIGN-001/ 下的 02/04 等分析与设计文件——防火墙条款）。
+
 ## 3. 交付物（一份设计文档，必含以下十二节）
 
 架构总览；"耐久核心/可再生层"文件组织（可再生层标注为哪代模型而建）；"原始资料→经检查构想→实现层"三态循环记录方案；需求生命周期状态机（含新模型触发重评、反馈全材料捕获、定期测试）；加载/投影机制（记录≠加载）；目的核查机制（与 fail-closed 同级的停止条件）；Owner-touch 预算；**交接方案（核心目标）及预冻结效果测试**；自现状迁移计划；反模式清单 16 条逐条自检；自我批判与盲区；证据引用（结论逐条标注依据的附件与章节，无依据处标 INFERENCE/UNKNOWN）。
@@ -44,9 +64,9 @@ complete_response_transfer_file:
 
 ## 5. 禁止与停止条件
 
-- 不请求/不猜测 Claude 侧设计；不访问外部仓库或连接器（附件已足）；不联网检索（证据以附件为准，附件外主张标 UNKNOWN）；
+- 不请求/不猜测 Claude 侧设计；除 §2B 列出的 12 个 URL 外不访问任何仓库路径或外部资料（证据以材料为准，材料外主张标 UNKNOWN）；
 - 不修改任何仓库；这是设计文档任务；
-- 附件缺失、内容不完整或主题被替换即停止。
+- 附件/URL 材料缺失、内容不完整或主题被替换即停止；URL 模式下越界抓取仓库其他路径同样视为违例须停止。
 
 ## 6. 操作者收尾（给 Owner）
 
