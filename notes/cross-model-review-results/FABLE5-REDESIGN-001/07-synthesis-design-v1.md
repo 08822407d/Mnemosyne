@@ -7,7 +7,7 @@ version: SYN-2_PRE-FREEZE（SYN-1 经 MNE-DR-032 复核 ADOPT_WITH_CHANGES 后�
 date: 2026-09-01
 normative_unit: 本文件＋08-syn-annexes-normative.md 于同一 commit 构成唯一规范根（版本锚=commit SHA）；**04 与 MNE-DR-029 自本版起降为 evidence/reference，全部规范权由本单元承接**（closing BLOCKER-01/D-07）
 citation: 逐项追踪见 ANNEX-F；[INF]=INFERENCE 待校准，汇总见 §12
-status_gates: 待 Owner 采纳 → 预冻结测试（ANNEX-D）通过 → 冻结与迁移
+status_gates: **Owner 已采纳（2026-09-01 批示"采纳"）**；预冻结测试（ANNEX-D）与迁移 T0 为后续独立门，未自动开始
 ```
 
 ## 0. 最小可用子集
