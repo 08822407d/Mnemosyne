@@ -29,3 +29,38 @@ integrity_checks:
   contract_conformance: 中文、逐条截至日期、UNKNOWN 显式标注（020 对配额/后台模型等 6 处、021 对多处普及度/收益）、无编造迹象抽查通过（来源表 URL 抽 6 条域名/路径格式合理；未逐条访问复核，标 not_fully_reviewed）
 verdict: 两件确认无误，正式入证据层；效力=研究证据（非执行源）
 alaya_archive: research/MNE/ 四件（两报告＋两任务书），哈希同上，见 Alaya indexes/archive-inventory-research.yaml
+
+---
+
+## 批次二收据（2026-08-31，MNE-DR-022/023/024）
+
+```yaml
+receipts_batch_2:
+  - artifact_id: MNE-DR-022-report
+    operator_filename: 086c16d4-MNEDR022_deepresearchreport.md
+    repository_path: 06-research-received/MNE-DR-022-report.md
+    bytes: 43904
+    sha256: 9fd6e64a39b7b1c4061f6fe173d0e4fab1dac2dd2db8d2176f2731f58b3d4169
+    preservation_level: EXACT_FILE_IN_REPOSITORY
+    byte_identity_verified: true
+  - artifact_id: MNE-DR-023-report
+    operator_filename: 0acf5921-MNEDR023_deepresearchreport.md
+    repository_path: 06-research-received/MNE-DR-023-report.md
+    bytes: 49489
+    sha256: a72845a6962d6d6c965f1a4338c8f84ede1611f9f2ce031e3fb304d5ca5f7c03
+    preservation_level: EXACT_FILE_IN_REPOSITORY
+    byte_identity_verified: true
+  - artifact_id: MNE-DR-024-report
+    operator_filename: d8cebdd6-MNEDR024_deepresearchreport.md
+    repository_path: 06-research-received/MNE-DR-024-report.md
+    bytes: 47826
+    sha256: 28dc7fb4fef13149c795f0d485fa59d54622df8c7fdb534d6593fa6f9a5f2b3d
+    preservation_level: EXACT_FILE_IN_REPOSITORY
+    byte_identity_verified: true
+integrity_checks_batch_2:
+  encoding: 三件均 UTF-8、无 CR、无 U+FFFD
+  identity: 三件首行任务号/题目与任务书一致（022/RQ3、023/RQ6、024/RQ7）；024 首行为纯文本未作标题（cosmetic，非缺陷）
+  completeness: 022 Q1~Q8＋来源表 S01~S28；023 Q1~Q7＋来源表（37 行）；024 Q1~Q7＋来源表（24 行）；结尾均完整
+  known_artifact: ChatGPT 引用标记残迹 202/232/191 处（已知导出伪影）
+  contract_conformance: 中文；UNKNOWN 显式（022 对行业标准枚举/采用率等、023 对 MB 阈值/懒加载因果收益等、024 对多个基准 license）；未逐条访问来源 URL（not_fully_reviewed）
+verdict_batch_2: 三件确认无误，入证据层；已按双仓归档制度入 Alaya（哈希同上）

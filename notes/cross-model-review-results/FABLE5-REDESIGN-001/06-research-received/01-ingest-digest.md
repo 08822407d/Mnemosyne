@@ -36,3 +36,37 @@ evidence_status: 研究证据；平台类事实按 §11 时效条款对待，执
 - RQ1/RQ2 → 已执行并回收；旧研究时效替换按 03 文件 §2 执行（DR6 平台部分由 020 接替，DR1/DR2 基准格局由 021 接替；方法论部分仍有效）。
 - 本记录为首轮消化；阶段 1（自洽与可行性）与阶段 2（重设计）将逐条引用两报告原文。
 - 候选交维护线：§A 的 stale 标记三条。
+
+---
+
+## D. 批次二消化（MNE-DR-022/023/024，2026-08-31）
+
+### MNE-DR-022 需求生命周期 → 阶段 2 状态机设计
+
+1. **"历史保存"与"当前有效"是两个问题**：成熟先例（OpenSpec 的 current specs＋change delta＋archive；NASA baseline＋变更处置；ADR/RFC 的显式 supersede）都是"历史保留＋当前态显式化"，**不靠翻版本历史推断现行**。→ 与 021/023 的结论三线合流：阶段 2 必设显式 current-state/supersession 层，Git 只作审计底座。
+2. **矛盾并列交人裁 = 业界一等流程**（Kiro 冲突并列让用户选；Spec Kit analyze 严格只读、改动须人批）→ 登记表 §3.3 的做法获外证强支持。
+3. **"新模型自动复活挂起需求"无成熟先例（UNKNOWN）**——我们的 N-05 若做成即属首创；证据支持的形态：deferred 项带 defer_reason＋revisit_trigger，新模型只触发"待重评"队列而非自动生效。
+4. **审批门不必均一重**（Kiro Quick Spec 对低风险跳过中间批准）→ Owner-touch 预算的外证：按风险分档门。
+5. 六条最小补法候选（req_id/supersedes 边、current view、defer 字段、下游 trace、裁决记录、feedback+evidence 绑定）与 8 项健康度指标（其中双向可追溯完整率有缺陷率实证）→ 直接进阶段 2 素材。
+
+### MNE-DR-023 检索与按需加载 → 阶段 2 加载/投影机制
+
+1. **没有"多大规模必须上向量"的阈值**；升级触发器应是实测的词汇错配缺口，不是文件量。证据支持的阶梯：Git＋人工分层＋rg → manifest＋SQLite FTS5(BM25) → 实测漏检后再加本地 dense → 实证互补后 hybrid → 真版本问题出现才加 version-aware 层。
+2. **常驻上下文要小**：AGENTS.md 实证（context 文件反降成功率＋增 >20% 成本）与 288-run 消融（无正确率改善）→ 我们的分层加载方向正确，且警示 core 集膨胀；对 loader 影子试点是直接外证。
+3. **当前态不能交给相似度猜**（cosine 判矛盾 AUROC 0.59；版本感知检索 90% vs 58%）→ 与 022 §1 同一结论的检索侧证据。
+4. **派生索引铁律**："索引坏了最多降 recall，不能改变谁是真相"；可重建、可验 hash、可回源（FTS5 rebuild / hash-refresh 先例）。
+5. 污染度量三件套（Token Pollution / Stale Context / Rule Scope Error）＋"先测漏什么再加组件"→ 加载机制的验收口径素材。
+
+### MNE-DR-024 交接评测工具 → 阶段 2 预冻结测试
+
+1. **可直接抽小子集**：Memora（Apache-2.0，官方 --limit 5）、LongMemEval（MIT）；**可借鉴改造**：DreamBench-SWE（Apache-2.0，隐藏 oracle 结构照抄）、MemoryArena（数据 CC-BY-4.0、代码无 LICENSE）；**只可参考思想**：Handoff Debt、StateMemBench、AgentMemBench（未定位官方件，license UNKNOWN）。
+2. **五类自建 oracle 配方**（可执行检查/不可重推隐藏事实/current-superseded-other 闭池/正负双向 must_include+must_not_include/拒答拒收标签）＋隐藏事实的三问不可重推审计——预冻结测试的施工图。
+3. **裁判纪律**：机械 oracle 拿 80~90% 判定权（工程线非文献定律）；LLM 裁判有位置/长度/自我偏好三类实证偏差，须 A/B+B/A、锚点校准、生成者≠评分者；改变结论的裁决全部人工复核。
+4. **小样本统计**：全配对设计（同 checkpoint 只换交接条件）；n=5 全胜双侧 p 仍 =0.0625——"不显著≠无效"，报告原始对与效应量；预定 N 不因效果好提前停。
+5. **对抗折须含 anti-trap**（可疑但应接受的样本），分报真拒率/误拒率；折子冻结、发现新问题进下一版不回写。
+6. 三档素材包（低 4~8 小时/约 0.2~0.3M tokens；中 1~2 人日/0.5~0.8M；高 3~5 人日/1.4~2M）→ 阶段 2 按预算取档。
+
+### 处置
+
+- 第二批三课题全部回收；**两批共 5 项研究到齐，阶段 2 的三大待决点（状态机/加载/测试）证据输入完整**。
+- 与既有结论的合流点已在上文标注；无与第一批矛盾之处；023 对 loader 影子试点的佐证可供维护线参考（候选转告，不施义务）。
