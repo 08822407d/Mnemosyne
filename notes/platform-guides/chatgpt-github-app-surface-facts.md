@@ -5,7 +5,7 @@
 ```yaml
 fact_record_id: MNEMOSYNE-CHATGPT-GITHUB-APP-SURFACE-FACTS-001
 created_by_task: MNEMOSYNE-248
-observed_and_checked_at: 2026-08-26
+observed_and_checked_at: 2026-08-31（§1a 实测更新）
 fact_classes: [repository_historical_evidence, operator_reported, absence_of_documentation_in_bounded_search, engineering_inference]
 exact_backend_identity: unknown_or_not_attestable
 supersedes_nothing: 原 §18 表面细节的历史文本仍在 git 历史（PR #307 前的 spec），本文件是其现行去向
@@ -16,7 +16,13 @@ supersedes_nothing: 原 §18 表面细节的历史文本仍在 git 历史（PR #
 - 自 2026-07 起（仓库实证）：普通 ChatGPT 对话在连接并选择 GitHub app、且账户/workspace/action 配置支持时，可对关联仓库执行写入类 actions（建分支、建文件、建 PR）。"普通对话只能读 GitHub"自该时点起为过时假设。
 - 能力随 app 连接状态、模型、计划、workspace 管理配置变化——**每次涉及时按当前 UI 与 action 列表核验**，不引用本文件替代核验（执行源 §18 时效条款）。
 
-## 2. 授权操作建议（原 §18 移出内容）
+### 1a. 直写实测（MNE-DR-027，2026-08-31，本条为本文件当前最强证据）
+
+- 条件：ChatGPT 官方**普通对话**、模型选择器 Pro、已连接本仓库（连接器安装含 Mnemosyne）。
+- 结果：`create_branch` → `create_file` → `create_pull_request` 三个写 action **全程零审批卡**、直接执行成功（证据：Draft PR #326"DO NOT MERGE"、提交 56b1d49、实测记录 notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-027-result.md）。
+- 含义：**官方文档"连接器只读/写需审批"的表述在本环境失准**；§2 的审批卡建议在零卡路径上不适用——**平台侧真正有效的闸门只剩 App 安装的仓库清单**（最小授权原则因此升级为主要防线）。claim scope：本账户、本连接、实测日；复核触发照 §1 时效条款。
+
+## 2. 授权操作建议（原 §18 移出内容；2026-08-31 注：§1a 实测显示存在零审批卡直写路径，本节建议仅在审批卡实际出现时适用）
 
 - 审批卡默认建议选 `Allow once`（一次性允许）而非 `Always allow`；用户若选持久授权，Agent 仍不得把持久授权视为未来任务授权（平台权限 ≠ 任务授权，执行源 §18 第二条）。
 - approval card 出现、app 连接状态、历史授权，都不单独构成 Mnemosyne 写入授权。

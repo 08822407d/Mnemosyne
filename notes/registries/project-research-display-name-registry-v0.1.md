@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.3.0
-last_updated_by_task: MNEMOSYNE-259（DR 编号统一终案 v2 落地：旧序列回填 001~013、八月六项改号 014~019、新签发至 027、next→028）
+version: 0.3.3
+last_updated_by_task: MNEMOSYNE-260（补记 030/031 双向盲评；next→032）
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -23,7 +23,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 028
+    next_unallocated_sequence: 032
   Meta_Agent:
     project_id: meta-agent
     abbreviation: MA
@@ -158,6 +158,39 @@ issued_aliases:
     status: issued_ready_not_executed
     allocation_task: FABLE5-REDESIGN-001
     taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-027-github-write-capability-taskbook.md
+    run_surface: ordinary_conversation_pro_live_test  # 非深度研究；类别误导已记 PF-002
+  - display_name: MNE-DR-028 总体模型复核
+    sequence: 028
+    canonical_task_id: FABLE5-REDESIGN-001-RQ13
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: deep_research_pro_planned
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-028-overall-abstraction-model-taskbook.md
+  - display_name: MNE-DR-029 对照设计（普）
+    sequence: 029
+    canonical_task_id: FABLE5-REDESIGN-001-CP1
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: ordinary_conversation_gpt_pro  # 独立对照设计（跨族盲设计对应件）；显示名带（普）为 PF-002 过渡标注
+    notes: [display_name_mode_marker_transitional_per_PF-002]
+  - display_name: MNE-DR-030 盲评Fable稿（普）
+    sequence: 030
+    canonical_task_id: FABLE5-REDESIGN-001-BR1
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: ordinary_conversation_gpt_pro_fresh  # 盲评 Fable 重设计稿（04 号）
+    notes: [preregistered_rubric_shared_with_BR2, display_name_mode_marker_transitional_per_PF-002]
+  - display_name: MNE-DR-031 盲评Pro稿（CC）
+    sequence: 031
+    canonical_task_id: FABLE5-REDESIGN-001-BR2
+    project: Mnemosyne
+    status: issued_ready_not_executed
+    allocation_task: FABLE5-REDESIGN-001
+    run_surface: claude_code_fresh_session_read_only  # 盲评 Pro 对照稿（029 产物，防火墙封存件）；作者回避
+    notes: [preregistered_rubric_shared_with_BR1, author_recusal, display_name_mode_marker_transitional_per_PF-002]
 ```
 
 ## 2A. Legacy 2026H1 回填段（MNEMOSYNE-259，按 FABLE5-REDESIGN-001 编号统一终案 v2）
@@ -186,6 +219,7 @@ legacy_2026H1:
 
 **序列规则（终案 v2）**：全序列严格唯一、永不复用；曾用号（八月六项的旧 001~006 指代）仅为读档别名、不再签发；
 读 2026-08-31 前冻结档案遇 MNE-DR-001~006 按"曾用号"解读；活文件中的旧号引用采 lazy migration（碰到才改，维护线掌节奏）。
+**类别口径（PF-002 注记）**：MNE-DR-NNN 序列号只标识运行的登记身份，**不断言运行模式**——深度研究/普通对话/Work 等以条目 run_surface 字段与收据为准（历史条目缺该字段者按其记录解读）；"DR 前缀=宽类别"的语义与类型码体系的统一，随 PF-001/PF-002 编号专项另行研究后交 Owner 裁定。
 
 ## 3. Historical Meta-Agent compatibility
 
