@@ -202,13 +202,13 @@ issued_aliases:
     report_source_roots:
       - notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-032-review.md
       - notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-032-complete-response.md
-    notes: [registered_late_by_MNEMOSYNE-261, receipts_batch_8_in_06-research-received/00-receipts-and-integrity.md, display_name_mode_marker_transitional_per_PF-002]
+    notes: [registered_late_by_MNEMOSYNE-261, receipts_batch_8_in_06-research-received/00-receipts-and-integrity.md, alaya_cross_receipt_in_handoff/fable5-handoff-001/alaya-cross-receipt-and-residue-closeout.md, display_name_mode_marker_transitional_per_PF-002]
   - display_name: MNE-DR-033 交接实测（CC）
     sequence: 033
     canonical_task_id: FABLE5-HANDOFF-001
     project: Mnemosyne
     status: executed_received_8_of_8_PASS_sample_record_archived_alaya_research_MNE
-    allocation_task: FABLE5-HANDOFF-001  # 取号记录：handoff/fable5-handoff-001/checkpoint.yaml task_id_allocation（2026-09-01，next→034）
+    allocation_task: FABLE5-HANDOFF-001  # 取号记录：handoff/fable5-handoff-001/checkpoint.yaml task_id_allocation（2026-09-01，next→034；由 FABLE5-REDESIGN-001 前任会话制包时代取）
     run_surface: claude_code_cross_session_handoff_live_test  # 非 ChatGPT：前任会话出题＋判分，继任会话 fail-closed 接收；登记为天然真实样本 S-live-1
     execution_package: handoff/fable5-handoff-001/
     report_source_roots:

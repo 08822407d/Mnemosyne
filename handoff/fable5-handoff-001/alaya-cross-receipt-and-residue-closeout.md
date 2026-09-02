@@ -5,15 +5,18 @@ record_type: alaya_cross_receipt_and_residue_closeout
 created_by_task: MNEMOSYNE-261
 parent_package: FABLE5-HANDOFF-001（PR #333 合并 → master 7019af5，2026-09-02）
 date: 2026-09-02
+branch: mnemosyne-261-handoff-001-residue-closeout（自 origin/master 7019af5）
+pr: "#334"
+alaya_reverse_pointer_commits: [b325efe（032/033/HISTORY 三条 agent_repo_copy 指回本文件）, 2ca6864（032 任务书索引行补 bytes/sha256）]
 author_session: mnemosyne-87（继任主导会话，claude-fable-5@claude-code-vscode）
 authorization: Owner 2026-09-02 指示"先把三个半成品做完"——对本会话解除 Quick Card must_not_do"不改注册表等维护线路径"于本次注册表增量一项；其余禁令（不启动预冻结测试与迁移；不删 mnemosyne-240 / mnemosyne-242 两保全分支）不变
 lineage: 谱系防护 §4.3——已合并 lineage（fable5-handoff-001 / PR #333）不复用；本记录以新任务号 MNEMOSYNE-261、新分支自 origin/master 7019af5 产出
 closes: [半成品 A 注册表增量, 半成品 B 归档互引回执, 半成品 C 节奏声明请示（Owner 声明本身待答）]
 ```
 
-## 1. Alaya 归档互引回执（制度记录 09-continuation/06 §3："两侧哈希必须一致并双向可查（收据互引）"）
+## 1. Alaya 归档互引回执（制度记录 09-continuation/06 制度内容第 3 条："两侧哈希必须一致并双向可查（收据互引）"）
 
-Alaya 侧：私有库 `08822407d/Alaya`，归档 commit **1c4f253**（2026-09-02 backfill），索引 `indexes/archive-inventory-research.yaml`；Alaya 索引对应条目反向指向本文件（互引闭合）。以下 sha256 均于 2026-09-02 对 Mnemosyne origin/master 7019af5 与 Alaya master 1c4f253 两侧逐字节复核。
+Alaya 侧：私有库 `08822407d/Alaya`，归档 commit **1c4f253**（2026-09-02 backfill：033 与 HISTORY；032 原件更早，**a125342**，2026-08-31），索引 `indexes/archive-inventory-research.yaml`；Alaya 索引对应条目反向指向本文件（互引闭合，Alaya b325efe / 2ca6864，两提交只改索引、不改研究文件）。以下 sha256 均于 2026-09-02 对 Mnemosyne origin/master 7019af5 与 Alaya master 1c4f253 两侧逐字节复核。
 
 ### 1.1 MNE-DR-033 交接实测（CC）
 
@@ -52,7 +55,7 @@ not_archived_to_alaya:
 cross_receipts_history_self_analysis_001:
   alaya_unified_id: MNE-HISTORY-SELF-ANALYSIS-001
   alaya_commit: 1c4f253
-  alaya_tier: L1（私有云端；理由记于 Alaya 索引 note：项目建设史分析而非个人画像，且已在 Mnemosyne 公开）
+  alaya_tier: L1（执行方暂定，待 Owner 追认，见 §4；理由记于 Alaya 索引 note：项目建设史分析而非个人画像，且已在 Mnemosyne 公开）
   items:
     - artifact_id: phase1-report
       mnemosyne_path: notes/cross-family-cooperation/received/MNE-HISTORY-SELF-ANALYSIS-001-phase1-gpt-independent-review.md
@@ -74,15 +77,16 @@ cross_receipts_history_self_analysis_001:
       both_sides_identical: true   # 提示词包即任务书
 ```
 
-### 1.3 MNE-DR-032 合成稿复核（普）（本次随注册表补登一并互引；Mnemosyne 侧收据为 06-research-received/00-receipts-and-integrity.md 批次八）
+### 1.3 MNE-DR-032 合成稿复核（普）（本次随注册表补登一并互引；Mnemosyne 侧收据为 06-research-received/00-receipts-and-integrity.md 批次八，本次为其补 alaya_archive 指针）
 
 ```yaml
 cross_receipts_032:
   alaya_unified_id: MNE-DR-032
+  alaya_commit: a125342
   items:
     - {artifact_id: MNE-DR-032-review, mnemosyne_path: notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-032-review.md, alaya_path: research/MNE/MNE-DR-032-合成稿复核-review-20260831.md, bytes: 29845, sha256: 55e7e65bf71aa58d49c5ef9aa4d4492eb188e9a662d0708be541fe840b2df63b, both_sides_identical: true}
     - {artifact_id: MNE-DR-032-complete-response, mnemosyne_path: notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-032-complete-response.md, alaya_path: research/MNE/MNE-DR-032-合成稿复核-complete-response-20260831.md, bytes: 1661, sha256: c256d96730be165a766ef20d49daf87d72962ad473b330bc35a98708a75f556d, both_sides_identical: true}
-    - {artifact_id: MNE-DR-032-taskbook, mnemosyne_path: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-032-synthesis-review-taskbook.md, alaya_path: research/MNE/MNE-DR-032-合成稿复核-taskbook-20260831.md, bytes: 3359, sha256: 9807d42c048561a8d5e13a76e827d2dcb011e7cb7d80d50308aca0447af4e2f0, both_sides_identical: true, note: Alaya 索引该行尚未登记 bytes/sha256（020~032 任务书行索引哈希补齐属 Alaya 索引维护，未在本次范围）}
+    - {artifact_id: MNE-DR-032-taskbook, mnemosyne_path: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-032-synthesis-review-taskbook.md, alaya_path: research/MNE/MNE-DR-032-合成稿复核-taskbook-20260831.md, bytes: 3359, sha256: 9807d42c048561a8d5e13a76e827d2dcb011e7cb7d80d50308aca0447af4e2f0, both_sides_identical: true, note: Alaya 索引该行原缺 bytes/sha256，已于 2026-09-02 补登（Alaya 2ca6864）}
 ```
 
 ## 2. 注册表增量（半成品 A）
@@ -90,6 +94,7 @@ cross_receipts_032:
 - `notes/registries/project-research-display-name-registry-v0.1.md` 0.3.3 → **0.3.4**：补登 032（FABLE5-REDESIGN-001-SR1）、033（FABLE5-HANDOFF-001）两行；`next_unallocated_sequence` 032 → **034**。依据：S-live-1 §7 候选补丁；取号原始记录分别为 03-research-questions §14（032）与 checkpoint.yaml `task_id_allocation`（033）。
 - 未改 03-research-questions §14 的"next→033"：该句为 2026-09-01 取号时的历史记载（已收口轨道文件，不回写）；分配真值以注册表 §1 为准（注册表 §4 分配程序）。
 - 编号台账三处口径自本增量起一致：注册表 next=034 ＝ checkpoint.yaml next_unallocated 034 ＝ S-live-1 P3 作答。
+- Quick Card `hidden_dependencies` 中"注册表 next 在 master 上滞后"一条自本增量合并起失效；卡不改（哈希锚在 checkpoint.yaml）。
 
 ## 3. 节奏声明（半成品 C，N-18 声明制）
 
@@ -104,4 +109,5 @@ cross_receipts_032:
 - **半成品**：A 注册表增量、B 归档互引回执、C 节奏声明——A/B 由本记录闭合，C 请示已发、待答。
 - **等 Owner 裁定（已呈报，非半成品）**：远端分支 chatgpt-write-capability-test-20260831（唯一存世 17 行写入测试记录，建议先归档 Alaya 再删）与 mnemosyne-240 / -242 两保全分支（规则禁删；240 含唯一 1.9 MB 保全胶囊）；Alaya 归档惯例第 6 条追认；MNE-HISTORY-SELF-ANALYSIS-001 档位 L1/L2；主线三选项 a/b/c（Owner 已示"主线先不管"）。
 - **明确排除（未开始 / 非本会话主线）**：SYN-2 预冻结测试（ANNEX-D 独立门）；SYN-2 实现线；09-closeout 移交候选；维护线自身待办；MyOS2 第二波。
-- **本机杂务（不入仓）**：本地 master 落后 origin/master、约 24 条已合并本地分支、2 个 scratchpad worktree——待 Owner 点头后清理。
+- **本机杂务（不入仓）**：本地 master 落后 origin/master、约 24 条已合并本地分支、2 个非主检出 worktree（1 个 scratchpad，1 个 mnemosyne-maint）——待 Owner 点头后清理。
+- **current/ 状态文件未动**：本任务不改评审/验证状态与执行源，仅补注册表与收据；结果记录即本文件。
