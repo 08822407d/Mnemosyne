@@ -28,5 +28,5 @@ desensitization: 家目录→~，用户名→USER，私人 ChatGPT 对话/项目
 
 ### 附注
 
-- 本地工作副本 ~/projs/mnemosyne-archives/claude-code/ 已同步同批原件（该目录尚非 git 仓库——"专门私有档案库"建库议题仍待 Owner 裁定，见 08 号设计札记）。
+- 更正（2026-09-02）：本批曾顺手把原件同步到本地旧目录 ~/projs/mnemosyne-archives/claude-code/，并误报"专门私有档案库尚待建库"。经 Owner 澄清并查证：08 号设计札记所指的专门私有档案库即 **Alaya**（ALAYA-INIT-001，2026-08-28 建库；旧目录内容已经 ALAYA-MIG-001 逐类迁入，2026-09-02 逐件同哈希复核），旧目录自此退役、不再建成 git 仓库（Owner 2026-09-02 裁定，记于 Alaya migration-plan.md §处置结果）。旧目录中的冗余副本不再维护；档案唯一落点＝Alaya。
 - Alaya 索引同时补登了既有件 0f041ee3（FABLE5-REVIEW2-001→维护线，仍活跃）的 STALE 中途快照注记：该会话退场时须重新归档终稿。
