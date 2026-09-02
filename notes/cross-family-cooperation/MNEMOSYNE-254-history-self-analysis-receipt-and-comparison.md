@@ -71,9 +71,9 @@ Fable 接受全部六处纠正（1 处"零产品"、3 处第 2 条、1 处第 3 
 - 审核分工设计稿 H（PR #316）的"素材表"应据本轮补一行：Pro 在"绝对化表述纠正"维度实证强——待 #316 合并后追加。
 - ChatGPT 连接器对 Alaya 的临时读权限可撤回（本轮已完成）。
 
-## 8. Alaya 归档互引（2026-09-02 补，MNEMOSYNE-261）
+## 8. Alaya 归档互引（MNE-HISTORY-SELF-ANALYSIS-001，2026-09-02 补，MNEMOSYNE-261）
 
-本课题三件已于 2026-09-02 补录入 Alaya（私有库 `08822407d/Alaya` commit 1c4f253，`research/MNE/`，索引 `indexes/archive-inventory-research.yaml` unified_id `MNE-HISTORY-SELF-ANALYSIS-001`，档位 L1）。三件哈希与本收据登记值逐字节一致：
+本课题三件已于 2026-09-02 补录入 Alaya（私有库 `08822407d/Alaya` commit 1c4f253，`research/MNE/`，索引 `indexes/archive-inventory-research.yaml` unified_id `MNE-HISTORY-SELF-ANALYSIS-001`，档位 L1，执行方暂定、待 Owner 追认）。两报告哈希与本收据 received_files 登记值一致；提示词包（任务书）哈希为本节首次登记：
 
 | Mnemosyne 路径 | Alaya 路径 | bytes | sha256 |
 |---|---|---|---|
