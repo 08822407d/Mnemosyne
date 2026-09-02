@@ -144,3 +144,5 @@ receipts_batch_8:
   - {artifact_id: MNE-DR-032-complete-response, repository_path: 06-research-received/MNE-DR-032-complete-response.md, lines: 8, bytes: 1661, sha256: c256d96730be165a766ef20d49daf87d72962ad473b330bc35a98708a75f556d, preservation_level: EXACT_FILE_IN_REPOSITORY, byte_identity_verified: true}
 verdict_received: ADOPT_WITH_CHANGES（架构方向条件采纳；文本修订关闭 BLOCKER-01~09 后再采纳为规范根；预冻结测试 BLOCKED 至修订完成）
 disposition: 本会话据此产出 SYN-2（07 修订＋规范附件 08，见对应 commit）；29+7 追踪与九项修法逐条对应
+alaya_archive_batch_8: research/MNE/ 三件（review＋complete-response＋taskbook；Alaya commit a125342，2026-08-31），review/complete-response 哈希同上，taskbook（project-knowledge/FABLE5-REDESIGN-001/MNE-DR-032-synthesis-review-taskbook.md）3359 B / sha256 9807d42c048561a8d5e13a76e827d2dcb011e7cb7d80d50308aca0447af4e2f0；互引回执 handoff/fable5-handoff-001/alaya-cross-receipt-and-residue-closeout.md §1.3（MNEMOSYNE-261 补，2026-09-02）
+```

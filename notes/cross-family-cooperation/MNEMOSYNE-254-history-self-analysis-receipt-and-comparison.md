@@ -70,3 +70,15 @@ Fable 接受全部六处纠正（1 处"零产品"、3 处第 2 条、1 处第 3 
 - 合并产物：`foundational-agent-antipattern-checklist-v1.md`（MA 与项目 agent 立项前置检查）。
 - 审核分工设计稿 H（PR #316）的"素材表"应据本轮补一行：Pro 在"绝对化表述纠正"维度实证强——待 #316 合并后追加。
 - ChatGPT 连接器对 Alaya 的临时读权限可撤回（本轮已完成）。
+
+## 8. Alaya 归档互引（MNE-HISTORY-SELF-ANALYSIS-001，2026-09-02 补，MNEMOSYNE-261）
+
+本课题三件已于 2026-09-02 补录入 Alaya（私有库 `08822407d/Alaya` commit 1c4f253，`research/MNE/`，索引 `indexes/archive-inventory-research.yaml` unified_id `MNE-HISTORY-SELF-ANALYSIS-001`，档位 L1，执行方暂定、待 Owner 追认）。两报告哈希与本收据 received_files 登记值一致；提示词包（任务书）哈希为本节首次登记：
+
+| Mnemosyne 路径 | Alaya 路径 | bytes | sha256 |
+|---|---|---|---|
+| received/MNE-HISTORY-SELF-ANALYSIS-001-phase1-gpt-independent-review.md | research/MNE/MNE-HISTORY-SELF-ANALYSIS-001-建设史GPT独立复盘-report-20260902.md | 34117 | c0424cfdfa0431f3696e6fd000ddd0032af6ee25b1fa42543b9d0bf40d314646 |
+| received/MNE-HISTORY-SELF-ANALYSIS-001-phase2-cross-family-comparison.md | research/MNE/MNE-HISTORY-SELF-ANALYSIS-001-建设史GPT独立复盘-comparison-20260902.md | 17955 | 55b0a798324e87351252e259ddecd64907e20d92a42ded7354ff85fed13f1519 |
+| MNE-HISTORY-SELF-ANALYSIS-001-prompt-package.md | research/MNE/MNE-HISTORY-SELF-ANALYSIS-001-建设史GPT独立复盘-taskbook-20260902.md | 6820 | ebab521e0eaf2761f9ab685c6f1e953926d2b3f1df8e99916e3433b2e0b092e5 |
+
+互引总表与 Alaya 侧反向指针：`handoff/fable5-handoff-001/alaya-cross-receipt-and-residue-closeout.md` §1.2。

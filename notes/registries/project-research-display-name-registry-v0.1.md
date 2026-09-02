@@ -5,8 +5,8 @@
 ```yaml
 registry_id: MNEMOSYNE-PROJECT-RESEARCH-DISPLAY-NAME-REGISTRY-001
 created_by_task: MNEMOSYNE-189
-version: 0.3.3
-last_updated_by_task: MNEMOSYNE-260（补记 030/031 双向盲评；next→032）
+version: 0.3.4
+last_updated_by_task: MNEMOSYNE-261（补记 032 合成稿复核、033 交接实测；next→034；Quick Card "不改注册表"禁令经 Owner 2026-09-02 指示对本增量解除）
 status: active_after_MNEMOSYNE_189_merge
 source_guard: current/external-research-display-name-guard.md
 execution_source: false
@@ -23,7 +23,7 @@ projects:
     abbreviation: MNE
     sequence_width: 3
     allocation_owner: Mnemosyne_owner_or_authorized_Mnemosyne_task
-    next_unallocated_sequence: 032
+    next_unallocated_sequence: 034
   Meta_Agent:
     project_id: meta-agent
     abbreviation: MA
@@ -191,6 +191,29 @@ issued_aliases:
     allocation_task: FABLE5-REDESIGN-001
     run_surface: claude_code_fresh_session_read_only  # 盲评 Pro 对照稿（029 产物，防火墙封存件）；作者回避
     notes: [preregistered_rubric_shared_with_BR1, author_recusal, display_name_mode_marker_transitional_per_PF-002]
+  - display_name: MNE-DR-032 合成稿复核（普）
+    sequence: 032
+    canonical_task_id: FABLE5-REDESIGN-001-SR1
+    project: Mnemosyne
+    status: executed_verdict_ADOPT_WITH_CHANGES_archived_alaya_research_MNE
+    allocation_task: FABLE5-REDESIGN-001  # 取号记录：03-research-questions.md §14（2026-09-01，当时 next→033）
+    run_surface: ordinary_conversation_gpt_pro  # 开卷异族复核 SYN-1（07 号合成稿）；采纳前最后一道异族门；产物驱动 SYN-2 修订
+    taskbook: project-knowledge/FABLE5-REDESIGN-001/MNE-DR-032-synthesis-review-taskbook.md
+    report_source_roots:
+      - notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-032-review.md
+      - notes/cross-model-review-results/FABLE5-REDESIGN-001/06-research-received/MNE-DR-032-complete-response.md
+    notes: [registered_late_by_MNEMOSYNE-261, receipts_batch_8_in_06-research-received/00-receipts-and-integrity.md, alaya_cross_receipt_in_handoff/fable5-handoff-001/alaya-cross-receipt-and-residue-closeout.md, display_name_mode_marker_transitional_per_PF-002]
+  - display_name: MNE-DR-033 交接实测（CC）
+    sequence: 033
+    canonical_task_id: FABLE5-HANDOFF-001
+    project: Mnemosyne
+    status: executed_received_8_of_8_PASS_sample_record_archived_alaya_research_MNE
+    allocation_task: FABLE5-HANDOFF-001  # 取号记录：handoff/fable5-handoff-001/checkpoint.yaml task_id_allocation（2026-09-01，next→034；由 FABLE5-REDESIGN-001 前任会话制包时代取）
+    run_surface: claude_code_cross_session_handoff_live_test  # 非 ChatGPT：前任会话出题＋判分，继任会话 fail-closed 接收；登记为天然真实样本 S-live-1
+    execution_package: handoff/fable5-handoff-001/
+    report_source_roots:
+      - handoff/fable5-handoff-001/S-live-1-receipt-grading-and-defects.md
+    notes: [registered_late_by_MNEMOSYNE-261, natural_live_sample_S-live-1_for_future_ANNEX-D_12-case, DEF-1_probe_wording, DEF-2_package_hash_coverage, alaya_cross_receipt_in_handoff/fable5-handoff-001/alaya-cross-receipt-and-residue-closeout.md, display_name_mode_marker_transitional_per_PF-002]
 ```
 
 ## 2A. Legacy 2026H1 回填段（MNEMOSYNE-259，按 FABLE5-REDESIGN-001 编号统一终案 v2）
