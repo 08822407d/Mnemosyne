@@ -9,3 +9,5 @@ desensitization_standard: 家目录路径→~；本机用户名→USER；逐件�
 ```
 
 目录：`claude-code/<轨道或任务号>-<角色>-<uuid前8>-readable-desensitized.md`；逐件收据见 `00-receipts.md`。
+
+设计脉络：FABLE5-REVIEW2-001/03-independent-design/08 号札记的默认方案"专门私有档案库"已于 2026-08-28 落地为 **Alaya**（私有；本机工作副本 `~/projs/Alaya`；命名决定见 `notes/alaya-archive-repository-naming-decision.md`）。早先的本地暂存目录 `~/projs/mnemosyne-archives/` 已整体迁入 Alaya 并退役（Owner 2026-09-02：不再为其建 git 仓库）。研究结论件的 Alaya 归档规则另见 FABLE5-REDESIGN-001/09-continuation/06-archiving-institution-record.md。
